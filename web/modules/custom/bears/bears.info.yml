@@ -1,0 +1,5 @@
+name: Bears
+description: Bears general functions
+type: module
+package: 'BEARS'
+core_version_requirement: ^9.4 || ^10

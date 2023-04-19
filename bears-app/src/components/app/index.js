@@ -1,20 +1,20 @@
 import { useState } from 'react'
-import { ComponentGuide } from '../index';
+import { ComponentSandbox } from '../index';
 
 function App() {
 
- const [showGuide, setShowGuide] = useState(true)
+ const [showGuide, setShowGuide] = useState(process.env.NODE_ENV !== "production" ? true : null)
 
  const handleShowGuideButton = (showGuide) => {
   return (
-    process.env.NODE_ENV !== "production" &&
-    <button onClick={() => setShowGuide(!showGuide)}>Component Guide</button>
+    showGuide !== null &&
+    <button onClick={() => setShowGuide(!showGuide)}>Component Sandbox</button>
   )
  }
 
  const handleShowApp = (showGuide) => {
   return (
-    showGuide === true ? <ComponentGuide /> : <h1>App</h1>
+    showGuide ? <ComponentSandbox /> : <h1>App</h1>
   )
  }
 

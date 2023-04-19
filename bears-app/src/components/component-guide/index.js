@@ -1,1 +1,8 @@
-() => <div>working</div>
+function ComponentGuide() {
+     return (
+       <div>Guide</div>
+     );
+   }
+   
+   export default ComponentGuide;
+   

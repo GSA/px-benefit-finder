@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ComponentSandbox } from '../index';
+import { ComponentSandbox, Button } from '../index';
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
  const handleShowGuideButton = (showGuide) => {
   return (
     showGuide !== null &&
-    <button onClick={() => setShowGuide(!showGuide)}>Component Sandbox</button>
+    <Button onClick={() => setShowGuide(!showGuide)}>Component Sandbox</Button>
   )
  }
 

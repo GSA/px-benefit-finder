@@ -8,7 +8,7 @@ function App() {
  const handleShowGuideButton = (showGuide) => {
   return (
     showGuide !== null &&
-    <Button onClick={() => setShowGuide(!showGuide)}>Component Sandbox</Button>
+    <Button className="usa-button--outline" onClick={() => setShowGuide(!showGuide)}>Component Sandbox</Button>
   )
  }
 

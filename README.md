@@ -2,8 +2,8 @@
 
 Docs to be written
 
-# How to Clone the PX-BEARS-DRUPAL Repository with usagov-2021 Submodule
-This guide will walk you through the process of cloning the PX-BEARS-DRUPAL repository that includes a submodule. Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
+## How to Clone the PX-BEARS-DRUPAL Repository with usagov-2021 Submodule
+This guide will walk you through the process of cloning the ***PX-BEARS-DRUPAL*** repository that includes a submodule. Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
 
 To clone the repository with a submodule, follow these steps:
 
@@ -13,18 +13,22 @@ To clone the repository with a submodule, follow these steps:
 
 3- Use the following command to clone the main repository:
 
-### git clone git@github.com:GSA/px-bears-drupal.git
+```git clone git@github.com:GSA/px-bears-drupal.git```
 
 4- Once the cloning process completes, navigate into the cloned repository's directory using the cd command.
-### cd px-bears-drupal
+
+```cd px-bears-drupal```
 
 5- Navigate into the submodule directory.
-### cd usagov-2021
+
+```cd usagov-2021```
 
 
 6- usagov-2021 directory is there but empty. You must run the following two commands to initialize your local configuration file and fetch all the data from that project.
-### git submodule init
-### git submodule update
+
+```git submodule init```
+
+```git submodule update```
 
 7- You have now successfully cloned the repository with a submodule. You can work with the main repository and its submodule as separate entities.
 
@@ -32,7 +36,7 @@ To clone the repository with a submodule, follow these steps:
 
     a- Navigate to the main repository's directory using the command line.
     b- Run the following command to update the main repository along with its submodules: 
-### git pull --recurse-submodules
+```git pull --recurse-submodules```
 
 This command updates the main repository and its submodules to the latest commit.
 

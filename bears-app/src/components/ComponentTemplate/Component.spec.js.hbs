@@ -1,0 +1,10 @@
+import renderer from 'react-test-renderer'
+import {{pascalCase name}} from './index.jsx'
+
+describe('{{pascalCase name}}', () => {
+it('renders a match to the previous snapshot', () => {
+const component = renderer.create(
+<{{pascalCase name}} />)
+expect(component.toJSON()).toMatchSnapshot()
+})
+})

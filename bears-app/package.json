@@ -25,25 +25,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
     "lint": "eslint '**/*.{js,jsx}'",
-    "prepare": "cd .. && husky install bears-app/.husky"
-  },
-  "lint-staged": {
-    "*.js": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "postinstall": "cd .. && husky install bears-app/.husky",
+    "staged-test": "npm run format && npm run lint && npm run test"
   },
   "browserslist": {
     "production": [

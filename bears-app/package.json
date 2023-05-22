@@ -28,12 +28,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
-    "lint": "eslint '**/*.{js,jsx}'"
+    "lint": "eslint '**/*.{js,jsx}'",
+    "prepare": "cd .. && husky install bears-app/.husky"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
-    ]
+    "*.js": "eslint"
   },
   "husky": {
     "hooks": {

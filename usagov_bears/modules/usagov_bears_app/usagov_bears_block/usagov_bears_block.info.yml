@@ -1,0 +1,7 @@
+name: USAgov bears block
+type: module
+description: 'Provides block for React app.'
+core_version_requirement: ^8 || ^9
+package: USAgov bears
+dependencies:
+  - drupal:block

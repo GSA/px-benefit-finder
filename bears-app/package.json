@@ -21,7 +21,9 @@
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard-scss": "^9.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,7 +31,7 @@
     "test": "react-scripts test --passWithNoTests --watchAll=false",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
-    "lint": "eslint '**/*.{js,jsx}'",
+    "lint": "eslint '**/*.{js,jsx}' && stylelint '**/*.scss'",
     "postinstall": "cd .. && husky install bears-app/.husky",
     "staged-test": "npm run format && npm run lint && npm run test"
   },

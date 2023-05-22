@@ -7,6 +7,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@uswds/uswds": "^3.4.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -24,6 +26,16 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "eslintConfig": {
     "extends": [

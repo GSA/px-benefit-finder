@@ -1,0 +1,27 @@
+uuid: a218729c-384c-4348-99ad-1aec61bb207e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.life_event.field_summary
+    - node.type.life_event
+  module:
+    - user
+id: node.life_event.default
+targetEntityType: node
+bundle: life_event
+mode: default
+content:
+  field_summary:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

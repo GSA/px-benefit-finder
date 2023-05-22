@@ -1,3 +1,5 @@
+import './index.scss'
+
 function Button({ children, onClick, className }) {
   const handleClassName =
     className !== undefined ? `usa-button ${className}` : 'usa-button'

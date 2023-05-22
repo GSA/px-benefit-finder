@@ -12,7 +12,7 @@ function ComponentSandbox() {
   return (
     <div>
       <div>Sandbox</div>
-      <Button>Button</Button>
+      <Button className={'lighter'}>Button</Button>
       <Form>
         <Select label={selectLabel} options={selectOptions} htmlFor="options" />
       </Form>

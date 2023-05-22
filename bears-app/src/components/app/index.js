@@ -3,7 +3,8 @@ import { ComponentSandbox, Button } from '../index'
 
 function App() {
   const [showGuide, setShowGuide] = useState(
-    process.env.NODE_ENV !== 'production" ? true : null
+    process.env.NODE_ENV !== 'production" ? true : nul
+    l
   )
 
   const handleShowGuideButton = showGuide => {

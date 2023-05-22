@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write '**/*.{js,jsx}'"
+    "format": "prettier --write '**/*.{js,jsx}'",
+    "lint": "eslint '**/*.{js,jsx}'"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [

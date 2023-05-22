@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ComponentSandbox, Button } from '../index'
+import { ComponentSandbox, Button } from '../components/index'
 
 function App() {
   /**

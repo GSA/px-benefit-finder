@@ -2,10 +2,7 @@
   "name": "bears-app",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "cross-env": "^7.0.3",
-    "react-test-renderer": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -24,6 +21,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.2.0",
     "sass": "^1.62.1",
     "stylelint": "^15.6.2",
     "stylelint-config-standard-scss": "^9.0.0",
@@ -33,7 +31,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:staged": "cross-env react-scripts test --env=jsdom --findRelatedTests --ci",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",

@@ -15,7 +15,7 @@ function Select({ label, htmlFor, options }) {
    * @param {string} htmlFor - The inherited component id that the label is related to
    * @return {html} returns a semantic html label
    */
-  const Label = ({ labels }) => {
+  const Label = ({ label }) => {
     return (
       <label className="usa-label" htmlFor={htmlFor}>
         {label}

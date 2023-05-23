@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-cd bears-app && CI=true npm test
+cd bears-app && CI=true react-scripts test --env=jsdom --findRelatedTests

@@ -19,7 +19,11 @@ npm run start
 
 We use husky to manage git hooks.
 
+husky is automatically installed after the packages are installed.
+
 The `pre-commit` git hook leverages `lint-staged` to run a series of scripts on any staged files when a commit is made.
+
+the `pre-push` git hook runs a series of scripts on the directory before pushing to the origin.
 
 
 ## Coding Standards
@@ -132,7 +136,7 @@ We use composition, but leverage the https://designsystem.digital.gov/. We will 
 
 #### **5. Code Documentation**
 
-We use inline documentation for functions and hooks.
+We use inline documentation for functions, hooks, and functional components.
 
 Example with function
 ```js
@@ -155,6 +159,18 @@ Example with hook
  * @return {state} returns an updated state for value
  */
 const [value, setValue] = useState(true);
+```
+
+Example with functional component
+
+```js
+/**
+ * a functional component that wraps form elements in a form element
+ * @component
+ * @param {node} children - inherited children
+ * @return {html} returns a semantic html div element, with all its children
+ */
+function Value = ({ children }) => (<div className="wrapper">{children}</div>)
 ```
 
 <br>
@@ -183,8 +199,8 @@ We build each of our components with `spec`, `scss`, and `jsx` files
 To generate a component with these files based on a name space,
 you can use [plop](https://github.com/plopjs/plop)
 
-`cd` to root of application
+`cd` to the root of the application
 
 ```sh
-yarn generate-component
+npm run generate:component
 ```

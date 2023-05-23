@@ -39,7 +39,7 @@
     "lint:js:fix": "npm run lint:js -- --fix",
     "postinstall": "cd .. && husky install bears-app/.husky",
     "lint-staged": "lint-staged",
-    "generate-component": "plop"
+    "generate:component": "plop"
   },
   "browserslist": {
     "production": [

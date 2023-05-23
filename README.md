@@ -1,4 +1,4 @@
-# BEARS custom module and USWDS theme
+# BEARS custom module
 
 Docs to be written
 

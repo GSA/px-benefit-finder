@@ -2,7 +2,7 @@
   "src/**/*.{js,jsx}": [
     "prettier --write",
     "eslint . --fix",
-    "jest --findRelatedTests --ci"
+    "cross-env CI=true react-scripts test --env=jsdom --findRelatedTests"
   ],
   "src/**/*.scss": [
     "stylelint --syntax scss --fix"

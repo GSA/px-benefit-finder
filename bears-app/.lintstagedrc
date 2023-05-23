@@ -1,7 +1,8 @@
 {
   "src/**/*.{js,jsx}": [
     "prettier --write",
-    "eslint . --fix"
+    "eslint . --fix",
+    "jest --findRelatedTests"
   ],
   "src/**/*.scss": [
     "stylelint --syntax scss --fix"

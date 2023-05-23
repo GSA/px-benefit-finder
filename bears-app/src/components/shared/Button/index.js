@@ -1,12 +1,12 @@
 import './index.scss'
 
 /**
- * a functional component that renders a button
+ * a functional component that renders a reactive button
  * @component
  * @param {object} children - inherited children
- * @param {string} className - inherited class(es) from composition
- * @param {event} onClick - inherited function that is triggered on a click event
- * @return {string} returns a concat string
+ * @param {string} className - inherited class(es)
+ * @param {event} onClick - an inherited function, triggered on a click event
+ * @return {html} returns a semantic html button element
  */
 function Button({ children, className, onClick }) {
   /**

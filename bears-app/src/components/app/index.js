@@ -1,6 +1,11 @@
 import { useState } from 'react'
-import { ComponentSandbox, Button } from '../components/index'
+import { ComponentSandbox } from '../index'
+import { Button } from '../shared'
 
+/**
+ * a functional component that renders our application.
+ * @component
+ */
 function App() {
   /**
    * a boolean function to manage the guide state.

@@ -1,4 +1,4 @@
-import { Button, Form, Select } from '../index'
+import { Button, Form, Select } from '../shared'
 
 const selectLabel = 'Dropdown Label'
 const selectOptions = [
@@ -8,6 +8,10 @@ const selectOptions = [
   { value: 'value-3', label: 'Option 3' },
 ]
 
+/**
+ * a functional component that renders our component library.
+ * @component
+ */
 function ComponentSandbox() {
   return (
     <div>

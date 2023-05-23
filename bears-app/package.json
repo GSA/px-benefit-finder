@@ -2,31 +2,29 @@
   "name": "bears-app",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@uswds/uswds": "^3.4.1",
-    "plop": "^3.1.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "sass": "^1.62.1",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
-    "generate-component": "plop",
     "jsdoc": "^4.0.2",
     "lint-staged": "^13.2.2",
+    "plop": "^3.1.2",
     "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.62.1",
     "stylelint": "^15.6.2",
-    "stylelint-config-standard-scss": "^9.0.0"
+    "stylelint-config-standard-scss": "^9.0.0",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,9 +32,12 @@
     "test": "react-scripts test --passWithNoTests --watchAll=false",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
-    "lint": "eslint '**/*.{js,jsx}' && stylelint '**/*.scss'",
+    "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
+    "lint:scss:fix": "stylelint 'src/**/*.scss' --syntax scss --fix",
+    "lint:js": "eslint . --ext .js,.jsx",
+    "lint:js:fix": "npm run lint:js -- --fix",
     "postinstall": "cd .. && husky install bears-app/.husky",
-    "staged-test": "npm run format && npm run lint && npm run test",
+    "staged-test": "npm run format && lint-staged",
     "generate-component": "plop"
   },
   "browserslist": {

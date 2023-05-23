@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import './index.scss'
 
 /**
@@ -23,6 +25,12 @@ function Button({ children, className, onClick }) {
       {children}
     </button>
   )
+}
+
+Button.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default Button

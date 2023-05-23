@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 /**
  * a functional component that wraps form elements in a form element
  * @component
@@ -6,6 +7,10 @@
  */
 function Form({ children }) {
   return <form className="usa-form">{children}</form>
+}
+
+Form.propTypes = {
+  children: PropTypes.node,
 }
 
 export default Form

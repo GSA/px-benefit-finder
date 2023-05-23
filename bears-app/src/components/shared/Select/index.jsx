@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 /**
  * a functional component to create a select from a list of options
  * @component
@@ -46,6 +47,12 @@ function Select({ label, htmlFor, options }) {
       </select>
     </>
   )
+}
+
+Select.propTypes = {
+  label: PropTypes.string,
+  htmlFor: PropTypes.string,
+  options: PropTypes.array,
 }
 
 export default Select

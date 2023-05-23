@@ -7,14 +7,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Get our packages.
 
 ```shell
-npm install
+npm run install
 ```
 
 Build and serve development environment.
 
 ```shell
-npm start
+npm run start
 ```
+## Git Hooks
+
+We use husky to manage git hooks.
+
+The `pre-commit` git hook leverages `lint-staged` to run a series of scripts on any staged files when a commit is made.
+
 
 ## Coding Standards
 
@@ -27,6 +33,8 @@ We use a combination of linting and best practices to guide code consistency.
 [![js-standard-style](https://img.shields.io/badge/code%20style%20JS-standard-brightgreen.svg)](http://standardjs.com)
 [![react/recommended](https://img.shields.io/badge/code%20style%20React-recommended-brightgreen.svg)](https://github.com/yannickcr/eslint-plugin-react)
 [![prettier/recommended](https://img.shields.io/badge/code%20format/prettier-%20recomended-brightgreen.svg)](https://github.com/prettier/eslint-plugin-prettier)
+[![stylelint](https://img.shields.io/badge/code%20format/stylelint-%20standard-brightgreen.svg)](https://github.com/cypress-io/eslint-plugin-cypress)
+
 
 <br>
 
@@ -34,17 +42,35 @@ We use a combination of linting and best practices to guide code consistency.
 
 We include a few scripts in `package.json` that can be executed to interact with our standards.
 
-Run eslint
+Run eslint on `.js` and `.jsx` files
 
 ```shell
-npm run lint
+npm run lint:js
 ```
 
-Format all files.
+Auto-fix lint errors
+```shell
+npm run lint:js:fix
+```
+
+Format `.js` and `.jsx` files with prettier.
 
 ```shell
 npm run format
 ```
+
+Run stylelint on `.scss` files
+
+```shell
+npm run lint:scss
+```
+
+Auto-fix lint errors
+
+```shell
+npm run lint:scss:fix
+```
+
 
 <br>
 

@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-
+#!change directories and run items from .lintstagedrc
 cd bears-app && npm run lint-staged

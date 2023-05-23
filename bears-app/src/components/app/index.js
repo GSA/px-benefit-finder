@@ -8,7 +8,7 @@ import { Button } from '../shared'
  */
 function App() {
   /**
-   * a boolean function to manage the guide state.
+   * a boolean function to manage the guide visibility state.
    * @function
    * @param {boolean} showGuide - the state of environment
    * @return {state} returns null if not production
@@ -18,7 +18,7 @@ function App() {
   )
 
   /**
-   * a boolean function to manage the guide state.
+   * a boolean function to manage the visibility of the guide button.
    * @function
    * @param {boolean} showGuide - The inherited class from
    * @return {component} returns a component if not null
@@ -37,7 +37,7 @@ function App() {
   }
 
   /**
-   * a boolean function to manage the guide state.
+   * a boolean function to manage the visibility of the ComponentSandbox.
    * @function
    * @param {boolean} showGuide - The inherited class from
    * @return {component} returns a component if not null

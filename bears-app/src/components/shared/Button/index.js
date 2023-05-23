@@ -1,6 +1,14 @@
 import './index.scss'
 
-function Button({ children, onClick, className }) {
+/**
+ * a functional component that renders a button
+ * @component
+ * @param {object} children - inherited children
+ * @param {string} className - inherited class(es) from composition
+ * @param {event} onClick - inherited function that is triggered on a click event
+ * @return {string} returns a concat string
+ */
+function Button({ children, className, onClick }) {
   /**
    * a function to construct class strings based on composition.
    * @function

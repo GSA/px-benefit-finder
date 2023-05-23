@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cross-env": "^7.0.3",
     "react-test-renderer": "^18.2.0"
   },
   "devDependencies": {
@@ -31,7 +32,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --passWithNoTests --watchAll=false",
+    "test": "react-scripts test",
+    "test:staged": "cross-env react-scripts test --env=jsdom --findRelatedTests --ci",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",

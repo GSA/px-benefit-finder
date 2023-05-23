@@ -1,4 +1,43 @@
-# WIP | BEARS Application
+# WIP | BEARS v2 React Application
+
+```text
+/bears-app
+  |-.husky
+    |-git-hooks
+  |-public
+    |-index.html
+  |-src
+    |-App
+    |-shared
+      |-components
+        |-ComponentName
+          |-__snapshots__
+          |-ComponentName.jsx
+          |-_component-name.scss
+          |-ComponentName.spec.js
+    |-index.jsx
+    |-README.md
+```
+
+<br>
+
+### Basics:
+
+- "Modules", like `App` should follow the structure of routes.
+- Files from one module can only import from ancestor folders within the same module or from `src/shared`.
+
+<br>
+
+| File or folder      | Description                                                |
+| ------------------- | ---------------------------------------------------------- |
+| `src/index.jsx`     | Entry file.                                                |
+| `public/index.html` | All scripts and styles injected here                       |
+| `src/App`           | Main application routes, global / ancestor of all modules. |
+| `src/ComponentSandbox`| Temporary Parent component |
+| `src/shared`        | Components, constants, machines, hooks, styles, utils etc; |
+|                     | **_Any module is allowed to import from shared._**         |
+
+<br>
 
 ## Getting Started
 

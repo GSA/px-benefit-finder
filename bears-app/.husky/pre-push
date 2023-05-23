@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-cd bears-app && CI=true npm test:staged
+cd bears-app && CI=true npm run test:staged

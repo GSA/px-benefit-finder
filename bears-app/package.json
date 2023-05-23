@@ -37,7 +37,7 @@
     "lint:js": "eslint . --ext .js,.jsx",
     "lint:js:fix": "npm run lint:js -- --fix",
     "postinstall": "cd .. && husky install bears-app/.husky",
-    "staged-test": "npm run format && lint-staged",
+    "lint-staged": "lint-staged",
     "generate-component": "plop"
   },
   "browserslist": {

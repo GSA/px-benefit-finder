@@ -1,3 +1,8 @@
 {
-  "*": "npm run format && npm run lint"
+  "src/**/*.{js,jsx}": [
+    "eslint . --fix"
+  ],
+  "src/**/*.scss": [
+    "stylelint --syntax scss --fix"
+  ]
 }

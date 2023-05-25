@@ -7,7 +7,7 @@ This guide will walk you through the process of cloning the ***PX-BEARS-DRUPAL**
 
 To clone the repository with a submodule, follow these steps:
 
-1- Open your command line or terminal.
+1. Open your command line or terminal.
 
 2- Navigate to the directory where you want to clone the repository. You can use the cd command to change directories. For example, cd Documents/Projects.
 

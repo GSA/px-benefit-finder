@@ -1,7 +1,0 @@
-name: USAgov Header Hooks
-description: Hooks to alter header html
-package: USAgov bears
-
-type: module
-core: 8.x
-core_version_requirement: ^8 || ^9

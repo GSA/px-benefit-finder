@@ -5,6 +5,6 @@
     "cross-env CI=true react-scripts test --env=jsdom --findRelatedTests"
   ],
   "src/**/*.scss": [
-    "stylelint --syntax scss --fix"
+    "stylelint --fix"
   ]
 }

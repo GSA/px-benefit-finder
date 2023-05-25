@@ -46,7 +46,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Get our packages.
 
 ```shell
-npm run install
+npm install
 ```
 
 Build and serve development environment.

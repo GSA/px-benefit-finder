@@ -2,27 +2,44 @@
   "name": "bears-app",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@uswds/uswds": "^3.4.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "jsdoc": "^4.0.2",
+    "lint-staged": "^13.2.2",
+    "plop": "^3.1.2",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.2.0",
+    "sass": "^1.62.1",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard-scss": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "format": "prettier --write '**/*.{js,jsx}'",
+    "lint:scss": "stylelint 'src/**/*.scss'",
+    "lint:scss:fix": "stylelint 'src/**/*.scss' --fix",
+    "lint:js": "eslint . --ext .js,.jsx",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "postinstall": "cd .. && husky install bears-app/.husky",
+    "lint-staged": "lint-staged",
+    "generate:component": "plop"
   },
   "browserslist": {
     "production": [

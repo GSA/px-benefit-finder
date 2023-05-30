@@ -1,70 +1,245 @@
-# Getting Started with Create React App
+# WIP | BEARS v2 React Application
+
+```text
+/bears-app
+  |-.husky
+    |-git-hooks
+  |-public
+    |-index.html
+  |-src
+    |-App
+    |-shared
+      |-components
+        |-ComponentName
+          |-__snapshots__
+          |-ComponentName.jsx
+          |-_component-name.scss
+          |-ComponentName.spec.js
+    |-index.jsx
+    |-README.md
+```
+
+<br>
+
+### Basics:
+
+- "Modules", like `App` should follow the structure of routes.
+- Files from one module can only import from ancestor folders within the same module or from `src/shared`.
+
+<br>
+
+| File or folder      | Description                                                |
+| ------------------- | ---------------------------------------------------------- |
+| `src/index.jsx`     | Entry file.                                                |
+| `public/index.html` | All scripts and styles injected here                       |
+| `src/App`           | Main application routes, global / ancestor of all modules. |
+| `src/ComponentSandbox`| Temporary Parent component |
+| `src/shared`        | Components, constants, machines, hooks, styles, utils etc; |
+|                     | **_Any module is allowed to import from shared._**         |
+
+<br>
+
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Get our packages.
 
-In the project directory, you can run:
+```shell
+npm install
+```
 
-### `npm start`
+Build and serve development environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```shell
+npm run start
+```
+## Git Hooks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+We use husky to manage git hooks.
 
-### `npm test`
+husky is automatically installed after the packages are installed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The `pre-commit` git hook leverages `lint-staged` to run a series of scripts on any staged files when a commit is made.
 
-### `npm run build`
+the `pre-push` git hook runs a series of scripts on the directory before pushing to the origin.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Coding Standards
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We use a combination of linting and best practices to guide code consistency.
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Our linters include
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![js-standard-style](https://img.shields.io/badge/code%20style%20JS-standard-brightgreen.svg)](http://standardjs.com)
+[![react/recommended](https://img.shields.io/badge/code%20style%20React-recommended-brightgreen.svg)](https://github.com/yannickcr/eslint-plugin-react)
+[![prettier/recommended](https://img.shields.io/badge/code%20format/prettier-%20recomended-brightgreen.svg)](https://github.com/prettier/eslint-plugin-prettier)
+[![stylelint](https://img.shields.io/badge/code%20format/stylelint-%20standard-brightgreen.svg)](https://github.com/cypress-io/eslint-plugin-cypress)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br>
 
-## Learn More
+#### Linting and Formatting Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We include a few scripts in `package.json` that can be executed to interact with our standards.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run eslint on `.js` and `.jsx` files
 
-### Code Splitting
+```shell
+npm run lint:js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Auto-fix lint errors
+```shell
+npm run lint:js:fix
+```
 
-### Analyzing the Bundle Size
+Format `.js` and `.jsx` files with prettier.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```shell
+npm run format
+```
 
-### Making a Progressive Web App
+Run stylelint on `.scss` files
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```shell
+npm run lint:scss
+```
 
-### Advanced Configuration
+Auto-fix lint errors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```shell
+npm run lint:scss:fix
+```
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br>
 
-### `npm run build` fails to minify
+### **Standards outside linting**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We also carry the following working agreements that may fall outside of the linting.
+
+---
+
+<br>
+
+#### **1. Avoid functionality in JSX**
+
+If you have this...
+
+```jsx
+<Foo onClick={​​​​​​​​function () {​​​​​​​​ alert("1337") }​​​​​​​​}​​​​​​​​ />
+```
+
+We prefer this
+
+```jsx
+<Foo onClick={​​​​​​​​handleAlert}​​​​​​​​ />
+```
+
+<br>
+
+#### **2. Avoid inline styles**
+
+If you have this...
+
+```jsx
+<Foo style={{ width: 100% }} />
+```
+
+We prefer this
+
+```jsx
+<Foo class="full-width" />
+```
+
+<br>
+
+#### **3. PropTypes**
+
+Typecheck with [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+
+<br>
+
+#### **4. Styles**
+
+We use [Sass](https://sass-lang.com/) and [Sass Modules](https://css-tricks.com/introducing-sass-modules/)
+
+Generally, it is recommend that you don’t reuse the same CSS classes across different components. For example, instead of using a `.usa-button` CSS class in `<AcceptButton>` and `<RejectButton>` components, it is recommended to create a `<Button>` component with its own `.usa-button` styles, that both `<AcceptButton>` and `<RejectButton>` can render (but not inherit).
+
+We use composition, but leverage the https://designsystem.digital.gov/. We will attempt to use pre-processor methods when it makes sense to do so.
+
+<br>
+
+#### **5. Code Documentation**
+
+We use inline documentation for functions, hooks, and functional components.
+
+Example with function
+```js
+  /**
+   * a boolean function that returns a component when true.
+   * @function
+   * @param {boolean} value - the inherited value, can be true || false
+   * @return {component} returns a component if true
+   */
+  const handleTruth = value => value === true && <Truth />
+
+```
+
+Example with hook
+```js
+/**
+ * a boolean that manages the state of truth.
+ * @function
+ * @param {boolean} value - the inherited value, can be true || false
+ * @return {state} returns an updated state for value
+ */
+const [value, setValue] = useState(true);
+```
+
+Example with functional component
+
+```js
+/**
+ * a functional component that wraps form elements in a form element
+ * @component
+ * @param {node} children - inherited children
+ * @return {html} returns a semantic html div element, with all its children
+ */
+function Value = ({ children }) => (<div className="wrapper">{children}</div>)
+```
+
+<br>
+
+#### **5. Testing**
+
+We use [Jest](https://jestjs.io/) for Unit/DOM testing
+
+```sh
+npm run test
+```
+
+<br>
+****
+#### **6. Components**
+
+We build each of our components with `spec`, `scss`, and `jsx` files
+
+```
+|-ComponentName
+  |-ComponentName.jsx
+  |-_component-name.scss
+  |-ComponentName.spec.js
+```
+
+To generate a component with these files based on a name space,
+you can use [plop](https://github.com/plopjs/plop)
+
+`cd` to the root of the application
+
+```sh
+npm run generate:component
+```

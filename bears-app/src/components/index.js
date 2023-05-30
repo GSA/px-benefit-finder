@@ -1,5 +1,3 @@
-export { default as App } from './app'
-export { default as Button } from './button'
-export { default as ComponentSandbox } from './component-sandbox'
-export { default as Form } from './form'
-export { default as Select } from './select'
+// order exports in alphabetical list
+export { default as App } from './App'
+export { default as ComponentSandbox } from './ComponentSandbox'

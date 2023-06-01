@@ -1,0 +1,68 @@
+{
+  "form": {
+    "id": "NUM",
+    "timeEstimate": "NUM",
+    "titlePrefix": "STRING",
+    "heading": "STRING",
+    "description": "HTML",
+    "icon": "STRING",
+    "sections": [
+      {
+        "section": {
+          "id": "NUM",
+          "heading": "STRING",
+          "description": "HTML",
+          "fieldsets": [
+            {
+              "fieldset": {
+                "id": "NUM",
+                "legend": "STRING",
+                "required": "BOOLEAN",
+                "hint": "STRING",
+                "inputs": [
+                  {
+                    "input": {
+                      "id": "NUM",
+                      "type": "STRING",
+                      "name": "STRING",
+                      "label": "STRING",
+                      "value": "STRING",
+                      "checked": "BOOLEAN",
+                      "options": [
+                        {
+                          "default": "",
+                          "value": "STRING"
+                        },
+                        {
+                          "option": "STRING",
+                          "value": "STRING"
+                        }
+                      ],
+                      "hasChild": "BOOLEAN",
+                      "childDependencyOption": "STRING"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "benefits": [
+    {
+      "benefit": {
+        "title": "STRING",
+        "agency": "STRING",
+        "agencyRef": "STRING",
+        "description": "HTML",
+        "criteria": [
+          {
+            "criterion": ""
+          }
+        ]
+      }
+    }
+  ]
+}

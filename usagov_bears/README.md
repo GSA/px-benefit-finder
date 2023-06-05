@@ -6,10 +6,10 @@
 * USAgov bears API module
 
 ```
-drush pm:enable usagov_bears_block
-drush pm:enable usagov_bears_content
-drush pm:enable usagov_bears_api
-drush pm:enable usagov_bears
+bin/drush pm:enable usagov_bears_block
+bin/drush pm:enable usagov_bears_content
+bin/drush pm:enable usagov_bears_api
+bin/drush pm:enable usagov_bears
 ```
 
 These enable the USAgov bears modules.
@@ -23,7 +23,7 @@ This module provides custom block "usagov bears block" with div id="usagov-bears
 config folder includes content type, taxonomy, paragraph, custom entity configuration.
 
 ```
-drush config:import --partial --source=modules/custom/usagov_bears/modules/usagov_bears_content/config
+bin/drush config:import --partial --source=modules/custom/usagov_bears/modules/usagov_bears_content/config
 ```
 This imports the configuration of content type, taxonomy, paragraph, custom entity.
 

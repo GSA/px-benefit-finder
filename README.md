@@ -39,3 +39,15 @@ This command updates the main repository and its submodules to the latest commit
 # Accessibility Statement
 
 We are committed to making our site accessible to all visitors. Our ongoing accessibility effort works towards conforming to Web Content Accessibility Guidelines (WCAG) version 2.1, level AA criteria and by performing regular automatic and manual testing audits.
+
+# Local Development Environment
+
+### Get USAgov code
+```
+git clone git@github.com:usagov/usagov-2021.git poc
+cd poc`
+```
+
+### Get USAgov code
+
+Set up local development site following README.md.

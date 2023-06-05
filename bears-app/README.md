@@ -43,13 +43,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Get our packages.
+### Get our packages.
 
 ```shell
 npm install
 ```
 
-Build and serve development environment.
+### Build and serve development environment.
+
+Rather than ejecting the react scripts, we override them with tooling. (Learn more about [Craco](https://craco.js.org/docs/getting-started/
+).
 
 ```shell
 npm run start

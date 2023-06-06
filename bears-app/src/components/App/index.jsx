@@ -21,8 +21,8 @@ function App() {
   /**
    * GET and set our data.
    * @function
-   * @param {function} setData - the state of environment
-   * @return {state} returns data object
+   * @param {json} setData - the state of environment
+   * @return {state} returns null if not set
    */
   const [data, setData] = useState(null)
 
@@ -52,7 +52,7 @@ function App() {
    * @return {component} returns a component if not null
    */
   const handleShowApp = showGuide => {
-    return showGuide ? <ComponentSandbox /> : <h1>BEARS</h1>
+    return showGuide ? <ComponentSandbox /> : <h1>BEARS Hello World!</h1>
   }
 
   /**
@@ -62,13 +62,18 @@ function App() {
    * @return {JSON} returns JSON data
    */
   async function GETLifeEvent(lifeEvent) {
+    // get life-event from location
+    if (lifeEvent === undefined) {
+      const location = window.location.pathname
+      lifeEvent = location.substring(location.lastIndexOf('/') + 1)
+    }
     const response = await fetch(`/bears/api/life-event/${lifeEvent}`)
     const jsonData = await response.json()
     return jsonData
   }
 
   useEffect(() => {
-    GETLifeEvent('retirement').then(response => setData(response))
+    GETLifeEvent().then(response => setData(response))
     return () => {}
   }, [data])
 

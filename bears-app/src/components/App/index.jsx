@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ComponentSandbox } from '../index'
 import { Button } from '../shared'
 
@@ -16,6 +16,14 @@ function App() {
   const [showGuide, setShowGuide] = useState(
     process.env.NODE_ENV !== 'production' ? true : null
   )
+
+  /**
+   * a fetch function to GET the data object.
+   * @function
+   * @param {fetch} setData - the state of environment
+   * @return {state} returns data object
+   */
+  const [data, setData] = useState(null)
 
   /**
    * a boolean function to manage the visibility of the guide button.
@@ -46,10 +54,22 @@ function App() {
     return showGuide ? <ComponentSandbox /> : <h1>App</h1>
   }
 
+  async function GETLifeEvent(lifeEvent) {
+    const response = await fetch(`/bears/api/life-event/${lifeEvent}`)
+    const jsonData = await response.json()
+    return jsonData
+  }
+
+  useEffect(() => {
+    GETLifeEvent('retirement').then(response => setData(response))
+    return () => {}
+  }, [data])
+
   return (
     <div className="App">
       {handleShowGuideButton(showGuide)}
       {handleShowApp(showGuide)}
+      {data?.data.map(d => JSON.stringify(d))}
     </div>
   )
 }

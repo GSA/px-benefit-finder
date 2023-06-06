@@ -61,7 +61,9 @@ function App() {
   }
 
   useEffect(() => {
-    GETLifeEvent('retirement').then(response => setData(response))
+    GETLifeEvent('retirement')
+      .then(response => setData(response))
+      .then(console.log(data))
     return () => {}
   }, [data])
 

@@ -7,6 +7,7 @@ import { Button } from '../shared'
  * @component
  */
 function App() {
+  // state
   /**
    * a boolean function to manage the guide visibility state.
    * @function
@@ -18,9 +19,9 @@ function App() {
   )
 
   /**
-   * a fetch function to GET the data object.
+   * GET and set our data.
    * @function
-   * @param {fetch} setData - the state of environment
+   * @param {function} setData - the state of environment
    * @return {state} returns data object
    */
   const [data, setData] = useState(null)
@@ -51,9 +52,15 @@ function App() {
    * @return {component} returns a component if not null
    */
   const handleShowApp = showGuide => {
-    return showGuide ? <ComponentSandbox /> : <h1>App</h1>
+    return showGuide ? <ComponentSandbox /> : <h1>BEARS</h1>
   }
 
+  /**
+   * an async fetch to get life-event data.
+   * @function
+   * @param {string} lifeEvent - The inherited class from
+   * @return {JSON} returns JSON data
+   */
   async function GETLifeEvent(lifeEvent) {
     const response = await fetch(`/bears/api/life-event/${lifeEvent}`)
     const jsonData = await response.json()
@@ -61,14 +68,12 @@ function App() {
   }
 
   useEffect(() => {
-    GETLifeEvent('retirement')
-      .then(response => setData(response))
-      .then(console.log(data))
+    GETLifeEvent('retirement').then(response => setData(response))
     return () => {}
   }, [data])
 
   return (
-    <div className="App">
+    <div className="bears-app">
       {handleShowGuideButton(showGuide)}
       {handleShowApp(showGuide)}
       {data?.data.map(d => JSON.stringify(d))}

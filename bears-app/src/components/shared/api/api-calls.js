@@ -18,7 +18,9 @@ export async function GETLifeEvent(lifeEvent) {
       throw new Error(response?.status)
     })
     .then(responseJson => {
-      return responseJson
+      return responseJson?.data.length > 0
+        ? responseJson
+        : 'Something went wrong.'
     })
     .catch(error => {
       // eslint-disable-next-line no-console

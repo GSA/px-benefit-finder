@@ -64,7 +64,7 @@ function App() {
       return 'loading...'
     }
     // either return the mapped data object or the error
-    return data?.data ? data.data.map(d => JSON.stringify(d)) : `${data}`
+    return data?.data ? data.data.map(d => JSON.stringify(d)) : data
   }
 
   return (

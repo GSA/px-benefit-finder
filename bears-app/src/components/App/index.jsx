@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ComponentSandbox } from '../index'
 import { Button } from '../shared'
+import * as apiCalls from '../shared/api/api-calls'
 
 /**
  * a functional component that renders our application.
@@ -19,13 +20,16 @@ function App() {
   )
 
   /**
-   * GET and set our data.
+   * lazy load our data state.
    * @function
-   * @param {json} setData - the state of environment
+   * @param {promise} setData - the state of environment
    * @return {state} returns null if not set
    */
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(() => {
+    apiCalls.GETLifeEvent().then(response => setData(response))
+  })
 
+  // handlers
   /**
    * a boolean function to manage the visibility of the guide button.
    * @function
@@ -55,33 +59,19 @@ function App() {
     return showGuide ? <ComponentSandbox /> : <h1>BEARS Hello World!</h1>
   }
 
-  /**
-   * an async fetch to get life-event data.
-   * @function
-   * @param {string} lifeEvent - The inherited class from
-   * @return {JSON} returns JSON data
-   */
-  async function GETLifeEvent(lifeEvent) {
-    // get life-event from location
-    if (lifeEvent === undefined) {
-      const location = window.location.pathname
-      lifeEvent = location.substring(location.lastIndexOf('/') + 1)
+  const handleData = data => {
+    if (data === undefined) {
+      return 'loading...'
     }
-    const response = await fetch(`/bears/api/life-event/${lifeEvent}`)
-    const jsonData = await response.json()
-    return jsonData
+    // either return the mapped data object or the error
+    return data?.data ? data.data.map(d => JSON.stringify(d)) : `${data}`
   }
-
-  useEffect(() => {
-    GETLifeEvent().then(response => setData(response))
-    return () => {}
-  }, [data])
 
   return (
     <div className="bears-app">
       {handleShowGuideButton(showGuide)}
       {handleShowApp(showGuide)}
-      {data?.data.map(d => JSON.stringify(d))}
+      {handleData(data)}
     </div>
   )
 }

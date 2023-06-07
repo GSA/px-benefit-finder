@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('../node_modules/@uswds/uswds/dist/css/uswds.css')
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('usagov-bears-app'))
 root.render(
   <React.StrictMode>
     <App />

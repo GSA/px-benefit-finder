@@ -1,12 +1,14 @@
 {
-  "lifeEvenForm": {
+  "lifeEventForm": {
     "id": "NUM",
     "timeEstimate": "NUM",
     "titlePrefix": "STRING",
-    "heading": "STRING",
-    "description": "HTML",
+    "title": "STRING",
+    "summary": "HTML",
+    "lede": "HTML",
+    "secondaryHeading": "STRING",
     "icon": "STRING",
-    "sections": [
+    "sectionsEligibilityCriteria": [
       {
         "section": {
           "id": "NUM",

@@ -1,7 +1,7 @@
 {
   "lifeEventForm": {
-    "id": "NUM",
-    "timeEstimate": "NUM",
+    "id": "STRING",
+    "timeEstimate": "STRING",
     "titlePrefix": "STRING",
     "title": "STRING",
     "summary": "HTML",
@@ -11,7 +11,7 @@
     "sectionsEligibilityCriteria": [
       {
         "section": {
-          "id": "NUM",
+          "id": "STRING",
           "heading": "STRING",
           "description": "HTML",
           "fieldsets": [
@@ -24,7 +24,7 @@
                 "inputs": [
                   {
                     "inputCriteria": {
-                      "id": "NUM",
+                      "id": "STRING",
                       "type": "STRING",
                       "name": "STRING",
                       "label": "STRING",
@@ -34,12 +34,12 @@
                           "value": "STRING"
                         },
                         {
-                          "option": "Option1",
+                          "option": "STRING",
                           "value": "STRING"
                         }
                       ],
                       "hasChild": "BOOLEAN",
-                      "childDependencyOption": "Option 1"
+                      "childDependencyOption": "STRING"
                     }
                   }
                 ],
@@ -53,6 +53,9 @@
           ]
         }
       }
+    ],
+    "relatedLifeEvents": [
+      "STRING"
     ]
   },
   "benefits": [

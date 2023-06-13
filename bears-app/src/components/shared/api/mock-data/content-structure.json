@@ -1,5 +1,5 @@
 {
-  "form": {
+  "lifeEvenForm": {
     "id": "NUM",
     "timeEstimate": "NUM",
     "titlePrefix": "STRING",
@@ -15,32 +15,35 @@
           "fieldsets": [
             {
               "fieldset": {
-                "id": "NUM",
+                "criteriaKey": "STRING",
                 "legend": "STRING",
                 "required": "BOOLEAN",
                 "hint": "STRING",
                 "inputs": [
                   {
-                    "input": {
+                    "inputCriteria": {
                       "id": "NUM",
                       "type": "STRING",
                       "name": "STRING",
                       "label": "STRING",
-                      "value": "STRING",
-                      "checked": "BOOLEAN",
-                      "options": [
+                      "value": [
                         {
                           "default": "",
                           "value": "STRING"
                         },
                         {
-                          "option": "STRING",
+                          "option": "Option1",
                           "value": "STRING"
                         }
                       ],
                       "hasChild": "BOOLEAN",
-                      "childDependencyOption": "STRING"
+                      "childDependencyOption": "Option 1"
                     }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
                   }
                 ]
               }
@@ -60,44 +63,28 @@
           {
             "criteriaKey": "STRING",
             "label": "STRING",
-            "acceptableValue": "STRING"
+            "acceptableValue": [
+              "STRING"
+            ]
           }
         ],
         "tags": [
           "STRING"
         ],
         "lifeEvents": [
-          {
-            "id": "NUM",
-            "title": "STRING",
-            "summary": "HTML",
-            "lede": "HTML",
-            "secondaryHeadline": "STRING",
-            "eligibilityCriteriaDescription": "HTML",
-            "eligibilityCriteria": [
-              {
-                "label": "STRING",
-                "description": "STRING",
-                "criteriaGroupKey": "STRING",
-                "criteriaKey": "STRING"
-              }
-            ]
-          }
+          "death",
+          "retirement"
         ],
-        "source": "STRING",
-        "agency": {
+        "source": {
           "name": "STRING",
           "link": "STRING",
           "isEnglish": "BOOLEAN"
         },
-        "criteria": [
-          {
-            "criteriaKey": "STRING",
-            "label": "STRING",
-            "type": "STRING",
-            "values": "STRING"
-          }
-        ]
+        "agency": {
+          "name": "STRING",
+          "link": "STRING",
+          "isEnglish": "BOOLEAN"
+        }
       }
     }
   ]

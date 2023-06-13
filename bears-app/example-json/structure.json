@@ -54,12 +54,48 @@
     {
       "benefit": {
         "title": "STRING",
-        "agency": "STRING",
-        "agencyRef": "STRING",
-        "description": "HTML",
+        "headline": "HTML",
+        "summary": "HTML",
+        "eligibility": [
+          {
+            "criteriaKey": "STRING",
+            "label": "STRING",
+            "acceptableValue": "STRING"
+          }
+        ],
+        "tags": [
+          "STRING"
+        ],
+        "lifeEvents": [
+          {
+            "id": "NUM",
+            "title": "STRING",
+            "summary": "HTML",
+            "lede": "HTML",
+            "secondaryHeadline": "STRING",
+            "eligibilityCriteriaDescription": "HTML",
+            "eligibilityCriteria": [
+              {
+                "label": "STRING",
+                "description": "STRING",
+                "criteriaGroupKey": "STRING",
+                "criteriaKey": "STRING"
+              }
+            ]
+          }
+        ],
+        "source": "STRING",
+        "agency": {
+          "name": "STRING",
+          "link": "STRING",
+          "isEnglish": "BOOLEAN"
+        },
         "criteria": [
           {
-            "criterion": ""
+            "criteriaKey": "STRING",
+            "label": "STRING",
+            "type": "STRING",
+            "values": "STRING"
           }
         ]
       }

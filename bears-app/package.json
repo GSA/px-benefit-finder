@@ -7,6 +7,7 @@
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@craco/craco": "^7.1.0",
+    "@storybook/addon-a11y": "^7.0.21",
     "@storybook/addon-essentials": "^7.0.21",
     "@storybook/addon-interactions": "^7.0.21",
     "@storybook/addon-jest": "^7.0.21",

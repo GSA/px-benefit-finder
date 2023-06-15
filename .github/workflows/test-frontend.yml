@@ -8,6 +8,10 @@ on:
 
 permissions: read-all
 
+defaults:
+  run:
+    working-directory: ./bears-app
+
 jobs:
   test_frontend:
     name: test frontend
@@ -18,7 +22,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Read .nvmrc
-        working-directory: ./bears-app
         run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
         id: nvm
 
@@ -28,9 +31,7 @@ jobs:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
       - name: Install dependencies
-        working-directory: ./bears-app
         run: npm ci
 
       - name: Test frontend
-        working-directory: ./bears-app
         run: npm run test

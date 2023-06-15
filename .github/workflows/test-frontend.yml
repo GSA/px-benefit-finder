@@ -1,5 +1,5 @@
 ---
-name: Test
+name: Test Frontend
 
 # yamllint disable-line rule:truthy
 on:
@@ -28,7 +28,9 @@ jobs:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
       - name: Install dependencies
+        working-directory: ./bears-app
         run: npm ci
 
       - name: Test frontend
+        working-directory: ./bears-app
         run: npm run test

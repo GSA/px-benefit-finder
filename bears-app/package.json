@@ -32,7 +32,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "craco test --coverage",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
     "lint:scss": "stylelint 'src/**/*.scss'",

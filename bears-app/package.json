@@ -4,7 +4,16 @@
   "private": true,
   "proxy": "http://localhost",
   "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
     "@craco/craco": "^7.1.0",
+    "@storybook/addon-essentials": "^7.0.21",
+    "@storybook/addon-interactions": "^7.0.21",
+    "@storybook/addon-links": "^7.0.21",
+    "@storybook/blocks": "^7.0.21",
+    "@storybook/react": "^7.0.21",
+    "@storybook/react-webpack5": "^7.0.21",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,16 +24,19 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.3",
     "jsdoc": "^4.0.2",
     "lint-staged": "^13.2.2",
     "plop": "^3.1.2",
     "prettier": "^2.8.8",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "react-test-renderer": "^18.2.0",
     "sass": "^1.62.1",
+    "storybook": "^7.0.21",
     "stylelint": "^15.6.2",
     "stylelint-config-standard-scss": "^9.0.0",
     "web-vitals": "^2.1.4"
@@ -41,7 +53,9 @@
     "lint:js:fix": "npm run lint:js -- --fix",
     "postinstall": "cd .. && husky install bears-app/.husky",
     "lint-staged": "lint-staged",
-    "generate:component": "plop"
+    "generate:component": "plop",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "browserslist": {
     "production": [

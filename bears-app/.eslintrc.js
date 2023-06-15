@@ -7,6 +7,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:storybook/recommended',
   ],
   rules: {
     'react/prop-types': 'off',

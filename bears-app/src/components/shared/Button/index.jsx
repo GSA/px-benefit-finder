@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import './index.scss'
+import './_index.scss'
 
 /**
  * a functional component that renders a reactive button

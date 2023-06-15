@@ -11,10 +11,11 @@
     |-shared
       |-components
         |-ComponentName
-          |-__snapshots__
-          |-ComponentName.jsx
-          |-_component-name.scss
-          |-ComponentName.spec.js
+          |-__tests__
+            |-__snapshots__
+            |-index.spec.js
+          |-index.jsx
+          |-_index.scss
     |-index.jsx
     |-README.md
 ```
@@ -244,5 +245,5 @@ you can use [plop](https://github.com/plopjs/plop)
 `cd` to the root of the application
 
 ```sh
-npm run generate:component
+npm run generate:component <component-name>
 ```

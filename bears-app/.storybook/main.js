@@ -5,11 +5,11 @@ const config = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    '@storybook/addon-jest',
     {
       name: '@storybook/addon-styling',
       options: {
         sass: {
-          // Require your Sass preprocessor here
           implementation: require('sass'),
         },
       },

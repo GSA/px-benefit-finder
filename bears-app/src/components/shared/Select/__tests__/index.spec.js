@@ -1,5 +1,5 @@
 import TestRenderer from 'react-test-renderer'
-import Select from './index.jsx'
+import Select from '../index.jsx'
 
 const selectLabel = 'Dropdown Label'
 const selectOptions = [

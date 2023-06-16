@@ -16,7 +16,7 @@ jobs:
       # - install-cloud-foundry
       # - load-image-digest
       - run:
-        name: build the bears app
-        command: |
+          name: build the bears app
+          command: |
           bash $CIRCLE_WORKING_DIRECTORY/mv-bears-app.sh
           

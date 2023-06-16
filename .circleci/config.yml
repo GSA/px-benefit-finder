@@ -8,26 +8,26 @@ jobs:
       image: ubuntu-2004:202107-02
     steps:
       - run:
-          name: Cloning the repo
+          name: Cloning and Making Changes to the Repo
           command: |
+            echo "cloning the repo and initiating the usagov-2021 submodule"
             git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
             cd px-bears-drupal
             git submodule init
             git submodule update
-            pwd
-            ls -l
             echo "building the bears app in the same step"
             bash ./mv-bears-app.sh
             echo ".................."
             echo "moving the bears-app module into the usagov-2021 directory"
             mv  usagov_bears usagov-2021/web/modules/custom
             ls -l usagov-2021/web/modules/custom/
-      # - run:
-      #     name: "build the bears app"
-      #     command: |
-      #       pwd
-      #       ls -l
-      #       bash ./mv-bears-app.sh
+      - run:
+          name: "testing...."
+          command: |
+            pwd
+            ls -l
+            cd usagov-2021
+            ls -l
       # - run:
       #     name: "move the bears-app module into the usagov-2021 directory"
       #     command: |

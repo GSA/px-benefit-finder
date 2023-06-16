@@ -23,6 +23,7 @@ jobs:
             ls -l usagov-2021/web/modules/custom/
       - run:
           name: "testing...."
+          working_directory: ~/px-bears-drupal/
           command: |
             pwd
             ls -l

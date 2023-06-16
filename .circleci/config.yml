@@ -1,0 +1,22 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/configuration-reference
+version: 2.1
+jobs:
+  setting-the-repo:
+    # parameters:
+    #   envname:
+    #     default: "main"
+    #     type: string
+    steps:
+      - checkout
+      # - run:
+      #     name: Setup Environment for use in Scripts
+      #     command: |
+      #       printenv | grep -i -v -E "^(PWD|OLDPWD|SHLVL|_)=" | sed -e 's/^\([^=]*=\)\(.*\)/export \1"\2"/' | tee /home/circleci/project/env.local
+      # - install-cloud-foundry
+      # - load-image-digest
+      - run:
+        name: build the bears app
+        command: |
+          bash $CIRCLE_WORKING_DIRECTORY/mv-bears-app.sh
+          

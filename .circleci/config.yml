@@ -16,8 +16,9 @@ jobs:
           command: |
             pwd
             ls -l
-            cd usagov-2021/web/modules/custom
+            cd usagov-2021
             pwd
+            ls -l
             mv  usagov_bears usagov-2021/web/modules/custom
             ls -l usagov-2021/web/modules/custom/
 

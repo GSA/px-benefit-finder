@@ -18,23 +18,27 @@ jobs:
             ls -l
             echo "building the bears app in the same step"
             bash ./mv-bears-app.sh
-      - run:
-          name: "build the bears app"
-          command: |
-            pwd
-            ls -l
-            bash ./mv-bears-app.sh
-      - run:
-          name: "move the bears-app module into the usagov-2021 directory"
-          command: |
-            git pull --recurse-submodules 
-            pwd
-            ls -l
-            cd usagov-2021
-            pwd
-            ls -l
+            echo ".................."
+            echo "moving the bears-app module into the usagov-2021 directory"
             mv  usagov_bears usagov-2021/web/modules/custom
             ls -l usagov-2021/web/modules/custom/
+      # - run:
+      #     name: "build the bears app"
+      #     command: |
+      #       pwd
+      #       ls -l
+      #       bash ./mv-bears-app.sh
+      # - run:
+      #     name: "move the bears-app module into the usagov-2021 directory"
+      #     command: |
+      #       git pull --recurse-submodules 
+      #       pwd
+      #       ls -l
+      #       cd usagov-2021
+      #       pwd
+      #       ls -l
+      #       mv  usagov_bears usagov-2021/web/modules/custom
+      #       ls -l usagov-2021/web/modules/custom/
 
 # Orchestrate our job run sequence
 workflows:

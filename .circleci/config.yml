@@ -16,6 +16,8 @@ jobs:
             git submodule update
             pwd
             ls -l
+            echo "building the bears app in the same step"
+            bash ./mv-bears-app.sh
       - run:
           name: "build the bears app"
           command: |

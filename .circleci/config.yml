@@ -1,11 +1,21 @@
 
 version: 2.1
+
+# Define the jobs we want to run for this project
 jobs:
-  test:
+  build-bears-app:
     steps:
       - checkout
       - run:
           name: "build the bears app"
           command: bash ./mv-bears-app.sh
+
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - build-bears-app
+
+
             
           

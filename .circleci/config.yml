@@ -11,6 +11,13 @@ jobs:
       - run:
           name: "build the bears app"
           command: bash ./mv-bears-app.sh
+      - run:
+          name: "move the bears-app module into the usagov-2021 directory"
+          command: |
+            pwd
+            ls -l
+            cp -r  ./usagov_bears ./usagov-2021/web/modules/custom/
+            ls -l ./usagov-2021/web/modules/custom/
 
 # Orchestrate our job run sequence
 workflows:

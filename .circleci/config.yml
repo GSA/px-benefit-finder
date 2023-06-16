@@ -6,6 +6,6 @@ jobs:
       - checkout
       - run:
           name: "build the bears app"
-          command: |
-            bash $CIRCLE_WORKING_DIRECTORY/mv-bears-app.sh
+          command: bash ./mv-bears-app.sh
+            
           

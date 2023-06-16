@@ -7,14 +7,13 @@ jobs:
     machine:
       image: ubuntu-2004:202107-02
     steps:
-      # - checkout
       - run:
-        name: Cloning the repo
-        command: |
-          git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
-          cd px-bears-drupal
-          git submodule init
-          git submodule update
+          name: Cloning the repo
+          command: |
+            git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
+            cd px-bears-drupal
+            git submodule init
+            git submodule update
       - run:
           name: "build the bears app"
           command: bash ./mv-bears-app.sh

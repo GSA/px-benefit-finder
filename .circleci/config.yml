@@ -25,6 +25,7 @@ jobs:
           name: "testing...."
           working_directory: ~/px-bears-drupal/
           command: |
+            cd px-bears-drupal
             pwd
             ls -l
             cd usagov-2021

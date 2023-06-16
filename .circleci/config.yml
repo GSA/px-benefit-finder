@@ -14,9 +14,14 @@ jobs:
             cd px-bears-drupal
             git submodule init
             git submodule update
+            pwd
+            ls -l
       - run:
           name: "build the bears app"
-          command: bash ./mv-bears-app.sh
+          command: |
+            pwd
+            ls -l
+            bash ./mv-bears-app.sh
       - run:
           name: "move the bears-app module into the usagov-2021 directory"
           command: |

@@ -16,7 +16,8 @@ jobs:
           command: |
             pwd
             ls -l
-            cp -r  usagov_bears usagov-2021/web/modules/custom/usagov_bears
+            ls -l usagov-2021
+            mv  usagov_bears usagov-2021/web/modules/custom
             ls -l usagov-2021/web/modules/custom/
 
 # Orchestrate our job run sequence

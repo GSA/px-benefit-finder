@@ -43,18 +43,19 @@ jobs:
           name: Building  and tagging the Docker Image
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
-            export DOCKER_REPO="$DOCKER_USER/bears-cms"
+            export DOCKERUSER=${DOCKER_USER}
+            export DOCKERREPO=${DOCKERUSER/bears-cms}
             cd px-bears-drupal/usagov-2021
             ls -l
-            docker build -f ./Dockerfile-cms -t "$IMAGE_TAG" .
+            docker build -f ./Dockerfile-cms -t ${DOCKERREPO:IMAGE_TAG} .
             docker images
 
       - run:
           name: Pushing the Docker image to the repo
           command: |
             docker images
-            echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-            docker push "($DOCKER_REPO:$IMAGE_TAG)"
+            echo $DOCKER_PASS | docker login -u $DOCKERUSER --password-stdin
+            docker push ${DOCKERREPO:IMAGE_TAG}
   
 
 # Orchestrate our job run sequence

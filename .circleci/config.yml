@@ -26,9 +26,9 @@ jobs:
             mv  usagov_bears usagov-2021/web/modules/custom
             ls -l usagov-2021/web/modules/custom/
 
-      - run: 
-          name:
-          command: |
+      # - run: 
+      #     name:
+      #     command: |
 
       
 

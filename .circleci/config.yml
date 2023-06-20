@@ -8,20 +8,28 @@ jobs:
       image: ubuntu-2004:202107-02
     steps:
       - run:
-          name: Cloning and Making Changes to the Repo
+          name: Cloning the Repo and initiating the Submodule
           command: |
             echo "cloning the repo and initiating the usagov-2021 submodule"
             git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
             cd px-bears-drupal
             git submodule init
             git submodule update
-            bash bin/pipeline/initial-setup.sh
 
       - run:
-          name: testing the second step
+          name: Moving the bears app into usagov-2021 module
           command: |
             cd px-bears-drupal/usagov-2021
-            pwd && ls -l
+            bash ./mv-bears-app.sh
+            echo ".................."
+            echo "moving the bears-app module into the usagov-2021 directory"
+            mv  usagov_bears usagov-2021/web/modules/custom
+            ls -l usagov-2021/web/modules/custom/
+
+      - run: 
+          name:
+          command: |
+
       
 
 # Orchestrate our job run sequence

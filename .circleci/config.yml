@@ -31,7 +31,7 @@ jobs:
       - run: 
           name: Pre-docker-build configurations
           command: |
-            cd px-bears-drupal
+            cd px-bears-drupal/usagov-2021
             mv usagov-2021/.docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/cms.conf.tmpl
@@ -44,19 +44,11 @@ jobs:
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKER_REPO="fbakir/bears-cms"
-            cd px-bears-drupal
+            cd px-bears-drupal/usagov-2021
             ls -l
-            docker build -f ./Dockerfile-cms .
+            docker build -f ./Dockerfile-cms -t $DOCKER_REPO:$IMAGE_TAG .
             docker images
-
-# -t $DOCKER_REPO:$IMAGE_TAG
-
-
-            
-
-
-
-      
+  
 
 # Orchestrate our job run sequence
 workflows:

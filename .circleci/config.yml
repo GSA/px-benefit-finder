@@ -46,7 +46,7 @@ jobs:
             export DOCKER_REPO="fbakir/bears-cms"
             cd px-bears-drupal/usagov-2021
             ls -l
-            docker build -f ./Dockerfile-cms -t $DOCKER_REPO:$IMAGE_TAG .
+            docker build -f ./Dockerfile-cms -t "{$DOCKER_REPO:$IMAGE_TAG}" .
             docker images
 
       - run:
@@ -54,7 +54,7 @@ jobs:
           command: |
             docker images
             echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-            docker push $DOCKER_REPO:$IMAGE_TAG
+            docker push "{$DOCKER_REPO:$IMAGE_TAG}"
   
 
 # Orchestrate our job run sequence

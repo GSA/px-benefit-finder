@@ -19,13 +19,13 @@ module.exports = plop => {
       },
       {
         type: 'add',
-        path: 'src/components/shared/{{pascalCase name}}/{{pascalCase name}}.spec.js',
+        path: 'src/components/shared/{{pascalCase name}}/__tests__/index.spec.js',
         templateFile:
           'src/components/shared/.ComponentTemplate/Component.spec.js.hbs',
       },
       {
         type: 'add',
-        path: 'src/components/shared/{{pascalCase name}}/_{{name}}.scss',
+        path: 'src/components/shared/{{pascalCase name}}/_index.scss',
         templateFile:
           'src/components/shared/.ComponentTemplate/_Component.scss.hbs',
       },

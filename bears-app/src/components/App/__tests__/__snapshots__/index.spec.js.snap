@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders a match to the previous snapshot 1`] = `
+<div
+  className="bears-app"
+>
+  <button
+    className="usa-button usa-button--outline"
+    onClick={[Function]}
+  >
+    Component Sandbox
+  </button>
+  <div>
+    <div>
+      Sandbox
+    </div>
+    <button
+      className="usa-button lighter"
+    >
+      Button
+    </button>
+    <form
+      className="usa-form"
+    >
+      <label
+        className="usa-label"
+        htmlFor="options"
+      >
+        Dropdown Label
+      </label>
+      <select
+        className="usa-select"
+        id="options"
+        name="options"
+      >
+        <option
+          value=""
+        >
+          -Select-
+        </option>
+        <option
+          value="value-1"
+        >
+          Option 1
+        </option>
+        <option
+          value="value-2"
+        >
+          Option 2
+        </option>
+        <option
+          value="value-3"
+        >
+          Option 3
+        </option>
+      </select>
+    </form>
+  </div>
+  loading...
+</div>
+`;

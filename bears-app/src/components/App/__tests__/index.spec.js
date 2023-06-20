@@ -1,9 +1,9 @@
 import TestRenderer from 'react-test-renderer'
-import Button from './index.jsx'
+import App from '../index'
 
-describe('Select', () => {
+describe('App', () => {
   it('renders a match to the previous snapshot', () => {
-    const component = TestRenderer.create(<Button />)
+    const component = TestRenderer.create(<App />)
     expect(component.toJSON()).toMatchSnapshot()
   })
 })

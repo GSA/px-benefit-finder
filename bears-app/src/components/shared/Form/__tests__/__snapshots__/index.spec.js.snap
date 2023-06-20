@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select renders a match to the previous snapshot 1`] = `
+exports[`Form renders a match to the previous snapshot 1`] = `
 <form
   className="usa-form"
 />

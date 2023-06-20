@@ -4,6 +4,7 @@
 /bears-app
   |-.husky
     |-git-hooks
+  |-.storybook
   |-public
     |-index.html
   |-src

@@ -32,10 +32,10 @@ jobs:
           name: Pre-docker-build configurations
           command: |
             cd px-bears-drupal/usagov-2021
-            mv usagov-2021/.docker/Dockerfile-cms .
+            mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms  
-            sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/cms.conf.tmpl
-            sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/www.conf.tmpl
+            sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
+            sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
 
       # - setup_remote_docker
 

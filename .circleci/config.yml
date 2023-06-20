@@ -37,7 +37,7 @@ jobs:
             sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/www.conf.tmpl
 
-      - setup_remote_docker
+      # - setup_remote_docker
 
       - run: 
           name: Building  and tagging the Docker Image

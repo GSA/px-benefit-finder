@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Moving the bears app into usagov-2021 module
           command: |
-            cd px-bears-drupal/usagov-2021
+            cd px-bears-drupal
             bash ./mv-bears-app.sh
             echo ".................."
             echo "moving the bears-app module into the usagov-2021 directory"

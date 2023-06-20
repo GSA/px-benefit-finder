@@ -4,10 +4,10 @@ version: 2.1
 # Define the jobs we want to run for this project
 jobs:
   build-bears-app:
-    # machine:
-    #   image: ubuntu-2004:202107-02
-    docker:
-      - image: docker:17.05.0-ce-git
+    machine:
+      image: ubuntu-2004:202107-02
+    # docker:
+    #   - image: docker:17.05.0-ce-git
     steps:
       - run:
           name: Cloning the Repo and initiating the Submodule
@@ -46,8 +46,10 @@ jobs:
             export DOCKER_REPO="fbakir/bears-cms"
             cd px-bears-drupal
             ls -l
-            docker build -f ./Dockerfile-cms -t $DOCKER_REPO:$IMAGE_TAG .
+            docker build -f ./Dockerfile-cms .
             docker images
+
+# -t $DOCKER_REPO:$IMAGE_TAG
 
 
             

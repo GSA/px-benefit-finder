@@ -26,9 +26,28 @@ jobs:
             mv  usagov_bears usagov-2021/web/modules/custom
             ls -l usagov-2021/web/modules/custom/
 
-      # - run: 
-      #     name:
-      #     command: |
+      - run: 
+          name: Pre-docker-build configurations
+          command: |
+            cd px-bears-drupal
+            mv usagov-2021/.docker/Dockerfile-cms .
+            sed -i 's/80/8080/g' Dockerfile-cms  
+            sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/cms.conf.tmpl
+            sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/www.conf.tmpl
+
+      - run: 
+          name: Building  and tagging the Docker Image
+          command: |
+            export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
+            export DOCKER_REPO="fbakir/bears-cms"
+            cd px-bears-drupal
+            docker build -t $DOCKER_REPO:$IMAGE_TAG .
+            docker images
+
+
+            
+
+
 
       
 

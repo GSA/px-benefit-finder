@@ -55,7 +55,7 @@ jobs:
           name: Pushing the Docker image to the repo
           command: |
             docker images
-            echo $DOCKER_PASS | $(docker login -u $DOCKERUSER --password-stdin)
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push "fbakir/bears-cms:$IMAGE_TAG"
   
 

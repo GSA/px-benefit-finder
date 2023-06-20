@@ -20,6 +20,7 @@ jobs:
       - run:
           name: testing the second step
           command: |
+            cd px-bears-drupal/usagov-2021
             pwd && ls -l
       
 

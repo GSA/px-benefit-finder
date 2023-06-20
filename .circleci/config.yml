@@ -4,8 +4,10 @@ version: 2.1
 # Define the jobs we want to run for this project
 jobs:
   build-bears-app:
-    machine:
-      image: ubuntu-2004:202107-02
+    # machine:
+    #   image: ubuntu-2004:202107-02
+    docker:
+      - image: docker:17.05.0-ce-git
     steps:
       - run:
           name: Cloning the Repo and initiating the Submodule
@@ -34,6 +36,8 @@ jobs:
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' usagov-2021/.docker/src-cms/etc/nginx/partials/www.conf.tmpl
+
+      - setup_remote_docker
 
       - run: 
           name: Building  and tagging the Docker Image

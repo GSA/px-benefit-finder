@@ -17,6 +17,11 @@ jobs:
             git submodule update
             bash bin/pipeline/initial-setup.sh
 
+      - run:
+        name: testing the second step
+        command: pwd && ls -l
+      
+
 # Orchestrate our job run sequence
 workflows:
   build_and_test:

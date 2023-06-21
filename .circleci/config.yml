@@ -61,7 +61,7 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml  
             cat manifest.yml
 
-      - install-cloud-foundry
+      # - install-cloud-foundry
 
 # Orchestrate our job run sequence
 workflows:

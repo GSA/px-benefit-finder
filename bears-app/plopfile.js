@@ -29,6 +29,12 @@ module.exports = plop => {
         templateFile:
           'src/components/shared/.ComponentTemplate/_Component.scss.hbs',
       },
+      {
+        type: 'add',
+        path: 'src/components/shared/{{pascalCase name}}/index.stories.jsx',
+        templateFile:
+          'src/components/shared/.ComponentTemplate/Component.stories.jsx.hbs',
+      },
     ],
   })
 }

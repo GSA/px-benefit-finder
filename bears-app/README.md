@@ -4,6 +4,7 @@
 /bears-app
   |-.husky
     |-git-hooks
+  |-.storybook
   |-public
     |-index.html
   |-src
@@ -15,6 +16,7 @@
             |-__snapshots__
             |-index.spec.js
           |-index.jsx
+          |-index.stories.jsx
           |-_index.scss
     |-index.jsx
     |-README.md
@@ -52,12 +54,31 @@ npm install
 
 ### Build and serve development environment.
 
+There are two build environments, one for our component workshop (Storybook) and another for our Application (craco)
+
+#### CRACO APP
+
 Rather than ejecting the react scripts, we override them with tooling. (Learn more about [Craco](https://craco.js.org/docs/getting-started/
 ).
 
 ```shell
 npm run start
 ```
+
+#### Storybook
+
+Build and watch our tests.
+
+```shell
+npm run prebuild:storybook
+```
+
+Run development workshop.
+
+```shell
+npm run dev:storybook
+```
+
 ## Git Hooks
 
 We use husky to manage git hooks.

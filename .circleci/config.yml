@@ -58,6 +58,7 @@ jobs:
           command: |
             cd px-bears-drupal/usagov-2021
             sed -i "s#^    image: .*cms*#    image: fbakir/bears-cms:$IMAGE_TAG#" manifest.yml  
+            cat manifest.yml
 
 # Orchestrate our job run sequence
 workflows:

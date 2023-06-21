@@ -48,7 +48,7 @@ jobs:
             ls -l
             docker build -f ./Dockerfile-cms -t "$DOCKERREPO:$IMAGE_TAG" .
             docker images
-            echo "$CR_PAT" | docker login --username USERNAME --password-stdin
+            echo "$CR_PAT" | docker login --username $USERNAME --password-stdin
             docker push "$DOCKERREPO:$IMAGE_TAG"
 
       - run:

@@ -60,6 +60,7 @@ jobs:
             cd px-bears-drupal/usagov-2021
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
+            sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
             cat manifest.yml
 
       - run:

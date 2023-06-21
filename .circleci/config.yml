@@ -61,13 +61,34 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml  
             cat manifest.yml
 
-      - install-cloud-foundry
+      - run:
+          name: Setup CF CLI
+          command: |
+            export CF_USER=$( echo $CF_USER)
+            export CF_PASSWORD=$( echo $CF_PASSWORD)
+            export CF_ORG=$( echo $CF_ORG)
+            export CF_SPACE=$( echo $CF_SPACE)
+            curl -v -L -o cf-cli_amd64.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github"
+            sudo dpkg -i cf-cli_amd64.deb
+            cf -v
+            cf api cf login -a api.fr.cloud.gov  --sso  
+            cf auth "$CF_USER" "$CF_PASSWORD"
+            cf target -o "$CF_ORG" -s "$CF_SPACE"
+
+      - run:
+          name: Deploy the the app to cloud.gov
+          command: |
+            cd px-bears-drupal/usagov-2021
+            cf push cms
 
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
     jobs:
       - build-bears-app
+          # filters:
+          #   branches:
+          #     only: main
 
 
             

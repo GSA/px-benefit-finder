@@ -60,7 +60,7 @@ jobs:
             export DOCKERUSER=${DOCKER_USER}
             export DOCKERREPO="fbakir/bears-cms"
             cd px-bears-drupal/usagov-2021
-            sed -i "s#^    image: .*cms*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml  
+            sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml  
             cat manifest.yml
 
 # Orchestrate our job run sequence

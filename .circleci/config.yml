@@ -37,31 +37,31 @@ jobs:
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
 
-      # - setup_remote_docker
-
       - run: 
           name: Building, tagging, pushing the Docker Image
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
-            export DOCKERUSER=${DOCKER_USER}
-            export DOCKERREPO="fbakir/bears-cms"
+            export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
+            export CR_PAT=$( echo $CR_PAT)
             cd px-bears-drupal/usagov-2021
             echo "echoing the image tag: $IMAGE_TAG"
             ls -l
             docker build -f ./Dockerfile-cms -t "$DOCKERREPO:$IMAGE_TAG" .
             docker images
-            echo "$DOCKER_PASS" | docker login --username "$DOCKERUSER" --password-stdin
+            echo "$CR_PAT" | docker login --username USERNAME --password-stdin
             docker push "$DOCKERREPO:$IMAGE_TAG"
 
       - run:
           name: Changing the manifest yml
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
-            export DOCKERUSER=${DOCKER_USER}
-            export DOCKERREPO="fbakir/bears-cms"
+            export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
+            export CR_PAT=$( echo $CR_PAT)
             cd px-bears-drupal/usagov-2021
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml  
             cat manifest.yml
+
+      - install-cloud-foundry
 
 # Orchestrate our job run sequence
 workflows:

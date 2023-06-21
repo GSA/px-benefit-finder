@@ -3,7 +3,7 @@ version: 2.1
 
 # Define the jobs we want to run for this project
 jobs:
-  build-bears-app:
+  build_and_deploy:
     machine:
       image: ubuntu-2004:202107-02
     # docker:
@@ -58,7 +58,8 @@ jobs:
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
             export CR_PAT=$( echo $CR_PAT)
             cd px-bears-drupal/usagov-2021
-            sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml  
+            sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
+            sed -i "s#^    - secauthsecrets##" manifest.yml
             cat manifest.yml
 
       - run:
@@ -85,9 +86,9 @@ jobs:
 
 # Orchestrate our job run sequence
 workflows:
-  build_and_test:
+  build_and_deploy:
     jobs:
-      - build-bears-app
+      - build_and_deploy
           # filters:
           #   branches:
           #     only: main

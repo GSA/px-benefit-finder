@@ -14,20 +14,20 @@ readonly USAGOV_PROJECT_CUSTOM_MODULES_LOCATION="${USAGOV_PROJECT_LOCATION}/web/
 # check if usagov-2021 custom modules directory exist
 if test ! -d "$USAGOV_PROJECT_CUSTOM_MODULES_LOCATION"
 then
-    echo -e "\xE2\x9C\x94 usa.gov project directory does not exists, initializing submodule"
+    echo "\xE2\x9C\x94 usa.gov project directory does not exists, initializing submodule"
     # init submodule
     git submodule init
     git submodule update
 else
-    echo -e "\xE2\x9C\x94 usa.gov project directory exists, updating submodule"
+    echo "\xE2\x9C\x94 usa.gov project directory exists, updating submodule"
     git pull --recurse-submodules
 fi
 
 # check if module directory exist
 if test -d "$BEARS_MODULE_LOCATION"
 then
-    echo -e "\xE2\x9C\x94 usa.gov bears module exist"
-    echo -e "Moving BEARS custom module to usa.gov project..."
+    echo "\xE2\x9C\x94 usa.gov bears module exist"
+    echo "Moving BEARS custom module to usa.gov project..."
     cp -r $BEARS_MODULE_LOCATION $USAGOV_PROJECT_CUSTOM_MODULES_LOCATION
     test -f "${USAGOV_PROJECT_CUSTOM_MODULES_LOCATION}${BEARS_MODULE}"; echo -e "\xE2\x9C\x94 BEARS Module successfully moved"
 fi

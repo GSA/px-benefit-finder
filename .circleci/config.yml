@@ -83,7 +83,8 @@ jobs:
             export CF_SPACE=$( echo $CF_SPACE)
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cd px-bears-drupal/usagov-2021
-            cf push cms
+            CF_DOCKER_PASSWORD=$( echo $CF_PASSWORD) cf push cms --docker-image "ghcr.io/gsa/px-bears-drupal/bears-cms:88b5c1a0" --docker-username "$CF_USER"
+#            cf push cms
 
 # Orchestrate our job run sequence
 workflows:

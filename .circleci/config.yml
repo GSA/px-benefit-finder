@@ -48,16 +48,19 @@ jobs:
             cd px-bears-drupal/usagov-2021
             echo "echoing the image tag: $IMAGE_TAG"
             ls -l
-            docker build -f ./Dockerfile-cms -t "fbakir/bears-cms:$IMAGE_TAG" .
+            docker build -f ./Dockerfile-cms -t "$DOCKERREPO:$IMAGE_TAG" .
             docker images
             echo "$DOCKER_PASS" | docker login --username "$DOCKERUSER" --password-stdin
-            docker push "fbakir/bears-cms:$IMAGE_TAG"
+            docker push "$DOCKERREPO:$IMAGE_TAG"
 
       - run:
           name: Changing the manifest yml
           command: |
+            export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
+            export DOCKERUSER=${DOCKER_USER}
+            export DOCKERREPO="fbakir/bears-cms"
             cd px-bears-drupal/usagov-2021
-            sed -i "s#^    image: .*cms*#    image: fbakir/bears-cms:$IMAGE_TAG#" manifest.yml  
+            sed -i "s#^    image: .*cms*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml  
             cat manifest.yml
 
 # Orchestrate our job run sequence

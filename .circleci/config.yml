@@ -64,14 +64,10 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
-            export CF_USER=$( echo $CF_USER)
-            export CF_PASSWORD=$( echo $CF_PASSWORD)
-            export CF_ORG=$( echo $CF_ORG)
-            export CF_SPACE=$( echo $CF_SPACE)
             curl -v -L -o cf-cli_amd64.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github"
             sudo dpkg -i cf-cli_amd64.deb
             cf -v
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
+
          # cf api -a https://api.fr.cloud.gov  
          # cf auth "$CF_USER" "$CF_PASSWORD"
          # cf target -o "$CF_ORG" -s "$CF_SPACE"
@@ -79,6 +75,11 @@ jobs:
       - run:
           name: Deploy the the app to cloud.gov
           command: |
+            export CF_USER=$( echo $CF_USER)
+            export CF_PASSWORD=$( echo $CF_PASSWORD)
+            export CF_ORG=$( echo $CF_ORG)
+            export CF_SPACE=$( echo $CF_SPACE)
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cd px-bears-drupal/usagov-2021
             cf push cms
 

@@ -43,12 +43,13 @@ jobs:
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
             export CR_PAT=$( echo $CR_PAT)
+            export GH_USERNAME=$( echo $GH_USERNAME)
             cd px-bears-drupal/usagov-2021
             echo "echoing the image tag: $IMAGE_TAG"
             ls -l
             docker build -f ./Dockerfile-cms -t "$DOCKERREPO:$IMAGE_TAG" .
             docker images
-            echo "$CR_PAT" | docker login ghcr.io --username FatmaBakir --password-stdin
+            echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             docker push "$DOCKERREPO:$IMAGE_TAG"
 
       - run:
@@ -77,14 +78,19 @@ jobs:
       - run:
           name: Deploy the the app to cloud.gov
           command: |
+            export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
+            export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
+            export CR_PAT=$( echo $CR_PAT)
+            export GH_USERNAME=$( echo $GH_USERNAME)
             export CF_USER=$( echo $CF_USER)
             export CF_PASSWORD=$( echo $CF_PASSWORD)
             export CF_ORG=$( echo $CF_ORG)
             export CF_SPACE=$( echo $CF_SPACE)
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cd px-bears-drupal/usagov-2021
+            echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CF_PASSWORD) cf push cms --docker-image "ghcr.io/gsa/px-bears-drupal/bears-cms:88b5c1a0" --docker-username "$CF_USER"
-#            cf push cms
+
 
 # Orchestrate our job run sequence
 workflows:

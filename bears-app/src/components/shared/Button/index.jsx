@@ -1,6 +1,6 @@
+import { useDesktop } from '../hooks/useBreakPoints'
+import { useHandleClassName } from '../hooks/useHandleClassName'
 import PropTypes from 'prop-types'
-
-import './_index.scss'
 
 /**
  * a functional component that renders a reactive button
@@ -11,17 +11,22 @@ import './_index.scss'
  * @return {html} returns a semantic html button element
  */
 function Button({ children, className, onClick }) {
-  /**
-   * a function to construct class strings based on composition.
-   * @function
-   * @param {string} className - The inherited class
-   * @return {string} returns a concat string
-   */
-  const handleClassName =
-    className !== undefined ? `usa-button ${className}` : 'usa-button'
+  // example content to demonstrate utility classes that change at our desktop
+  const desktop = useDesktop()
+  const defaultClasses = [`usa-button`]
+  const utilityClassesMobile = ['bg-red']
+  const utilityClassesDesktop = ['bg-orange', 'border-accent-warm-light']
+  const utilityClasses = desktop ? utilityClassesDesktop : utilityClassesMobile
 
   return (
-    <button onClick={onClick} className={handleClassName}>
+    <button
+      onClick={onClick}
+      className={useHandleClassName({
+        className,
+        defaultClasses,
+        utilityClasses,
+      })}
+    >
       {children}
     </button>
   )

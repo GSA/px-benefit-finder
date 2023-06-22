@@ -102,8 +102,8 @@ workflows:
           # filters:
           #   branches:
           #     only: main
-      - enable-bears-module requires:
-            - build_and_deploy
+      - enable-bears-module 
+          requires: "build_and_deploy"
 
 
 

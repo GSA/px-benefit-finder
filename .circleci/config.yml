@@ -103,11 +103,13 @@ workflows:
           #   branches:
           #     only: main
       - enable-bears-module
+
           requires: 
+          
             - build_and_deploy
 
 
-            
+
 
 
             

@@ -86,9 +86,18 @@ jobs:
 
 
 
+
+  # ssh_into_app:
+  #   executor: ssh
+  #   steps:
+  #     - setup_remote_docker
+
+  #     - run:
+  #         name: SSH into cloud.gov app
+  #         command: ssh <username>@<app-url> "command-to-execute-on-the-app"
+
   work-in-container:
-    machine:
-      image: ubuntu-2004:202107-02
+    executor: ssh
     steps:
       - run:
           name: Setup CF CLI
@@ -97,10 +106,10 @@ jobs:
             sudo dpkg -i cf-cli_amd64.deb
             cf -v
       - run:
-          name: Ssh into the app
+          name: ssh into the app
           command: |
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
-            cf apps
+            ssh cms "pwd"
 
 
 # Orchestrate our job run sequence

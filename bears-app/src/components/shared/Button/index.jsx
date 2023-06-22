@@ -10,12 +10,14 @@ import PropTypes from 'prop-types'
  * @param {function} onClick - an inherited function, triggered on a click event
  * @return {html} returns a semantic html button element
  */
-function Button({ children, className, onClick }) {
-  // example content to demonstrate utility classes that change at our desktop
+function Button({ children, className, onClick, secondary }) {
+  // these are temporary examples to demonstrate utility classes and props that change at our desktop breakpoint
   const desktop = useDesktop()
-  const defaultClasses = [`usa-button`]
-  const utilityClassesMobile = ['bg-red']
-  const utilityClassesDesktop = ['bg-orange', 'border-accent-warm-light']
+  const defaultClasses = !secondary
+    ? ['usa-button', 'border-2px', 'border-accent-warm-light']
+    : ['usa-button', 'usa-button--outline']
+  const utilityClassesMobile = !secondary && ['bg-blue']
+  const utilityClassesDesktop = !secondary && ['bg-orange']
   const utilityClasses = desktop ? utilityClassesDesktop : utilityClassesMobile
 
   return (

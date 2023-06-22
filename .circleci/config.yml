@@ -103,8 +103,7 @@ workflows:
           #   branches:
           #     only: main
       - work-in-container         
-          requires:
-            - build_and_deploy
+          requires: build_and_deploy
 
 
             

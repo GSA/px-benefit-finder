@@ -104,7 +104,7 @@ jobs:
           command: |
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cf apps
-            cf ssh cms [-c "ls -l"]
+            cf ssh cms --command "ls -l"
 
 
 # Orchestrate our job run sequence

@@ -74,7 +74,7 @@ jobs:
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cd px-bears-drupal/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-username "$CF_USER"
+            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
 
   enable-bears-module:
     machine:

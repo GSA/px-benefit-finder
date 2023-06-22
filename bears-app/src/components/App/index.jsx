@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Button } from '../shared/index'
 import * as apiCalls from '../shared/api/api-calls'
 
 /**
@@ -38,6 +39,7 @@ function App() {
     <div className="bears-app">
       <h1>BEARS Hello World!</h1>
       {handleData(data)}
+      <Button>Button</Button>
     </div>
   )
 }

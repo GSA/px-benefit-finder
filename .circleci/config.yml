@@ -104,7 +104,14 @@ jobs:
           command: |
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cf apps
-            cf ssh cms --command "/var/www/vendor/bin/drush --version"
+            cf ssh cms \
+            --command "/var/www/vendor/bin/drush --version" \
+            --command "/var/www/vendor/bin/drush --version" \
+            --command "/var/www/vendor/bin/drush pm:enable usagov_bears_block" \ 
+            --command "/var/www/vendor/bin/drush pm:enable usagov_bears_content" \ 
+            --command "/var/www/vendor/bin/drush pm:enable usagov_bears_api" \ 
+            --command "/var/www/vendor/bin/drush pm:enable usagov_bears" \ 
+            --command "/var/www/vendor/bin/drush cr"
 
 
 # Orchestrate our job run sequence

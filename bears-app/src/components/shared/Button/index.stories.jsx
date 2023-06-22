@@ -8,6 +8,6 @@ export const Primary = {
   render: () => <Button>Button</Button>,
 }
 
-export const Lighter = {
-  render: () => <Button className={'lighter'}>Button</Button>,
+export const Secondary = {
+  render: () => <Button className="border-2px">Button</Button>,
 }

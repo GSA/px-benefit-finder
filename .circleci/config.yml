@@ -76,7 +76,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms --docker-image "ghcr.io/gsa/px-bears-drupal/bears-cms:88b5c1a0" --docker-username "$CF_USER"
 
-  work-in-container:
+  enable-bears-module:
     machine:
       image: ubuntu-2004:202107-02
     steps:
@@ -102,9 +102,9 @@ workflows:
           # filters:
           #   branches:
           #     only: main
-      - work-in-container
-          # requires:
-          #   - build_and_deploy
+      - enable-bears-module
+          requires: 
+            - build_and_deploy
 
 
             

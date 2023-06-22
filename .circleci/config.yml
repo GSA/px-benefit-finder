@@ -5,6 +5,7 @@ jobs:
   build_and_deploy:
     machine:
       image: ubuntu-2004:202107-02
+      
     steps:
       - run:
           name: Cloning the Repo and initiating the Submodule
@@ -89,8 +90,8 @@ jobs:
 
 
   work-in-container:
-      machine:
-        image: ubuntu-2004:202107-02
+    machine:
+      image: ubuntu-2004:202107-02
     steps:
       - run:
           name: Setup CF CLI

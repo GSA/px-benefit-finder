@@ -23,8 +23,8 @@ export const useHandleClassName = ({
   useEffect(() => {
     const classList = [
       className,
-      defaultClasses.join(' '),
-      utilityClasses.join(' '),
+      defaultClasses && defaultClasses.join(' '),
+      utilityClasses && utilityClasses.join(' '),
     ]
     setClasses(
       classList.filter(classGroup => classGroup !== undefined).join(' ')

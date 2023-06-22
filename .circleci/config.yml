@@ -40,8 +40,6 @@ jobs:
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
-            export CR_PAT=$( echo $CR_PAT)
-            export GH_USERNAME=$( echo $GH_USERNAME)
             cd px-bears-drupal/usagov-2021
             echo "echoing the image tag: $IMAGE_TAG"
             ls -l
@@ -55,7 +53,6 @@ jobs:
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
-            export CR_PAT=$( echo $CR_PAT)
             cd px-bears-drupal/usagov-2021
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
@@ -74,20 +71,10 @@ jobs:
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
-            export CR_PAT=$( echo $CR_PAT)
-            export GH_USERNAME=$( echo $GH_USERNAME)
-            export CF_USER=$( echo $CF_USER)
-            export CF_PASSWORD=$( echo $CF_PASSWORD)
-            export CF_ORG=$( echo $CF_ORG)
-            export CF_SPACE=$( echo $CF_SPACE)
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cd px-bears-drupal/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms --docker-image "ghcr.io/gsa/px-bears-drupal/bears-cms:88b5c1a0" --docker-username "$CF_USER"
-
-
-
-
 
   work-in-container:
     machine:
@@ -111,11 +98,13 @@ jobs:
 workflows:
   build_and_deploy:
     jobs:
-      # - build_and_deploy
+      - build_and_deploy
           # filters:
           #   branches:
           #     only: main
-      - work-in-container
+      - work-in-container         
+          requires:
+            - build_and_deploy
 
 
             

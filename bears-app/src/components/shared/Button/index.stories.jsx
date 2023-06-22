@@ -9,5 +9,5 @@ export const Primary = {
 }
 
 export const Secondary = {
-  render: () => <Button className="border-2px">Button</Button>,
+  render: () => <Button secondary>Button</Button>,
 }

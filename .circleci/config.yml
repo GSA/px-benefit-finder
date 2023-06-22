@@ -88,13 +88,13 @@ jobs:
           name: Ssh into the app
           command: |
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
-            cf ssh cms
-            echo "current directory is $(pwd)"
-            /var/www/vendor/bin/drush --version
-            /var/www/vendor/bin/drush pm:enable usagov_bears_block 
-            /var/www/vendor/bin/drush pm:enable usagov_bears_content 
-            /var/www/vendor/bin/drush pm:enable usagov_bears_api 
-            /var/www/vendor/bin/drush pm:enable usagov_bears 
+           # cf ssh cms
+           # echo "current directory is $(pwd)"
+           # /var/www/vendor/bin/drush --version
+           # /var/www/vendor/bin/drush pm:enable usagov_bears_block 
+           # /var/www/vendor/bin/drush pm:enable usagov_bears_content 
+           # /var/www/vendor/bin/drush pm:enable usagov_bears_api 
+           # /var/www/vendor/bin/drush pm:enable usagov_bears 
             exit
 
 

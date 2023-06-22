@@ -8,5 +8,10 @@ exports[`App renders a match to the previous snapshot 1`] = `
     BEARS Hello World!
   </h1>
   loading...
+  <button
+    className=""
+  >
+    Button
+  </button>
 </div>
 `;

@@ -99,11 +99,9 @@ workflows:
   build_and_deploy:
     jobs:
       - build_and_deploy:
-          filters:
-            branches:
-              - main
-              - task/14-create-pipeline
-              # only: main
+          # filters:
+          #   branches:
+          #     only: main
       - enable-bears-module:
           requires: 
            - build_and_deploy

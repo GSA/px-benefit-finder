@@ -1,0 +1,814 @@
+{
+  "lifeEventForm": {
+    "id": "death-of-a-loved-one",
+    "timeEstimate": "60 minutes",
+    "titlePrefix": "",
+    "title": "Benefit Finder After Losing A Loved One",
+    "summary": "We are sorry about your loss. You and your family may be eligible for survivor benefits from the government following a family member's death. Learn how to find the benefits you may qualify for.",
+    "lede": "",
+    "secondaryHeading": "Steps to find benefits",
+    "icon": "",
+    "sectionsEligibilityCriteria": [
+      {
+        "section": {
+          "id": "about-the-applicant",
+          "heading": "About the Applicant",
+          "description": "The applicant is the person who will receive the benefits.",
+          "fieldsets": [
+            {
+              "fieldset": {
+                "criteriaKey": "applicant_date_of_birth",
+                "legend": "Date of birth",
+                "required": "FALSE",
+                "hint": "For example: 4 28 1986",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "applicant_date_of_birth",
+                      "type": "Date",
+                      "name": "Date of birth",
+                      "label": "Date of birth",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "applicant_relation",
+                "legend": "Applicant's relationship to the person who died",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "applicant_relation",
+                      "type": "Select",
+                      "name": "Applicant's relationship to the person who died",
+                      "label": "Applicant's relationship to the person who died",
+                      "value": [
+                        {
+                          "default": "-Select-",
+                          "value": ""
+                        },
+                        {
+                          "option": "spouse",
+                          "value": "spouse"
+                        },
+                        {
+                          "option": "child",
+                          "value": "child"
+                        },
+                        {
+                          "option": "parent",
+                          "value": "parent"
+                        },
+                        {
+                          "option": "other family member",
+                          "value": "other family member"
+                        },
+                        {
+                          "option": "personal/official representative",
+                          "value": "personal/official representative"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "applicant_marital_status",
+                "legend": "Marital status",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "applicant_marital_status",
+                      "type": "Select",
+                      "name": "Marital status",
+                      "label": "Marital status",
+                      "value": [
+                        {
+                          "default": "-Select-",
+                          "value": ""
+                        },
+                        {
+                          "option": "married",
+                          "value": "married"
+                        },
+                        {
+                          "option": "not married",
+                          "value": "not married"
+                        },
+                        {
+                          "option": "widowed",
+                          "value": "widowed"
+                        },
+                        {
+                          "option": "divorced",
+                          "value": "divorced"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "applicant_care_for_child",
+                "legend": "Applicant care for child",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "applicant_care_for_child",
+                      "type": "Boolean",
+                      "name": "Applicant care for child",
+                      "label": "You are caring for the child of the person who died, is retired or has disabilities, and the child is under age 16 or is disabled.",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "applicant_paid_funeral_expenses",
+                "legend": "Applicant paid funeral expenses",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "applicant_paid_funeral_expenses",
+                      "type": "Boolean",
+                      "name": "Applicant paid funeral expense",
+                      "label": "You paid for the funeral/burial expenses.",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "applicant_funeral_reimbursment",
+                "legend": "Applicant funeral reimbursement",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "applicant_funeral_reimbursment",
+                      "type": "Boolean",
+                      "name": "Applicant funeral reimbursement",
+                      "label": "You were NOT reimbursed for the funeral/burial cost by any organization or government agency.",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "applicant_citizen_status",
+                "legend": "Applicant citizen status",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "applicant_citizen_status",
+                      "type": "Boolean",
+                      "name": "Applicant citizen status",
+                      "label": "You are a U.S. citizen or eligible non-citizen.",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "section": {
+          "id": "about-the-person-who-died",
+          "heading": "About the Person Who Died",
+          "description": "",
+          "fieldsets": [
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_date_of_death",
+                "legend": "Deceased date of death",
+                "required": "FALSE",
+                "hint": "For example: 4 28 1986",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_date_of_death",
+                      "type": "Date",
+                      "name": "Deceased date of death",
+                      "label": "The deceased died on the following date:",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_date_of_funeral",
+                "legend": "Deceased date of funeral",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_date_of_funeral",
+                      "type": "Date",
+                      "name": "Deceased date of funeral",
+                      "label": "The deceased's funeral/burial was on the following date:",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_paid_into_SS",
+                "legend": "Deceased paid into Social Security",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_paid_into_SS",
+                      "type": "Boolean",
+                      "name": "Deceased paid into Social Security",
+                      "label": "The deceased worked and paid Social Security taxes on their earnings.",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_died_of_COVID",
+                "legend": "Deceased died of COVID",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_died_of_COVID",
+                      "type": "Boolean",
+                      "name": "Deceased died of COVID",
+                      "label": "The deceased died or likely died of COVID-19.",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_death_location_is_US",
+                "legend": "Deceased death location is US",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_death_location_is_US",
+                      "type": "Boolean",
+                      "name": "Deceased death location is US",
+                      "label": "The deceased died in the U.S., including its territories.",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_public_safety_officer",
+                "legend": "Deceased public safety officer",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_public_safety_officer",
+                      "type": "Boolean",
+                      "name": "Deceased public safety officer",
+                      "label": "The deceased was a public safety officer who died in the line of duty.",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_miner",
+                "legend": "Deceased miner",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_miner",
+                      "type": "Boolean",
+                      "name": "Deceased miner",
+                      "label": "The deceased worked in the coal mining industry and their death was due to pneumoconiosis (black lung disease).",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            },
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_american_indian",
+                "legend": "Deceased American Indian",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_american_indian",
+                      "type": "Boolean",
+                      "name": "Deceased American Indian",
+                      "label": "Was the person who died a member of a federally recognized American Indian Tribe or an Alaska Native?",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "FALSE",
+                      "childDependencyOption": ""
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "section": {
+          "id": "final-questions",
+          "heading": "Final Questions",
+          "description": "",
+          "fieldsets": [
+            {
+              "fieldset": {
+                "criteriaKey": "deceased_served_in_active_military",
+                "legend": "Deceased served in active military",
+                "required": "FALSE",
+                "hint": "",
+                "inputs": [
+                  {
+                    "inputCriteria": {
+                      "id": "deceased_served_in_active_military",
+                      "type": "Boolean",
+                      "name": "Deceased served in active military",
+                      "label": "Did the person who died serve in the active military, naval, or air service?",
+                      "value": [
+                        {
+                          "default": "",
+                          "value": ""
+                        },
+                        {
+                          "option": "TRUE",
+                          "value": "TRUE"
+                        }
+                      ],
+                      "hasChild": "TRUE",
+                      "childDependencyOption": "TRUE"
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "fieldsets": [
+                      {
+                        "fieldset": {
+                          "criteriaKey": "deceased_service_status",
+                          "legend": "Deceased service status",
+                          "required": "FALSE",
+                          "hint": "",
+                          "inputs": [
+                            {
+                              "inputCriteria": {
+                                "id": "deceased_service_status",
+                                "type": "Radio",
+                                "name": "Deceased service status",
+                                "label": "The service status of the deceased is",
+                                "value": [
+                                  {
+                                    "default": "-Select-",
+                                    "value": ""
+                                  },
+                                  {
+                                    "option": "an active-duty service member",
+                                    "value": "an active-duty service member"
+                                  },
+                                  {
+                                    "option": "discharged under conditions other than dishonorable",
+                                    "value": "discharged under conditions other than dishonorable"
+                                  },
+                                  {
+                                    "option": "retired from the service",
+                                    "value": "retired from the service"
+                                  },
+                                  {
+                                    "option": "a member of the National Guard/Reserve",
+                                    "value": "a member of the National Guard/Reserve"
+                                  }
+                                ],
+                                "hasChild": "FALSE",
+                                "childDependencyOption": ""
+                              }
+                            }
+                          ],
+                          "children": [
+                            {
+                              "fieldsets": {}
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "fieldset": {
+                          "criteriaKey": "deceased_death_circumstance",
+                          "legend": "Deceased death circumstance",
+                          "required": "FALSE",
+                          "hint": "",
+                          "inputs": [
+                            {
+                              "inputCriteria": {
+                                "id": "deceased_death_circumstance",
+                                "type": "Radio",
+                                "name": "Deceased death circumstance",
+                                "label": "One of the following circumstances apply to the deceased:",
+                                "value": [
+                                  {
+                                    "default": "-Select-",
+                                    "value": ""
+                                  },
+                                  {
+                                    "option": "died while on active duty",
+                                    "value": "died while on active duty"
+                                  },
+                                  {
+                                    "option": "died while on inactive-duty training",
+                                    "value": "died while on inactive-duty training"
+                                  },
+                                  {
+                                    "option": "died as a result of a service-connected disability/illness",
+                                    "value": "died as a result of a service-connected disability/illness"
+                                  },
+                                  {
+                                    "option": "died while receiving/traveling to VA care",
+                                    "value": "died while receiving/traveling to VA care"
+                                  },
+                                  {
+                                    "option": "died while receiving/eligible for VA compensation",
+                                    "value": "died while receiving/eligible for VA compensation"
+                                  }
+                                ],
+                                "hasChild": "FALSE",
+                                "childDependencyOption": ""
+                              }
+                            }
+                          ],
+                          "children": [
+                            {
+                              "fieldsets": {}
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "fieldset": {
+                          "criteriaKey": "deceased_grave_headstone",
+                          "legend": "Deceased grave headstone",
+                          "required": "FALSE",
+                          "hint": "",
+                          "inputs": [
+                            {
+                              "inputCriteria": {
+                                "id": "deceased_grave_headstone",
+                                "type": "Boolean",
+                                "name": "Deceased grave headstone",
+                                "label": "The deceased is buried in an unmarked grave, or their grave is marked with a privately purchased headstone.",
+                                "value": [
+                                  {
+                                    "default": "",
+                                    "value": ""
+                                  },
+                                  {
+                                    "option": "TRUE",
+                                    "value": "TRUE"
+                                  }
+                                ],
+                                "hasChild": "FALSE",
+                                "childDependencyOption": ""
+                              }
+                            }
+                          ],
+                          "children": [
+                            {
+                              "fieldsets": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "relatedLifeEvents": [
+      "retirement",
+      "disability"
+    ]
+  },
+  "benefits": [
+    {
+      "benefit": {
+        "title": "COVID-19 Funeral Assistance",
+        "headline": "COVID-19 Funeral Assistance",
+        "summary": "Financial assistance may be available to help with the burial and funeral costs for people who died of COVID-19.",
+        "eligibility": [
+          {
+            "criteriaKey": "deceased_died_of_COVID",
+            "label": "",
+            "acceptableValue": [
+              "TRUE"
+            ]
+          },
+          {
+            "criteriaKey": "deceased_death_location_is_US",
+            "label": "",
+            "acceptableValue": [
+              "TRUE"
+            ]
+          },
+          {
+            "criteriaKey": "deceased_date_of_funeral",
+            "label": "The deceased's funeral/burial was after January 20, 2020.",
+            "acceptableValue": [
+              ">01-20-2020"
+            ]
+          },
+          {
+            "criteriaKey": "applicant_citizen_status",
+            "label": "",
+            "acceptableValue": [
+              "TRUE"
+            ]
+          },
+          {
+            "criteriaKey": "applicant_paid_funeral_expenses",
+            "label": "",
+            "acceptableValue": [
+              "TRUE"
+            ]
+          }
+        ],
+        "tags": [
+          "burial and funeral assistance"
+        ],
+        "lifeEvents": [
+          "Death of a loved one"
+        ],
+        "agency": {
+          "title": "FEMA",
+          "summary": "Federal Emergency Management Agency (FEMA) offers support to people during natural disasters and national emergencies, including housing and funeral assistance.",
+          "lede": ""
+        },
+        "sourceLink": "https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance",
+        "sourceIsEnglish": "TRUE"
+      }
+    }
+  ]
+}

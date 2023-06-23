@@ -47,6 +47,7 @@ jobs:
             docker images
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             docker push "$DOCKERREPO:$IMAGE_TAG"
+            docker logout
 
       - run:
           name: Injecting container name to the manifest.yml
@@ -75,6 +76,7 @@ jobs:
             cd px-bears-drupal/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
+            docker logout
 
       - run:
           name: Enable bears module

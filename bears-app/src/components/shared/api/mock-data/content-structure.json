@@ -79,16 +79,13 @@
         "lifeEvents": [
           "STRING"
         ],
-        "source": {
-          "name": "STRING",
-          "link": "STRING",
-          "isEnglish": "BOOLEAN"
-        },
         "agency": {
-          "name": "STRING",
-          "link": "STRING",
-          "isEnglish": "BOOLEAN"
-        }
+          "title": "STRING",
+          "summary": "HTML",
+          "lede": "HTML"
+        },
+        "sourceLink": "STRING",
+        "sourceIsEnglish": "BOOLEAN"
       }
     }
   ]

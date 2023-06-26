@@ -2,12 +2,21 @@ import Button from './index.jsx'
 
 export default {
   component: Button,
+  tags: ['autodocs'],
+  argTypes: {
+    children: { control: 'text' },
+  },
 }
 
 export const Primary = {
-  render: () => <Button>Button</Button>,
+  args: {
+    children: 'Button',
+  },
 }
 
 export const Secondary = {
-  render: () => <Button secondary>Button</Button>,
+  args: {
+    ...Primary.args,
+    secondary: true,
+  },
 }

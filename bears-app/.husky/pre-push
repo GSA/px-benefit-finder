@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 #! run all our tests before pushing up stream
-cd bears-app && CI=true npm run test
+lerna exec CI=true npm run test --scope bears-app

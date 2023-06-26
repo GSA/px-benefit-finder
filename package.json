@@ -14,16 +14,12 @@
     "bears-app"
   ],
   "scripts": {
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "pre-commit": "lerna exec run --scope bears-app pre-commit"
   },
   "dependencies": {},
   "devDependencies": {
     "husky": "^8.0.3",
     "lerna": "^7.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
-    }
   }
 }

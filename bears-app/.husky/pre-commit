@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-#!change directories and run items from .lintstagedrc
-lerna exec npm run lint-staged --scope bears-app

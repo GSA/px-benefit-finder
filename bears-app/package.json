@@ -46,6 +46,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "pre-commit": "npm run lint-staged",
+    "pre-push": "CI=true npm run test",
     "check:uswds:version": "sh ../check-uswds-version.sh",
     "start": "craco start",
     "dev": "npm run check:uswds:version && craco start",
@@ -58,7 +60,6 @@
     "lint:scss:fix": "stylelint 'src/**/*.scss' --fix",
     "lint:js": "eslint . --ext .js,.jsx",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "postinstall": "cd .. && husky install bears-app/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
     "prebuild:storybook": "npm run check:uswds:version && npm run test:generate-output",

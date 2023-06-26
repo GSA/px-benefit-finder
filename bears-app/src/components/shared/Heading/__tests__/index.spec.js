@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer'
-import Heading from './index.jsx'
+import Heading from '../index.jsx'
 
 describe('Heading', () => {
   it('renders a match to the previous snapshot', () => {

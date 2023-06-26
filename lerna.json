@@ -1,6 +1,3 @@
 {
-  "version": "0.0.1",
-  "packages": [
-    "bears-app"
-  ]
+  "version": "0.0.1"
 }

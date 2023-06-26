@@ -1,22 +1,17 @@
 {
   "name": "px-bears-drupal",
   "version": "2.0.0.beta",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GSA/px-bears-drupal.git"
   },
-  "workspaces": [
-    "bears-app"
-  ],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/GSA/px-bears-drupal/issues"
   },
   "homepage": "https://github.com/GSA/px-bears-drupal#readme",
+  "workspaces": [
+    "bears-app"
+  ],
   "dependencies": {},
   "devDependencies": {
     "lerna": "^7.0.2"

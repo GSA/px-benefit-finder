@@ -31,7 +31,7 @@ To clone the repository with a submodule, follow these steps:
 
     a. Navigate to the main repository's directory using the command line.
     b. Run the following command to update the main repository along with its submodules:
-     
+
 ```git pull --recurse-submodules```
 
 This command updates the main repository and its submodules to the latest commit.
@@ -41,6 +41,14 @@ This command updates the main repository and its submodules to the latest commit
 We are committed to making our site accessible to all visitors. Our ongoing accessibility effort works towards conforming to Web Content Accessibility Guidelines (WCAG) version 2.1, level AA criteria and by performing regular automatic and manual testing audits.
 
 # Local Development Environment
+
+### Install Package Manager
+
+We use lerna as our monorepo package manager
+
+```
+npm install --global lerna
+```
 
 ### Get USAgov code
 ```

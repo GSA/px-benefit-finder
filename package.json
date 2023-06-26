@@ -1,6 +1,7 @@
 {
   "name": "px-bears-drupal",
   "version": "2.0.0.beta",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GSA/px-bears-drupal.git"
@@ -12,8 +13,17 @@
   "workspaces": [
     "bears-app"
   ],
+  "scripts": {
+    "postinstall": "husky install"
+  },
   "dependencies": {},
   "devDependencies": {
+    "husky": "^8.0.3",
     "lerna": "^7.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
+    }
   }
 }

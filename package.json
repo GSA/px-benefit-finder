@@ -15,8 +15,8 @@
   ],
   "scripts": {
     "postinstall": "husky install",
-    "pre-commit": "lerna exec --ignore bears-app pre-commit",
-    "pre-push": "lerna exec --ignore bears-app pre-push"
+    "precommit": "lerna exec --ignore bears-app pre-commit",
+    "prepush": "lerna exec --ignore bears-app pre-push"
   },
   "dependencies": {},
   "devDependencies": {

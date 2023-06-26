@@ -46,8 +46,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "pre-commit": "lerna exec --scope bears-app npm run lint-staged",
-    "pre-push": "lerna exec --scope bears-app CI=true npm run test",
+    "precommit": "lerna exec --scope bears-app npm run lint-staged",
+    "prepush": "lerna exec --scope bears-app CI=true npm run test",
     "check:uswds:version": "sh ../check-uswds-version.sh",
     "start": "craco start",
     "dev": "npm run check:uswds:version && craco start",

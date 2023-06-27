@@ -3,5 +3,6 @@
 exports[`Button renders a match to the previous snapshot 1`] = `
 <button
   className=""
+  type="button"
 />
 `;

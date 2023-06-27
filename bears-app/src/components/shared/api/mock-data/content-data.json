@@ -8,7 +8,6 @@
     "sectionsEligibilityCriteria": [
       {
         "section": {
-          "id": "about-the-applicant",
           "heading": "About the Applicant",
           "description": "The applicant is the person who will receive the benefits.",
           "fieldsets": [
@@ -286,7 +285,6 @@
       },
       {
         "section": {
-          "id": "about-the-person-who-died",
           "heading": "About the Person Who Died",
           "description": "",
           "fieldsets": [
@@ -567,7 +565,6 @@
       },
       {
         "section": {
-          "id": "final-questions",
           "heading": "Final Questions",
           "description": "",
           "fieldsets": [

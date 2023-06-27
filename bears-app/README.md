@@ -8,9 +8,9 @@
   |-public
     |-index.html
   |-src
-    |-App
-    |-shared
-      |-components
+    |-components
+      |-App
+      |-shared
         |-ComponentName
           |-__tests__
             |-__snapshots__
@@ -18,18 +18,17 @@
           |-index.jsx
           |-index.stories.jsx
           |-_index.scss
+      |-style-docs
     |-index.jsx
     |-README.md
 ```
 
 <br>
 
-test
-
 ### Basics:
 
 - "Modules", like `App` should follow the structure of routes.
-- Files from one module can only import from ancestor folders within the same module or from `src/shared`.
+- Files from one module can only import from ancestor folders within the same module or from `src/components/shared`.
 
 <br>
 
@@ -37,10 +36,30 @@ test
 | ------------------- | ---------------------------------------------------------- |
 | `src/index.jsx`     | Entry file.                                                |
 | `public/index.html` | All scripts and styles injected here                       |
-| `src/App`           | Main application routes, global / ancestor of all modules. |
-| `src/ComponentSandbox`| Temporary Parent component |
-| `src/shared`        | Components, constants, machines, hooks, styles, utils etc; |
+| `src/components/App`| Main application routes, global / ancestor of all modules. |
+| `src/components/shared`| Components, constants, machines, hooks, styles, utils etc; |
+| `src/components/style-docs`| mdx files for !stories documentation|
 |                     | **_Any module is allowed to import from shared._**         |
+
+<br>
+
+### File Types:
+
+| file type  | Description |
+| --------------- | ----------- |
+| `.jsx` | React functional components |
+| `.js` | ES |
+| `.stories.jsx` | Component Story Format files for storybook stories |
+| `.mdx` | Markdown files that accept ES imports for storybook docs |
+| `.md` | Markdown files for project docs |
+| `.spec.js` | Testing specification |
+| `.spec.js.snap` | Testing snapshots |
+| `.hbs` | Handlebars (used in plop generated components) |
+| `.scss` | Syntactically awesome style sheets |
+| `.json` | JavaScript Object Notation |
+| `*rc` | Resource files |
+| `*sh` | Bash files |
+
 
 <br>
 
@@ -56,24 +75,17 @@ npm install
 
 ### Build and serve development environment.
 
-There are two build environments, one for our component workshop (Storybook) and another for our Application (craco)
+There are two build environments, one for our component workshop (Storybook) and another for our Application (CRACO)
 
 #### CRACO APP
 
-Rather than ejecting the react scripts, we override them with tooling. (Learn more about [Craco](https://craco.js.org/docs/getting-started/
-).
+Rather than ejecting the react scripts, we override them with tooling. (Learn more about [Craco](https://craco.js.org/docs/getting-started/).
 
 ```shell
 npm run dev
 ```
 
 #### Storybook
-
-Build and watch our tests.
-
-```shell
-npm run prebuild:storybook
-```
 
 Run development workshop.
 
@@ -87,9 +99,9 @@ We use husky to manage git hooks.
 
 husky is automatically installed after the packages are installed.
 
-The `pre-commit` git hook leverages `lint-staged` to run a series of scripts on any staged files when a commit is made.
+- The `pre-commit` git hook leverages `lint-staged` to run a series of scripts on any staged files when a commit is made.
 
-the `pre-push` git hook runs a series of scripts on the directory before pushing to the origin.
+- The `pre-push` git hook runs a series of scripts on the directory before pushing to the origin.
 
 
 ## Coding Standards
@@ -254,16 +266,19 @@ npm run test
 ```
 
 <br>
-****
+
 #### **6. Components**
 
-We build each of our components with `spec`, `scss`, and `jsx` files
+We build each of our components with `spec`, `scss`, `storeies` and `jsx` files
 
 ```
 |-ComponentName
-  |-ComponentName.jsx
-  |-_component-name.scss
-  |-ComponentName.spec.js
+  |-__tests__
+    |-__snapshots__
+    |-index.spec.js
+  |-index.jsx
+  |-index.stories.jsx
+  |-_index.scss
 ```
 
 To generate a component with these files based on a name space,
@@ -274,3 +289,6 @@ you can use [plop](https://github.com/plopjs/plop)
 ```sh
 npm run generate:component <component-name>
 ```
+
+> It's important to export components from the root of the shared index file. This is where you will import and destructure across other documents.
+

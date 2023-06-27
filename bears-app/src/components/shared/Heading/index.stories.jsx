@@ -6,14 +6,19 @@ export default {
   argTypes: {
     children: {
       control: 'text',
-      defaultValue: 'Heading text',
     },
     headingLevel: {
       control: 'number',
-      defaultValue: 1,
+      defaultValue: 2,
     },
   },
+  args: {
+    children: 'Heading text',
+    headingLevel: 1,
+  },
 }
+
+export const Default = {}
 
 export const Heading1 = {
   args: {

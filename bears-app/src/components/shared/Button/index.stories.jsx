@@ -13,8 +13,15 @@ export default {
 
 export const Default = {}
 
+export const Primary = {
+  args: {
+    children: 'Button',
+  },
+}
+
 export const Secondary = {
   args: {
+    ...Primary.args,
     secondary: true,
   },
 }

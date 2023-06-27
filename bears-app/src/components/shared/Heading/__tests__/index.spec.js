@@ -1,9 +1,9 @@
 import renderer from 'react-test-renderer'
-import {{pascalCase name}} from '../index.jsx'
+import Heading from '../index.jsx'
 
-describe('{{pascalCase name}}', () => {
+describe('Heading', () => {
   it('renders a match to the previous snapshot', () => {
-    const component = renderer.create(<{{pascalCase name}} />)
+    const component = renderer.create(<Heading headingLevel={1} />)
     expect(component.toJSON()).toMatchSnapshot()
   })
 })

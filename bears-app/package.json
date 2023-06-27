@@ -21,7 +21,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@uswds/uswds": "^3.4.1",
+    "@uswds/uswds": "^3.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
@@ -46,10 +46,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "check:uswds:version": "sh ../check-uswds-version.sh",
     "start": "craco start",
+    "dev": "npm run check:uswds:version && craco start",
     "build": "craco build",
     "test": "craco test --coverage",
-    "test:generate-output": "craco test --json --outputFile=.jest-test-results.json || true",
+    "test:generate-output": "npm run test --json --outputFile=.jest-test-results.json",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
     "lint:scss": "stylelint 'src/**/*.scss'",
@@ -59,8 +61,8 @@
     "postinstall": "cd .. && husky install bears-app/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
+    "prebuild:storybook": "npm run check:uswds:version && npm run test:generate-output",
     "dev:storybook": "storybook dev -p 6006",
-    "prebuild:storybook": "npm run test:generate-output",
     "build:storybook": "storybook build"
   },
   "browserslist": {

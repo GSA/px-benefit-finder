@@ -64,7 +64,7 @@ Rather than ejecting the react scripts, we override them with tooling. (Learn mo
 ).
 
 ```shell
-npm run start
+npm run dev
 ```
 
 #### Storybook
@@ -191,6 +191,10 @@ Typecheck with [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.
 <br>
 
 #### **4. Styles**
+
+We take a utility first approach.  We do not have full control over our styles since a custom version of USWDS already exist in the usa.gov project.
+
+To avoid conflict we will use utility-classes and overrides with sass files as needed.
 
 We use [Sass](https://sass-lang.com/) and [Sass Modules](https://css-tricks.com/introducing-sass-modules/)
 

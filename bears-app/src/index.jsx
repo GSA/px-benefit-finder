@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { App } from './components'
 import reportWebVitals from './reportWebVitals'
 
+// a version of uswds will already be on production
 if (process.env.NODE_ENV !== 'production') {
+  require('../node_modules/@uswds/uswds/dist/js/uswds.js')
   require('../node_modules/@uswds/uswds/dist/css/uswds.css')
 }
 

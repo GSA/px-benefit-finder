@@ -51,7 +51,7 @@
     "dev": "npm run check:uswds:version && craco start",
     "build": "craco build",
     "test": "craco test --coverage",
-    "test:generate-output": "npm run test --json --outputFile=.jest-test-results.json",
+    "test:generate-output": "craco test --watchAll=false --json --outputFile=.jest-test-results.json",
     "eject": "react-scripts eject",
     "format": "prettier --write '**/*.{js,jsx}'",
     "lint:scss": "stylelint 'src/**/*.scss'",
@@ -61,9 +61,9 @@
     "postinstall": "cd .. && husky install bears-app/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
-    "prebuild:storybook": "npm run check:uswds:version && npm run test:generate-output",
-    "dev:storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build"
+    "prebuild:storybook": "npm run test:generate-output",
+    "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
+    "build:storybook": "npm run prebuild:storybook && storybook build"
   },
   "browserslist": {
     "production": [

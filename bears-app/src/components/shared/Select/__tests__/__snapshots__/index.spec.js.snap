@@ -3,7 +3,7 @@
 exports[`Select renders a match to the previous snapshot 1`] = `
 Array [
   <label
-    className="usa-label"
+    className=""
   >
     Dropdown Label
   </label>,

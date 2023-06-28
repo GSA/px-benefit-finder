@@ -1,3 +1,4 @@
+import { Label } from '../index'
 import PropTypes from 'prop-types'
 /**
  * a functional component to create a select from a list of options
@@ -8,21 +9,6 @@ import PropTypes from 'prop-types'
  * @return {html} returns a semantic html select element with options
  */
 function Select({ label, htmlFor, options }) {
-  /**
-   * a functional component to create a label for options.
-   * @function
-   * @param {string} label - The inherited lable value
-   * @param {string} htmlFor - The inherited component id that the label is related to
-   * @return {html} returns a semantic html label
-   */
-  const Label = ({ label }) => {
-    return (
-      <label className="usa-label" htmlFor={htmlFor}>
-        {label}
-      </label>
-    )
-  }
-
   /**
    * a functional component to create a list of options for a select element.
    * @function
@@ -41,7 +27,7 @@ function Select({ label, htmlFor, options }) {
 
   return (
     <>
-      <Label label={label} />
+      <Label label={label} htmlFor={htmlFor} />
       <select className="usa-select" name={htmlFor} id={htmlFor}>
         <Options options={options} />
       </select>

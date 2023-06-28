@@ -1,7 +1,7 @@
 import { Label } from '../index'
 import PropTypes from 'prop-types'
 
-const Radio = ({ label, value }) => {
+const Radio = ({ label, value, defaultChecked }) => {
   return (
     <>
       <div className="usa-radio">
@@ -11,7 +11,7 @@ const Radio = ({ label, value }) => {
           type="radio"
           name={label}
           value={value || label}
-          defaultChecked={false}
+          defaultChecked={defaultChecked || false}
         />
         <Label className="usa-radio__label" htmlFor={label} label={label} />
       </div>
@@ -22,7 +22,7 @@ const Radio = ({ label, value }) => {
 Radio.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
-  checked: PropTypes.bool,
+  defaultChecked: PropTypes.bool,
 }
 
 export default Radio

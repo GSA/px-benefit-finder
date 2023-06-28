@@ -6,8 +6,14 @@ export default {
   args: {
     label: 'Radio',
     value: 'radio',
-    checked: false,
+    defaultChecked: false,
   },
 }
 
 export const Primary = {}
+
+export const DefaultChecked = {
+  args: {
+    defaultChecked: true,
+  },
+}

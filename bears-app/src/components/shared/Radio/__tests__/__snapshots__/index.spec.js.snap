@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders a match to the previous snapshot 1`] = `
+<div
+  className="usa-radio"
+>
+  <input
+    className="usa-radio__input"
+    defaultChecked={false}
+    type="radio"
+  />
+  <label
+    className=""
+  />
+</div>
+`;

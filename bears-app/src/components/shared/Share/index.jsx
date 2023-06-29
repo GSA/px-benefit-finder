@@ -8,12 +8,8 @@ const Share = props => {
   const handleClick = () => {
     setShareLink(window.location.href)
     navigator.clipboard.writeText(shareLink).then(
-      function () {
-        alert(`copied successfully! ${shareLink}`)
-      },
-      function (err) {
-        alert('Failed to copy', err)
-      }
+      () => alert(`copied successfully! ${shareLink}`),
+      err => alert('Failed to copy', err)
     )
   }
 

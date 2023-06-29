@@ -1,8 +1,13 @@
 import { useState } from 'react'
 import { Button } from '../index'
-import PropTypes from 'prop-types'
 
-const Share = props => {
+/**
+ * a functional component that renders a button with copy-to-cipboard functionality
+ * @component
+ * @return {html} returns a semantic html button element with a custom function onClick event
+ */
+
+const ShareButton = () => {
   const [shareLink, setShareLink] = useState(() => window.location.href)
 
   const handleClick = () => {
@@ -14,14 +19,10 @@ const Share = props => {
   }
 
   return (
-    <Button secondary {...props} onClick={handleClick}>
+    <Button secondary onClick={handleClick}>
       Share
     </Button>
   )
 }
 
-Share.propTypes = {
-  props: PropTypes.any,
-}
-
-export default Share
+export default ShareButton

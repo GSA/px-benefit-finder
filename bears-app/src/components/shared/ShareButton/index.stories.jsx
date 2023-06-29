@@ -1,7 +1,7 @@
-import Share from './index.jsx'
+import ShareButton from './index.jsx'
 
 export default {
-  component: Share,
+  component: ShareButton,
   tags: ['autodocs'],
 }
 

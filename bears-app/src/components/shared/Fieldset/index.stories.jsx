@@ -8,7 +8,14 @@ export default {
     children: <Button>Button</Button>,
     legend: 'Legend',
     hint: 'Hint',
+    required: false,
   },
 }
 
 export const Primary = {}
+export const Required = {
+  args: {
+    ...Primary.args,
+    required: true,
+  },
+}

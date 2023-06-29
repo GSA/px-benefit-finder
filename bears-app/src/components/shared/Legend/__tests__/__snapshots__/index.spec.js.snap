@@ -2,6 +2,6 @@
 
 exports[`Legend renders a match to the previous snapshot 1`] = `
 <legend
-  className="usa-legend"
+  className="usa-legend legend"
 />
 `;

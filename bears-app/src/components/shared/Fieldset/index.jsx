@@ -1,11 +1,30 @@
 import { Hint, Legend } from '../index'
 import PropTypes from 'prop-types'
 
-const Fieldset = ({ children, legend, hint }) => {
+/**
+ * a functional component that renders a string
+ * @component
+ * @param {React.ReactNode} children - inherited children
+ * @param {string} legend - passed to Legend component
+ * @param {string} hint - passed to Hint component
+ * @return {html} returns a div
+ */
+
+const Fieldset = ({ children, legend, required }) => {
+  const RequiredFlag = () => (
+    <>
+      <Legend>
+        {legend}
+        <Hint />
+      </Legend>
+    </>
+  )
+
+  const handleRequired = !required ? <Legend>{legend}</Legend> : RequiredFlag()
+
   return (
     <fieldset className="usa-fieldset">
-      {legend && <Legend>{legend}</Legend>}
-      {hint && <Hint>{hint}</Hint>}
+      {legend && handleRequired}
       {children}
     </fieldset>
   )

@@ -81,7 +81,6 @@
         "agency": {
           "title": "STRING",
           "summary": "HTML",
-          "lede": "HTML"
         },
         "sourceLink": "STRING",
         "sourceIsEnglish": "BOOLEAN"

@@ -1,6 +1,15 @@
 import { Label } from '../index'
 import PropTypes from 'prop-types'
 
+/**
+ * a functional component that renders an input of radio type
+ * @component
+ * @param {string} label - displayed in ui
+ * @param {string} value - assigned to value param in html
+ * @param {boolean} defaultChecked - determines if the radio is default selected
+ * @return {html} returns a semantic input as type radio element
+ */
+
 const Radio = ({ label, value, defaultChecked }) => {
   return (
     <>

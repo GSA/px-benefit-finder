@@ -106,7 +106,7 @@ jobs:
           name: Deploy Storybook to S3
           command: |  
              cd px-bears-drupal/bears-app
-             npm run prebuild:storybook && storybook build"
+             npm run prebuild:storybook && storybook build
              npm run deploy-storybook
 
 # Orchestrate our job run sequence

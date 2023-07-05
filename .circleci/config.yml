@@ -124,6 +124,7 @@ jobs:
              cd ../bears-app
              npm i @craco/craco
              npm run prebuild:storybook
+             aws s3 sync .storybook s3://${BUCKET_NAME}
 
              
             

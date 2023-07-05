@@ -96,11 +96,11 @@ jobs:
             git submodule update
 
       - run:
-          name: AWS Configure
-          command: |     
-            cd px-bears-drupal/bin
-            chmod +x getcreds.sh
-            ./getcreds.sh
+          name: Setup CF CLI
+          command: |
+            curl -v -L -o cf-cli_amd64.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github"
+            sudo dpkg -i cf-cli_amd64.deb
+            cf -v
 
       - run:
           name: Deploy Storybook to S3

@@ -116,7 +116,7 @@ jobs:
              ls -la
              echo "listing what is in the bucket"
              echo $S3_CREDENTIALS
-             aws s3 ls s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f --endpoint-url https://s3-us-gov-west-1.amazonaws.com
+             aws s3 ls s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f --endpoint-url https://s3-fips.us-gov-west-1.amazonaws.com
              
 
 # Orchestrate our job run sequence

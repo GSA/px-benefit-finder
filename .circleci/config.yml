@@ -111,14 +111,14 @@ jobs:
              unset AWS_ACCESS_KEY_ID
              unset AWS_SECRET_ACCESS_KEY
              source getcreds.sh
+             echo $S3_CREDENTIALS
+             echo $AWS_ACCESS_KEY_ID
              aws s3 ls s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f/ --region 'us-gov-west-1'
              cd ../bears-app
              npm i @craco/craco
              npm run prebuild:storybook
-             pwd 
-             ls -la
-             echo "listing what is in the bucket"
-             echo $S3_CREDENTIALS
+
+             
             
              
 

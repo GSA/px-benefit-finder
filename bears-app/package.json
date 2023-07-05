@@ -63,7 +63,8 @@
     "generate:component": "plop",
     "prebuild:storybook": "npm run test:generate-output",
     "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
-    "build:storybook": "npm run prebuild:storybook && storybook build"
+    "build:storybook": "npm run prebuild:storybook && storybook build",
+    "deploy-storybook": "bears-library — bucket-path=s3://AKIAR7FXZINYADSH4HOV:ZLRCPRk5i2FxQPKNgaH%2Bx8qCtuASm6EAcvfnndKr@s3-us-gov-west-1.amazonaws.com/cg-12352dec-28c7-4f3e-9fcd-15446e9e606f"
   },
   "browserslist": {
     "production": [

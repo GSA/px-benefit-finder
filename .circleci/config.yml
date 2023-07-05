@@ -80,7 +80,34 @@ jobs:
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cf apps
             cf ssh cms --command "/var/www/vendor/bin/drush --version && /var/www/vendor/bin/drush pm:enable usagov_bears_block && /var/www/vendor/bin/drush pm:enable usagov_bears_content && /var/www/vendor/bin/drush pm:enable usagov_bears_api && /var/www/vendor/bin/drush pm:enable usagov_bears && /var/www/vendor/bin/drush cr"
+  
+  component-library:
+    machine:
+      image: ubuntu-2004:202107-02
 
+    steps:
+      - run:
+          name: Cloning the Repo and initiating the Submodule
+          command: |
+            echo "cloning the repo and initiating the usagov-2021 submodule"
+            git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
+            cd px-bears-drupal
+            git submodule init
+            git submodule update
+
+      - run:
+          name: AWS Configure
+          command: |     
+            cd px-bears-drupal/bin
+            chmod +x getcreds.sh
+            ./getcreds.sh
+
+      - run:
+          name: Deploy Storybook to S3
+          command: |  
+             cd px-bears-drupal/bears-app
+             npm run prebuild:storybook && storybook build"
+             npm run deploy-storybook
 
 # Orchestrate our job run sequence
 workflows:
@@ -91,6 +118,13 @@ workflows:
             branches:
               only: 
                 - main
+  create-component-library:
+    jobs:
+      - component-library:
+          filters:
+            branches:
+              only:
+                - task/create-component-library
 
 
 

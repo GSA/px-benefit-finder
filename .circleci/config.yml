@@ -109,8 +109,7 @@ jobs:
              npm i @craco/craco
              npm run prebuild:storybook
              pwd 
-             ls -l
-
+             ls -la
              aws s3 sync ./storybook/ s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f
 
 # Orchestrate our job run sequence

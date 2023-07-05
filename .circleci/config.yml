@@ -105,7 +105,10 @@ jobs:
       - run:
           name: Deploy Storybook to S3
           command: |  
-             cd px-bears-drupal/bears-app
+             cd px-bears-drupal/bin
+             chmod +x getcreds.sh
+             ./getcreds.sh
+             cd ../bears-app
              npm i @craco/craco
              npm run prebuild:storybook
              pwd 

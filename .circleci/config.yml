@@ -115,7 +115,7 @@ jobs:
              pwd 
              ls -la
              echo "listing what is in the bucket"
-             aws s3 ls s3://AKIAR7FXZINYADSH4HOV:ZLRCPRk5i2FxQPKNgaH%2Bx8qCtuASm6EAcvfnndKr@s3-us-gov-west-1.amazonaws.com/cg-12352dec-28c7-4f3e-9fcd-15446e9e606f
+             aws s3 ls s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f
             #  aws s3 sync .storybook/ s3://${BUCKET_NAME}
 
 # Orchestrate our job run sequence

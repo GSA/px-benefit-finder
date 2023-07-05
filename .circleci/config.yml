@@ -108,6 +108,7 @@ jobs:
              cd px-bears-drupal/bears-app
              npm i @craco/craco
              npm run prebuild:storybook
+             npm run deploy-storybook
 
 # Orchestrate our job run sequence
 workflows:

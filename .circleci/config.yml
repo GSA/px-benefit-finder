@@ -111,6 +111,7 @@ jobs:
              unset AWS_ACCESS_KEY_ID
              unset AWS_SECRET_ACCESS_KEY
              source getcreds.sh
+             jq --version
              echo $S3_CREDENTIALS
              export AWS_ACCESS_KEY_ID=$(echo "${S3_CREDENTIALS}" | jq -r '.credentials.access_key_id')
              export AWS_SECRET_ACCESS_KEY=$(echo "${S3_CREDENTIALS}" | jq -r '.credentials.secret_access_key')

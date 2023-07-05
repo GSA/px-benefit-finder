@@ -107,7 +107,7 @@ jobs:
           command: |  
              cd px-bears-drupal/bin
              chmod +x getcreds.sh
-             ./getcreds.sh
+             source getcreds.sh
              cd ../bears-app
              npm i @craco/craco
              npm run prebuild:storybook

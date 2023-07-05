@@ -109,13 +109,13 @@ jobs:
              cd px-bears-drupal/bin
              chmod +x getcreds.sh
              source getcreds.sh
-             cd ../bears-app
-             npm i @craco/craco
-             npm run prebuild:storybook
+            #  cd ../bears-app
+            #  npm i @craco/craco
+            #  npm run prebuild:storybook
              pwd 
              ls -la
              echo "listing what is in the bucket"
-             aws s3 ls s3://${BUCKET_NAME}
+             aws s3api ls s3://${BUCKET_NAME}
             #  aws s3 sync .storybook/ s3://${BUCKET_NAME}
 
 # Orchestrate our job run sequence

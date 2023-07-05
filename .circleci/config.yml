@@ -109,6 +109,7 @@ jobs:
              cd px-bears-drupal/bin
              chmod +x getcreds.sh
              source getcreds.sh
+             aws s3 ls s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f/
              cd ../bears-app
              npm i @craco/craco
              npm run prebuild:storybook
@@ -116,7 +117,7 @@ jobs:
              ls -la
              echo "listing what is in the bucket"
              echo $S3_CREDENTIALS
-             aws s3 ls s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f/
+            
              
 
 # Orchestrate our job run sequence

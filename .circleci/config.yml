@@ -108,23 +108,16 @@ jobs:
           command: |  
              cd px-bears-drupal/bin
              chmod +x getcreds.sh
-             unset AWS_ACCESS_KEY_ID
-             unset AWS_SECRET_ACCESS_KEY
              source getcreds.sh
-             jq --version
-             echo $S3_CREDENTIALS
-             echo "${S3_CREDENTIALS}" | jq -r '.access_key_id'
-             echo "${S3_CREDENTIALS}" | jq -r '.secret_access_key'
              export AWS_ACCESS_KEY_ID=$(echo "${S3_CREDENTIALS}" | jq -r '.access_key_id')
              export AWS_SECRET_ACCESS_KEY=$(echo "${S3_CREDENTIALS}" | jq -r '.secret_access_key')
              export BUCKET_NAME=$(echo "${S3_CREDENTIALS}" | jq -r '.bucket')
              export AWS_DEFAULT_REGION=$(echo "${S3_CREDENTIALS}" | jq -r '.region')
-             echo $AWS_ACCESS_KEY_ID
-             aws s3 ls s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f/ --region 'us-gov-west-1'
              cd ../bears-app
              npm i @craco/craco
              npm run prebuild:storybook
              aws s3 sync .storybook s3://${BUCKET_NAME}
+             aws s3 ls s3://${BUCKET_NAME}
 
              
             

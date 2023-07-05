@@ -108,7 +108,7 @@ jobs:
              cd px-bears-drupal/bears-app
              npm i @craco/craco
              npm run prebuild:storybook
-             npm run deploy-storybook
+             aws s3 sync ./storybook-static/ s3://cg-12352dec-28c7-4f3e-9fcd-15446e9e606f
 
 # Orchestrate our job run sequence
 workflows:

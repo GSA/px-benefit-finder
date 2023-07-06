@@ -118,7 +118,8 @@ jobs:
              cd ../bears-app
              npm install
              npm run build:storybook
-             aws s3 sync .storybook s3://${BUCKET_NAME}
+             ls -la
+             aws s3 sync ./storybook-static s3://${BUCKET_NAME}
              aws s3 ls s3://${BUCKET_NAME}
 
              

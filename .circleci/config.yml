@@ -115,7 +115,8 @@ jobs:
              export AWS_DEFAULT_REGION=$(echo "${S3_CREDENTIALS}" | jq -r '.region')
              cd ../bears-app
              npm i @craco/craco
-             npm run prebuild:storybook
+             npm install
+             npm run prebuild:storybook && storybook build
              aws s3 sync .storybook s3://${BUCKET_NAME}
              aws s3 ls s3://${BUCKET_NAME}
 

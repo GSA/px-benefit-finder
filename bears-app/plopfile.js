@@ -13,27 +13,27 @@ module.exports = plop => {
         type: 'add',
         // Plop will create directories for us if they do not exist
         // so it's okay to add files in nested locations.
-        path: 'src/components/shared/{{pascalCase name}}/index.jsx',
+        path: 'src/shared/components/{{pascalCase name}}/index.jsx',
         templateFile:
-          'src/components/shared/.ComponentTemplate/Component.jsx.hbs',
+          'src/shared/components/.ComponentTemplate/Component.jsx.hbs',
       },
       {
         type: 'add',
-        path: 'src/components/shared/{{pascalCase name}}/__tests__/index.spec.js',
+        path: 'src/shared/components/{{pascalCase name}}/__tests__/index.spec.js',
         templateFile:
-          'src/components/shared/.ComponentTemplate/Component.spec.js.hbs',
+          'src/shared/components/.ComponentTemplate/Component.spec.js.hbs',
       },
       {
         type: 'add',
-        path: 'src/components/shared/{{pascalCase name}}/_index.scss',
+        path: 'src/shared/components/{{pascalCase name}}/_index.scss',
         templateFile:
-          'src/components/shared/.ComponentTemplate/_Component.scss.hbs',
+          'src/shared/components/.ComponentTemplate/_Component.scss.hbs',
       },
       {
         type: 'add',
-        path: 'src/components/shared/{{pascalCase name}}/index.stories.jsx',
+        path: 'src/shared/components/{{pascalCase name}}/index.stories.jsx',
         templateFile:
-          'src/components/shared/.ComponentTemplate/Component.stories.jsx.hbs',
+          'src/shared/components/.ComponentTemplate/Component.stories.jsx.hbs',
       },
     ],
   })

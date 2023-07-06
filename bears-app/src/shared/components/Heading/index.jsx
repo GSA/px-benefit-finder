@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useHandleClassName } from '../hooks/useHandleClassName'
+import { useHandleClassName } from '../../hooks/useHandleClassName'
 import './_index.scss'
 
 const Heading = ({ children, headingLevel, className }) => {

@@ -115,8 +115,7 @@ jobs:
              export AWS_DEFAULT_REGION=$(echo "${S3_CREDENTIALS}" | jq -r '.region')
              cd ../bears-app
              node -v 
-             sudo npm install -g n
-             sudo n latest
+             sudo apt-get install nodejs
              node -v
              npm run build:storybook
              ls -la

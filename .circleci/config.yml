@@ -1,4 +1,8 @@
 version: 2.1
+parameters:
+  manual_deploy:
+    type: boolean
+    default: false
 
 # Define the jobs we want to run for this project
 jobs:
@@ -81,21 +85,60 @@ jobs:
             cf apps
             cf ssh cms --command "/var/www/vendor/bin/drush --version && /var/www/vendor/bin/drush pm:enable usagov_bears_block && /var/www/vendor/bin/drush pm:enable usagov_bears_content && /var/www/vendor/bin/drush pm:enable usagov_bears_api && /var/www/vendor/bin/drush pm:enable usagov_bears && /var/www/vendor/bin/drush cr"
 
+  deploy_waf:
+    machine:
+      image: ubuntu-2004:202107-02
+
+    steps:
+      - run:
+          name: Cloning the Repo and initiating the Submodule
+          command: |
+            echo "cloning the repo and initiating the usagov-2021 submodule"
+            git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
+            cd px-bears-drupal
+            git submodule init
+            git submodule update
+
+      - run:
+          name: Injecting container name to the manifest.yml
+          command: |
+            cd px-bears-drupal/usagov-2021
+            sed -i "s#^    image: .*waf-latest*#    image: ghcr.io/gsa/px-bears-drupal/bears-waf:latest#" manifest.yml
+            sed -i "s#^    - secauthsecrets##" manifest.yml
+            sed -i "s#^- name: waf#- name: bears-waf#" manifest.yml
+            echo "      allow "$IP_1";/n      allow "$IP_2";/n      allow "$IP_3";/n      allow "$IP_4";/n      allow "$IP_5";/n      allow "$IP_6";/n      allow "$IP_7";/n      allow "$IP_8";/n      allow "$IP_9";/n      allow "$IP_10";/n      allow "$IP_BXL";" >> manifest.yml
+            cat manifest.yml
+
+      - run:
+          name: Setup CF CLI
+          command: |
+            curl -v -L -o cf-cli_amd64.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github"
+            sudo dpkg -i cf-cli_amd64.deb
+            cf -v
+
+      - run:
+          name: Deploy the the app to cloud.gov
+          command: |
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
+            cd px-bears-drupal/usagov-2021
+            echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
+            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push bears-waf  --docker-image "ghcr.io/gsa/px-bears-drupal/bears-waf:latest" --docker-username "$CF_USER"
+            docker logout
 
 # Orchestrate our job run sequence
 workflows:
-  build_and_deploy:
+# This workflow only gets triggered when there is a push to `main` branch.
+  cms_build_and_deploy_workflow:
     jobs:
       - build_and_deploy:
           filters:
             branches:
               only: 
                 - main
-
-
-
-
-
-
-            
-          
+# deploy_waf_workflow gets only triggered when we manually enter 'manual_deploy' parameter and set it to true boolean value. 
+  deploy_waf_workflow:
+    when:
+      and:
+        - equal: [ true, << pipeline.parameters.manual_deploy >> ]
+    jobs:
+      - deploy_waf

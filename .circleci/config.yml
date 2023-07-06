@@ -116,7 +116,7 @@ jobs:
              cd ../bears-app
              node -v 
              npm install -g n
-             n latest
+             sudo n latest
              node -v
              npm run build:storybook
              ls -la

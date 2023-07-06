@@ -10,10 +10,12 @@ const selectOptions = [
 
 export default {
   component: Select,
+  tags: ['autodocs'],
+  args: {
+    label: selectLabel,
+    options: selectOptions,
+    htmlFor: 'options',
+  },
 }
 
-export const Primary = {
-  render: () => (
-    <Select label={selectLabel} options={selectOptions} htmlFor="options" />
-  ),
-}
+export const Primary = {}

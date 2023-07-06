@@ -5,7 +5,6 @@
     "titlePrefix": "STRING",
     "title": "STRING",
     "summary": "HTML",
-    "lede": "HTML",
     "secondaryHeading": "STRING",
     "icon": "STRING",
     "sectionsEligibilityCriteria": [
@@ -82,7 +81,6 @@
         "agency": {
           "title": "STRING",
           "summary": "HTML",
-          "lede": "HTML"
         },
         "sourceLink": "STRING",
         "sourceIsEnglish": "BOOLEAN"

@@ -107,7 +107,6 @@ jobs:
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^- name: waf#- name: bears-waf#" manifest.yml
             echo "      allow "$IP_1";/n      allow "$IP_2";/n      allow "$IP_3";/n      allow "$IP_4";/n      allow "$IP_5";/n      allow "$IP_6";/n      allow "$IP_7";/n      allow "$IP_8";/n      allow "$IP_9";/n      allow "$IP_10";/n      allow "$IP_BXL";" >> manifest.yml
-            cat manifest.yml
 
       - run:
           name: Setup CF CLI

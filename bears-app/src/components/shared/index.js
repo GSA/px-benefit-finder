@@ -2,5 +2,6 @@
 export { default as Button } from './Button'
 export { default as Form } from './Form'
 export { default as Heading } from './Heading'
+export { default as ObfuscatedLink } from './ObfuscatedLink'
 export { default as Paragraph } from './Paragraph'
 export { default as Select } from './Select'

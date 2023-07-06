@@ -118,6 +118,7 @@ jobs:
              curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
              nvm install node --reinstall-packages-from=node
              node -v
+             npm i @craco/craco
              npm run build:storybook
              ls -la
              aws s3 sync ./storybook-static s3://${BUCKET_NAME}

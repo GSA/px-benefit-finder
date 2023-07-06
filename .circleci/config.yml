@@ -114,18 +114,10 @@ jobs:
              export BUCKET_NAME=$(echo "${S3_CREDENTIALS}" | jq -r '.bucket')
              export AWS_DEFAULT_REGION=$(echo "${S3_CREDENTIALS}" | jq -r '.region')
              cd ../bears-app
-             node -v 
              nvm install node --reinstall-packages-from=node
-             node -v
              npm i @craco/craco
              npm run build:storybook
-             ls -la
              aws s3 sync ./storybook-static s3://${BUCKET_NAME}
-             aws s3 ls s3://${BUCKET_NAME}
-
-             
-            
-             
 
 # Orchestrate our job run sequence
 workflows:

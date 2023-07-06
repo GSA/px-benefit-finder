@@ -114,7 +114,10 @@ jobs:
              export BUCKET_NAME=$(echo "${S3_CREDENTIALS}" | jq -r '.bucket')
              export AWS_DEFAULT_REGION=$(echo "${S3_CREDENTIALS}" | jq -r '.region')
              cd ../bears-app
-             npm install -g npm@latest
+             node -v 
+             npm install -g n
+             n latest
+             node -v
              npm run build:storybook
              ls -la
              aws s3 sync ./storybook-static s3://${BUCKET_NAME}

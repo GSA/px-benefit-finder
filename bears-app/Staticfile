@@ -1,3 +1,0 @@
-root: storybook-static
-gzip: on
-enable_http2: true

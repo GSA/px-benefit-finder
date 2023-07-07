@@ -117,7 +117,9 @@ jobs:
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
              npm run build:storybook
-             ls -la
+             mv manifest.yml storybook-static/
+             mv Staticfile storybook-static/
+             cd storybook-static
              echo "${storybook_username}:${storybook_password}" > Staticfile.auth
              cf push 
             #  aws s3 sync ./storybook-static s3://${BUCKET_NAME}

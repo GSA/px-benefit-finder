@@ -113,7 +113,7 @@ jobs:
             #  export AWS_SECRET_ACCESS_KEY=$(echo "${S3_CREDENTIALS}" | jq -r '.secret_access_key')
             #  export BUCKET_NAME=$(echo "${S3_CREDENTIALS}" | jq -r '.bucket')
             #  export AWS_DEFAULT_REGION=$(echo "${S3_CREDENTIALS}" | jq -r '.region')
-             cd bears-app
+             cd px-bears-drupal/bears-app
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
              npm run build:storybook

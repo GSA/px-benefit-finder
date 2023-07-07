@@ -104,7 +104,7 @@ jobs:
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
 
       - run:
-          name: Deploy Storybook to S3
+          name: Deploy Storybook
           command: |  
             #  cd px-bears-drupal/bin
             #  chmod +x getcreds.sh
@@ -117,6 +117,7 @@ jobs:
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
              npm run build:storybook
+             ls -la
              echo "${storybook_username}:${storybook_password}" > Staticfile.auth
              cf push 
             #  aws s3 sync ./storybook-static s3://${BUCKET_NAME}

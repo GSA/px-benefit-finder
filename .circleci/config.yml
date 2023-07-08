@@ -106,13 +106,6 @@ jobs:
       - run:
           name: Deploy Storybook
           command: |  
-            #  cd px-bears-drupal/bin
-            #  chmod +x getcreds.sh
-            #  source getcreds.sh
-            #  export AWS_ACCESS_KEY_ID=$(echo "${S3_CREDENTIALS}" | jq -r '.access_key_id')
-            #  export AWS_SECRET_ACCESS_KEY=$(echo "${S3_CREDENTIALS}" | jq -r '.secret_access_key')
-            #  export BUCKET_NAME=$(echo "${S3_CREDENTIALS}" | jq -r '.bucket')
-            #  export AWS_DEFAULT_REGION=$(echo "${S3_CREDENTIALS}" | jq -r '.region')
              cd px-bears-drupal/bears-app
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
@@ -123,7 +116,6 @@ jobs:
              cd storybook-static
              echo "${storybook_username}:${storybook_password}" > Staticfile.auth
              cf push 
-            #  aws s3 sync ./storybook-static s3://${BUCKET_NAME}
 
 # Orchestrate our job run sequence
 workflows:

@@ -119,14 +119,15 @@ jobs:
 
 # Orchestrate our job run sequence
 workflows:
-  build_and_deploy:
+# This workflow only gets triggered when there is a push to `main` branch.
+  cms_build_and_deploy_workflow:
     jobs:
       - build_and_deploy:
           filters:
             branches:
               only: 
                 - main
-  create-component-library:
+  create-component-library-workflow:
     jobs:
       - component-library:
           filters:

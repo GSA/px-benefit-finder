@@ -133,7 +133,7 @@ workflows:
           filters:
             branches:
               only:
-                - task/create-component-library
+                - main
 
 
 

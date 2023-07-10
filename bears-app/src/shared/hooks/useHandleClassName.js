@@ -31,7 +31,5 @@ export const useHandleClassName = ({
     )
   }, [className, defaultClasses, utilityClasses])
 
-  console.log(classes)
-
   return classes
 }

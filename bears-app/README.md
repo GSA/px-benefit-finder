@@ -34,16 +34,16 @@
 
 <br>
 
-| File or folder                     | Description                                                |
-| ---------------------------------- | ---------------------------------------------------------- |
-| `src/index.jsx`                    | Entry file.                                                |
-| `public/index.html`                | All scripts and styles injected here                       |
-| `src/App`                          | Main application routes, global / ancestor of all modules. |
-| `src/shared/api`                   | dev utils for interacting with data                        |
-| `src/shared/components`            | Components, constants, machines, hooks, styles, utils etc; |
-| `src/shared/hooks`                 | Custom Hooks                                               |
-| `src/shared/components/style-docs` | mdx files for !stories documentation                       |
-|                                    | **_Any module is allowed to import from shared._**         |
+| File or folder          | Description                                                |
+| ----------------------- | ---------------------------------------------------------- |
+| `src/index.jsx`         | Entry file.                                                |
+| `public/index.html`     | All scripts and styles injected here                       |
+| `src/App`               | Main application routes, global / ancestor of all modules. |
+| `src/shared/api`        | dev utils for interacting with data                        |
+| `src/shared/components` | Components, constants, machines, hooks, styles, utils etc; |
+| `src/shared/hooks`      | Custom Hooks                                               |
+| `src/shared/style-docs` | mdx files for !stories documentation                       |
+|                         | **_Any module is allowed to import from shared._**         |
 
 <br>
 

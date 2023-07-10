@@ -1,6 +1,7 @@
 // order exports in alphabetical list
 export { default as Alert } from './Alert'
 export { default as Button } from './Button'
+export { default as ButtonGroup } from './ButtonGroup'
 export { default as EmailButton } from './EmailButton'
 export { default as Fieldset } from './Fieldset'
 export { default as Form } from './Form'

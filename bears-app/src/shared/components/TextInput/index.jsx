@@ -1,16 +1,18 @@
 import { useHandleClassName } from '../../hooks/useHandleClassName'
+import { Label } from '../index'
 import PropTypes from 'prop-types'
 
 /**
  * a functional component that renders a field for text input
  * @component
- * @param {id} string - unique identifire
- * @param {className} string - inherited classes
- * @param {textarea} boolean - conditional to render textarea as return
+ * @param {string} id - unique identifire
+ * @param {string} className - inherited classes
+ * @param {string} label - string value for input label
+ * @param {boolean} textarea - conditional to render textarea as return
  * @return {html} returns a semantic textarea or input
  */
 
-const TextInput = ({ id, className, textarea }) => {
+const TextInput = ({ id, className, label, textarea }) => {
   const defaultClasses = !textarea ? ['usa-input'] : ['usa-textarea']
 
   /**
@@ -33,20 +35,24 @@ const TextInput = ({ id, className, textarea }) => {
     !textarea ? <PrimaryInput {...props} /> : <TextArea {...props} />
 
   return (
-    <Input
-      className={useHandleClassName({
-        className,
-        defaultClasses,
-      })}
-      id={id}
-      name={id}
-    />
+    <>
+      <Label htmlFor={id} label={label} />
+      <Input
+        className={useHandleClassName({
+          className,
+          defaultClasses,
+        })}
+        id={id}
+        name={id}
+      />
+    </>
   )
 }
 
 TextInput.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
+  label: PropTypes.string,
   textarea: PropTypes.bool,
 }
 

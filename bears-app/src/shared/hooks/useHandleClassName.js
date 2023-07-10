@@ -19,6 +19,7 @@ export const useHandleClassName = ({
    * @return {string} returns an joined array of strings
    */
   const [classes, setClasses] = useState('')
+  console.log(className, defaultClasses)
 
   useEffect(() => {
     const classList = [
@@ -30,6 +31,8 @@ export const useHandleClassName = ({
       classList.filter(classGroup => classGroup !== undefined).join(' ')
     )
   }, [className, defaultClasses, utilityClasses])
+
+  console.log(classes)
 
   return classes
 }

@@ -19,7 +19,6 @@ export const useHandleClassName = ({
    * @return {string} returns an joined array of strings
    */
   const [classes, setClasses] = useState('')
-  console.log(className, defaultClasses)
 
   useEffect(() => {
     const classList = [

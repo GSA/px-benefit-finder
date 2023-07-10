@@ -1,0 +1,18 @@
+.chevron {
+  position: relative;
+  background-color: #1a4480;
+  padding: 64px 31px 38px;
+  margin: 0 auto;
+  color: white;
+}
+
+// triangle down
+.chevron::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-top: 76px solid #1a4480;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+}

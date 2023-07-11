@@ -4,7 +4,7 @@ export default {
   component: Accordion,
   tags: ['autodocs'],
   args: {
-    id: 1,
+    id: '1',
     title: 'First Amendment',
     description: 'Likely Eligible',
     children:

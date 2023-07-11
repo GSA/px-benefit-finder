@@ -84,6 +84,42 @@ jobs:
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cf apps
             cf ssh cms --command "/var/www/vendor/bin/drush --version && /var/www/vendor/bin/drush pm:enable usagov_bears_block && /var/www/vendor/bin/drush pm:enable usagov_bears_content && /var/www/vendor/bin/drush pm:enable usagov_bears_api && /var/www/vendor/bin/drush pm:enable usagov_bears && /var/www/vendor/bin/drush cr"
+  
+  component-library:
+    machine:
+      image: ubuntu-2004:202107-02
+
+    steps:
+      - run:
+          name: Cloning the Repo and initiating the Submodule
+          command: |
+            echo "cloning the repo and initiating the usagov-2021 submodule"
+            git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
+            cd px-bears-drupal
+            git submodule init
+            git submodule update
+
+      - run:
+          name: Setup CF CLI
+          command: |
+            curl -v -L -o cf-cli_amd64.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github"
+            sudo dpkg -i cf-cli_amd64.deb
+            cf -v
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
+            
+      - run:
+          name: Deploy Storybook
+          command: |  
+             cd px-bears-drupal/bears-app
+             nvm install node --reinstall-packages-from=node
+             npm i @craco/craco
+             npm run build:storybook
+             mv manifest.yml storybook-static/
+             mv Staticfile storybook-static/
+             mv nginx storybook-static/
+             cd storybook-static
+             echo "${storybook_username}:${storybook_password}" > Staticfile.auth
+             cf push 
 
   deploy_waf:
     machine:
@@ -134,6 +170,15 @@ workflows:
             branches:
               only: 
                 - main
+
+  create-component-library-workflow:
+    jobs:
+      - component-library:
+          filters:
+            branches:
+              only:
+                - main
+
 # deploy_waf_workflow gets only triggered when we manually enter 'manual_deploy' parameter and set it to true boolean value. 
   deploy_waf_workflow:
     when:
@@ -141,3 +186,4 @@ workflows:
         - equal: [ true, << pipeline.parameters.manual_deploy >> ]
     jobs:
       - deploy_waf
+

@@ -20,10 +20,22 @@ This module provides custom block "usagov bears block" with div id="usagov-bears
 
 ## USAgov bears content module
 
+config/optional folder include configuration of content type, taxonomy, paragraph...
+
+```
+bin/drush config:import \
+  --partial \
+  --source=modules/custom/usagov_bears/modules/usagov_bears_content/config/optional
+```
+This imports the configuration of content type, taxonomy, paragraph, custom entity.
+
+
 config folder includes content type, taxonomy, paragraph, custom entity configuration.
 
 ```
-bin/drush config:import --partial --source=modules/custom/usagov_bears/modules/usagov_bears_content/config
+bin/drush config:import \
+  --partial \
+  --source=modules/custom/usagov_bears/modules/usagov_bears_content/config
 ```
 This imports the configuration of content type, taxonomy, paragraph, custom entity.
 

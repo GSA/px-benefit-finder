@@ -8,9 +8,10 @@
   |-public
     |-index.html
   |-src
-    |-components
-      |-App
-      |-shared
+    |-App
+    |-shared
+      |-api
+      |-components
         |-ComponentName
           |-__tests__
             |-__snapshots__
@@ -18,9 +19,10 @@
           |-index.jsx
           |-index.stories.jsx
           |-_index.scss
-      |-style-docs
-    |-index.jsx
-    |-README.md
+        |-style-docs
+      |-hooks
+  |-index.jsx
+  |-README.md
 ```
 
 <br>
@@ -32,34 +34,35 @@
 
 <br>
 
-| File or folder      | Description                                                |
-| ------------------- | ---------------------------------------------------------- |
-| `src/index.jsx`     | Entry file.                                                |
-| `public/index.html` | All scripts and styles injected here                       |
-| `src/components/App`| Main application routes, global / ancestor of all modules. |
-| `src/components/shared`| Components, constants, machines, hooks, styles, utils etc; |
-| `src/components/style-docs`| mdx files for !stories documentation|
-|                     | **_Any module is allowed to import from shared._**         |
+| File or folder                     | Description                                                |
+| ---------------------------------- | ---------------------------------------------------------- |
+| `src/index.jsx`                    | Entry file.                                                |
+| `public/index.html`                | All scripts and styles injected here                       |
+| `src/App`                          | Main application routes, global / ancestor of all modules. |
+| `src/shared/api`                   | dev utils for interacting with data                        |
+| `src/shared/components`            | Components, constants, machines, hooks, styles, utils etc; |
+| `src/shared/hooks`                 | Custom Hooks                                               |
+| `src/shared/components/style-docs` | mdx files for !stories documentation                       |
+|                                    | **_Any module is allowed to import from shared._**         |
 
 <br>
 
 ### File Types:
 
-| file type  | Description |
-| --------------- | ----------- |
-| `.jsx` | React functional components |
-| `.js` | ES |
-| `.stories.jsx` | Component Story Format files for storybook stories |
-| `.mdx` | Markdown files that accept ES imports for storybook docs |
-| `.md` | Markdown files for project docs |
-| `.spec.js` | Testing specification |
-| `.spec.js.snap` | Testing snapshots |
-| `.hbs` | Handlebars (used in plop generated components) |
-| `.scss` | Syntactically awesome style sheets |
-| `.json` | JavaScript Object Notation |
-| `*rc` | Resource files |
-| `*sh` | Bash files |
-
+| file type       | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| `.jsx`          | React functional components                              |
+| `.js`           | ES                                                       |
+| `.stories.jsx`  | Component Story Format files for storybook stories       |
+| `.mdx`          | Markdown files that accept ES imports for storybook docs |
+| `.md`           | Markdown files for project docs                          |
+| `.spec.js`      | Testing specification                                    |
+| `.spec.js.snap` | Testing snapshots                                        |
+| `.hbs`          | Handlebars (used in plop generated components)           |
+| `.scss`         | Syntactically awesome style sheets                       |
+| `.json`         | JavaScript Object Notation                               |
+| `*rc`           | Resource files                                           |
+| `*sh`           | Bash files                                               |
 
 <br>
 
@@ -103,7 +106,6 @@ husky is automatically installed after the packages are installed.
 
 - The `pre-push` git hook runs a series of scripts on the directory before pushing to the origin.
 
-
 ## Coding Standards
 
 We use a combination of linting and best practices to guide code consistency.
@@ -116,7 +118,6 @@ We use a combination of linting and best practices to guide code consistency.
 [![react/recommended](https://img.shields.io/badge/code%20style%20React-recommended-brightgreen.svg)](https://github.com/yannickcr/eslint-plugin-react)
 [![prettier/recommended](https://img.shields.io/badge/code%20format/prettier-%20recomended-brightgreen.svg)](https://github.com/prettier/eslint-plugin-prettier)
 [![stylelint](https://img.shields.io/badge/code%20format/stylelint-%20standard-brightgreen.svg)](https://github.com/cypress-io/eslint-plugin-cypress)
-
 
 <br>
 
@@ -131,6 +132,7 @@ npm run lint:js
 ```
 
 Auto-fix lint errors
+
 ```shell
 npm run lint:js:fix
 ```
@@ -152,7 +154,6 @@ Auto-fix lint errors
 ```shell
 npm run lint:scss:fix
 ```
-
 
 <br>
 
@@ -204,7 +205,7 @@ Typecheck with [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.
 
 #### **4. Styles**
 
-We take a utility first approach.  We do not have full control over our styles since a custom version of USWDS already exist in the usa.gov project.
+We take a utility first approach. We do not have full control over our styles since a custom version of USWDS already exist in the usa.gov project.
 
 To avoid conflict we will use utility-classes and overrides with sass files as needed.
 
@@ -221,18 +222,19 @@ We use composition, but leverage the https://designsystem.digital.gov/. We will 
 We use inline documentation for functions, hooks, and functional components.
 
 Example with function
-```js
-  /**
-   * a boolean function that returns a component when true.
-   * @function
-   * @param {boolean} value - the inherited value, can be true || false
-   * @return {component} returns a component if true
-   */
-  const handleTruth = value => value === true && <Truth />
 
+```js
+/**
+ * a boolean function that returns a component when true.
+ * @function
+ * @param {boolean} value - the inherited value, can be true || false
+ * @return {component} returns a component if true
+ */
+const handleTruth = value => value === true && <Truth />
 ```
 
 Example with hook
+
 ```js
 /**
  * a boolean that manages the state of truth.
@@ -240,7 +242,7 @@ Example with hook
  * @param {boolean} value - the inherited value, can be true || false
  * @return {state} returns an updated state for value
  */
-const [value, setValue] = useState(true);
+const [value, setValue] = useState(true)
 ```
 
 Example with functional component
@@ -291,4 +293,3 @@ npm run generate:component <component-name>
 ```
 
 > It's important to export components from the root of the shared index file. This is where you will import and destructure across other documents.
-

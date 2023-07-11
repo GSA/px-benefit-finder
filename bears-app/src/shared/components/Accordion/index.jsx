@@ -4,13 +4,34 @@ import Open from './assets/open.svg'
 import PropTypes from 'prop-types'
 import './_index.scss'
 
+/**
+ * a functional component that renders a usa accordion
+ * @component
+ * @param {string} id - inherited id
+ * @param {string} title - title value
+ * @param {string} discription - description value
+ * @param {React.ReactNode} children - inherited children
+ * @return {html} returns a semantic html button element
+ */
 const Accordion = ({ id, title, description, children }) => {
+  /**
+   * a hook that hanldes our open state of the accordion
+   * @function
+   * @return {boolean} returns true or false
+   */
   const [isOpen, setOpen] = useState(false)
+
+  /**
+   * a handler that returns the proper icon
+   * @function
+   * @param {React.ReactNode} children - inherited children
+   * @return {html} returns a semantic img element with proper svg
+   */
   const handleIcon = () =>
     !isOpen ? (
-      <img src={Open} alt="alt text" />
+      <img src={Open} alt="a plus icon" />
     ) : (
-      <img src={Close} alt="alt text" />
+      <img src={Close} alt="a minus icon" />
     )
 
   return (
@@ -41,7 +62,10 @@ const Accordion = ({ id, title, description, children }) => {
 }
 
 Accordion.propTypes = {
-  props: PropTypes.any,
+  id: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Accordion

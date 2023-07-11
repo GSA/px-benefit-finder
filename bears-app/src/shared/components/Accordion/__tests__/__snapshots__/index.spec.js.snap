@@ -21,7 +21,7 @@ exports[`Accordion renders a match to the previous snapshot 1`] = `
         className="title-description"
       />
       <img
-        alt="alt text"
+        alt="a plus icon"
         src="open.svg"
       />
     </button>

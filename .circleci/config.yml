@@ -142,7 +142,7 @@ jobs:
             sed -i "s#^    image: .*waf-latest*#    image: ghcr.io/gsa/px-bears-drupal/bears-waf:latest#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^- name: waf#- name: bears-waf#" manifest.yml
-            echo "      allow "$IP_1";/n      allow "$IP_2";/n      allow "$IP_3";/n      allow "$IP_4";/n      allow "$IP_5";/n      allow "$IP_6";/n      allow "$IP_7";/n      allow "$IP_8";/n      allow "$IP_9";/n      allow "$IP_10";/n      allow "$IP_BXL";" >> manifest.yml
+            echo "      allow "$IP_S";      allow "$IP_1";      allow "$IP_3";      allow "$IP_4";      allow "$IP_5";      allow "$IP_6";      allow "$IP_7";      allow "$IP_8";      allow "$IP_9";      allow "$IP_10";      allow "$IP_BXL";      allow "$IP_2";" >> manifest.yml
 
       - run:
           name: Setup CF CLI

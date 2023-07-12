@@ -9,10 +9,10 @@ import PropTypes from 'prop-types'
  * @return {html} returns a semantic html label
  */
 const Label = ({ className, label, htmlFor }) => {
-  const defaultClassName = className || 'usa-label'
+  const defaultClasses = ['usa-label']
   return (
     <label
-      className={useHandleClassName({ className, defaultClassName })}
+      className={useHandleClassName({ className, defaultClasses })}
       htmlFor={htmlFor}
     >
       {label}

@@ -1,6 +1,7 @@
 // order exports in alphabetical list
 export { default as Alert } from './Alert'
 export { default as Button } from './Button'
+export { default as Chevron } from './Chevron'
 export { default as EmailButton } from './EmailButton'
 export { default as Fieldset } from './Fieldset'
 export { default as Form } from './Form'
@@ -13,4 +14,5 @@ export { default as Paragraph } from './Paragraph'
 export { default as Radio } from './Radio'
 export { default as ShareButton } from './ShareButton'
 export { default as Select } from './Select'
+export { default as TextInput } from './TextInput'
 export { default as TimeIndicator } from './TimeIndicator'

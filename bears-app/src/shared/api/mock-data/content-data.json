@@ -755,14 +755,14 @@
         "eligibility": [
           {
             "criteriaKey": "deceased_died_of_COVID",
-            "label": "",
+            "label": "Deceased died of COVID.",
             "acceptableValue": [
               "TRUE"
             ]
           },
           {
             "criteriaKey": "deceased_death_location_is_US",
-            "label": "",
+            "label": "Deceased death location is in the US.",
             "acceptableValue": [
               "TRUE"
             ]
@@ -776,14 +776,14 @@
           },
           {
             "criteriaKey": "applicant_citizen_status",
-            "label": "",
+            "label": "Applicant is a citizen.",
             "acceptableValue": [
               "TRUE"
             ]
           },
           {
             "criteriaKey": "applicant_paid_funeral_expenses",
-            "label": "",
+            "label": "Applicant paid for the funeral expenses.",
             "acceptableValue": [
               "TRUE"
             ]

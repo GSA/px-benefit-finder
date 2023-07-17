@@ -15,9 +15,9 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
   const [isExpandAll, setExpandAll] = useState(false)
   const handleExpandIcon = isExpandAll ? 'Collapse all -' : 'Expand all +'
 
-  return (
-    <div className="benefit-accordion-group">
-      {expandAll && (
+  const ExpandAll = () => {
+    return (
+      expandAll && (
         <Button
           className="expand-all"
           unstyled
@@ -25,7 +25,33 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
         >
           {handleExpandIcon}
         </Button>
-      )}
+      )
+    )
+  }
+
+  const NotEligibleList = ({ items }) => {
+    return (
+      <div className="benefit-accordion-unmet-criteria-group">
+        <div className="benefit-accordion-unmet-criteria-title">
+          UNMET CRITERIA
+        </div>
+        <ul className="benefit-accordion-unmet-criteria-list">
+          {items.map((item, index) => {
+            const { label } = item
+            return (
+              <li key={index} className="benefit-accordion-unmet-criteria-item">
+                {label}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    )
+  }
+
+  return (
+    <div className="benefit-accordion-group">
+      <ExpandAll />
       {data &&
         data.map((item, index) => {
           const {
@@ -36,12 +62,17 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
             summary,
             title,
           } = item[entryKey]
-          // put into state initial elegibility length
+          // get benefit criteria matches
+          const eligibleBenefits = eligibility.filter(
+            item => item.eligible === true
+          )
+          // get not benefit criteria matches
+          const notEligibleBenefits = eligibility.filter(item => !item.eligible)
           const eligibleStatus =
-            eligibility.length === initialEligibilityLength
+            eligibleBenefits.length === initialEligibilityLength
               ? 'Likely Eligible'
-              : eligibility.length > 0 &&
-                eligibility.length < initialEligibilityLength
+              : eligibleBenefits.length > 0 &&
+                eligibleBenefits.length < initialEligibilityLength
               ? 'Potentially  Eligible'
               : 'Not Eligible'
           return (
@@ -64,9 +95,10 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
               </Paragraph>
               <KeyElegibilityCrieriaList
                 className="benefit-accordion-criteria-list"
-                data={eligibility}
+                data={eligibleBenefits}
                 initialEligibilityLength={initialEligibilityLength}
               />
+              <NotEligibleList items={notEligibleBenefits} />
               <Alert className="benefit-accordion-alert">
                 Additional eligibility criteria may apply. Please visit agency
                 for full requirements.

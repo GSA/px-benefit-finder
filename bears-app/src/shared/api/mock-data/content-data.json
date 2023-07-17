@@ -758,21 +758,24 @@
             "label": "Deceased died of COVID.",
             "acceptableValue": [
               "TRUE"
-            ]
+            ],
+            "eligible": true
           },
           {
             "criteriaKey": "deceased_death_location_is_US",
             "label": "Deceased death location is in the US.",
             "acceptableValue": [
               "TRUE"
-            ]
+            ],
+            "eligible": true
           },
           {
             "criteriaKey": "deceased_date_of_funeral",
             "label": "The deceased's funeral/burial was after January 20, 2020.",
             "acceptableValue": [
               ">01-20-2020"
-            ]
+            ],
+            "eligible": true
           },
           {
             "criteriaKey": "applicant_citizen_status",
@@ -786,7 +789,8 @@
             "label": "Applicant paid for the funeral expenses.",
             "acceptableValue": [
               "TRUE"
-            ]
+            ],
+            "eligible": true
           }
         ],
         "initialEligibilityLength": 5,

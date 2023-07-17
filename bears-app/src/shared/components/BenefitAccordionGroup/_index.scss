@@ -1,6 +1,25 @@
 .benefit-accordion-group {
+  padding: 24px 17px 40px;
+  max-width: 530px;
+
   .bears-accordion {
     margin-bottom: 26px;
+
+    .benefit-accordion-detail-title {
+      padding: 0;
+      margin: 0 0 24px;
+      text-align: left;
+    }
+
+    .benefit-accordion-detail-summary,
+    .benefit-accordion-criteria-list,
+    .benefit-accordion-alert {
+      margin: 0 0 24px;
+    }
+
+    .benefit-accordion-link {
+      width: 100%;
+    }
   }
 
   .expand-all {

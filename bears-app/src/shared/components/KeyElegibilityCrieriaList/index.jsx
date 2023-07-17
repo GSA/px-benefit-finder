@@ -1,10 +1,16 @@
 import { Heading } from '../index'
 import PropTypes from 'prop-types'
+import { useHandleClassName } from '../../hooks/useHandleClassName'
 import './_index.scss'
 
-const KeyElegibilityCrieriaList = ({ data, initialElegibilityLength }) => {
+const KeyElegibilityCrieriaList = ({
+  className,
+  data,
+  initialEligibilityLength,
+}) => {
+  const defaultClasses = ['key-eligibility-criteria-group']
   return (
-    <div className="key-eligibility-criteria-group">
+    <div className={useHandleClassName({ className, defaultClasses })}>
       {data && (
         <>
           {' '}
@@ -13,7 +19,7 @@ const KeyElegibilityCrieriaList = ({ data, initialElegibilityLength }) => {
             headingLevel={5}
           >
             {`Key Eligibility Criteria Meet ${data.length} of
-            ${initialElegibilityLength}`}
+            ${initialEligibilityLength}`}
           </Heading>
           <ul className="key-eligibility-criteria-list">
             {data.map((item, index) => {

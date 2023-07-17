@@ -2,7 +2,7 @@
 
 exports[`Alert renders a match to the previous snapshot 1`] = `
 <div
-  className="usa-alert usa-alert--info"
+  className=""
 >
   <div
     className="usa-alert__body"

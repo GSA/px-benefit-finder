@@ -5,6 +5,7 @@ import {
   Alert,
   Button,
   Heading,
+  KeyElegibilityCrieriaList,
   ObfuscatedLink,
   Paragraph,
 } from '../index'
@@ -12,6 +13,7 @@ import './_index.scss'
 
 const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
   const [isExpandAll, setExpandAll] = useState(false)
+  const handleExpandIcon = isExpandAll ? 'Collapse all -' : 'Expand all +'
 
   return (
     <div className="benefit-accordion-group">
@@ -21,7 +23,7 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
           unstyled
           onClick={() => setExpandAll(!isExpandAll)}
         >
-          Expand all +
+          {handleExpandIcon}
         </Button>
       )}
       {data &&
@@ -51,13 +53,28 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
               aria-expanded={isExpandAll}
               isExpanded={isExpandAll}
             >
-              <Heading headingLevel={4}>Provided by {agency.title}</Heading>
-              <Paragraph>{summary}</Paragraph>
-              <Alert>
+              <Heading
+                className="benefit-accordion-detail-title"
+                headingLevel={4}
+              >
+                Provided by {agency.title}
+              </Heading>
+              <Paragraph className="benefit-accordion-detail-summary">
+                {summary}
+              </Paragraph>
+              <KeyElegibilityCrieriaList
+                className="benefit-accordion-criteria-list"
+                data={eligibility}
+                initialEligibilityLength={initialEligibilityLength}
+              />
+              <Alert className="benefit-accordion-alert">
                 Additional eligibility criteria may apply. Please visit agency
                 for full requirements.
               </Alert>
-              <ObfuscatedLink href={sourceLink}>
+              <ObfuscatedLink
+                className="benefit-accordion-link"
+                href={sourceLink}
+              >
                 Visit {agency.title}
               </ObfuscatedLink>
             </Accordion>

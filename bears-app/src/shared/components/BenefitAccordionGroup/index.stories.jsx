@@ -7,6 +7,9 @@ const entryKey = Object.keys(data[0])
 export default {
   component: BenefitAccordionGroup,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
   args: {
     data,
     entryKey: entryKey[0],

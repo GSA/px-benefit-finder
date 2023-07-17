@@ -18,7 +18,7 @@ exports[`Accordion renders a match to the previous snapshot 1`] = `
       />
       <br />
       <span
-        className="title-description"
+        className="title-eligible-status"
       />
       <img
         alt="a plus icon"

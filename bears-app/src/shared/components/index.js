@@ -1,5 +1,7 @@
 // order exports in alphabetical list
 export { default as Alert } from './Alert'
+export { default as Accordion } from './Accordion'
+export { default as BenefitAccordionGroup } from './BenefitAccordionGroup'
 export { default as Button } from './Button'
 export { default as ButtonGroup } from './ButtonGroup'
 export { default as Chevron } from './Chevron'

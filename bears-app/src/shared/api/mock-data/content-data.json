@@ -30,7 +30,7 @@
                           "value": ""
                         }
                       ],
-                      "hasChild":  false,
+                      "hasChild": false,
                       "childDependencyOption": ""
                     }
                   }
@@ -789,6 +789,7 @@
             ]
           }
         ],
+        "initialEligibilityLength": 5,
         "tags": [
           "burial and funeral assistance"
         ],

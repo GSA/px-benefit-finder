@@ -2,24 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.bears_life_event.field_b_elg_criteria_desc
-    - field.field.node.bears_life_event.field_b_id
-    - field.field.node.bears_life_event.field_b_json_file
-    - field.field.node.bears_life_event.field_b_sections_elg_criteria
-    - field.field.node.bears_life_event.field_b_summary
-    - field.field.node.bears_life_event.field_b_time_estimate
-    - field.field.node.bears_life_event.field_b_title
-    - field.field.node.bears_life_event.field_b_title_prefix
-    - node.type.bears_life_event
+    - field.field.node.bears_life_event_form.field_b_elg_criteria_desc
+    - field.field.node.bears_life_event_form.field_b_id
+    - field.field.node.bears_life_event_form.field_b_json_file
+    - field.field.node.bears_life_event_form.field_b_sections_elg_criteria
+    - field.field.node.bears_life_event_form.field_b_summary
+    - field.field.node.bears_life_event_form.field_b_time_estimate
+    - field.field.node.bears_life_event_form.field_b_title
+    - field.field.node.bears_life_event_form.field_b_title_prefix
+    - node.type.bears_life_event_form
   module:
     - content_moderation
     - file
-    - paragraphs
+    - mmf_core_fields
     - path
     - text
-id: node.bears_life_event.default
+id: node.bears_life_event_form.default
 targetEntityType: node
-bundle: bears_life_event
+bundle: bears_life_event_form
 mode: default
 content:
   created:
@@ -46,28 +46,23 @@ content:
     third_party_settings: {  }
   field_b_json_file:
     type: file_generic
-    weight: 13
+    weight: 12
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   field_b_sections_elg_criteria:
-    type: paragraphs
-    weight: 14
+    type: mmf_entity_reference_revisions
+    weight: 13
     region: content
     settings:
+      min_count: 1
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
     third_party_settings: {  }
   field_b_summary:
     type: text_textarea
@@ -110,7 +105,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -129,7 +124,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 12
+    weight: 14
     region: content
     settings:
       display_label: true
@@ -143,16 +138,11 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 17
+    weight: 18
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  translation:
-    weight: 10
-    region: content
-    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
@@ -165,7 +155,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }

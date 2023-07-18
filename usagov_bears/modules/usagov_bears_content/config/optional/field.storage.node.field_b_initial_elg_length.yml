@@ -7,15 +7,16 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_b_life_events
-field_name: field_b_life_events
+id: node.field_b_initial_elg_length
+field_name: field_b_initial_elg_length
 entity_type: node
-type: entity_reference
+type: integer
 settings:
-  target_type: node
+  unsigned: false
+  size: normal
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.bears_life_event
-id: node.bears_life_event.title
+    - node.type.bears_life_event_form
+id: node.bears_life_event_form.title
 field_name: title
 entity_type: node
-bundle: bears_life_event
+bundle: bears_life_event_form
 label: Title
 description: ''
 required: true

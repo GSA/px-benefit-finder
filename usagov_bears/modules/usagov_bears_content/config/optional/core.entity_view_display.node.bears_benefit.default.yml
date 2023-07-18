@@ -5,6 +5,7 @@ dependencies:
     - field.field.node.bears_benefit.field_b_agency
     - field.field.node.bears_benefit.field_b_eligibility
     - field.field.node.bears_benefit.field_b_headline
+    - field.field.node.bears_benefit.field_b_initial_elg_length
     - field.field.node.bears_benefit.field_b_life_events
     - field.field.node.bears_benefit.field_b_source_is_english
     - field.field.node.bears_benefit.field_b_source_link
@@ -44,6 +45,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 113
+    region: content
+  field_b_initial_elg_length:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 115
     region: content
   field_b_life_events:
     type: entity_reference_label

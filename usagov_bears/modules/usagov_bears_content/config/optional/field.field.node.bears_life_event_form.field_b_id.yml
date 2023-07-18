@@ -3,15 +3,15 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_b_id
-    - node.type.bears_life_event
-id: node.bears_life_event.field_b_id
+    - node.type.bears_life_event_form
+id: node.bears_life_event_form.field_b_id
 field_name: field_b_id
 entity_type: node
-bundle: bears_life_event
+bundle: bears_life_event_form
 label: ID
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

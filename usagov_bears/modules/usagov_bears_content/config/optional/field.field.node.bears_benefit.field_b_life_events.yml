@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_b_life_events
     - node.type.bears_benefit
-    - node.type.bears_life_event
+    - node.type.bears_life_event_form
 id: node.bears_benefit.field_b_life_events
 field_name: field_b_life_events
 entity_type: node
@@ -19,7 +19,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      bears_life_event: bears_life_event
+      bears_life_event_form: bears_life_event_form
     sort:
       field: _none
       direction: ASC

@@ -754,7 +754,7 @@
         "summary": "Financial assistance may be available to help with the burial and funeral costs for people who died of COVID-19.",
         "eligibility": [
           {
-            "criteriaKey": "deceased_died_of_COVID",
+            "criteriaKey": "deceased_not_died_of_COVID",
             "label": "Deceased died of COVID.",
             "acceptableValue": [
               "TRUE"

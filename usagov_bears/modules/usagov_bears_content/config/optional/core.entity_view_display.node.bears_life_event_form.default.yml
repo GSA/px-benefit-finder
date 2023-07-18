@@ -2,23 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.bears_life_event.field_b_elg_criteria_desc
-    - field.field.node.bears_life_event.field_b_id
-    - field.field.node.bears_life_event.field_b_json_file
-    - field.field.node.bears_life_event.field_b_sections_elg_criteria
-    - field.field.node.bears_life_event.field_b_summary
-    - field.field.node.bears_life_event.field_b_time_estimate
-    - field.field.node.bears_life_event.field_b_title
-    - field.field.node.bears_life_event.field_b_title_prefix
-    - node.type.bears_life_event
+    - field.field.node.bears_life_event_form.field_b_elg_criteria_desc
+    - field.field.node.bears_life_event_form.field_b_id
+    - field.field.node.bears_life_event_form.field_b_json_file
+    - field.field.node.bears_life_event_form.field_b_sections_elg_criteria
+    - field.field.node.bears_life_event_form.field_b_summary
+    - field.field.node.bears_life_event_form.field_b_time_estimate
+    - field.field.node.bears_life_event_form.field_b_title
+    - field.field.node.bears_life_event_form.field_b_title_prefix
+    - node.type.bears_life_event_form
   module:
     - entity_reference_revisions
     - file
     - text
     - user
-id: node.bears_life_event.default
+id: node.bears_life_event_form.default
 targetEntityType: node
-bundle: bears_life_event
+bundle: bears_life_event_form
 mode: default
 content:
   field_b_elg_criteria_desc:
@@ -26,7 +26,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 102
     region: content
   field_b_id:
     type: string
@@ -34,7 +34,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 10
+    weight: 103
     region: content
   field_b_json_file:
     type: file_default
@@ -42,7 +42,7 @@ content:
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 6
+    weight: 104
     region: content
   field_b_sections_elg_criteria:
     type: entity_reference_revisions_entity_view
@@ -51,14 +51,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 7
+    weight: 105
     region: content
   field_b_summary:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 106
     region: content
   field_b_time_estimate:
     type: string
@@ -66,7 +66,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 12
+    weight: 107
     region: content
   field_b_title:
     type: string
@@ -74,7 +74,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 108
     region: content
   field_b_title_prefix:
     type: string
@@ -82,12 +82,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    weight: 109
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 100
     region: content
 hidden:
   langcode: true

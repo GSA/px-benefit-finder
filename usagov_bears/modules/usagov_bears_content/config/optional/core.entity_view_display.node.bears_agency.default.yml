@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.bears_agency.field_b_lede
     - field.field.node.bears_agency.field_b_summary
-    - field.field.node.bears_agency.field_b_title
     - node.type.bears_agency
   module:
     - text
@@ -27,14 +26,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 105
-    region: content
-  field_b_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 102
     region: content
   links:
     settings: {  }

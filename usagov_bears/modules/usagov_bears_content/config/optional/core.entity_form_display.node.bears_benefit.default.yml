@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.bears_benefit.field_b_source_link
     - field.field.node.bears_benefit.field_b_summary
     - field.field.node.bears_benefit.field_b_tags
-    - field.field.node.bears_benefit.field_b_title
     - node.type.bears_benefit
   module:
     - content_moderation
@@ -67,7 +66,7 @@ content:
     third_party_settings: {  }
   field_b_initial_elg_length:
     type: number
-    weight: 26
+    weight: 16
     region: content
     settings:
       placeholder: ''
@@ -107,14 +106,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_b_title:
-    type: string_textfield
-    weight: 1
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 0
@@ -124,7 +115,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -157,7 +148,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 18
+    weight: 1
     region: content
     settings:
       size: 60
@@ -179,7 +170,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }

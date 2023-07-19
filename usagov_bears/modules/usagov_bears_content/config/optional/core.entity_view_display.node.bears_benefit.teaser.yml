@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.bears_benefit.field_b_source_link
     - field.field.node.bears_benefit.field_b_summary
     - field.field.node.bears_benefit.field_b_tags
-    - field.field.node.bears_benefit.field_b_title
     - node.type.bears_benefit
   module:
     - user
@@ -36,5 +35,4 @@ hidden:
   field_b_source_link: true
   field_b_summary: true
   field_b_tags: true
-  field_b_title: true
   langcode: true

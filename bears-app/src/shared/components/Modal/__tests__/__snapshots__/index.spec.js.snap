@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders a match to the previous snapshot 1`] = `
+<div
+  className="bears-modal-group"
+>
+  <div
+    className=""
+  >
+    <a
+      data-open-modal={true}
+      href="#undefined"
+    />
+  </div>
+  <div
+    aria-describedby="modal-description"
+    aria-labelledby="modal-heading"
+    className="usa-modal"
+  >
+    <div
+      className="usa-modal__content"
+    >
+      <div
+        className="usa-modal__main"
+      >
+        <h2
+          className="usa-modal__heading"
+          id="modal-heading"
+        />
+        <div
+          className="usa-modal__footer"
+        >
+          <ul
+            className="usa-button-group"
+          >
+            <li
+              className="usa-button-group__item"
+            >
+              <div
+                className=""
+              >
+                <a
+                  data-close-modal={true}
+                />
+              </div>
+            </li>
+            <li
+              className="usa-button-group__item"
+            >
+              <div
+                className=""
+              >
+                <a
+                  data-close-modal={true}
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button
+        aria-label="Close this window"
+        className="usa-button usa-modal__close"
+        data-close-modal={true}
+        type="button"
+      >
+        <img
+          alt="a plus icon"
+          src="close.svg"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

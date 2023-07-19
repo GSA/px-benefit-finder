@@ -8,12 +8,14 @@
   text-decoration: none;
   color: white;
 
-  &::after {
-    content: '\25B8';
-    padding-left: 10px;
-    position: absolute;
-    right: 35px;
-    bottom: calc(50% - 8px);
+  &__decorative {
+    &::after {
+      content: '\25B8';
+      padding-left: 10px;
+      position: absolute;
+      right: 35px;
+      bottom: calc(50% - 8px);
+    }
   }
 
   &:visited {

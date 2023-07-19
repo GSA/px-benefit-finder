@@ -76,5 +76,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@uswds/uswds/js/usa-modal": "<rootDir>/node_modules/@uswds/uswds/packages/usa-modal/src/index"
+    }
   }
 }

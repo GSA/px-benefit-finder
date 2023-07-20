@@ -2,16 +2,13 @@
 
 exports[`Modal renders a match to the previous snapshot 1`] = `
 <div
-  className="bears-modal-group"
+  className="benefit-modal-group"
 >
-  <div
+  <a
     className=""
-  >
-    <a
-      data-open-modal={true}
-      href="#undefined"
-    />
-  </div>
+    data-open-modal={true}
+    href="#undefined"
+  />
   <div
     aria-describedby="modal-description"
     aria-labelledby="modal-heading"
@@ -24,36 +21,30 @@ exports[`Modal renders a match to the previous snapshot 1`] = `
         className="usa-modal__main"
       >
         <h2
-          className="usa-modal__heading"
+          className=""
           id="modal-heading"
         />
         <div
           className="usa-modal__footer"
         >
           <ul
-            className="usa-button-group"
+            className="usa-button-group width-full"
           >
             <li
-              className="usa-button-group__item"
+              className="usa-button-group__item width-full"
             >
-              <div
+              <a
                 className=""
-              >
-                <a
-                  data-close-modal={true}
-                />
-              </div>
+                data-close-modal={true}
+              />
             </li>
             <li
-              className="usa-button-group__item"
+              className="usa-button-group__item width-full"
             >
-              <div
+              <a
                 className=""
-              >
-                <a
-                  data-close-modal={true}
-                />
-              </div>
+                data-close-modal={true}
+              />
             </li>
           </ul>
         </div>

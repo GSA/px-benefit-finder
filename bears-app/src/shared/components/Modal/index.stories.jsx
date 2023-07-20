@@ -5,10 +5,10 @@ export default {
   tags: ['autodocs'],
   args: {
     id: 'nav-modal',
-    heading: 'Select an option',
-    trigger: 'Continue',
-    navItemOne: 'Verify Information',
-    navItemTwo: 'View Results',
+    modalHeading: 'Select an option:',
+    triggerLabel: 'Continue',
+    navItemOneLabel: 'Verify Information',
+    navItemTwoLabel: 'View Results',
   },
 }
 

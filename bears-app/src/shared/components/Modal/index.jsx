@@ -2,10 +2,28 @@ import { useEffect } from 'react'
 import modal from '@uswds/uswds/js/usa-modal'
 import PropTypes from 'prop-types'
 import Close from './assets/close.svg'
-import { ObfuscatedLink } from '../index'
+import { ObfuscatedLink, Heading } from '../index'
 import './_index.scss'
 
-const Modal = ({ id, children, trigger, heading, navItemOne, navItemTwo }) => {
+/**
+ * a functional component that renders a trigger, that when clicked opens a dialog
+ * @component
+ * @param {string} id - matches to modal control
+ * @param {React.ReactNode} children - inherited children
+ * @param {string} triggerLabel - passed to button for triggering modal
+ * @param {string} modalHeading - heading value
+ * @param {string} navItemOneLabel - passed to button for nav item in modal
+ * @param {string} navItemTwoLabel - passed to button for nav item in modal
+ * @return {html} returns html for seting up a usa-modal component
+ */
+const Modal = ({
+  id,
+  children,
+  triggerLabel,
+  modalHeading,
+  navItemOneLabel,
+  navItemTwoLabel,
+}) => {
   useEffect(() => {
     // initialize
     modal.on()
@@ -16,7 +34,14 @@ const Modal = ({ id, children, trigger, heading, navItemOne, navItemTwo }) => {
     }
   })
 
-  const Trigger = ({ id, trigger }) => {
+  /**
+   * a functional component that renders a link as a button for launching our dialog
+   * @component
+   * @param {string} id - matches to modal control
+   * @param {string} triggerLabel - passed to button for triggering modal
+   * @return {html} returns an obfustacted anchor element
+   */
+  const Trigger = ({ id, triggerLabel }) => {
     return (
       <ObfuscatedLink
         href={`#${id}`}
@@ -24,22 +49,38 @@ const Modal = ({ id, children, trigger, heading, navItemOne, navItemTwo }) => {
         data-open-modal
         noCarrot
       >
-        {trigger}
+        {triggerLabel}
       </ObfuscatedLink>
     )
   }
 
-  const GroupNavigation = ({ navItemOne, navItemTwo }) => {
+  /**
+   * a functional component that renders a two links as a buttons for navigating out of the dialog
+   * @component
+   * @param {string} navItemOneLabel - passed to button for nav item in modal
+   * @param {string} navItemTwoLabel - passed to button for nav item in modal
+   * @return {html} returns an obfustacted anchor element
+   */
+  // similar to ButtonGroup but we need links for uswds to close modal, this item is default and conditional
+  const GroupNavigation = ({ navItemOneLabel, navItemTwoLabel }) => {
     return (
-      <ul className="usa-button-group">
-        <li className="usa-button-group__item">
-          <ObfuscatedLink className="nav-item-one" data-close-modal noCarrot>
-            {navItemOne}
+      <ul className="usa-button-group width-full">
+        <li className="usa-button-group__item width-full">
+          <ObfuscatedLink
+            className="nav-item-one width-full"
+            data-close-modal
+            noCarrot
+          >
+            {navItemOneLabel}
           </ObfuscatedLink>
         </li>
-        <li className="usa-button-group__item">
-          <ObfuscatedLink className="nav-item-two" data-close-modal noCarrot>
-            {navItemTwo}
+        <li className="usa-button-group__item width-full">
+          <ObfuscatedLink
+            className="nav-item-two width-full"
+            data-close-modal
+            noCarrot
+          >
+            {navItemTwoLabel}
           </ObfuscatedLink>
         </li>
       </ul>
@@ -47,8 +88,8 @@ const Modal = ({ id, children, trigger, heading, navItemOne, navItemTwo }) => {
   }
 
   return (
-    <div className="bears-modal-group">
-      <Trigger id={id} trigger={trigger}></Trigger>
+    <div className="benefit-modal-group">
+      <Trigger id={id} triggerLabel={triggerLabel}></Trigger>
       <div
         className="usa-modal"
         id={id}
@@ -57,14 +98,14 @@ const Modal = ({ id, children, trigger, heading, navItemOne, navItemTwo }) => {
       >
         <div className="usa-modal__content">
           <div className="usa-modal__main">
-            <h2 className="usa-modal__heading" id="modal-heading">
-              {heading}
-            </h2>
+            <Heading headingLevel={2} id="modal-heading">
+              {modalHeading}
+            </Heading>
             <div className="usa-modal__footer">
               {children || (
                 <GroupNavigation
-                  navItemOne={navItemOne}
-                  navItemTwo={navItemTwo}
+                  navItemOneLabel={navItemOneLabel}
+                  navItemTwoLabel={navItemTwoLabel}
                 />
               )}
               {/* example: <ul className="usa-button-group">
@@ -100,9 +141,12 @@ const Modal = ({ id, children, trigger, heading, navItemOne, navItemTwo }) => {
 }
 
 Modal.propTypes = {
+  id: PropTypes.string,
   children: PropTypes.node,
-  trigger: PropTypes.string,
-  heading: PropTypes.string,
+  triggerLabel: PropTypes.string,
+  modalHeading: PropTypes.string,
+  navItemOneLabel: PropTypes.string,
+  navItemTwoLabel: PropTypes.string,
 }
 
 export default Modal

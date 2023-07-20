@@ -2,10 +2,10 @@
 
 exports[`ButtonGroup renders a match to the previous snapshot 1`] = `
 <ul
-  className="usa-button-group"
+  className="usa-button-group width-full"
 >
   <li
-    className="usa-button-group__item"
+    className="usa-button-group__item width-full"
   >
     <button
       className=""
@@ -13,7 +13,7 @@ exports[`ButtonGroup renders a match to the previous snapshot 1`] = `
     />
   </li>
   <li
-    className="usa-button-group__item"
+    className="usa-button-group__item width-full"
   >
     <button
       className=""

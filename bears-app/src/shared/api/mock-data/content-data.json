@@ -759,7 +759,7 @@
             "acceptableValue": [
               "TRUE"
             ],
-            "eligible": true
+            "isEligible": true
           },
           {
             "criteriaKey": "deceased_death_location_is_US",
@@ -767,7 +767,7 @@
             "acceptableValue": [
               "TRUE"
             ],
-            "eligible": true
+            "isEligible": true
           },
           {
             "criteriaKey": "deceased_date_of_funeral",
@@ -775,7 +775,7 @@
             "acceptableValue": [
               ">01-20-2020"
             ],
-            "eligible": true
+            "isEligible": true
           },
           {
             "criteriaKey": "applicant_citizen_status",
@@ -790,7 +790,7 @@
             "acceptableValue": [
               "TRUE"
             ],
-            "eligible": true
+            "isEligible": true
           }
         ],
         "initialEligibilityLength": 5,

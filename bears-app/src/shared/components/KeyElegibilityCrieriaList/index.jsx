@@ -3,12 +3,21 @@ import PropTypes from 'prop-types'
 import { useHandleClassName } from '../../hooks/useHandleClassName'
 import './_index.scss'
 
+/**
+ * a functional component that renders a link as a button
+ * @component
+ * @param {string} className - inherited class names
+ * @param {array} data - contains our criteria
+ * @param {string} initialEligibilityLength - location
+ * @return {html} returns a group with a heading and an unorderd list
+ */
 const KeyElegibilityCrieriaList = ({
   className,
   data,
   initialEligibilityLength,
 }) => {
   const defaultClasses = ['key-eligibility-criteria-group']
+
   return (
     <div className={useHandleClassName({ className, defaultClasses })}>
       {data && (
@@ -41,7 +50,9 @@ const KeyElegibilityCrieriaList = ({
 }
 
 KeyElegibilityCrieriaList.propTypes = {
-  props: PropTypes.any,
+  className: PropTypes.string,
+  data: PropTypes.array,
+  initialEligibilityLength: PropTypes.number,
 }
 
 export default KeyElegibilityCrieriaList

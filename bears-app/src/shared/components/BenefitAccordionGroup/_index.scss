@@ -2,25 +2,25 @@
   padding: 24px 17px;
   max-width: 530px;
 
-  .bears-accordion {
+  .benefit-accordion {
     margin-bottom: 26px;
 
-    .benefit-accordion-detail-title {
+    .benefit-detail-title {
       padding: 0;
       margin: 0 0 24px;
       text-align: left;
     }
 
-    .benefit-accordion-detail-summary,
-    .benefit-accordion-criteria-list,
-    .benefit-accordion-alert {
+    .benefit-detail-summary,
+    .benefit-criteria-list,
+    .benefit-alert {
       margin: 0 0 24px;
     }
 
-    .benefit-accordion-unmet-criteria-group {
+    .unmet-criteria-group {
       margin: 0 0 24px;
 
-      .benefit-accordion-unmet-criteria-title {
+      .unmet-criteria-title {
         width: 100%;
         text-align: center;
         color: #000;
@@ -31,7 +31,7 @@
       }
     }
 
-    .benefit-accordion-link {
+    .benefit-link {
       width: 100%;
       margin-bottom: 40px;
     }

@@ -1,11 +1,14 @@
-.usa-accordion {
-  &__button {
+.benefit-accordion {
+  /* stylelint-disable selector-class-pattern */
+  .usa-accordion__button {
     position: relative;
 
     img {
       position: absolute;
-      right: 30px;
-      top: 30px;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      margin: auto 0;
     }
 
     &[aria-expanded='true'] {
@@ -20,14 +23,14 @@
       color: #1a4480;
     }
 
-    .title {
+    .heading {
       font-size: 20px;
       font-weight: 700;
       line-height: 27px;
       letter-spacing: 0;
     }
 
-    .title-eligible-status {
+    .sub-heading {
       font-size: 16px;
       font-weight: 400;
       line-height: 22px;
@@ -35,10 +38,12 @@
     }
   }
 
-  &__content {
+  .usa-accordion__content {
+    /* stylelint-disable-line */
     border-bottom: 1px solid #005ea2;
     border-left: 1px solid #005ea2;
     border-right: 1px solid #005ea2;
     padding-bottom: 1rem;
   }
+  /* stylelint-enable selector-class-pattern */
 }

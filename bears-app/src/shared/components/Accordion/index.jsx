@@ -8,18 +8,20 @@ import './_index.scss'
  * a functional component that renders a usa accordion
  * @component
  * @param {string} id - inherited id
- * @param {string} title - title value
- * @param {string} eligibleStatus - eligibleStatus value
+ * @param {string} heading - title value
+ * @param {string} subHeading - eligibleStatus value
  * @param {React.ReactNode} children - inherited children
+ * @param {bool} isExpanded - sets the open state of an accordion
  * @return {html} returns a semantic html button element
  */
-const Accordion = ({ id, title, eligibleStatus, children, isExpanded }) => {
+const Accordion = ({ id, heading, subHeading, children, isExpanded }) => {
   /**
    * a hook that hanldes our open state of the accordion
    * @function
    * @return {boolean} returns true or false
    */
   const [isOpen, setOpen] = useState(false)
+
   useEffect(() => {
     setOpen(isExpanded)
   }, [isExpanded])
@@ -38,19 +40,19 @@ const Accordion = ({ id, title, eligibleStatus, children, isExpanded }) => {
     )
 
   return (
-    <div className="bears-accordion">
-      {/* we don't use `usa-accordion` class because it causes bad initialization, this throws an error from the uswds javascript, but does not impact/break functionality */}
+    <div className="benefit-accordion">
+      {/* we don't use `usa-accordion` class because it is too opinionated about control, this throws an error from the uswds javascript, but does not impact/break functionality */}
       <h4 className="usa-accordion__heading">
         <button
           type="button"
           className="usa-accordion__button"
-          aria-expanded={isOpen}
+          aria-expanded={isOpen || false}
           aria-controls={id}
           onClick={() => setOpen(!isOpen)}
         >
-          <span className="title">{title}</span>
+          <span className="heading">{heading}</span>
           <br />
-          <span className="title-eligible-status">{eligibleStatus}</span>
+          <span className="sub-heading">{subHeading}</span>
           {handleIcon()}
         </button>
       </h4>
@@ -59,7 +61,7 @@ const Accordion = ({ id, title, eligibleStatus, children, isExpanded }) => {
         className="usa-accordion__content usa-prose"
         hidden={!isOpen}
       >
-        <p>{children}</p>
+        <div>{children}</div>
       </div>
     </div>
   )
@@ -67,7 +69,8 @@ const Accordion = ({ id, title, eligibleStatus, children, isExpanded }) => {
 
 Accordion.propTypes = {
   id: PropTypes.string,
-  title: PropTypes.string,
+  heading: PropTypes.string,
+  subHeading: PropTypes.string,
   description: PropTypes.string,
   children: PropTypes.node,
 }

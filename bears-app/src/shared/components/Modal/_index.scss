@@ -1,0 +1,21 @@
+/* stylelint-disable selector-class-pattern */
+.usa-modal {
+  padding: 0;
+
+  .usa-modal__content {
+    padding: 64px 24px;
+  }
+
+  .usa-modal__main {
+    padding: 0;
+  }
+
+  h2#modal-heading {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+/* stylelint-enable selector-class-pattern */

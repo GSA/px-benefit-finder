@@ -23,6 +23,7 @@ const ObfuscatedLink = ({
   target,
   ext,
   noCarrot,
+  ...props
 }) => {
   // set our link as external, will be decorated by uswds css
   const defaultClasses = ext
@@ -44,6 +45,7 @@ const ObfuscatedLink = ({
       rel={rel}
       target={target}
       className={useHandleClassName({ className, defaultClasses })}
+      {...props}
     >
       {children}
       {noCarrot === true ? null : <Carrot src={arrow} />}

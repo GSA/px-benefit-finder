@@ -6,12 +6,12 @@ dependencies:
     - field.field.node.bears_benefit.field_b_agency
     - field.field.node.bears_benefit.field_b_eligibility
     - field.field.node.bears_benefit.field_b_headline
+    - field.field.node.bears_benefit.field_b_initial_elg_length
     - field.field.node.bears_benefit.field_b_life_events
     - field.field.node.bears_benefit.field_b_source_is_english
     - field.field.node.bears_benefit.field_b_source_link
     - field.field.node.bears_benefit.field_b_summary
     - field.field.node.bears_benefit.field_b_tags
-    - field.field.node.bears_benefit.field_b_title
     - node.type.bears_benefit
   module:
     - user
@@ -29,10 +29,10 @@ hidden:
   field_b_agency: true
   field_b_eligibility: true
   field_b_headline: true
+  field_b_initial_elg_length: true
   field_b_life_events: true
   field_b_source_is_english: true
   field_b_source_link: true
   field_b_summary: true
   field_b_tags: true
-  field_b_title: true
   langcode: true

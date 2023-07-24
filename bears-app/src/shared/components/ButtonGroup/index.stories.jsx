@@ -17,16 +17,3 @@ export default {
 }
 
 export const Primary = {}
-export const Modal = {
-  args: {
-    ...Primary.args,
-    buttonOne: {
-      children: 'Review Your Selection',
-      onClick: () => alert('navigate back'),
-    },
-    buttonTwo: {
-      children: 'See Results',
-      onClick: () => alert('navigate forward'),
-    },
-  },
-}

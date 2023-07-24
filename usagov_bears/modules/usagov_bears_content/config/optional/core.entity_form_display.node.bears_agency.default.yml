@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.bears_agency.field_b_lede
     - field.field.node.bears_agency.field_b_summary
-    - field.field.node.bears_agency.field_b_title
     - node.type.bears_agency
   module:
     - content_moderation
@@ -37,14 +36,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_b_title:
-    type: string_textfield
-    weight: 7
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 0
@@ -54,7 +45,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -87,11 +78,11 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 12
+    weight: 9
     region: content
     settings:
       size: 60
-      placeholder: HELLO
+      placeholder: ''
     third_party_settings: {  }
   translation:
     weight: 3
@@ -109,7 +100,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

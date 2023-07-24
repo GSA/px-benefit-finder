@@ -2,14 +2,45 @@ import { useState } from 'react'
 import { StepBackLink } from '../index'
 import PropTypes from 'prop-types'
 
+/**
+ * a functional component that renders a step indicator for our form sections
+ * @component
+ * @param {array} data - an array of sections
+ * @param {boolean} noHeadings - determinate to render headings or not
+ * @return {html} returns markup for a usa step indicator
+ */
 const StepIndicator = ({ data, noHeadings }) => {
+  /**
+   * a function that manages which of our step links is the current one
+   * @component
+   * @param {number} current - an array of sections
+   * @param {function} setCurrent - update integer value
+   * @return {number} returns current step
+   */
   const [current, setCurrent] = useState(0)
 
+  /**
+   * a functional component that supports a11y for completed steps
+   * @component
+   * @param {boolean} completed - assigns if the step has been completed
+   * @param {boolean} noHeadings - determinate to render headings or not
+   * @return {html} returns markup for a usa step indicator
+   */
   const CompletedSR = ({ completed }) => (
     <span className="usa-sr-only">{completed}</span>
   )
 
-  const StepIndicator = ({
+  /**
+   * a functional component that creates our step in the list
+   * @component
+   * @param {string} heading - associated with the step link
+   * @param {number} current - the current index from state
+   * @param {function} setCurrent - updates the current index from onClick
+   * @param {number} index - the index of this item
+   * @param {boolean} completed - state of completion
+   * @return {html} returns markup for a usa step indicator segment
+   */
+  const StepIndicatorSegment = ({
     heading,
     current,
     setCurrent,
@@ -38,7 +69,7 @@ const StepIndicator = ({ data, noHeadings }) => {
             data.map((step, i) => {
               const heading = step.section.heading
               return (
-                <StepIndicator
+                <StepIndicatorSegment
                   heading={heading}
                   key={`${heading}-${i}`}
                   index={i}
@@ -57,6 +88,7 @@ const StepIndicator = ({ data, noHeadings }) => {
 
 StepIndicator.propTypes = {
   data: PropTypes.array,
+  noHeadings: PropTypes.bool,
 }
 
 export default StepIndicator

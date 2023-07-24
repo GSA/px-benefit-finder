@@ -2,18 +2,20 @@
   position: relative;
   padding-right: 50px;
   padding-left: 50px;
-}
-
-.obfuscated-link a {
   text-decoration: none;
   color: white;
 
-  &::after {
-    content: '\25B8';
-    padding-left: 10px;
+  .carrot {
     position: absolute;
-    right: 35px;
-    bottom: calc(50% - 8px);
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto 0;
+    transform: rotate(-90deg);
+
+    &::after {
+      content: '\25B8';
+    }
   }
 
   &:visited {

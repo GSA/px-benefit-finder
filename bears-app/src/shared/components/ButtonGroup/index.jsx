@@ -10,11 +10,11 @@ import PropTypes from 'prop-types'
  */
 const ButtonGroup = ({ buttonOne, buttonTwo }) => {
   return (
-    <ul className="usa-button-group">
-      <li className="usa-button-group__item">
+    <ul className="usa-button-group width-full">
+      <li className="usa-button-group__item width-full">
         <Button {...buttonOne}>{buttonOne && buttonOne.children}</Button>
       </li>
-      <li className="usa-button-group__item">
+      <li className="usa-button-group__item width-full">
         <Button {...buttonTwo}>{buttonOne && buttonTwo.children}</Button>
       </li>
     </ul>

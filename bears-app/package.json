@@ -79,7 +79,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "@uswds/uswds/js/usa-accordion": "<rootDir>/node_modules/@uswds/uswds/packages/usa-accordion/src/index"
+      "@uswds/uswds/js/usa-accordion": "<rootDir>/node_modules/@uswds/uswds/packages/usa-accordion/src/index",
       "@uswds/uswds/js/usa-modal": "<rootDir>/node_modules/@uswds/uswds/packages/usa-modal/src/index"
     }
   }

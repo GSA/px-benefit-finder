@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
 const StepIndicator = ({ data, noHeadings }) => {
   /**
    * a function that manages which of our step links is the current one
-   * @component
+   * @function
    * @param {number} current - an array of sections
    * @param {function} setCurrent - update integer value
    * @return {number} returns current step

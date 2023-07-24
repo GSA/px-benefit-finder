@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { useHandleClassName } from '../../hooks/useHandleClassName'
 import PropTypes from 'prop-types'
 
@@ -8,14 +9,36 @@ import PropTypes from 'prop-types'
  * @param {string} className - inherited class(es)
  * @param {boolean} secondary - alternative display styles
  * @param {boolean} disabled - disabled state
+ * @param {boolean} unstyled - appear as a link
  * @param {function} onClick - an inherited function, triggered on a click event
  * @return {html} returns a semantic html button element
  */
 
-function Button({ children, className, onClick, secondary, disabled, type }) {
-  const defaultClasses = !secondary
-    ? ['usa-button']
-    : ['usa-button', 'usa-button--outline']
+function Button({
+  children,
+  className,
+  onClick,
+  secondary,
+  disabled,
+  unstyled,
+  type,
+}) {
+  const [defaultClasses, setDefaultClasses] = useState(null)
+  const style =
+    secondary === true ? 'secondary' : unstyled === true ? 'unstyled' : null
+
+  useEffect(() => {
+    switch (style) {
+      case 'secondary':
+        setDefaultClasses(['usa-button', 'usa-button--outline'])
+        break
+      case 'unstyled':
+        setDefaultClasses(['usa-button', 'usa-button--unstyled'])
+        break
+      default:
+        setDefaultClasses(['usa-button'])
+    }
+  }, [style, secondary, unstyled])
 
   return (
     <button
@@ -38,6 +61,7 @@ Button.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   secondary: PropTypes.bool,
+  unstyled: PropTypes.bool,
   onClick: PropTypes.func,
   type: PropTypes.oneOf(['button', 'reset', 'download']),
 }

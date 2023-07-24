@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Close from './assets/close.svg'
 import Open from './assets/open.svg'
 import PropTypes from 'prop-types'
@@ -8,18 +8,23 @@ import './_index.scss'
  * a functional component that renders a usa accordion
  * @component
  * @param {string} id - inherited id
- * @param {string} title - title value
- * @param {string} discription - description value
+ * @param {string} heading - title value
+ * @param {string} subHeading - eligibleStatus value
  * @param {React.ReactNode} children - inherited children
+ * @param {bool} isExpanded - sets the open state of an accordion
  * @return {html} returns a semantic html button element
  */
-const Accordion = ({ id, title, description, children }) => {
+const Accordion = ({ id, heading, subHeading, children, isExpanded }) => {
   /**
    * a hook that hanldes our open state of the accordion
    * @function
    * @return {boolean} returns true or false
    */
   const [isOpen, setOpen] = useState(false)
+
+  useEffect(() => {
+    setOpen(isExpanded)
+  }, [isExpanded])
 
   /**
    * a handler that returns the proper icon
@@ -35,18 +40,19 @@ const Accordion = ({ id, title, description, children }) => {
     )
 
   return (
-    <div className="bears-accordion">
+    <div className="benefit-accordion">
+      {/* we don't use `usa-accordion` class because it is too opinionated about control, this throws an error from the uswds javascript, but does not impact/break functionality */}
       <h4 className="usa-accordion__heading">
         <button
           type="button"
           className="usa-accordion__button"
-          aria-expanded={isOpen}
+          aria-expanded={isOpen || false}
           aria-controls={id}
           onClick={() => setOpen(!isOpen)}
         >
-          <span className="title">{title}</span>
+          <span className="heading">{heading}</span>
           <br />
-          <span className="title-description">{description}</span>
+          <span className="sub-heading">{subHeading}</span>
           {handleIcon()}
         </button>
       </h4>
@@ -55,7 +61,7 @@ const Accordion = ({ id, title, description, children }) => {
         className="usa-accordion__content usa-prose"
         hidden={!isOpen}
       >
-        <p>{children}</p>
+        <div>{children}</div>
       </div>
     </div>
   )
@@ -63,7 +69,8 @@ const Accordion = ({ id, title, description, children }) => {
 
 Accordion.propTypes = {
   id: PropTypes.string,
-  title: PropTypes.string,
+  heading: PropTypes.string,
+  subHeading: PropTypes.string,
   description: PropTypes.string,
   children: PropTypes.node,
 }

@@ -6,7 +6,6 @@ export default {
   args: {
     children: 'Button Text',
     disabled: false,
-    secondary: false,
     type: 'button',
   },
 }
@@ -23,5 +22,12 @@ export const Secondary = {
   args: {
     ...Primary.args,
     secondary: true,
+  },
+}
+
+export const Unstyled = {
+  args: {
+    ...Primary.args,
+    unstyled: true,
   },
 }

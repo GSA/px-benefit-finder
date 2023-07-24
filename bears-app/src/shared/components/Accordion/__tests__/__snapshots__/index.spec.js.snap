@@ -2,7 +2,7 @@
 
 exports[`Accordion renders a match to the previous snapshot 1`] = `
 <div
-  className="bears-accordion"
+  className="benefit-accordion"
 >
   <h4
     className="usa-accordion__heading"
@@ -14,11 +14,11 @@ exports[`Accordion renders a match to the previous snapshot 1`] = `
       type="button"
     >
       <span
-        className="title"
+        className="heading"
       />
       <br />
       <span
-        className="title-description"
+        className="sub-heading"
       />
       <img
         alt="a plus icon"
@@ -30,7 +30,7 @@ exports[`Accordion renders a match to the previous snapshot 1`] = `
     className="usa-accordion__content usa-prose"
     hidden={true}
   >
-    <p />
+    <div />
   </div>
 </div>
 `;

@@ -30,7 +30,7 @@
                           "value": ""
                         }
                       ],
-                      "hasChild":  false,
+                      "hasChild": false,
                       "childDependencyOption": ""
                     }
                   }
@@ -754,41 +754,46 @@
         "summary": "Financial assistance may be available to help with the burial and funeral costs for people who died of COVID-19.",
         "eligibility": [
           {
-            "criteriaKey": "deceased_died_of_COVID",
-            "label": "",
+            "criteriaKey": "deceased_not_died_of_COVID",
+            "label": "Deceased died of COVID.",
             "acceptableValue": [
               "TRUE"
-            ]
+            ],
+            "isEligible": true
           },
           {
             "criteriaKey": "deceased_death_location_is_US",
-            "label": "",
+            "label": "Deceased death location is in the US.",
             "acceptableValue": [
               "TRUE"
-            ]
+            ],
+            "isEligible": true
           },
           {
             "criteriaKey": "deceased_date_of_funeral",
             "label": "The deceased's funeral/burial was after January 20, 2020.",
             "acceptableValue": [
               ">01-20-2020"
-            ]
+            ],
+            "isEligible": true
           },
           {
             "criteriaKey": "applicant_citizen_status",
-            "label": "",
+            "label": "Applicant is a citizen.",
             "acceptableValue": [
               "TRUE"
             ]
           },
           {
             "criteriaKey": "applicant_paid_funeral_expenses",
-            "label": "",
+            "label": "Applicant paid for the funeral expenses.",
             "acceptableValue": [
               "TRUE"
-            ]
+            ],
+            "isEligible": true
           }
         ],
+        "initialEligibilityLength": 5,
         "tags": [
           "burial and funeral assistance"
         ],

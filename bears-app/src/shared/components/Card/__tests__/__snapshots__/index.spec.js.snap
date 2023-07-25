@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders a match to the previous snapshot 1`] = `
+<li
+  className=""
+>
+  <a>
+    <div
+      className="usa-card__container"
+    >
+      <div
+        className="usa-card__header"
+      >
+        <h3
+          className=""
+        />
+      </div>
+      <p
+        className=""
+      />
+      <svg
+        className="carrot"
+        fill="#162E51"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </a>
+</li>
+`;

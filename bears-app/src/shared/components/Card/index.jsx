@@ -14,7 +14,7 @@ import './_index.scss'
  * @return {html} returns a semantic html list element
  */
 const Card = ({ className, title, body, href, noCarrot }) => {
-  const defaultClasses = ['usa-card usa-card--flagadd-list-reset']
+  const defaultClasses = ['usa-card add-list-reset']
   return (
     <li
       className={useHandleClassName({

@@ -4,6 +4,7 @@
     background-color: #d9e8f6;
     border-radius: 4px;
     color: #162e51;
+    height: auto;
   }
 
   a {
@@ -25,7 +26,8 @@
   .usa-card__body {
     padding-top: 0;
     padding-bottom: 24px;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   /* stylelint-enable selector-class-pattern */
 }

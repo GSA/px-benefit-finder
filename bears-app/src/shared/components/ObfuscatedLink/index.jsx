@@ -1,5 +1,5 @@
 import { useHandleClassName } from '../../hooks/useHandleClassName'
-import arrow from './assets/arrow.svg'
+import { Carrot } from '../index'
 import PropTypes from 'prop-types'
 import './_index.scss'
 
@@ -30,15 +30,6 @@ const ObfuscatedLink = ({
     ? ['usa-button', 'usa-link--external', 'obfuscated-link']
     : ['usa-button', 'obfuscated-link']
 
-  /**
-   * a functional component that renders an svg image
-   * @component
-   * @return {html} returns html
-   */
-  const Carrot = ({ src }) => (
-    <img className="carrot" src={src} alt="a triangle icon" />
-  )
-
   return (
     <a
       href={href}
@@ -48,7 +39,7 @@ const ObfuscatedLink = ({
       {...props}
     >
       {children}
-      {noCarrot === true ? null : <Carrot src={arrow} />}
+      {noCarrot === true ? null : <Carrot color="white" />}
     </a>
   )
 }

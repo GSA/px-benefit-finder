@@ -5,6 +5,20 @@
     "titlePrefix": "What to do when someone dies?",
     "title": "Benefit Finder After Losing A Loved One",
     "summary": "<p>We are sorry about your loss. You and your family may be eligible for survivor benefits from the government following a family member's death. Learn how to find the benefits you may qualify for.</p>",
+    "relevantBenefits": [
+      "lifeEvent": {
+          "title": "Approaching Retirement"
+          "link": "/retirement"
+        },
+      "lifeEvent": {
+          "title": "Living with Disability or an Illness"
+          "link": "/disability"
+        },
+      "lifeEvent": {
+          "title": "String"
+          "link": "String"
+        },
+    ],
     "sectionsEligibilityCriteria": [
       {
         "section": {

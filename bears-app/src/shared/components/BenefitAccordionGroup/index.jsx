@@ -116,6 +116,8 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
               subHeading={eligibleStatus}
               aria-expanded={isExpandAll}
               isExpanded={isExpandAll}
+              data-analytics="benefit-accordion"
+              data-analytics-content={title}
             >
               <Heading className="benefit-detail-title" headingLevel={4}>
                 {`Provided by ${agency.title}`}

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepIndicator renders a match to the previous snapshot 1`] = `
+<div>
+  <div
+    aria-label="progress"
+    className="usa-step-indicator"
+  >
+    <ol
+      className="usa-step-indicator__segments"
+    />
+  </div>
+  <button
+    className=""
+    onClick={[Function]}
+    type="button"
+  >
+    Back
+  </button>
+</div>
+`;

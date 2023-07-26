@@ -9,12 +9,14 @@
       {
         "lifeEvent": {
           "title": "Approaching Retirement",
+          "body": "Addition Descriptions",
           "link": "/retirement"
         }
       },
       {
         "lifeEvent": {
           "title": "Living with Disability or an Illness",
+          "body": "Addition Descriptions",
           "link": "/disability"
         }
       }

@@ -47,7 +47,7 @@ const Accordion = ({
     )
 
   return (
-    <div className="benefit-accordion">
+    <div className="benefit-accordion" {...props}>
       {/* we don't use `usa-accordion` class because it is too opinionated about control, this throws an error from the uswds javascript, but does not impact/break functionality */}
       <h4 className="usa-accordion__heading">
         <button

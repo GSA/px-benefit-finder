@@ -1,0 +1,99 @@
+{
+  "intro": {
+    "prompt": "Pasos",
+    "timeIndicator": "Tiempo para completar",
+    "steps": [
+      {
+        "title": "Responda unas preguntas"
+      },
+      {
+        "title": "Revise sus resultados"
+      },
+      {
+        "title": "Conozca cómo presentar una solicitud"
+      }
+    ],
+    "notice": {
+      "heading": "Antes de empeza",
+      "notices": [
+        {
+          "notice": "<div>Su información <strong>no será</strong> compartida, guardada o presentada.</div>"
+        },
+        {
+          "notice": "Ingrese la información más completa para obtener una lista más relevante de resultados."
+        },
+        {
+          "notice": "<div><strong>Este formulario no es una aplicación.</strong> Tendrá que presentar una solicitud por cada beneficio.</div>"
+        }
+      ]
+    },
+    "button": "Comenzar"
+  },
+  "stepIndicator": {
+    "stepBackLink": "Volver"
+  },
+  "buttonGroup": [
+    {
+      "value": "Volver atrás"
+    },
+    {
+      "value": "Continuar"
+    }
+  ],
+  "reviewSelectionModal": {
+    "buttonGroup": [
+      {
+        "value": "Revise su información"
+      },
+      {
+        "value": "Ver resultados"
+      }
+    ]
+  },
+  "reviewSelections": {
+    "heading": "Revisar y confirmar",
+    "buttonGroup": [
+      {
+        "value": "Confirmar"
+      },
+      {
+        "value": "Volver"
+      }
+    ]
+  },
+  "reviewResultsSection": {
+    "heading": "Sus beneficios potenciales",
+    "description": "<div>Necesita verificar los requisitos y visitar la página de cada agencia para aplicar.<strong> Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</strong></div>",
+    "eligibleResults": {
+      "heading": "Resultados",
+      "description": "Podría calificar para estos beneficios:"
+    },
+    "notEligibleResults": {
+      "heading": "Beneficios a los que no calificó",
+      "description": "<div>Según sus respuestas no es elegible para estos beneficios. <strong>Podría calificar si tiene información adicional o si su situación cambia.</strong></div>",
+      "cta": "Vea los beneficios a los que no calificó"
+    }
+  },
+  "notEligibleResults": {
+    "heading": "Beneficios a los que no calificó",
+    "description": "<div>Según sus respuestas usted <strong> no</strong> es elegible para estos beneficios.</div>",
+    "heading2": "Resultados no-elegibles",
+    "description2": "Consulte a su estado, ciudad, o trabajo para otros beneficios."
+  },
+  "shareResults": {
+    "heading": "Imprima y comparta",
+    "description": "Sus respuestas serán visibles. Solo comparta con quienes confíe.",
+    "buttonGroup": [
+      {
+        "value": "Compartir resultados"
+      },
+      {
+        "value": "Enviar resultados"
+      }
+    ]
+  },
+  "benefitAccordionGroup": {
+    "closedState": "Abrir todos",
+    "openState": "Cerrar todos"
+  }
+}

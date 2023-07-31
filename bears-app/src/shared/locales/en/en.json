@@ -1,0 +1,97 @@
+{
+  "intro": {
+    "prompt": "Steps",
+    "timeIndicator": "Time to complete",
+    "steps": [
+      {
+        "title": "Answer questions"
+      },
+      {
+        "title": "Review Results"
+      },
+      {
+        "title": "Find out how to apply"
+      }
+    ],
+    "notice": {
+      "heading": "Before you start",
+      "notices": [
+        {
+          "notice": "<div>Your information<strong>will not</strong> be shared, saved, or submitted.</div>"
+        },
+        {
+          "notice": "Provide complete and accurate information to get the most relevant results."
+        },
+        {
+          "notice": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>"
+        }
+      ]
+    },
+    "button": "Start"
+  },
+  "stepIndicator": {
+    "stepBackLink": "Back"
+  },
+  "buttonGroup": [
+    {
+      "value": "Back"
+    },
+    {
+      "value": "Continue"
+    }
+  ],
+  "buttonGroupModal": [
+    {
+      "value": "Review selections"
+    },
+    {
+      "value": "See results"
+    }
+  ],
+  "reviewSelections": {
+    "heading": "Review and Confirm",
+    "buttonGroup": [
+      {
+        "value": "Confirm"
+      },
+      {
+        "value": "Back"
+      }
+    ]
+  },
+  "reviewResultsSection": {
+    "heading": "Your potential benefits",
+    "description": "<div>You must verify your eligibility and visit each agency to apply. <strong>Check with your city, state, or employer for other benefits.</strong></div>",
+    "eligibleResults": {
+      "heading": "Results",
+      "description": "You may be eligible for these benefits."
+    },
+    "notEligibleResults": {
+      "heading": "Benefits you did not qualify for",
+      "description": "<div>Based on your answers you are not eligible for these benefits. <strong>You may become eligible if you enter additional information or your situation changes.</strong></div>",
+      "cta": "See benefits you did not qualify for"
+    }
+  },
+  "notEligibleResults": {
+    "heading": "Benefits you did not qualify for",
+    "description": "<div>According to your answers you <strong>are not</strong> eligible for these benefits.</div>",
+    "heading2": "Non-eligible Results",
+    "description2": "Check with your state, city, or employer for other benefits."
+  },
+  "shareResults": {
+    "heading": "Share results",
+    "description": "Your information will be viewable. Only share with those you trust.",
+    "buttonGroup": [
+      {
+        "value": "Share link"
+      },
+      {
+        "value": "Email results"
+      }
+    ]
+  },
+  "benefitAccordionGroup": {
+    "closedState": "Open all",
+    "openState": "Close all"
+  }
+}

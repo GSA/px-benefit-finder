@@ -1,18 +1,20 @@
 {
   "intro": {
-    "prompt": "Pasos",
     "timeIndicator": "Tiempo para completar",
-    "steps": [
-      {
-        "title": "Responda unas preguntas"
-      },
-      {
-        "title": "Revise sus resultados"
-      },
-      {
-        "title": "Conozca cómo presentar una solicitud"
-      }
-    ],
+    "steps": {
+      "heading": "Pasos",
+      "list": [
+        {
+          "title": "Responda unas preguntas"
+        },
+        {
+          "title": "Revise sus resultados"
+        },
+        {
+          "title": "Conozca cómo presentar una solicitud"
+        }
+      ]
+    },
     "notice": {
       "heading": "Antes de empeza",
       "notices": [

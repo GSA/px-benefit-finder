@@ -1,7 +1,10 @@
 import { useState, createContext } from 'react'
+import { Intro } from '../shared/components'
+// data
 // import * as apiCalls from '../shared/api/api-calls'
 import * as en from '../shared/locales/en/en.json'
 import * as es from '../shared/locales/es/es.json'
+import content from '../shared/api/mock-data/content-data'
 
 /**
  * a functional component that renders our application.
@@ -43,14 +46,14 @@ function App() {
 
   // state
   const [t] = useState(handleLanguage)
+  const { lifeEventForm } = JSON.parse(content)
 
   return (
     <LanguageContext.Provider value={t}>
       {console.log(t)}
       <div className="bears-app">
-        <h1>BEARS Hello World!</h1>
+        <Intro data={lifeEventForm} ui={t.intro} />
         {/* {handleData(data)} */}
-        <div>{t && t.intro.button}</div>
       </div>
     </LanguageContext.Provider>
   )

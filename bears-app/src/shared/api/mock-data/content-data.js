@@ -1,4 +1,4 @@
-{
+const content = `{
   "lifeEventForm": {
     "id": "death-of-a-loved-one",
     "timeEstimate": "60 minutes",
@@ -826,4 +826,6 @@
       }
     }
   ]
-}
+}`
+
+export default content

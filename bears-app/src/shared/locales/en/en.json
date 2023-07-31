@@ -1,8 +1,8 @@
 {
   "intro": {
+    "heading": "Steps",
     "timeIndicator": "Time to complete",
     "steps": {
-      "heading": "Steps",
       "list": [
         {
           "title": "Answer questions"
@@ -15,9 +15,9 @@
         }
       ]
     },
-    "notice": {
+    "notices": {
       "heading": "Before you start",
-      "notices": [
+      "list": [
         {
           "notice": "<div>Your information<strong>will not</strong> be shared, saved, or submitted.</div>"
         },

@@ -1,8 +1,8 @@
 {
   "intro": {
+    "heading": "Pasos",
     "timeIndicator": "Tiempo para completar",
     "steps": {
-      "heading": "Pasos",
       "list": [
         {
           "title": "Responda unas preguntas"
@@ -15,9 +15,9 @@
         }
       ]
     },
-    "notice": {
+    "notices": {
       "heading": "Antes de empeza",
-      "notices": [
+      "list": [
         {
           "notice": "<div>Su información <strong>no será</strong> compartida, guardada o presentada.</div>"
         },

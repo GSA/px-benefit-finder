@@ -1,18 +1,20 @@
 {
   "intro": {
-    "prompt": "Steps",
     "timeIndicator": "Time to complete",
-    "steps": [
-      {
-        "title": "Answer questions"
-      },
-      {
-        "title": "Review Results"
-      },
-      {
-        "title": "Find out how to apply"
-      }
-    ],
+    "steps": {
+      "heading": "Steps",
+      "list": [
+        {
+          "title": "Answer questions"
+        },
+        {
+          "title": "Review Results"
+        },
+        {
+          "title": "Find out how to apply"
+        }
+      ]
+    },
     "notice": {
       "heading": "Before you start",
       "notices": [

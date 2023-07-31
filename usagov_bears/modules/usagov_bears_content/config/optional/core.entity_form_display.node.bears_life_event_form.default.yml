@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.bears_life_event_form.field_b_elg_criteria_desc
     - field.field.node.bears_life_event_form.field_b_id
-    - field.field.node.bears_life_event_form.field_b_json_file
     - field.field.node.bears_life_event_form.field_b_sections_elg_criteria
     - field.field.node.bears_life_event_form.field_b_summary
     - field.field.node.bears_life_event_form.field_b_time_estimate
@@ -12,7 +11,6 @@ dependencies:
     - node.type.bears_life_event_form
   module:
     - content_moderation
-    - file
     - mmf_core_fields
     - path
     - text
@@ -42,13 +40,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_b_json_file:
-    type: file_generic
-    weight: 12
-    region: content
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
   field_b_sections_elg_criteria:
     type: mmf_entity_reference_revisions

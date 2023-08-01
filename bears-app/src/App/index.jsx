@@ -1,5 +1,5 @@
 import { useState, createContext } from 'react'
-import { Intro } from '../shared/components'
+import { Intro, Section } from '../shared/components'
 // data
 // import * as apiCalls from '../shared/api/api-calls'
 import * as en from '../shared/locales/en/en.json'
@@ -47,13 +47,31 @@ function App() {
   // state
   const [t] = useState(handleLanguage)
   const { lifeEventForm } = JSON.parse(content)
+  const stepDataArray = lifeEventForm.sectionsEligibilityCriteria
+  const [step, setStep] = useState(0)
+  const [stepData, setStepData] = useState(stepDataArray[step])
+  // console.log(step)
 
   return (
     <LanguageContext.Provider value={t}>
       {console.log(t)}
       <div className="bears-app">
-        <Intro data={lifeEventForm} ui={t.intro} />
-        {/* {handleData(data)} */}
+        {step === 0 ? (
+          <Intro
+            data={lifeEventForm}
+            ui={t.intro}
+            setStep={setStep}
+            step={step}
+          />
+        ) : (
+          <Section
+            step={step}
+            setStep={setStep}
+            data={stepDataArray}
+            stepData={stepData}
+            setStepData={setStepData}
+          />
+        )}
       </div>
     </LanguageContext.Provider>
   )

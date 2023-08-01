@@ -22,7 +22,9 @@ const Modal = ({
   triggerLabel,
   modalHeading,
   navItemOneLabel,
+  navItemOneFunction,
   navItemTwoLabel,
+  navItemTwoFunction,
 }) => {
   useEffect(() => {
     // initialize
@@ -33,6 +35,19 @@ const Modal = ({
       modal.off()
     }
   })
+
+  // Have to add event listeners after components load due to the way the usa-modal works
+  useEffect(() => {
+    const navItemOneButton = document.querySelector('#navItemOneBtn')
+    if (navItemOneButton) {
+      navItemOneButton.onclick = () => navItemOneFunction()
+    }
+
+    const navItemTwoButton = document.querySelector('#navItemTwoBtn')
+    if (navItemOneButton) {
+      navItemTwoButton.onclick = () => navItemTwoFunction()
+    }
+  }, [navItemOneFunction, navItemTwoFunction])
 
   /**
    * a functional component that renders a link as a button for launching our dialog
@@ -67,6 +82,7 @@ const Modal = ({
       <ul className="usa-button-group width-full">
         <li className="usa-button-group__item width-full">
           <ObfuscatedLink
+            id="navItemOneBtn"
             className="nav-item-one width-full"
             data-close-modal
             noCarrot
@@ -76,6 +92,7 @@ const Modal = ({
         </li>
         <li className="usa-button-group__item width-full">
           <ObfuscatedLink
+            id="navItemTwoBtn"
             className="nav-item-two width-full"
             data-close-modal
             noCarrot

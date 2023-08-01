@@ -3,7 +3,14 @@ import PropTypes from 'prop-types'
 import { Button, StepIndicator, Modal } from '../index'
 import './_index.scss'
 
-const Section = ({ step, setStep, data, setStepData }) => {
+const Section = ({
+  step,
+  setStep,
+  data,
+  setStepData,
+  setVerifyStep,
+  setViewResults,
+}) => {
   const [modal, setModal] = useState(false)
 
   // update our step count and set our data index
@@ -30,13 +37,17 @@ const Section = ({ step, setStep, data, setStepData }) => {
       {modal === false ? (
         <Button onClick={() => handleUpdate(1)}>Forward</Button>
       ) : (
-        <Modal
-          id="nav-modal"
-          modalHeading="Select an option:"
-          navItemOneLabel="Verify Information"
-          navItemTwoLabel="View Results"
-          triggerLabel="Continue"
-        />
+        <div>
+          <Modal
+            id="nav-modal"
+            modalHeading="Select an option:"
+            navItemOneLabel="Verify Information"
+            navItemOneFunction={setVerifyStep}
+            navItemTwoLabel="View Results"
+            navItemTwoFunction={setViewResults}
+            triggerLabel="Continue"
+          />
+        </div>
       )}
     </div>
   )

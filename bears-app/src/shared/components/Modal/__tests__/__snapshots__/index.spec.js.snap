@@ -36,6 +36,7 @@ exports[`Modal renders a match to the previous snapshot 1`] = `
               <a
                 className=""
                 data-close-modal={true}
+                id="navItemOneBtn"
               />
             </li>
             <li
@@ -44,6 +45,7 @@ exports[`Modal renders a match to the previous snapshot 1`] = `
               <a
                 className=""
                 data-close-modal={true}
+                id="navItemTwoBtn"
               />
             </li>
           </ul>

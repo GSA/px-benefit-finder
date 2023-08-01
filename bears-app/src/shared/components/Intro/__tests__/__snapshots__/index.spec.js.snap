@@ -94,6 +94,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
   </ul>
   <button
     className=""
+    onClick={[Function]}
     type="button"
   >
     Start

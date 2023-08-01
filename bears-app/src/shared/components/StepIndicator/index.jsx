@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import { StepBackLink } from '../index'
 import PropTypes from 'prop-types'
 
@@ -7,18 +7,11 @@ import PropTypes from 'prop-types'
  * @component
  * @param {array} data - an array of sections
  * @param {boolean} noHeadings - determinate to render headings or not
+ * @param {number} current - inherited state, indicates index value
+ * @param {boolean} setCurrent - inherited function to mangae index value
  * @return {html} returns markup for a usa step indicator
  */
-const StepIndicator = ({ data, noHeadings }) => {
-  /**
-   * a function that manages which of our step links is the current one
-   * @function
-   * @param {number} current - an array of sections
-   * @param {function} setCurrent - update integer value
-   * @return {number} returns current step
-   */
-  const [current, setCurrent] = useState(0)
-
+const StepIndicator = ({ data, noHeadings, current, setCurrent }) => {
   /**
    * a functional component that supports a11y for completed steps
    * @component
@@ -52,7 +45,7 @@ const StepIndicator = ({ data, noHeadings }) => {
       <li
         className={`usa-step-indicator__segment usa-step-indicator__segment${statusClass}`}
         aria-current={completed}
-        onClick={() => setCurrent(index)}
+        onClick={() => setCurrent(index + 1)}
       >
         <span className="usa-step-indicator__segment-label">
           {!noHeadings && heading} <CompletedSR status={completed} />

@@ -1,5 +1,5 @@
 import { useState, createContext } from 'react'
-import { Intro, Section } from '../shared/components'
+import { Intro, Section, Button } from '../shared/components'
 // data
 // import * as apiCalls from '../shared/api/api-calls'
 import * as en from '../shared/locales/en/en.json'
@@ -44,17 +44,20 @@ function App() {
     return string.test(window.location.pathname) ? es : en
   }
 
-  // state
-  const [t] = useState(handleLanguage)
+  // destructure data
   const { lifeEventForm } = JSON.parse(content)
   const stepDataArray = lifeEventForm.sectionsEligibilityCriteria
+
+  // state
+  const [t] = useState(handleLanguage)
   const [step, setStep] = useState(0)
   const [stepData, setStepData] = useState(stepDataArray[step])
-  // console.log(step)
+  const [verifyStep, setVerifyStep] = useState(false)
+  const [viewResults, setViewResults] = useState(false)
 
   return (
     <LanguageContext.Provider value={t}>
-      {console.log(t)}
+      {/* {console.log(t)} */}
       <div className="bears-app">
         {step === 0 ? (
           <Intro
@@ -63,14 +66,36 @@ function App() {
             setStep={setStep}
             step={step}
           />
-        ) : (
+        ) : viewResults === true ? (
+          <div>view results</div>
+        ) : verifyStep === false ? (
           <Section
             step={step}
             setStep={setStep}
             data={stepDataArray}
             stepData={stepData}
             setStepData={setStepData}
+            setVerifyStep={() => setVerifyStep(true)}
+            setViewResults={() => setViewResults(true)}
           />
+        ) : (
+          <div>
+            <Button
+              onClick={() => {
+                setViewResults(true)
+              }}
+            >
+              Continue
+            </Button>
+            <Button
+              onClick={() => {
+                setVerifyStep(false)
+                setViewResults(false)
+              }}
+            >
+              Return to Previous Step
+            </Button>
+          </div>
         )}
       </div>
     </LanguageContext.Provider>

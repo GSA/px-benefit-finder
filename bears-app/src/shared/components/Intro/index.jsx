@@ -8,7 +8,7 @@ import {
   TimeIndicator,
 } from '../index'
 
-const Intro = ({ data, ui }) => {
+const Intro = ({ data, ui, setStep, step }) => {
   const { timeEstimate, title, summary } = data
   const { heading, timeIndicator, steps, notices, button } = ui
 
@@ -24,7 +24,7 @@ const Intro = ({ data, ui }) => {
         <ProcessList steps={steps.list} description={steps.title} />
         <Heading headingLevel={2}>{notices.title}</Heading>
         <NoticesList data={notices.list} />
-        <Button>{button}</Button>
+        <Button onClick={() => setStep(step + 1)}>{button}</Button>
       </div>
     )
   )
@@ -33,6 +33,8 @@ const Intro = ({ data, ui }) => {
 Intro.propTypes = {
   data: PropTypes.object,
   ui: PropTypes.object,
+  setStep: PropTypes.func,
+  step: PropTypes.number,
 }
 
 export default Intro

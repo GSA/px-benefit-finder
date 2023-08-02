@@ -1,9 +1,9 @@
 import renderer from 'react-test-renderer'
-import Section from '../index.jsx'
+import LifeEventSection from '../index.jsx'
 
-describe('Section', () => {
+describe('LifeEventSection', () => {
   it('renders a match to the previous snapshot', () => {
-    const component = renderer.create(<Section />)
+    const component = renderer.create(<LifeEventSection />)
     expect(component.toJSON()).toMatchSnapshot()
   })
 })

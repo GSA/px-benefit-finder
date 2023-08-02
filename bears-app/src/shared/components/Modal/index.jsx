@@ -26,6 +26,12 @@ const Modal = ({
   navItemTwoLabel,
   navItemTwoFunction,
 }) => {
+  const handleCleanUp = () => {
+    const body = document.querySelector('.usa-js-modal--active')
+    if (body) {
+      body.classList.remove('usa-js-modal--active')
+    }
+  }
   useEffect(() => {
     // initialize
     modal.on()
@@ -33,8 +39,9 @@ const Modal = ({
     // remove event listeners when the component un-mounts.
     return () => {
       modal.off()
+      handleCleanUp()
     }
-  })
+  }, [])
 
   // Have to add event listeners after components load due to the way the usa-modal works
   useEffect(() => {

@@ -1,10 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Section renders a match to the previous snapshot 1`] = `
+exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
 <div
   className="section"
 >
-  <h2 />
   <div>
     <div
       aria-label="progress"
@@ -27,14 +26,14 @@ exports[`Section renders a match to the previous snapshot 1`] = `
     onClick={[Function]}
     type="button"
   >
-    Backwards
+    Back
   </button>
   <button
     className=""
     onClick={[Function]}
     type="button"
   >
-    Forward
+    Continue
   </button>
 </div>
 `;

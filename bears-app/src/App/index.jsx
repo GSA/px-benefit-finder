@@ -1,5 +1,11 @@
 import { useState, createContext } from 'react'
-import { Intro, Section, Button } from '../shared/components'
+import {
+  Intro,
+  LifeEvenSection,
+  Button,
+  Heading,
+  Form,
+} from '../shared/components'
 // data
 // import * as apiCalls from '../shared/api/api-calls'
 import * as en from '../shared/locales/en/en.json'
@@ -67,19 +73,35 @@ function App() {
             step={step}
           />
         ) : viewResults === true ? (
-          <div>view results</div>
+          <div>
+            <Heading headingLevel={2}>View results</Heading>
+            <Button
+              className="step-back-link"
+              unstyled
+              onClick={() => {
+                setVerifyStep(false)
+                setViewResults(false)
+              }}
+            >
+              Back
+            </Button>
+          </div>
         ) : verifyStep === false ? (
-          <Section
-            step={step}
-            setStep={setStep}
-            data={stepDataArray}
-            stepData={stepData}
-            setStepData={setStepData}
-            setVerifyStep={() => setVerifyStep(true)}
-            setViewResults={() => setViewResults(true)}
-          />
+          <Form>
+            <LifeEvenSection
+              step={step}
+              setStep={setStep}
+              data={stepDataArray}
+              stepData={stepData}
+              setStepData={setStepData}
+              verifyStep={verifyStep}
+              setVerifyStep={() => setVerifyStep(true)}
+              setViewResults={() => setViewResults(true)}
+            />
+          </Form>
         ) : (
           <div>
+            <Heading headingLevel={2}>Verify selections</Heading>
             <Button
               onClick={() => {
                 setViewResults(true)

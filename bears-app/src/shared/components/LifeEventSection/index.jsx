@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import { Button, StepIndicator, Modal } from '../index'
 import './_index.scss'
 
-const Section = ({
+const LifeEventSection = ({
   step,
   setStep,
   data,
   setStepData,
   setVerifyStep,
   setViewResults,
+  verifyStep,
 }) => {
   const [modal, setModal] = useState(false)
 
@@ -26,16 +27,15 @@ const Section = ({
 
   return (
     <div className="section">
-      <h2>{step}</h2>
       <StepIndicator
         current={step - 1}
         setCurrent={setStep}
         data={data}
         onClick={handleUpdate}
       />
-      <Button onClick={() => handleUpdate(-1)}>Backwards</Button>
+      <Button onClick={() => handleUpdate(-1)}>Back</Button>
       {modal === false ? (
-        <Button onClick={() => handleUpdate(1)}>Forward</Button>
+        <Button onClick={() => handleUpdate(1)}>Continue</Button>
       ) : (
         <div>
           <Modal
@@ -46,6 +46,7 @@ const Section = ({
             navItemTwoLabel="View Results"
             navItemTwoFunction={setViewResults}
             triggerLabel="Continue"
+            verifyStep={verifyStep}
           />
         </div>
       )}
@@ -53,8 +54,8 @@ const Section = ({
   )
 }
 
-Section.propTypes = {
+LifeEventSection.propTypes = {
   props: PropTypes.any,
 }
 
-export default Section
+export default LifeEventSection

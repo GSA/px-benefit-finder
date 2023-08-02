@@ -3,6 +3,19 @@ import PropTypes from 'prop-types'
 import { Button, StepIndicator, Modal } from '../index'
 import './_index.scss'
 
+/**
+ * a functional component that renders a link as a button
+ * @component
+ * @param {number} step - inherited current step value
+ * @param {function} setStep - inherited function to inc/dec step value
+ * @param {object} data - inherieted life event step data
+ * @param {function} setStepData - inherited function to set index of step data
+ * @param {function} setVerifyStep - inherit view handler
+ * @param {bool} verifyStep - inherited state of verification step
+ * @param {function} setViewResults - inherited view handler
+ * @param {object} ui - inherited ui translations
+ * @return {html} returns a semantic html component that displays a form step
+ */
 const LifeEventSection = ({
   step,
   setStep,
@@ -13,10 +26,18 @@ const LifeEventSection = ({
   verifyStep,
   ui,
 }) => {
+  // state
   const [modal, setModal] = useState(false)
+
+  // desctructure data
   const { stepIndicator, buttonGroup, reviewSelectionModal } = ui
 
-  // update our step count and set our data index
+  /**
+   * a function that updates our step count and set our data index
+   * @function
+   * @param {number} updateIndex - value which to update step count
+   * @return {null} only executes inherited functions
+   */
   const handleUpdate = updateIndex => {
     setStep(step + updateIndex)
     setStepData(updateIndex)
@@ -59,6 +80,14 @@ const LifeEventSection = ({
 
 LifeEventSection.propTypes = {
   props: PropTypes.any,
+  step: PropTypes.number,
+  setStep: PropTypes.func,
+  data: PropTypes.object,
+  setStepData: PropTypes.func,
+  setVerifyStep: PropTypes.func,
+  setViewResults: PropTypes.func,
+  verifyStep: PropTypes.bool,
+  ui: PropTypes.object,
 }
 
 export default LifeEventSection

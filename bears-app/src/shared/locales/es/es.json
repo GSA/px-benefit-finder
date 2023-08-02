@@ -53,14 +53,14 @@
       }
     ]
   },
-  "reviewSelections": {
+  "verifySelectionsView": {
     "heading": "Revisar y confirmar",
     "buttonGroup": [
       {
-        "value": "Confirmar"
+        "value": "Volver"
       },
       {
-        "value": "Volver"
+        "value": "Confirmar"
       }
     ]
   },

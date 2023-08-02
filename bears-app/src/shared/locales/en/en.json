@@ -53,14 +53,14 @@
       }
     ]
   },
-  "reviewSelections": {
+  "verifySelectionsView": {
     "heading": "Review and Confirm",
     "buttonGroup": [
       {
-        "value": "Confirm"
+        "value": "Back"
       },
       {
-        "value": "Back"
+        "value": "Confirm"
       }
     ]
   },

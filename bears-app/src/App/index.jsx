@@ -2,8 +2,8 @@ import { useState, createContext } from 'react'
 import {
   Intro,
   LifeEventSection,
-  Button,
-  Heading,
+  ResultsView,
+  VerifySelectionsView,
   Form,
 } from '../shared/components'
 // data
@@ -63,7 +63,7 @@ function App() {
 
   return (
     <LanguageContext.Provider value={t}>
-      {/* {console.log(t)} */}
+      {console.log(t)}
       <div className="bears-app">
         {step === 0 ? (
           <Intro
@@ -73,19 +73,13 @@ function App() {
             step={step}
           />
         ) : viewResults === true ? (
-          <div>
-            <Heading headingLevel={2}>View results</Heading>
-            <Button
-              className="step-back-link"
-              unstyled
-              onClick={() => {
-                setVerifyStep(false)
-                setViewResults(false)
-              }}
-            >
-              Back
-            </Button>
-          </div>
+          <ResultsView
+            ui={t.resultsView}
+            handleStepBack={() => {
+              setVerifyStep(false)
+              setViewResults(false)
+            }}
+          />
         ) : verifyStep === false ? (
           <Form>
             <LifeEventSection
@@ -97,27 +91,20 @@ function App() {
               verifyStep={verifyStep}
               setVerifyStep={() => setVerifyStep(true)}
               setViewResults={() => setViewResults(true)}
+              ui={t}
             />
           </Form>
         ) : (
-          <div>
-            <Heading headingLevel={2}>Verify selections</Heading>
-            <Button
-              onClick={() => {
-                setViewResults(true)
-              }}
-            >
-              Continue
-            </Button>
-            <Button
-              onClick={() => {
-                setVerifyStep(false)
-                setViewResults(false)
-              }}
-            >
-              Return to Previous Step
-            </Button>
-          </div>
+          <VerifySelectionsView
+            handleStepBack={() => {
+              setVerifyStep(false)
+              setViewResults(false)
+            }}
+            handleStepForward={() => {
+              setViewResults(true)
+            }}
+            ui={t.verifySelectionsView}
+          />
         )}
       </div>
     </LanguageContext.Provider>

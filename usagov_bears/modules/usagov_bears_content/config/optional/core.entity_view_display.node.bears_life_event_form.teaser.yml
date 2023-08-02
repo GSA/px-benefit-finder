@@ -5,7 +5,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.bears_life_event_form.field_b_elg_criteria_desc
     - field.field.node.bears_life_event_form.field_b_id
-    - field.field.node.bears_life_event_form.field_b_json_file
     - field.field.node.bears_life_event_form.field_b_sections_elg_criteria
     - field.field.node.bears_life_event_form.field_b_summary
     - field.field.node.bears_life_event_form.field_b_time_estimate
@@ -26,7 +25,6 @@ content:
 hidden:
   field_b_elg_criteria_desc: true
   field_b_id: true
-  field_b_json_file: true
   field_b_sections_elg_criteria: true
   field_b_summary: true
   field_b_time_estimate: true

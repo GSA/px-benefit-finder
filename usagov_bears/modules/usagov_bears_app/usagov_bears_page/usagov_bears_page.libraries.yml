@@ -1,0 +1,4 @@
+bears_app:
+  version: 1.x
+  js:
+    js/usagov-bears-app.min.js: {}

@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Module contains functions related to usagov_bears_page.
+ */
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function usagov_bears_page_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->bundle() == "bears_life_event") {
+    $suggestions[] = 'page__bears_life_event';
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function usagov_bears_page_page_attachments_alter(array &$page)
+{
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->bundle() == "bears_life_event") {
+    $page['#attached']['library'][] = 'usagov_bears_page/bears_app';
+  }
+}

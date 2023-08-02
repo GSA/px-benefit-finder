@@ -8,6 +8,15 @@ import {
   TimeIndicator,
 } from '../index'
 
+/**
+ * a functional component that renders a link as a button
+ * @component
+ * @param {object} data - inherited life event content
+ * @param {object} ui - life event form ui translations
+ * @param {function} setStep - incrments step count for initial form entry
+ * @param {number} step - indicates which section of the form we are on
+ * @return {html} returns information page view if data exist
+ */
 const Intro = ({ data, ui, setStep, step }) => {
   const { timeEstimate, title, summary } = data
   const { heading, timeIndicator, steps, notices, button } = ui

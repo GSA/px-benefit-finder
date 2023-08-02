@@ -174,7 +174,7 @@ workflows:
           filters:
             branches:
               only: 
-                - task/freeze-USAGOV-Submodule
+                - main
 
   create-component-library-workflow:
     jobs:

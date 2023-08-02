@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
  * @param {boolean} noHeadings - determinate to render headings or not
  * @param {number} current - inherited state, indicates index value
  * @param {boolean} setCurrent - inherited function to mangae index value
+ * @param {string} backLinkLabel - inherited value for back link value
  * @return {html} returns markup for a usa step indicator
  */
 const StepIndicator = ({
@@ -35,8 +36,8 @@ const StepIndicator = ({
    * @param {string} heading - associated with the step link
    * @param {number} current - the current index from state
    * @param {function} setCurrent - updates the current index from onClick
-   * @param {number} index - the index of this item
    * @param {boolean} completed - state of completion
+   * @param {number} index - the index of this item
    * @return {html} returns markup for a usa step indicator segment
    */
   const StepIndicatorSegment = ({
@@ -90,6 +91,9 @@ const StepIndicator = ({
 StepIndicator.propTypes = {
   data: PropTypes.array,
   noHeadings: PropTypes.bool,
+  current: PropTypes.number,
+  setCurrent: PropTypes.func,
+  backLinkLabel: PropTypes.string,
 }
 
 export default StepIndicator

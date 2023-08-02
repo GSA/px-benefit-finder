@@ -9,6 +9,7 @@ export default {
   tags: ['autodocs'],
   args: {
     data,
+    current: 0,
   },
 }
 

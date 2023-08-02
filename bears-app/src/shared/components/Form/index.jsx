@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
  * @return {html} returns a semantic html form element, with all its children
  */
 function Form({ children }) {
-  return <form className="usa-form">{children}</form>
+  return <form className="benefit-form">{children}</form>
 }
 
 Form.propTypes = {

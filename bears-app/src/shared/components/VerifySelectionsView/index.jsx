@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types'
 import { Heading, Button } from '../index'
 
+/**
+ * afunctional component that renders a view of the form input state values
+ * @component
+ * @param {function} handleStepForward - an array of sections
+ * @param {function} handleStepBack - determinate to render headings or not
+ * @param {objecti} ui - inherited state, indicates index value
+ * @return {html} returns semantic html view for current input values
+ */
 const VerifySelectionsView = ({ handleStepForward, handleStepBack, ui }) => {
   const { heading, buttonGroup } = ui
   return (
@@ -13,7 +21,9 @@ const VerifySelectionsView = ({ handleStepForward, handleStepBack, ui }) => {
 }
 
 VerifySelectionsView.propTypes = {
-  props: PropTypes.any,
+  handleStepForward: PropTypes.func,
+  handleStepBck: PropTypes.func,
+  ui: PropTypes.object,
 }
 
 export default VerifySelectionsView

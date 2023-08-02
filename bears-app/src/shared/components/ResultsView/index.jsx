@@ -2,11 +2,11 @@ import PropTypes from 'prop-types'
 import { Heading, StepBackLink } from '../index'
 
 /**
- * a functional component that renders a view of the form state values
+ * a functional component that renders a view of the form benefit state values
  * @component
  * @param {function} handlStepBack inherited ui translations
  * @param {object} ui inherited ui translations
- * @return {html} returns a view page of current selections
+ * @return {html} returns a view page of filtered benefits
  */
 const ResultsView = ({ handleStepBack, ui }) => {
   const { heading, stepBackLink } = ui

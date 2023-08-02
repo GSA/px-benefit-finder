@@ -5,6 +5,7 @@ import './_index.scss'
 /**
  * a functional component that supports backwards navigation in the step indicator component
  * @component
+ * @param {React.ReactNode} children - inhertied child react nodes for label
  * @param {function} setCurrent - inherited state function
  * @param {number} currentIndex - inherited current index state
  * @return {html} returns markup for a usa unstyled button
@@ -22,6 +23,7 @@ const StepBackLink = ({ children, setCurrent, currentIndex }) => {
 }
 
 StepBackLink.propTypes = {
+  children: PropTypes.node,
   setCurrent: PropTypes.func,
   currentIndex: PropTypes.number,
 }

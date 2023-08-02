@@ -1,7 +1,7 @@
 import { useState, createContext } from 'react'
 import {
   Intro,
-  LifeEvenSection,
+  LifeEventSection,
   Button,
   Heading,
   Form,
@@ -88,7 +88,7 @@ function App() {
           </div>
         ) : verifyStep === false ? (
           <Form>
-            <LifeEvenSection
+            <LifeEventSection
               step={step}
               setStep={setStep}
               data={stepDataArray}

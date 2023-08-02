@@ -64,9 +64,10 @@
       }
     ]
   },
-  "reviewResultsSection": {
+  "resultsView": {
     "heading": "Your potential benefits",
     "description": "<div>You must verify your eligibility and visit each agency to apply. <strong>Check with your city, state, or employer for other benefits.</strong></div>",
+    "stepBackLink": "Back",
     "eligibleResults": {
       "heading": "Results",
       "description": "You may be eligible for these benefits."

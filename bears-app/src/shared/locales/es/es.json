@@ -64,9 +64,10 @@
       }
     ]
   },
-  "reviewResultsSection": {
+  "resultsView": {
     "heading": "Sus beneficios potenciales",
     "description": "<div>Necesita verificar los requisitos y visitar la página de cada agencia para aplicar.<strong> Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</strong></div>",
+    "stepBackLink": "Volver",
     "eligibleResults": {
       "heading": "Resultados",
       "description": "Podría calificar para estos beneficios:"

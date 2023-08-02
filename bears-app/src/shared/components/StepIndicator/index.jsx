@@ -11,7 +11,13 @@ import PropTypes from 'prop-types'
  * @param {boolean} setCurrent - inherited function to mangae index value
  * @return {html} returns markup for a usa step indicator
  */
-const StepIndicator = ({ data, noHeadings, current, setCurrent }) => {
+const StepIndicator = ({
+  data,
+  noHeadings,
+  current,
+  setCurrent,
+  backLinkLabel,
+}) => {
   /**
    * a functional component that supports a11y for completed steps
    * @component
@@ -74,7 +80,9 @@ const StepIndicator = ({ data, noHeadings, current, setCurrent }) => {
             })}
         </ol>
       </div>
-      <StepBackLink currentIndex={current} setCurrent={setCurrent} />
+      <StepBackLink currentIndex={current} setCurrent={setCurrent}>
+        {backLinkLabel}
+      </StepBackLink>
     </div>
   )
 }

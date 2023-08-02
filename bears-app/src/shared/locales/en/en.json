@@ -42,14 +42,17 @@
       "value": "Continue"
     }
   ],
-  "buttonGroupModal": [
-    {
-      "value": "Review selections"
-    },
-    {
-      "value": "See results"
-    }
-  ],
+  "reviewSelectionModal": {
+    "heading": "Select an option:",
+    "buttonGroup": [
+      {
+        "value": "Review selections"
+      },
+      {
+        "value": "See results"
+      }
+    ]
+  },
   "reviewSelections": {
     "heading": "Review and Confirm",
     "buttonGroup": [

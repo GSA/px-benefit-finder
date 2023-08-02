@@ -9,14 +9,14 @@ import './_index.scss'
  * @param {number} currentIndex - inherited current index state
  * @return {html} returns markup for a usa unstyled button
  */
-const StepBackLink = ({ setCurrent, currentIndex }) => {
+const StepBackLink = ({ children, setCurrent, currentIndex }) => {
   return (
     <Button
       className="step-back-link"
       unstyled
       onClick={() => setCurrent(currentIndex)}
     >
-      Back
+      {children || 'Back'}
     </Button>
   )
 }

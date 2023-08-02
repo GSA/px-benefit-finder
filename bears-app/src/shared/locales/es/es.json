@@ -43,6 +43,7 @@
     }
   ],
   "reviewSelectionModal": {
+    "heading": "Seleccione una opción:",
     "buttonGroup": [
       {
         "value": "Revise su información"

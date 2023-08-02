@@ -11,8 +11,10 @@ const LifeEventSection = ({
   setVerifyStep,
   setViewResults,
   verifyStep,
+  ui,
 }) => {
   const [modal, setModal] = useState(false)
+  const { stepIndicator, buttonGroup, reviewSelectionModal } = ui
 
   // update our step count and set our data index
   const handleUpdate = updateIndex => {
@@ -32,20 +34,21 @@ const LifeEventSection = ({
         setCurrent={setStep}
         data={data}
         onClick={handleUpdate}
+        backLinkLabel={stepIndicator.stepBackLink}
       />
-      <Button onClick={() => handleUpdate(-1)}>Back</Button>
+      <Button onClick={() => handleUpdate(-1)}>{buttonGroup[0].value}</Button>
       {modal === false ? (
-        <Button onClick={() => handleUpdate(1)}>Continue</Button>
+        <Button onClick={() => handleUpdate(1)}>{buttonGroup[1].value}</Button>
       ) : (
         <div>
           <Modal
             id="nav-modal"
-            modalHeading="Select an option:"
-            navItemOneLabel="Verify Information"
+            modalHeading={reviewSelectionModal.heading}
+            navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
             navItemOneFunction={setVerifyStep}
-            navItemTwoLabel="View Results"
+            navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
             navItemTwoFunction={setViewResults}
-            triggerLabel="Continue"
+            triggerLabel={buttonGroup[1].value}
             verifyStep={verifyStep}
           />
         </div>

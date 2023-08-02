@@ -138,9 +138,7 @@ jobs:
             cd px-bears-drupal
             git submodule init
             git submodule update
-            cd usagov-2021
-            git checkout dev
-            git checkout 3ff7fb93a47daef6d4e33d3ec9beef72b8e386cd
+
 
       - run:
           name: Injecting container name to the manifest.yml

@@ -1,7 +1,8 @@
 import StepIndicator from './index.jsx'
-import * as DATA from '../../api/mock-data/content-data.json'
+import content from '../../api/mock-data/content-data.js'
 
-const data = DATA.lifeEventForm.sectionsEligibilityCriteria
+const { lifeEventForm } = JSON.parse(content)
+const data = lifeEventForm.sectionsEligibilityCriteria
 
 export default {
   component: StepIndicator,

@@ -1,7 +1,8 @@
 import BenefitAccordionGroup from './index.jsx'
-import * as DATA from '../../api/mock-data/content-data.json'
+import content from '../../api/mock-data/content-data.js'
 
-const data = [DATA.benefits[0], DATA.benefits[0]]
+const { benefits } = JSON.parse(content)
+const data = [benefits[0], benefits[0]]
 const entryKey = Object.keys(data[0])
 
 export default {

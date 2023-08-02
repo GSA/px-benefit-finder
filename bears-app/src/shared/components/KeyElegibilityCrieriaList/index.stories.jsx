@@ -1,10 +1,11 @@
 import KeyElegibilityCrieriaList from './index.jsx'
 
-import * as DATA from '../../api/mock-data/content-data.json'
+import content from '../../api/mock-data/content-data.js'
 
-const data = DATA.benefits[0].benefit.eligibility
+const { lifeEventForm } = JSON.parse(content)
+const data = lifeEventForm.benefits[0].benefit.eligibility
 const initialEligibilityLength =
-  DATA.benefits[0].benefit.initialEligibilityLength
+  lifeEventForm.benefits[0].benefit.initialEligibilityLength
 
 export default {
   component: KeyElegibilityCrieriaList,

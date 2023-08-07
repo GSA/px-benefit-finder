@@ -6,7 +6,6 @@ exports[`Radio renders a match to the previous snapshot 1`] = `
 >
   <input
     className="usa-radio__input"
-    defaultChecked={false}
     type="radio"
   />
   <label

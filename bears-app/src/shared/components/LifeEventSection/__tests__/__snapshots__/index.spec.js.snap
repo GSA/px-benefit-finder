@@ -11,7 +11,53 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
     >
       <ol
         className="usa-step-indicator__segments"
-      />
+      >
+        <li
+          aria-current={false}
+          className="usa-step-indicator__segment usa-step-indicator__segment--current"
+          onClick={[Function]}
+        >
+          <span
+            className="usa-step-indicator__segment-label"
+          >
+            About the Applicant
+             
+            <span
+              className="usa-sr-only"
+            />
+          </span>
+        </li>
+        <li
+          aria-current={false}
+          className="usa-step-indicator__segment usa-step-indicator__segment"
+          onClick={[Function]}
+        >
+          <span
+            className="usa-step-indicator__segment-label"
+          >
+            About the Person Who Died
+             
+            <span
+              className="usa-sr-only"
+            />
+          </span>
+        </li>
+        <li
+          aria-current={false}
+          className="usa-step-indicator__segment usa-step-indicator__segment"
+          onClick={[Function]}
+        >
+          <span
+            className="usa-step-indicator__segment-label"
+          >
+            Final Questions
+             
+            <span
+              className="usa-sr-only"
+            />
+          </span>
+        </li>
+      </ol>
     </div>
     <button
       className=""
@@ -20,6 +66,96 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
     >
       Back
     </button>
+  </div>
+  <div
+    id="benefit-section"
+    onChange={[Function]}
+  >
+    <h2
+      className=""
+    >
+      About the Applicant
+    </h2>
+    <p
+      className=""
+    >
+      The applicant is the person who will receive the benefits.
+    </p>
+    <div
+      className="usa-alert usa-alert--error display-none"
+      role="alert"
+    >
+      <div
+        className="usa-alert__body"
+      >
+        <h4
+          className="usa-alert__heading"
+        >
+          Error status
+        </h4>
+        <p
+          className="usa-alert__text"
+        >
+          All fields marked required must be completed.
+        </p>
+      </div>
+    </div>
+    <fieldset
+      className="usa-fieldset"
+    >
+      <legend
+        className="usa-legend legend"
+      >
+        Applicant citizen status
+        <span
+          className="usa-hint usa-hint--required required"
+          title="required"
+        >
+          (Required)
+        </span>
+      </legend>
+      <div>
+        You are a U.S. citizen or eligible non-citizen.
+        <div
+          className="usa-radio"
+        >
+          <input
+            checked={false}
+            className="usa-radio__input"
+            id="Yes"
+            name="Yes"
+            onChange={[Function]}
+            type="radio"
+            value="Yes"
+          />
+          <label
+            className=""
+            htmlFor="Yes"
+          >
+            Yes
+          </label>
+        </div>
+        <div
+          className="usa-radio"
+        >
+          <input
+            checked={false}
+            className="usa-radio__input"
+            id="No"
+            name="No"
+            onChange={[Function]}
+            type="radio"
+            value="No"
+          />
+          <label
+            className=""
+            htmlFor="No"
+          >
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
   </div>
   <button
     className=""

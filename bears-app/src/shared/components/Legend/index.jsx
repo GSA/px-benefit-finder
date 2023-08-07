@@ -4,7 +4,7 @@ import './_index.scss'
 /**
  * a functional component that renders a string
  * @component
- * @param {string} children - inherited children
+ * @param {React.ReactNode} children - inherited children
  * @return {html} returns a semantic legend element
  */
 const Legend = ({ children }) => {
@@ -12,7 +12,7 @@ const Legend = ({ children }) => {
 }
 
 Legend.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Legend

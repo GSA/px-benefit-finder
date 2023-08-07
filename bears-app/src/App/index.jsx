@@ -33,7 +33,7 @@ function App() {
 
   // destructure data
   const { lifeEventForm } = JSON.parse(content)
-  const stepDataArray = lifeEventForm.sectionsEligibilityCriteria
+  const stepDataArray = [...lifeEventForm.sectionsEligibilityCriteria]
 
   // state
   const [t] = useState(handleLanguage) // tranlations

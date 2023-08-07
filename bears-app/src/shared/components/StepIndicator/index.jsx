@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import { StepBackLink } from '../index'
 import PropTypes from 'prop-types'
 
@@ -10,6 +9,7 @@ import PropTypes from 'prop-types'
  * @param {number} current - inherited state, indicates index value
  * @param {boolean} setCurrent - inherited function to mangae index value
  * @param {string} backLinkLabel - inherited value for back link value
+ * @param {func} handleCheckRequiredFields - inherited handler
  * @return {html} returns markup for a usa step indicator
  */
 const StepIndicator = ({
@@ -18,6 +18,7 @@ const StepIndicator = ({
   current,
   setCurrent,
   backLinkLabel,
+  handleCheckRequiredFields,
 }) => {
   /**
    * a functional component that supports a11y for completed steps
@@ -46,13 +47,18 @@ const StepIndicator = ({
     setCurrent,
     completed,
     index,
+    handleCheckRequiredFields,
   }) => {
     const statusClass = current === index ? '--current' : ''
     return (
       <li
         className={`usa-step-indicator__segment usa-step-indicator__segment${statusClass}`}
         aria-current={completed}
-        onClick={() => setCurrent(index + 1)}
+        onClick={() =>
+          completed === false &&
+          handleCheckRequiredFields() === true &&
+          setCurrent(index + 1)
+        }
       >
         <span className="usa-step-indicator__segment-label">
           {!noHeadings && heading} <CompletedSR status={completed} />
@@ -76,6 +82,7 @@ const StepIndicator = ({
                   current={current}
                   setCurrent={setCurrent}
                   completed={false}
+                  handleCheckRequiredFields={handleCheckRequiredFields}
                 />
               )
             })}
@@ -94,6 +101,7 @@ StepIndicator.propTypes = {
   current: PropTypes.number,
   setCurrent: PropTypes.func,
   backLinkLabel: PropTypes.string,
+  handleCheckRequiredFields: PropTypes.func,
 }
 
 export default StepIndicator

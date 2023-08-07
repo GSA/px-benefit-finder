@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
  * @return {html} returns a semantic input as type radio element
  */
 
-const Radio = ({ label, value, defaultChecked }) => {
+const Radio = ({ label, value, checked, onChange }) => {
   return (
     <>
       <div className="usa-radio">
@@ -20,7 +20,8 @@ const Radio = ({ label, value, defaultChecked }) => {
           type="radio"
           name={label}
           value={value || label}
-          defaultChecked={defaultChecked || false}
+          checked={checked}
+          onChange={onChange}
         />
         <Label className="usa-radio__label" htmlFor={label} label={label} />
       </div>

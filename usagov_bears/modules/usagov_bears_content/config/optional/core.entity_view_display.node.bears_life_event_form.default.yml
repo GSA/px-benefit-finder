@@ -23,7 +23,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 4
     region: content
   field_b_id:
     type: string
@@ -31,7 +31,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 103
+    weight: 0
     region: content
   field_b_sections_elg_criteria:
     type: entity_reference_revisions_entity_view
@@ -40,14 +40,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_b_summary:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 106
+    weight: 3
     region: content
   field_b_time_estimate:
     type: string
@@ -55,7 +55,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 107
+    weight: 2
     region: content
   field_b_title_prefix:
     type: string
@@ -63,12 +63,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 109
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 7
     region: content
 hidden:
   langcode: true

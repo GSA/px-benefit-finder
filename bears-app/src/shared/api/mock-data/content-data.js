@@ -265,23 +265,23 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_citizen_status",
                 "legend": "Applicant citizen status",
-                "required": "FALSE",
+                "required": "TRUE",
                 "hint": "",
                 "inputs": [
                   {
                     "inputCriteria": {
                       "id": "applicant_citizen_status",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Applicant citizen status",
                       "label": "You are a U.S. citizen or eligible non-citizen.",
                       "value": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -556,12 +556,12 @@ const content = `{
                       "label": "Was the person who died a member of a federally recognized American Indian Tribe or an Alaska Native?",
                       "value": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -588,7 +588,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "deceased_served_in_active_military",
                 "legend": "Deceased served in active military",
-                "required": "FALSE",
+                "required": "TRUE",
                 "hint": "",
                 "inputs": [
                   {
@@ -599,12 +599,12 @@ const content = `{
                       "label": "Did the person who died serve in the active military, naval, or air service?",
                       "value": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "TRUE",

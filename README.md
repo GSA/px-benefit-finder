@@ -13,17 +13,22 @@ To clone the repository with a submodule, follow these steps:
 
 3. Use the following command to clone the main repository:
 
-```git clone git@github.com:GSA/px-bears-drupal.git```
+```
+git clone git@github.com:GSA/px-bears-drupal.git
+```
 
 4. Once the cloning process completes, navigate into the cloned repository's directory using the cd command.
 
-```cd px-bears-drupal```
+```
+cd px-bears-drupal
+```
 
 5. usagov-2021 directory is there but empty. You must run the following two commands to initialize your local configuration file and fetch all the data from that project.
 
-```git submodule init```
-
-```git submodule update```
+```
+git submodule init
+git submodule update
+```
 
 6. You have now successfully cloned the repository with a submodule. You can work with the main repository and its submodule as separate entities.
 
@@ -32,7 +37,9 @@ To clone the repository with a submodule, follow these steps:
     a. Navigate to the main repository's directory using the command line.
     b. Run the following command to update the main repository along with its submodules:
      
-```git pull --recurse-submodules```
+```
+git pull --recurse-submodules
+```
 
 This command updates the main repository and its submodules to the latest commit.
 
@@ -45,9 +52,29 @@ We are committed to making our site accessible to all visitors. Our ongoing acce
 ### Get USAgov code
 ```
 git clone git@github.com:usagov/usagov-2021.git poc
-cd poc`
+cd poc
 ```
 
 ### Get USAgov code
 
 Set up local development site following README.md.
+
+### Get a Database Dump
+
+1. Make sure you login cloud.gov on your terminal and target your org and space.
+
+```
+cf login -a api.fr.cloud.gov --sso
+```
+
+2. Change directory to where the script lives.
+
+```
+cd bin/cloudgov
+```
+
+3. Execute the following script.
+
+```
+./db-backup.sh
+```

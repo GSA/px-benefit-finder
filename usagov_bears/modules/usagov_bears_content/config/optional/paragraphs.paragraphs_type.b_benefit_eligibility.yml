@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: b_benefit_eligibility
-label: 'Bears Benefit Eligibility'
+label: 'Benefit Eligibility'
 icon_uuid: null
 icon_default: null
 description: ''

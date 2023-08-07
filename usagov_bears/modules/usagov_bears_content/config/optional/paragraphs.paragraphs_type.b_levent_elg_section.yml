@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: b_levent_elg_section
-label: 'Bears Life Event Eligibility Section'
+label: Section
 icon_uuid: null
 icon_default: null
 description: ''

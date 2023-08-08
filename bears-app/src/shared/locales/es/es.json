@@ -34,6 +34,9 @@
   "stepIndicator": {
     "stepBackLink": "Volver"
   },
+  "requiredLabel": {
+    "value": "Se requiere"
+  },
   "buttonGroup": [
     {
       "value": "Volver atrás"

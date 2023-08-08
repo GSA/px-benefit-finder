@@ -111,7 +111,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
           className="usa-hint usa-hint--required required"
           title="required"
         >
-          (Required)
+          (Required || Required)
         </span>
       </legend>
       <div>

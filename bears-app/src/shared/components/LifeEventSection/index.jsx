@@ -38,7 +38,7 @@ const LifeEventSection = ({
   const [values, setValues] = useState([])
 
   // desctructure data
-  const { stepIndicator, buttonGroup, reviewSelectionModal } = ui
+  const { stepIndicator, buttonGroup, reviewSelectionModal, requiredLabel } = ui
 
   // establish refs
   const requiredFields = useRef([])
@@ -175,6 +175,7 @@ const LifeEventSection = ({
                   legend={item.fieldset.legend}
                   hint={item.fieldset.hint}
                   required={item.fieldset.required}
+                  requiredLabel={requiredLabel}
                   alertRef={
                     item.fieldset.required === 'TRUE'
                       ? element => (requiredFields.current = [element])

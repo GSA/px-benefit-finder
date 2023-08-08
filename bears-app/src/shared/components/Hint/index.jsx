@@ -4,10 +4,10 @@ import './_index.scss'
  * @component
  * @return {html} returns a div
  */
-const Hint = () => {
+const Hint = ({ requiredLabel }) => {
   return (
     <span title="required" className="usa-hint usa-hint--required required">
-      (Required)
+      {`(${requiredLabel?.value} || Required)`}
     </span>
   )
 }

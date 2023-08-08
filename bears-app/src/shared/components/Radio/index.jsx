@@ -12,7 +12,7 @@ import './_index.scss'
  * @return {html} returns a semantic input as type radio element
  */
 
-const Radio = ({ label, value, checked, onChange, handleErrorState }) => {
+const Radio = ({ label, value, checked, onChange, requiredLabel }) => {
   // console.log(handleErrorState)
   return (
     <>

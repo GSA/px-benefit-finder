@@ -19,7 +19,6 @@ import './_index.scss'
  * @param {object} data - inherieted life event step data
  * @param {function} setStepData - inherited function to set index of step data
  * @param {function} setVerifyStep - inherit view handler
-//  * @param {bool} verifyStep - inherited state of verification step
  * @param {function} setViewResults - inherited view handler
  * @param {object} ui - inherited ui translations
  * @return {html} returns a semantic html component that displays a form step
@@ -31,7 +30,6 @@ const LifeEventSection = ({
   setStepData,
   setVerifyStep,
   setViewResults,
-  // verifyStep,
   ui,
 }) => {
   // state
@@ -42,19 +40,41 @@ const LifeEventSection = ({
   // desctructure data
   const { stepIndicator, buttonGroup, reviewSelectionModal } = ui
 
+  // establish refs
   const requiredFields = useRef([])
   const alertField = useRef(null)
 
+  // handlers
+  /**
+   * a function that handles class state on our collected required fields
+   * @function
+   * @return {html}
+   */
   const handleAlert = () => {
+    // remove the display class from the alert
     alertField.current.classList.remove('display-none')
+    // add to all the collected error fields an error class
+    values.forEach(field => {
+      field.classList.add('usa-input--error')
+    })
     return false
   }
+  /**
+   * a function that triggers the modal to a closed state
+   * @function
+   */
   const handleSuccess = () => {
+    // hide alert by adding the display class
     alertField.current.classList.add('display-none')
+    // remove from all the collected error fields the error class
+    values.forEach(field => {
+      field.classList.remove('usa-input--error')
+    })
     setValues([])
     return true
   }
 
+  // collect all the required fields in the current step
   const getRequiredFieldSets = () => {
     requiredFields.current.forEach(field => {
       setValues([...field.elements])
@@ -62,6 +82,7 @@ const LifeEventSection = ({
   }
 
   const handleCheckRequriedFields = () => {
+    // collect all the required fields in the current step
     getRequiredFieldSets()
     // check if any of these elements are checked (will add others later)
     const valid = element => element.checked === true
@@ -86,8 +107,12 @@ const LifeEventSection = ({
       setStepData(updateIndex)
     }
   }
-  // end validation handler
 
+  /**
+   * a function that updates our current data state
+   * @function
+   * @return {object} object as state
+   */
   const handleUpdateData = () => {
     setCurrentData(currentData)
   }
@@ -95,8 +120,21 @@ const LifeEventSection = ({
   // handle radio state
   const [radioValue, setRadioValue] = useState('')
 
+  /**
+   * a function that handles the current selected value of our radio
+   * and clears validation error if resolved
+   * @function
+   * @return {object} object as state
+   */
   const handleRadioChanged = event => {
+    // everytime the radio value changes we update the radio state
     setRadioValue(event.target.value)
+    // if there is a reuquired field error resolve if value changes
+    alertField.current.classList.forEach(value => {
+      if (value !== 'display-none') {
+        handleCheckRequriedFields()
+      }
+    })
   }
 
   // manage the display of our modal initializer
@@ -198,7 +236,6 @@ LifeEventSection.propTypes = {
   setStepData: PropTypes.func,
   setVerifyStep: PropTypes.func,
   setViewResults: PropTypes.func,
-  // verifyStep: PropTypes.bool,
   ui: PropTypes.object,
 }
 

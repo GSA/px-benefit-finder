@@ -37,16 +37,29 @@ const Modal = ({
   navItemTwoFunction,
   handleCheckRequiredFields,
 }) => {
+  // state
   const [modalIsOpen, setIsOpen] = useState(false)
-  function openModal() {
+
+  // handlers
+  /**
+   * a function that checks for errors and then triggers the modal to open state
+   * @function
+   */
+  const handleOpenModal = () => {
     handleCheckRequiredFields() === true && setIsOpen(true)
   }
 
-  function closeModal() {
+  /**
+   * a function that triggers the modal to a closed state
+   * @function
+   */
+  const handleCloseModal = () => {
     setIsOpen(false)
   }
 
+  // effects
   useEffect(() => {
+    // set our application root id here
     NavModal.setAppElement('#usagov-bears-app')
   }, [])
 
@@ -112,11 +125,11 @@ const Modal = ({
       <Trigger
         id={id}
         triggerLabel={triggerLabel}
-        onClick={() => openModal()}
+        onClick={() => handleOpenModal()}
       ></Trigger>
       <NavModal
         isOpen={modalIsOpen}
-        onRequestClose={closeModal}
+        onRequestClose={handleCloseModal}
         style={customStyles}
         contentLabel={modalHeading}
       >
@@ -144,7 +157,11 @@ const Modal = ({
             </button>
           </li>
         </ul> */}
-        <button type="button" className="modal" onClick={() => closeModal()}>
+        <button
+          type="button"
+          className="modal"
+          onClick={() => handleCloseModal()}
+        >
           <img src={Close} alt="a plus icon" />
         </button>
       </NavModal>

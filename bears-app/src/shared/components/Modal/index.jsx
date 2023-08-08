@@ -54,6 +54,8 @@ const Modal = ({
    * @function
    */
   const handleCloseModal = () => {
+    // clear the hash
+    window.location.hash = ''
     setIsOpen(false)
   }
 

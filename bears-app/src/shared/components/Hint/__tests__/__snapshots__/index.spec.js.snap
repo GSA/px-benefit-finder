@@ -5,6 +5,6 @@ exports[`Hint renders a match to the previous snapshot 1`] = `
   className="usa-hint usa-hint--required required"
   title="required"
 >
-  (undefined || Required)
+  (Required)
 </span>
 `;

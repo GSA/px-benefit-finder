@@ -7,7 +7,7 @@ import './_index.scss'
 const Hint = ({ requiredLabel }) => {
   return (
     <span title="required" className="usa-hint usa-hint--required required">
-      {`(${requiredLabel?.value} || Required)`}
+      {`(${requiredLabel?.value || 'Required'})`}
     </span>
   )
 }

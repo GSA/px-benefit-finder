@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
+    - entity_reference_revisions
     - field_permissions
-    - node
     - paragraphs
 third_party_settings:
   field_permissions:
@@ -11,10 +11,10 @@ third_party_settings:
 id: paragraph.field_b_children
 field_name: field_b_children
 entity_type: paragraph
-type: entity_reference
+type: entity_reference_revisions
 settings:
-  target_type: node
-module: core
+  target_type: paragraph
+module: entity_reference_revisions
 locked: false
 cardinality: -1
 translatable: true

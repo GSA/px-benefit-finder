@@ -11,7 +11,7 @@ id: node.bears_life_event_form.field_b_sections_elg_criteria
 field_name: field_b_sections_elg_criteria
 entity_type: node
 bundle: bears_life_event_form
-label: 'Sections Eligibility Criteria'
+label: 'Sections (Eligibility Criteria)'
 description: ''
 required: false
 translatable: true
@@ -29,6 +29,9 @@ settings:
         enabled: false
       b_levent_elg_criteria:
         weight: 30
+        enabled: false
+      b_levent_elg_criteria_group:
+        weight: 32
         enabled: false
       b_levent_elg_section:
         weight: 31

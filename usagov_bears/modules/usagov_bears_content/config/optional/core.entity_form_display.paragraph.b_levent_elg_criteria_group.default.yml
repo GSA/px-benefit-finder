@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.b_levent_elg_section.field_b_criterias
-    - field.field.paragraph.b_levent_elg_section.field_b_description
-    - field.field.paragraph.b_levent_elg_section.field_b_heading
-    - paragraphs.paragraphs_type.b_levent_elg_section
+    - field.field.paragraph.b_levent_elg_criteria_group.field_b_criterias
+    - field.field.paragraph.b_levent_elg_criteria_group.field_b_description
+    - field.field.paragraph.b_levent_elg_criteria_group.field_b_heading
+    - paragraphs.paragraphs_type.b_levent_elg_criteria_group
   module:
     - paragraphs
     - text
-id: paragraph.b_levent_elg_section.default
+id: paragraph.b_levent_elg_criteria_group.default
 targetEntityType: paragraph
-bundle: b_levent_elg_section
+bundle: b_levent_elg_criteria_group
 mode: default
 content:
   field_b_criterias:
@@ -25,11 +25,10 @@ content:
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
-      add_mode: button
+      add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: _none
+      default_paragraph_type: ''
       features:
-        add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
@@ -51,5 +50,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_b_fieldsets: true
   status: true

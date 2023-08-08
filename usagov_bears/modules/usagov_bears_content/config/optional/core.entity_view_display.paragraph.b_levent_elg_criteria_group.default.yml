@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.b_levent_elg_section.field_b_criterias
-    - field.field.paragraph.b_levent_elg_section.field_b_description
-    - field.field.paragraph.b_levent_elg_section.field_b_heading
-    - paragraphs.paragraphs_type.b_levent_elg_section
+    - field.field.paragraph.b_levent_elg_criteria_group.field_b_criterias
+    - field.field.paragraph.b_levent_elg_criteria_group.field_b_description
+    - field.field.paragraph.b_levent_elg_criteria_group.field_b_heading
+    - paragraphs.paragraphs_type.b_levent_elg_criteria_group
   module:
     - entity_reference_revisions
     - text
-id: paragraph.b_levent_elg_section.default
+id: paragraph.b_levent_elg_criteria_group.default
 targetEntityType: paragraph
-bundle: b_levent_elg_section
+bundle: b_levent_elg_criteria_group
 mode: default
 content:
   field_b_criterias:
@@ -38,5 +38,4 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  field_b_fieldsets: true
+hidden: {  }

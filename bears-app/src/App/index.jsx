@@ -88,6 +88,7 @@ function App() {
               setViewResults(true)
             }}
             ui={t.verifySelectionsView}
+            data={stepDataArray}
           />
         )}
       </div>

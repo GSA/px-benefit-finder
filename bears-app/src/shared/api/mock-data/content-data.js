@@ -265,7 +265,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_citizen_status",
                 "legend": "Applicant citizen status",
-                "required": "TRUE",
+                "required": "FALSE",
                 "hint": "",
                 "inputs": [
                   {
@@ -588,7 +588,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "deceased_served_in_active_military",
                 "legend": "Deceased served in active military",
-                "required": "TRUE",
+                "required": "FALSE",
                 "hint": "",
                 "inputs": [
                   {

@@ -191,8 +191,6 @@ const LifeEventSection = ({
                 }
               >
                 {item.fieldset.inputs.map((input, index) => {
-                  // TODO: work from here
-                  // assign value to data
                   const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
                   const inputValues = input.inputCriteria.values
                   const defaultSelected = inputValues.find(

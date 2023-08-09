@@ -367,12 +367,6 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         className="usa-legend legend"
       >
         Applicant citizen status
-        <span
-          className="usa-hint usa-hint--required required"
-          title="required"
-        >
-          (Required)
-        </span>
       </legend>
       <div>
         You are a U.S. citizen or eligible non-citizen.

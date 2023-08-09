@@ -5,7 +5,8 @@ import {
   Fieldset,
   Heading,
   Paragraph,
-  Radio,
+  // Radio,
+  Select,
   StepIndicator,
   Modal,
 } from '../index'
@@ -27,6 +28,7 @@ const LifeEventSection = ({
   step,
   setStep,
   data,
+  handleData,
   setStepData,
   setVerifyStep,
   setViewResults,
@@ -41,8 +43,9 @@ const LifeEventSection = ({
   const { stepIndicator, buttonGroup, reviewSelectionModal, requiredLabel } = ui
 
   // establish refs
-  const requiredFields = useRef([])
-  const alertField = useRef(null)
+  const requiredFieldsRef = useRef([])
+  const alertFieldRef = useRef(null)
+  // const activeFieldRef = useRef(null)
 
   // handlers
   /**
@@ -52,7 +55,7 @@ const LifeEventSection = ({
    */
   const handleAlert = () => {
     // remove the display class from the alert
-    alertField.current.classList.remove('display-none')
+    alertFieldRef.current.classList.remove('display-none')
     // add to all the collected error fields an error class
     values.forEach(field => {
       field.classList.add('usa-input--error')
@@ -65,7 +68,7 @@ const LifeEventSection = ({
    */
   const handleSuccess = () => {
     // hide alert by adding the display class
-    alertField.current.classList.add('display-none')
+    alertFieldRef.current.classList.add('display-none')
     // remove from all the collected error fields the error class
     values.forEach(field => {
       field.classList.remove('usa-input--error')
@@ -75,15 +78,15 @@ const LifeEventSection = ({
   }
 
   // collect all the required fields in the current step
-  const getRequiredFieldSets = () => {
-    requiredFields.current.forEach(field => {
+  const getrequiredFieldsRefs = () => {
+    requiredFieldsRef.current.forEach(field => {
       setValues([...field.elements])
     })
   }
 
   const handleCheckRequriedFields = () => {
     // collect all the required fields in the current step
-    getRequiredFieldSets()
+    getrequiredFieldsRefs()
     // check if any of these elements are checked (will add others later)
     const valid = element => element.checked === true
     return values.length === 0 || values.some(valid)
@@ -92,8 +95,8 @@ const LifeEventSection = ({
   }
 
   useEffect(() => {
-    getRequiredFieldSets()
-  }, [requiredFields])
+    getrequiredFieldsRefs()
+  }, [requiredFieldsRef])
 
   /**
    * a function that updates our step count and set our data index
@@ -114,33 +117,127 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleUpdateData = () => {
+    handleData([...currentData])
     setCurrentData(currentData)
   }
 
-  // handle radio state
-  const [radioValue, setRadioValue] = useState('')
+  // /**
+  //  * a function that handles the current selected value of our radio
+  //  * and clears validation error if resolved
+  //  * @function
+  //  * @return {object} object as state
+  //  */
+  // const handleRadioChanged = (event, criteriaKey) => {
+  //   // clone our initial data for the section
+  //   const currentSelection = event.target.value
+  //   const newData = { ...currentData }
+  //   // find our working fieldset by criteria key
+  //   const foundCriteria = newData.section.fieldsets.find(
+  //     element => element.fieldset.criteriaKey === criteriaKey
+  //   )
+  //   // get our current inputs from the fieldset
+  //   const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
 
-  /**
-   * a function that handles the current selected value of our radio
-   * and clears validation error if resolved
-   * @function
-   * @return {object} object as state
-   */
-  const handleRadioChanged = event => {
-    // everytime the radio value changes we update the radio state
-    setRadioValue(event.target.value)
-    // if there is a reuquired field error resolve if value changes
-    alertField.current.classList.forEach(value => {
-      if (value !== 'display-none') {
-        handleCheckRequriedFields()
+  //   inputValues.forEach((option, i) => {
+  //     if (option.value === currentSelection) {
+  //       console.log(criteriaKey, option.value, currentSelection, inputValues[i])
+  //       // update to true
+  //       option.checked = true
+  //       console.log('updated', inputValues[i])
+  //     } else {
+  //       delete option.checked
+  //       console.log('removed', inputValues[i])
+  //     }
+  //   })
+  //   setCurrentData(newData)
+  //   console.log('current data', currentData)
+  // }
+
+  // console.log(currentData)
+  // setCurrentData({ ...sectionData })
+  // update current section data
+  // if there is a reuquired field error resolve if value changes
+  // alertFieldRef.current.classList.forEach(value => {
+  //   if (value !== 'display-none') {
+  //     handleCheckRequriedFields()
+  //   }
+  // })
+  // }
+  // console.log('current data', currentData)
+
+  // const RadioFieldSet = () {
+  //   return (
+  //     <Fieldset
+  //                 key={`${item.fieldset.criteriaKey}-${i}`}
+  //                 legend={item.fieldset.legend}
+  //                 hint={item.fieldset.hint}
+  //                 required={item.fieldset.required}
+  //                 requiredLabel={requiredLabel}
+  //                 alertRef={
+  //                   item.fieldset.required === 'TRUE'
+  //                     ? element => (requiredFieldsRef.current = [element])
+  //                     : null
+  //                 }
+  //               >
+  //                 {item.fieldset.inputs.map((input, index) => {
+  //                   // TODO: work from here
+  //                   // assign value to data
+  //                   const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+  //                   return (
+  //                     <div key={fieldSetId}>
+  //                       {input.inputCriteria.label}
+  //                       {/* map the options */}
+  //                       {input.inputCriteria.values.map((option, index) => {
+  //                         const inputId = `${fieldSetId}_${index}`
+  //                         console.log('in map', inputId, option.checked)
+  //                         return (
+  //                           <Radio
+  //                             id={inputId}
+  //                             key={inputId}
+  //                             label={option.option}
+  //                             value={option.value}
+  //                             defaultChecked={option.checked}
+  //                             onChange={event => {
+  //                               handleRadioChanged(
+  //                                 event,
+  //                                 item.fieldset.criteriaKey
+  //                               )
+  //                             }}
+  //                           />
+  //                         )
+  //                       })}
+  //                     </div>
+  //                   )
+  //                 })}
+  //               </Fieldset>
+  //   )
+  // }
+
+  const handleSelectChange = (event, criteriaKey) => {
+    console.log(event)
+    const newData = { ...currentData }
+    // find the right data based on criteriakey
+    const foundCriteria = newData.section.fieldsets.find(
+      element => element.fieldset.criteriaKey === criteriaKey
+    )
+    // get those values
+    const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
+
+    inputValues.forEach(value => {
+      if (value.value === event.target.value) {
+        value.selected = true
+      } else {
+        delete value.selected
       }
     })
+    setCurrentData(newData)
   }
 
   // manage the display of our modal initializer
   useEffect(() => {
+    setCurrentData(currentData)
     step === data.length ? setModal(true) : setModal(false)
-  }, [data, modal, step])
+  }, [currentData, data, modal, step])
 
   return (
     <div className="section">
@@ -149,7 +246,7 @@ const LifeEventSection = ({
         setCurrent={setStep}
         data={data}
         backLinkLabel={stepIndicator.stepBackLink}
-        handleCheckRequiredFields={() => handleCheckRequriedFields()}
+        handleCheckrequiredFieldsRef={() => handleCheckRequriedFields()}
       />
       {currentData && (
         <div id="benefit-section" onChange={() => handleUpdateData}>
@@ -158,7 +255,7 @@ const LifeEventSection = ({
           <div
             className="usa-alert usa-alert--error display-none"
             role="alert"
-            ref={alertField}
+            ref={alertFieldRef}
           >
             <div className="usa-alert__body">
               <h4 className="usa-alert__heading">Error status</h4>
@@ -169,7 +266,7 @@ const LifeEventSection = ({
           </div>
           {currentData.section.fieldsets.map((item, i) => {
             return (
-              i === currentData.section.fieldsets.length - 1 && (
+              item.fieldset.inputs[0].inputCriteria.type === 'select' && (
                 <Fieldset
                   key={`${item.fieldset.criteriaKey}-${i}`}
                   legend={item.fieldset.legend}
@@ -178,27 +275,33 @@ const LifeEventSection = ({
                   requiredLabel={requiredLabel}
                   alertRef={
                     item.fieldset.required === 'TRUE'
-                      ? element => (requiredFields.current = [element])
+                      ? element => (requiredFieldsRef.current = [element])
                       : null
                   }
                 >
-                  {item.fieldset.inputs.map((input, i) => {
+                  {item.fieldset.inputs.map((input, index) => {
                     // TODO: work from here
                     // assign value to data
+                    const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                    const inputValues = input.inputCriteria.values
+                    console.log(inputValues)
+                    const defaultSelected = inputValues.find(
+                      value => value.selected !== undefined
+                    )
+
+                    console.log(defaultSelected?.value)
+
                     return (
-                      <div key={i}>
-                        {input.inputCriteria.label}
-                        {input.inputCriteria.value.map((option, i) => {
-                          return (
-                            <Radio
-                              key={i}
-                              label={option.option}
-                              value={option.value}
-                              checked={radioValue === option.value}
-                              onChange={e => handleRadioChanged(e)}
-                            />
-                          )
-                        })}
+                      <div key={fieldSetId}>
+                        <Select
+                          htmlFor={fieldSetId}
+                          key={fieldSetId}
+                          options={inputValues}
+                          defaultValue={defaultSelected?.value}
+                          onChange={event =>
+                            handleSelectChange(event, item.fieldset.criteriaKey)
+                          }
+                        />
                       </div>
                     )
                   })}
@@ -221,7 +324,7 @@ const LifeEventSection = ({
             navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
             navItemTwoFunction={setViewResults}
             triggerLabel={buttonGroup[1].value}
-            handleCheckRequiredFields={() => handleCheckRequriedFields()}
+            handleCheckrequiredFieldsRef={() => handleCheckRequriedFields()}
           />
         </div>
       )}

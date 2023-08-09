@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
  * @param {array} options - The inherited options array of objects with value and label keys
  * @return {html} returns a semantic html select element with options
  */
-function Select({ label, htmlFor, options }) {
+function Select({ label, htmlFor, options, defaultValue, onChange }) {
   /**
    * a functional component to create a list of options for a select element.
    * @function
@@ -18,8 +18,12 @@ function Select({ label, htmlFor, options }) {
   const Options = ({ options }) => {
     return options.map(option => {
       return (
-        <option value={option.value} key={option.value}>
-          {option.label}
+        <option
+          value={option.value}
+          key={option.value}
+          selected={option.value === defaultValue}
+        >
+          {option.value}
         </option>
       )
     })
@@ -28,7 +32,12 @@ function Select({ label, htmlFor, options }) {
   return (
     <>
       <Label label={label} htmlFor={htmlFor} />
-      <select className="usa-select" name={htmlFor} id={htmlFor}>
+      <select
+        className="usa-select"
+        name={htmlFor}
+        id={htmlFor}
+        onChange={onChange}
+      >
         <Options options={options} />
       </select>
     </>

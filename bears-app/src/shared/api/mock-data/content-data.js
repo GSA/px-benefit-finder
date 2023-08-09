@@ -40,7 +40,7 @@ const content = `{
                       "type": "date",
                       "name": "Date of birth",
                       "label": "Date of birth",
-                      "value": [
+                      "values": [
                         {
                           "default": "",
                           "value": ""
@@ -71,10 +71,10 @@ const content = `{
                       "type": "select",
                       "name": "Applicant's relationship to the person who died",
                       "label": "Applicant's relationship to the person who died",
-                      "value": [
+                      "values": [
                         {
-                          "default": "-Select-",
-                          "value": ""
+                          "option": "-Select-",
+                          "value": "-Select-"
                         },
                         {
                           "option": "spouse",
@@ -122,10 +122,10 @@ const content = `{
                       "type": "select",
                       "name": "Marital status",
                       "label": "Marital status",
-                      "value": [
+                      "values": [
                         {
-                          "default": "-Select-",
-                          "value": ""
+                          "option": "-Select-",
+                          "value": "-Select-"
                         },
                         {
                           "option": "married",
@@ -166,17 +166,17 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "applicant_care_for_child",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Applicant care for child",
                       "label": "You are caring for the child of the person who died, is retired or has disabilities, and the child is under age 16 or is disabled.",
-                      "value": [
+                      "values": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -201,17 +201,17 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "applicant_paid_funeral_expenses",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Applicant paid funeral expense",
                       "label": "You paid for the funeral/burial expenses.",
-                      "value": [
+                      "values": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -236,17 +236,17 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "applicant_funeral_reimbursment",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Applicant funeral reimbursement",
                       "label": "You were NOT reimbursed for the funeral/burial cost by any organization or government agency.",
-                      "value": [
+                      "values": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -274,7 +274,7 @@ const content = `{
                       "type": "radio",
                       "name": "Applicant citizen status",
                       "label": "You are a U.S. citizen or eligible non-citizen.",
-                      "value": [
+                      "values": [
                         {
                           "option": "Yes",
                           "value": "Yes"
@@ -317,7 +317,7 @@ const content = `{
                       "type": "date",
                       "name": "Deceased date of death",
                       "label": "The deceased died on the following date:",
-                      "value": [
+                      "values": [
                         {
                           "default": "",
                           "value": ""
@@ -348,7 +348,7 @@ const content = `{
                       "type": "date",
                       "name": "Deceased date of funeral",
                       "label": "The deceased's funeral/burial was on the following date:",
-                      "value": [
+                      "values": [
                         {
                           "default": "",
                           "value": ""
@@ -376,17 +376,17 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "deceased_paid_into_SS",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Deceased paid into Social Security",
                       "label": "The deceased worked and paid Social Security taxes on their earnings.",
-                      "value": [
+                      "values": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -411,17 +411,17 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "deceased_died_of_COVID",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Deceased died of COVID",
                       "label": "The deceased died or likely died of COVID-19.",
-                      "value": [
+                      "values": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -446,17 +446,17 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "deceased_death_location_is_US",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Deceased death location is US",
                       "label": "The deceased died in the U.S., including its territories.",
-                      "value": [
+                       "values": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -481,17 +481,17 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "deceased_public_safety_officer",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Deceased public safety officer",
                       "label": "The deceased was a public safety officer who died in the line of duty.",
-                      "value": [
+                       "values": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -516,17 +516,17 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "deceased_miner",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Deceased miner",
                       "label": "The deceased worked in the coal mining industry and their death was due to pneumoconiosis (black lung disease).",
-                      "value": [
+                      "values": [
                         {
-                          "default": "",
-                          "value": ""
+                          "option": "Yes",
+                          "value": "Yes"
                         },
                         {
-                          "option": "TRUE",
-                          "value": "TRUE"
+                          "option": "No",
+                          "value": "No"
                         }
                       ],
                       "hasChild": "FALSE",
@@ -551,10 +551,10 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "deceased_american_indian",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Deceased American Indian",
                       "label": "Was the person who died a member of a federally recognized American Indian Tribe or an Alaska Native?",
-                      "value": [
+                      "values": [
                         {
                           "option": "Yes",
                           "value": "Yes"
@@ -594,10 +594,10 @@ const content = `{
                   {
                     "inputCriteria": {
                       "id": "deceased_served_in_active_military",
-                      "type": "boolean",
+                      "type": "radio",
                       "name": "Deceased served in active military",
                       "label": "Did the person who died serve in the active military, naval, or air service?",
-                      "value": [
+                      "values": [
                         {
                           "option": "Yes",
                           "value": "Yes"
@@ -625,13 +625,13 @@ const content = `{
                             {
                               "inputCriteria": {
                                 "id": "deceased_service_status",
-                                "type": "radio",
+                                "type": "select",
                                 "name": "Deceased service status",
                                 "label": "The service status of the deceased is",
-                                "value": [
+                                "values": [
                                   {
-                                    "default": "-Select-",
-                                    "value": ""
+                                    "option": "-Select-",
+                                    "value": "-Select-"
                                   },
                                   {
                                     "option": "an active-duty service member",
@@ -672,13 +672,13 @@ const content = `{
                             {
                               "inputCriteria": {
                                 "id": "deceased_death_circumstance",
-                                "type": "radio",
+                                "type": "select",
                                 "name": "Deceased death circumstance",
                                 "label": "One of the following circumstances apply to the deceased:",
-                                "value": [
+                                "values": [
                                   {
-                                    "default": "-Select-",
-                                    "value": ""
+                                    "option": "-Select-",
+                                    "value": "-Select-"
                                   },
                                   {
                                     "option": "died while on active duty",
@@ -723,17 +723,19 @@ const content = `{
                             {
                               "inputCriteria": {
                                 "id": "deceased_grave_headstone",
-                                "type": "boolean",
+                                "type": "radio",
                                 "name": "Deceased grave headstone",
                                 "label": "The deceased is buried in an unmarked grave, or their grave is marked with a privately purchased headstone.",
-                                "value": [
+                                "values": [
                                   {
-                                    "default": "",
-                                    "value": ""
+                                    "option": "Yes",
+                                    "value": "Yes",
+                                    "checked": false
                                   },
                                   {
-                                    "option": "TRUE",
-                                    "value": "TRUE"
+                                    "option": "No",
+                                    "value": "No",
+                                    "checked": false
                                   }
                                 ],
                                 "hasChild": "FALSE",

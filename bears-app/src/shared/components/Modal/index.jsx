@@ -35,7 +35,7 @@ const Modal = ({
   navItemOneFunction,
   navItemTwoLabel,
   navItemTwoFunction,
-  handleCheckRequiredFields,
+  handleCheckRequriedFields,
 }) => {
   // state
   const [modalIsOpen, setIsOpen] = useState(false)
@@ -46,7 +46,7 @@ const Modal = ({
    * @function
    */
   const handleOpenModal = () => {
-    handleCheckRequiredFields() === true && setIsOpen(true)
+    handleCheckRequriedFields() === true && setIsOpen(true)
   }
 
   /**

@@ -5,7 +5,7 @@ import {
   Fieldset,
   Heading,
   Paragraph,
-  // Radio,
+  Radio,
   Select,
   StepIndicator,
   Modal,
@@ -45,7 +45,6 @@ const LifeEventSection = ({
   // establish refs
   const requiredFieldsRef = useRef([])
   const alertFieldRef = useRef(null)
-  // const activeFieldRef = useRef(null)
 
   // handlers
   /**
@@ -121,100 +120,13 @@ const LifeEventSection = ({
     setCurrentData(currentData)
   }
 
-  // /**
-  //  * a function that handles the current selected value of our radio
-  //  * and clears validation error if resolved
-  //  * @function
-  //  * @return {object} object as state
-  //  */
-  // const handleRadioChanged = (event, criteriaKey) => {
-  //   // clone our initial data for the section
-  //   const currentSelection = event.target.value
-  //   const newData = { ...currentData }
-  //   // find our working fieldset by criteria key
-  //   const foundCriteria = newData.section.fieldsets.find(
-  //     element => element.fieldset.criteriaKey === criteriaKey
-  //   )
-  //   // get our current inputs from the fieldset
-  //   const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
-
-  //   inputValues.forEach((option, i) => {
-  //     if (option.value === currentSelection) {
-  //       console.log(criteriaKey, option.value, currentSelection, inputValues[i])
-  //       // update to true
-  //       option.checked = true
-  //       console.log('updated', inputValues[i])
-  //     } else {
-  //       delete option.checked
-  //       console.log('removed', inputValues[i])
-  //     }
-  //   })
-  //   setCurrentData(newData)
-  //   console.log('current data', currentData)
-  // }
-
-  // console.log(currentData)
-  // setCurrentData({ ...sectionData })
-  // update current section data
-  // if there is a reuquired field error resolve if value changes
-  // alertFieldRef.current.classList.forEach(value => {
-  //   if (value !== 'display-none') {
-  //     handleCheckRequriedFields()
-  //   }
-  // })
-  // }
-  // console.log('current data', currentData)
-
-  // const RadioFieldSet = () {
-  //   return (
-  //     <Fieldset
-  //                 key={`${item.fieldset.criteriaKey}-${i}`}
-  //                 legend={item.fieldset.legend}
-  //                 hint={item.fieldset.hint}
-  //                 required={item.fieldset.required}
-  //                 requiredLabel={requiredLabel}
-  //                 alertRef={
-  //                   item.fieldset.required === 'TRUE'
-  //                     ? element => (requiredFieldsRef.current = [element])
-  //                     : null
-  //                 }
-  //               >
-  //                 {item.fieldset.inputs.map((input, index) => {
-  //                   // TODO: work from here
-  //                   // assign value to data
-  //                   const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-  //                   return (
-  //                     <div key={fieldSetId}>
-  //                       {input.inputCriteria.label}
-  //                       {/* map the options */}
-  //                       {input.inputCriteria.values.map((option, index) => {
-  //                         const inputId = `${fieldSetId}_${index}`
-  //                         console.log('in map', inputId, option.checked)
-  //                         return (
-  //                           <Radio
-  //                             id={inputId}
-  //                             key={inputId}
-  //                             label={option.option}
-  //                             value={option.value}
-  //                             defaultChecked={option.checked}
-  //                             onChange={event => {
-  //                               handleRadioChanged(
-  //                                 event,
-  //                                 item.fieldset.criteriaKey
-  //                               )
-  //                             }}
-  //                           />
-  //                         )
-  //                       })}
-  //                     </div>
-  //                   )
-  //                 })}
-  //               </Fieldset>
-  //   )
-  // }
-
-  const handleSelectChange = (event, criteriaKey) => {
-    console.log(event)
+  /**
+   * a function that handles the current selected value of our radio
+   * and clears validation error if resolved
+   * @function
+   * @return {object} object as state
+   */
+  const handleChanged = (event, criteriaKey) => {
     const newData = { ...currentData }
     // find the right data based on criteriakey
     const foundCriteria = newData.section.fieldsets.find(
@@ -235,7 +147,6 @@ const LifeEventSection = ({
 
   // manage the display of our modal initializer
   useEffect(() => {
-    setCurrentData(currentData)
     step === data.length ? setModal(true) : setModal(false)
   }, [currentData, data, modal, step])
 
@@ -246,7 +157,7 @@ const LifeEventSection = ({
         setCurrent={setStep}
         data={data}
         backLinkLabel={stepIndicator.stepBackLink}
-        handleCheckrequiredFieldsRef={() => handleCheckRequriedFields()}
+        handleCheckRequriedFields={() => handleCheckRequriedFields()}
       />
       {currentData && (
         <div id="benefit-section" onChange={() => handleUpdateData}>
@@ -265,49 +176,82 @@ const LifeEventSection = ({
             </div>
           </div>
           {currentData.section.fieldsets.map((item, i) => {
-            return (
-              item.fieldset.inputs[0].inputCriteria.type === 'select' && (
-                <Fieldset
-                  key={`${item.fieldset.criteriaKey}-${i}`}
-                  legend={item.fieldset.legend}
-                  hint={item.fieldset.hint}
-                  required={item.fieldset.required}
-                  requiredLabel={requiredLabel}
-                  alertRef={
-                    item.fieldset.required === 'TRUE'
-                      ? element => (requiredFieldsRef.current = [element])
-                      : null
-                  }
-                >
-                  {item.fieldset.inputs.map((input, index) => {
-                    // TODO: work from here
-                    // assign value to data
-                    const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-                    const inputValues = input.inputCriteria.values
-                    console.log(inputValues)
-                    const defaultSelected = inputValues.find(
-                      value => value.selected !== undefined
-                    )
+            return item.fieldset.inputs[0].inputCriteria.type === 'select' ? (
+              <Fieldset
+                key={`${item.fieldset.criteriaKey}-${i}`}
+                legend={item.fieldset.legend}
+                hint={item.fieldset.hint}
+                required={item.fieldset.required}
+                requiredLabel={requiredLabel}
+                alertRef={
+                  item.fieldset.required === 'TRUE'
+                    ? element => (requiredFieldsRef.current = [element])
+                    : null
+                }
+              >
+                {item.fieldset.inputs.map((input, index) => {
+                  // TODO: work from here
+                  // assign value to data
+                  const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                  const inputValues = input.inputCriteria.values
+                  const defaultSelected = inputValues.find(
+                    value => value.selected !== undefined
+                  )
 
-                    console.log(defaultSelected?.value)
-
-                    return (
-                      <div key={fieldSetId}>
-                        <Select
-                          htmlFor={fieldSetId}
-                          key={fieldSetId}
-                          options={inputValues}
-                          defaultValue={defaultSelected?.value}
-                          onChange={event =>
-                            handleSelectChange(event, item.fieldset.criteriaKey)
-                          }
-                        />
-                      </div>
-                    )
-                  })}
-                </Fieldset>
-              )
-            )
+                  return (
+                    <div key={fieldSetId}>
+                      <Select
+                        htmlFor={fieldSetId}
+                        key={fieldSetId}
+                        options={inputValues}
+                        selected={defaultSelected?.value}
+                        onChange={event =>
+                          handleChanged(event, item.fieldset.criteriaKey)
+                        }
+                      />
+                    </div>
+                  )
+                })}
+              </Fieldset>
+            ) : item.fieldset.inputs[0].inputCriteria.type === 'radio' ? (
+              <Fieldset
+                key={`${item.fieldset.criteriaKey}-${i}`}
+                legend={item.fieldset.legend}
+                hint={item.fieldset.hint}
+                required={item.fieldset.required}
+                requiredLabel={requiredLabel}
+                alertRef={
+                  item.fieldset.required === 'TRUE'
+                    ? element => (requiredFieldsRef.current = [element])
+                    : null
+                }
+              >
+                {item.fieldset.inputs.map((input, index) => {
+                  const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                  return (
+                    <div key={fieldSetId}>
+                      {input.inputCriteria.label}
+                      {/* map the options */}
+                      {input.inputCriteria.values.map((option, index) => {
+                        const inputId = `${fieldSetId}_${index}`
+                        return (
+                          <Radio
+                            id={inputId}
+                            key={inputId}
+                            label={`${option.value}_${inputId}`}
+                            value={option.value}
+                            checked={option.selected || false}
+                            onChange={event => {
+                              handleChanged(event, item.fieldset.criteriaKey)
+                            }}
+                          />
+                        )
+                      })}
+                    </div>
+                  )
+                })}
+              </Fieldset>
+            ) : null
           })}
         </div>
       )}
@@ -324,7 +268,7 @@ const LifeEventSection = ({
             navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
             navItemTwoFunction={setViewResults}
             triggerLabel={buttonGroup[1].value}
-            handleCheckrequiredFieldsRef={() => handleCheckRequriedFields()}
+            handleCheckRequriedFields={handleCheckRequriedFields}
           />
         </div>
       )}

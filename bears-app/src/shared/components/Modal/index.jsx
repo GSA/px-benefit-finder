@@ -1,9 +1,19 @@
-import { useEffect } from 'react'
-import modal from '@uswds/uswds/js/usa-modal'
+import { useEffect, useState } from 'react'
+import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
 import Close from './assets/close.svg'
-import { ObfuscatedLink, Heading } from '../index'
-import './_index.scss'
+import { ObfuscatedLink } from '../index'
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+}
 
 /**
  * a functional component that renders a trigger, that when clicked opens a dialog
@@ -22,17 +32,36 @@ const Modal = ({
   triggerLabel,
   modalHeading,
   navItemOneLabel,
+  navItemOneFunction,
   navItemTwoLabel,
+  navItemTwoFunction,
+  handleCheckRequiredFields,
 }) => {
-  useEffect(() => {
-    // initialize
-    modal.on()
+  // state
+  const [modalIsOpen, setIsOpen] = useState(false)
 
-    // remove event listeners when the component un-mounts.
-    return () => {
-      modal.off()
-    }
-  })
+  // handlers
+  /**
+   * a function that checks for errors and then triggers the modal to open state
+   * @function
+   */
+  const handleOpenModal = () => {
+    handleCheckRequiredFields() === true && setIsOpen(true)
+  }
+
+  /**
+   * a function that triggers the modal to a closed state
+   * @function
+   */
+  const handleCloseModal = () => {
+    setIsOpen(false)
+  }
+
+  // effects
+  useEffect(() => {
+    // set our application root id here
+    NavModal.setAppElement('#usagov-bears-app')
+  }, [])
 
   /**
    * a functional component that renders a link as a button for launching our dialog
@@ -41,14 +70,9 @@ const Modal = ({
    * @param {string} triggerLabel - passed to button for triggering modal
    * @return {html} returns an obfustacted anchor element
    */
-  const Trigger = ({ id, triggerLabel }) => {
+  const Trigger = ({ id, triggerLabel, onClick }) => {
     return (
-      <ObfuscatedLink
-        href={`#${id}`}
-        aria-controls={id}
-        data-open-modal
-        noCarrot
-      >
+      <ObfuscatedLink href={`#${id}`} onClick={onClick} noCarrot>
         {triggerLabel}
       </ObfuscatedLink>
     )
@@ -58,17 +82,25 @@ const Modal = ({
    * a functional component that renders a two links as a buttons for navigating out of the dialog
    * @component
    * @param {string} navItemOneLabel - passed to button for nav item in modal
-   * @param {string} navItemTwoLabel - passed to button for nav item in modal
+   * @param {func} navItemOneFunction - passed to button for nav item in modal
+   * @param {string} navItemOneLabel - passed to button for nav item in modal
+   * @param {func} navItemTwoFunction - passed to button for nav item in modal
    * @return {html} returns an obfustacted anchor element
    */
   // similar to ButtonGroup but we need links for uswds to close modal, this item is default and conditional
-  const GroupNavigation = ({ navItemOneLabel, navItemTwoLabel }) => {
+  const GroupNavigation = ({
+    navItemOneLabel,
+    navItemOneFunction,
+    navItemTwoLabel,
+    navItemTwoFunction,
+  }) => {
     return (
       <ul className="usa-button-group width-full">
         <li className="usa-button-group__item width-full">
           <ObfuscatedLink
+            id="navItemOneBtn"
             className="nav-item-one width-full"
-            data-close-modal
+            onClick={() => navItemOneFunction()}
             noCarrot
           >
             {navItemOneLabel}
@@ -76,8 +108,9 @@ const Modal = ({
         </li>
         <li className="usa-button-group__item width-full">
           <ObfuscatedLink
+            id="navItemTwoBtn"
             className="nav-item-two width-full"
-            data-close-modal
+            onClick={() => navItemTwoFunction()}
             noCarrot
           >
             {navItemTwoLabel}
@@ -89,53 +122,49 @@ const Modal = ({
 
   return (
     <div className="benefit-modal-group">
-      <Trigger id={id} triggerLabel={triggerLabel}></Trigger>
-      <div
-        className="usa-modal"
+      <Trigger
         id={id}
-        aria-labelledby="modal-heading"
-        aria-describedby="modal-description"
+        triggerLabel={triggerLabel}
+        onClick={() => handleOpenModal()}
+      ></Trigger>
+      <NavModal
+        isOpen={modalIsOpen}
+        onRequestClose={handleCloseModal}
+        style={customStyles}
+        contentLabel={modalHeading}
       >
-        <div className="usa-modal__content">
-          <div className="usa-modal__main">
-            <Heading headingLevel={2} id="modal-heading">
-              {modalHeading}
-            </Heading>
-            <div className="usa-modal__footer">
-              {children || (
-                <GroupNavigation
-                  navItemOneLabel={navItemOneLabel}
-                  navItemTwoLabel={navItemTwoLabel}
-                />
-              )}
-              {/* example: <ul className="usa-button-group">
-                <li className="usa-button-group__item">
-                  <button type="button" className="usa-button" data-close-modal>
-                    Continue without saving
-                  </button>
-                </li>
-                <li className="usa-button-group__item">
-                  <button
-                    type="button"
-                    className="usa-button padding-105 text-center"
-                    data-close-modal
-                  >
-                    Go back
-                  </button>
-                </li>
-              </ul> */}
-            </div>
-          </div>
-          <button
-            type="button"
-            className="usa-button usa-modal__close"
-            aria-label="Close this window"
-            data-close-modal
-          >
-            <img src={Close} alt="a plus icon" />
-          </button>
-        </div>
-      </div>
+        {children || (
+          <GroupNavigation
+            navItemOneLabel={navItemOneLabel}
+            navItemOneFunction={navItemOneFunction}
+            navItemTwoLabel={navItemTwoLabel}
+            navItemTwoFunction={navItemTwoFunction}
+          />
+        )}
+        {/* child example: <ul className="usa-button-group">
+          <li className="usa-button-group__item">
+            <button type="button" className="usa-button" data-close-modal>
+              Continue without saving
+            </button>
+          </li>
+          <li className="usa-button-group__item">
+            <button
+              type="button"
+              className="usa-button padding-105 text-center"
+              data-close-modal
+            >
+              Go back
+            </button>
+          </li>
+        </ul> */}
+        <button
+          type="button"
+          className="modal"
+          onClick={() => handleCloseModal()}
+        >
+          <img src={Close} alt="a plus icon" />
+        </button>
+      </NavModal>
     </div>
   )
 }
@@ -146,7 +175,9 @@ Modal.propTypes = {
   triggerLabel: PropTypes.string,
   modalHeading: PropTypes.string,
   navItemOneLabel: PropTypes.string,
+  navItemOneFunction: PropTypes.func,
   navItemTwoLabel: PropTypes.string,
+  navItemTwoFunction: PropTypes.func,
 }
 
 export default Modal

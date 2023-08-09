@@ -1,6 +1,8 @@
 import { Label } from '../index'
 import PropTypes from 'prop-types'
 
+import './_index.scss'
+
 /**
  * a functional component that renders an input of radio type
  * @component
@@ -10,7 +12,8 @@ import PropTypes from 'prop-types'
  * @return {html} returns a semantic input as type radio element
  */
 
-const Radio = ({ label, value, defaultChecked }) => {
+const Radio = ({ label, value, checked, onChange, requiredLabel }) => {
+  // console.log(handleErrorState)
   return (
     <>
       <div className="usa-radio">
@@ -20,7 +23,8 @@ const Radio = ({ label, value, defaultChecked }) => {
           type="radio"
           name={label}
           value={value || label}
-          defaultChecked={defaultChecked || false}
+          checked={checked}
+          onChange={onChange}
         />
         <Label className="usa-radio__label" htmlFor={label} label={label} />
       </div>

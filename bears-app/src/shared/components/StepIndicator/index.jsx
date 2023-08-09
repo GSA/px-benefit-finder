@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { StepBackLink } from '../index'
 import PropTypes from 'prop-types'
 
@@ -7,18 +6,20 @@ import PropTypes from 'prop-types'
  * @component
  * @param {array} data - an array of sections
  * @param {boolean} noHeadings - determinate to render headings or not
+ * @param {number} current - inherited state, indicates index value
+ * @param {boolean} setCurrent - inherited function to mangae index value
+ * @param {string} backLinkLabel - inherited value for back link value
+ * @param {func} handleCheckRequiredFields - inherited handler
  * @return {html} returns markup for a usa step indicator
  */
-const StepIndicator = ({ data, noHeadings }) => {
-  /**
-   * a function that manages which of our step links is the current one
-   * @function
-   * @param {number} current - an array of sections
-   * @param {function} setCurrent - update integer value
-   * @return {number} returns current step
-   */
-  const [current, setCurrent] = useState(0)
-
+const StepIndicator = ({
+  data,
+  noHeadings,
+  current,
+  setCurrent,
+  backLinkLabel,
+  handleCheckRequiredFields,
+}) => {
   /**
    * a functional component that supports a11y for completed steps
    * @component
@@ -36,8 +37,8 @@ const StepIndicator = ({ data, noHeadings }) => {
    * @param {string} heading - associated with the step link
    * @param {number} current - the current index from state
    * @param {function} setCurrent - updates the current index from onClick
-   * @param {number} index - the index of this item
    * @param {boolean} completed - state of completion
+   * @param {number} index - the index of this item
    * @return {html} returns markup for a usa step indicator segment
    */
   const StepIndicatorSegment = ({
@@ -46,13 +47,18 @@ const StepIndicator = ({ data, noHeadings }) => {
     setCurrent,
     completed,
     index,
+    handleCheckRequiredFields,
   }) => {
     const statusClass = current === index ? '--current' : ''
     return (
       <li
         className={`usa-step-indicator__segment usa-step-indicator__segment${statusClass}`}
         aria-current={completed}
-        onClick={() => setCurrent(index)}
+        onClick={() =>
+          completed === false &&
+          handleCheckRequiredFields() === true &&
+          setCurrent(index + 1)
+        }
       >
         <span className="usa-step-indicator__segment-label">
           {!noHeadings && heading} <CompletedSR status={completed} />
@@ -76,12 +82,15 @@ const StepIndicator = ({ data, noHeadings }) => {
                   current={current}
                   setCurrent={setCurrent}
                   completed={false}
+                  handleCheckRequiredFields={handleCheckRequiredFields}
                 />
               )
             })}
         </ol>
       </div>
-      <StepBackLink currentIndex={current} setCurrent={setCurrent} />
+      <StepBackLink currentIndex={current} setCurrent={setCurrent}>
+        {backLinkLabel}
+      </StepBackLink>
     </div>
   )
 }
@@ -89,6 +98,10 @@ const StepIndicator = ({ data, noHeadings }) => {
 StepIndicator.propTypes = {
   data: PropTypes.array,
   noHeadings: PropTypes.bool,
+  current: PropTypes.number,
+  setCurrent: PropTypes.func,
+  backLinkLabel: PropTypes.string,
+  handleCheckRequiredFields: PropTypes.func,
 }
 
 export default StepIndicator

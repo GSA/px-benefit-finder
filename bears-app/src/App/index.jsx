@@ -1,44 +1,94 @@
-import { useState } from 'react'
-import * as apiCalls from '../shared/api/api-calls'
+import { useState, createContext } from 'react'
+import {
+  Intro,
+  LifeEventSection,
+  ResultsView,
+  VerifySelectionsView,
+  Form,
+} from '../shared/components'
+
+// data and ui content
+import * as en from '../shared/locales/en/en.json'
+import * as es from '../shared/locales/es/es.json'
+import content from '../shared/api/mock-data/content-data'
 
 /**
  * a functional component that renders our application.
  * @component
  */
 function App() {
-  // state
-
-  /**
-   * lazy load our data state.
-   * @function
-   * @param {promise} setData - the state of environment
-   * @return {state} returns null if not set
-   */
-  const [data, setData] = useState(() => {
-    apiCalls.GETLifeEvent().then(response => setData(response))
-  })
+  // we create context state to provide translations for our two languages
+  const LanguageContext = createContext({ en, es })
 
   // handlers
-
   /**
-   * handle our data maping.
+   * a function that determines the context of ui translations
+   * based on a string match in the pathname of the window object
    * @function
-   * @param {object} data - the json object returned from data load
-   * @return {string} returns strigified data
    */
-  const handleData = data => {
-    if (data === undefined) {
-      return 'loading...'
-    }
-    // either return the mapped data object or the error
-    return data?.data ? data.data.map(d => JSON.stringify(d)) : data
+  const handleLanguage = () => {
+    const string = /^\/es/
+    return string.test(window.location.pathname) ? es : en
   }
 
+  // destructure data
+  const { lifeEventForm } = JSON.parse(content)
+  const stepDataArray = [...lifeEventForm.sectionsEligibilityCriteria]
+
+  // state
+  const [t] = useState(handleLanguage) // tranlations
+  const [step, setStep] = useState(0) // steps indicator
+  const [stepData, setStepData] = useState(stepDataArray[step]) // content
+  const [verifyStep, setVerifyStep] = useState(false) // verification view
+  const [viewResults, setViewResults] = useState(false) // resuts view
+
   return (
-    <div className="bears-app">
-      <h1>BEARS Hello World!</h1>
-      {handleData(data)}
-    </div>
+    <LanguageContext.Provider value={t}>
+      {/* {console.log(t)} */}
+      <div className="bears-app">
+        {step === 0 ? (
+          <Intro
+            data={lifeEventForm}
+            ui={t.intro}
+            setStep={setStep}
+            step={step}
+          />
+        ) : viewResults === true ? (
+          <ResultsView
+            ui={t.resultsView}
+            handleStepBack={() => {
+              setVerifyStep(false)
+              setViewResults(false)
+            }}
+          />
+        ) : verifyStep === false ? (
+          <Form>
+            <LifeEventSection
+              step={step}
+              setStep={setStep}
+              data={stepDataArray}
+              stepData={stepData}
+              setStepData={setStepData}
+              verifyStep={verifyStep}
+              setVerifyStep={() => setVerifyStep(true)}
+              setViewResults={() => setViewResults(true)}
+              ui={t}
+            />
+          </Form>
+        ) : (
+          <VerifySelectionsView
+            handleStepBack={() => {
+              setVerifyStep(false)
+              setViewResults(false)
+            }}
+            handleStepForward={() => {
+              setViewResults(true)
+            }}
+            ui={t.verifySelectionsView}
+          />
+        )}
+      </div>
+    </LanguageContext.Provider>
   )
 }
 

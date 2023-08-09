@@ -10,20 +10,21 @@ import PropTypes from 'prop-types'
  * @return {html} returns a div
  */
 
-const Fieldset = ({ children, legend, required }) => {
+const Fieldset = ({ children, legend, required, alertRef, requiredLabel }) => {
   const RequiredFlag = () => (
     <>
       <Legend>
         {legend}
-        <Hint />
+        <Hint requiredLabel={requiredLabel} />
       </Legend>
     </>
   )
 
-  const handleRequired = !required ? <Legend>{legend}</Legend> : RequiredFlag()
+  const handleRequired =
+    required === 'FALSE' ? <Legend>{legend}</Legend> : RequiredFlag()
 
   return (
-    <fieldset className="usa-fieldset">
+    <fieldset className="usa-fieldset" ref={alertRef}>
       {legend && handleRequired}
       {children}
     </fieldset>

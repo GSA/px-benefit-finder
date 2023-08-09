@@ -39,6 +39,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "react-test-renderer": "^18.2.0",
+    "react-modal": "^3.16.1",
     "sass": "^1.63.4",
     "storybook": "^7.0.21",
     "stylelint": "^15.10.1",

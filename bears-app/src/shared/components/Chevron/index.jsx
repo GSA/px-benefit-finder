@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { Heading } from '../index'
+import createMarkup from '../../utils/createMarkup'
 import './_index.scss'
 
 /**
@@ -10,10 +11,6 @@ import './_index.scss'
  * @return {html} returns a semantic html label
  */
 const Chevron = ({ heading, description }) => {
-  const createMarkup = description => {
-    return { __html: description }
-  }
-
   return (
     <div className="chevron">
       <Heading headingLevel={1}>{heading}</Heading>

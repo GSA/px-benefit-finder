@@ -4,6 +4,6 @@ exports[`TimeIndicator renders a match to the previous snapshot 1`] = `
 <div
   className="time-indicator"
 >
-  Time to complete: 
+   
 </div>
 `;

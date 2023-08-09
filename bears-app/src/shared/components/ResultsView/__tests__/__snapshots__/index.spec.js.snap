@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsView renders a match to the previous snapshot 1`] = `
+<div>
+  <h2
+    className=""
+  >
+    Your potential benefits
+  </h2>
+  <button
+    className=""
+    onClick={[Function]}
+    type="button"
+  >
+    Back
+  </button>
+</div>
+`;

@@ -17,7 +17,6 @@ const VerifySelectionsView = ({
   data,
 }) => {
   const { heading, buttonGroup } = ui
-
   return (
     <div>
       <Heading headingLevel={2}>{heading}</Heading>
@@ -33,37 +32,26 @@ const VerifySelectionsView = ({
               </Heading>
               <div>
                 {section.fieldsets.map((item, i) => {
-                  return (
-                    <>
-                      <div key={`criteria-${item.fieldset.criteriaKey}-${i}`}>
-                        <Heading headingLevel={5} key={`section-${i}`}>
-                          {item.fieldset.legend}
-                        </Heading>
-                        {item.fieldset.inputs[0].inputCriteria.values.map(
-                          (item, i) => {
-                            // check for selected values
-                            // return that value if avalible
-                            // otherwise return a generic value
-                            const selectedValue = Object.hasOwn(
-                              item,
-                              'selected'
-                            )
-                              ? item.selected === true && (
-                                  <div key={`criteria-item${item.id}-${i}`}>
-                                    {item.value}
-                                  </div>
-                                )
-                              : i === 0 && (
-                                  <div key={`criteria-item${item.id}-${i}`}>
-                                    No value given
-                                  </div>
-                                )
-                            return selectedValue
-                          }
-                        )}
-                      </div>
-                      {''}
-                    </>
+                  const criteriaId = `criteria-${item.fieldset.criteriaKey}-${i}`
+                  const result =
+                    item.fieldset.inputs[0].inputCriteria.values.find(
+                      x => x.selected
+                    )
+
+                  return result !== undefined ? (
+                    <div>
+                      <Heading headingLevel={5} key={`${criteriaId}`}>
+                        {item.fieldset.legend}
+                      </Heading>
+                      {result.value}
+                    </div>
+                  ) : (
+                    <div>
+                      <Heading headingLevel={5} key={`${criteriaId}`}>
+                        {item.fieldset.legend}
+                      </Heading>
+                      No input given.
+                    </div>
                   )
                 })}
               </div>

@@ -27,7 +27,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 114
+    weight: 5
     region: content
   field_b_eligibility:
     type: entity_reference_revisions_entity_view
@@ -36,14 +36,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 108
+    weight: 9
     region: content
   field_b_headline:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 113
+    weight: 1
     region: content
   field_b_initial_elg_length:
     type: number_integer
@@ -52,7 +52,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 115
+    weight: 8
     region: content
   field_b_life_events:
     type: entity_reference_label
@@ -60,7 +60,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 105
+    weight: 4
     region: content
   field_b_source_is_english:
     type: boolean
@@ -70,7 +70,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 111
+    weight: 7
     region: content
   field_b_source_link:
     type: string
@@ -78,14 +78,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 110
+    weight: 6
     region: content
   field_b_summary:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 112
+    weight: 2
     region: content
   field_b_tags:
     type: entity_reference_label
@@ -93,12 +93,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   langcode: true

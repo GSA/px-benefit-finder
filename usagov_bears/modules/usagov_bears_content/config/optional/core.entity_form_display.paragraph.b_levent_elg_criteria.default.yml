@@ -8,20 +8,31 @@ dependencies:
     - field.field.paragraph.b_levent_elg_criteria.field_b_legend
     - field.field.paragraph.b_levent_elg_criteria.field_b_required
     - paragraphs.paragraphs_type.b_levent_elg_criteria
+  module:
+    - paragraphs
 id: paragraph.b_levent_elg_criteria.default
 targetEntityType: paragraph
 bundle: b_levent_elg_criteria
 mode: default
 content:
   field_b_children:
-    type: entity_reference_autocomplete
-    weight: 4
+    type: paragraphs
+    weight: 6
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_b_criteria_key:
     type: entity_reference_autocomplete

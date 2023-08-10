@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.bears_life_event_form.field_b_elg_criteria_desc
     - field.field.node.bears_life_event_form.field_b_id
-    - field.field.node.bears_life_event_form.field_b_json_file
     - field.field.node.bears_life_event_form.field_b_sections_elg_criteria
     - field.field.node.bears_life_event_form.field_b_summary
     - field.field.node.bears_life_event_form.field_b_time_estimate
@@ -12,7 +11,6 @@ dependencies:
     - node.type.bears_life_event_form
   module:
     - entity_reference_revisions
-    - file
     - text
     - user
 id: node.bears_life_event_form.default
@@ -25,7 +23,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 4
     region: content
   field_b_id:
     type: string
@@ -33,15 +31,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 103
-    region: content
-  field_b_json_file:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 104
+    weight: 0
     region: content
   field_b_sections_elg_criteria:
     type: entity_reference_revisions_entity_view
@@ -50,14 +40,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_b_summary:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 106
+    weight: 3
     region: content
   field_b_time_estimate:
     type: string
@@ -65,7 +55,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 107
+    weight: 2
     region: content
   field_b_title_prefix:
     type: string
@@ -73,12 +63,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 109
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 7
     region: content
 hidden:
   langcode: true

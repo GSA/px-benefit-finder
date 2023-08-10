@@ -908,8 +908,8 @@ const content = `{
     {
       "benefit": {
         "title": "Test More Information Needed Benefit",
-        "headline": "Test Likely Eligible Criteria",
-        "summary": "User will meet all these eligibility criteria",
+        "headline": "Test More Information Needed Criteria",
+        "summary": "User will have some undefined values from not having completed enough criteria inputs related to the criteria.",
         "eligibility": [
           {
             "criteriaKey": "applicant_relation",

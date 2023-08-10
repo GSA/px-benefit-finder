@@ -78,34 +78,70 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
     )
   }
 
+  /**
+   * a functional component that list unmet criteria
+   * @component
+   * @param {array} item - an array of unmet criteria
+   * @return {html} returns an unorderd list
+   */
+  const MoreInfoList = ({ items }) => {
+    return (
+      <div className="unmet-criteria-group">
+        <div className="unmet-criteria-title">MORE INFORMATION NEEDED</div>
+        <ul className="unmet-criteria-list">
+          {items.map((item, index) => {
+            const { label } = item
+            return (
+              <li key={index} className="unmet-criteria-item">
+                {label}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    )
+  }
+
   return (
     <div className="benefit-accordion-group">
       <ExpandAll />
       {data &&
         data.map((item, index) => {
-          const {
-            agency,
-            eligibility,
-            initialEligibilityLength,
-            sourceLink,
-            summary,
-            title,
-          } = item[entryKey]
+          const { agency, eligibility, sourceLink, summary, title } =
+            item[entryKey]
           // filter to get benefit criteria matches
           const eligibleBenefits = eligibility.filter(
             item => item.isEligible === true
           )
           // filter to get unmet criteria
           const notEligibleBenefits = eligibility.filter(
-            item => !item.isEligible
+            item => item.isEligible === false || item.isEligible === undefined
+          )
+
+          // filter to get criteria without user values to compare with
+          const moreInformationNeeded = eligibility.filter(
+            item => item.isEligible === 'undefined'
           )
           // determine the eligibility statues based on the benefits length
+          // Total Criteria = y
+          // Met Criteria = x
+          // Not Met Criteria = z
+
+          // Criteria Met Length	Label
+          // x === y	"Likely Eligible"
+          // x !== 0 && x < y	"Potentially Eligible"
+          // x === 0	"More Information Needed"
+          // Criteria Not Met	Label
+          // z > 0	"Not Eligible"
           const eligibleStatus =
-            eligibleBenefits.length === initialEligibilityLength
+            eligibleBenefits.length === eligibility.length
               ? 'Likely Eligible'
               : eligibleBenefits.length > 0 &&
-                eligibleBenefits.length < initialEligibilityLength
+                eligibleBenefits.length < eligibility.length &&
+                moreInformationNeeded.length === 0
               ? 'Potentially  Eligible'
+              : moreInformationNeeded.length > 0
+              ? 'More Information Needed'
               : 'Not Eligible'
 
           return (
@@ -128,9 +164,14 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
               <KeyElegibilityCrieriaList
                 className="benefit-criteria-list"
                 data={eligibleBenefits}
-                initialEligibilityLength={initialEligibilityLength}
+                initialEligibilityLength={eligibility.length}
               />
-              <NotEligibleList items={notEligibleBenefits} />
+              {notEligibleBenefits.length > 0 && (
+                <NotEligibleList items={notEligibleBenefits} />
+              )}
+              {moreInformationNeeded.length > 0 && (
+                <MoreInfoList items={moreInformationNeeded} />
+              )}
               <Alert className="benefit-alert">
                 Additional eligibility criteria may apply. Please visit agency
                 for full requirements.

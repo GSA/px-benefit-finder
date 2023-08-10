@@ -7,6 +7,17 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
   >
     Your potential benefits
   </h2>
+  <div
+    className="benefit-accordion-group"
+  >
+    <button
+      className=""
+      onClick={[Function]}
+      type="button"
+    >
+      Expand all +
+    </button>
+  </div>
   <button
     className=""
     onClick={[Function]}

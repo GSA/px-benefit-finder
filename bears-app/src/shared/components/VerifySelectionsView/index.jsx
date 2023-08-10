@@ -37,7 +37,7 @@ const VerifySelectionsView = ({
                     item.fieldset.inputs[0].inputCriteria.values.find(
                       x => x.selected
                     )
-
+                  // if no value then return generic message
                   return result !== undefined ? (
                     <div>
                       <Heading headingLevel={5} key={`${criteriaId}`}>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import {
+  Alert,
   Button,
   Fieldset,
   Heading,
@@ -162,20 +163,14 @@ const LifeEventSection = ({
       />
       {currentData && (
         <div id="benefit-section" onChange={() => handleUpdateData}>
+          <Alert
+            alertFieldRef={alertFieldRef}
+            heading={ui.alertBanner.heading}
+            description={ui.alertBanner.description}
+            error
+          ></Alert>
           <Heading headingLevel={2}>{currentData.section.heading}</Heading>
           <Paragraph>{currentData.section.description}</Paragraph>
-          <div
-            className="usa-alert usa-alert--error display-none"
-            role="alert"
-            ref={alertFieldRef}
-          >
-            <div className="usa-alert__body">
-              <h4 className="usa-alert__heading">Error status</h4>
-              <p className="usa-alert__text">
-                All fields marked required must be completed.
-              </p>
-            </div>
-          </div>
           {currentData.section.fieldsets.map((item, i) => {
             return item.fieldset.inputs[0].inputCriteria.type === 'select' ? (
               <Fieldset

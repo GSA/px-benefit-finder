@@ -9,14 +9,34 @@ import { useHandleClassName } from '../../hooks/useHandleClassName'
  * @return {html} returns a wrapped paragraph
  */
 
-const Alert = ({ className, children }) => {
-  const defaultClasses = ['usa-alert', 'usa-alert--info']
+const Alert = ({
+  className,
+  children,
+  alertFieldRef,
+  heading,
+  description,
+  error,
+}) => {
+  const defaultClasses = error
+    ? ['usa-alert', 'usa-alert--error', 'display-none']
+    : ['usa-alert', 'usa-alert--info']
 
   return (
-    <div className={useHandleClassName({ className, defaultClasses })}>
-      <div className="usa-alert__body">
-        <p className="usa-alert__text">{children}</p>
-      </div>
+    <div
+      className={useHandleClassName({ className, defaultClasses })}
+      role="alert"
+      ref={alertFieldRef}
+    >
+      {children ? (
+        <div className="usa-alert__body">
+          <p className="usa-alert__text">{children}</p>
+        </div>
+      ) : (
+        <div className="usa-alert__body">
+          <h4 className="usa-alert__heading">{heading}</h4>
+          <p className="usa-alert__text">{description}</p>
+        </div>
+      )}
     </div>
   )
 }

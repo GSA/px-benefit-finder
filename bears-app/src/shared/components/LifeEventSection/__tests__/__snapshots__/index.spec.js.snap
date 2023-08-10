@@ -71,18 +71,8 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
     id="benefit-section"
     onChange={[Function]}
   >
-    <h2
-      className=""
-    >
-      About the Applicant
-    </h2>
-    <p
-      className=""
-    >
-      The applicant is the person who will receive the benefits.
-    </p>
     <div
-      className="usa-alert usa-alert--error display-none"
+      className=""
       role="alert"
     >
       <div
@@ -100,6 +90,16 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         </p>
       </div>
     </div>
+    <h2
+      className=""
+    >
+      About the Applicant
+    </h2>
+    <p
+      className=""
+    >
+      The applicant is the person who will receive the benefits.
+    </p>
     <fieldset
       className="usa-fieldset"
     >
@@ -367,6 +367,12 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         className="usa-legend legend"
       >
         Applicant citizen status
+        <span
+          className="usa-hint usa-hint--required required"
+          title="required"
+        >
+          (Required)
+        </span>
       </legend>
       <div>
         You are a U.S. citizen or eligible non-citizen.

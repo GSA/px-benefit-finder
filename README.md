@@ -78,3 +78,37 @@ cd bin/cloudgov
 ```
 ./db-backup.sh
 ```
+
+
+# VDI Login Guide for the BEARS Team Members
+## What is VDI?
+
+The Virtual Desktop Infrastructure (VDI) is a technology that allows you to access a remote desktop environment from your local device. This is particularly useful for accessing GSA resources and applications securely from outside the GSA network.
+
+## Steps to Login
+
+
+1. Access https://secureauth.gsa.gov/secureauth14/, authenticate yourself with your GSA Credentials and get the TOKEN provided.
+
+2. In a different browser, access the Citrix VDI at https://vdi.anywhere.gsa.gov/ and make sure see the below secreen:
+
+![Here is the VDI Login Page you'll see](image.png)
+
+3. Enter your GSA Username and Password as well as the TOKEN you get from the 1st step above.
+
+4. The VDI Desktops you have available will be presented to you after you successfully login. Click on the monitor icon for the VDI desktop you wish to launch.
+
+![VDI Desktop](image-1.png)
+
+5. You will notice a file downloaded in your browser. Click on the ^ to the right of the file name and select `Always open files of this type`.
+
+6. Click on the monitor icon for the Desktop you want to launch. This time (and going forward) the Desktop should launch without showing a downloaded file.
+
+## Additional Info
+
+You may get additional information about the VDI and the Citrix (a Windows virtual desktop client) app from the TTS Handbook at https://handbook.tts.gsa.gov/tools/virtual-desktop/.
+
+
+## Tips
+
+To move files between your laptop and your Citrix desktop, use Google Drive. You can use Chrome in the Citrix desktop to download and upload files.

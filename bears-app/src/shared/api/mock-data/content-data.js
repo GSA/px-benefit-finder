@@ -265,7 +265,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_citizen_status",
                 "legend": "Applicant citizen status",
-                "required": "FALSE",
+                "required": "TRUE",
                 "hint": "",
                 "inputs": [
                   {

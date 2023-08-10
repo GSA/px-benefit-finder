@@ -77,13 +77,21 @@ const LifeEventSection = ({
     return true
   }
 
-  // collect all the required fields in the current step
+  /**
+   * a function that collect all the required fields in the current step
+   * @function
+   */
   const getrequiredFieldsRefs = () => {
     requiredFieldsRef.current.forEach(field => {
       setValues([...field.elements])
     })
   }
 
+  /**
+   * a function that checks if all our required fields have values
+   * @function
+   * @return {func} either success or alert handler
+   */
   const handleCheckRequriedFields = () => {
     // collect all the required fields in the current step
     getrequiredFieldsRefs()
@@ -94,6 +102,7 @@ const LifeEventSection = ({
       : handleAlert()
   }
 
+  // check for all required fields and scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0)
     getrequiredFieldsRefs()
@@ -171,8 +180,16 @@ const LifeEventSection = ({
           ></Alert>
           <Heading headingLevel={2}>{currentData.section.heading}</Heading>
           <Paragraph>{currentData.section.description}</Paragraph>
+
+          {/* TODO: create handler component for input case switching */}
+
           {currentData.section.fieldsets.map((item, i) => {
             return item.fieldset.inputs[0].inputCriteria.type === 'select' ? (
+              //
+              //
+              // case select
+              //
+              //
               <Fieldset
                 key={`${item.fieldset.criteriaKey}-${i}`}
                 legend={item.fieldset.legend}
@@ -208,6 +225,11 @@ const LifeEventSection = ({
                 })}
               </Fieldset>
             ) : item.fieldset.inputs[0].inputCriteria.type === 'radio' ? (
+              //
+              //
+              // case radio
+              //
+              //
               <Fieldset
                 key={`${item.fieldset.criteriaKey}-${i}`}
                 legend={item.fieldset.legend}

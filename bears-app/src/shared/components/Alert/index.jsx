@@ -6,7 +6,11 @@ import { useHandleClassName } from '../../hooks/useHandleClassName'
  * @component
  * @param {string} className - inherited classes
  * @param {string} children - inherited children
- * @return {html} returns a wrapped paragraph
+ * @param {any} alertFieldRef - inherited ref hook
+ * @param {string} heading - inherited heading
+ * @param {string} description - inherited description
+ * @param {bool} error - variant
+ * @return {html} returns a wrapped paragraph styled as usa-alert
  */
 
 const Alert = ({

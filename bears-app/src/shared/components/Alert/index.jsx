@@ -48,6 +48,10 @@ const Alert = ({
 Alert.propTypes = {
   className: PropTypes.string,
   children: PropTypes.string,
+  alertFieldRef: PropTypes.any,
+  heading: PropTypes.string,
+  description: PropTypes.string,
+  error: PropTypes.bool,
 }
 
 export default Alert

@@ -33,7 +33,9 @@ function App() {
 
   // destructure data
   const { lifeEventForm } = JSON.parse(content)
-  const stepDataArray = [...lifeEventForm.sectionsEligibilityCriteria]
+  const [stepDataArray, setStepDataArray] = useState([
+    ...lifeEventForm.sectionsEligibilityCriteria,
+  ])
 
   // state
   const [t] = useState(handleLanguage) // tranlations
@@ -67,6 +69,7 @@ function App() {
               step={step}
               setStep={setStep}
               data={stepDataArray}
+              handleData={() => setStepDataArray()}
               stepData={stepData}
               setStepData={setStepData}
               verifyStep={verifyStep}
@@ -85,6 +88,7 @@ function App() {
               setViewResults(true)
             }}
             ui={t.verifySelectionsView}
+            data={stepDataArray}
           />
         )}
       </div>

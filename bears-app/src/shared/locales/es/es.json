@@ -37,6 +37,10 @@
   "requiredLabel": {
     "value": "Se requiere"
   },
+  "alertBanner": {
+    "heading": "Estado de error",
+    "description": "Todos los campos marcados como obligatorios deben ser completados."
+  },
   "buttonGroup": [
     {
       "value": "Volver atrás"

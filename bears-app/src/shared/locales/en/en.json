@@ -37,6 +37,10 @@
   "requiredLabel": {
     "value": "Required"
   },
+  "alertBanner": {
+    "heading": "Error status",
+    "description": "All fields marked required must be completed."
+  },
   "buttonGroup": [
     {
       "value": "Back"

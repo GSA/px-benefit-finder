@@ -8,25 +8,25 @@ import './_index.scss'
  * @component
  * @param {string} label - displayed in ui
  * @param {string} value - assigned to value param in html
- * @param {boolean} defaultChecked - determines if the radio is default selected
+ * @param {boolean} checked - determines if the radio is selected
+ * @param {func} onChange - inherited onChange handler
  * @return {html} returns a semantic input as type radio element
  */
 
-const Radio = ({ label, value, checked, onChange, requiredLabel }) => {
-  // console.log(handleErrorState)
+const Radio = ({ id, label, value, checked, onChange }) => {
   return (
     <>
       <div className="usa-radio">
         <input
           className="usa-radio__input"
-          id={label}
+          id={id}
           type="radio"
           name={label}
           value={value || label}
           checked={checked}
           onChange={onChange}
         />
-        <Label className="usa-radio__label" htmlFor={label} label={label} />
+        <Label className="usa-radio__label" htmlFor={id} label={value} />
       </div>
     </>
   )

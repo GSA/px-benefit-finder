@@ -88,7 +88,7 @@ The Virtual Desktop Infrastructure (VDI) is a technology that allows you to acce
 ## Steps to Login
 
 
-1. Access https://secureauth.gsa.gov/, authenticate yourself with your GSA Credentials and get the TOKEN provided.
+1. Access https://secureauth.gsa.gov/secureauth14/, authenticate yourself with your GSA Credentials and get the TOKEN provided.
 
 2. In a different browser, access the Citrix VDI at https://vdi.anywhere.gsa.gov/ and make sure see the below secreen:
 

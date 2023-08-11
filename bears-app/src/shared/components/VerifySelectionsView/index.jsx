@@ -35,7 +35,7 @@ const VerifySelectionsView = ({
                   const criteriaId = `criteria-${item.fieldset.criteriaKey}-${i}`
                   const result =
                     item.fieldset.inputs[0].inputCriteria.values.find(
-                      x => x.selected
+                      value => value.selected
                     )
                   // if no value then return generic message
                   return result !== undefined ? (

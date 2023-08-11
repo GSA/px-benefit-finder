@@ -129,18 +129,14 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
 
           // Criteria Met Length	Label
           // x === y	"Likely Eligible"
-          // x !== 0 && x < y	"Potentially Eligible"
-          // x === undefined "More Information Needed"
+          // z === 0 && x === undefined length > 0 "More Information Needed"
           // Criteria Not Met	Label
           // z > 0	"Not Eligible"
           const eligibleStatus =
             eligibleBenefits.length === eligibility.length
               ? 'Likely Eligible'
-              : eligibleBenefits.length > 0 &&
-                eligibleBenefits.length < eligibility.length &&
-                moreInformationNeeded.length === 0
-              ? 'Potentially  Eligible'
-              : moreInformationNeeded.length > 0
+              : notEligibleBenefits.length === 0 &&
+                moreInformationNeeded.length > 0
               ? 'More Information Needed'
               : 'Not Eligible'
 

@@ -41,8 +41,7 @@ const ResultsView = ({
 
   // Criteria Met Length	Label
   // x === y	"Likely Eligible"
-  // x !== 0 && x < y	"Potentially Eligible"
-  // x === undefined "More Information Needed"
+  // z === 0 && x === undefined length > 0 "More Information Needed"
   // Criteria Not Met	Label
   // z > 0	"Not Eligible"
 

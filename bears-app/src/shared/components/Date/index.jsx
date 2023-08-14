@@ -1,8 +1,21 @@
 import PropTypes from 'prop-types'
+import './_index.scss'
 
+/**
+ * a parse our date object
+ * @component
+ * @param {func} onChange - inherited change handler
+ * @param {bool} required - inherited bool value to manage required state
+ * @param {object} value - inherited state values
+ * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
+ */
 const Date = ({ onChange, value, required }) => {
-  // value should be standard format
-  // ie 1995-12-17T03:24:00
+  /**
+   * a parse our date object
+   * @function
+   * @param {object} value - { day, month, year }
+   * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
+   */
   const parseDate = value => {
     const d = value && new window.Date(value.year, value.month, value.day)
     return d
@@ -91,7 +104,9 @@ const Date = ({ onChange, value, required }) => {
 }
 
 Date.propTypes = {
-  props: PropTypes.any,
+  onChange: PropTypes.func,
+  required: PropTypes.bool,
+  value: PropTypes.object,
 }
 
 export default Date

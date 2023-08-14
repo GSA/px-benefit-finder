@@ -106,7 +106,156 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
       <legend
         className="usa-legend legend"
       >
+        Date of birth
+      </legend>
+      <div>
+        <div
+          className="usa-memorable-date"
+        >
+          <div
+            className="usa-form-group usa-form-group--month usa-form-group--select"
+          >
+            <label
+              className="usa-label"
+              htmlFor="date_of_birth_month"
+            >
+              Month
+            </label>
+            <select
+              aria-describedby="mdHint"
+              className="usa-select"
+              id="date_of_birth_month"
+              name="date_of_birth_month"
+              onChange={[Function]}
+              required="required"
+              value=""
+            >
+              <option
+                value={true}
+              >
+                - Select -
+              </option>
+              <option
+                value="0"
+              >
+                01 - January
+              </option>
+              <option
+                value="1"
+              >
+                02 - February
+              </option>
+              <option
+                value="2"
+              >
+                03 - March
+              </option>
+              <option
+                value="3"
+              >
+                04 - April
+              </option>
+              <option
+                value="4"
+              >
+                05 - May
+              </option>
+              <option
+                value="5"
+              >
+                06 - June
+              </option>
+              <option
+                value="6"
+              >
+                07 - July
+              </option>
+              <option
+                value="7"
+              >
+                08 - August
+              </option>
+              <option
+                value="8"
+              >
+                09 - September
+              </option>
+              <option
+                value="9"
+              >
+                10 - October
+              </option>
+              <option
+                value="10"
+              >
+                11 - November
+              </option>
+              <option
+                value="11"
+              >
+                12 - December
+              </option>
+            </select>
+          </div>
+          <div
+            className="usa-form-group usa-form-group--day"
+          >
+            <label
+              className="usa-label"
+              htmlFor="date_of_birth_day"
+            >
+              Day
+            </label>
+            <input
+              aria-describedby="mdHint"
+              className="usa-input"
+              id="date_of_birth_day"
+              inputMode="numeric"
+              maxLength="2"
+              name="date_of_birth_day"
+              onChange={[Function]}
+              pattern="[0-9]*"
+              value=""
+            />
+          </div>
+          <div
+            className="usa-form-group usa-form-group--year"
+          >
+            <label
+              className="usa-label"
+              htmlFor="date_of_birth_year"
+            >
+              Year
+            </label>
+            <input
+              aria-describedby="mdHint"
+              className="usa-input"
+              id="date_of_birth_year"
+              inputMode="numeric"
+              maxLength="4"
+              minLength="4"
+              name="date_of_birth_year"
+              onChange={[Function]}
+              pattern="[0-9]*"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset
+      className="usa-fieldset"
+    >
+      <legend
+        className="usa-legend legend"
+      >
         Applicant's relationship to the person who died
+        <span
+          className="usa-hint usa-hint--required required"
+          title="required"
+        >
+          (Required)
+        </span>
       </legend>
       <div>
         <label
@@ -114,43 +263,39 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
           htmlFor="applicant_relation_0"
         />
         <select
-          className="usa-select"
+          className="usa-select required-field"
           id="applicant_relation_0"
           name="applicant_relation_0"
           onChange={[Function]}
+          value=""
         >
           <option
-            selected={false}
-            value="-Select-"
+            disabled={true}
+            value=""
           >
             -Select-
           </option>
           <option
-            selected={false}
             value="spouse"
           >
             spouse
           </option>
           <option
-            selected={false}
             value="child"
           >
             child
           </option>
           <option
-            selected={false}
             value="parent"
           >
             parent
           </option>
           <option
-            selected={false}
             value="other family member"
           >
             other family member
           </option>
           <option
-            selected={false}
             value="personal/official representative"
           >
             personal/official representative
@@ -172,37 +317,37 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
           htmlFor="applicant_marital_status_0"
         />
         <select
-          className="usa-select"
+          className="usa-select "
           id="applicant_marital_status_0"
           name="applicant_marital_status_0"
           onChange={[Function]}
+          value=""
         >
           <option
-            selected={false}
-            value="-Select-"
+            disabled={true}
+            value=""
           >
             -Select-
           </option>
           <option
-            selected={false}
+            value=""
+          />
+          <option
             value="married"
           >
             married
           </option>
           <option
-            selected={false}
             value="not married"
           >
             not married
           </option>
           <option
-            selected={false}
             value="widowed"
           >
             widowed
           </option>
           <option
-            selected={false}
             value="divorced"
           >
             divorced
@@ -217,6 +362,12 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         className="usa-legend legend"
       >
         Applicant care for child
+        <span
+          className="usa-hint usa-hint--required required"
+          title="required"
+        >
+          (Required)
+        </span>
       </legend>
       <div>
         You are caring for the child of the person who died, is retired or has disabilities, and the child is under age 16 or is disabled.
@@ -225,7 +376,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         >
           <input
             checked={false}
-            className="usa-radio__input"
+            className="usa-radio__input required-field"
             id="applicant_care_for_child_0_0"
             name="Yes_applicant_care_for_child_0_0"
             onChange={[Function]}
@@ -244,7 +395,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         >
           <input
             checked={false}
-            className="usa-radio__input"
+            className="usa-radio__input required-field"
             id="applicant_care_for_child_0_1"
             name="No_applicant_care_for_child_0_1"
             onChange={[Function]}
@@ -275,7 +426,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         >
           <input
             checked={false}
-            className="usa-radio__input"
+            className="usa-radio__input "
             id="applicant_paid_funeral_expenses_0_0"
             name="Yes_applicant_paid_funeral_expenses_0_0"
             onChange={[Function]}
@@ -294,7 +445,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         >
           <input
             checked={false}
-            className="usa-radio__input"
+            className="usa-radio__input "
             id="applicant_paid_funeral_expenses_0_1"
             name="No_applicant_paid_funeral_expenses_0_1"
             onChange={[Function]}
@@ -325,7 +476,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         >
           <input
             checked={false}
-            className="usa-radio__input"
+            className="usa-radio__input "
             id="applicant_funeral_reimbursment_0_0"
             name="Yes_applicant_funeral_reimbursment_0_0"
             onChange={[Function]}
@@ -344,7 +495,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         >
           <input
             checked={false}
-            className="usa-radio__input"
+            className="usa-radio__input "
             id="applicant_funeral_reimbursment_0_1"
             name="No_applicant_funeral_reimbursment_0_1"
             onChange={[Function]}
@@ -381,7 +532,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         >
           <input
             checked={false}
-            className="usa-radio__input"
+            className="usa-radio__input required-field"
             id="applicant_citizen_status_0_0"
             name="Yes_applicant_citizen_status_0_0"
             onChange={[Function]}
@@ -400,7 +551,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         >
           <input
             checked={false}
-            className="usa-radio__input"
+            className="usa-radio__input required-field"
             id="applicant_citizen_status_0_1"
             name="No_applicant_citizen_status_0_1"
             onChange={[Function]}

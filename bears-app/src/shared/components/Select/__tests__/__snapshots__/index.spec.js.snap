@@ -8,26 +8,29 @@ Array [
     Dropdown Label
   </label>,
   <select
-    className="usa-select"
+    className="usa-select "
+    value=""
   >
     <option
-      selected={false}
+      disabled={true}
+      value=""
+    >
+      -Select-
+    </option>
+    <option
       value=""
     />
     <option
-      selected={false}
       value="value-1"
     >
       value-1
     </option>
     <option
-      selected={false}
       value="value-2"
     >
       value-2
     </option>
     <option
-      selected={false}
       value="value-3"
     >
       value-3

@@ -1,15 +1,12 @@
 import PropTypes from 'prop-types'
 
-const Date = ({ onChange, value }) => {
+const Date = ({ onChange, value, required }) => {
   // value should be standard format
   // ie 1995-12-17T03:24:00
-  console.log('value in component', value)
   const parseDate = value => {
     const d = value && new window.Date(value.year, value.month, value.day)
     return d
   }
-
-  console.log(parseDate(value))
 
   return (
     <div className="usa-memorable-date">
@@ -18,7 +15,9 @@ const Date = ({ onChange, value }) => {
           Month
         </label>
         <select
-          className="usa-select"
+          className={`usa-select ${
+            required === 'TRUE' ? 'required-field' : ''
+          }`}
           id="date_of_birth_month"
           name="date_of_birth_month"
           aria-describedby="mdHint"
@@ -50,7 +49,7 @@ const Date = ({ onChange, value }) => {
           Day
         </label>
         <input
-          className="usa-input"
+          className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
           aria-describedby="mdHint"
           id="date_of_birth_day"
           name="date_of_birth_day"
@@ -70,7 +69,7 @@ const Date = ({ onChange, value }) => {
           Year
         </label>
         <input
-          className="usa-input"
+          className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
           aria-describedby="mdHint"
           id="date_of_birth_year"
           name="date_of_birth_year"

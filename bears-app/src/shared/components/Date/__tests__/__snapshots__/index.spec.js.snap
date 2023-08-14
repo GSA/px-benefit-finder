@@ -15,7 +15,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     </label>
     <select
       aria-describedby="mdHint"
-      className="usa-select"
+      className="usa-select "
       id="date_of_birth_month"
       name="date_of_birth_month"
       required="required"
@@ -99,7 +99,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     </label>
     <input
       aria-describedby="mdHint"
-      className="usa-input"
+      className="usa-input "
       id="date_of_birth_day"
       inputMode="numeric"
       maxLength="2"
@@ -119,7 +119,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     </label>
     <input
       aria-describedby="mdHint"
-      className="usa-input"
+      className="usa-input "
       id="date_of_birth_year"
       inputMode="numeric"
       maxLength="4"

@@ -153,7 +153,7 @@ const LifeEventSection = ({
     )
     // get those values
     const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
-    // console.log(foundCriteria)
+
     inputValues.forEach(value => {
       if (value.value === event.target.value) {
         value.selected = true
@@ -172,7 +172,6 @@ const LifeEventSection = ({
    */
   const handleDateChanged = (event, criteriaKey) => {
     const newData = { ...currentData }
-    console.log(event.target.id, criteriaKey)
 
     const id = event.target.id
 
@@ -198,12 +197,11 @@ const LifeEventSection = ({
       inputValues[0].value.year = event.target.value
     }
 
-    console.log(inputValues[0])
     inputValues[0].value = { ...inputValues[0].value }
     inputValues[0].selected = true
     setCurrentData(newData)
   }
-  // console.log('state', year, month, day)
+
   // manage the display of our modal initializer
   useEffect(() => {
     step === data.length ? setModal(true) : setModal(false)
@@ -335,6 +333,10 @@ const LifeEventSection = ({
                   return (
                     <div key={fieldSetId}>
                       <Date
+                        required={
+                          Object.keys(input.inputCriteria.values[0]?.value)
+                            .length < 3 && item.fieldset.required
+                        }
                         value={input.inputCriteria.values[0]?.value}
                         onChange={event =>
                           handleDateChanged(event, item.fieldset.criteriaKey)

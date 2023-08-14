@@ -107,6 +107,12 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
         className="usa-legend legend"
       >
         Date of birth
+        <span
+          className="usa-hint usa-hint--required required"
+          title="required"
+        >
+          (Required)
+        </span>
       </legend>
       <div>
         <div
@@ -123,7 +129,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
             </label>
             <select
               aria-describedby="mdHint"
-              className="usa-select"
+              className="usa-select required-field"
               id="date_of_birth_month"
               name="date_of_birth_month"
               onChange={[Function]}
@@ -208,7 +214,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
             </label>
             <input
               aria-describedby="mdHint"
-              className="usa-input"
+              className="usa-input required-field"
               id="date_of_birth_day"
               inputMode="numeric"
               maxLength="2"
@@ -229,7 +235,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
             </label>
             <input
               aria-describedby="mdHint"
-              className="usa-input"
+              className="usa-input required-field"
               id="date_of_birth_year"
               inputMode="numeric"
               maxLength="4"

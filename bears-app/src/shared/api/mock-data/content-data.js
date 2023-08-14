@@ -31,7 +31,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_date_of_birth",
                 "legend": "Date of birth",
-                "required": "FALSE",
+                "required": "TRUE",
                 "hint": "For example: 4 28 1986",
                 "inputs": [
                   {

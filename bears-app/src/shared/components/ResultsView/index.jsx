@@ -1,5 +1,7 @@
+import { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { BenefitAccordionGroup, Heading, StepBackLink } from '../index'
+import { BenefitAccordionGroup, Heading, StepBackLink, Chevron } from '../index'
+import createMarkup from '../../utils/createMarkup'
 
 /**
  * a functional component that renders a view of the form benefit state values
@@ -11,15 +13,9 @@ import { BenefitAccordionGroup, Heading, StepBackLink } from '../index'
  * @param {array} stepDataArray inherited state of inupt values from form entry
  * @return {html} returns a view page of filtered benefits
  */
-const ResultsView = ({
-  handleStepBack,
-  ui,
-  data,
-  // setBenefitsArray,
-  // stepDataArray,
-}) => {
+const ResultsView = ({ handleStepBack, ui, data }) => {
   // console.log(data)
-  const { heading, stepBackLink } = ui
+  const { heading, stepBackLink, chevron, description } = ui
 
   // collect all the criteria keys and selected criteria values into an array
   // const selectedCriteria = stepDataArray
@@ -59,11 +55,19 @@ const ResultsView = ({
   // }
 
   // console.log(likelyEligible(selectedCriteria, data))
+  console.log(chevron)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   // compare the selected criteria array with benefits
   return (
     <div>
+      <Chevron heading={chevron.heading} description={chevron.description} />
+      <StepBackLink setCurrent={handleStepBack}>{stepBackLink}</StepBackLink>
       <Heading headingLevel={2}>{heading}</Heading>
+      <div dangerouslySetInnerHTML={createMarkup(description)} />
       {/* map all the benefits into cards */}
       <BenefitAccordionGroup data={data} entryKey={'benefit'} expandAll />
       {/* {data.map((item, i) => {

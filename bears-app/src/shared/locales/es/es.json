@@ -106,5 +106,10 @@
   "benefitAccordionGroup": {
     "closedState": "Abrir todos",
     "openState": "Cerrar todos"
+  },
+  "sectionHeadings": {
+    "start": "Preguntas completas",
+    "continue": "Preguntas Continuación",
+    "final": "Preguntas finales"
   }
 }

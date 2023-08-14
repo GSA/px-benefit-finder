@@ -1,23 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VerifySelectionsView renders a match to the previous snapshot 1`] = `
-<div>
-  <h2
+<div
+  className="verify-selections-view"
+>
+  <h1
     className=""
+  />
+  <div
+    className="section-wrapper"
   >
-    Review and Confirm
-  </h2>
-  <button
-    className=""
-    type="button"
-  >
-    Back
-  </button>
-  <button
-    className=""
-    type="button"
-  >
-    Confirm
-  </button>
+    <div
+      className="section"
+    >
+      <button
+        className=""
+        type="button"
+      />
+      <div />
+      <button
+        className=""
+        type="button"
+      >
+        Back
+      </button>
+      <button
+        className=""
+        type="button"
+      >
+        Confirm
+      </button>
+    </div>
+  </div>
 </div>
 `;

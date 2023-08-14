@@ -40,12 +40,15 @@ const LifeEventSection = ({
   const [modal, setModal] = useState(false)
   const [currentData, setCurrentData] = useState(() => data[step - 1])
   const [values, setValues] = useState([])
-  // const [month, setMonth] = useState('')
-  // const [day, setDay] = useState('')
-  // const [year, setYear] = useState('')
 
   // desctructure data
-  const { stepIndicator, buttonGroup, reviewSelectionModal, requiredLabel } = ui
+  const {
+    stepIndicator,
+    buttonGroup,
+    reviewSelectionModal,
+    requiredLabel,
+    sectionHeadings,
+  } = ui
 
   // establish refs
   const alertFieldRef = useRef(null)
@@ -210,8 +213,12 @@ const LifeEventSection = ({
 
   return (
     <>
-      <Heading className="section-heading" headingLevel={2}>
-        Section Heading
+      <Heading className="section-heading" headingLevel={1}>
+        {step === data.length
+          ? `${sectionHeadings.final}`
+          : step - 1 === 0
+          ? `${sectionHeadings.start}`
+          : `${sectionHeadings.continue}`}
       </Heading>
       <div className="section-wrapper">
         <div className="section">

@@ -54,7 +54,7 @@ function App() {
       {/* {console.log(t)} */}
       <div
         className={`bears-app ${
-          verifyStep === false && step !== 0 ? 'form' : ''
+          step !== 0 && viewResults !== true ? 'form' : ''
         }`}
       >
         {step === 0 ? (
@@ -101,8 +101,10 @@ function App() {
             handleStepForward={() => {
               setViewResults(true)
             }}
-            ui={t.verifySelectionsView}
+            ui={t}
             data={stepDataArray}
+            step={step}
+            setStep={setStep}
           />
         )}
       </div>

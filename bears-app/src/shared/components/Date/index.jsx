@@ -5,7 +5,7 @@ import './_index.scss'
  * a parse our date object
  * @component
  * @param {func} onChange - inherited change handler
- * @param {bool} required - inherited bool value to manage required state
+ * @param {string} required - inherited string value to manage required state
  * @param {object} value - inherited state values
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
@@ -105,7 +105,7 @@ const Date = ({ onChange, value, required }) => {
 
 Date.propTypes = {
   onChange: PropTypes.func,
-  required: PropTypes.bool,
+  required: PropTypes.string,
   value: PropTypes.object,
 }
 

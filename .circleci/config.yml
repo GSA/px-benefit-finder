@@ -92,7 +92,6 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_content && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
-                                  /var/www/vendor/bin/drush -y config:import --partial --source=modules/custom/usagov_bears/modules/usagov_bears_content/config/optional && \
                                   /var/www/vendor/bin/drush cr"
   
   component-library:

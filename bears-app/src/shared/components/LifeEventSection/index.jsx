@@ -65,6 +65,7 @@ const LifeEventSection = ({
       field.classList.contains('required-field') &&
         field.classList.add('usa-input--error')
     })
+    window.scrollTo(0, 0)
     return false
   }
 

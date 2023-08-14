@@ -13,12 +13,14 @@ import './_index.scss'
  * @return {html} returns a semantic input as type radio element
  */
 
-const Radio = ({ id, label, value, checked, onChange }) => {
+const Radio = ({ id, label, value, checked, onChange, required }) => {
   return (
     <>
       <div className="usa-radio">
         <input
-          className="usa-radio__input"
+          className={`usa-radio__input ${
+            required === 'TRUE' ? 'required-field' : ''
+          }`}
           id={id}
           type="radio"
           name={label}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {
   Alert,
   Button,
+  Date,
   Fieldset,
   Heading,
   Paragraph,
@@ -39,14 +40,17 @@ const LifeEventSection = ({
   const [modal, setModal] = useState(false)
   const [currentData, setCurrentData] = useState(() => data[step - 1])
   const [values, setValues] = useState([])
+  // const [month, setMonth] = useState('')
+  // const [day, setDay] = useState('')
+  // const [year, setYear] = useState('')
 
   // desctructure data
   const { stepIndicator, buttonGroup, reviewSelectionModal, requiredLabel } = ui
 
   // establish refs
-  const requiredFieldsRef = useRef([])
   const alertFieldRef = useRef(null)
 
+  // TODO: // see if there is a way to not use so many DOM checks for vaildation
   // handlers
   /**
    * a function that handles class state on our collected required fields
@@ -58,10 +62,12 @@ const LifeEventSection = ({
     alertFieldRef.current.classList.remove('display-none')
     // add to all the collected error fields an error class
     values.forEach(field => {
-      field.classList.add('usa-input--error')
+      field.classList.contains('required-field') &&
+        field.classList.add('usa-input--error')
     })
     return false
   }
+
   /**
    * a function that triggers the modal to a closed state
    * @function
@@ -81,10 +87,9 @@ const LifeEventSection = ({
    * a function that collect all the required fields in the current step
    * @function
    */
-  const getrequiredFieldsRefs = () => {
-    requiredFieldsRef.current.forEach(field => {
-      setValues([...field.elements])
-    })
+  const getRequiredFields = () => {
+    const collectedNodeList = document.querySelectorAll('.required-field')
+    setValues(Array.from(collectedNodeList))
   }
 
   /**
@@ -94,10 +99,13 @@ const LifeEventSection = ({
    */
   const handleCheckRequriedFields = () => {
     // collect all the required fields in the current step
-    getrequiredFieldsRefs()
-    // check if any of these elements are checked (will add others later)
-    const valid = element => element.checked === true
-    return values.length === 0 || values.some(valid)
+    getRequiredFields()
+    // check if any of these elements are valid (will add others later)
+    const valid = element => {
+      return !element.classList.contains('required-field')
+    }
+
+    return values.length === 0 || values.every(valid)
       ? handleSuccess()
       : handleAlert()
   }
@@ -105,8 +113,8 @@ const LifeEventSection = ({
   // check for all required fields and scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0)
-    getrequiredFieldsRefs()
-  }, [requiredFieldsRef])
+    getRequiredFields()
+  }, [])
 
   /**
    * a function that updates our step count and set our data index
@@ -145,7 +153,7 @@ const LifeEventSection = ({
     )
     // get those values
     const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
-
+    // console.log(foundCriteria)
     inputValues.forEach(value => {
       if (value.value === event.target.value) {
         value.selected = true
@@ -156,6 +164,46 @@ const LifeEventSection = ({
     setCurrentData(newData)
   }
 
+  /**
+   * a function that handles the current selected value of our radio
+   * and clears validation error if resolved
+   * @function
+   * @return {object} object as state
+   */
+  const handleDateChanged = (event, criteriaKey) => {
+    const newData = { ...currentData }
+    console.log(event.target.id, criteriaKey)
+
+    const id = event.target.id
+
+    // construct date in standard time
+
+    // git value by id string match
+    // const standardDateValue = `${year}-${month}-${day}`
+
+    // find the right data based on criteriakey
+    const foundCriteria = newData.section.fieldsets.find(
+      element => element.fieldset.criteriaKey === criteriaKey
+    )
+    // get those values
+    const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
+
+    if (id.includes('day')) {
+      inputValues[0].value.day = event.target.value
+    }
+    if (id.includes('month')) {
+      inputValues[0].value.month = event.target.value
+    }
+    if (id.includes('year')) {
+      inputValues[0].value.year = event.target.value
+    }
+
+    console.log(inputValues[0])
+    inputValues[0].value = { ...inputValues[0].value }
+    inputValues[0].selected = true
+    setCurrentData(newData)
+  }
+  // console.log('state', year, month, day)
   // manage the display of our modal initializer
   useEffect(() => {
     step === data.length ? setModal(true) : setModal(false)
@@ -196,11 +244,6 @@ const LifeEventSection = ({
                 hint={item.fieldset.hint}
                 required={item.fieldset.required}
                 requiredLabel={requiredLabel}
-                alertRef={
-                  item.fieldset.required === 'TRUE'
-                    ? element => (requiredFieldsRef.current = [element])
-                    : null
-                }
               >
                 {item.fieldset.inputs.map((input, index) => {
                   const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
@@ -212,6 +255,10 @@ const LifeEventSection = ({
                   return (
                     <div key={fieldSetId}>
                       <Select
+                        required={
+                          defaultSelected === undefined &&
+                          item.fieldset.required
+                        }
                         htmlFor={fieldSetId}
                         key={fieldSetId}
                         options={inputValues}
@@ -236,22 +283,25 @@ const LifeEventSection = ({
                 hint={item.fieldset.hint}
                 required={item.fieldset.required}
                 requiredLabel={requiredLabel}
-                alertRef={
-                  item.fieldset.required === 'TRUE'
-                    ? element => (requiredFieldsRef.current = [element])
-                    : null
-                }
               >
                 {item.fieldset.inputs.map((input, index) => {
                   const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+
+                  const inputValues = input.inputCriteria.values
+                  const optionSelected = inputValues.find(
+                    value => value.selected !== undefined
+                  )
+
                   return (
                     <div key={fieldSetId}>
                       {input.inputCriteria.label}
                       {/* map the options */}
                       {input.inputCriteria.values.map((option, index) => {
                         const inputId = `${fieldSetId}_${index}`
+
                         return (
                           <Radio
+                            required={!optionSelected && item.fieldset.required}
                             id={inputId}
                             key={inputId}
                             label={`${option.value}_${inputId}`}
@@ -263,6 +313,33 @@ const LifeEventSection = ({
                           />
                         )
                       })}
+                    </div>
+                  )
+                })}
+              </Fieldset>
+            ) : item.fieldset.inputs[0].inputCriteria.type === 'date' ? (
+              //
+              //
+              // case date
+              //
+              //
+              <Fieldset
+                key={`${item.fieldset.criteriaKey}-${i}`}
+                legend={item.fieldset.legend}
+                hint={item.fieldset.hint}
+                required={item.fieldset.required}
+                requiredLabel={requiredLabel}
+              >
+                {item.fieldset.inputs.map((input, index) => {
+                  const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                  return (
+                    <div key={fieldSetId}>
+                      <Date
+                        value={input.inputCriteria.values[0]?.value}
+                        onChange={event =>
+                          handleDateChanged(event, item.fieldset.criteriaKey)
+                        }
+                      />
                     </div>
                   )
                 })}

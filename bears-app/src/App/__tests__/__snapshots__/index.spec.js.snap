@@ -2,7 +2,7 @@
 
 exports[`App renders a match to the previous snapshot 1`] = `
 <div
-  className="bears-app"
+  className="bears-app "
 >
   <div
     className="intro"

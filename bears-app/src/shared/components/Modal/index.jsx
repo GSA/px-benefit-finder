@@ -4,7 +4,17 @@ import PropTypes from 'prop-types'
 import Close from './assets/close.svg'
 import { ObfuscatedLink } from '../index'
 
+import './_index.scss'
+
 const customStyles = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
   content: {
     top: '50%',
     left: '50%',
@@ -12,6 +22,8 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    width: '80%',
+    borderRadius: '8px',
   },
 }
 
@@ -97,7 +109,7 @@ const Modal = ({
     navItemTwoFunction,
   }) => {
     return (
-      <ul className="usa-button-group width-full">
+      <ul className="modal usa-button-group width-full">
         <li className="usa-button-group__item width-full">
           <ObfuscatedLink
             id="navItemOneBtn"
@@ -135,6 +147,13 @@ const Modal = ({
         style={customStyles}
         contentLabel={modalHeading}
       >
+        <button
+          type="button"
+          className="modal-button"
+          onClick={() => handleCloseModal()}
+        >
+          <img src={Close} alt="a plus icon" />
+        </button>
         {children || (
           <GroupNavigation
             navItemOneLabel={navItemOneLabel}
@@ -159,13 +178,6 @@ const Modal = ({
             </button>
           </li>
         </ul> */}
-        <button
-          type="button"
-          className="modal"
-          onClick={() => handleCloseModal()}
-        >
-          <img src={Close} alt="a plus icon" />
-        </button>
       </NavModal>
     </div>
   )

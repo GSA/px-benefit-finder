@@ -209,166 +209,186 @@ const LifeEventSection = ({
   }, [currentData, data, modal, step])
 
   return (
-    <div className="section">
-      <StepIndicator
-        current={step - 1}
-        setCurrent={setStep}
-        data={data}
-        backLinkLabel={stepIndicator.stepBackLink}
-        handleCheckRequriedFields={() => handleCheckRequriedFields()}
-      />
-      {currentData && (
-        <div id="benefit-section" onChange={() => handleUpdateData}>
-          <Alert
-            alertFieldRef={alertFieldRef}
-            heading={ui.alertBanner.heading}
-            description={ui.alertBanner.description}
-            error
-          ></Alert>
-          <Heading headingLevel={2}>{currentData.section.heading}</Heading>
-          <Paragraph>{currentData.section.description}</Paragraph>
-
-          {/* TODO: create handler component for input case switching */}
-
-          {currentData.section.fieldsets.map((item, i) => {
-            return item.fieldset.inputs[0].inputCriteria.type === 'select' ? (
-              //
-              //
-              // case select
-              //
-              //
-              <Fieldset
-                key={`${item.fieldset.criteriaKey}-${i}`}
-                legend={item.fieldset.legend}
-                hint={item.fieldset.hint}
-                required={item.fieldset.required}
-                requiredLabel={requiredLabel}
-              >
-                {item.fieldset.inputs.map((input, index) => {
-                  const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-                  const inputValues = input.inputCriteria.values
-                  const defaultSelected = inputValues.find(
-                    value => value.selected !== undefined
-                  )
-
-                  return (
-                    <div key={fieldSetId}>
-                      <Select
-                        required={
-                          defaultSelected === undefined &&
-                          item.fieldset.required
-                        }
-                        htmlFor={fieldSetId}
-                        key={fieldSetId}
-                        options={inputValues}
-                        selected={defaultSelected?.value}
-                        onChange={event =>
-                          handleChanged(event, item.fieldset.criteriaKey)
-                        }
-                      />
-                    </div>
-                  )
-                })}
-              </Fieldset>
-            ) : item.fieldset.inputs[0].inputCriteria.type === 'radio' ? (
-              //
-              //
-              // case radio
-              //
-              //
-              <Fieldset
-                key={`${item.fieldset.criteriaKey}-${i}`}
-                legend={item.fieldset.legend}
-                hint={item.fieldset.hint}
-                required={item.fieldset.required}
-                requiredLabel={requiredLabel}
-              >
-                {item.fieldset.inputs.map((input, index) => {
-                  const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-
-                  const inputValues = input.inputCriteria.values
-                  const optionSelected = inputValues.find(
-                    value => value.selected !== undefined
-                  )
-
-                  return (
-                    <div key={fieldSetId}>
-                      {input.inputCriteria.label}
-                      {/* map the options */}
-                      {input.inputCriteria.values.map((option, index) => {
-                        const inputId = `${fieldSetId}_${index}`
-
-                        return (
-                          <Radio
-                            required={!optionSelected && item.fieldset.required}
-                            id={inputId}
-                            key={inputId}
-                            label={`${option.value}_${inputId}`}
-                            value={option.value}
-                            checked={option.selected || false}
-                            onChange={event => {
-                              handleChanged(event, item.fieldset.criteriaKey)
-                            }}
-                          />
-                        )
-                      })}
-                    </div>
-                  )
-                })}
-              </Fieldset>
-            ) : item.fieldset.inputs[0].inputCriteria.type === 'date' ? (
-              //
-              //
-              // case date
-              //
-              //
-              <Fieldset
-                key={`${item.fieldset.criteriaKey}-${i}`}
-                legend={item.fieldset.legend}
-                hint={item.fieldset.hint}
-                required={item.fieldset.required}
-                requiredLabel={requiredLabel}
-              >
-                {item.fieldset.inputs.map((input, index) => {
-                  const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-                  return (
-                    <div key={fieldSetId}>
-                      <Date
-                        required={
-                          Object.keys(input.inputCriteria.values[0]?.value)
-                            .length < 3 && item.fieldset.required
-                        }
-                        value={input.inputCriteria.values[0]?.value}
-                        onChange={event =>
-                          handleDateChanged(event, item.fieldset.criteriaKey)
-                        }
-                      />
-                    </div>
-                  )
-                })}
-              </Fieldset>
-            ) : null
-          })}
-        </div>
-      )}
-      <Button onClick={() => handleUpdate(-1)}>{buttonGroup[0].value}</Button>
-      {modal === false ? (
-        <Button onClick={() => handleUpdate(1)}>{buttonGroup[1].value}</Button>
-      ) : (
-        <div>
-          <Modal
-            id="nav-modal"
-            modalHeading={reviewSelectionModal.heading}
-            navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
-            navItemOneFunction={setVerifyStep}
-            navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
-            navItemTwoFunction={setViewResults}
-            triggerLabel={buttonGroup[1].value}
-            handleCheckRequriedFields={handleCheckRequriedFields}
+    <>
+      <Heading className="section-heading" headingLevel={2}>
+        Section Heading
+      </Heading>
+      <div className="section-wrapper">
+        <div className="section">
+          <StepIndicator
+            current={step - 1}
+            setCurrent={setStep}
+            data={data}
+            backLinkLabel={stepIndicator.stepBackLink}
+            handleCheckRequriedFields={() => handleCheckRequriedFields()}
           />
+          {currentData && (
+            <div id="benefit-section" onChange={() => handleUpdateData}>
+              <Alert
+                alertFieldRef={alertFieldRef}
+                heading={ui.alertBanner.heading}
+                description={ui.alertBanner.description}
+                error
+              ></Alert>
+              <Heading headingLevel={2}>{currentData.section.heading}</Heading>
+              <Paragraph>{currentData.section.description}</Paragraph>
+
+              {/* TODO: create handler component for input case switching */}
+
+              {currentData.section.fieldsets.map((item, i) => {
+                return item.fieldset.inputs[0].inputCriteria.type ===
+                  'select' ? (
+                  //
+                  //
+                  // case select
+                  //
+                  //
+                  <Fieldset
+                    key={`${item.fieldset.criteriaKey}-${i}`}
+                    legend={item.fieldset.legend}
+                    hint={item.fieldset.hint}
+                    required={item.fieldset.required}
+                    requiredLabel={requiredLabel}
+                  >
+                    {item.fieldset.inputs.map((input, index) => {
+                      const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                      const inputValues = input.inputCriteria.values
+                      const defaultSelected = inputValues.find(
+                        value => value.selected !== undefined
+                      )
+
+                      return (
+                        <div key={fieldSetId}>
+                          <Select
+                            required={
+                              defaultSelected === undefined &&
+                              item.fieldset.required
+                            }
+                            htmlFor={fieldSetId}
+                            key={fieldSetId}
+                            options={inputValues}
+                            selected={defaultSelected?.value}
+                            onChange={event =>
+                              handleChanged(event, item.fieldset.criteriaKey)
+                            }
+                          />
+                        </div>
+                      )
+                    })}
+                  </Fieldset>
+                ) : item.fieldset.inputs[0].inputCriteria.type === 'radio' ? (
+                  //
+                  //
+                  // case radio
+                  //
+                  //
+                  <Fieldset
+                    key={`${item.fieldset.criteriaKey}-${i}`}
+                    legend={item.fieldset.legend}
+                    hint={item.fieldset.hint}
+                    required={item.fieldset.required}
+                    requiredLabel={requiredLabel}
+                  >
+                    {item.fieldset.inputs.map((input, index) => {
+                      const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+
+                      const inputValues = input.inputCriteria.values
+                      const optionSelected = inputValues.find(
+                        value => value.selected !== undefined
+                      )
+
+                      return (
+                        <div key={fieldSetId}>
+                          {input.inputCriteria.label}
+                          {/* map the options */}
+                          {input.inputCriteria.values.map((option, index) => {
+                            const inputId = `${fieldSetId}_${index}`
+
+                            return (
+                              <Radio
+                                required={
+                                  !optionSelected && item.fieldset.required
+                                }
+                                id={inputId}
+                                key={inputId}
+                                label={`${option.value}_${inputId}`}
+                                value={option.value}
+                                checked={option.selected || false}
+                                onChange={event => {
+                                  handleChanged(
+                                    event,
+                                    item.fieldset.criteriaKey
+                                  )
+                                }}
+                              />
+                            )
+                          })}
+                        </div>
+                      )
+                    })}
+                  </Fieldset>
+                ) : item.fieldset.inputs[0].inputCriteria.type === 'date' ? (
+                  //
+                  //
+                  // case date
+                  //
+                  //
+                  <Fieldset
+                    key={`${item.fieldset.criteriaKey}-${i}`}
+                    legend={item.fieldset.legend}
+                    hint={item.fieldset.hint}
+                    required={item.fieldset.required}
+                    requiredLabel={requiredLabel}
+                  >
+                    {item.fieldset.inputs.map((input, index) => {
+                      const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                      return (
+                        <div key={fieldSetId}>
+                          <Date
+                            required={
+                              Object.keys(input.inputCriteria.values[0]?.value)
+                                .length < 3 && item.fieldset.required
+                            }
+                            value={input.inputCriteria.values[0]?.value}
+                            onChange={event =>
+                              handleDateChanged(
+                                event,
+                                item.fieldset.criteriaKey
+                              )
+                            }
+                          />
+                        </div>
+                      )
+                    })}
+                  </Fieldset>
+                ) : null
+              })}
+            </div>
+          )}
+          <Button secondary onClick={() => handleUpdate(-1)}>
+            {buttonGroup[0].value}
+          </Button>
+          {modal === false ? (
+            <Button onClick={() => handleUpdate(1)}>
+              {buttonGroup[1].value}
+            </Button>
+          ) : (
+            <div>
+              <Modal
+                id="nav-modal"
+                modalHeading={reviewSelectionModal.heading}
+                navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
+                navItemOneFunction={setVerifyStep}
+                navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
+                navItemTwoFunction={setViewResults}
+                triggerLabel={buttonGroup[1].value}
+                handleCheckRequriedFields={handleCheckRequriedFields}
+              />
+            </div>
+          )}
         </div>
-      )}
-    </div>
+      </div>
+    </>
   )
 }
 

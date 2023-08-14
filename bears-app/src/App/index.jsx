@@ -7,6 +7,8 @@ import {
   Form,
 } from '../shared/components'
 
+import './_index.scss'
+
 // data and ui content
 import * as en from '../shared/locales/en/en.json'
 import * as es from '../shared/locales/es/es.json'
@@ -50,7 +52,11 @@ function App() {
   return (
     <LanguageContext.Provider value={t}>
       {/* {console.log(t)} */}
-      <div className="bears-app">
+      <div
+        className={`bears-app ${
+          verifyStep === false && step !== 0 ? 'form' : ''
+        }`}
+      >
         {step === 0 ? (
           <Intro
             data={lifeEventForm}
@@ -70,20 +76,22 @@ function App() {
             }}
           />
         ) : verifyStep === false ? (
-          <Form>
-            <LifeEventSection
-              step={step}
-              setStep={setStep}
-              data={stepDataArray}
-              handleData={() => setStepDataArray()}
-              stepData={stepData}
-              setStepData={setStepData}
-              verifyStep={verifyStep}
-              setVerifyStep={() => setVerifyStep(true)}
-              setViewResults={() => setViewResults(true)}
-              ui={t}
-            />
-          </Form>
+          <div>
+            <Form>
+              <LifeEventSection
+                step={step}
+                setStep={setStep}
+                data={stepDataArray}
+                handleData={() => setStepDataArray()}
+                stepData={stepData}
+                setStepData={setStepData}
+                verifyStep={verifyStep}
+                setVerifyStep={() => setVerifyStep(true)}
+                setViewResults={() => setViewResults(true)}
+                ui={t}
+              />
+            </Form>
+          </div>
         ) : (
           <VerifySelectionsView
             handleStepBack={() => {

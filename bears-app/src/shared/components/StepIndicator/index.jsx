@@ -1,6 +1,8 @@
 import { StepBackLink } from '../index'
 import PropTypes from 'prop-types'
 
+import './_index.scss'
+
 /**
  * a functional component that renders a step indicator for our form sections
  * @component

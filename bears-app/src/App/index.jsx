@@ -32,10 +32,13 @@ function App() {
   }
 
   // destructure data
-  const { lifeEventForm } = JSON.parse(content)
+  const { lifeEventForm, benefits } = JSON.parse(content)
+
+  // set data state
   const [stepDataArray, setStepDataArray] = useState([
     ...lifeEventForm.sectionsEligibilityCriteria,
   ])
+  const [benfitsArray, setBenefitsArray] = useState([...benefits])
 
   // state
   const [t] = useState(handleLanguage) // tranlations
@@ -57,6 +60,9 @@ function App() {
           />
         ) : viewResults === true ? (
           <ResultsView
+            stepDataArray={stepDataArray}
+            data={benfitsArray}
+            setBenefitsArray={() => setBenefitsArray()}
             ui={t.resultsView}
             handleStepBack={() => {
               setVerifyStep(false)

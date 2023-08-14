@@ -767,31 +767,47 @@ const content = `{
   "benefits": [
     {
       "benefit": {
-        "title": "COVID-19 Funeral Assistance",
-        "headline": "COVID-19 Funeral Assistance",
-        "summary": "Financial assistance may be available to help with the burial and funeral costs for people who died of COVID-19.",
+        "title": "Test Likely Eligible Benefit",
+        "headline": "Test Likely Eligible Criteria",
+        "summary": "User has met all criteria",
         "eligibility": [
           {
-            "criteriaKey": "deceased_not_died_of_COVID",
-            "label": "Deceased died of COVID.",
+            "criteriaKey": "applicant_relation",
+            "label": "The applicants relationship is parent.",
             "acceptableValue": [
-              "TRUE"
+              "parent"
             ],
             "isEligible": true
           },
           {
-            "criteriaKey": "deceased_death_location_is_US",
-            "label": "Deceased death location is in the US.",
+            "criteriaKey": "applicant_marital_status",
+            "label": "The applicant is married",
             "acceptableValue": [
-              "TRUE"
+              "married"
             ],
             "isEligible": true
           },
           {
-            "criteriaKey": "deceased_date_of_funeral",
-            "label": "The deceased's funeral/burial was after January 20, 2020.",
+            "criteriaKey": "applicant_care_for_child",
+            "label": "Applicant does care for a child",
             "acceptableValue": [
-              ">01-20-2020"
+              "Yes"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_paid_funeral_expenses",
+            "label": "Applicant paid for the funeral expenses.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_funeral_reimbursment",
+            "label": "Applicant funeral reimbursement",
+            "acceptableValue": [
+              "Yes"
             ],
             "isEligible": true
           },
@@ -799,31 +815,373 @@ const content = `{
             "criteriaKey": "applicant_citizen_status",
             "label": "Applicant is a citizen.",
             "acceptableValue": [
-              "TRUE"
-            ]
-          },
-          {
-            "criteriaKey": "applicant_paid_funeral_expenses",
-            "label": "Applicant paid for the funeral expenses.",
-            "acceptableValue": [
-              "TRUE"
+              "Yes"
             ],
             "isEligible": true
           }
         ],
-        "initialEligibilityLength": 5,
         "tags": [
-          "burial and funeral assistance"
+          "test"
         ],
         "lifeEvents": [
           "Death of a loved one"
         ],
         "agency": {
-          "title": "FEMA",
-          "summary": "Federal Emergency Management Agency (FEMA) offers support to people during natural disasters and national emergencies, including housing and funeral assistance.",
+          "title": "TEST",
+          "summary": "This is a test.",
           "lede": ""
         },
-        "sourceLink": "https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance",
+        "sourceLink": "https://www.google.com",
+        "sourceIsEnglish": "TRUE"
+      }
+    },
+    {
+      "benefit": {
+        "title": "Test More Information Needed Benefit",
+        "headline": "Test More Information Needed Criteria",
+        "summary": "User has met all but one criteria, which is undefined",
+        "eligibility": [
+          {
+            "criteriaKey": "applicant_relation",
+            "label": "The applicants relationship is parent.",
+            "acceptableValue": [
+              "parent"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_marital_status",
+            "label": "The applicant is married",
+            "acceptableValue": [
+              "married"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_care_for_child",
+            "label": "Applicant does care for a child",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_paid_funeral_expenses",
+            "label": "Applicant paid for the funeral expenses.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_funeral_reimbursment",
+            "label": "Applicant funeral reimbursement",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_citizen_status",
+            "label": "Applicant is a citizen.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          }
+        ],
+        "tags": [
+          "test"
+        ],
+        "lifeEvents": [
+          "Death of a loved one"
+        ],
+        "agency": {
+          "title": "TEST",
+          "summary": "This is a test.",
+          "lede": ""
+        },
+        "sourceLink": "https://www.google.com",
+        "sourceIsEnglish": "TRUE"
+      }
+    },
+    {
+      "benefit": {
+        "title": "Test More Information Needed Benefit",
+        "headline": "Test More Information Needed Benefit",
+        "summary": "user has undefined all criteria",
+        "eligibility": [
+          {
+            "criteriaKey": "applicant_relation",
+            "label": "The applicants relationship is parent.",
+            "acceptableValue": [
+              "parent"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_marital_status",
+            "label": "The applicant is married",
+            "acceptableValue": [
+              "married"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_care_for_child",
+            "label": "Applicant does care for a child",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_paid_funeral_expenses",
+            "label": "Applicant paid for the funeral expenses.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_funeral_reimbursment",
+            "label": "Applicant funeral reimbursement",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_citizen_status",
+            "label": "Applicant is a citizen.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": "undefined"
+          }
+        ],
+        "tags": [
+          "test"
+        ],
+        "lifeEvents": [
+          "Death of a loved one"
+        ],
+        "agency": {
+          "title": "TEST",
+          "summary": "This is a test.",
+          "lede": ""
+        },
+        "sourceLink": "https://www.google.com",
+        "sourceIsEnglish": "TRUE"
+      }
+    },
+    {
+      "benefit": {
+        "title": "Test Not Eligible Benefit",
+        "headline": "Test Not Eligible Benefit",
+        "summary": "User has met all but one criteria, which is unmet",
+        "eligibility": [
+          {
+            "criteriaKey": "applicant_relation",
+            "label": "The applicants relationship is parent.",
+            "acceptableValue": [
+              "parent"
+            ],
+            "isEligible": false
+          },
+          {
+            "criteriaKey": "applicant_marital_status",
+            "label": "The applicant is married",
+            "acceptableValue": [
+              "married"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_care_for_child",
+            "label": "Applicant does care for a child",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_paid_funeral_expenses",
+            "label": "Applicant paid for the funeral expenses.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_funeral_reimbursment",
+            "label": "Applicant funeral reimbursement",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          },
+          {
+            "criteriaKey": "applicant_citizen_status",
+            "label": "Applicant is a citizen.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": true
+          }
+        ],
+        "tags": [
+          "test"
+        ],
+        "lifeEvents": [
+          "Death of a loved one"
+        ],
+        "agency": {
+          "title": "TEST",
+          "summary": "This is a test.",
+          "lede": ""
+        },
+        "sourceLink": "https://www.google.com",
+        "sourceIsEnglish": "TRUE"
+      }
+    },
+    {
+      "benefit": {
+        "title": "Test More Information Needed Benefit",
+        "headline": "Test More Information Needed Criteria",
+        "summary": "User has unmet one criteria, all others are undefined",
+        "eligibility": [
+          {
+            "criteriaKey": "applicant_relation",
+            "label": "The applicants relationship is parent.",
+            "acceptableValue": [
+              "parent"
+            ],
+            "isEligible": false
+          },
+          {
+            "criteriaKey": "applicant_marital_status",
+            "label": "The applicant is married",
+            "acceptableValue": [
+              "married"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_care_for_child",
+            "label": "Applicant does care for a child",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_paid_funeral_expenses",
+            "label": "Applicant paid for the funeral expenses.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_funeral_reimbursment",
+            "label": "Applicant funeral reimbursement",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": "undefined"
+          },
+          {
+            "criteriaKey": "applicant_citizen_status",
+            "label": "Applicant is a citizen.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": "undefined"
+          }
+        ],
+        "tags": [
+          "test"
+        ],
+        "lifeEvents": [
+          "Death of a loved one"
+        ],
+        "agency": {
+          "title": "TEST",
+          "summary": "This is a test.",
+          "lede": ""
+        },
+        "sourceLink": "https://www.google.com",
+        "sourceIsEnglish": "TRUE"
+      }
+    },
+    {
+      "benefit": {
+        "title": "Test Not Eligible Benefit",
+        "headline": "Test Not Eligible Criteria",
+        "summary": "User has unmet all criteria",
+        "eligibility": [
+          {
+            "criteriaKey": "applicant_relation",
+            "label": "The applicants relationship is parent.",
+            "acceptableValue": [
+              "parent"
+            ],
+            "isEligible": false
+          },
+          {
+            "criteriaKey": "applicant_marital_status",
+            "label": "The applicant is married",
+            "acceptableValue": [
+              "married"
+            ],
+            "isEligible": false
+          },
+          {
+            "criteriaKey": "applicant_care_for_child",
+            "label": "Applicant does care for a child",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": false
+          },
+          {
+            "criteriaKey": "applicant_paid_funeral_expenses",
+            "label": "Applicant paid for the funeral expenses.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": false
+          },
+          {
+            "criteriaKey": "applicant_funeral_reimbursment",
+            "label": "Applicant funeral reimbursement",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": false
+          },
+          {
+            "criteriaKey": "applicant_citizen_status",
+            "label": "Applicant is a citizen.",
+            "acceptableValue": [
+              "Yes"
+            ],
+            "isEligible": false
+          }
+        ],
+        "tags": [
+          "test"
+        ],
+        "lifeEvents": [
+          "Death of a loved one"
+        ],
+        "agency": {
+          "title": "TEST",
+          "summary": "This is a test.",
+          "lede": ""
+        },
+        "sourceLink": "https://www.google.com",
         "sourceIsEnglish": "TRUE"
       }
     }

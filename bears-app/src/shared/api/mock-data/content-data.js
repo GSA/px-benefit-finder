@@ -31,7 +31,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_date_of_birth",
                 "legend": "Date of birth",
-                "required": "FALSE",
+                "required": "TRUE",
                 "hint": "For example: 4 28 1986",
                 "inputs": [
                   {
@@ -43,7 +43,7 @@ const content = `{
                       "values": [
                         {
                           "default": "",
-                          "value": ""
+                          "value": {}
                         }
                       ],
                       "hasChild": false,
@@ -62,7 +62,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_relation",
                 "legend": "Applicant's relationship to the person who died",
-                "required": "FALSE",
+                "required": "TRUE",
                 "hint": "",
                 "inputs": [
                   {
@@ -72,10 +72,6 @@ const content = `{
                       "name": "Applicant's relationship to the person who died",
                       "label": "Applicant's relationship to the person who died",
                       "values": [
-                        {
-                          "option": "-Select-",
-                          "value": "-Select-"
-                        },
                         {
                           "option": "spouse",
                           "value": "spouse"
@@ -125,7 +121,7 @@ const content = `{
                       "values": [
                         {
                           "option": "-Select-",
-                          "value": "-Select-"
+                          "value": ""
                         },
                         {
                           "option": "married",
@@ -160,7 +156,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_care_for_child",
                 "legend": "Applicant care for child",
-                "required": "FALSE",
+                "required": "TRUE",
                 "hint": "",
                 "inputs": [
                   {
@@ -320,7 +316,7 @@ const content = `{
                       "values": [
                         {
                           "default": "",
-                          "value": ""
+                          "value": {}
                         }
                       ],
                       "hasChild": "FALSE",
@@ -351,7 +347,7 @@ const content = `{
                       "values": [
                         {
                           "default": "",
-                          "value": ""
+                          "value": {}
                         }
                       ],
                       "hasChild": "FALSE",
@@ -630,10 +626,6 @@ const content = `{
                                 "label": "The service status of the deceased is",
                                 "values": [
                                   {
-                                    "option": "-Select-",
-                                    "value": "-Select-"
-                                  },
-                                  {
                                     "option": "an active-duty service member",
                                     "value": "an active-duty service member"
                                   },
@@ -676,10 +668,6 @@ const content = `{
                                 "name": "Deceased death circumstance",
                                 "label": "One of the following circumstances apply to the deceased:",
                                 "values": [
-                                  {
-                                    "option": "-Select-",
-                                    "value": "-Select-"
-                                  },
                                   {
                                     "option": "died while on active duty",
                                     "value": "died while on active duty"

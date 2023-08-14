@@ -37,13 +37,33 @@ const VerifySelectionsView = ({
                     item.fieldset.inputs[0].inputCriteria.values.find(
                       value => value.selected
                     )
+
+                  // formate if date object
+                  const parseDate = value => {
+                    const d = new window.Date(
+                      Date.UTC(value.year, value.month, value.day)
+                    )
+                    return d
+                  }
+
+                  const dateFormatOptions = {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  }
+
                   // if no value then return generic message
                   return result !== undefined ? (
                     <div>
                       <Heading headingLevel={5} key={`${criteriaId}`}>
                         {item.fieldset.legend}
                       </Heading>
-                      {result.value}
+                      {typeof result.value === 'object'
+                        ? `${parseDate(result.value).toLocaleDateString(
+                            undefined,
+                            dateFormatOptions
+                          )}`
+                        : result.value}
                     </div>
                   ) : (
                     <div>

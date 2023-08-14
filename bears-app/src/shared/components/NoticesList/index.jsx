@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
 
+import './_index.scss'
+
 /**
  * a functional component that renders a list of information
  * @component
@@ -30,9 +32,14 @@ const NoticesList = ({ data }) => {
   }
 
   return (
-    <ul className="notices-list">
-      <Notices className="notices" data={data} />
-    </ul>
+    <div className="notices">
+      <ul className="notices-list">
+        <Notices data={data} />
+      </ul>
+      <div className="line-sperator-wrapper">
+        <div className="line-sperator" />
+      </div>
+    </div>
   )
 }
 

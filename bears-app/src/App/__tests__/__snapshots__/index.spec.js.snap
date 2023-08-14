@@ -4,7 +4,9 @@ exports[`App renders a match to the previous snapshot 1`] = `
 <div
   className="bears-app"
 >
-  <div>
+  <div
+    className="intro"
+  >
     <div
       className="chevron"
     >
@@ -66,42 +68,59 @@ exports[`App renders a match to the previous snapshot 1`] = `
     </ol>
     <h2
       className=""
-    />
-    <ul
-      className="notices-list"
     >
-      <li
-        className="notice"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<div>Your information<strong>will not</strong> be shared, saved, or submitted.</div>",
-          }
-        }
-      />
-      <li
-        className="notice"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Provide complete and accurate information to get the most relevant results.",
-          }
-        }
-      />
-      <li
-        className="notice"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",
-          }
-        }
-      />
-    </ul>
-    <button
-      className=""
-      onClick={[Function]}
-      type="button"
+      Before you start:
+    </h2>
+    <div
+      className="notices"
     >
-      Start
-    </button>
+      <ul
+        className="notices-list"
+      >
+        <li
+          className="notice"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<div>Your information<strong>will not</strong> be shared, saved, or submitted.</div>",
+            }
+          }
+        />
+        <li
+          className="notice"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Provide complete and accurate information to get the most relevant results.",
+            }
+          }
+        />
+        <li
+          className="notice"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",
+            }
+          }
+        />
+      </ul>
+      <div
+        className="line-sperator-wrapper"
+      >
+        <div
+          className="line-sperator"
+        />
+      </div>
+    </div>
+    <div
+      className="cta-wrapper"
+    >
+      <button
+        className=""
+        onClick={[Function]}
+        type="button"
+      >
+        Start
+      </button>
+    </div>
   </div>
 </div>
 `;

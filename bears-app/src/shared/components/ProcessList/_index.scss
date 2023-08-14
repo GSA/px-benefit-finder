@@ -1,13 +1,15 @@
-.usa-process-list {
-  margin-left: 70px;
-  margin-right: 18px;
-}
-/* stylelint-disable selector-class-pattern */
-.usa-process-list__item {
-  min-height: 100px;
+#usagov-bears-app {
+  .usa-process-list {
+    margin-left: 70px;
+    margin-right: 18px;
+  }
+  /* stylelint-disable selector-class-pattern */
+  .usa-process-list__item {
+    min-height: 100px;
 
-  &::before {
-    background-color: #0050d8;
-    color: #fff;
+    &::before {
+      background-color: #0050d8;
+      color: #fff;
+    }
   }
 }

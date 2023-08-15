@@ -1,5 +1,5 @@
-name: USAgov bears API
+name: 'USAgov bears API'
 type: module
-description: 'Provides JSON API.'
+description: 'Provides JSON API for Bears content.'
 core_version_requirement: ^8 || ^9
-package: USAgov bears
+package: 'USAgov bears'

@@ -104,11 +104,13 @@ Array [
         >
           About the Applicant
         </h2>
-        <p
-          className=""
-        >
-          The applicant is the person who will receive the benefits.
-        </p>
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "The applicant is the person who will receive the benefits.",
+            }
+          }
+        />
         <fieldset
           className="usa-fieldset"
         >
@@ -116,6 +118,12 @@ Array [
             className="usa-legend legend"
           >
             Date of birth
+            <span
+              className="usa-hint usa-hint--required required"
+              title="required"
+            >
+              (Required)
+            </span>
           </legend>
           <div>
             <div
@@ -132,7 +140,7 @@ Array [
                 </label>
                 <select
                   aria-describedby="mdHint"
-                  className="usa-select "
+                  className="usa-select required-field"
                   id="date_of_birth_month"
                   name="date_of_birth_month"
                   onChange={[Function]}
@@ -217,7 +225,7 @@ Array [
                 </label>
                 <input
                   aria-describedby="mdHint"
-                  className="usa-input "
+                  className="usa-input required-field"
                   id="date_of_birth_day"
                   inputMode="numeric"
                   maxLength="2"
@@ -238,7 +246,7 @@ Array [
                 </label>
                 <input
                   aria-describedby="mdHint"
-                  className="usa-input "
+                  className="usa-input required-field"
                   id="date_of_birth_year"
                   inputMode="numeric"
                   maxLength="4"

@@ -17,7 +17,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
         <div
           className="usa-alert__body"
         >
-          <p
+          <div
             className="usa-alert__text"
           >
             <div
@@ -27,7 +27,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
                 }
               }
             />
-          </p>
+          </div>
         </div>
       </div>
     </li>
@@ -41,7 +41,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
         <div
           className="usa-alert__body"
         >
-          <p
+          <div
             className="usa-alert__text"
           >
             <div
@@ -51,7 +51,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
                 }
               }
             />
-          </p>
+          </div>
         </div>
       </div>
     </li>
@@ -65,7 +65,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
         <div
           className="usa-alert__body"
         >
-          <p
+          <div
             className="usa-alert__text"
           >
             <div
@@ -75,7 +75,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
                 }
               }
             />
-          </p>
+          </div>
         </div>
       </div>
     </li>

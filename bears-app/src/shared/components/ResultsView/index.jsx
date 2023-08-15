@@ -85,14 +85,14 @@ const ResultsView = ({ handleStepBack, ui, data }) => {
       <Chevron heading={chevron.heading} description={chevron.description} />
       <div className="result-view-details">
         <StepBackLink setCurrent={handleStepBack}>{stepBackLink}</StepBackLink>
-        <Heading headingLevel={2}>{heading}</Heading>
+        <Heading headingLevel={3}>{heading}</Heading>
         <p dangerouslySetInnerHTML={createMarkup(description)} />
         {/* map all the benefits into cards */}
         <div className="result-view-benefits">
           <BenefitAccordionGroup data={data} entryKey={'benefit'} expandAll />
         </div>
         <div className="result-view-unmet">
-          <Heading headingLevel={2}>{notEligibleResults?.heading}</Heading>
+          <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
           <p
             dangerouslySetInnerHTML={createMarkup(
               notEligibleResults?.description
@@ -101,7 +101,7 @@ const ResultsView = ({ handleStepBack, ui, data }) => {
           <Button>{notEligibleResults?.cta}</Button>
         </div>
         <div className="result-view-relvant-benefits">
-          <Heading headingLevel={2}>{relativeBenefits?.heading}</Heading>
+          <Heading headingLevel={3}>{relativeBenefits?.heading}</Heading>
           <ul className="add-list-reset">
             <li>
               <Card

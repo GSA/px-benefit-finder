@@ -30,11 +30,11 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
     >
       Back
     </button>
-    <h2
+    <h3
       className=""
     >
       Results
-    </h2>
+    </h3>
     <p
       dangerouslySetInnerHTML={
         Object {
@@ -60,11 +60,11 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
     <div
       className="result-view-unmet"
     >
-      <h2
+      <h3
         className=""
       >
         Benefits you did not qualify for
-      </h2>
+      </h3>
       <p
         dangerouslySetInnerHTML={
           Object {
@@ -82,11 +82,11 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
     <div
       className="result-view-relvant-benefits"
     >
-      <h2
+      <h3
         className=""
       >
         Other benefits that might be relevant to you
-      </h2>
+      </h3>
       <ul
         className="add-list-reset"
       >

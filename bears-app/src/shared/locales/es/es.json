@@ -72,8 +72,12 @@
     ]
   },
   "resultsView": {
-    "heading": "Sus beneficios potenciales",
-    "description": "<div>Necesita verificar los requisitos y visitar la página de cada agencia para aplicar.<strong> Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</strong></div>",
+    "chevron": {
+      "heading": "Sus beneficios potenciales",
+      "description": "<div><p>Necesita verificar los requisitos y visitar la página de cada agencia para aplicar.<strong> Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</strong></p></div>"
+    },
+    "heading": "Resultados",
+    "description": "<div><strong>Usted puede calificar para los siguientes beneficios:<strong/></div>",
     "stepBackLink": "Volver",
     "eligibleResults": {
       "heading": "Resultados",
@@ -83,13 +87,17 @@
       "heading": "Beneficios a los que no calificó",
       "description": "<div>Según sus respuestas no es elegible para estos beneficios. <strong>Podría calificar si tiene información adicional o si su situación cambia.</strong></div>",
       "cta": "Vea los beneficios a los que no calificó"
+    },
+    "relativeBenefits": {
+      "heading": "Sugerencias"
+    },
+    "shareResults": {
+      "heading": "Imprimir y Compartir",
+      "shareButton": "Compartir Resultados",
+      "emailButton": "Enviar Resultados",
+      "printButton": "Imprimir resultados",
+      "description": "Copie un enlace a esta página con los criterios que seleccionó anteriormente. Asegúrate de compartirlo solo con aquellos en los que confías, ya que tus respuestas serán visibles."
     }
-  },
-  "notEligibleResults": {
-    "heading": "Beneficios a los que no calificó",
-    "description": "<div>Según sus respuestas usted <strong> no</strong> es elegible para estos beneficios.</div>",
-    "heading2": "Resultados no-elegibles",
-    "description2": "Consulte a su estado, ciudad, o trabajo para otros beneficios."
   },
   "shareResults": {
     "heading": "Imprima y comparta",

@@ -19,7 +19,7 @@
       "heading": "Before you start:",
       "list": [
         {
-          "notice": "<div>Your information<strong>will not</strong> be shared, saved, or submitted.</div>"
+          "notice": "<div>Your information<strong> will not</strong> be shared, saved, or submitted.</div>"
         },
         {
           "notice": "Provide complete and accurate information to get the most relevant results."
@@ -91,7 +91,7 @@
     "relativeBenefits": {
       "heading": "Other benefits that might be relevant to you"
     },
-    "sharing": {
+    "shareResults": {
       "heading": "Sharing and printing",
       "shareButton": "Share Link",
       "emailButton": "Email Results",

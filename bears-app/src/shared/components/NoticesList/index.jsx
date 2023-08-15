@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
+import { Alert } from '../index'
 
 import './_index.scss'
 
@@ -21,11 +22,11 @@ const NoticesList = ({ data }) => {
       data &&
       data.data.map((item, i) => {
         return (
-          <li
-            className="notice"
-            key={i}
-            dangerouslySetInnerHTML={createMarkup(item.notice)}
-          />
+          <li className="notice" key={i}>
+            <Alert noBackground>
+              <div dangerouslySetInnerHTML={createMarkup(item.notice)}></div>
+            </Alert>
+          </li>
         )
       })
     )
@@ -33,7 +34,7 @@ const NoticesList = ({ data }) => {
 
   return (
     <div className="notices">
-      <ul className="notices-list">
+      <ul className="notices-list add-list-reset">
         <Notices data={data} />
       </ul>
       <div className="line-sperator-wrapper">

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { useHandleClassName } from '../../hooks/useHandleClassName'
+import './_index.scss'
 
 /**
  * a functional component that renders an information alert
@@ -20,10 +21,11 @@ const Alert = ({
   heading,
   description,
   error,
+  noBackground,
 }) => {
   const defaultClasses = error
     ? ['usa-alert', 'usa-alert--error', 'display-none']
-    : ['usa-alert', 'usa-alert--info']
+    : ['usa-alert', 'usa-alert--info', `${noBackground ? 'no-background' : ''}`]
 
   return (
     <div

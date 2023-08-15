@@ -46,10 +46,10 @@ echo "Backing up bears database..."
     --host=${host} \
     --port=${port} \
     --protocol=TCP \
-    ${dbname} >> $(date +"%Y_%m_%d")_db_backup.sql
+    ${dbname} >> $(date +"%Y_%m_%d_%H:%M:%S")_db_backup.sql
 
   ## Patch out any MySQL 'SET' commands that require admin.
-  sed -i 's/^SET /-- &/' $(date +"%Y_%m_%d")_db_backup.sql
+  sed -i 's/^SET /-- &/' $(date +"%Y_%m_%d_%H:%M:%S")_db_backup.sql
 
 } >/dev/null 2>&1
 
@@ -65,4 +65,4 @@ rm -rf backup.txt ~/.mysql
 
 ## Compress the backup file
 echo "Compressing the database dump..."
-gzip $(date +"%Y_%m_%d")_db_backup.sql
+gzip $(date +"%Y_%m_%d_%H:%M:%S")_db_backup.sql

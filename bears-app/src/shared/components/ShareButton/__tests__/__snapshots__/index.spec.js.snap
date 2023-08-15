@@ -5,7 +5,5 @@ exports[`Share renders a match to the previous snapshot 1`] = `
   className=""
   onClick={[Function]}
   type="button"
->
-  Share
-</button>
+/>
 `;

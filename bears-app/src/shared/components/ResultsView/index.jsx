@@ -1,7 +1,18 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { BenefitAccordionGroup, Heading, StepBackLink, Chevron } from '../index'
+import {
+  BenefitAccordionGroup,
+  Button,
+  EmailButton,
+  Heading,
+  StepBackLink,
+  Card,
+  Chevron,
+  ShareButton,
+  PrintButton,
+} from '../index'
 import createMarkup from '../../utils/createMarkup'
+import './_index.scss'
 
 /**
  * a functional component that renders a view of the form benefit state values
@@ -15,7 +26,15 @@ import createMarkup from '../../utils/createMarkup'
  */
 const ResultsView = ({ handleStepBack, ui, data }) => {
   // console.log(data)
-  const { heading, stepBackLink, chevron, description } = ui
+  const {
+    heading,
+    stepBackLink,
+    chevron,
+    description,
+    notEligibleResults,
+    relativeBenefits,
+    shareResults,
+  } = ui
 
   // collect all the criteria keys and selected criteria values into an array
   // const selectedCriteria = stepDataArray
@@ -55,7 +74,6 @@ const ResultsView = ({ handleStepBack, ui, data }) => {
   // }
 
   // console.log(likelyEligible(selectedCriteria, data))
-  console.log(chevron)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -63,17 +81,56 @@ const ResultsView = ({ handleStepBack, ui, data }) => {
 
   // compare the selected criteria array with benefits
   return (
-    <div>
+    <div className="result-view">
       <Chevron heading={chevron.heading} description={chevron.description} />
-      <StepBackLink setCurrent={handleStepBack}>{stepBackLink}</StepBackLink>
-      <Heading headingLevel={2}>{heading}</Heading>
-      <div dangerouslySetInnerHTML={createMarkup(description)} />
-      {/* map all the benefits into cards */}
-      <BenefitAccordionGroup data={data} entryKey={'benefit'} expandAll />
-      {/* {data.map((item, i) => {
-        return console.log(item)
-      })} */}
-      <StepBackLink setCurrent={handleStepBack}>{stepBackLink}</StepBackLink>
+      <div className="result-view-details">
+        <StepBackLink setCurrent={handleStepBack}>{stepBackLink}</StepBackLink>
+        <Heading headingLevel={2}>{heading}</Heading>
+        <p dangerouslySetInnerHTML={createMarkup(description)} />
+        {/* map all the benefits into cards */}
+        <div className="result-view-benefits">
+          <BenefitAccordionGroup data={data} entryKey={'benefit'} expandAll />
+        </div>
+        <div className="result-view-unmet">
+          <Heading headingLevel={2}>{notEligibleResults?.heading}</Heading>
+          <p
+            dangerouslySetInnerHTML={createMarkup(
+              notEligibleResults?.description
+            )}
+          />
+          <Button>{notEligibleResults?.cta}</Button>
+        </div>
+        <div className="result-view-relvant-benefits">
+          <Heading headingLevel={2}>{relativeBenefits?.heading}</Heading>
+          <ul className="add-list-reset">
+            <li>
+              <Card
+                className="relative-benefit-card"
+                title={'Approaching Retirement'}
+                cta={'Learn More'}
+                noCarrot
+              ></Card>
+            </li>
+            <li>
+              <Card
+                className="relative-benefit-card"
+                title={'Living with disability or illness'}
+                cta={'Learn More'}
+                noCarrot
+              ></Card>
+            </li>
+          </ul>
+        </div>
+        <div className="result-view-share-results">
+          <Heading headingLevel={3}>{shareResults?.heading}</Heading>
+          <div className="result-view-share-results-button-group">
+            <ShareButton ui={shareResults?.shareButton} />
+            <EmailButton ui={shareResults?.emailButton} />
+            <PrintButton ui={shareResults?.printButton} />
+          </div>
+          <p>{shareResults?.description}</p>
+        </div>
+      </div>
     </div>
   )
 }

@@ -6,7 +6,7 @@ export default {
   args: {
     className: 'relative-benefit-card',
     title: 'Header Content',
-    body: 'BodyContent',
+    cta: 'BodyContent',
     link: 'https://www.google.com',
   },
 }

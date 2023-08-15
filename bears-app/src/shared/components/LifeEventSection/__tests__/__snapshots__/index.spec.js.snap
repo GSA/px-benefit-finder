@@ -116,12 +116,6 @@ Array [
             className="usa-legend legend"
           >
             Date of birth
-            <span
-              className="usa-hint usa-hint--required required"
-              title="required"
-            >
-              (Required)
-            </span>
           </legend>
           <div>
             <div
@@ -138,7 +132,7 @@ Array [
                 </label>
                 <select
                   aria-describedby="mdHint"
-                  className="usa-select required-field"
+                  className="usa-select "
                   id="date_of_birth_month"
                   name="date_of_birth_month"
                   onChange={[Function]}
@@ -223,7 +217,7 @@ Array [
                 </label>
                 <input
                   aria-describedby="mdHint"
-                  className="usa-input required-field"
+                  className="usa-input "
                   id="date_of_birth_day"
                   inputMode="numeric"
                   maxLength="2"
@@ -244,7 +238,7 @@ Array [
                 </label>
                 <input
                   aria-describedby="mdHint"
-                  className="usa-input required-field"
+                  className="usa-input "
                   id="date_of_birth_year"
                   inputMode="numeric"
                   maxLength="4"
@@ -265,12 +259,6 @@ Array [
             className="usa-legend legend"
           >
             Applicant's relationship to the person who died
-            <span
-              className="usa-hint usa-hint--required required"
-              title="required"
-            >
-              (Required)
-            </span>
           </legend>
           <div>
             <label
@@ -278,7 +266,7 @@ Array [
               htmlFor="applicant_relation_0"
             />
             <select
-              className="usa-select required-field"
+              className="usa-select "
               id="applicant_relation_0"
               name="applicant_relation_0"
               onChange={[Function]}
@@ -377,12 +365,6 @@ Array [
             className="usa-legend legend"
           >
             Applicant care for child
-            <span
-              className="usa-hint usa-hint--required required"
-              title="required"
-            >
-              (Required)
-            </span>
           </legend>
           <div>
             You are caring for the child of the person who died, is retired or has disabilities, and the child is under age 16 or is disabled.
@@ -391,7 +373,7 @@ Array [
             >
               <input
                 checked={false}
-                className="usa-radio__input required-field"
+                className="usa-radio__input "
                 id="applicant_care_for_child_0_0"
                 name="Yes_applicant_care_for_child_0_0"
                 onChange={[Function]}
@@ -410,7 +392,7 @@ Array [
             >
               <input
                 checked={false}
-                className="usa-radio__input required-field"
+                className="usa-radio__input "
                 id="applicant_care_for_child_0_1"
                 name="No_applicant_care_for_child_0_1"
                 onChange={[Function]}
@@ -533,12 +515,6 @@ Array [
             className="usa-legend legend"
           >
             Applicant citizen status
-            <span
-              className="usa-hint usa-hint--required required"
-              title="required"
-            >
-              (Required)
-            </span>
           </legend>
           <div>
             You are a U.S. citizen or eligible non-citizen.
@@ -547,7 +523,7 @@ Array [
             >
               <input
                 checked={false}
-                className="usa-radio__input required-field"
+                className="usa-radio__input "
                 id="applicant_citizen_status_0_0"
                 name="Yes_applicant_citizen_status_0_0"
                 onChange={[Function]}
@@ -566,7 +542,7 @@ Array [
             >
               <input
                 checked={false}
-                className="usa-radio__input required-field"
+                className="usa-radio__input "
                 id="applicant_citizen_status_0_1"
                 name="No_applicant_citizen_status_0_1"
                 onChange={[Function]}

@@ -88,7 +88,7 @@ class LifeEventController {
         } else if ($criteria->type->target_id == "b_levent_elg_criteria_group") {
           $criteria_fieldset = $this->buildCriteriaGroupFieldset($criteria);
         }
-        $criteria_fieldsets[] = $criteria_fieldset;
+        $criteria_fieldsets[]['fieldset'] = $criteria_fieldset;
       }
 
       $life_event_form_section['fieldsets'] = $criteria_fieldsets;
@@ -192,7 +192,7 @@ class LifeEventController {
     $criteria_fieldset = [
       "criteriaKey" => current($criteria->get('field_b_criteria_key')->referencedEntities())->get('field_b_id')->value,
       "legend" => $criteria->get('field_b_legend')->value,
-      "required" => $criteria->get('field_b_required')->value,
+      "required" => $criteria->get('field_b_required')->value ? "TRUE":"FALSE",
       "hint" => $criteria->get('field_b_hint')->value
     ];
 
@@ -205,7 +205,7 @@ class LifeEventController {
       "type" => $criteria_node->get('field_b_type')->value,
       "name" => $criteria_node->get('field_b_name')->value,
       "label" => $criteria_node->get('field_b_label')->value,
-      "hasChild" => $criteria_node->get('field_b_has_child')->value,
+      "hasChild" => $criteria_node->get('field_b_has_child')->value ? "TRUE":"FALSE",
       "childDependencyOption" => $criteria_node->get('field_b_child_dependency_option')->value,
     ];
 
@@ -221,12 +221,13 @@ class LifeEventController {
         "value" => $b_value["value"]
       );
     }
-    $inputCriteria["value"] = $criteria_values;
-    $criteria_fieldset["inputs"]["inputCriteria"][] = $inputCriteria;
+    $inputCriteria["values"] = $criteria_values;
+    $criteria_fieldset["inputs"][]["inputCriteria"] = $inputCriteria;
 
     // Get criterias fieldsets multi paragraphs
     $criterias_1 = $criteria->get('field_b_children')->referencedEntities();
 
+    $criteria_fieldset_1 = (object)[];
     foreach ($criterias_1 as $criteria_1) {
       if ($criteria_1->type->target_id == "b_levent_elg_criteria") {
         $criteria_fieldset_1 = $this->buildCriteriaFieldset($criteria_1);
@@ -237,7 +238,7 @@ class LifeEventController {
       }
     }
 
-    $criteria_fieldset["children"]["fieldsets"] = $criteria_fieldset_1;
+    $criteria_fieldset["children"][]["fieldsets"][]['fieldset'] = $criteria_fieldset_1;
 
     return $criteria_fieldset;
   }

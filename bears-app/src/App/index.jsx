@@ -13,6 +13,7 @@ import './_index.scss'
 import * as en from '../shared/locales/en/en.json'
 import * as es from '../shared/locales/es/es.json'
 import content from '../shared/api/mock-data/content-data'
+// import content from '../shared/api/mock-data/dolo-data.js'
 
 /**
  * a functional component that renders our application.

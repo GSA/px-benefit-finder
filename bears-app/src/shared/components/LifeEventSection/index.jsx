@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
+import createMarkup from '../../utils/createMarkup'
 import {
   Alert,
   Button,
   Date,
   Fieldset,
   Heading,
-  Paragraph,
   Radio,
   Select,
   StepIndicator,
@@ -238,7 +238,11 @@ const LifeEventSection = ({
                 error
               ></Alert>
               <Heading headingLevel={2}>{currentData.section.heading}</Heading>
-              <Paragraph>{currentData.section.description}</Paragraph>
+              <div
+                dangerouslySetInnerHTML={createMarkup(
+                  currentData.section.description
+                )}
+              ></div>
 
               {/* TODO: create handler component for input case switching */}
 

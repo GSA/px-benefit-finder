@@ -35,7 +35,7 @@ const Alert = ({
     >
       {children ? (
         <div className="usa-alert__body">
-          <p className="usa-alert__text">{children}</p>
+          <div className="usa-alert__text">{children}</div>
         </div>
       ) : (
         <div className="usa-alert__body">
@@ -49,7 +49,7 @@ const Alert = ({
 
 Alert.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.any,
   alertFieldRef: PropTypes.any,
   heading: PropTypes.string,
   description: PropTypes.string,

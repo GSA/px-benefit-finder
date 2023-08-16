@@ -1,3 +1,43 @@
-.section {
-  margin: 50px;
+#usagov-bears-app {
+  .benefit-form,
+  .verify-selections-view {
+    background-color: #1a4480;
+    margin: 0 16px;
+    padding-bottom: 64px;
+  }
+
+  .section-wrapper {
+    background-color: #fff;
+    border: 1px solid white;
+    border-radius: 8px;
+
+    button {
+      margin-bottom: 18px;
+    }
+
+    button.step-back-link {
+      color: #979797;
+    }
+  }
+
+  .section {
+    margin: 50px 20px;
+  }
+
+  .section-heading {
+    background-color: #1a4480;
+    color: #fff;
+    margin: 0;
+    padding: 64px 16px;
+  }
+
+  .usa-fieldset {
+    padding-bottom: 30px;
+  }
+
+  #benefit-section {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid lightgrey;
+  }
 }

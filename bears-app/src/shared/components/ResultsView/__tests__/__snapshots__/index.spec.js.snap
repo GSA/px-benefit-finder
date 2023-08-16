@@ -1,29 +1,186 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResultsView renders a match to the previous snapshot 1`] = `
-<div>
-  <h2
-    className=""
-  >
-    Your potential benefits
-  </h2>
+<div
+  className="result-view"
+>
   <div
-    className="benefit-accordion-group"
+    className="chevron"
+  >
+    <h1
+      className=""
+    >
+      Your Custom List
+    </h1>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits.Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual applications.</p></div>",
+        }
+      }
+    />
+  </div>
+  <div
+    className="result-view-details"
   >
     <button
       className=""
       onClick={[Function]}
       type="button"
     >
-      Expand all +
+      Back
     </button>
+    <h3
+      className=""
+    >
+      Results
+    </h3>
+    <p
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>",
+        }
+      }
+    />
+    <div
+      className="result-view-benefits"
+    >
+      <div
+        className="benefit-accordion-group"
+      >
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          Expand all +
+        </button>
+      </div>
+    </div>
+    <div
+      className="result-view-unmet"
+    >
+      <h3
+        className=""
+      >
+        Benefits you did not qualify for
+      </h3>
+      <p
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<div>Based on your answers you are not eligible for these benefits. <strong>You may become eligible if you enter additional information or your situation changes.</strong></div>",
+          }
+        }
+      />
+      <button
+        className=""
+        type="button"
+      >
+        See benefits you did not qualify for
+      </button>
+    </div>
+    <div
+      className="result-view-relvant-benefits"
+    >
+      <h3
+        className=""
+      >
+        Other benefits that might be relevant to you
+      </h3>
+      <ul
+        className="add-list-reset"
+      >
+        <li>
+          <li
+            className=""
+          >
+            <a>
+              <div
+                className="usa-card__container"
+              >
+                <div
+                  className="usa-card__header"
+                >
+                  <h3
+                    className=""
+                  >
+                    Approaching Retirement
+                  </h3>
+                </div>
+                <p
+                  className=""
+                >
+                  Learn More
+                </p>
+              </div>
+            </a>
+          </li>
+        </li>
+        <li>
+          <li
+            className=""
+          >
+            <a>
+              <div
+                className="usa-card__container"
+              >
+                <div
+                  className="usa-card__header"
+                >
+                  <h3
+                    className=""
+                  >
+                    Living with disability or illness
+                  </h3>
+                </div>
+                <p
+                  className=""
+                >
+                  Learn More
+                </p>
+              </div>
+            </a>
+          </li>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="result-view-share-results"
+    >
+      <h3
+        className=""
+      >
+        Sharing and printing
+      </h3>
+      <div
+        className="result-view-share-results-button-group"
+      >
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          Share Link
+        </button>
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          Email Results
+        </button>
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          Print Results
+        </button>
+      </div>
+      <p>
+        Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible.
+      </p>
+    </div>
   </div>
-  <button
-    className=""
-    onClick={[Function]}
-    type="button"
-  >
-    Back
-  </button>
 </div>
 `;

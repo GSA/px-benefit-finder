@@ -7,7 +7,7 @@ import { Button } from '../index'
  * @return {html} returns a semantic html button element with a custom function onClick event
  */
 
-const ShareButton = () => {
+const ShareButton = ({ ui }) => {
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href
@@ -27,7 +27,7 @@ const ShareButton = () => {
 
   return (
     <Button secondary onClick={handleClick}>
-      Share
+      {ui}
     </Button>
   )
 }

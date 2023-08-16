@@ -8,6 +8,8 @@ import {
   TimeIndicator,
 } from '../index'
 
+import './_index.scss'
+
 /**
  * a functional component that renders a link as a button
  * @component
@@ -23,7 +25,7 @@ const Intro = ({ data, ui, setStep, step }) => {
 
   return (
     data && (
-      <div>
+      <div className="intro">
         <Chevron heading={title} description={summary} />
         <Heading headingLevel={2}>{heading}</Heading>
         <TimeIndicator
@@ -31,9 +33,11 @@ const Intro = ({ data, ui, setStep, step }) => {
           timeEstimate={timeEstimate}
         />
         <ProcessList steps={steps.list} description={steps.title} />
-        <Heading headingLevel={2}>{notices.title}</Heading>
+        <Heading headingLevel={2}>{notices.heading}</Heading>
         <NoticesList data={notices.list} />
-        <Button onClick={() => setStep(step + 1)}>{button}</Button>
+        <div className="cta-wrapper">
+          <Button onClick={() => setStep(step + 1)}>{button}</Button>
+        </div>
       </div>
     )
   )

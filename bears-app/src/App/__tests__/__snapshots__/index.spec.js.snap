@@ -2,21 +2,23 @@
 
 exports[`App renders a match to the previous snapshot 1`] = `
 <div
-  className="bears-app"
+  className="bears-app "
 >
-  <div>
+  <div
+    className="intro"
+  >
     <div
       className="chevron"
     >
       <h1
         className=""
       >
-        Benefit Finder After Losing A Loved One
+        Find federal benefits after the loss of a loved one
       </h1>
       <div
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>We are sorry about your loss. You and your family may be eligible for survivor benefits from the government following a family member's death. Learn how to find the benefits you may qualify for.</p>",
+            "__html": "<p>Find government survivor benefits including funeral benefits, housing, and education help.</p>",
           }
         }
       />
@@ -66,42 +68,107 @@ exports[`App renders a match to the previous snapshot 1`] = `
     </ol>
     <h2
       className=""
-    />
-    <ul
-      className="notices-list"
     >
-      <li
-        className="notice"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<div>Your information<strong>will not</strong> be shared, saved, or submitted.</div>",
-          }
-        }
-      />
-      <li
-        className="notice"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Provide complete and accurate information to get the most relevant results.",
-          }
-        }
-      />
-      <li
-        className="notice"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",
-          }
-        }
-      />
-    </ul>
-    <button
-      className=""
-      onClick={[Function]}
-      type="button"
+      Before you start:
+    </h2>
+    <div
+      className="notices"
     >
-      Start
-    </button>
+      <ul
+        className="notices-list add-list-reset"
+      >
+        <li
+          className="notice"
+        >
+          <div
+            className=""
+            role="alert"
+          >
+            <div
+              className="usa-alert__body"
+            >
+              <div
+                className="usa-alert__text"
+              >
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div>Your information<strong> will not</strong> be shared, saved, or submitted.</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          className="notice"
+        >
+          <div
+            className=""
+            role="alert"
+          >
+            <div
+              className="usa-alert__body"
+            >
+              <div
+                className="usa-alert__text"
+              >
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "Provide complete and accurate information to get the most relevant results.",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          className="notice"
+        >
+          <div
+            className=""
+            role="alert"
+          >
+            <div
+              className="usa-alert__body"
+            >
+              <div
+                className="usa-alert__text"
+              >
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div
+        className="line-sperator-wrapper"
+      >
+        <div
+          className="line-sperator"
+        />
+      </div>
+    </div>
+    <div
+      className="cta-wrapper"
+    >
+      <button
+        className=""
+        onClick={[Function]}
+        type="button"
+      >
+        Start
+      </button>
+    </div>
   </div>
 </div>
 `;

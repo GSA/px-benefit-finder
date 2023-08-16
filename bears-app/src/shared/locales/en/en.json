@@ -16,10 +16,10 @@
       ]
     },
     "notices": {
-      "heading": "Before you start",
+      "heading": "Before you start:",
       "list": [
         {
-          "notice": "<div>Your information<strong>will not</strong> be shared, saved, or submitted.</div>"
+          "notice": "<div>Your information<strong> will not</strong> be shared, saved, or submitted.</div>"
         },
         {
           "notice": "Provide complete and accurate information to get the most relevant results."
@@ -72,8 +72,12 @@
     ]
   },
   "resultsView": {
-    "heading": "Your potential benefits",
-    "description": "<div>You must verify your eligibility and visit each agency to apply. <strong>Check with your city, state, or employer for other benefits.</strong></div>",
+    "chevron": {
+      "heading": "Your Custom List",
+      "description": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits.Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual applications.</p></div>"
+    },
+    "heading": "Results",
+    "description": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>",
     "stepBackLink": "Back",
     "eligibleResults": {
       "heading": "Results",
@@ -83,13 +87,17 @@
       "heading": "Benefits you did not qualify for",
       "description": "<div>Based on your answers you are not eligible for these benefits. <strong>You may become eligible if you enter additional information or your situation changes.</strong></div>",
       "cta": "See benefits you did not qualify for"
+    },
+    "relativeBenefits": {
+      "heading": "Other benefits that might be relevant to you"
+    },
+    "shareResults": {
+      "heading": "Sharing and printing",
+      "shareButton": "Share Link",
+      "emailButton": "Email Results",
+      "printButton": "Print Results",
+      "description": "Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible."
     }
-  },
-  "notEligibleResults": {
-    "heading": "Benefits you did not qualify for",
-    "description": "<div>According to your answers you <strong>are not</strong> eligible for these benefits.</div>",
-    "heading2": "Non-eligible Results",
-    "description2": "Check with your state, city, or employer for other benefits."
   },
   "shareResults": {
     "heading": "Share results",
@@ -106,5 +114,57 @@
   "benefitAccordionGroup": {
     "closedState": "Open all",
     "openState": "Close all"
+  },
+  "sectionHeadings": {
+    "start": "Complete Questions",
+    "continue": "Questions Continued",
+    "final": "Final Questions"
+  },
+  "select": {
+    "labelSelect": "Select",
+    "defaultValue": "-Select-"
+  },
+  "date": {
+    "labelDay": "Day",
+    "labelMonth": "Month",
+    "labelYear": "Year",
+    "monthOptions": [
+      {
+        "label": "01 - January"
+      },
+      {
+        "label": "02 - February"
+      },
+      {
+        "label": "03 - March"
+      },
+      {
+        "label": "04 - April"
+      },
+      {
+        "label": "05 - May"
+      },
+      {
+        "label": "06 - June"
+      },
+      {
+        "label": "07 - July"
+      },
+      {
+        "label": "08 - August"
+      },
+      {
+        "label": "09 - September"
+      },
+      {
+        "label": "10 - October"
+      },
+      {
+        "label": "11 - November"
+      },
+      {
+        "label": "12 - December"
+      }
+    ]
   }
 }

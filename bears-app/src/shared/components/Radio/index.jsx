@@ -23,12 +23,12 @@ const Radio = ({ id, label, value, checked, onChange, required }) => {
           }`}
           id={id}
           type="radio"
-          name={label}
-          value={value || label}
+          name={id}
+          value={value || id}
           checked={checked}
           onChange={onChange}
         />
-        <Label className="usa-radio__label" htmlFor={id} label={value} />
+        <Label className="usa-radio__label" htmlFor={id} label={label} />
       </div>
     </>
   )

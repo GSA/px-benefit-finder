@@ -6,7 +6,7 @@ import { Button } from '../index'
  * @component
  * @return {html} returns a semantic html button element with a custom function onClick event
  */
-const EmailButton = () => {
+const EmailButton = ({ ui }) => {
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href
@@ -26,7 +26,7 @@ const EmailButton = () => {
 
   return (
     <Button secondary onClick={handleClick}>
-      Email
+      {ui}
     </Button>
   )
 }

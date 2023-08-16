@@ -1,32 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NoticesList renders a match to the previous snapshot 1`] = `
-<ul
-  className="notices-list"
+<div
+  className="notices"
 >
-  <li
-    className="notice"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<div>Your information<strong>will not</strong> be shared, saved, or submitted.</div>",
-      }
-    }
-  />
-  <li
-    className="notice"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "Provide complete and accurate information to get the most relevant results.",
-      }
-    }
-  />
-  <li
-    className="notice"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",
-      }
-    }
-  />
-</ul>
+  <ul
+    className="notices-list add-list-reset"
+  >
+    <li
+      className="notice"
+    >
+      <div
+        className=""
+        role="alert"
+      >
+        <div
+          className="usa-alert__body"
+        >
+          <div
+            className="usa-alert__text"
+          >
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<div>Your information<strong> will not</strong> be shared, saved, or submitted.</div>",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="notice"
+    >
+      <div
+        className=""
+        role="alert"
+      >
+        <div
+          className="usa-alert__body"
+        >
+          <div
+            className="usa-alert__text"
+          >
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Provide complete and accurate information to get the most relevant results.",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="notice"
+    >
+      <div
+        className=""
+        role="alert"
+      >
+        <div
+          className="usa-alert__body"
+        >
+          <div
+            className="usa-alert__text"
+          >
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div
+    className="line-sperator-wrapper"
+  >
+    <div
+      className="line-sperator"
+    />
+  </div>
+</div>
 `;

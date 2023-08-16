@@ -1,10 +1,13 @@
 .relative-benefit-card {
+  // .usa-card:last-child overide
+  margin-bottom: 16px !important;
   /* stylelint-disable selector-class-pattern */
   .usa-card__container {
     background-color: #d9e8f6;
     border-radius: 4px;
     color: #162e51;
     height: auto;
+    margin: 0;
   }
 
   a {

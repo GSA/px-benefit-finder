@@ -7,10 +7,13 @@ import {
   Form,
 } from '../shared/components'
 
+import './_index.scss'
+
 // data and ui content
 import * as en from '../shared/locales/en/en.json'
 import * as es from '../shared/locales/es/es.json'
-import content from '../shared/api/mock-data/content-data'
+// import content from '../shared/api/mock-data/content-data'
+import content from '../shared/api/mock-data/current.js'
 
 /**
  * a functional component that renders our application.
@@ -32,7 +35,8 @@ function App() {
   }
 
   // destructure data
-  const { lifeEventForm, benefits } = JSON.parse(content)
+  const { data } = JSON.parse(content)
+  const { lifeEventForm, benefits } = data
 
   // set data state
   const [stepDataArray, setStepDataArray] = useState([
@@ -50,7 +54,11 @@ function App() {
   return (
     <LanguageContext.Provider value={t}>
       {/* {console.log(t)} */}
-      <div className="bears-app">
+      <div
+        className={`bears-app ${
+          step !== 0 && viewResults !== true ? 'form' : ''
+        }`}
+      >
         {step === 0 ? (
           <Intro
             data={lifeEventForm}
@@ -70,20 +78,22 @@ function App() {
             }}
           />
         ) : verifyStep === false ? (
-          <Form>
-            <LifeEventSection
-              step={step}
-              setStep={setStep}
-              data={stepDataArray}
-              handleData={() => setStepDataArray()}
-              stepData={stepData}
-              setStepData={setStepData}
-              verifyStep={verifyStep}
-              setVerifyStep={() => setVerifyStep(true)}
-              setViewResults={() => setViewResults(true)}
-              ui={t}
-            />
-          </Form>
+          <div>
+            <Form>
+              <LifeEventSection
+                step={step}
+                setStep={setStep}
+                data={stepDataArray}
+                handleData={() => setStepDataArray()}
+                stepData={stepData}
+                setStepData={setStepData}
+                verifyStep={verifyStep}
+                setVerifyStep={() => setVerifyStep(true)}
+                setViewResults={() => setViewResults(true)}
+                ui={t}
+              />
+            </Form>
+          </div>
         ) : (
           <VerifySelectionsView
             handleStepBack={() => {
@@ -93,8 +103,10 @@ function App() {
             handleStepForward={() => {
               setViewResults(true)
             }}
-            ui={t.verifySelectionsView}
+            ui={t}
             data={stepDataArray}
+            step={step}
+            setStep={setStep}
           />
         )}
       </div>

@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
+import { Alert } from '../index'
+
+import './_index.scss'
 
 /**
  * a functional component that renders a list of information
@@ -19,20 +22,25 @@ const NoticesList = ({ data }) => {
       data &&
       data.data.map((item, i) => {
         return (
-          <li
-            className="notice"
-            key={i}
-            dangerouslySetInnerHTML={createMarkup(item.notice)}
-          />
+          <li className="notice" key={i}>
+            <Alert noBackground>
+              <div dangerouslySetInnerHTML={createMarkup(item.notice)}></div>
+            </Alert>
+          </li>
         )
       })
     )
   }
 
   return (
-    <ul className="notices-list">
-      <Notices className="notices" data={data} />
-    </ul>
+    <div className="notices">
+      <ul className="notices-list add-list-reset">
+        <Notices data={data} />
+      </ul>
+      <div className="line-sperator-wrapper">
+        <div className="line-sperator" />
+      </div>
+    </div>
   )
 }
 

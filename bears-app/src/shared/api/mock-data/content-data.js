@@ -62,7 +62,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_relation",
                 "legend": "Applicant's relationship to the person who died",
-                "required": "TRUE",
+                "required": "FALSE",
                 "hint": "",
                 "inputs": [
                   {
@@ -156,7 +156,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_care_for_child",
                 "legend": "Applicant care for child",
-                "required": "TRUE",
+                "required": "FALSE",
                 "hint": "",
                 "inputs": [
                   {
@@ -261,7 +261,7 @@ const content = `{
               "fieldset": {
                 "criteriaKey": "applicant_citizen_status",
                 "legend": "Applicant citizen status",
-                "required": "TRUE",
+                "required": "FALSE",
                 "hint": "",
                 "inputs": [
                   {

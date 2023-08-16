@@ -363,7 +363,9 @@ const LifeEventSection = ({
                           <Date
                             required={
                               Object.keys(input.inputCriteria.values[0]?.value)
-                                .length < 3 && item.fieldset.required
+                                .length < 3
+                                ? item.fieldset.required
+                                : 'FALSE'
                             }
                             value={input.inputCriteria.values[0]?.value}
                             onChange={event =>

@@ -107,7 +107,7 @@ class LifeEventController {
 
     // Encode JSON data.
     $result = [
-      "lifeEventform" => $life_event_form,
+      "lifeEventForm" => $life_event_form,
       "benefits" => $benefits
     ];
     $json = json_encode($result, JSON_PRETTY_PRINT);
@@ -228,7 +228,7 @@ class LifeEventController {
     // Get criterias fieldsets multi paragraphs
     $criterias_1 = $criteria->get('field_b_children')->referencedEntities();
     if (empty($criterias_1)) {
-      $criteria_fieldset["children"][]["fieldsets"] = (object)[];
+      $criteria_fieldset["children"] = [];
     }
     else {
       foreach ($criterias_1 as $criteria_1) {

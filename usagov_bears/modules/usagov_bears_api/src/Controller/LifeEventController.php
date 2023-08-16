@@ -210,10 +210,14 @@ class LifeEventController {
     ];
 
     $criteria_values = [];
-    $criteria_values[] = array(
-      "default" => "",
-      "value" => (object)[]
-    );
+
+    if ($criteria_node->get('field_b_type')->value == 'date' || $criteria_node->get('field_b_type')->value == "Date") {
+      $criteria_values[] = array(
+        "default" => "",
+        "value" => (object)[]
+      );
+    }
+
     $b_values = $criteria_node->get('field_b_values')->getValue();
     foreach ($b_values as $b_value) {
       $criteria_values[] = array(

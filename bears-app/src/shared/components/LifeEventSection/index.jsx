@@ -247,8 +247,12 @@ const LifeEventSection = ({
               {/* TODO: create handler component for input case switching */}
 
               {currentData.section.fieldsets.map((item, i) => {
+                // TODO: exludes groups for now
+                if (item.fieldset.fieldsets) {
+                  return null
+                }
                 return item.fieldset.inputs[0].inputCriteria.type ===
-                  'select' ? (
+                  'Select' ? (
                   //
                   //
                   // case select
@@ -287,7 +291,7 @@ const LifeEventSection = ({
                       )
                     })}
                   </Fieldset>
-                ) : item.fieldset.inputs[0].inputCriteria.type === 'radio' ? (
+                ) : item.fieldset.inputs[0].inputCriteria.type === 'Radio' ? (
                   //
                   //
                   // case radio
@@ -338,7 +342,7 @@ const LifeEventSection = ({
                       )
                     })}
                   </Fieldset>
-                ) : item.fieldset.inputs[0].inputCriteria.type === 'date' ? (
+                ) : item.fieldset.inputs[0].inputCriteria.type === 'Date' ? (
                   //
                   //
                   // case date

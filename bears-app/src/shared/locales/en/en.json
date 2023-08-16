@@ -120,5 +120,51 @@
     "continue": "Questions Continued",
     "final": "Final Questions"
   },
-  "result-view": {}
+  "select": {
+    "labelSelect": "Select",
+    "defaultValue": "-Select-"
+  },
+  "date": {
+    "labelDay": "Day",
+    "labelMonth": "Month",
+    "labelYear": "Year",
+    "monthOptions": [
+      {
+        "label": "01 - January"
+      },
+      {
+        "label": "02 - February"
+      },
+      {
+        "label": "03 - March"
+      },
+      {
+        "label": "04 - April"
+      },
+      {
+        "label": "05 - May"
+      },
+      {
+        "label": "06 - June"
+      },
+      {
+        "label": "07 - July"
+      },
+      {
+        "label": "08 - August"
+      },
+      {
+        "label": "09 - September"
+      },
+      {
+        "label": "10 - October"
+      },
+      {
+        "label": "11 - November"
+      },
+      {
+        "label": "12 - December"
+      }
+    ]
+  }
 }

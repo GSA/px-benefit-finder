@@ -119,5 +119,14 @@
     "start": "Preguntas completas",
     "continue": "Preguntas Continuación",
     "final": "Preguntas finales"
+  },
+  "select": {
+    "labelSelect": "Seleccionar ",
+    "defaultValue": "--Seleccionar --"
+  },
+  "date": {
+    "labelDay": "Día",
+    "labelMonth": "Mes",
+    "labelYear": "Año"
   }
 }

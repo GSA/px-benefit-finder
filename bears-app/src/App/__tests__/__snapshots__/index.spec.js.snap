@@ -13,12 +13,12 @@ exports[`App renders a match to the previous snapshot 1`] = `
       <h1
         className=""
       >
-        Benefit Finder After Losing A Loved One
+        Find federal benefits after the loss of a loved one
       </h1>
       <div
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>We are sorry about your loss. You and your family may be eligible for survivor benefits from the government following a family member's death. Learn how to find the benefits you may qualify for.</p>",
+            "__html": "<p>Find government survivor benefits including funeral benefits, housing, and education help.</p>",
           }
         }
       />

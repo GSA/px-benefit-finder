@@ -1,5 +1,6 @@
 import TestRenderer from 'react-test-renderer'
 import Select from '../index.jsx'
+import * as en from '../../../locales/en/en.json'
 
 const selectLabel = 'Dropdown Label'
 const selectOptions = [
@@ -12,7 +13,7 @@ const selectOptions = [
 describe('Select', () => {
   it('renders a match to the previous snapshot', () => {
     const component = TestRenderer.create(
-      <Select label={selectLabel} options={selectOptions} />
+      <Select label={selectLabel} options={selectOptions} ui={en.select} />
     )
     expect(component.toJSON()).toMatchSnapshot()
   })

@@ -248,7 +248,7 @@ const LifeEventSection = ({
 
               {currentData.section.fieldsets.map((item, i) => {
                 return item.fieldset.inputs[0].inputCriteria.type ===
-                  'select' ? (
+                  'Select' ? (
                   //
                   //
                   // case select
@@ -275,6 +275,7 @@ const LifeEventSection = ({
                               defaultSelected === undefined &&
                               item.fieldset.required
                             }
+                            ui={ui?.select}
                             htmlFor={fieldSetId}
                             key={fieldSetId}
                             options={inputValues}
@@ -287,7 +288,7 @@ const LifeEventSection = ({
                       )
                     })}
                   </Fieldset>
-                ) : item.fieldset.inputs[0].inputCriteria.type === 'radio' ? (
+                ) : item.fieldset.inputs[0].inputCriteria.type === 'Radio' ? (
                   //
                   //
                   // case radio
@@ -338,7 +339,7 @@ const LifeEventSection = ({
                       )
                     })}
                   </Fieldset>
-                ) : item.fieldset.inputs[0].inputCriteria.type === 'date' ? (
+                ) : item.fieldset.inputs[0].inputCriteria.type === 'Date' ? (
                   //
                   //
                   // case date
@@ -367,6 +368,7 @@ const LifeEventSection = ({
                                 item.fieldset.criteriaKey
                               )
                             }
+                            ui={ui}
                           />
                         </div>
                       )

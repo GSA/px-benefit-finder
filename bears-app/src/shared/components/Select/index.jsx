@@ -8,7 +8,8 @@ import PropTypes from 'prop-types'
  * @param {array} options - The inherited options array of objects with value and label keys
  * @return {html} returns a semantic html select element with options
  */
-function Select({ label, htmlFor, options, selected, onChange, required }) {
+function Select({ label, htmlFor, options, selected, onChange, required, ui }) {
+  const { labelSelect, defaultValue } = ui
   /**
    * a functional component to create a list of options for a select element.
    * @function
@@ -27,7 +28,7 @@ function Select({ label, htmlFor, options, selected, onChange, required }) {
 
   return (
     <>
-      <Label label={label} htmlFor={htmlFor} />
+      <Label label={label || labelSelect} htmlFor={htmlFor} />
       <select
         className={`usa-select ${required === 'TRUE' ? 'required-field' : ''}`}
         name={htmlFor}
@@ -36,7 +37,7 @@ function Select({ label, htmlFor, options, selected, onChange, required }) {
         value={selected || ''}
       >
         <option value="" key="default" disabled>
-          -Select-
+          {defaultValue}
         </option>
         <Options options={options} />
       </select>

@@ -68,6 +68,7 @@ const LifeEventSection = ({
       field.classList.contains('required-field') &&
         field.classList.add('usa-input--error')
     })
+    currentData.completed = false
     window.scrollTo(0, 0)
     return false
   }
@@ -83,6 +84,7 @@ const LifeEventSection = ({
     values.forEach(field => {
       field.classList.remove('usa-input--error')
     })
+    currentData.completed = true
     setValues([])
     return true
   }
@@ -127,7 +129,9 @@ const LifeEventSection = ({
    * @return {null} only executes inherited functions
    */
   const handleUpdate = updateIndex => {
+    console.log(currentData)
     if (handleCheckRequriedFields() === true) {
+      // set complete step usa-step-indicator__segment--complete
       setStep(step + updateIndex)
       setStepData(updateIndex)
     }
@@ -228,6 +232,7 @@ const LifeEventSection = ({
             data={data}
             backLinkLabel={stepIndicator.stepBackLink}
             handleCheckRequriedFields={() => handleCheckRequriedFields()}
+            completed={currentData.section.completed}
           />
           {currentData && (
             <div id="benefit-section" onChange={() => handleUpdateData}>
@@ -315,7 +320,6 @@ const LifeEventSection = ({
 
                       return (
                         <div key={fieldSetId}>
-                          {input.inputCriteria.label}
                           {/* map the options */}
                           {input.inputCriteria.values.map((option, index) => {
                             const inputId = `${fieldSetId}_${index}`
@@ -327,7 +331,7 @@ const LifeEventSection = ({
                                 }
                                 id={inputId}
                                 key={inputId}
-                                label={`${option.value}_${inputId}`}
+                                label={option.value}
                                 value={option.value}
                                 checked={option.selected || false}
                                 onChange={event => {

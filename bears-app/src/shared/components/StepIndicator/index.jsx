@@ -21,6 +21,7 @@ const StepIndicator = ({
   setCurrent,
   backLinkLabel,
   handleCheckRequriedFields,
+  completed,
 }) => {
   /**
    * a functional component that supports a11y for completed steps
@@ -54,7 +55,9 @@ const StepIndicator = ({
     const statusClass = current === index ? '--current' : ''
     return (
       <li
-        className={`usa-step-indicator__segment usa-step-indicator__segment${statusClass}`}
+        className={`usa-step-indicator__segment usa-step-indicator__segment${statusClass} ${
+          current < index ? '' : 'usa-step-indicator__segment--complete'
+        }`}
         aria-current={completed}
         onClick={() =>
           completed === false &&
@@ -83,7 +86,7 @@ const StepIndicator = ({
                   index={i}
                   current={current}
                   setCurrent={setCurrent}
-                  completed={false}
+                  completed={completed}
                   handleCheckRequriedFields={handleCheckRequriedFields}
                 />
               )

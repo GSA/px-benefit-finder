@@ -22,8 +22,7 @@ Array [
             className="usa-step-indicator__segments"
           >
             <li
-              aria-current={false}
-              className="usa-step-indicator__segment usa-step-indicator__segment--current"
+              className="usa-step-indicator__segment usa-step-indicator__segment--current usa-step-indicator__segment--complete"
               onClick={[Function]}
             >
               <span
@@ -37,8 +36,7 @@ Array [
               </span>
             </li>
             <li
-              aria-current={false}
-              className="usa-step-indicator__segment usa-step-indicator__segment"
+              className="usa-step-indicator__segment usa-step-indicator__segment "
               onClick={[Function]}
             >
               <span
@@ -52,8 +50,7 @@ Array [
               </span>
             </li>
             <li
-              aria-current={false}
-              className="usa-step-indicator__segment usa-step-indicator__segment"
+              className="usa-step-indicator__segment usa-step-indicator__segment "
               onClick={[Function]}
             >
               <span

@@ -12,8 +12,8 @@ import './_index.scss'
 // data and ui content
 import * as en from '../shared/locales/en/en.json'
 import * as es from '../shared/locales/es/es.json'
-import content from '../shared/api/mock-data/content-data'
-// import content from '../shared/api/mock-data/dolo-data.js'
+// import content from '../shared/api/mock-data/content-data'
+import content from '../shared/api/mock-data/current.js'
 
 /**
  * a functional component that renders our application.
@@ -35,7 +35,8 @@ function App() {
   }
 
   // destructure data
-  const { lifeEventForm, benefits } = JSON.parse(content)
+  const { data } = JSON.parse(content)
+  const { lifeEventForm, benefits } = data
 
   // set data state
   const [stepDataArray, setStepDataArray] = useState([

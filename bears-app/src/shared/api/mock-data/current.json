@@ -499,10 +499,6 @@
                                                       "childDependencyOption": "",
                                                       "values": [
                                                         {
-                                                          "default": "",
-                                                          "value": {}
-                                                        },
-                                                        {
                                                           "option": "Yes",
                                                           "value": "Yes"
                                                         },

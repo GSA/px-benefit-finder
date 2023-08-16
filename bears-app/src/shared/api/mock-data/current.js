@@ -200,6 +200,10 @@ const content = `{
                         "childDependencyOption": "",
                         "values": [
                           {
+                            "default": "",
+                            "value": ""
+                          },
+                          {
                             "option": "Yes",
                             "value": "Yes"
                           },
@@ -230,6 +234,10 @@ const content = `{
                         "hasChild": "FALSE",
                         "childDependencyOption": "",
                         "values": [
+                          {
+                            "default": "",
+                            "value": ""
+                          },
                           {
                             "option": "Yes",
                             "value": "Yes"
@@ -262,6 +270,10 @@ const content = `{
                         "childDependencyOption": "",
                         "values": [
                           {
+                            "default": "",
+                            "value": ""
+                          },
+                          {
                             "option": "Yes",
                             "value": "Yes"
                           },
@@ -292,6 +304,10 @@ const content = `{
                         "hasChild": "FALSE",
                         "childDependencyOption": "",
                         "values": [
+                          {
+                            "default": "",
+                            "value": ""
+                          },
                           {
                             "option": "Yes",
                             "value": "Yes"
@@ -324,6 +340,10 @@ const content = `{
                         "childDependencyOption": "",
                         "values": [
                           {
+                            "default": "",
+                            "value": ""
+                          },
+                          {
                             "option": "Yes",
                             "value": "Yes"
                           },
@@ -355,6 +375,10 @@ const content = `{
                         "childDependencyOption": "",
                         "values": [
                           {
+                            "default": "",
+                            "value": ""
+                          },
+                          {
                             "option": "Yes",
                             "value": "Yes"
                           },
@@ -385,6 +409,10 @@ const content = `{
                         "hasChild": "FALSE",
                         "childDependencyOption": "",
                         "values": [
+                          {
+                            "default": "",
+                            "value": ""
+                          },
                           {
                             "option": "Yes",
                             "value": "Yes"
@@ -456,6 +484,10 @@ const content = `{
                                             "childDependencyOption": "",
                                             "values": [
                                               {
+                                                "default": "",
+                                                "value": ""
+                                              },
+                                              {
                                                 "option": "Died while on active duty",
                                                 "value": "Died while on active duty"
                                               },
@@ -500,7 +532,7 @@ const content = `{
                                                       "values": [
                                                         {
                                                           "default": "",
-                                                          "value": {}
+                                                          "value": ""
                                                         },
                                                         {
                                                           "option": "Yes",

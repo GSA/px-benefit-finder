@@ -9,7 +9,10 @@ import './_index.scss'
  * @param {object} value - inherited state values
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
-const Date = ({ onChange, value, required }) => {
+const Date = ({ onChange, value, required, ui }) => {
+  const { date, select } = ui
+  const { labelDay, labelMonth, labelYear } = date
+  const { defaultValue } = select
   /**
    * a parse our date object
    * @function
@@ -25,7 +28,7 @@ const Date = ({ onChange, value, required }) => {
     <div className="usa-memorable-date">
       <div className="usa-form-group usa-form-group--month usa-form-group--select">
         <label className="usa-label" htmlFor="date_of_birth_month">
-          Month
+          {labelMonth}
         </label>
         <select
           className={`usa-select ${
@@ -42,7 +45,7 @@ const Date = ({ onChange, value, required }) => {
           }
           onChange={onChange}
         >
-          <option value>- Select -</option>
+          <option value>{defaultValue}</option>
           <option value="0">01 - January</option>
           <option value="1">02 - February</option>
           <option value="2">03 - March</option>
@@ -59,7 +62,7 @@ const Date = ({ onChange, value, required }) => {
       </div>
       <div className="usa-form-group usa-form-group--day">
         <label className="usa-label" htmlFor="date_of_birth_day">
-          Day
+          {labelDay}
         </label>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
@@ -79,7 +82,7 @@ const Date = ({ onChange, value, required }) => {
       </div>
       <div className="usa-form-group usa-form-group--year">
         <label className="usa-label" htmlFor="date_of_birth_year">
-          Year
+          {labelYear}
         </label>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}

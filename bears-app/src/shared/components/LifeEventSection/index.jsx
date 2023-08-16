@@ -279,6 +279,7 @@ const LifeEventSection = ({
                               defaultSelected === undefined &&
                               item.fieldset.required
                             }
+                            ui={ui?.select}
                             htmlFor={fieldSetId}
                             key={fieldSetId}
                             options={inputValues}
@@ -371,6 +372,7 @@ const LifeEventSection = ({
                                 item.fieldset.criteriaKey
                               )
                             }
+                            ui={ui}
                           />
                         </div>
                       )

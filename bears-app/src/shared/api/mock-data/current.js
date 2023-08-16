@@ -120,6 +120,138 @@ const content = `{
                   ],
                   "children": []
                 }
+              },
+              {
+                "fieldset": {
+                  "heading": "Answer yes or no",
+                  "description": "",
+                  "fieldsets": [
+                    {
+                      "fieldset": {
+                        "criteriaKey": "applicant_care_for_child",
+                        "legend": "Are you caring for a child of the deceased who is disabled or under the age of 16?",
+                        "required": "FALSE",
+                        "hint": "",
+                        "inputs": [
+                          {
+                            "inputCriteria": {
+                              "id": "applicant_care_for_child",
+                              "type": "Radio",
+                              "name": "applicant_care_for_child",
+                              "label": "Are you caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16?",
+                              "hasChild": "FALSE",
+                              "childDependencyOption": "",
+                              "values": [
+                                {
+                                  "option": "Yes",
+                                  "value": "Yes"
+                                },
+                                {
+                                  "option": "No",
+                                  "value": "No"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    },
+                    {
+                      "fieldset": {
+                        "criteriaKey": "applicant_paid_funeral_expenses",
+                        "legend": "Did you pay for funeral or burial expenses?",
+                        "required": "FALSE",
+                        "hint": "",
+                        "inputs": [
+                          {
+                            "inputCriteria": {
+                              "id": "applicant_paid_funeral_expenses",
+                              "type": "Select",
+                              "name": "applicant_paid_funeral_expenses",
+                              "label": "Did you pay for funeral or burial expenses?",
+                              "hasChild": "FALSE",
+                              "childDependencyOption": "",
+                              "values": [
+                                {
+                                  "option": "Yes",
+                                  "value": "Yes"
+                                },
+                                {
+                                  "option": "No",
+                                  "value": "No"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    },
+                    {
+                      "fieldset": {
+                        "criteriaKey": "applicant_funeral_reimbursement",
+                        "legend": "Did any organization or government agency reimburse you for any funeral or burial expenses?",
+                        "required": "FALSE",
+                        "hint": "",
+                        "inputs": [
+                          {
+                            "inputCriteria": {
+                              "id": "applicant_funeral_reimbursement",
+                              "type": "Radio",
+                              "name": "applicant_funeral_reimbursment",
+                              "label": "Did any organization or government agency reimburse you for any funeral or burial expenses?",
+                              "hasChild": "FALSE",
+                              "childDependencyOption": "",
+                              "values": [
+                                {
+                                  "option": "Yes",
+                                  "value": "Yes"
+                                },
+                                {
+                                  "option": "No",
+                                  "value": "No"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    },
+                    {
+                      "fieldset": {
+                        "criteriaKey": "applicant_citizen_status",
+                        "legend": "Are you a U.S. citizen or eligible non-citizen?",
+                        "required": "FALSE",
+                        "hint": "",
+                        "inputs": [
+                          {
+                            "inputCriteria": {
+                              "id": "applicant_citizen_status",
+                              "type": "Radio",
+                              "name": "applicant_citizen_status",
+                              "label": "Are you a U.S. citizen or eligible non-citizen?",
+                              "hasChild": "FALSE",
+                              "childDependencyOption": "",
+                              "values": [
+                                {
+                                  "option": "Yes",
+                                  "value": "Yes"
+                                },
+                                {
+                                  "option": "No",
+                                  "value": "No"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -200,10 +332,6 @@ const content = `{
                         "childDependencyOption": "",
                         "values": [
                           {
-                            "default": "",
-                            "value": ""
-                          },
-                          {
                             "option": "Yes",
                             "value": "Yes"
                           },
@@ -234,10 +362,6 @@ const content = `{
                         "hasChild": "FALSE",
                         "childDependencyOption": "",
                         "values": [
-                          {
-                            "default": "",
-                            "value": ""
-                          },
                           {
                             "option": "Yes",
                             "value": "Yes"
@@ -270,10 +394,6 @@ const content = `{
                         "childDependencyOption": "",
                         "values": [
                           {
-                            "default": "",
-                            "value": ""
-                          },
-                          {
                             "option": "Yes",
                             "value": "Yes"
                           },
@@ -304,10 +424,6 @@ const content = `{
                         "hasChild": "FALSE",
                         "childDependencyOption": "",
                         "values": [
-                          {
-                            "default": "",
-                            "value": ""
-                          },
                           {
                             "option": "Yes",
                             "value": "Yes"
@@ -340,10 +456,6 @@ const content = `{
                         "childDependencyOption": "",
                         "values": [
                           {
-                            "default": "",
-                            "value": ""
-                          },
-                          {
                             "option": "Yes",
                             "value": "Yes"
                           },
@@ -375,10 +487,6 @@ const content = `{
                         "childDependencyOption": "",
                         "values": [
                           {
-                            "default": "",
-                            "value": ""
-                          },
-                          {
                             "option": "Yes",
                             "value": "Yes"
                           },
@@ -409,10 +517,6 @@ const content = `{
                         "hasChild": "FALSE",
                         "childDependencyOption": "",
                         "values": [
-                          {
-                            "default": "",
-                            "value": ""
-                          },
                           {
                             "option": "Yes",
                             "value": "Yes"
@@ -484,10 +588,6 @@ const content = `{
                                             "childDependencyOption": "",
                                             "values": [
                                               {
-                                                "default": "",
-                                                "value": ""
-                                              },
-                                              {
                                                 "option": "Died while on active duty",
                                                 "value": "Died while on active duty"
                                               },
@@ -531,10 +631,6 @@ const content = `{
                                                       "childDependencyOption": "",
                                                       "values": [
                                                         {
-                                                          "default": "",
-                                                          "value": ""
-                                                        },
-                                                        {
                                                           "option": "Yes",
                                                           "value": "Yes"
                                                         },
@@ -546,11 +642,7 @@ const content = `{
                                                     }
                                                   }
                                                 ],
-                                                "children": [
-                                                  {
-                                                    "fieldsets": {}
-                                                  }
-                                                ]
+                                                "children": []
                                               }
                                             }
                                           ]
@@ -619,7 +711,7 @@ const content = `{
             },
             {
               "criteriaKey": "applicant_paid_funeral_expenses",
-              "label": "You paid for funeral/burial expenses",
+              "label": "You paid for funeral/burial expenses and were not reimbursed by any organization or agency",
               "acceptableValues": [
                 "Yes"
               ]

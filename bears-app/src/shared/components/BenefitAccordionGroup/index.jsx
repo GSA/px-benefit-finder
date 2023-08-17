@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
+import createMarkup from '../../utils/createMarkup'
 import {
   Accordion,
   Alert,
@@ -7,7 +8,6 @@ import {
   Heading,
   KeyElegibilityCrieriaList,
   ObfuscatedLink,
-  Paragraph,
 } from '../index'
 import './_index.scss'
 
@@ -154,9 +154,10 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
               <Heading className="benefit-detail-title" headingLevel={4}>
                 {`Provided by ${agency.title}`}
               </Heading>
-              <Paragraph className="benefit-detail-summary">
-                {summary}
-              </Paragraph>
+              <div
+                className="benefit-detail-summary"
+                dangerouslySetInnerHTML={createMarkup(summary)}
+              />
               <KeyElegibilityCrieriaList
                 className="benefit-criteria-list"
                 data={eligibleBenefits}

@@ -24,7 +24,7 @@ import './_index.scss'
  * @param {array} stepDataArray inherited state of inupt values from form entry
  * @return {html} returns a view page of filtered benefits
  */
-const ResultsView = ({ handleStepBack, ui, data }) => {
+const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   // console.log(data)
   const {
     heading,
@@ -37,18 +37,33 @@ const ResultsView = ({ handleStepBack, ui, data }) => {
   } = ui
 
   // collect all the criteria keys and selected criteria values into an array
-  // const selectedCriteria = stepDataArray
-  //   .map((item, i) =>
-  //     item.section.fieldsets.map(item => {
-  //       return {
-  //         id: item.fieldset.inputs[0].inputCriteria.id,
-  //         values: item.fieldset.inputs[0].inputCriteria.values.find(
-  //           value => value.selected
-  //         ),
-  //       }
-  //     })
-  //   )
-  //   .flat() // we flatten all to have only one array
+  const selectedCriteria =
+    stepDataArray &&
+    stepDataArray
+      .map((item, i) =>
+        item.section.fieldsets.map(item => {
+          // TODO: exludes groups for now
+          if (item.fieldset.fieldsets) {
+            return undefined
+          }
+
+          // find selected values
+          const selected = item.fieldset.inputs[0].inputCriteria.values.find(
+            value => value.selected === true
+          )
+
+          return (
+            selected && {
+              id: item.fieldset.inputs[0].inputCriteria.id,
+              values: selected,
+            }
+          )
+        })
+      )
+      .flat() // we flatten all to have only one array
+      .filter(element => element !== undefined) // remove undefined
+
+  console.log('selected criteria', selectedCriteria)
 
   // Total Criteria = y
   // Met Criteria = x

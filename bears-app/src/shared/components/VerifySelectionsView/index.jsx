@@ -52,10 +52,10 @@ const VerifySelectionsView = ({
                     </Heading>
                     <div>
                       {section.fieldsets.map((item, i) => {
-                        // TODO: exludes groups for now
-                        if (item.fieldset.fieldsets) {
-                          return null
-                        }
+                        // // TODO: exludes groups for now
+                        // if (item.fieldset.fieldsets) {
+                        //   return null
+                        // }
                         const criteriaId = `criteria-${item.fieldset.criteriaKey}-${i}`
                         const result =
                           item.fieldset.inputs[0].inputCriteria.values.find(

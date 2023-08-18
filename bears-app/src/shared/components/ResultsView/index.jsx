@@ -54,7 +54,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
 
           return (
             selected && {
-              id: item.fieldset.inputs[0].inputCriteria.id,
+              criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
               values: selected,
             }
           )
@@ -62,8 +62,6 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
       )
       .flat() // we flatten all to have only one array
       .filter(element => element !== undefined) // remove undefined
-
-  console.log('selected criteria', selectedCriteria)
 
   // Total Criteria = y
   // Met Criteria = x
@@ -81,18 +79,37 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   // if there is a criteriakey match in a benefit
   // check that the value === acceptable values
 
-  // function likelyEligible(selectedCriteria, data) {
-  //   console.log(selectedCriteria)
-  //   data.forEach((item, i) => {
-  //     console.log(item.benefit.eligibility)
-  //   })
-  // }
+  const handleData = (selectedCriteria, data) => {
+    // return all eligible items
+    const eligibleItems =
+      data &&
+      data.map(item => {
+        console.log(item.benefit.eligibility)
+        // find all eligibility items that are matches to criteria key
+        const criteriaEligibility = item.benefit.eligibility.find(
+          criteria => criteria.criteriaKey === selectedCriteria[0].criteriaKey
+        )
 
-  // console.log(likelyEligible(selectedCriteria, data))
+        const isEligible =
+          criteriaEligibility !== undefined &&
+          criteriaEligibility.acceptableValues.find(
+            value => value === selectedCriteria[0].values.value
+          )
+
+        if (isEligible === selectedCriteria[0].values.value) {
+          criteriaEligibility.isEligible = true
+        }
+
+        return item
+      })
+    return eligibleItems
+  }
+
+  console.log('item matches', handleData(selectedCriteria, data))
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [data, selectedCriteria])
 
   // compare the selected criteria array with benefits
   return (
@@ -104,7 +121,11 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
         <p dangerouslySetInnerHTML={createMarkup(description)} />
         {/* map all the benefits into cards */}
         <div className="result-view-benefits">
-          <BenefitAccordionGroup data={data} entryKey={'benefit'} expandAll />
+          <BenefitAccordionGroup
+            data={handleData(selectedCriteria, data)}
+            entryKey={'benefit'}
+            expandAll
+          />
         </div>
         <div className="result-view-unmet">
           <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>

@@ -25,7 +25,6 @@ import './_index.scss'
  * @return {html} returns a view page of filtered benefits
  */
 const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
-  // console.log(data)
   const {
     heading,
     stepBackLink,
@@ -36,16 +35,94 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
     shareResults,
   } = ui
 
+  const handleDateEligibility = (conditional, selectedValue) => {
+    // date values
+    // "<01-01-1978"
+    // "<2years (the deceased died within the last two years)"
+    // "<18years"
+    // ">=62years"
+    // ">=60years"
+    // ">=50years"
+    // ">18years"
+
+    // get the conditional
+    const text = conditional
+    // const conditionals = ['>', '>=', '<', '<=']
+    const operators = /['>', '>=', '<', '<=', '=']/g
+    const operator = text.match(operators)
+    const integer = text.match(/\d+/)[0]
+    // console.log(operators, integer)
+
+    // calculate back
+    // get current date
+    // subtract integer
+    // if a date comes back in date format
+    const pattern = /-/
+    // pattern.test(text)
+    // console.log(pattern.test(text))
+
+    const conditionalDate = pattern.test(text)
+      ? new window.Date(text)
+      : new window.Date(
+          new Date().getFullYear() - integer,
+          new Date().getMonth(),
+          new Date().getDate()
+        )
+
+    // getTime in milliseconds so we can do a comparison
+    const epochConditionalDate = conditionalDate.getTime()
+
+    // example selected value for date
+    // const value = {
+    //   year: 2022,
+    //   month: 2,
+    //   day: 2,
+    // }
+
+    // calculate selected
+    const selectedDate = new window.Date(
+      Date.UTC(selectedValue.year, selectedValue.month, selectedValue.day)
+    )
+
+    const epochSelectedDate = selectedDate.getTime()
+
+    const isDateEligible = (
+      operator,
+      epochSelectedDate,
+      epochConditionalDate
+    ) => {
+      // ;['>', '>=', '<', '<=', '=']
+      switch (operator.length && operator.join('')) {
+        case '>':
+          return epochSelectedDate > epochConditionalDate
+        case '>=':
+          return epochSelectedDate >= epochConditionalDate
+        case '<':
+          return epochSelectedDate < epochConditionalDate
+        case '<=':
+          return epochSelectedDate <= epochConditionalDate
+        case '=':
+          return epochSelectedDate === epochConditionalDate
+        default:
+          return false
+      }
+    }
+    // console.log(
+    //   isDateEligible(operators, epochSelectedDate, epochConditionalDate)
+    // )
+    return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
+  }
+
   // collect all the criteria keys and selected criteria values into an array
   const selectedCriteria =
     stepDataArray &&
     stepDataArray
       .map((item, i) =>
         item.section.fieldsets.map(item => {
-          // TODO: exludes groups for now
-          if (item.fieldset.fieldsets) {
-            return undefined
-          }
+          // // TODO: exludes groups for now
+          // if (item.fieldset.fieldsets) {
+          //   return undefined
+          // }
 
           // find selected values
           const selected = item.fieldset.inputs[0].inputCriteria.values.find(
@@ -83,29 +160,62 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
     // return all eligible items
     const eligibleItems =
       data &&
-      data.map(item => {
-        console.log(item.benefit.eligibility)
+      data.map((item, i) => {
         // find all eligibility items that are matches to criteria key
-        const criteriaEligibility = item.benefit.eligibility.find(
-          criteria => criteria.criteriaKey === selectedCriteria[0].criteriaKey
-        )
 
-        const isEligible =
-          criteriaEligibility !== undefined &&
-          criteriaEligibility.acceptableValues.find(
-            value => value === selectedCriteria[0].values.value
+        selectedCriteria.forEach(selected => {
+          // console.log(selected)
+
+          // match item to criteria key
+          const criteriaEligibility = item.benefit.eligibility.find(
+            criteria => criteria.criteriaKey === selected.criteriaKey
           )
 
-        if (isEligible === selectedCriteria[0].values.value) {
-          criteriaEligibility.isEligible = true
-        }
+          // console.log('find criteriaEligibility', criteriaEligibility)
 
+          // determine it's eligiblity
+
+          if (criteriaEligibility !== undefined) {
+            // look for eligible matches
+
+            // console.log('selected', selected)
+            // console.log(
+            //   handleDateEligibility('<=2years', {
+            //     year: 2022,
+            //     month: 2,
+            //     day: 2,
+            //   })
+            // )
+            const isEligible = () => {
+              let eligibility
+              console.log(typeof selected.values.value)
+
+              if (typeof selected.values.value === 'object') {
+                eligibility = criteriaEligibility.acceptableValues.find(value =>
+                  handleDateEligibility(value, selected.values.value)
+                )
+              } else {
+                eligibility = criteriaEligibility.acceptableValues.find(
+                  value => value === selected.values.value
+                )
+              }
+              return eligibility
+            }
+
+            // console.log('isEligible', isEligible())
+
+            // undefined === false
+            criteriaEligibility.isEligible = !!isEligible()
+          }
+        })
         return item
       })
-    return eligibleItems
+    // merge all arrays and objects into one array
+    const mergedEligibleItems = eligibleItems && [].concat(...eligibleItems)
+    return mergedEligibleItems
   }
 
-  console.log('item matches', handleData(selectedCriteria, data))
+  // console.log('item matches', handleData(selectedCriteria, data))
 
   useEffect(() => {
     window.scrollTo(0, 0)

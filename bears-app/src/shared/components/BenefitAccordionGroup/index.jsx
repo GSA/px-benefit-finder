@@ -115,12 +115,12 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
           )
           // filter to get unmet criteria
           const notEligibleBenefits = eligibility.filter(
-            item => item.isEligible === false || item.isEligible === undefined
+            item => item.isEligible === false
           )
 
           // filter to get criteria without user values to compare with
           const moreInformationNeeded = eligibility.filter(
-            item => item.isEligible === 'undefined'
+            item => item.isEligible === undefined
           )
           // determine the eligibility statues based on the benefits length
           // Total Criteria = y

@@ -19,13 +19,19 @@ import './_index.scss'
  * @param {bool} expandAll - determnines if we include ExpandAll component
  * @return {html} returns html
  */
-const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
+const BenefitAccordionGroup = ({
+  data,
+  entryKey,
+  expandAll,
+  notQualifiedView,
+}) => {
   /**
    * a hook that hanldes our open state of the accordions in our group
    * @function
    * @return {boolean} returns true or false
    */
   const [isExpandAll, setExpandAll] = useState(false)
+  // const [filterData, setFilterData] = useState(null)
 
   /**
    * a function that returns the string value of our expanded action
@@ -102,11 +108,39 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
     )
   }
 
+  // const qualifiedViewData = () => {
+  //   return data.filter(item =>
+  //     item.benefit.eligibility.find(e => e.isEligible && e.isEligible === true)
+  //   )
+  // }
+
+  // const notQualifiedViewData = () => {
+  //   return data.filter(item =>
+  //     item.benefit.eligibility.find(e => e.isEligible && e.isEligible !== true)
+  //   )
+  // }
+
+  // const notQualifiedViewData = () => {
+  //   return data.map(item => {
+  //     const { eligibility } = item[entryKey]
+  //     return eligibility.filter(
+  //       item => item.isEligible === false || item.isEligible === undefined
+  //     )
+  //   })
+  // }
+
+  // notQualifiedView === true
+  //   ? setFilterData(notQualifiedViewData)
+  //   : setFilterData(qualifiedViewData)
+
+  // console.log('qualified', qualifiedViewData)
+
   return (
     <div className="benefit-accordion-group">
       <ExpandAll />
       {data &&
         data.map((item, index) => {
+          console.log(item)
           const { agency, eligibility, sourceLink, summary, title } =
             item[entryKey]
           // filter to get benefit criteria matches
@@ -142,6 +176,12 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
 
           return (
             <Accordion
+              style={
+                notQualifiedView === false &&
+                eligibleStatus !== 'Likely Eligible'
+                  ? { display: 'none' }
+                  : {}
+              }
               key={`${index}-${title}`}
               id={`${index}-${title}`}
               heading={title}

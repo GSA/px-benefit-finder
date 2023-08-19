@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import {
   BenefitAccordionGroup,
@@ -26,14 +26,15 @@ import './_index.scss'
  */
 const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   const {
-    heading,
     stepBackLink,
-    chevron,
-    description,
+    notQualified,
+    qualified,
     notEligibleResults,
     relativeBenefits,
     shareResults,
   } = ui
+
+  const [notQualifiedView, setNotQualifiedView] = useState(false)
 
   const handleDateEligibility = (conditional, selectedValue) => {
     // date values
@@ -47,20 +48,15 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
 
     // get the conditional
     const text = conditional
-    // const conditionals = ['>', '>=', '<', '<=']
     const operators = /['>', '>=', '<', '<=', '=']/g
     const operator = text.match(operators)
     const integer = text.match(/\d+/)[0]
-    // console.log(operators, integer)
 
     // calculate back
     // get current date
     // subtract integer
     // if a date comes back in date format
     const pattern = /-/
-    // pattern.test(text)
-    // console.log(pattern.test(text))
-
     const conditionalDate = pattern.test(text)
       ? new window.Date(text)
       : new window.Date(
@@ -107,9 +103,6 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
           return false
       }
     }
-    // console.log(
-    //   isDateEligible(operators, epochSelectedDate, epochConditionalDate)
-    // )
     return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
   }
 
@@ -155,6 +148,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   // for each benefit eligiblity compare compare selectedCriteria
   // if there is a criteriakey match in a benefit
   // check that the value === acceptable values
+  console.log('data', data)
 
   const handleData = (selectedCriteria, data) => {
     // return all eligible items
@@ -162,33 +156,17 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
       data &&
       data.map((item, i) => {
         // find all eligibility items that are matches to criteria key
-
         selectedCriteria.forEach(selected => {
-          // console.log(selected)
-
           // match item to criteria key
           const criteriaEligibility = item.benefit.eligibility.find(
             criteria => criteria.criteriaKey === selected.criteriaKey
           )
 
-          // console.log('find criteriaEligibility', criteriaEligibility)
-
           // determine it's eligiblity
-
           if (criteriaEligibility !== undefined) {
             // look for eligible matches
-
-            // console.log('selected', selected)
-            // console.log(
-            //   handleDateEligibility('<=2years', {
-            //     year: 2022,
-            //     month: 2,
-            //     day: 2,
-            //   })
-            // )
             const isEligible = () => {
               let eligibility
-              console.log(typeof selected.values.value)
 
               if (typeof selected.values.value === 'object') {
                 eligibility = criteriaEligibility.acceptableValues.find(value =>
@@ -202,8 +180,6 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
               return eligibility
             }
 
-            // console.log('isEligible', isEligible())
-
             // undefined === false
             criteriaEligibility.isEligible = !!isEligible()
           }
@@ -215,8 +191,6 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
     return mergedEligibleItems
   }
 
-  // console.log('item matches', handleData(selectedCriteria, data))
-
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [data, selectedCriteria])
@@ -224,28 +198,64 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   // compare the selected criteria array with benefits
   return (
     <div className="result-view">
-      <Chevron heading={chevron.heading} description={chevron.description} />
+      <Chevron
+        heading={
+          notQualifiedView
+            ? notQualified.chevron.heading
+            : qualified.chevron.heading
+        }
+        description={
+          notQualifiedView
+            ? notQualified.chevron.description
+            : qualified.chevron.description
+        }
+      />
       <div className="result-view-details">
-        <StepBackLink setCurrent={handleStepBack}>{stepBackLink}</StepBackLink>
-        <Heading headingLevel={3}>{heading}</Heading>
-        <p dangerouslySetInnerHTML={createMarkup(description)} />
+        {notQualifiedView === false ? (
+          <StepBackLink setCurrent={handleStepBack}>
+            {stepBackLink}
+          </StepBackLink>
+        ) : (
+          <Button
+            className="step-back-link"
+            onClick={() => setNotQualifiedView(false)}
+            unstyled
+          >
+            {stepBackLink}
+          </Button>
+        )}
+        <Heading headingLevel={3}>
+          {notQualifiedView ? notQualified.heading : qualified.heading}
+        </Heading>
+        <p
+          dangerouslySetInnerHTML={
+            notQualifiedView
+              ? createMarkup(notQualified.description)
+              : createMarkup(qualified.description)
+          }
+        />
         {/* map all the benefits into cards */}
         <div className="result-view-benefits">
           <BenefitAccordionGroup
             data={handleData(selectedCriteria, data)}
             entryKey={'benefit'}
+            notQualifiedView={notQualifiedView}
             expandAll
           />
         </div>
-        <div className="result-view-unmet">
-          <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
-          <p
-            dangerouslySetInnerHTML={createMarkup(
-              notEligibleResults?.description
-            )}
-          />
-          <Button>{notEligibleResults?.cta}</Button>
-        </div>
+        {notQualifiedView === false && (
+          <div className="result-view-unmet">
+            <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
+            <p
+              dangerouslySetInnerHTML={createMarkup(
+                notEligibleResults?.description
+              )}
+            />
+            <Button onClick={() => setNotQualifiedView(true)}>
+              {notEligibleResults?.cta}
+            </Button>
+          </div>
+        )}
         <div className="result-view-relvant-benefits">
           <Heading headingLevel={3}>{relativeBenefits?.heading}</Heading>
           <ul className="add-list-reset">

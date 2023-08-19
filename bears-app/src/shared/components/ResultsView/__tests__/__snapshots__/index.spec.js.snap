@@ -74,6 +74,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
       />
       <button
         className=""
+        onClick={[Function]}
         type="button"
       >
         See benefits you did not qualify for

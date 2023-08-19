@@ -148,7 +148,6 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   // for each benefit eligiblity compare compare selectedCriteria
   // if there is a criteriakey match in a benefit
   // check that the value === acceptable values
-  console.log('data', data)
 
   const handleData = (selectedCriteria, data) => {
     // return all eligible items

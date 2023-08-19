@@ -72,12 +72,22 @@
     ]
   },
   "resultsView": {
-    "chevron": {
-      "heading": "Your Custom List",
-      "description": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits.Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual applications.</p></div>"
+    "qualified": {
+      "chevron": {
+        "heading": "Your Custom List",
+        "description": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits.Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual applications.</p></div>"
+      },
+      "heading": "Results",
+      "description": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>"
     },
-    "heading": "Results",
-    "description": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>",
+    "notQualified": {
+      "chevron": {
+        "heading": "Your Custom List",
+        "description": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits.Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual applications.</p></div>"
+      },
+      "heading": "Results",
+      "description": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>"
+    },
     "stepBackLink": "Back",
     "eligibleResults": {
       "heading": "Results",

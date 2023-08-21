@@ -4,6 +4,8 @@ namespace Drupal\usagov_bears_api\Controller;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\node\Entity\node;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\file\FileInterface;
 
 /**
  * Class LifeEventController
@@ -19,11 +21,68 @@ class LifeEventController {
   protected $entityTypeManager;
 
   /**
+   * The file system service.
+
+   * @var \Drupal\Core\File\FileSystemInterface
+   */
+  protected $fileSystem;
+
+  /**
+   * Thee file repository service.
+   *
+   * @var \Drupal\file\FileRepositoryInterface
+   */
+  protected $fileRepository;
+
+  /**
+   * The file url generator service.
+   *
+   * @var \Drupal\Core\File\FileUrlGeneratorInterface
+   */
+  protected $fileUrlGenerator;
+
+  /**
    * {@inheritdoc}
    */
   public function __construct()
   {
     $this->entityTypeManager = \Drupal::service('entity_type.manager');
+    $this->fileSystem = \Drupal::service('file_system');
+    $this->fileRepository = \Drupal::service('file.repository');
+    $this->fileUrlGenerator = \Drupal::service('file_url_generator');
+  }
+
+  /**
+   * Saves JSON data file.
+   *
+   * @param $id
+   * @return JsonResponse
+   *  The response.
+   */
+  public function saveJsonData($id) {
+    // Prepare directory.
+    $directory = "public://bears/api/life_event";
+    $this->fileSystem->prepareDirectory($directory, FileSystemInterface:: CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+
+    // Get JSON data.
+    $data = new JsonResponse([
+        'data' => $this->getData($id),
+        'method' => 'GET',
+        'status' => 200
+      ]
+    );
+
+    // Write JSON data file.
+    $filename = "$directory/$id.json";
+    $file = $this->fileRepository->writeData($data, $filename, FileSystemInterface::EXISTS_REPLACE);
+
+    $fileUrlString = $this->fileUrlGenerator->generate($filename)->toString();
+    return new JsonResponse([
+        'data' => "Saved JSON data to " . $fileUrlString,
+        'method' => 'GET',
+        'status' => 200
+      ]
+    );
   }
 
   /**

@@ -140,7 +140,6 @@ const BenefitAccordionGroup = ({
       <ExpandAll />
       {data &&
         data.map((item, index) => {
-          console.log(item)
           const { agency, eligibility, sourceLink, summary, title } =
             item[entryKey]
           // filter to get benefit criteria matches

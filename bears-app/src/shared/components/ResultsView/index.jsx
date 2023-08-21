@@ -111,24 +111,50 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
     stepDataArray &&
     stepDataArray
       .map((item, i) =>
-        item.section.fieldsets.map(item => {
-          // // TODO: exludes groups for now
-          // if (item.fieldset.fieldsets) {
-          //   return undefined
-          // }
+        item.section.fieldsets
+          .map(item => {
+            // find selected values
+            const selected = item.fieldset.inputs[0].inputCriteria.values.find(
+              value => value.selected === true
+            )
 
-          // find selected values
-          const selected = item.fieldset.inputs[0].inputCriteria.values.find(
-            value => value.selected === true
-          )
-
-          return (
-            selected && {
-              criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
-              values: selected,
+            const checkForChildrenValues = item => {
+              let child
+              if (item.fieldset.children.length > 0) {
+                item.fieldset.children.forEach(childItem => {
+                  child =
+                    childItem.fieldsets[0].fieldset.inputs[0].inputCriteria.values.find(
+                      value => value.selected
+                    )
+                })
+              }
+              return child
             }
-          )
-        })
+
+            const childCriteriaKey = item => {
+              let criteriaKey
+              if (item.fieldset.children.length > 0) {
+                item.fieldset.children.forEach(childItem => {
+                  criteriaKey = childItem.fieldsets[0].fieldset.criteriaKey
+                })
+              }
+              return criteriaKey
+            }
+
+            return (
+              selected && [
+                {
+                  criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
+                  values: selected,
+                },
+                checkForChildrenValues(item) && {
+                  criteriaKey: childCriteriaKey(item),
+                  values: checkForChildrenValues(item),
+                },
+              ]
+            )
+          })
+          .flat()
       )
       .flat() // we flatten all to have only one array
       .filter(element => element !== undefined) // remove undefined

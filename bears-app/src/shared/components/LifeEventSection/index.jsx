@@ -106,10 +106,8 @@ const LifeEventSection = ({
   const handleCheckRequriedFields = () => {
     // collect all the required fields in the current step
     getRequiredFields()
-    // console.log(values)
     // check if any of these elements are valid (will add others later)
     const valid = element => {
-      console.log(element)
       return !element.classList.contains('required-field')
     }
 
@@ -275,10 +273,8 @@ const LifeEventSection = ({
                 )}
               ></div>
 
-              {/* TODO: create handler component for input case switching */}
-
               {currentData.section.fieldsets.map((item, i) => {
-                const Input = ({ item, children, index }) =>
+                const Input = ({ item, children, index, hidden }) =>
                   item.fieldset.inputs[0].inputCriteria.type === 'Select' ? (
                     //
                     //
@@ -292,6 +288,7 @@ const LifeEventSection = ({
                         hint={item.fieldset.hint}
                         required={item.fieldset.required}
                         requiredLabel={requiredLabel}
+                        hidden={hidden && hidden}
                       >
                         {item.fieldset.inputs.map((input, index) => {
                           const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
@@ -338,6 +335,7 @@ const LifeEventSection = ({
                         hint={item.fieldset.hint}
                         required={item.fieldset.required}
                         requiredLabel={requiredLabel}
+                        hidden={hidden && hidden}
                       >
                         {item.fieldset.inputs.map((input, index) => {
                           const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
@@ -394,6 +392,7 @@ const LifeEventSection = ({
                         hint={item.fieldset.hint}
                         required={item.fieldset.required}
                         requiredLabel={requiredLabel}
+                        hidden={hidden && hidden}
                       >
                         {item.fieldset.inputs.map((input, index) => {
                           const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
@@ -426,8 +425,21 @@ const LifeEventSection = ({
 
                 const parentElement = ({ item, i }) => Input({ item, index: i })
 
-                const parentWithChildElement = ({ item, i }) =>
-                  item.fieldset.children.map((child, i) => {
+                const checkParentValue = item => {
+                  const selectedParentValue =
+                    item.fieldset.inputs[0].inputCriteria.values.find(
+                      value => value.selected === true
+                    )
+
+                  const hidden =
+                    selectedParentValue?.value !==
+                    item.fieldset.inputs[0].inputCriteria.childDependencyOption
+
+                  return hidden
+                }
+
+                const parentWithChildElement = ({ item, i }) => {
+                  return item.fieldset.children.map((child, i) => {
                     return (
                       child.fieldsets.length > 0 &&
                       child.fieldsets.map((childItem, childItemIndex) => {
@@ -437,11 +449,13 @@ const LifeEventSection = ({
                           children: Input({
                             item: childItem,
                             index: childItemIndex,
+                            hidden: checkParentValue(item),
                           }),
                         })
                       })
                     )
                   })
+                }
 
                 // children check
                 const fieldSet = () =>

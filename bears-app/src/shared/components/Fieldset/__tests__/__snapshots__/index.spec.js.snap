@@ -2,6 +2,6 @@
 
 exports[`Fieldset renders a match to the previous snapshot 1`] = `
 <fieldset
-  className="usa-fieldset"
+  className="usa-fieldset "
 />
 `;

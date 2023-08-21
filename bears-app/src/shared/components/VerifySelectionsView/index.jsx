@@ -52,11 +52,41 @@ const VerifySelectionsView = ({
                     </Heading>
                     <div>
                       {section.fieldsets.map((item, i) => {
-                        // // TODO: exludes groups for now
-                        // if (item.fieldset.fieldsets) {
-                        //   return null
-                        // }
-                        const criteriaId = `criteria-${item.fieldset.criteriaKey}-${i}`
+                        // check if children values
+                        const checkForChildrenValues = item => {
+                          let child
+                          if (item.fieldset.children.length > 0) {
+                            item.fieldset.children.forEach(childItem => {
+                              child =
+                                childItem.fieldsets[0].fieldset.inputs[0].inputCriteria.values.find(
+                                  value => value.selected
+                                )
+                            })
+                          }
+                          return child
+                        }
+
+                        const childrenLegend = item => {
+                          let legend
+                          if (item.fieldset.children.length > 0) {
+                            item.fieldset.children.forEach(childItem => {
+                              legend = childItem.fieldsets[0].fieldset.legend
+                            })
+                          }
+                          return legend
+                        }
+
+                        const childrenCriteriaKey = item => {
+                          let criteriaKey
+                          if (item.fieldset.children.length > 0) {
+                            item.fieldset.children.forEach(childItem => {
+                              criteriaKey =
+                                childItem.fieldsets[0].fieldset.criteriaKey
+                            })
+                          }
+                          return criteriaKey
+                        }
+
                         const result =
                           item.fieldset.inputs[0].inputCriteria.values.find(
                             value => value.selected
@@ -76,29 +106,53 @@ const VerifySelectionsView = ({
                           day: 'numeric',
                         }
 
+                        const resultItem = ({ criteriaId, legend, result }) => {
+                          return (
+                            <div className="verify-criteria-value">
+                              <div
+                                className="verify-criteria-legend"
+                                key={criteriaId}
+                              >
+                                {legend}
+                              </div>
+                              {typeof result?.value === 'object'
+                                ? `${parseDate(result.value).toLocaleDateString(
+                                    undefined,
+                                    dateFormatOptions
+                                  )}`
+                                : result?.value}
+                            </div>
+                          )
+                        }
+
+                        const Items = ({ item, result }) => {
+                          return (
+                            <div>
+                              {resultItem({
+                                criteriaId: `criteria-${item.fieldset.criteriaKey}-${i}`,
+                                legend: item.fieldset.legend,
+                                result,
+                              })}
+                              {checkForChildrenValues(item) &&
+                                resultItem({
+                                  criteriaId: childrenCriteriaKey(item),
+                                  legend: childrenLegend(item),
+                                  result: checkForChildrenValues(item),
+                                })}
+                            </div>
+                          )
+                        }
+
                         // if no value then return generic message
                         return result !== undefined ? (
-                          <div className="verify-criteria-value">
-                            <div
-                              className="verify-criteria-legend"
-                              key={`${criteriaId}`}
-                            >
-                              {`${item.fieldset.legend}:`}
-                            </div>
-                            {typeof result.value === 'object'
-                              ? `${parseDate(result.value).toLocaleDateString(
-                                  undefined,
-                                  dateFormatOptions
-                                )}`
-                              : result.value}
-                          </div>
+                          <Items item={item} result={result} />
                         ) : (
                           <div className="verify-criteria-value">
                             <div
                               className="verify-criteria-legend"
-                              key={`${criteriaId}`}
+                              key={`criteria-${item.fieldset.criteriaKey}-${i}`}
                             >
-                              {`${item.fieldset.legend}:`}
+                              {item.fieldset.legend}
                             </div>
                             No input given.
                           </div>

@@ -24,6 +24,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     width: '80%',
     borderRadius: '8px',
+    padding: '64px 24px',
   },
 }
 
@@ -110,7 +111,7 @@ const Modal = ({
   }) => {
     return (
       <ul className="modal usa-button-group width-full">
-        <li className="usa-button-group__item width-full">
+        <li className="usa-button-group__item width-full" key="nav-item-one">
           <ObfuscatedLink
             id="navItemOneBtn"
             className="nav-item-one width-full"
@@ -120,7 +121,7 @@ const Modal = ({
             {navItemOneLabel}
           </ObfuscatedLink>
         </li>
-        <li className="usa-button-group__item width-full">
+        <li className="usa-button-group__item width-full" key="nav-item-two">
           <ObfuscatedLink
             id="navItemTwoBtn"
             className="nav-item-two width-full"
@@ -145,7 +146,6 @@ const Modal = ({
         isOpen={modalIsOpen}
         onRequestClose={handleCloseModal}
         style={customStyles}
-        contentLabel={modalHeading}
       >
         <button
           type="button"
@@ -154,6 +154,7 @@ const Modal = ({
         >
           <img src={Close} alt="a plus icon" />
         </button>
+        <div className="modal-heading">{modalHeading}</div>
         {children || (
           <GroupNavigation
             navItemOneLabel={navItemOneLabel}

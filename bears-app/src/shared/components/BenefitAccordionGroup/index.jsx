@@ -74,7 +74,10 @@ const BenefitAccordionGroup = ({
           {items.map((item, index) => {
             const { label } = item
             return (
-              <li key={index} className="unmet-criteria-item">
+              <li
+                key={`not-eligible-list-${index}`}
+                className="unmet-criteria-item"
+              >
                 {label}
               </li>
             )
@@ -98,7 +101,7 @@ const BenefitAccordionGroup = ({
           {items.map((item, index) => {
             const { label } = item
             return (
-              <li key={index} className="unmet-criteria-item">
+              <li key={`more-info-${index}`} className="unmet-criteria-item">
                 {label}
               </li>
             )
@@ -107,33 +110,6 @@ const BenefitAccordionGroup = ({
       </div>
     )
   }
-
-  // const qualifiedViewData = () => {
-  //   return data.filter(item =>
-  //     item.benefit.eligibility.find(e => e.isEligible && e.isEligible === true)
-  //   )
-  // }
-
-  // const notQualifiedViewData = () => {
-  //   return data.filter(item =>
-  //     item.benefit.eligibility.find(e => e.isEligible && e.isEligible !== true)
-  //   )
-  // }
-
-  // const notQualifiedViewData = () => {
-  //   return data.map(item => {
-  //     const { eligibility } = item[entryKey]
-  //     return eligibility.filter(
-  //       item => item.isEligible === false || item.isEligible === undefined
-  //     )
-  //   })
-  // }
-
-  // notQualifiedView === true
-  //   ? setFilterData(notQualifiedViewData)
-  //   : setFilterData(qualifiedViewData)
-
-  // console.log('qualified', qualifiedViewData)
 
   return (
     <div className="benefit-accordion-group">

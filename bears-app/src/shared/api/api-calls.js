@@ -5,12 +5,17 @@
  * @return {JSON || Sring} returns JSON data if succesfull
  */
 export async function GETLifeEvent(lifeEvent) {
+  let language
   // get life-event from location
   if (lifeEvent === undefined) {
+    const string = /^\/es/
+    language = string.test(window.location.pathname) ? 'es_' : ''
     const location = window.location.pathname
     lifeEvent = location.substring(location.lastIndexOf('/') + 1)
   }
-  const response = await fetch(`/bears/api/life-event/${lifeEvent}`)
+  const response = await fetch(
+    `/sites/default/files/bears/api/life_event/${language}${lifeEvent}.json`
+  )
     .then(response => {
       if (response?.ok) {
         return response.json()
@@ -18,9 +23,7 @@ export async function GETLifeEvent(lifeEvent) {
       throw new Error(response?.status)
     })
     .then(responseJson => {
-      return responseJson?.data.length > 0
-        ? responseJson
-        : 'Something went wrong.'
+      return responseJson?.data ? responseJson : 'Something went wrong.'
     })
     .catch(error => {
       // eslint-disable-next-line no-console

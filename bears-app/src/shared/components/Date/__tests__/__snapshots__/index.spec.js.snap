@@ -22,67 +22,68 @@ exports[`Date renders a match to the previous snapshot 1`] = `
       value=""
     >
       <option
-        value={true}
+        disabled={true}
+        value=""
       >
         -Select-
       </option>
       <option
-        value="0"
+        value={0}
       >
         01 - January
       </option>
       <option
-        value="1"
+        value={1}
       >
         02 - February
       </option>
       <option
-        value="2"
+        value={2}
       >
         03 - March
       </option>
       <option
-        value="3"
+        value={3}
       >
         04 - April
       </option>
       <option
-        value="4"
+        value={4}
       >
         05 - May
       </option>
       <option
-        value="5"
+        value={5}
       >
         06 - June
       </option>
       <option
-        value="6"
+        value={6}
       >
         07 - July
       </option>
       <option
-        value="7"
+        value={7}
       >
         08 - August
       </option>
       <option
-        value="8"
+        value={8}
       >
         09 - September
       </option>
       <option
-        value="9"
+        value={9}
       >
         10 - October
       </option>
       <option
-        value="10"
+        value={10}
       >
         11 - November
       </option>
       <option
-        value="11"
+        value={11}
       >
         12 - December
       </option>

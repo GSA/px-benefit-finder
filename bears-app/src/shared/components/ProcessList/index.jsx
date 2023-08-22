@@ -7,7 +7,10 @@ const ProcessList = ({ steps }) => {
       {steps &&
         steps.map((step, index) => {
           return (
-            <li key={index} className="usa-process-list__item">
+            <li
+              key={`process-item-${index}`}
+              className="usa-process-list__item"
+            >
               <h4 className="usa-process-list__heading">{step.title}</h4>
             </li>
           )

@@ -282,7 +282,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
         <div className="result-view-relvant-benefits">
           <Heading headingLevel={3}>{relativeBenefits?.heading}</Heading>
           <ul className="add-list-reset">
-            <li>
+            <li key="benefit-card-one">
               <Card
                 className="relative-benefit-card"
                 title={'Approaching Retirement'}
@@ -290,7 +290,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
                 noCarrot
               ></Card>
             </li>
-            <li>
+            <li key="benefit-card-two">
               <Card
                 className="relative-benefit-card"
                 title={'Living with disability or illness'}

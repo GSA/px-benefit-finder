@@ -132,7 +132,8 @@
   },
   "select": {
     "labelSelect": "Select",
-    "defaultValue": "-Select-"
+    "defaultValue": "Click to Select",
+    "dateDefaultValue": "-Select-"
   },
   "date": {
     "labelDay": "Day",

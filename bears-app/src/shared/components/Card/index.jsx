@@ -21,6 +21,7 @@ const Card = ({ className, title, cta, href, noCarrot }) => {
         className,
         defaultClasses,
       })}
+      key={`${title}`}
     >
       <a href={href}>
         <div className="usa-card__container">

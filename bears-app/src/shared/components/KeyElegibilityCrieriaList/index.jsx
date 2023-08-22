@@ -35,7 +35,7 @@ const KeyElegibilityCrieriaList = ({
               const { criteriaKey, label } = item
               return (
                 <li
-                  key={`${index}-${criteriaKey}`}
+                  key={`${criteriaKey}-${index}`}
                   className="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                 >
                   {label}

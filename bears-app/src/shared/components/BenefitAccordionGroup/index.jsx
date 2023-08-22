@@ -74,7 +74,10 @@ const BenefitAccordionGroup = ({
           {items.map((item, index) => {
             const { label } = item
             return (
-              <li key={index} className="unmet-criteria-item">
+              <li
+                key={`not-eligible-list-${index}`}
+                className="unmet-criteria-item"
+              >
                 {label}
               </li>
             )
@@ -98,7 +101,7 @@ const BenefitAccordionGroup = ({
           {items.map((item, index) => {
             const { label } = item
             return (
-              <li key={index} className="unmet-criteria-item">
+              <li key={`more-info-${index}`} className="unmet-criteria-item">
                 {label}
               </li>
             )

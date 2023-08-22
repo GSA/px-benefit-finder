@@ -258,6 +258,7 @@ const LifeEventSection = ({
             backLinkLabel={stepIndicator.stepBackLink}
             handleCheckRequriedFields={() => handleCheckRequriedFields()}
             completed={currentData.section.completed}
+            key={`step-indicator-${sectionHeadings}`}
           />
           {currentData && (
             <div id="benefit-section" onChange={() => handleUpdateData}>
@@ -284,7 +285,7 @@ const LifeEventSection = ({
                     //
                     <>
                       <Fieldset
-                        key={`${item.fieldset.criteriaKey}-${index}`}
+                        key={`select-${item.fieldset.criteriaKey}-${index}`}
                         legend={item.fieldset.legend}
                         hint={item.fieldset.hint}
                         required={item.fieldset.required}
@@ -331,7 +332,7 @@ const LifeEventSection = ({
                     //
                     <>
                       <Fieldset
-                        key={`${item.fieldset.criteriaKey}-${index}`}
+                        key={`radio-${item.fieldset.criteriaKey}-${index}`}
                         legend={item.fieldset.legend}
                         hint={item.fieldset.hint}
                         required={item.fieldset.required}
@@ -388,7 +389,7 @@ const LifeEventSection = ({
                     //
                     <>
                       <Fieldset
-                        key={`${item.fieldset.criteriaKey}-${index}`}
+                        key={`date-${item.fieldset.criteriaKey}-${index}`}
                         legend={item.fieldset.legend}
                         hint={item.fieldset.hint}
                         required={item.fieldset.required}

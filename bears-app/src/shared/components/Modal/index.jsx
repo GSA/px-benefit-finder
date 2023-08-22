@@ -110,7 +110,7 @@ const Modal = ({
   }) => {
     return (
       <ul className="modal usa-button-group width-full">
-        <li className="usa-button-group__item width-full">
+        <li className="usa-button-group__item width-full" key="nav-item-one">
           <ObfuscatedLink
             id="navItemOneBtn"
             className="nav-item-one width-full"
@@ -120,7 +120,7 @@ const Modal = ({
             {navItemOneLabel}
           </ObfuscatedLink>
         </li>
-        <li className="usa-button-group__item width-full">
+        <li className="usa-button-group__item width-full" key="nav-item-two">
           <ObfuscatedLink
             id="navItemTwoBtn"
             className="nav-item-two width-full"

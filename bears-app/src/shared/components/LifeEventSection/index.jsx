@@ -129,7 +129,6 @@ const LifeEventSection = ({
    * @return {null} only executes inherited functions
    */
   const handleUpdate = updateIndex => {
-    console.log(currentData)
     if (handleCheckRequriedFields() === true) {
       // set complete step usa-step-indicator__segment--complete
       setStep(step + updateIndex)
@@ -155,12 +154,38 @@ const LifeEventSection = ({
    */
   const handleChanged = (event, criteriaKey) => {
     const newData = { ...currentData }
+
     // find the right data based on criteriakey
-    const foundCriteria = newData.section.fieldsets.find(
-      element => element.fieldset.criteriaKey === criteriaKey
-    )
+    // check parent criteriaKey
+    // if nothing returns then check the children
+
+    const findCriteria = (arr, criteriaKey) => {
+      let element
+
+      element = arr.find(
+        element => element.fieldset.criteriaKey === criteriaKey
+      )
+
+      // handle children criteria
+      if (element === undefined) {
+        arr.forEach(item => {
+          item.fieldset.children.forEach(childElement => {
+            if (
+              childElement.fieldsets[0].fieldset.criteriaKey === criteriaKey
+            ) {
+              element = childElement.fieldsets[0]
+            }
+          })
+        })
+      }
+      return element
+    }
+
+    const foundCriteria = findCriteria(newData.section.fieldsets, criteriaKey)
+
     // get those values
-    const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
+    const inputValues =
+      foundCriteria && foundCriteria.fieldset?.inputs[0].inputCriteria.values
 
     inputValues.forEach(value => {
       if (value.value === event.target.value) {
@@ -249,142 +274,196 @@ const LifeEventSection = ({
                 )}
               ></div>
 
-              {/* TODO: create handler component for input case switching */}
-
               {currentData.section.fieldsets.map((item, i) => {
-                // TODO: exludes groups for now
-                if (item.fieldset.fieldsets) {
-                  return null
-                }
-                return item.fieldset.inputs[0].inputCriteria.type ===
-                  'Select' ? (
-                  //
-                  //
-                  // case select
-                  //
-                  //
-                  <Fieldset
-                    key={`${item.fieldset.criteriaKey}-${i}`}
-                    legend={item.fieldset.legend}
-                    hint={item.fieldset.hint}
-                    required={item.fieldset.required}
-                    requiredLabel={requiredLabel}
-                  >
-                    {item.fieldset.inputs.map((input, index) => {
-                      const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-                      const inputValues = input.inputCriteria.values
-                      const defaultSelected = inputValues.find(
-                        value => value.selected !== undefined
-                      )
+                const Input = ({ item, children, index, hidden }) =>
+                  item.fieldset.inputs[0].inputCriteria.type === 'Select' ? (
+                    //
+                    //
+                    // case select
+                    //
+                    //
+                    <>
+                      <Fieldset
+                        key={`${item.fieldset.criteriaKey}-${index}`}
+                        legend={item.fieldset.legend}
+                        hint={item.fieldset.hint}
+                        required={item.fieldset.required}
+                        requiredLabel={requiredLabel}
+                        hidden={hidden && hidden}
+                      >
+                        {item.fieldset.inputs.map((input, index) => {
+                          const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                          const inputValues = input.inputCriteria.values
+                          const defaultSelected = inputValues.find(
+                            value => value.selected !== undefined
+                          )
 
-                      return (
-                        <div key={fieldSetId}>
-                          <Select
-                            required={
-                              defaultSelected === undefined &&
-                              item.fieldset.required
-                            }
-                            ui={ui?.select}
-                            htmlFor={fieldSetId}
-                            key={fieldSetId}
-                            options={inputValues}
-                            selected={defaultSelected?.value}
-                            onChange={event =>
-                              handleChanged(event, item.fieldset.criteriaKey)
-                            }
-                          />
-                        </div>
-                      )
-                    })}
-                  </Fieldset>
-                ) : item.fieldset.inputs[0].inputCriteria.type === 'Radio' ? (
-                  //
-                  //
-                  // case radio
-                  //
-                  //
-                  <Fieldset
-                    key={`${item.fieldset.criteriaKey}-${i}`}
-                    legend={item.fieldset.legend}
-                    hint={item.fieldset.hint}
-                    required={item.fieldset.required}
-                    requiredLabel={requiredLabel}
-                  >
-                    {item.fieldset.inputs.map((input, index) => {
-                      const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-
-                      const inputValues = input.inputCriteria.values
-                      const optionSelected = inputValues.find(
-                        value => value.selected !== undefined
-                      )
-
-                      return (
-                        <div key={fieldSetId}>
-                          {/* map the options */}
-                          {input.inputCriteria.values.map((option, index) => {
-                            const inputId = `${fieldSetId}_${index}`
-
-                            return (
-                              <Radio
+                          return (
+                            <div key={fieldSetId}>
+                              <Select
                                 required={
-                                  !optionSelected && item.fieldset.required
+                                  defaultSelected === undefined &&
+                                  item.fieldset.required
                                 }
-                                id={inputId}
-                                key={inputId}
-                                label={option.value}
-                                value={option.value}
-                                checked={option.selected || false}
-                                onChange={event => {
+                                ui={ui?.select}
+                                htmlFor={fieldSetId}
+                                key={fieldSetId}
+                                options={inputValues}
+                                selected={defaultSelected?.value}
+                                onChange={event =>
                                   handleChanged(
                                     event,
                                     item.fieldset.criteriaKey
                                   )
-                                }}
+                                }
                               />
-                            )
-                          })}
-                        </div>
-                      )
-                    })}
-                  </Fieldset>
-                ) : item.fieldset.inputs[0].inputCriteria.type === 'Date' ? (
-                  //
-                  //
-                  // case date
-                  //
-                  //
-                  <Fieldset
-                    key={`${item.fieldset.criteriaKey}-${i}`}
-                    legend={item.fieldset.legend}
-                    hint={item.fieldset.hint}
-                    required={item.fieldset.required}
-                    requiredLabel={requiredLabel}
-                  >
-                    {item.fieldset.inputs.map((input, index) => {
-                      const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-                      return (
-                        <div key={fieldSetId}>
-                          <Date
-                            required={
-                              Object.keys(input.inputCriteria.values[0]?.value)
-                                .length < 3
-                                ? item.fieldset.required
-                                : 'FALSE'
-                            }
-                            value={input.inputCriteria.values[0]?.value}
-                            onChange={event =>
-                              handleDateChanged(
-                                event,
-                                item.fieldset.criteriaKey
-                              )
-                            }
-                            ui={ui}
-                          />
-                        </div>
-                      )
-                    })}
-                  </Fieldset>
-                ) : null
+                            </div>
+                          )
+                        })}
+                      </Fieldset>
+                      {children || null}
+                    </>
+                  ) : item.fieldset.inputs[0].inputCriteria.type === 'Radio' ? (
+                    //
+                    //
+                    // case radio
+                    //
+                    //
+                    <>
+                      <Fieldset
+                        key={`${item.fieldset.criteriaKey}-${index}`}
+                        legend={item.fieldset.legend}
+                        hint={item.fieldset.hint}
+                        required={item.fieldset.required}
+                        requiredLabel={requiredLabel}
+                        hidden={hidden && hidden}
+                      >
+                        {item.fieldset.inputs.map((input, index) => {
+                          const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+
+                          const inputValues = input.inputCriteria.values
+                          const optionSelected = inputValues.find(
+                            value => value.selected !== undefined
+                          )
+
+                          return (
+                            <div key={fieldSetId}>
+                              {/* map the options */}
+                              {input.inputCriteria.values.map(
+                                (option, index) => {
+                                  const inputId = `${fieldSetId}_${index}`
+
+                                  return (
+                                    <Radio
+                                      required={
+                                        !optionSelected &&
+                                        item.fieldset.required
+                                      }
+                                      id={inputId}
+                                      key={inputId}
+                                      label={option.value}
+                                      value={option.value}
+                                      checked={option.selected || false}
+                                      onChange={event => {
+                                        handleChanged(
+                                          event,
+                                          item.fieldset.criteriaKey
+                                        )
+                                      }}
+                                    />
+                                  )
+                                }
+                              )}
+                            </div>
+                          )
+                        })}
+                      </Fieldset>
+                      {children || null}
+                    </>
+                  ) : item.fieldset.inputs[0].inputCriteria.type === 'Date' ? (
+                    //
+                    //
+                    // case date
+                    //
+                    //
+                    <>
+                      <Fieldset
+                        key={`${item.fieldset.criteriaKey}-${index}`}
+                        legend={item.fieldset.legend}
+                        hint={item.fieldset.hint}
+                        required={item.fieldset.required}
+                        requiredLabel={requiredLabel}
+                        hidden={hidden && hidden}
+                      >
+                        {item.fieldset.inputs.map((input, index) => {
+                          const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                          return (
+                            <div key={fieldSetId}>
+                              <Date
+                                required={
+                                  Object.keys(
+                                    input.inputCriteria.values[0]?.value
+                                  ).length < 3
+                                    ? item.fieldset.required
+                                    : 'FALSE'
+                                }
+                                value={input.inputCriteria.values[0]?.value}
+                                onChange={event =>
+                                  handleDateChanged(
+                                    event,
+                                    item.fieldset.criteriaKey
+                                  )
+                                }
+                                ui={ui}
+                              />
+                            </div>
+                          )
+                        })}
+                      </Fieldset>
+                      {children || null}
+                    </>
+                  ) : null
+
+                const parentElement = ({ item, i }) => Input({ item, index: i })
+
+                const checkParentValue = item => {
+                  const selectedParentValue =
+                    item.fieldset.inputs[0].inputCriteria.values.find(
+                      value => value.selected === true
+                    )
+
+                  const hidden =
+                    selectedParentValue?.value !==
+                    item.fieldset.inputs[0].inputCriteria.childDependencyOption
+
+                  return hidden
+                }
+
+                const parentWithChildElement = ({ item, i }) => {
+                  return Input({
+                    item,
+                    index: i,
+                    children: item.fieldset.children.map(
+                      (child, i) =>
+                        child.fieldsets.length &&
+                        child.fieldsets.map((childItem, childItemIndex) =>
+                          Input({
+                            item: childItem,
+                            index: childItemIndex,
+                            hidden: checkParentValue(item),
+                          })
+                        )
+                    ),
+                  })
+                }
+
+                // children check
+                const fieldSet = () =>
+                  item.fieldset.children.length > 0
+                    ? parentWithChildElement({ item, i })
+                    : parentElement({ item, i })
+
+                return fieldSet()
               })}
             </div>
           )}

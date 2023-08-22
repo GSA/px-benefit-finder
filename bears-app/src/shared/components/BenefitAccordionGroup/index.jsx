@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
+import createMarkup from '../../utils/createMarkup'
 import {
   Accordion,
   Alert,
@@ -7,7 +8,6 @@ import {
   Heading,
   KeyElegibilityCrieriaList,
   ObfuscatedLink,
-  Paragraph,
 } from '../index'
 import './_index.scss'
 
@@ -19,13 +19,19 @@ import './_index.scss'
  * @param {bool} expandAll - determnines if we include ExpandAll component
  * @return {html} returns html
  */
-const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
+const BenefitAccordionGroup = ({
+  data,
+  entryKey,
+  expandAll,
+  notQualifiedView,
+}) => {
   /**
    * a hook that hanldes our open state of the accordions in our group
    * @function
    * @return {boolean} returns true or false
    */
   const [isExpandAll, setExpandAll] = useState(false)
+  // const [filterData, setFilterData] = useState(null)
 
   /**
    * a function that returns the string value of our expanded action
@@ -102,6 +108,33 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
     )
   }
 
+  // const qualifiedViewData = () => {
+  //   return data.filter(item =>
+  //     item.benefit.eligibility.find(e => e.isEligible && e.isEligible === true)
+  //   )
+  // }
+
+  // const notQualifiedViewData = () => {
+  //   return data.filter(item =>
+  //     item.benefit.eligibility.find(e => e.isEligible && e.isEligible !== true)
+  //   )
+  // }
+
+  // const notQualifiedViewData = () => {
+  //   return data.map(item => {
+  //     const { eligibility } = item[entryKey]
+  //     return eligibility.filter(
+  //       item => item.isEligible === false || item.isEligible === undefined
+  //     )
+  //   })
+  // }
+
+  // notQualifiedView === true
+  //   ? setFilterData(notQualifiedViewData)
+  //   : setFilterData(qualifiedViewData)
+
+  // console.log('qualified', qualifiedViewData)
+
   return (
     <div className="benefit-accordion-group">
       <ExpandAll />
@@ -115,12 +148,12 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
           )
           // filter to get unmet criteria
           const notEligibleBenefits = eligibility.filter(
-            item => item.isEligible === false || item.isEligible === undefined
+            item => item.isEligible === false
           )
 
           // filter to get criteria without user values to compare with
           const moreInformationNeeded = eligibility.filter(
-            item => item.isEligible === 'undefined'
+            item => item.isEligible === undefined
           )
           // determine the eligibility statues based on the benefits length
           // Total Criteria = y
@@ -142,6 +175,15 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
 
           return (
             <Accordion
+              style={
+                notQualifiedView === false &&
+                eligibleStatus !== 'Likely Eligible'
+                  ? { display: 'none' }
+                  : notQualifiedView === true &&
+                    eligibleStatus === 'Likely Eligible'
+                  ? { display: 'none' }
+                  : {}
+              }
               key={`${index}-${title}`}
               id={`${index}-${title}`}
               heading={title}
@@ -154,9 +196,10 @@ const BenefitAccordionGroup = ({ data, entryKey, expandAll }) => {
               <Heading className="benefit-detail-title" headingLevel={4}>
                 {`Provided by ${agency.title}`}
               </Heading>
-              <Paragraph className="benefit-detail-summary">
-                {summary}
-              </Paragraph>
+              <div
+                className="benefit-detail-summary"
+                dangerouslySetInnerHTML={createMarkup(summary)}
+              />
               <KeyElegibilityCrieriaList
                 className="benefit-criteria-list"
                 data={eligibleBenefits}

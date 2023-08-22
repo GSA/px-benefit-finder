@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import {
   BenefitAccordionGroup,
@@ -24,31 +24,138 @@ import './_index.scss'
  * @param {array} stepDataArray inherited state of inupt values from form entry
  * @return {html} returns a view page of filtered benefits
  */
-const ResultsView = ({ handleStepBack, ui, data }) => {
-  // console.log(data)
+const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   const {
-    heading,
     stepBackLink,
-    chevron,
-    description,
+    notQualified,
+    qualified,
     notEligibleResults,
     relativeBenefits,
     shareResults,
   } = ui
 
+  const [notQualifiedView, setNotQualifiedView] = useState(false)
+
+  const handleDateEligibility = (conditional, selectedValue) => {
+    // date values
+    // "<01-01-1978"
+    // "<2years (the deceased died within the last two years)"
+    // "<18years"
+    // ">=62years"
+    // ">=60years"
+    // ">=50years"
+    // ">18years"
+
+    // get the conditional
+    const text = conditional
+    const operators = /['>', '>=', '<', '<=', '=']/g
+    const operator = text.match(operators)
+    const integer = text.match(/\d+/)[0]
+
+    // calculate back
+    // get current date
+    // subtract integer
+    // if a date comes back in date format
+    const pattern = /-/
+    const conditionalDate = pattern.test(text)
+      ? new window.Date(text)
+      : new window.Date(
+          new Date().getFullYear() - integer,
+          new Date().getMonth(),
+          new Date().getDate()
+        )
+
+    // getTime in milliseconds so we can do a comparison
+    const epochConditionalDate = conditionalDate.getTime()
+
+    // example selected value for date
+    // const value = {
+    //   year: 2022,
+    //   month: 2,
+    //   day: 2,
+    // }
+
+    // calculate selected
+    const selectedDate = new window.Date(
+      Date.UTC(selectedValue.year, selectedValue.month, selectedValue.day)
+    )
+
+    const epochSelectedDate = selectedDate.getTime()
+
+    const isDateEligible = (
+      operator,
+      epochSelectedDate,
+      epochConditionalDate
+    ) => {
+      // ;['>', '>=', '<', '<=', '=']
+      switch (operator.length && operator.join('')) {
+        case '>':
+          return epochSelectedDate > epochConditionalDate
+        case '>=':
+          return epochSelectedDate >= epochConditionalDate
+        case '<':
+          return epochSelectedDate < epochConditionalDate
+        case '<=':
+          return epochSelectedDate <= epochConditionalDate
+        case '=':
+          return epochSelectedDate === epochConditionalDate
+        default:
+          return false
+      }
+    }
+    return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
+  }
+
   // collect all the criteria keys and selected criteria values into an array
-  // const selectedCriteria = stepDataArray
-  //   .map((item, i) =>
-  //     item.section.fieldsets.map(item => {
-  //       return {
-  //         id: item.fieldset.inputs[0].inputCriteria.id,
-  //         values: item.fieldset.inputs[0].inputCriteria.values.find(
-  //           value => value.selected
-  //         ),
-  //       }
-  //     })
-  //   )
-  //   .flat() // we flatten all to have only one array
+  const selectedCriteria =
+    stepDataArray &&
+    stepDataArray
+      .map((item, i) =>
+        item.section.fieldsets
+          .map(item => {
+            // find selected values
+            const selected = item.fieldset.inputs[0].inputCriteria.values.find(
+              value => value.selected === true
+            )
+
+            const checkForChildrenValues = item => {
+              const children = []
+              if (item.fieldset.children.length > 0) {
+                item.fieldset.children.forEach(childItem => {
+                  const check =
+                    childItem.fieldsets[0].fieldset.inputs[0].inputCriteria.values.find(
+                      value => value.selected === true
+                    )
+                  if (check) {
+                    const criteriaKey =
+                      childItem.fieldsets[0].fieldset.criteriaKey
+
+                    children.push({ criteriaKey, values: check })
+                  }
+                })
+              }
+              return children && children
+            }
+
+            return (
+              selected &&
+              [
+                {
+                  criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
+                  values: selected,
+                },
+                checkForChildrenValues(item) &&
+                  checkForChildrenValues(item).map((child, i) => ({
+                    criteriaKey: child.criteriaKey,
+                    values: child.values,
+                  })),
+              ].flat()
+            )
+          })
+          .flat()
+      )
+      .flat() // we flatten all to have only one array
+      .filter(element => element !== undefined) // remove undefined
 
   // Total Criteria = y
   // Met Criteria = x
@@ -66,40 +173,112 @@ const ResultsView = ({ handleStepBack, ui, data }) => {
   // if there is a criteriakey match in a benefit
   // check that the value === acceptable values
 
-  // function likelyEligible(selectedCriteria, data) {
-  //   console.log(selectedCriteria)
-  //   data.forEach((item, i) => {
-  //     console.log(item.benefit.eligibility)
-  //   })
-  // }
+  const handleData = (selectedCriteria, data) => {
+    // return all eligible items
+    const eligibleItems =
+      data &&
+      data.map((item, i) => {
+        // find all eligibility items that are matches to criteria key
+        selectedCriteria.forEach(selected => {
+          // match item to criteria key
+          const criteriaEligibility = item.benefit.eligibility.find(
+            criteria => criteria.criteriaKey === selected.criteriaKey
+          )
 
-  // console.log(likelyEligible(selectedCriteria, data))
+          // determine it's eligiblity
+          if (criteriaEligibility !== undefined) {
+            // look for eligible matches
+            const isEligible = () => {
+              let eligibility
+
+              if (typeof selected.values.value === 'object') {
+                eligibility = criteriaEligibility.acceptableValues.find(value =>
+                  handleDateEligibility(value, selected.values.value)
+                )
+              } else {
+                eligibility = criteriaEligibility.acceptableValues.find(
+                  value => value === selected.values.value
+                )
+              }
+              return eligibility
+            }
+
+            // undefined === false
+            criteriaEligibility.isEligible = !!isEligible()
+          }
+        })
+        return item
+      })
+    // merge all arrays and objects into one array
+    const mergedEligibleItems = eligibleItems && [].concat(...eligibleItems)
+    return mergedEligibleItems
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [data, selectedCriteria])
 
   // compare the selected criteria array with benefits
   return (
     <div className="result-view">
-      <Chevron heading={chevron.heading} description={chevron.description} />
+      <Chevron
+        heading={
+          notQualifiedView
+            ? notQualified.chevron.heading
+            : qualified.chevron.heading
+        }
+        description={
+          notQualifiedView
+            ? notQualified.chevron.description
+            : qualified.chevron.description
+        }
+      />
       <div className="result-view-details">
-        <StepBackLink setCurrent={handleStepBack}>{stepBackLink}</StepBackLink>
-        <Heading headingLevel={3}>{heading}</Heading>
-        <p dangerouslySetInnerHTML={createMarkup(description)} />
+        {notQualifiedView === false ? (
+          <StepBackLink setCurrent={handleStepBack}>
+            {stepBackLink}
+          </StepBackLink>
+        ) : (
+          <Button
+            className="step-back-link"
+            onClick={() => setNotQualifiedView(false)}
+            unstyled
+          >
+            {stepBackLink}
+          </Button>
+        )}
+        <Heading headingLevel={3}>
+          {notQualifiedView ? notQualified.heading : qualified.heading}
+        </Heading>
+        <p
+          dangerouslySetInnerHTML={
+            notQualifiedView
+              ? createMarkup(notQualified.description)
+              : createMarkup(qualified.description)
+          }
+        />
         {/* map all the benefits into cards */}
         <div className="result-view-benefits">
-          <BenefitAccordionGroup data={data} entryKey={'benefit'} expandAll />
-        </div>
-        <div className="result-view-unmet">
-          <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
-          <p
-            dangerouslySetInnerHTML={createMarkup(
-              notEligibleResults?.description
-            )}
+          <BenefitAccordionGroup
+            data={handleData(selectedCriteria, data)}
+            entryKey={'benefit'}
+            notQualifiedView={notQualifiedView}
+            expandAll
           />
-          <Button>{notEligibleResults?.cta}</Button>
         </div>
+        {notQualifiedView === false && (
+          <div className="result-view-unmet">
+            <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
+            <p
+              dangerouslySetInnerHTML={createMarkup(
+                notEligibleResults?.description
+              )}
+            />
+            <Button onClick={() => setNotQualifiedView(true)}>
+              {notEligibleResults?.cta}
+            </Button>
+          </div>
+        )}
         <div className="result-view-relvant-benefits">
           <Heading headingLevel={3}>{relativeBenefits?.heading}</Heading>
           <ul className="add-list-reset">

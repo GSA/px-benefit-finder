@@ -18,7 +18,7 @@ exports[`App renders a match to the previous snapshot 1`] = `
       <div
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Find government survivor benefits including funeral benefits, housing, and education help.</p>",
+            "__html": "<p>Find government benefits after the loss of a loved one including funeral, housing, and education help.</p>",
           }
         }
       />

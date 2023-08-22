@@ -134,18 +134,8 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
                   }
                 })
               }
-              console.log('children', children)
               return children && children
             }
-
-            // const childCriteriaKey = item => {
-            //   // let criteriaKey
-            //   const criteriaKey = item
-
-            //   return criteriaKey
-            // }
-
-            console.log(checkForChildrenValues(item))
 
             return (
               selected &&
@@ -184,7 +174,6 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   // check that the value === acceptable values
 
   const handleData = (selectedCriteria, data) => {
-    console.log(selectedCriteria)
     // return all eligible items
     const eligibleItems =
       data &&

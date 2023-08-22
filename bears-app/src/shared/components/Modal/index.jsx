@@ -24,6 +24,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     width: '80%',
     borderRadius: '8px',
+    padding: '64px 24px',
   },
 }
 
@@ -145,7 +146,6 @@ const Modal = ({
         isOpen={modalIsOpen}
         onRequestClose={handleCloseModal}
         style={customStyles}
-        contentLabel={modalHeading}
       >
         <button
           type="button"
@@ -154,6 +154,7 @@ const Modal = ({
         >
           <img src={Close} alt="a plus icon" />
         </button>
+        <div className="modal-heading">{modalHeading}</div>
         {children || (
           <GroupNavigation
             navItemOneLabel={navItemOneLabel}

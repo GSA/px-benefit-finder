@@ -179,6 +179,9 @@ const BenefitAccordionGroup = ({
                 notQualifiedView === false &&
                 eligibleStatus !== 'Likely Eligible'
                   ? { display: 'none' }
+                  : notQualifiedView === true &&
+                    eligibleStatus === 'Likely Eligible'
+                  ? { display: 'none' }
                   : {}
               }
               key={`${index}-${title}`}

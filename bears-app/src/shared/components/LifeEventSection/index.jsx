@@ -165,17 +165,17 @@ const LifeEventSection = ({
       element = arr.find(
         element => element.fieldset.criteriaKey === criteriaKey
       )
-      // handle children search
+
+      // handle children criteria
       if (element === undefined) {
         arr.forEach(item => {
-          item.fieldset.children &&
-            item.fieldset.children.forEach(
-              childElement =>
-                (element = childElement.fieldsets.find(
-                  childFieldset =>
-                    childFieldset.fieldset.criteriaKey === criteriaKey
-                ))
-            )
+          item.fieldset.children.forEach(childElement => {
+            if (
+              childElement.fieldsets[0].fieldset.criteriaKey === criteriaKey
+            ) {
+              element = childElement.fieldsets[0]
+            }
+          })
         })
       }
       return element
@@ -184,7 +184,8 @@ const LifeEventSection = ({
     const foundCriteria = findCriteria(newData.section.fieldsets, criteriaKey)
 
     // get those values
-    const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
+    const inputValues =
+      foundCriteria && foundCriteria.fieldset?.inputs[0].inputCriteria.values
 
     inputValues.forEach(value => {
       if (value.value === event.target.value) {
@@ -439,21 +440,20 @@ const LifeEventSection = ({
                 }
 
                 const parentWithChildElement = ({ item, i }) => {
-                  return item.fieldset.children.map((child, i) => {
-                    return (
-                      child.fieldsets.length > 0 &&
-                      child.fieldsets.map((childItem, childItemIndex) => {
-                        return Input({
-                          item,
-                          index: i,
-                          children: Input({
+                  return Input({
+                    item,
+                    index: i,
+                    children: item.fieldset.children.map(
+                      (child, i) =>
+                        child.fieldsets.length &&
+                        child.fieldsets.map((childItem, childItemIndex) =>
+                          Input({
                             item: childItem,
                             index: childItemIndex,
                             hidden: checkParentValue(item),
-                          }),
-                        })
-                      })
-                    )
+                          })
+                        )
+                    ),
                   })
                 }
 

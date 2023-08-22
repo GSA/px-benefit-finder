@@ -119,39 +119,47 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
             )
 
             const checkForChildrenValues = item => {
-              let child
+              const children = []
               if (item.fieldset.children.length > 0) {
                 item.fieldset.children.forEach(childItem => {
-                  child =
+                  const check =
                     childItem.fieldsets[0].fieldset.inputs[0].inputCriteria.values.find(
-                      value => value.selected
+                      value => value.selected === true
                     )
+                  if (check) {
+                    const criteriaKey =
+                      childItem.fieldsets[0].fieldset.criteriaKey
+
+                    children.push({ criteriaKey, values: check })
+                  }
                 })
               }
-              return child
+              console.log('children', children)
+              return children && children
             }
 
-            const childCriteriaKey = item => {
-              let criteriaKey
-              if (item.fieldset.children.length > 0) {
-                item.fieldset.children.forEach(childItem => {
-                  criteriaKey = childItem.fieldsets[0].fieldset.criteriaKey
-                })
-              }
-              return criteriaKey
-            }
+            // const childCriteriaKey = item => {
+            //   // let criteriaKey
+            //   const criteriaKey = item
+
+            //   return criteriaKey
+            // }
+
+            console.log(checkForChildrenValues(item))
 
             return (
-              selected && [
+              selected &&
+              [
                 {
                   criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
                   values: selected,
                 },
-                checkForChildrenValues(item) && {
-                  criteriaKey: childCriteriaKey(item),
-                  values: checkForChildrenValues(item),
-                },
-              ]
+                checkForChildrenValues(item) &&
+                  checkForChildrenValues(item).map((child, i) => ({
+                    criteriaKey: child.criteriaKey,
+                    values: child.values,
+                  })),
+              ].flat()
             )
           })
           .flat()
@@ -176,6 +184,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
   // check that the value === acceptable values
 
   const handleData = (selectedCriteria, data) => {
+    console.log(selectedCriteria)
     // return all eligible items
     const eligibleItems =
       data &&

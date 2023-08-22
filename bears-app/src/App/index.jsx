@@ -53,7 +53,6 @@ function App() {
 
   return (
     <LanguageContext.Provider value={t}>
-      {/* {console.log(t)} */}
       <div
         className={`bears-app ${
           step !== 0 && viewResults !== true ? 'form' : ''

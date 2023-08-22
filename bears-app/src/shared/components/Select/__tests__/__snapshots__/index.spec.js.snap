@@ -15,7 +15,7 @@ Array [
       disabled={true}
       value=""
     >
-      -Select-
+      Click to Select
     </option>
     <option
       value=""

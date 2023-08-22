@@ -22,7 +22,8 @@ exports[`Date renders a match to the previous snapshot 1`] = `
       value=""
     >
       <option
-        value={true}
+        disabled={true}
+        value=""
       >
         -Select-
       </option>

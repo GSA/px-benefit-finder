@@ -12,7 +12,7 @@ import './_index.scss'
 const Date = ({ onChange, value, required, ui }) => {
   const { date, select } = ui
   const { labelDay, labelMonth, labelYear } = date
-  const { defaultValue } = select
+  const { dateDefaultValue } = select
   /**
    * a parse our date object
    * @function
@@ -45,7 +45,9 @@ const Date = ({ onChange, value, required, ui }) => {
           }
           onChange={onChange}
         >
-          <option value>{defaultValue}</option>
+          <option value="" key="default" disabled>
+            {dateDefaultValue}
+          </option>
           <option value="0">01 - January</option>
           <option value="1">02 - February</option>
           <option value="2">03 - March</option>

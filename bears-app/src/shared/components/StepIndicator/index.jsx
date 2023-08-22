@@ -64,10 +64,14 @@ const StepIndicator = ({
           handleCheckRequriedFields() === true &&
           setCurrent(index + 1)
         }
-        key={`step-indicator-${heading}-${index}`}
+        key={`step-indicator-${heading}`}
       >
-        <span className="usa-step-indicator__segment-label">
-          {!noHeadings && heading} <CompletedSR status={completed} />
+        <span
+          key={`step-indicator-label-${index}`}
+          className="usa-step-indicator__segment-label"
+        >
+          {!noHeadings && heading}{' '}
+          <CompletedSR key={`step-indicator-sr-${index}`} status={completed} />
         </span>
       </li>
     )

@@ -11,7 +11,7 @@ import './_index.scss'
  */
 const Date = ({ onChange, value, required, ui }) => {
   const { date, select } = ui
-  const { labelDay, labelMonth, labelYear } = date
+  const { labelDay, labelMonth, labelYear, monthOptions } = date
   const { dateDefaultValue } = select
   /**
    * a parse our date object
@@ -48,18 +48,11 @@ const Date = ({ onChange, value, required, ui }) => {
           <option value="" key="default" disabled>
             {dateDefaultValue}
           </option>
-          <option value="0">01 - January</option>
-          <option value="1">02 - February</option>
-          <option value="2">03 - March</option>
-          <option value="3">04 - April</option>
-          <option value="4">05 - May</option>
-          <option value="5">06 - June</option>
-          <option value="6">07 - July</option>
-          <option value="7">08 - August</option>
-          <option value="8">09 - September</option>
-          <option value="9">10 - October</option>
-          <option value="10">11 - November</option>
-          <option value="11">12 - December</option>
+          {monthOptions.map((option, i) => (
+            <option value={i} key={`${option.label}-${i}`}>
+              {option.label}
+            </option>
+          ))}
         </select>
       </div>
       <div className="usa-form-group usa-form-group--day">

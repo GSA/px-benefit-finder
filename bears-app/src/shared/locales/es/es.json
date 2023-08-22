@@ -138,6 +138,44 @@
   "date": {
     "labelDay": "Día",
     "labelMonth": "Mes",
-    "labelYear": "Año"
+    "labelYear": "Año",
+    "monthOptions": [
+      {
+        "label": "01 - Enero"
+      },
+      {
+        "label": "02 - Febrero"
+      },
+      {
+        "label": "03 - Marzo"
+      },
+      {
+        "label": "04 - Abril"
+      },
+      {
+        "label": "05 - Mayo"
+      },
+      {
+        "label": "06 - Junio"
+      },
+      {
+        "label": "07 - Julio"
+      },
+      {
+        "label": "08 - Agosto"
+      },
+      {
+        "label": "09 - Septiembre"
+      },
+      {
+        "label": "10 - Octubre"
+      },
+      {
+        "label": "11 - Noviembre"
+      },
+      {
+        "label": "12 - Diciembre"
+      }
+    ]
   }
 }

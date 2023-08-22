@@ -1,0 +1,5 @@
+name: 'USAgov bears page'
+type: module
+description: 'Provides page template for React app.'
+core_version_requirement: '^8 || ^9'
+package: 'USAgov bears'

@@ -111,33 +111,6 @@ const BenefitAccordionGroup = ({
     )
   }
 
-  // const qualifiedViewData = () => {
-  //   return data.filter(item =>
-  //     item.benefit.eligibility.find(e => e.isEligible && e.isEligible === true)
-  //   )
-  // }
-
-  // const notQualifiedViewData = () => {
-  //   return data.filter(item =>
-  //     item.benefit.eligibility.find(e => e.isEligible && e.isEligible !== true)
-  //   )
-  // }
-
-  // const notQualifiedViewData = () => {
-  //   return data.map(item => {
-  //     const { eligibility } = item[entryKey]
-  //     return eligibility.filter(
-  //       item => item.isEligible === false || item.isEligible === undefined
-  //     )
-  //   })
-  // }
-
-  // notQualifiedView === true
-  //   ? setFilterData(notQualifiedViewData)
-  //   : setFilterData(qualifiedViewData)
-
-  // console.log('qualified', qualifiedViewData)
-
   return (
     <div className="benefit-accordion-group">
       <ExpandAll />

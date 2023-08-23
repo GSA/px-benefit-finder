@@ -1,49 +1,49 @@
-.benefit-accordion-group {
-  max-width: 530px;
+#usagov-bears-app {
+  .benefit-accordion-group {
+    .benefit-accordion {
+      margin-bottom: 26px;
+      /* stylelint-disable selector-class-pattern */
+      .usa-accordion__button {
+        border-radius: 3px;
+      }
+      /* stylelint-enable selector-class-pattern */
 
-  .benefit-accordion {
-    margin-bottom: 26px;
-    /* stylelint-disable selector-class-pattern */
-    .usa-accordion__button {
-      border-radius: 3px;
-    }
-    /* stylelint-enable selector-class-pattern */
+      .benefit-detail-title {
+        padding: 0;
+        margin: 0 0 24px;
+        text-align: left;
+      }
 
-    .benefit-detail-title {
-      padding: 0;
-      margin: 0 0 24px;
-      text-align: left;
-    }
+      .benefit-detail-summary,
+      .benefit-criteria-list,
+      .benefit-alert {
+        margin: 0 0 24px;
+      }
 
-    .benefit-detail-summary,
-    .benefit-criteria-list,
-    .benefit-alert {
-      margin: 0 0 24px;
-    }
+      .unmet-criteria-group {
+        margin: 0 0 24px;
 
-    .unmet-criteria-group {
-      margin: 0 0 24px;
+        .unmet-criteria-title {
+          width: 100%;
+          text-align: center;
+          color: #000;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px;
+        }
+      }
 
-      .unmet-criteria-title {
+      .benefit-link {
         width: 100%;
-        text-align: center;
-        color: #000;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 19.6px;
+        margin-bottom: 40px;
       }
     }
 
-    .benefit-link {
-      width: 100%;
-      margin-bottom: 40px;
+    .expand-all {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 32px;
     }
-  }
-
-  .expand-all {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 32px;
   }
 }

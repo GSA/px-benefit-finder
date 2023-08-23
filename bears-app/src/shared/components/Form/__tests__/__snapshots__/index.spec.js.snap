@@ -3,5 +3,9 @@
 exports[`Form renders a match to the previous snapshot 1`] = `
 <form
   className="benefit-form"
-/>
+>
+  <div
+    className="grid-container"
+  />
+</form>
 `;

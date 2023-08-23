@@ -26,4 +26,10 @@
     width: 95px;
   }
   /* stylelint-enable selector-class-pattern */
+
+  @media (width >= 1049px) {
+    .usa-memorable-date {
+      max-width: 100%;
+    }
+  }
 }

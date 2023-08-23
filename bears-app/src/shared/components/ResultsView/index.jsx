@@ -233,81 +233,83 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
             : qualified.chevron.description
         }
       />
-      <div className="result-view-details">
-        {notQualifiedView === false ? (
-          <StepBackLink setCurrent={handleStepBack}>
-            {stepBackLink}
-          </StepBackLink>
-        ) : (
-          <Button
-            className="step-back-link"
-            onClick={() => setNotQualifiedView(false)}
-            unstyled
-          >
-            {stepBackLink}
-          </Button>
-        )}
-        <Heading headingLevel={3}>
-          {notQualifiedView ? notQualified.heading : qualified.heading}
-        </Heading>
-        <p
-          dangerouslySetInnerHTML={
-            notQualifiedView
-              ? createMarkup(notQualified.description)
-              : createMarkup(qualified.description)
-          }
-        />
-        {/* map all the benefits into cards */}
-        <div className="result-view-benefits">
-          <BenefitAccordionGroup
-            data={handleData(selectedCriteria, data)}
-            entryKey={'benefit'}
-            notQualifiedView={notQualifiedView}
-            expandAll
-          />
-        </div>
-        {notQualifiedView === false && (
-          <div className="result-view-unmet">
-            <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
-            <p
-              dangerouslySetInnerHTML={createMarkup(
-                notEligibleResults?.description
-              )}
-            />
-            <Button onClick={() => setNotQualifiedView(true)}>
-              {notEligibleResults?.cta}
+      <div className="grid-container">
+        <div className="result-view-details">
+          {notQualifiedView === false ? (
+            <StepBackLink setCurrent={handleStepBack}>
+              {stepBackLink}
+            </StepBackLink>
+          ) : (
+            <Button
+              className="step-back-link"
+              onClick={() => setNotQualifiedView(false)}
+              unstyled
+            >
+              {stepBackLink}
             </Button>
+          )}
+          <Heading headingLevel={3}>
+            {notQualifiedView ? notQualified.heading : qualified.heading}
+          </Heading>
+          <p
+            dangerouslySetInnerHTML={
+              notQualifiedView
+                ? createMarkup(notQualified.description)
+                : createMarkup(qualified.description)
+            }
+          />
+          {/* map all the benefits into cards */}
+          <div className="result-view-benefits">
+            <BenefitAccordionGroup
+              data={handleData(selectedCriteria, data)}
+              entryKey={'benefit'}
+              notQualifiedView={notQualifiedView}
+              expandAll
+            />
           </div>
-        )}
-        <div className="result-view-relvant-benefits">
-          <Heading headingLevel={3}>{relativeBenefits?.heading}</Heading>
-          <ul className="add-list-reset">
-            <li key="benefit-card-one">
-              <Card
-                className="relative-benefit-card"
-                title={'Approaching Retirement'}
-                cta={'Learn More'}
-                noCarrot
-              ></Card>
-            </li>
-            <li key="benefit-card-two">
-              <Card
-                className="relative-benefit-card"
-                title={'Living with disability or illness'}
-                cta={'Learn More'}
-                noCarrot
-              ></Card>
-            </li>
-          </ul>
-        </div>
-        <div className="result-view-share-results">
-          <Heading headingLevel={3}>{shareResults?.heading}</Heading>
-          <div className="result-view-share-results-button-group">
-            <ShareButton ui={shareResults?.shareButton} />
-            <EmailButton ui={shareResults?.emailButton} />
-            <PrintButton ui={shareResults?.printButton} />
+          {notQualifiedView === false && (
+            <div className="result-view-unmet">
+              <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
+              <p
+                dangerouslySetInnerHTML={createMarkup(
+                  notEligibleResults?.description
+                )}
+              />
+              <Button onClick={() => setNotQualifiedView(true)}>
+                {notEligibleResults?.cta}
+              </Button>
+            </div>
+          )}
+          <div className="result-view-relvant-benefits">
+            <Heading headingLevel={3}>{relativeBenefits?.heading}</Heading>
+            <ul className="add-list-reset">
+              <li key="benefit-card-one">
+                <Card
+                  className="relative-benefit-card"
+                  title={'Approaching Retirement'}
+                  cta={'Learn More'}
+                  noCarrot
+                ></Card>
+              </li>
+              <li key="benefit-card-two">
+                <Card
+                  className="relative-benefit-card"
+                  title={'Living with disability or illness'}
+                  cta={'Learn More'}
+                  noCarrot
+                ></Card>
+              </li>
+            </ul>
           </div>
-          <p>{shareResults?.description}</p>
+          <div className="result-view-share-results">
+            <Heading headingLevel={3}>{shareResults?.heading}</Heading>
+            <div className="result-view-share-results-button-group">
+              <ShareButton ui={shareResults?.shareButton} />
+              <EmailButton ui={shareResults?.emailButton} />
+              <PrintButton ui={shareResults?.printButton} />
+            </div>
+            <p>{shareResults?.description}</p>
+          </div>
         </div>
       </div>
     </div>

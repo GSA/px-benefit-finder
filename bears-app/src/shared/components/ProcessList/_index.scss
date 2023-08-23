@@ -6,10 +6,15 @@
   /* stylelint-disable selector-class-pattern */
   .usa-process-list__item {
     min-height: 100px;
+    border-left: 0.5rem solid #d9e8f6;
 
     &::before {
       background-color: #0050d8;
       color: #fff;
     }
+  }
+
+  .usa-process-list__item:last-child {
+    border-left: 0.5rem solid transparent;
   }
 }

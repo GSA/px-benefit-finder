@@ -43,7 +43,7 @@ const content = `{
                 "fieldset": {
                   "criteriaKey": "applicant_relationship_to_the_deceased",
                   "legend": "Applicant’s relationship to the deceased:",
-                  "required": "TRUE",
+                  "required": "FALSE",
                   "hint": "",
                   "inputs": [
                     {
@@ -86,7 +86,7 @@ const content = `{
                 "fieldset": {
                   "criteriaKey": "applicant_marital_status",
                   "legend": "Marital Status",
-                  "required": "TRUE",
+                  "required": "FALSE",
                   "hint": "",
                   "inputs": [
                     {
@@ -257,7 +257,7 @@ const content = `{
                 "fieldset": {
                   "criteriaKey": "deceased_date_of_death",
                   "legend": "Date of death",
-                  "required": "TRUE",
+                  "required": "FALSE",
                   "hint": "",
                   "inputs": [
                     {
@@ -284,7 +284,7 @@ const content = `{
                 "fieldset": {
                   "criteriaKey": "deceased_date_of_funeral",
                   "legend": "Date of the funeral",
-                  "required": "TRUE",
+                  "required": "FALSE",
                   "hint": "",
                   "inputs": [
                     {

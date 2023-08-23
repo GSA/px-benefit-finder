@@ -4,15 +4,19 @@ exports[`Chevron renders a match to the previous snapshot 1`] = `
 <div
   className="chevron"
 >
-  <h1
-    className=""
-  />
   <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
+    className="grid-container"
+  >
+    <h1
+      className=""
+    />
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;

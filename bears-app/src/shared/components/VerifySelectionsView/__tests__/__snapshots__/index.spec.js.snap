@@ -4,32 +4,36 @@ exports[`VerifySelectionsView renders a match to the previous snapshot 1`] = `
 <div
   className="verify-selections-view"
 >
-  <h1
-    className=""
-  />
   <div
-    className="section-wrapper"
+    className="grid-container"
   >
+    <h1
+      className=""
+    />
     <div
-      className="section"
+      className="section-wrapper"
     >
-      <button
-        className=""
-        type="button"
-      />
-      <div />
-      <button
-        className=""
-        type="button"
+      <div
+        className="section"
       >
-        Back
-      </button>
-      <button
-        className=""
-        type="button"
-      >
-        Confirm
-      </button>
+        <button
+          className=""
+          type="button"
+        />
+        <div />
+        <button
+          className=""
+          type="button"
+        >
+          Back
+        </button>
+        <button
+          className=""
+          type="button"
+        >
+          Confirm
+        </button>
+      </div>
     </div>
   </div>
 </div>

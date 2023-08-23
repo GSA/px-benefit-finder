@@ -37,9 +37,6 @@ const NoticesList = ({ data }) => {
       <ul className="notices-list add-list-reset">
         <Notices data={data} />
       </ul>
-      <div className="line-sperator-wrapper">
-        <div className="line-sperator" />
-      </div>
     </div>
   )
 }

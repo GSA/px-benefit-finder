@@ -1,12 +1,14 @@
-.obfuscated-link {
-  position: relative;
-  padding-right: 50px;
-  padding-left: 50px;
-  text-decoration: none;
-  color: white;
-
-  &:visited {
+#usagov-bears-app {
+  .obfuscated-link {
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
     text-decoration: none;
     color: white;
+
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
   }
 }

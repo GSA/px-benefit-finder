@@ -16,7 +16,9 @@
     }
 
     button.step-back-link {
-      color: #979797;
+      color: #979797 !important;
+      background-color: #fff !important;
+      width: auto !important;
     }
   }
 
@@ -39,5 +41,29 @@
     padding-bottom: 30px;
     margin-bottom: 40px;
     border-bottom: 1px solid lightgrey;
+  }
+
+  .radio-group {
+    display: flex;
+    /* stylelint-disable selector-class-pattern */
+    .usa-radio__label {
+      margin-right: 32px;
+    }
+    /* stylelint-enable selector-class-pattern */
+  }
+
+  button,
+  .benefit-modal-group a {
+    width: 100%;
+  }
+
+  @media (width >= 1049px) {
+    .section {
+      margin: 50px 60px;
+    }
+
+    .radio-group {
+      display: inline;
+    }
   }
 }

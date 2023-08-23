@@ -1,22 +1,24 @@
 // ['regular', 'bold', 'extrabold', 'light', 'thin']
-p,
-p.regular {
-  font-weight: 400;
-  line-height: 162%;
-}
+#usagov-bears-app {
+  p,
+  p.regular {
+    font-weight: 400;
+    line-height: 162%;
+  }
 
-p.bold {
-  font-weight: 700;
-}
+  p.bold {
+    font-weight: 700;
+  }
 
-p.extrabold {
-  font-weight: 800;
-}
+  p.extrabold {
+    font-weight: 800;
+  }
 
-p.light {
-  font-weight: 300;
-}
+  p.light {
+    font-weight: 300;
+  }
 
-p.thin {
-  font-weight: 100;
+  p.thin {
+    font-weight: 100;
+  }
 }

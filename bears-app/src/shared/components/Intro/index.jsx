@@ -27,16 +27,35 @@ const Intro = ({ data, ui, setStep, step }) => {
     data && (
       <div className="intro">
         <Chevron heading={title} description={summary} />
-        <Heading headingLevel={2}>{heading}</Heading>
-        <TimeIndicator
-          description={timeIndicator}
-          timeEstimate={timeEstimate}
-        />
-        <ProcessList steps={steps.list} description={steps.title} />
-        <Heading headingLevel={2}>{notices.heading}</Heading>
-        <NoticesList data={notices.list} />
-        <div className="cta-wrapper">
-          <Button onClick={() => setStep(step + 1)}>{button}</Button>
+        <div className="grid-container">
+          <Heading headingLevel={2}>{heading}</Heading>
+          <TimeIndicator
+            description={timeIndicator}
+            timeEstimate={timeEstimate}
+          />
+          <div className="intro-process-group">
+            <div className="intro-process-list">
+              <ProcessList steps={steps.list} description={steps.title} />
+            </div>
+            <div className="intro-process-notices">
+              <Heading
+                className="intro-process-notices-heading"
+                headingLevel={2}
+              >
+                {notices.heading}
+              </Heading>
+              <NoticesList
+                className="intro-process-notices-list"
+                data={notices.list}
+              />
+            </div>
+          </div>
+          <div className="line-sperator-wrapper">
+            <div className="line-sperator" />
+          </div>
+          <div className="cta-wrapper">
+            <Button onClick={() => setStep(step + 1)}>{button}</Button>
+          </div>
         </div>
       </div>
     )

@@ -80,12 +80,5 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
       </div>
     </li>
   </ul>
-  <div
-    className="line-sperator-wrapper"
-  >
-    <div
-      className="line-sperator"
-    />
-  </div>
 </div>
 `;

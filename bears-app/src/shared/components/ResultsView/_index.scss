@@ -1,35 +1,45 @@
-.result-view-details {
-  padding: 24px;
+#usagov-bears-app {
+  .result-view-details {
+    padding: 24px;
 
-  .step-back-link {
-    color: #979797;
-  }
-}
-
-.result-view-benefits,
-.result-view-unmet,
-.result-view-relvant-benefits,
-.result-view-share-results {
-  padding: 16px 0;
-  border-bottom: 2px solid lightgrey;
-}
-
-.result-view-unmet {
-  button {
-    margin-bottom: 16px;
+    button.step-back-link {
+      color: #979797 !important;
+      background-color: #fff !important;
+      width: auto !important;
+    }
   }
 
-  p {
-    padding-bottom: 16px;
+  .result-view-benefits,
+  .result-view-unmet,
+  .result-view-relvant-benefits,
+  .result-view-share-results {
+    padding: 16px 0;
+    border-bottom: 2px solid lightgrey;
   }
-}
 
-.result-view-share-results {
-  text-align: center;
-}
+  .result-view-unmet {
+    button {
+      margin-bottom: 16px;
+    }
 
-.result-view-share-results-button-group {
-  button {
-    margin-bottom: 8px;
+    p {
+      padding-bottom: 16px;
+    }
+  }
+
+  .result-view-share-results {
+    text-align: center;
+  }
+
+  .result-view-share-results-button-group {
+    button {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (width >= 1049px) {
+    .result-view-details {
+      padding: 24px 164px;
+    }
   }
 }

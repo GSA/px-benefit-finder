@@ -63,3 +63,16 @@
 .usa-footer {
   padding-top: 0 !important;
 }
+
+#nav-modal {
+  .usa-button {
+    background-color: #005ea2 !important;
+    color: #fff !important;
+    width: 100%;
+  }
+
+  .usa-button:hover {
+    background-color: #003e6b !important;
+    color: #fff !important;
+  }
+}

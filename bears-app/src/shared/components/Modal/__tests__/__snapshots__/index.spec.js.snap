@@ -6,7 +6,6 @@ exports[`Modal renders a match to the previous snapshot 1`] = `
 >
   <a
     className=""
-    href="#undefined"
     onClick={[Function]}
   />
 </div>

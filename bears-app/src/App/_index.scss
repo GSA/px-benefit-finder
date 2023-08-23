@@ -64,14 +64,15 @@
   padding-top: 0 !important;
 }
 
-#nav-modal {
-  .usa-button {
+.nav-item-one,
+.nav-item-two {
+  &.usa-button {
     background-color: #005ea2 !important;
     color: #fff !important;
-    width: 100%;
+    width: 100% !important;
   }
 
-  .usa-button:hover {
+  &.usa-button:hover {
     background-color: #003e6b !important;
     color: #fff !important;
   }

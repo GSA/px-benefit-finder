@@ -97,9 +97,9 @@ const Modal = ({
    * @param {string} triggerLabel - passed to button for triggering modal
    * @return {html} returns an obfustacted anchor element
    */
-  const Trigger = ({ id, triggerLabel, onClick }) => {
+  const Trigger = ({ triggerLabel, onClick }) => {
     return (
-      <ObfuscatedLink href={`#${id}`} onClick={onClick} noCarrot>
+      <ObfuscatedLink onClick={onClick} noCarrot>
         {triggerLabel}
       </ObfuscatedLink>
     )
@@ -148,9 +148,8 @@ const Modal = ({
   }
 
   return (
-    <div className="benefit-modal-group">
+    <div id={id} className="benefit-modal-group">
       <Trigger
-        id={id}
         triggerLabel={triggerLabel}
         onClick={() => handleOpenModal()}
       ></Trigger>

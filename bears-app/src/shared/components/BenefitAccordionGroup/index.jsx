@@ -116,7 +116,7 @@ const BenefitAccordionGroup = ({
       <ExpandAll />
       {data &&
         data.map((item, index) => {
-          const { agency, eligibility, sourceLink, summary, title } =
+          const { agency, eligibility, SourceLink, summary, title } =
             item[entryKey]
           // filter to get benefit criteria matches
           const eligibleBenefits = eligibility.filter(
@@ -148,6 +148,8 @@ const BenefitAccordionGroup = ({
                 moreInformationNeeded.length > 0
               ? 'More Information Needed'
               : 'Not Eligible'
+
+          console.log(SourceLink)
 
           return (
             <Accordion
@@ -191,7 +193,12 @@ const BenefitAccordionGroup = ({
                 Additional eligibility criteria may apply. Please visit agency
                 for full requirements.
               </Alert>
-              <ObfuscatedLink className="benefit-link" href={sourceLink}>
+              <ObfuscatedLink
+                className="benefit-link"
+                href={SourceLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Visit {agency.title}
               </ObfuscatedLink>
             </Accordion>

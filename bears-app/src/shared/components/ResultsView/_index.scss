@@ -2,8 +2,10 @@
   .result-view-details {
     padding: 24px;
 
-    .step-back-link {
-      color: #979797;
+    button.step-back-link {
+      color: #979797 !important;
+      background-color: #fff !important;
+      width: auto !important;
     }
   }
 

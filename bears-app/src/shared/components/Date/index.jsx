@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import parseDate from '../../utils/parseDate'
-// import { useHandleClassName } from '../../hooks/useHandleClassName'
+import { useHandleClassName } from '../../hooks/useHandleClassName'
 import './_index.scss'
 
 /**
@@ -33,25 +33,22 @@ const Date = ({ onChange, value, required, ui }) => {
     (value && value.year) ||
     ''
 
-  // const defaultClasses =
-  //   required === 'TRUE'
-  //     ? ['usa-alert', 'usa-alert--error', 'display-none']
-  //     : [
-  //         'usa-alert',
-  //         'usa-alert--info',
-  //         `${noBackground ? 'no-background' : ''}`,
-  //       ]
+  const handleRequired = required === 'TRUE' ? ['required-field'] : ''
 
-  const handleRequired = required === 'TRUE' ? 'required-field' : ''
-
-  const MonthSelect = () => {
+  const MonthSelect = ({ className }) => {
+    const defaultClasses = ['usa-select']
+    const utilityClasses = handleRequired
     return (
       <div className="usa-form-group usa-form-group--month usa-form-group--select">
         <label className="usa-label" htmlFor="date_of_birth_month">
           {labelMonth}
         </label>
         <select
-          className={`usa-select ${handleRequired}`}
+          className={useHandleClassName({
+            className,
+            defaultClasses,
+            utilityClasses,
+          })}
           id="date_of_birth_month"
           name="date_of_birth_month"
           aria-describedby="mdHint"
@@ -72,14 +69,20 @@ const Date = ({ onChange, value, required, ui }) => {
     )
   }
 
-  const DayInput = () => {
+  const DayInput = ({ className }) => {
+    const defaultClasses = ['usa-input']
+    const utilityClasses = handleRequired
     return (
       <div className="usa-form-group usa-form-group--day">
         <label className="usa-label" htmlFor="date_of_birth_day">
           {labelDay}
         </label>
         <input
-          className={`usa-input $${handleRequired}`}
+          className={useHandleClassName({
+            className,
+            defaultClasses,
+            utilityClasses,
+          })}
           aria-describedby="mdHint"
           id="date_of_birth_day"
           name="date_of_birth_day"
@@ -93,14 +96,20 @@ const Date = ({ onChange, value, required, ui }) => {
     )
   }
 
-  const YearInput = () => {
+  const YearInput = ({ className }) => {
+    const defaultClasses = ['usa-input']
+    const utilityClasses = handleRequired
     return (
       <div className="usa-form-group usa-form-group--year">
         <label className="usa-label" htmlFor="date_of_birth_year">
           {labelYear}
         </label>
         <input
-          className={`usa-input ${handleRequired}`}
+          className={useHandleClassName({
+            className,
+            defaultClasses,
+            utilityClasses,
+          })}
           aria-describedby="mdHint"
           id="date_of_birth_year"
           name="date_of_birth_year"

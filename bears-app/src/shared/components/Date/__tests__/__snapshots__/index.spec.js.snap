@@ -100,7 +100,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     </label>
     <input
       aria-describedby="mdHint"
-      className="usa-input "
+      className="usa-input $"
       id="date_of_birth_day"
       inputMode="numeric"
       maxLength="2"

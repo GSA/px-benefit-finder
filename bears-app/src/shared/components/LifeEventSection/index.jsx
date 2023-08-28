@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
+import { PUTData, PUTDataDate } from '../../api/api-calls'
 import {
   Alert,
   Button,
@@ -50,11 +51,14 @@ const LifeEventSection = ({
     sectionHeadings,
   } = ui
 
+  /**
+   *
+   * start alert
+   *
+   */
   // establish refs
   const alertFieldRef = useRef(null)
 
-  // TODO: // see if there is a way to not use so many DOM checks for vaildation
-  // handlers
   /**
    * a function that handles class state on our collected required fields
    * @function
@@ -115,12 +119,11 @@ const LifeEventSection = ({
       ? handleSuccess()
       : handleAlert()
   }
-
-  // check for all required fields and scroll to top on mount
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    getRequiredFields()
-  }, [])
+  /**
+   *
+   * end alert
+   *
+   */
 
   /**
    * a function that updates our step count and set our data index
@@ -153,48 +156,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleChanged = (event, criteriaKey) => {
-    const newData = { ...currentData }
-
-    // find the right data based on criteriakey
-    // check parent criteriaKey
-    // if nothing returns then check the children
-
-    const findCriteria = (arr, criteriaKey) => {
-      let element
-
-      element = arr.find(
-        element => element.fieldset.criteriaKey === criteriaKey
-      )
-
-      // handle children criteria
-      if (element === undefined) {
-        arr.forEach(item => {
-          item.fieldset.children.forEach(childElement => {
-            if (
-              childElement.fieldsets[0].fieldset.criteriaKey === criteriaKey
-            ) {
-              element = childElement.fieldsets[0]
-            }
-          })
-        })
-      }
-      return element
-    }
-
-    const foundCriteria = findCriteria(newData.section.fieldsets, criteriaKey)
-
-    // get those values
-    const inputValues =
-      foundCriteria && foundCriteria.fieldset?.inputs[0].inputCriteria.values
-
-    inputValues.forEach(value => {
-      if (value.value === event.target.value) {
-        value.selected = true
-      } else {
-        delete value.selected
-      }
-    })
-    setCurrentData(newData)
+    PUTData(criteriaKey, currentData, setCurrentData, event.target.value)
   }
 
   /**
@@ -204,41 +166,25 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
-    const newData = { ...currentData }
-
-    const id = event.target.id
-
-    // construct date in standard time
-
-    // git value by id string match
-    // const standardDateValue = `${year}-${month}-${day}`
-
-    // find the right data based on criteriakey
-    const foundCriteria = newData.section.fieldsets.find(
-      element => element.fieldset.criteriaKey === criteriaKey
+    PUTDataDate(
+      criteriaKey,
+      currentData,
+      setCurrentData,
+      event.target.value,
+      event.target.id
     )
-    // get those values
-    const inputValues = foundCriteria.fieldset.inputs[0].inputCriteria.values
-
-    if (id.includes('day')) {
-      inputValues[0].value.day = event.target.value
-    }
-    if (id.includes('month')) {
-      inputValues[0].value.month = event.target.value
-    }
-    if (id.includes('year')) {
-      inputValues[0].value.year = event.target.value
-    }
-
-    inputValues[0].value = { ...inputValues[0].value }
-    inputValues[0].selected = true
-    setCurrentData(newData)
   }
 
   // manage the display of our modal initializer
   useEffect(() => {
     data && step === data.length ? setModal(true) : setModal(false)
   }, [currentData, data, modal, step])
+
+  // check for all required fields and scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    getRequiredFields()
+  }, [])
 
   return (
     data && (

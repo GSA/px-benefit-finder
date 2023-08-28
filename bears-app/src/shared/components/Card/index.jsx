@@ -15,6 +15,8 @@ import './_index.scss'
  */
 const Card = ({ className, title, cta, href, noCarrot }) => {
   const defaultClasses = ['usa-card add-list-reset']
+  const handleCarrot = noCarrot === true ? null : <Carrot color="#162E51" />
+
   return (
     <li
       className={useHandleClassName({
@@ -31,7 +33,7 @@ const Card = ({ className, title, cta, href, noCarrot }) => {
             </Heading>
           </div>
           <Paragraph className="usa-card__body">{cta}</Paragraph>
-          {noCarrot === true ? null : <Carrot color="#162E51" />}
+          {handleCarrot}
         </div>
       </a>
     </li>

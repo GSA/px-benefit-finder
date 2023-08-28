@@ -54,6 +54,7 @@ const Accordion = ({
       <path fill="#1a4480" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
     </svg>
   )
+
   /**
    * a handler that returns the proper icon
    * @function

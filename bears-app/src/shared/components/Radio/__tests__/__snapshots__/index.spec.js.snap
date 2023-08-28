@@ -5,7 +5,7 @@ exports[`Radio renders a match to the previous snapshot 1`] = `
   className="usa-radio"
 >
   <input
-    className="usa-radio__input "
+    className=""
     type="radio"
   />
   <label

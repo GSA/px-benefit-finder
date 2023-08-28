@@ -1,3 +1,4 @@
+import { useHandleClassName } from '../../hooks/useHandleClassName'
 import { Label } from '../index'
 import PropTypes from 'prop-types'
 
@@ -10,17 +11,31 @@ import './_index.scss'
  * @param {string} value - assigned to value param in html
  * @param {boolean} checked - determines if the radio is selected
  * @param {func} onChange - inherited onChange handler
+ * @param {string} classNAme - inherited class strings
  * @return {html} returns a semantic input as type radio element
  */
 
-const Radio = ({ id, label, value, checked, onChange, required }) => {
+const Radio = ({
+  id,
+  label,
+  value,
+  checked,
+  onChange,
+  required,
+  className,
+}) => {
+  const handleRequired = required === 'TRUE' ? ['required-field'] : ''
+  const defaultClasses = ['usa-radio__input']
+  const utilityClasses = handleRequired
   return (
     <>
       <div className="usa-radio">
         <input
-          className={`usa-radio__input ${
-            required === 'TRUE' ? 'required-field' : ''
-          }`}
+          className={useHandleClassName({
+            className,
+            defaultClasses,
+            utilityClasses,
+          })}
           id={id}
           type="radio"
           name={id}

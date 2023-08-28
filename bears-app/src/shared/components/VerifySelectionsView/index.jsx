@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
+import parseDate from '../../utils/parseDate'
 import { Heading, Button } from '../index'
 
 import './_index.scss'
@@ -96,14 +97,6 @@ const VerifySelectionsView = ({
                             item.fieldset.inputs[0].inputCriteria.values.find(
                               value => value.selected
                             )
-
-                          // formate if date object
-                          const parseDate = value => {
-                            const d = new window.Date(
-                              Date.UTC(value.year, value.month, value.day)
-                            )
-                            return d
-                          }
 
                           const dateFormatOptions = {
                             year: 'numeric',

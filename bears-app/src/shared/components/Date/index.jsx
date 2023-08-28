@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import parseDate from '../../utils/parseDate'
 import './_index.scss'
 
 /**
@@ -13,16 +14,6 @@ const Date = ({ onChange, value, required, ui }) => {
   const { date, select } = ui
   const { labelDay, labelMonth, labelYear, monthOptions } = date
   const { dateDefaultValue } = select
-  /**
-   * a parse our date object
-   * @function
-   * @param {object} value - { day, month, year }
-   * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
-   */
-  const parseDate = value => {
-    const d = value && new window.Date(value.year, value.month, value.day)
-    return d
-  }
 
   return (
     <div className="usa-memorable-date">

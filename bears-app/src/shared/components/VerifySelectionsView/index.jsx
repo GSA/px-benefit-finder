@@ -84,14 +84,14 @@ const VerifySelectionsView = ({
         {resultItem({
           criteriaId: `criteria-${item.fieldset.criteriaKey}-${index}`,
           legend: item.fieldset.legend,
-          selected: apiCalls.getSelectedValue(item),
+          selected: apiCalls.GETSelectedValue(item),
         })}
-        {apiCalls.getChildren(item).map(childItem =>
-          apiCalls.getSelectedValue(childItem) ? (
+        {apiCalls.GETChildren(item).map(childItem =>
+          apiCalls.GETSelectedValue(childItem) ? (
             resultItem({
               criteriaId: childItem.fieldset.criteriaKey,
               legend: childItem.fieldset.legend,
-              selected: apiCalls.getSelectedValue(childItem),
+              selected: apiCalls.GETSelectedValue(childItem),
             })
           ) : (
             <NoInputGiven
@@ -141,7 +141,7 @@ const VerifySelectionsView = ({
                       <div>
                         {section.fieldsets.map((item, i) => {
                           // if no value then return generic message
-                          return apiCalls.getSelectedValue(item) ? (
+                          return apiCalls.GETSelectedValue(item) ? (
                             <Items item={item} index={i} />
                           ) : (
                             <NoInputGiven item={item} index={i} />

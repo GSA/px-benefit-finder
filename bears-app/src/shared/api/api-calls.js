@@ -39,7 +39,7 @@ export async function GETLifeEvent(lifeEvent) {
  * @param {object} item - fieldset object
  * @return {object} returns the object with a selected key
  */
-export const getSelectedValue = item =>
+export const GETSelectedValue = item =>
   item &&
   item.fieldset.inputs[0].inputCriteria.values.find(value => value.selected)
 
@@ -49,7 +49,7 @@ export const getSelectedValue = item =>
  * @param {object} item - parent fieldset object
  * @return {array} returns an array of children related to the param
  */
-export const getChildren = item =>
+export const GETChildren = item =>
   item && item.fieldset?.children.map(childItem => childItem.fieldsets[0])
 
 /**

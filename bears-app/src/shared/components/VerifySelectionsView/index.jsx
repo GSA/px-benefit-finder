@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import parseDate from '../../utils/parseDate'
+import * as apiCalls from '../../api/api-calls'
 import { Heading, Button } from '../index'
 
 import './_index.scss'
@@ -21,6 +22,65 @@ const VerifySelectionsView = ({
   data,
 }) => {
   const { stepIndicator, verifySelectionsView, buttonGroup } = ui
+  const dateFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
+
+  const NoInputGiven = ({ item, index }) => (
+    <div className="verify-criteria-value">
+      <div
+        className="verify-criteria-legend"
+        key={`criteria-${item.fieldset.criteriaKey}-${index}`}
+      >
+        {item.fieldset.legend}
+      </div>
+      No input given.
+    </div>
+  )
+
+  const resultItem = ({ criteriaId, legend, selected }) => {
+    return (
+      <div className="verify-criteria-value">
+        <div className="verify-criteria-legend" key={criteriaId}>
+          {legend}
+        </div>
+        {typeof selected?.value === 'object'
+          ? `${parseDate(selected.value).toLocaleDateString(
+              undefined,
+              dateFormatOptions
+            )}`
+          : selected?.value}
+      </div>
+    )
+  }
+
+  const Items = ({ item, index }) => {
+    return (
+      <div>
+        {resultItem({
+          criteriaId: `criteria-${item.fieldset.criteriaKey}-${index}`,
+          legend: item.fieldset.legend,
+          selected: apiCalls.getSelectedValue(item),
+        })}
+        {apiCalls.getChildren(item).map(childItem =>
+          apiCalls.getSelectedValue(childItem) ? (
+            resultItem({
+              criteriaId: childItem.fieldset.criteriaKey,
+              legend: childItem.fieldset.legend,
+              selected: apiCalls.getSelectedValue(childItem),
+            })
+          ) : (
+            <NoInputGiven
+              item={childItem}
+              key={childItem.fieldset.criteriaKey}
+            />
+          )
+        )}
+      </div>
+    )
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -58,108 +118,11 @@ const VerifySelectionsView = ({
                       </Heading>
                       <div>
                         {section.fieldsets.map((item, i) => {
-                          // check if children values
-                          const checkForChildrenValues = item => {
-                            let child
-                            if (item.fieldset.children.length > 0) {
-                              item.fieldset.children.forEach(childItem => {
-                                child =
-                                  childItem.fieldsets[0].fieldset.inputs[0].inputCriteria.values.find(
-                                    value => value.selected
-                                  )
-                              })
-                            }
-                            return child
-                          }
-
-                          const childrenLegend = item => {
-                            let legend
-                            if (item.fieldset.children.length > 0) {
-                              item.fieldset.children.forEach(childItem => {
-                                legend = childItem.fieldsets[0].fieldset.legend
-                              })
-                            }
-                            return legend
-                          }
-
-                          const childrenCriteriaKey = item => {
-                            let criteriaKey
-                            if (item.fieldset.children.length > 0) {
-                              item.fieldset.children.forEach(childItem => {
-                                criteriaKey =
-                                  childItem.fieldsets[0].fieldset.criteriaKey
-                              })
-                            }
-                            return criteriaKey
-                          }
-
-                          const result =
-                            item.fieldset.inputs[0].inputCriteria.values.find(
-                              value => value.selected
-                            )
-
-                          const dateFormatOptions = {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                          }
-
-                          const resultItem = ({
-                            criteriaId,
-                            legend,
-                            result,
-                          }) => {
-                            return (
-                              <div className="verify-criteria-value">
-                                <div
-                                  className="verify-criteria-legend"
-                                  key={criteriaId}
-                                >
-                                  {legend}
-                                </div>
-                                {typeof result?.value === 'object'
-                                  ? `${parseDate(
-                                      result.value
-                                    ).toLocaleDateString(
-                                      undefined,
-                                      dateFormatOptions
-                                    )}`
-                                  : result?.value}
-                              </div>
-                            )
-                          }
-
-                          const Items = ({ item, result }) => {
-                            return (
-                              <div>
-                                {resultItem({
-                                  criteriaId: `criteria-${item.fieldset.criteriaKey}-${i}`,
-                                  legend: item.fieldset.legend,
-                                  result,
-                                })}
-                                {checkForChildrenValues(item) &&
-                                  resultItem({
-                                    criteriaId: childrenCriteriaKey(item),
-                                    legend: childrenLegend(item),
-                                    result: checkForChildrenValues(item),
-                                  })}
-                              </div>
-                            )
-                          }
-
                           // if no value then return generic message
-                          return result !== undefined ? (
-                            <Items item={item} result={result} />
+                          return apiCalls.getSelectedValue(item) ? (
+                            <Items item={item} index={i} />
                           ) : (
-                            <div className="verify-criteria-value">
-                              <div
-                                className="verify-criteria-legend"
-                                key={`criteria-${item.fieldset.criteriaKey}-${i}`}
-                              >
-                                {item.fieldset.legend}
-                              </div>
-                              No input given.
-                            </div>
+                            <NoInputGiven item={item} index={i} />
                           )
                         })}
                       </div>

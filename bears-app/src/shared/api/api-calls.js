@@ -34,6 +34,25 @@ export async function GETLifeEvent(lifeEvent) {
 }
 
 /**
+ * a function to get the value object of selected fieldset values
+ * @function
+ * @param {object} item - fieldset object
+ * @return {object} returns the object with a selected key
+ */
+export const getSelectedValue = item =>
+  item &&
+  item.fieldset.inputs[0].inputCriteria.values.find(value => value.selected)
+
+/**
+ * a function to get array of children
+ * @function
+ * @param {object} item - parent fieldset object
+ * @return {array} returns an array of children related to the param
+ */
+export const getChildren = item =>
+  item && item.fieldset?.children.map(childItem => childItem.fieldsets[0])
+
+/**
  * an async fetch to get life-event data.
  * @function
  * @param {string} lifeEvent - The inherited class from

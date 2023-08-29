@@ -33,6 +33,17 @@ export async function GETLifeEvent(lifeEvent) {
   return response
 }
 
+// handlers
+/**
+ * a function that determines the prefix of our URL
+ * based on a string match in the pathname of the window object
+ * @function
+ */
+export const GETLanguage = () => {
+  const string = /^\/es/
+  return string.test(window.location.pathname) ? 'es' : 'en'
+}
+
 /**
  * a function to get the value object of selected fieldset values
  * @function

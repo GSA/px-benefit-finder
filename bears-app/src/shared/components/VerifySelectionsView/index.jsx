@@ -22,6 +22,7 @@ const VerifySelectionsView = ({
   data,
 }) => {
   const { stepIndicator, verifySelectionsView, buttonGroup } = ui
+  const local = apiCalls.GETLanguage()
   const dateFormatOptions = {
     year: 'numeric',
     month: 'long',
@@ -63,7 +64,7 @@ const VerifySelectionsView = ({
         </div>
         {typeof selected?.value === 'object'
           ? `${parseDate(selected.value).toLocaleDateString(
-              undefined,
+              local,
               dateFormatOptions
             )}`
           : selected?.value}

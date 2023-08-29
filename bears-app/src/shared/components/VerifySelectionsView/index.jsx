@@ -28,6 +28,13 @@ const VerifySelectionsView = ({
     day: 'numeric',
   }
 
+  /**
+   * afunctional component that renders markup when no value has been given
+   * @component
+   * @param {object} item - fieldset object with no selected value
+   * @param {number} index - current index of mapped array
+   * @return {html} returns html div
+   */
   const NoInputGiven = ({ item, index }) => (
     <div className="verify-criteria-value">
       <div
@@ -40,6 +47,14 @@ const VerifySelectionsView = ({
     </div>
   )
 
+  /**
+   * a functional component that renders markup for fieldset items with selected values
+   * @component
+   * @param {string} criteriaId - inherited string value
+   * @param {string} legend - inherited string value
+   * @param {object} selected - selected fieldset object value
+   * @return {html} returns html div
+   */
   const resultItem = ({ criteriaId, legend, selected }) => {
     return (
       <div className="verify-criteria-value">
@@ -56,6 +71,13 @@ const VerifySelectionsView = ({
     )
   }
 
+  /**
+   * a functional component that renders markup for fieldset items in the form
+   * @component
+   * @param {object} item - fieldset object
+   * @param {number} index - current index of mapped array
+   * @return {html} returns html div
+   */
   const Items = ({ item, index }) => {
     return (
       <div>

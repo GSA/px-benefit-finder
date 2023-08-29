@@ -63,6 +63,152 @@ export const GETSelectedValue = item =>
 export const GETChildren = item =>
   item && item.fieldset?.children.map(childItem => childItem.fieldsets[0])
 
+export const GETSelectedValueAll = data =>
+  data &&
+  data
+    .flatMap((item, i) =>
+      item.section.fieldsets.flatMap(item => {
+        const selected = GETSelectedValue(item)
+        return (
+          selected && [
+            {
+              criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
+              values: selected,
+            },
+            GETChildren(item) &&
+              GETChildren(item)
+                .flatMap(
+                  childItem =>
+                    GETSelectedValue(childItem) && {
+                      criteriaKey: childItem.fieldset.criteriaKey,
+                      values: GETSelectedValue(childItem),
+                    }
+                )
+                .filter(element => element !== undefined),
+          ]
+        )
+      })
+    )
+    .flat() // we flatten all to have only one array
+    .filter(element => element !== undefined) // remove undefined
+
+const handleDateEligibility = (conditional, selectedValue) => {
+  // date values
+  // "<01-01-1978"
+  // "<2years (the deceased died within the last two years)"
+  // "<18years"
+  // ">=62years"
+  // ">=60years"
+  // ">=50years"
+  // ">18years"
+
+  // get the conditional
+  const text = conditional
+  const operators = /['>', '>=', '<', '<=', '=']/g
+  const operator = text.match(operators)
+  const integer = text.match(/\d+/)[0]
+
+  // calculate back
+  // get current date
+  // subtract integer
+  // if a date comes back in date format
+  const pattern = /-/
+  const conditionalDate = pattern.test(text)
+    ? new window.Date(text)
+    : new window.Date(
+        new Date().getFullYear() - integer,
+        new Date().getMonth(),
+        new Date().getDate()
+      )
+
+  // getTime in milliseconds so we can do a comparison
+  const epochConditionalDate = conditionalDate.getTime()
+
+  // example selected value for date
+  // const value = {
+  //   year: 2022,
+  //   month: 2,
+  //   day: 2,
+  // }
+
+  // calculate selected
+  const selectedDate = new window.Date(
+    Date.UTC(selectedValue.year, selectedValue.month, selectedValue.day)
+  )
+
+  const epochSelectedDate = selectedDate.getTime()
+
+  const isDateEligible = (
+    operator,
+    epochSelectedDate,
+    epochConditionalDate
+  ) => {
+    // ;['>', '>=', '<', '<=', '=']
+    switch (operator.length && operator.join('')) {
+      case '>':
+        return epochSelectedDate > epochConditionalDate
+      case '>=':
+        return epochSelectedDate >= epochConditionalDate
+      case '<':
+        return epochSelectedDate < epochConditionalDate
+      case '<=':
+        return epochSelectedDate <= epochConditionalDate
+      case '=':
+        return epochSelectedDate === epochConditionalDate
+      default:
+        return false
+    }
+  }
+  return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
+}
+
+export const GETElegibilityByCriteria = (selectedCriteria, data) => {
+  // return all eligible items
+  const eligibleItems =
+    data &&
+    data.map(item => {
+      // find all eligibility items that are matches to criteria key
+      selectedCriteria.forEach(selected => {
+        // match item to criteria key
+        const criteriaEligibility = item.benefit.eligibility.find(
+          criteria => criteria.criteriaKey === selected.criteriaKey
+        )
+
+        // determine it's eligiblity
+        if (criteriaEligibility !== undefined) {
+          // look for eligible matches
+          const isEligible = () => {
+            let eligibility
+
+            if (typeof selected.values.value === 'object') {
+              eligibility = criteriaEligibility.acceptableValues.find(value =>
+                handleDateEligibility(value, selected.values.value)
+              )
+            } else {
+              eligibility = criteriaEligibility.acceptableValues.find(
+                value => value === selected.values.value
+              )
+            }
+            return eligibility
+          }
+
+          // undefined === false
+          criteriaEligibility.isEligible = !!isEligible()
+        }
+      })
+      return item
+    })
+  // merge all arrays and objects into one array
+  const mergedEligibleItems = eligibleItems && [].concat(...eligibleItems)
+  return mergedEligibleItems
+}
+
+// export const GETElegibilityByLabel = (selectedCriteria, data, label) => {
+//   // return all eligible items
+//   const eligibleItems = GETElegibilityByCriteria(selectedCriteria, data)
+//   console.log('eligibleItems', eligibleItems, label)
+// }
+
 /**
  * an async fetch to get life-event data.
  * @function

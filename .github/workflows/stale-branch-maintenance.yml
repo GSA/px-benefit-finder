@@ -36,4 +36,4 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Hi $TECH_LEAD, this issue is available for your review. Thank you for your help! :sparkles:
+            Hi ${{ env.TECH_LEAD }}, this issue is available for your review. Thank you for your help! :sparkles:

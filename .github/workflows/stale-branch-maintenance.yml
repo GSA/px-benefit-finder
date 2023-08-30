@@ -34,6 +34,7 @@ jobs:
       - name: Add comment
         uses: peter-evans/create-or-update-comment@v3
         with:
+          repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
           issue-number: ${{ github.event.issue.number }}
           body: |
             Hi ${{ env.TECH_LEAD }}, this issue is available for your review. Thank you for your help! :sparkles:

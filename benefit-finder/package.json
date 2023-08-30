@@ -59,7 +59,7 @@
     "lint:scss:fix": "stylelint 'src/**/*.scss' --fix",
     "lint:js": "eslint . --ext .js,.jsx",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "postinstall": "cd .. && husky install bears-app/.husky",
+    "postinstall": "cd .. && husky install benefit-finder/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
     "prebuild:storybook": "npm run test:generate-output",

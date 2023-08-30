@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Intro renders a match to the previous snapshot 1`] = `
+<div
+  className="intro"
+>
+  <div
+    className="chevron"
+  >
+    <div
+      className="grid-container"
+    >
+      <h1
+        className=""
+      >
+        Benefit Finder After Losing A Loved One
+      </h1>
+      <div
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>We are sorry about your loss. You and your family may be eligible for survivor benefits from the government following a family member's death. Learn how to find the benefits you may qualify for.</p>",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="grid-container"
+  >
+    <h2
+      className=""
+    >
+      Steps
+    </h2>
+    <div
+      className="time-indicator"
+    >
+      Time to complete
+       
+      60 minutes
+    </div>
+    <div
+      className="intro-process-group"
+    >
+      <div
+        className="intro-process-list"
+      >
+        <ol
+          className="usa-process-list"
+        >
+          <li
+            className="usa-process-list__item"
+          >
+            <h4
+              className="usa-process-list__heading"
+            >
+              Answer questions
+            </h4>
+          </li>
+          <li
+            className="usa-process-list__item"
+          >
+            <h4
+              className="usa-process-list__heading"
+            >
+              Review Results
+            </h4>
+          </li>
+          <li
+            className="usa-process-list__item"
+          >
+            <h4
+              className="usa-process-list__heading"
+            >
+              Find out how to apply
+            </h4>
+          </li>
+        </ol>
+      </div>
+      <div
+        className="intro-process-notices"
+      >
+        <h2
+          className=""
+        >
+          Before you start:
+        </h2>
+        <div
+          className="notices"
+        >
+          <ul
+            className="notices-list add-list-reset"
+          >
+            <li
+              className="notice"
+            >
+              <div
+                className=""
+                role="alert"
+              >
+                <div
+                  className="usa-alert__body"
+                >
+                  <div
+                    className="usa-alert__text"
+                  >
+                    <div
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<div>Your information<strong> will not</strong> be shared, saved, or submitted.</div>",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              className="notice"
+            >
+              <div
+                className=""
+                role="alert"
+              >
+                <div
+                  className="usa-alert__body"
+                >
+                  <div
+                    className="usa-alert__text"
+                  >
+                    <div
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Provide complete and accurate information to get the most relevant results.",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              className="notice"
+            >
+              <div
+                className=""
+                role="alert"
+              >
+                <div
+                  className="usa-alert__body"
+                >
+                  <div
+                    className="usa-alert__text"
+                  >
+                    <div
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      className="line-sperator-wrapper"
+    >
+      <div
+        className="line-sperator"
+      />
+    </div>
+    <div
+      className="cta-wrapper"
+    >
+      <button
+        className=""
+        onClick={[Function]}
+        type="button"
+      >
+        Start
+      </button>
+    </div>
+  </div>
+</div>
+`;

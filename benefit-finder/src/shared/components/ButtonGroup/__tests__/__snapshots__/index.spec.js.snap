@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup renders a match to the previous snapshot 1`] = `
+<ul
+  className="usa-button-group width-full"
+>
+  <li
+    className="usa-button-group__item width-full"
+  >
+    <button
+      className=""
+      type="button"
+    />
+  </li>
+  <li
+    className="usa-button-group__item width-full"
+  >
+    <button
+      className=""
+      type="button"
+    />
+  </li>
+</ul>
+`;

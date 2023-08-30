@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Date renders a match to the previous snapshot 1`] = `
+<div
+  className="usa-memorable-date"
+>
+  <div
+    className="usa-form-group usa-form-group--month usa-form-group--select"
+  >
+    <label
+      className="usa-label"
+      htmlFor="date_of_birth_month"
+    >
+      Month
+    </label>
+    <select
+      aria-describedby="mdHint"
+      className="usa-select "
+      id="date_of_birth_month"
+      name="date_of_birth_month"
+      required="required"
+      value=""
+    >
+      <option
+        disabled={true}
+        value=""
+      >
+        -Select-
+      </option>
+      <option
+        value={0}
+      >
+        01 - January
+      </option>
+      <option
+        value={1}
+      >
+        02 - February
+      </option>
+      <option
+        value={2}
+      >
+        03 - March
+      </option>
+      <option
+        value={3}
+      >
+        04 - April
+      </option>
+      <option
+        value={4}
+      >
+        05 - May
+      </option>
+      <option
+        value={5}
+      >
+        06 - June
+      </option>
+      <option
+        value={6}
+      >
+        07 - July
+      </option>
+      <option
+        value={7}
+      >
+        08 - August
+      </option>
+      <option
+        value={8}
+      >
+        09 - September
+      </option>
+      <option
+        value={9}
+      >
+        10 - October
+      </option>
+      <option
+        value={10}
+      >
+        11 - November
+      </option>
+      <option
+        value={11}
+      >
+        12 - December
+      </option>
+    </select>
+  </div>
+  <div
+    className="usa-form-group usa-form-group--day"
+  >
+    <label
+      className="usa-label"
+      htmlFor="date_of_birth_day"
+    >
+      Day
+    </label>
+    <input
+      aria-describedby="mdHint"
+      className="usa-input "
+      id="date_of_birth_day"
+      inputMode="numeric"
+      maxLength="2"
+      name="date_of_birth_day"
+      pattern="[0-9]*"
+      value=""
+    />
+  </div>
+  <div
+    className="usa-form-group usa-form-group--year"
+  >
+    <label
+      className="usa-label"
+      htmlFor="date_of_birth_year"
+    >
+      Year
+    </label>
+    <input
+      aria-describedby="mdHint"
+      className="usa-input "
+      id="date_of_birth_year"
+      inputMode="numeric"
+      maxLength="4"
+      minLength="4"
+      name="date_of_birth_year"
+      pattern="[0-9]*"
+      value=""
+    />
+  </div>
+</div>
+`;

@@ -37,6 +37,11 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
 
   const [notQualifiedView, setNotQualifiedView] = useState(false)
 
+  const handleViewToggle = () => {
+    setNotQualifiedView(!notQualifiedView)
+    window.scrollTo(0, 0)
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -104,7 +109,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
                   notEligibleResults?.description
                 )}
               />
-              <Button onClick={() => setNotQualifiedView(true)}>
+              <Button onClick={handleViewToggle}>
                 {notEligibleResults?.cta}
               </Button>
             </div>

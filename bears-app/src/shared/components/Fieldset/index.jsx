@@ -30,7 +30,7 @@ const Fieldset = ({
    * @component
    * @param {React.ReactNode} children - inherited children
    * @param {string} legend - passed to Legend component
-   * @param {string} requiredLabel - passed to Hint component
+   * @param {object} requiredLabel - passed to Hint component
    * @return {html} returns a div
    */
   const RequiredFlag = () => (
@@ -66,7 +66,7 @@ Fieldset.propTypes = {
   children: PropTypes.node,
   legend: PropTypes.string,
   alertRef: PropTypes.any,
-  requiredLabel: PropTypes.string,
+  requiredLabel: PropTypes.object,
   hidden: PropTypes.bool,
   hint: PropTypes.string,
   className: PropTypes.string,

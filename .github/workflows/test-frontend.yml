@@ -10,7 +10,7 @@ permissions: read-all
 
 defaults:
   run:
-    working-directory: ./bears-app
+    working-directory: ./benfit-finder
 
 jobs:
   test_frontend:

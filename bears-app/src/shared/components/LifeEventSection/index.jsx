@@ -385,10 +385,7 @@ const LifeEventSection = ({
                     Input({ item, index: i })
 
                   const checkParentValue = item => {
-                    const selectedParentValue =
-                      item.fieldset.inputs[0].inputCriteria.values.find(
-                        value => value.selected === true
-                      )
+                    const selectedParentValue = apiCalls.GET.SelectedValue(item)
 
                     const hidden =
                       selectedParentValue?.value !==

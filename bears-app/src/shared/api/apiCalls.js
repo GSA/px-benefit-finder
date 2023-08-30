@@ -1,98 +1,17 @@
 /**
- * an async fetch to get life-event data.
- * @function
- * @param {string} lifeEvent - The inherited class from
- * @return {JSON || Sring} returns JSON data if succesfull
+ *
+ * UTILS FUNCTIONS
+ *
  */
-export async function GETLifeEvent(lifeEvent) {
-  let language
-  // get life-event from location
-  if (lifeEvent === undefined) {
-    const string = /^\/es/
-    language = string.test(window.location.pathname) ? 'es_' : ''
-    const location = window.location.pathname
-    lifeEvent = location.substring(location.lastIndexOf('/') + 1)
-  }
-  const response = await fetch(
-    `/sites/default/files/bears/api/life_event/${language}${lifeEvent}.json`
-  )
-    .then(response => {
-      if (response?.ok) {
-        return response.json()
-      }
-      throw new Error(response?.status)
-    })
-    .then(responseJson => {
-      return responseJson?.data ? responseJson : 'Something went wrong.'
-    })
-    .catch(error => {
-      // eslint-disable-next-line no-console
-      console.log(error)
-      return 'Something went wrong.'
-    })
-  return response
-}
-
-// handlers
-/**
- * a function that determines the prefix of our URL
- * based on a string match in the pathname of the window object
- * @function
- */
-export const GETLanguage = () => {
-  const string = /^\/es/
-  return string.test(window.location.pathname) ? 'es' : 'en'
-}
 
 /**
- * a function to get the value object of selected fieldset values
+ * a function that breaks down a conditional string and compares to a date epoch
  * @function
- * @param {object} item - fieldset object
- * @return {object} returns the object with a selected key
+ * @param {string} conditional - one of >,>=,<,<=,= and a time value
+ * @param {object} selectedValue - date object
+ * @return {boolean} true or false based on the conditional
  */
-export const GETSelectedValue = item =>
-  item &&
-  item.fieldset.inputs[0].inputCriteria.values.find(value => value.selected)
-
-/**
- * a function to get array of children
- * @function
- * @param {object} item - parent fieldset object
- * @return {array} returns an array of children related to the param
- */
-export const GETChildren = item =>
-  item && item.fieldset?.children.map(childItem => childItem.fieldsets[0])
-
-export const GETSelectedValueAll = data =>
-  data &&
-  data
-    .flatMap((item, i) =>
-      item.section.fieldsets.flatMap(item => {
-        const selected = GETSelectedValue(item)
-        return (
-          selected && [
-            {
-              criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
-              values: selected,
-            },
-            GETChildren(item) &&
-              GETChildren(item)
-                .flatMap(
-                  childItem =>
-                    GETSelectedValue(childItem) && {
-                      criteriaKey: childItem.fieldset.criteriaKey,
-                      values: GETSelectedValue(childItem),
-                    }
-                )
-                .filter(element => element !== undefined),
-          ]
-        )
-      })
-    )
-    .flat() // we flatten all to have only one array
-    .filter(element => element !== undefined) // remove undefined
-
-const handleDateEligibility = (conditional, selectedValue) => {
+export const DateEligibility = (conditional, selectedValue) => {
   // date values
   // "<01-01-1978"
   // "<2years (the deceased died within the last two years)"
@@ -162,7 +81,144 @@ const handleDateEligibility = (conditional, selectedValue) => {
   return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
 }
 
-export const GETElegibilityByCriteria = (selectedCriteria, data) => {
+/**
+ * a function that searches an array for element or child element match to a key
+ * @function
+ * @param {array} arr - array of fieldsets
+ * @param {string} criteriaKey - unique identifier
+ * @return {object} returns the element if found
+ */
+export async function FindCriteria(arr, criteriaKey) {
+  let element
+
+  element = arr.find(element => element.fieldset.criteriaKey === criteriaKey)
+
+  // if the element returns as undefined, then go check for children
+  if (element === undefined) {
+    arr.forEach(item => {
+      item.fieldset.children.forEach(childElement => {
+        if (childElement.fieldsets[0].fieldset.criteriaKey === criteriaKey) {
+          element = childElement.fieldsets[0]
+        }
+      })
+    })
+  }
+  return element
+}
+
+/**
+ *
+ * GET FUNCTIONS
+ *
+ */
+
+/**
+ * a function that determines our langage state based on  the prefix of our URL
+ * based on a string match in the pathname of the window object
+ * @function
+ */
+export const Language = () => {
+  const string = /^\/es/
+  return string.test(window.location.pathname) ? 'es' : 'en'
+}
+
+/**
+ * an async fetch to get life-event data.
+ * @function
+ * @param {string} lifeEvent - The inherited class from
+ * @return {JSON} returns JSON data if succesfull
+ */
+export async function LifeEvent(lifeEvent) {
+  let language
+  // get life-event from location
+  if (lifeEvent === undefined) {
+    const string = /^\/es/
+    language = string.test(window.location.pathname) ? 'es_' : ''
+    const location = window.location.pathname
+    lifeEvent = location.substring(location.lastIndexOf('/') + 1)
+  }
+  const response = await fetch(
+    `/sites/default/files/bears/api/life_event/${language}${lifeEvent}.json`
+  )
+    .then(response => {
+      if (response?.ok) {
+        return response.json()
+      }
+      throw new Error(response?.status)
+    })
+    .then(responseJson => {
+      return responseJson?.data ? responseJson : 'Something went wrong.'
+    })
+    .catch(error => {
+      // eslint-disable-next-line no-console
+      console.log(error)
+      return 'Something went wrong.'
+    })
+  return response
+}
+
+/**
+ * a function to get the value object of selected fieldset values
+ * @function
+ * @param {object} item - fieldset object
+ * @return {object} returns the object with a selected key
+ */
+export const SelectedValue = item =>
+  item &&
+  item.fieldset.inputs[0].inputCriteria.values.find(value => value.selected)
+
+/**
+ * a function to get array of children
+ * @function
+ * @param {object} item - parent fieldset object
+ * @return {array} returns an array of children related to the param
+ */
+export const Children = item =>
+  item && item.fieldset?.children.map(childItem => childItem.fieldsets[0])
+
+/**
+ * a function to get an array of all selected values
+ * @function
+ * @param {array} data - array of fieldset data
+ * @return {array} returns the selected values
+ */
+export const SelectedValueAll = data =>
+  data &&
+  data
+    .flatMap((item, i) =>
+      item.section.fieldsets.flatMap(item => {
+        const selected = GET.SelectedValue(item)
+        return (
+          selected && [
+            {
+              criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
+              values: selected,
+            },
+            GET.Children(item) &&
+              GET.Children(item)
+                .flatMap(
+                  childItem =>
+                    GET.SelectedValue(childItem) && {
+                      criteriaKey: childItem.fieldset.criteriaKey,
+                      values: GET.SelectedValue(childItem),
+                    }
+                )
+                .filter(element => element !== undefined),
+          ]
+        )
+      })
+    )
+    .flat() // we flatten all to have only one array
+    .filter(element => element !== undefined) // remove undefined
+
+/**
+ * a function that filters determines eligibility of benefits by selected values
+ * @function
+ * @param {array} selectedCriteria - array of selected fieldset values
+ * @param {array} data - array of benefits
+ * @return {array} returns the selected values
+ */
+export const ElegibilityByCriteria = (selectedCriteria, data) => {
   // return all eligible items
   const eligibleItems =
     data &&
@@ -182,7 +238,7 @@ export const GETElegibilityByCriteria = (selectedCriteria, data) => {
 
             if (typeof selected.values.value === 'object') {
               eligibility = criteriaEligibility.acceptableValues.find(value =>
-                handleDateEligibility(value, selected.values.value)
+                UTILS.DateEligibility(value, selected.values.value)
               )
             } else {
               eligibility = criteriaEligibility.acceptableValues.find(
@@ -203,35 +259,11 @@ export const GETElegibilityByCriteria = (selectedCriteria, data) => {
   return mergedEligibleItems
 }
 
-// export const GETElegibilityByLabel = (selectedCriteria, data, label) => {
-//   // return all eligible items
-//   const eligibleItems = GETElegibilityByCriteria(selectedCriteria, data)
-//   console.log('eligibleItems', eligibleItems, label)
-// }
-
 /**
- * an async fetch to get life-event data.
- * @function
- * @param {string} lifeEvent - The inherited class from
- * @return {JSON || Sring} returns JSON data if succesfull
+ *
+ * PUT FUNCTIONS
+ *
  */
-export async function findCriteria(arr, criteriaKey) {
-  let element
-
-  element = arr.find(element => element.fieldset.criteriaKey === criteriaKey)
-
-  // if the element returns as undefined, then go check for children
-  if (element === undefined) {
-    arr.forEach(item => {
-      item.fieldset.children.forEach(childElement => {
-        if (childElement.fieldsets[0].fieldset.criteriaKey === criteriaKey) {
-          element = childElement.fieldsets[0]
-        }
-      })
-    })
-  }
-  return element
-}
 
 /**
  * an async fetch to get life-event data.
@@ -242,7 +274,7 @@ export async function findCriteria(arr, criteriaKey) {
  * @param {string} eventTargetValue
  * @return {JSON || Sring} returns JSON data if succesfull
  */
-export async function PUTData(
+export async function Data(
   criteriaKey,
   currentData,
   setCurrentData,
@@ -251,7 +283,7 @@ export async function PUTData(
   // copy current data state
   const newData = { ...currentData }
 
-  findCriteria(newData.section.fieldsets, criteriaKey)
+  UTILS.FindCriteria(newData.section.fieldsets, criteriaKey)
     .then(foundCriteria => {
       if (foundCriteria) {
         const inputValues =
@@ -285,7 +317,7 @@ export async function PUTData(
  * @param {string} eventTargetID
  * @return {JSON || Sring} returns JSON data if succesfull
  */
-export async function PUTDataDate(
+export async function DataDate(
   criteriaKey,
   currentData,
   setCurrentData,
@@ -295,7 +327,7 @@ export async function PUTDataDate(
   // copy current data state
   const newData = { ...currentData }
 
-  findCriteria(newData.section.fieldsets, criteriaKey)
+  UTILS.FindCriteria(newData.section.fieldsets, criteriaKey)
     .then(foundCriteria => {
       if (foundCriteria) {
         const inputValues =
@@ -322,4 +354,23 @@ export async function PUTDataDate(
       console.log(error)
       return 'Something went wrong.'
     })
+}
+
+export const GET = {
+  Children,
+  ElegibilityByCriteria,
+  LifeEvent,
+  Language,
+  SelectedValue,
+  SelectedValueAll,
+}
+
+export const PUT = {
+  Data,
+  DataDate,
+}
+
+export const UTILS = {
+  FindCriteria,
+  DateEligibility,
 }

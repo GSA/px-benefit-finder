@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
-import { PUTData, PUTDataDate } from '../../api/api-calls'
+import * as apiCalls from '../../api/apiCalls'
 import {
   Alert,
   Button,
@@ -156,7 +156,12 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleChanged = (event, criteriaKey) => {
-    PUTData(criteriaKey, currentData, setCurrentData, event.target.value)
+    apiCalls.PUT.Data(
+      criteriaKey,
+      currentData,
+      setCurrentData,
+      event.target.value
+    )
   }
 
   /**
@@ -166,7 +171,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
-    PUTDataDate(
+    apiCalls.PUT.DataDate(
       criteriaKey,
       currentData,
       setCurrentData,

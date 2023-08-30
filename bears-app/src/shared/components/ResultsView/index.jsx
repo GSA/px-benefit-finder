@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import * as apiCalls from '../../api/api-calls'
+import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
 import {
   BenefitAccordionGroup,
@@ -37,24 +37,9 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
 
   const [notQualifiedView, setNotQualifiedView] = useState(false)
 
-  console.log(
-    apiCalls.GETElegibilityByCriteria(
-      apiCalls.GETSelectedValueAll(stepDataArray),
-      data
-    )
-  )
-
-  // console.log(
-  //   apiCalls.GETElegibilityByLabel(
-  //     apiCalls.GETSelectedValueAll(stepDataArray),
-  //     data,
-  //     'Likely Eligible'
-  //   )
-  // )
-
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [data])
+  }, [])
 
   // compare the selected criteria array with benefits
   return (
@@ -101,8 +86,8 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
             <BenefitAccordionGroup
               data={
                 stepDataArray &&
-                apiCalls.GETElegibilityByCriteria(
-                  apiCalls.GETSelectedValueAll(stepDataArray),
+                apiCalls.GET.ElegibilityByCriteria(
+                  apiCalls.GET.SelectedValueAll(stepDataArray),
                   data
                 )
               }

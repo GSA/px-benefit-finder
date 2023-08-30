@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import parseDate from '../../utils/parseDate'
-import * as apiCalls from '../../api/api-calls'
+import * as apiCalls from '../../api/apiCalls'
 import { Heading, Button } from '../index'
 
 import './_index.scss'
@@ -22,7 +22,7 @@ const VerifySelectionsView = ({
   data,
 }) => {
   const { stepIndicator, verifySelectionsView, buttonGroup } = ui
-  const local = apiCalls.GETLanguage()
+  const local = apiCalls.Language()
   const dateFormatOptions = {
     year: 'numeric',
     month: 'long',
@@ -85,14 +85,14 @@ const VerifySelectionsView = ({
         {resultItem({
           criteriaId: `criteria-${item.fieldset.criteriaKey}-${index}`,
           legend: item.fieldset.legend,
-          selected: apiCalls.GETSelectedValue(item),
+          selected: apiCalls.GET.SelectedValue(item),
         })}
-        {apiCalls.GETChildren(item).map(childItem =>
-          apiCalls.GETSelectedValue(childItem) ? (
+        {apiCalls.GET.Children(item).map(childItem =>
+          apiCalls.GET.SelectedValue(childItem) ? (
             resultItem({
               criteriaId: childItem.fieldset.criteriaKey,
               legend: childItem.fieldset.legend,
-              selected: apiCalls.GETSelectedValue(childItem),
+              selected: apiCalls.GET.SelectedValue(childItem),
             })
           ) : (
             <NoInputGiven
@@ -142,7 +142,7 @@ const VerifySelectionsView = ({
                       <div>
                         {section.fieldsets.map((item, i) => {
                           // if no value then return generic message
-                          return apiCalls.GETSelectedValue(item) ? (
+                          return apiCalls.GET.SelectedValue(item) ? (
                             <Items item={item} index={i} />
                           ) : (
                             <NoInputGiven item={item} index={i} />

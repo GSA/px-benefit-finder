@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from 'react'
-import * as apiCalls from '../shared/api/api-calls'
+import * as apiCalls from '../shared/api/apiCalls'
 import {
   Intro,
   LifeEventSection,
@@ -30,7 +30,7 @@ function App() {
    * @return {state} returns null if not set
    */
   const [content, setContent] = useState(() => {
-    apiCalls.GETLifeEvent().then(response => setContent(response.data))
+    apiCalls.GET.LifeEvent().then(response => setContent(response.data))
   })
 
   // set data state
@@ -44,7 +44,7 @@ function App() {
   }, [content])
 
   // state
-  const [t] = useState(apiCalls.GETLanguage() === 'es' ? es : en) // tranlations
+  const [t] = useState(apiCalls.GET.Language() === 'es' ? es : en) // tranlations
   const [step, setStep] = useState(0) // steps indicator
   const [stepData, setStepData] = useState(
     () => stepDataArray && stepDataArray[step]

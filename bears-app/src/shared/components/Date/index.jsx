@@ -25,8 +25,10 @@ const Date = ({ onChange, value, required, ui }) => {
   // in the case of date we wait until the value from onChange is a 4 digit value
   const monthValue =
     new window.Date(parseDate(value)).getMonth() || (value && value.month) || ''
+
   const dayValue =
     new window.Date(parseDate(value)).getDate() || (value && value.day) || ''
+
   const yearValue =
     (value?.year?.length === 4 &&
       new window.Date(parseDate(value)).getFullYear()) ||

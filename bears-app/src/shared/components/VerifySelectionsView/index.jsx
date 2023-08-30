@@ -22,7 +22,7 @@ const VerifySelectionsView = ({
   data,
 }) => {
   const { stepIndicator, verifySelectionsView, buttonGroup } = ui
-  const local = apiCalls.Language()
+  const local = apiCalls.GET.Language()
   const dateFormatOptions = {
     year: 'numeric',
     month: 'long',

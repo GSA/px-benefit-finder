@@ -43,7 +43,7 @@ jobs:
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
-            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/\$settings\['s3fs.use_s3_for_public'] = TRUE;/g" web/sites/default/settings.php && \
+            sed -i "s/^      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/^      \/\/      \$settings\['s3fs.use_s3_for_public'] = TRUE;/g" web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image

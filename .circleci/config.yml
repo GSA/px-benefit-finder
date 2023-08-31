@@ -32,8 +32,8 @@ jobs:
             echo ".................."
             echo "moving the bears-app module into the usagov-2021 directory"
             mv  usagov_bears usagov-2021/web/modules/custom
-            mv death.json usagov-2021/death.json
-            mv es_death.json usagov-2021/es_death.json
+            mv death.json usagov-2021/scripts/death.json
+            mv es_death.json usagov-2021/scripts/es_death.json
 
       - run: 
           name: Pre-docker-build configurations
@@ -96,7 +96,7 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
-                                  ls -l /var/www/ && \
+                                  ls -l /var/www/scripts/ && \
                                   /var/www/vendor/bin/drush cr"
   
   component-library:

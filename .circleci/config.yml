@@ -32,6 +32,8 @@ jobs:
             echo ".................."
             echo "moving the bears-app module into the usagov-2021 directory"
             mv  usagov_bears usagov-2021/web/modules/custom
+            mv death.json usagov-2021/death.json
+            mv es_death.json usagov-2021/es_death.json
 
       - run: 
           name: Pre-docker-build configurations
@@ -62,6 +64,7 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
+            sed -i "s#^$settings['s3fs.use_s3_for_public'] = TRUE;#// $settings['s3fs.use_s3_for_public'] = TRUE;#" web/sites/default/settings.php
             cat manifest.yml
 
       - run:
@@ -92,6 +95,9 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_content && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
+                                  mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
+                                  mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
                                   /var/www/vendor/bin/drush cr"
   
   component-library:
@@ -179,7 +185,7 @@ workflows:
           filters:
             branches:
               only: 
-                - main
+                - 347-automate-after-deploy-manual-config
 
   create-component-library-workflow:
     jobs:

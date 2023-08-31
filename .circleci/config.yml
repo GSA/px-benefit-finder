@@ -43,6 +43,7 @@ jobs:
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
+            sed -i "s/^      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/^      \/\/      \$settings\['s3fs.use_s3_for_public'] = TRUE;/g" sites/default/settings.php && \
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -95,7 +96,6 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
-                                  sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/\ $settings\['s3fs.use_s3_for_public'] = TRUE;/g" /var/www/web/sites/default/settings.php && \
                                   cd ../var/www/web/sites/default/files && \
                                   mkdir -p bears/api/life_event && \
                                   cd ../../../../.. && \

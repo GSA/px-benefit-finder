@@ -4,7 +4,6 @@ import content from '../../../api/mock-data/current.js'
 import * as en from '../../../locales/en/en.json'
 
 const { data } = JSON.parse(content)
-console.log(data)
 const { lifeEventForm } = data
 
 describe('LifeEventSection', () => {

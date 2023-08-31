@@ -97,12 +97,16 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
                                   cd ../var/www/web/sites/default/files && \
-                                  pwd && \
+                                  pwd && \ /var/www/web/sites/default/files
                                   mkdir -p bears/api/life_event && \
+                                  pwd && \
+                                  ls -l && \
                                   cd ../../../../.. && \
                                   pwd && \
-                                  mv www/scripts/death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
-                                  mv www/scripts/es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \ && \
+                                  cd www/scripts && \
+                                  ls -l /var/www/web/sites/default/files/bears/api/life_event && \
+                                  mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
+                                  mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
                                   /var/www/vendor/bin/drush cr"
   
   component-library:

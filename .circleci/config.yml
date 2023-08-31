@@ -43,6 +43,7 @@ jobs:
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
+            sed -i "s#^      $settings['s3fs.use_s3_for_public'] = TRUE;#//      $settings['s3fs.use_s3_for_public'] = TRUE;#" web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -64,7 +65,6 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
-            sed -i "s#^      $settings['s3fs.use_s3_for_public'] = TRUE;#//      $settings['s3fs.use_s3_for_public'] = TRUE;#" web/sites/default/settings.php
             cat manifest.yml
 
       - run:
@@ -75,7 +75,7 @@ jobs:
             cf -v
 
       - run:
-          name: Deploy the the app to cloud.gov
+          name: Deploy the app to cloud.gov
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"

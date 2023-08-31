@@ -26,7 +26,7 @@ const EmailButton = ({ ui }) => {
 
   return (
     <Button secondary onClick={handleClick}>
-      {ui}
+      {ui || 'Email'}
     </Button>
   )
 }

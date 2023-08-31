@@ -27,7 +27,7 @@ const ShareButton = ({ ui }) => {
 
   return (
     <Button secondary onClick={handleClick}>
-      {ui}
+      {ui || 'Share'}
     </Button>
   )
 }

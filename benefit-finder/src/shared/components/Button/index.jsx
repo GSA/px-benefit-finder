@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useHandleClassName } from '../../hooks/useHandleClassName'
 import PropTypes from 'prop-types'
+import './_index.scss'
 
 /**
  * a functional component that renders a reactive button

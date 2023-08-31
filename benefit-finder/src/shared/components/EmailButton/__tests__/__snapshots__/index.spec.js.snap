@@ -5,5 +5,7 @@ exports[`Email renders a match to the previous snapshot 1`] = `
   className=""
   onClick={[Function]}
   type="button"
-/>
+>
+  Email
+</button>
 `;

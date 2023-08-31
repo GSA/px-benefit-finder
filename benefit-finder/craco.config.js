@@ -2,7 +2,7 @@ module.exports = {
   webpack: {
     configure: {
       output: {
-        filename: 'static/js/benefit-finder-app.min.js',
+        filename: 'static/js/benefit-finder.min.js',
       },
       optimization: {
         runtimeChunk: false,
@@ -20,7 +20,7 @@ module.exports = {
         overrideWebpackConfig: ({ webpackConfig }) => {
           // we overide the filename for our output files
           webpackConfig.plugins[5].options.filename =
-            'static/css/benefit-finder-app.min.css'
+            'static/css/benefit-finder.min.css'
           return webpackConfig
         },
       },

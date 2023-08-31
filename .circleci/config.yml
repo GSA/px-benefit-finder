@@ -98,7 +98,6 @@ jobs:
                                   cd ../var/www/web/sites/default/files && \
                                   mkdir -p bears/api/life_event && \
                                   cd ../../../../.. && \
-                                  sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/\ $settings\['s3fs.use_s3_for_public'] = TRUE;/g" /var/www/web/sites/default/settings.php && \
                                   /var/www/vendor/bin/drush cr && \
                                   cd www/scripts && \
                                   mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \

@@ -1,14 +1,14 @@
 import StepIndicator from './index.jsx'
-import content from '../../api/mock-data/content-data.js'
+import content from '../../api/mock-data/current.js'
 
-const { lifeEventForm } = JSON.parse(content)
-const data = lifeEventForm.sectionsEligibilityCriteria
+const { data } = JSON.parse(content)
+const { lifeEventForm } = data
 
 export default {
   component: StepIndicator,
   tags: ['autodocs'],
   args: {
-    data,
+    data: lifeEventForm.sectionsEligibilityCriteria,
     current: 0,
   },
 }

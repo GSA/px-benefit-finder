@@ -28,7 +28,7 @@ Array [
               <span
                 className="usa-step-indicator__segment-label"
               >
-                About the Applicant
+                About the applicant
                  
                 <span
                   className="usa-sr-only"
@@ -42,21 +42,7 @@ Array [
               <span
                 className="usa-step-indicator__segment-label"
               >
-                About the Person Who Died
-                 
-                <span
-                  className="usa-sr-only"
-                />
-              </span>
-            </li>
-            <li
-              className="usa-step-indicator__segment usa-step-indicator__segment "
-              onClick={[Function]}
-            >
-              <span
-                className="usa-step-indicator__segment-label"
-              >
-                Final Questions
+                About the deceased
                  
                 <span
                   className="usa-sr-only"
@@ -99,15 +85,477 @@ Array [
         <h2
           className=""
         >
-          About the Applicant
+          About the applicant
         </h2>
         <div
           dangerouslySetInnerHTML={
             Object {
-              "__html": "The applicant is the person who will receive the benefits.",
+              "__html": "<p>About the person looking for benefits</p>",
             }
           }
         />
+        <fieldset
+          className=""
+        >
+          Applicant's DOB: 1969/08/15
+          <legend
+            className="usa-legend legend"
+          >
+            Date of birth:
+            <span
+              className="usa-hint usa-hint--required required"
+              title="required"
+            >
+              (Required)
+            </span>
+          </legend>
+          <div>
+            <div
+              className="usa-memorable-date"
+            >
+              <div
+                className="usa-form-group usa-form-group--month usa-form-group--select"
+              >
+                <label
+                  className="usa-label"
+                  htmlFor="date_of_birth_month"
+                >
+                  Month
+                </label>
+                <select
+                  aria-describedby="mdHint"
+                  className="usa-select required-field"
+                  id="date_of_birth_month"
+                  name="date_of_birth_month"
+                  onChange={[Function]}
+                  required="required"
+                  value=""
+                >
+                  <option
+                    disabled={true}
+                    value=""
+                  >
+                    -Select-
+                  </option>
+                  <option
+                    value={0}
+                  >
+                    01 - January
+                  </option>
+                  <option
+                    value={1}
+                  >
+                    02 - February
+                  </option>
+                  <option
+                    value={2}
+                  >
+                    03 - March
+                  </option>
+                  <option
+                    value={3}
+                  >
+                    04 - April
+                  </option>
+                  <option
+                    value={4}
+                  >
+                    05 - May
+                  </option>
+                  <option
+                    value={5}
+                  >
+                    06 - June
+                  </option>
+                  <option
+                    value={6}
+                  >
+                    07 - July
+                  </option>
+                  <option
+                    value={7}
+                  >
+                    08 - August
+                  </option>
+                  <option
+                    value={8}
+                  >
+                    09 - September
+                  </option>
+                  <option
+                    value={9}
+                  >
+                    10 - October
+                  </option>
+                  <option
+                    value={10}
+                  >
+                    11 - November
+                  </option>
+                  <option
+                    value={11}
+                  >
+                    12 - December
+                  </option>
+                </select>
+              </div>
+              <div
+                className="usa-form-group usa-form-group--day"
+              >
+                <label
+                  className="usa-label"
+                  htmlFor="date_of_birth_day"
+                >
+                  Day
+                </label>
+                <input
+                  aria-describedby="mdHint"
+                  className="usa-input required-field"
+                  id="date_of_birth_day"
+                  inputMode="numeric"
+                  maxLength="2"
+                  name="date_of_birth_day"
+                  onChange={[Function]}
+                  pattern="[0-9]*"
+                  value=""
+                />
+              </div>
+              <div
+                className="usa-form-group usa-form-group--year"
+              >
+                <label
+                  className="usa-label"
+                  htmlFor="date_of_birth_year"
+                >
+                  Year
+                </label>
+                <input
+                  aria-describedby="mdHint"
+                  className="usa-input required-field"
+                  id="date_of_birth_year"
+                  inputMode="numeric"
+                  maxLength="4"
+                  minLength="4"
+                  name="date_of_birth_year"
+                  onChange={[Function]}
+                  pattern="[0-9]*"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          className=""
+        >
+          <legend
+            className="usa-legend legend"
+          >
+            Applicant’s relationship to the deceased:
+          </legend>
+          <div>
+            <label
+              className=""
+              htmlFor="applicant_relationship_to_the_deceased_0"
+            >
+              Select
+            </label>
+            <select
+              className=""
+              id="applicant_relationship_to_the_deceased_0"
+              name="applicant_relationship_to_the_deceased_0"
+              onChange={[Function]}
+              value=""
+            >
+              <option
+                disabled={true}
+                value=""
+              >
+                Click to Select
+              </option>
+              <option
+                value="Spouse"
+              >
+                Spouse
+              </option>
+              <option
+                value="Child"
+              >
+                Child
+              </option>
+              <option
+                value="Parent"
+              >
+                Parent
+              </option>
+              <option
+                value="Other family member"
+              >
+                Other family member
+              </option>
+              <option
+                value="Personal or official representative"
+              >
+                Personal or official representative
+              </option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset
+          className=""
+        >
+          <legend
+            className="usa-legend legend"
+          >
+            Marital Status
+          </legend>
+          <div>
+            <label
+              className=""
+              htmlFor="applicant_marital_status_0"
+            >
+              Select
+            </label>
+            <select
+              className=""
+              id="applicant_marital_status_0"
+              name="applicant_marital_status_0"
+              onChange={[Function]}
+              value=""
+            >
+              <option
+                disabled={true}
+                value=""
+              >
+                Click to Select
+              </option>
+              <option
+                value="Married"
+              >
+                Married
+              </option>
+              <option
+                value="Unmarried"
+              >
+                Unmarried
+              </option>
+              <option
+                value="Widowed"
+              >
+                Widowed
+              </option>
+              <option
+                value="Divorced"
+              >
+                Divorced
+              </option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset
+          className=""
+        >
+          <legend
+            className="usa-legend legend"
+          >
+            Are you a U.S. citizen or eligible non-citizen?
+          </legend>
+          <div
+            className="radio-group"
+          >
+            <div
+              className="usa-radio"
+            >
+              <input
+                checked={false}
+                className=""
+                id="applicant_citizen_status_0_0"
+                name="applicant_citizen_status_0_0"
+                onChange={[Function]}
+                type="radio"
+                value="Yes"
+              />
+              <label
+                className=""
+                htmlFor="applicant_citizen_status_0_0"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              className="usa-radio"
+            >
+              <input
+                checked={false}
+                className=""
+                id="applicant_citizen_status_0_1"
+                name="applicant_citizen_status_0_1"
+                onChange={[Function]}
+                type="radio"
+                value="No"
+              />
+              <label
+                className=""
+                htmlFor="applicant_citizen_status_0_1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          className=""
+        >
+          <legend
+            className="usa-legend legend"
+          >
+            Are you caring for a child of the deceased who is disabled or under the age of 16?
+          </legend>
+          <div
+            className="radio-group"
+          >
+            <div
+              className="usa-radio"
+            >
+              <input
+                checked={false}
+                className=""
+                id="applicant_care_for_child_0_0"
+                name="applicant_care_for_child_0_0"
+                onChange={[Function]}
+                type="radio"
+                value="Yes"
+              />
+              <label
+                className=""
+                htmlFor="applicant_care_for_child_0_0"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              className="usa-radio"
+            >
+              <input
+                checked={false}
+                className=""
+                id="applicant_care_for_child_0_1"
+                name="applicant_care_for_child_0_1"
+                onChange={[Function]}
+                type="radio"
+                value="No"
+              />
+              <label
+                className=""
+                htmlFor="applicant_care_for_child_0_1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          className=""
+        >
+          <legend
+            className="usa-legend legend"
+          >
+            Did you pay for funeral or burial expenses?
+          </legend>
+          <div
+            className="radio-group"
+          >
+            <div
+              className="usa-radio"
+            >
+              <input
+                checked={false}
+                className=""
+                id="applicant_paid_funeral_expenses_0_0"
+                name="applicant_paid_funeral_expenses_0_0"
+                onChange={[Function]}
+                type="radio"
+                value="Yes"
+              />
+              <label
+                className=""
+                htmlFor="applicant_paid_funeral_expenses_0_0"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              className="usa-radio"
+            >
+              <input
+                checked={false}
+                className=""
+                id="applicant_paid_funeral_expenses_0_1"
+                name="applicant_paid_funeral_expenses_0_1"
+                onChange={[Function]}
+                type="radio"
+                value="No"
+              />
+              <label
+                className=""
+                htmlFor="applicant_paid_funeral_expenses_0_1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          className=""
+        >
+          <legend
+            className="usa-legend legend"
+          >
+            Did you pay for funeral or burial expenses?
+          </legend>
+          <div
+            className="radio-group"
+          >
+            <div
+              className="usa-radio"
+            >
+              <input
+                checked={false}
+                className=""
+                id="applicant_funeral_reimbursement_0_0"
+                name="applicant_funeral_reimbursement_0_0"
+                onChange={[Function]}
+                type="radio"
+                value="Yes"
+              />
+              <label
+                className=""
+                htmlFor="applicant_funeral_reimbursement_0_0"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              className="usa-radio"
+            >
+              <input
+                checked={false}
+                className=""
+                id="applicant_funeral_reimbursement_0_1"
+                name="applicant_funeral_reimbursement_0_1"
+                onChange={[Function]}
+                type="radio"
+                value="No"
+              />
+              <label
+                className=""
+                htmlFor="applicant_funeral_reimbursement_0_1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
       <button
         className=""

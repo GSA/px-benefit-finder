@@ -1,16 +1,21 @@
 import RelativeBenefitList from './index.jsx'
-import content from '../../api/mock-data/content-data.js'
 
-const { lifeEventForm } = JSON.parse(content)
-
-const data = lifeEventForm.relevantBenefits
+const data = [
+  {
+    title: 'Approaching Retirement',
+    cta: 'Learn More',
+  },
+  {
+    title: 'Living with disability or illness',
+    cta: 'Learn More',
+  },
+]
 
 export default {
   component: RelativeBenefitList,
   tags: ['autodocs'],
   args: {
     data,
-    dataKey: 'lifeEvent',
   },
 }
 

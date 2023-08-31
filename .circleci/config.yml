@@ -190,7 +190,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 347-automate-after-deploy-manual-config
+                - main
 
   create-component-library-workflow:
     jobs:

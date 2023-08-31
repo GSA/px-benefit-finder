@@ -43,7 +43,6 @@ jobs:
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
-            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/\ $settings\['s3fs.use_s3_for_public'] = TRUE;/g" web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -97,12 +96,14 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
                                   cd ../var/www/web/sites/default/files && \
-                                  pwd && \ /var/www/web/sites/default/files
+                                  pwd && \
                                   mkdir -p bears/api/life_event && \
                                   pwd && \
                                   ls -l && \
                                   cd ../../../../.. && \
                                   pwd && \
+                                  sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/\ $settings\['s3fs.use_s3_for_public'] = TRUE;/g" /var/www/web/sites/default/settings.php && \
+                                  /var/www/vendor/bin/drush cr && \
                                   cd www/scripts && \
                                   ls -l /var/www/web/sites/default/files/bears/api/life_event && \
                                   mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \

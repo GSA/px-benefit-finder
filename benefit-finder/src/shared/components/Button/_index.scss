@@ -5,7 +5,7 @@
     background-color: color.$pop-blue !important;
     color: color.$white !important;
   }
-  /* stylelint-disable selector-class-pattern */
+
   .usa-button--unstyled {
     background-color: transparent !important;
     color: color.$pop-blue !important;
@@ -32,5 +32,4 @@
     box-shadow: inset 0 0 0 2px color.$marine !important;
     color: color.$marine !important;
   }
-  /* stylelint-enable selector-class-pattern */
 }

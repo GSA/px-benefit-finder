@@ -7,7 +7,7 @@
     height: 100%;
     min-height: 100vh;
   }
-  /* stylelint-disable selector-class-pattern */
+
   .usa-step-indicator__segment-label {
     color: color.$medium-grey;
   }
@@ -32,7 +32,6 @@
     background-color: color.$officer-navy;
     box-shadow: 0 0 0 2px color.$officer-navy;
   }
-  /* stylelint-enable selector-class-pattern */
 }
 
 // try some usa-gov overides

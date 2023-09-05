@@ -15,7 +15,6 @@
     border-radius: 3px;
   }
 
-  /* stylelint-disable selector-class-pattern */
   .usa-form-group--month {
     width: 242px;
   }
@@ -27,7 +26,6 @@
   .usa-form-group--year {
     width: 95px;
   }
-  /* stylelint-enable selector-class-pattern */
 
   @media (width >= $desktop) {
     .usa-memorable-date {

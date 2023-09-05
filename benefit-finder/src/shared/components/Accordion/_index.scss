@@ -4,7 +4,6 @@
 
 #benefit-finder {
   .benefit-accordion {
-    /* stylelint-disable selector-class-pattern */
     .usa-accordion__button {
       position: relative;
 
@@ -42,12 +41,10 @@
     }
 
     .usa-accordion__content {
-      /* stylelint-disable-line */
       border-bottom: 1px solid color.$pop-blue;
       border-left: 1px solid color.$pop-blue;
       border-right: 1px solid color.$pop-blue;
       padding-bottom: space.$space-md;
     }
-    /* stylelint-enable selector-class-pattern */
   }
 }

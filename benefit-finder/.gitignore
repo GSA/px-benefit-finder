@@ -25,3 +25,5 @@ yarn-error.log*
 # generated files
 .jest-test-results.json
 storybook-static
+# cloned
+themes

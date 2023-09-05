@@ -30,8 +30,8 @@ function App({ appContent }) {
    * @return {state} returns null if not set
    */
   const [content, setContent] = useState(() => {
-    apiCalls.GET.LifeEvent().then(
-      response => setContent(response.data) || setContent(appContent)
+    apiCalls.GET.LifeEvent().then(response =>
+      response.data ? setContent(response.data) : setContent(appContent)
     )
   })
 

@@ -1,9 +1,11 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
 
 #benefit-finder {
   .benefit-accordion-group {
     .benefit-accordion {
-      margin-bottom: 26px;
+      margin-bottom: space.$space-md-plus;
       /* stylelint-disable selector-class-pattern */
       .usa-accordion__button {
         border-radius: 3px;
@@ -26,28 +28,26 @@
         margin: 0 0 24px;
 
         .unmet-criteria-title {
+          @include p;
+
           width: 100%;
           text-align: center;
-          color: #000;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 19.6px;
+          color: color.$pure-black;
         }
       }
 
       .benefit-link {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: space.$space-lg;
       }
     }
 
     .expand-all {
+      @include p;
+
       background-color: transparent !important;
       color: color.$pop-blue !important;
-      font-size: 16px;
-      font-weight: 400;
-      margin-bottom: 32px;
+      margin-bottom: space.$space-lg;
     }
   }
 }

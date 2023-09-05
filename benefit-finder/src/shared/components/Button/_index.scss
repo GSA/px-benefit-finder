@@ -17,7 +17,7 @@
   }
 
   .usa-button:hover {
-    background-color: #003e6b !important;
+    background-color: color.$marine !important;
     color: color.$white !important;
   }
 
@@ -28,7 +28,7 @@
   }
 
   .usa-button--outline:hover {
-    background-color: #fff !important;
+    background-color: color.$white !important;
     box-shadow: inset 0 0 0 2px color.$marine !important;
     color: color.$marine !important;
   }

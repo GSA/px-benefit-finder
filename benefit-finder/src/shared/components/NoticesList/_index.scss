@@ -1,18 +1,19 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/space/_index.scss' as space;
 
 #benefit-finder {
   .notices-list {
-    margin-bottom: 32px;
+    margin-bottom: space.$space-xl;
   }
 
   .notice {
-    margin-bottom: 24px;
+    margin-bottom: space.$space-md-plus;
   }
 
   .line-sperator-wrapper {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    margin: 32px;
+    padding-top: space.$space-lg;
+    padding-bottom: space.$padding-bottom-lg;
+    margin: space.$space-lg;
   }
 
   .line-sperator {

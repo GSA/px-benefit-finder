@@ -1,26 +1,24 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
 
 #benefit-finder {
   .verify-criteria-value {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 148.5%;
-    margin-bottom: 30px;
+    @include h4;
+
+    margin-bottom: space.$space-lg;
     border-bottom: 1px solid color.$base-light-grey;
-    padding-bottom: 30px;
+    padding-bottom: space.$padding-bottom-lg;
   }
 
   .verify-criteria-legend {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 148.5%;
-    padding-bottom: 8px;
+    @include p;
+
+    padding-bottom: space.$padding-bottom-sm;
   }
 
   .verify-criteria-section-heading {
     border-bottom: 2px solid color.$marine;
-    padding-bottom: 30px;
+    padding-bottom: space.$padding-bottom-lg;
   }
 }

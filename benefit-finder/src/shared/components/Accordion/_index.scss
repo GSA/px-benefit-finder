@@ -1,4 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
 
 #benefit-finder {
   .benefit-accordion {
@@ -17,7 +19,7 @@
       &[aria-expanded='true'] {
         background-image: none;
         background-color: color.$marine;
-        color: #fff;
+        color: color.$white;
       }
 
       &[aria-expanded='false'] {
@@ -27,16 +29,14 @@
       }
 
       .heading {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 27px;
+        @include h4;
+
         letter-spacing: 0;
       }
 
       .sub-heading {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
+        @include h5;
+
         letter-spacing: 0;
       }
     }
@@ -46,7 +46,7 @@
       border-bottom: 1px solid color.$pop-blue;
       border-left: 1px solid color.$pop-blue;
       border-right: 1px solid color.$pop-blue;
-      padding-bottom: 1rem;
+      padding-bottom: space.$space-md;
     }
     /* stylelint-enable selector-class-pattern */
   }

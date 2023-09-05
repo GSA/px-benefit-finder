@@ -1,3 +1,5 @@
+@use '../../styles/colors/_index.scss' as color;
+
 .modal-button {
   background-color: transparent;
   border: 0;
@@ -8,7 +10,7 @@
 }
 
 .modal-heading {
-  color: #000;
+  color: color.$pure-black;
   text-align: center;
   font-size: 16px;
   font-style: normal;

@@ -1,3 +1,5 @@
+@use '../../styles/colors/_index.scss' as color;
+
 #benefit-finder {
   .benefit-accordion-group {
     .benefit-accordion {
@@ -42,7 +44,7 @@
 
     .expand-all {
       background-color: transparent !important;
-      color: #005ea2 !important;
+      color: color.$pop-blue !important;
       font-size: 16px;
       font-weight: 400;
       margin-bottom: 32px;

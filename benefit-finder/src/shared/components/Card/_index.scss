@@ -1,12 +1,14 @@
+@use '../../styles/colors/_index.scss' as color;
+
 #benefit-finder {
   .relative-benefit-card {
     // .usa-card:last-child overide
     margin-bottom: 16px !important;
     /* stylelint-disable selector-class-pattern */
     .usa-card__container {
-      background-color: #d9e8f6;
+      background-color: color.$sky;
       border-radius: 4px;
-      color: #162e51;
+      color: color.$officer-navy;
       height: auto;
       margin: 0;
     }
@@ -16,11 +18,11 @@
     }
 
     a:hover .usa-card__container {
-      background-color: #b6dbfd;
+      background-color: color.$light-teal;
     }
 
     a:active .usa-card__container {
-      border: 2px solid #005ea2;
+      border: 2px solid color.$pop-blue;
     }
 
     .usa-card__header {

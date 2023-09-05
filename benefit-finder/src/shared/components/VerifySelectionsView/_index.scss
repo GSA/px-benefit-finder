@@ -1,3 +1,5 @@
+@use '../../styles/colors/_index.scss' as color;
+
 #benefit-finder {
   .verify-criteria-value {
     font-size: 20px;
@@ -5,7 +7,7 @@
     font-weight: 700;
     line-height: 148.5%;
     margin-bottom: 30px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid color.$base-light-grey;
     padding-bottom: 30px;
   }
 
@@ -18,7 +20,7 @@
   }
 
   .verify-criteria-section-heading {
-    border-bottom: 2px solid #1a4480;
+    border-bottom: 2px solid color.$marine;
     padding-bottom: 30px;
   }
 }

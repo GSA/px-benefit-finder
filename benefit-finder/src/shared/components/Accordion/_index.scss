@@ -1,3 +1,5 @@
+@use '../../styles/colors/_index.scss' as color;
+
 #benefit-finder {
   .benefit-accordion {
     /* stylelint-disable selector-class-pattern */
@@ -14,14 +16,14 @@
 
       &[aria-expanded='true'] {
         background-image: none;
-        background-color: #1a4480;
+        background-color: color.$marine;
         color: #fff;
       }
 
       &[aria-expanded='false'] {
         background-image: none;
-        background-color: #d9e8f6;
-        color: #1a4480;
+        background-color: color.$sky;
+        color: color.$marine;
       }
 
       .heading {
@@ -41,9 +43,9 @@
 
     .usa-accordion__content {
       /* stylelint-disable-line */
-      border-bottom: 1px solid #005ea2;
-      border-left: 1px solid #005ea2;
-      border-right: 1px solid #005ea2;
+      border-bottom: 1px solid color.$pop-blue;
+      border-left: 1px solid color.$pop-blue;
+      border-right: 1px solid color.$pop-blue;
       padding-bottom: 1rem;
     }
     /* stylelint-enable selector-class-pattern */

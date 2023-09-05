@@ -1,9 +1,12 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/breakpoints/_index.scss' as *;
+
 #benefit-finder {
   .result-view-details {
     padding: 24px;
 
     button.step-back-link {
-      color: #979797 !important;
+      color: color.$medium-grey !important;
       background-color: #fff !important;
       width: auto !important;
     }
@@ -14,7 +17,7 @@
   .result-view-relvant-benefits,
   .result-view-share-results {
     padding: 16px 0;
-    border-bottom: 2px solid lightgrey;
+    border-bottom: 2px solid color.$base-light-grey;
   }
 
   .result-view-unmet {
@@ -37,7 +40,7 @@
     }
   }
 
-  @media (width >= 1049px) {
+  @media (width >= $desktop) {
     .result-view-details {
       padding: 24px 164px;
     }

@@ -1,6 +1,8 @@
+@use '../../styles/colors/_index.scss' as color;
+
 #benefit-finder {
   .time-indicator {
-    color: #979797;
+    color: color.$medium-grey;
     font-weight: 400;
     font-size: 16px;
     line-height: 18.8px;

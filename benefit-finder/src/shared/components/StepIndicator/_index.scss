@@ -1,6 +1,8 @@
+@use '../../styles/colors/_index.scss' as color;
+
 #benefit-finder {
   .step-back-link {
     padding-bottom: 30px;
-    color: #979797;
+    color: color.$medium-grey;
   }
 }

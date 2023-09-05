@@ -1,34 +1,36 @@
+@use '../shared/styles/colors/index.scss' as color;
+
 #benefit-finder {
   html,
   .benefit-finder.form {
-    background-color: #1a4480;
+    background-color: color.$marine;
     height: 100%;
     min-height: 100vh;
   }
   /* stylelint-disable selector-class-pattern */
   .usa-step-indicator__segment-label {
-    color: #565c65;
+    color: color.$medium-grey;
   }
 
   .usa-step-indicator__segment--complete .usa-step-indicator__segment-label {
-    color: #003e6b !important;
+    color: color.$officer-navy !important;
   }
 
   .usa-step-indicator__segment--current::after {
-    background-color: #003e6b !important;
+    background-color: color.$officer-navy !important;
   }
 
   .usa-step-indicator__segment--complete::after {
-    background-color: #003e6b !important;
+    background-color: color.$officer-navy !important;
   }
 
   .usa-hint--required {
-    color: #71767a !important;
+    color: color.$medium-grey !important;
   }
 
   .usa-radio__input:checked + .usa-radio__label::before {
-    background-color: #003e6b;
-    box-shadow: 0 0 0 2px #003e6b;
+    background-color: color.$officer-navy;
+    box-shadow: 0 0 0 2px color.$officer-navy;
   }
   /* stylelint-enable selector-class-pattern */
 }
@@ -45,13 +47,13 @@
 .nav-item-one,
 .nav-item-two {
   &.usa-button {
-    background-color: #005ea2 !important;
-    color: #fff !important;
+    background-color: color.$pop-blue !important;
+    color: color.$white !important;
     width: 100% !important;
   }
 
   &.usa-button:hover {
-    background-color: #003e6b !important;
-    color: #fff !important;
+    background-color: color.$officer-navy !important;
+    color: color.$white !important;
   }
 }

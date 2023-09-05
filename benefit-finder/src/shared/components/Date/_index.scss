@@ -1,3 +1,5 @@
+@use '../../styles/breakpoints/_index.scss' as *;
+
 #benefit-finder {
   .usa-form-group {
     width: 100%;
@@ -27,7 +29,7 @@
   }
   /* stylelint-enable selector-class-pattern */
 
-  @media (width >= 1049px) {
+  @media (width >= $desktop) {
     .usa-memorable-date {
       max-width: 100%;
     }

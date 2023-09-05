@@ -62,7 +62,7 @@
     "postinstall": "cd .. && husky install benefit-finder/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
-    "prebuild:storybook": "sh ../mv-uswds-usagov-theme.sh && npm run test:generate-output",
+    "prebuild:storybook": "sh ../mv-uswds-usagov-theme.sh && npm run build && npm run test:generate-output",
     "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
     "build:storybook": "npm run prebuild:storybook && storybook build"
   },

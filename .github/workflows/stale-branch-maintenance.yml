@@ -22,7 +22,7 @@ jobs:
         comment-updates: true
         max-issues: 20
         tag-committer: true
-        stale-branch-label: 'stale branch'
+        stale-branch-label: stale branch
         compare-branches: 'info'
         branches-filter-regex: '^((?!dependabot))'
   check-if-issue-exists:
@@ -35,7 +35,7 @@ jobs:
       with:
         repo: GSA/px-bears-drupal
         token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-        labels: 'stale branch'
+        labels: stale branch
         title: "*"
 
     - name: Add comment

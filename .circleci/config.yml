@@ -32,6 +32,8 @@ jobs:
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             mv  usagov_bears usagov-2021/web/modules/custom
+            mv death.json usagov-2021/scripts/death.json
+            mv es_death.json usagov-2021/scripts/es_death.json
 
       - run: 
           name: Pre-docker-build configurations
@@ -41,6 +43,7 @@ jobs:
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
+            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/g" web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -72,7 +75,7 @@ jobs:
             cf -v
 
       - run:
-          name: Deploy the the app to cloud.gov
+          name: Deploy the app to cloud.gov
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
@@ -92,6 +95,14 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_content && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
+                                  cd ../var/www/web/sites/default/files && \
+                                  mkdir -p bears/api/life_event && \
+                                  cd ../../../../.. && \
+                                  /var/www/vendor/bin/drush cr && \
+                                  cd www/scripts && \
+                                  mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
+                                  mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
                                   /var/www/vendor/bin/drush cr"
   
   component-library:

@@ -25,25 +25,28 @@ jobs:
         stale-branch-label: stale branch
         compare-branches: 'info'
         branches-filter-regex: '^((?!dependabot))'
-  check-if-issue-exists:
-    runs-on: ubuntu-latest
-    needs: [ stale_branches ]
-    steps:
-    - name: check_if_issue_exists
-      uses: nickderobertis/check-if-issue-exists-action@master
-      id: check_if_issue_exists
-      with:
-        repo: GSA/px-bears-drupal
-        token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-        labels: stale branch
-        title: "*"
+  # check-if-issue-exists:
+  #   runs-on: ubuntu-latest
+  #   needs: [ stale_branches ]
+  #   steps:
+  #   - name: check_if_issue_exists
+  #     uses: nickderobertis/check-if-issue-exists-action@master
+  #     id: check_if_issue_exists
+  #     with:
+  #       repo: GSA/px-bears-drupal
+  #       token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+  #       labels: stale branch
+  #       title: 
 
-    - name: Add comment
-      if: steps.check_if_issue_exists.outputs.exists == 'true'
-      uses: peter-evans/create-or-update-comment@v3
-      with:
-        repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
-        repo: GSA/px-bears-drupal
-        issue-number: ${{ github.event.issue.number }}
-        body: |
-          Hi @${{ env.TECH_LEAD }}, this issue is available for your review. Thank you for your help! :sparkles:
+    add-comment:
+      if: github.event.label.name == 'stale branch'
+      runs-on: ubuntu-latest
+      steps:
+      - name: Add comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          # repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
+          # repo: GSA/px-bears-drupal
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Hi @${{ env.TECH_LEAD }}, this issue is available for your review. Thank you for your help! :sparkles:

@@ -137,6 +137,7 @@ jobs:
              ls -l
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
+             npm run build
              cd .. 
              bash mv-uswds-usagov-theme.sh
              cd benefit-finder 

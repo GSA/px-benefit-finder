@@ -137,6 +137,9 @@ jobs:
              ls -l
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
+             cd .. 
+             bash mv-uswds-usagov-theme.sh
+             cd benefit-finder 
              npm run build:storybook
              mv manifest.yml storybook-static/
              mv Staticfile storybook-static/

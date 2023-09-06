@@ -71,7 +71,9 @@ const Modal = ({
    * @function
    */
   const handleOpenModal = () => {
-    handleCheckRequriedFields() === true && setIsOpen(true)
+    handleCheckRequriedFields
+      ? handleCheckRequriedFields() === true && setIsOpen(true)
+      : setIsOpen(true)
   }
 
   /**

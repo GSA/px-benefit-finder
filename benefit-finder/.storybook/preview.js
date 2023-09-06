@@ -4,6 +4,8 @@ import results from '../.jest-test-results.json'
 // pull in our uswds dependencies
 import '../node_modules/@uswds/uswds/dist/js/uswds.js'
 import '../node_modules/@uswds/uswds/dist/css/uswds.css'
+import '../themes/custom/usagov/css/styles.css'
+import '../build/static/css/benefit-finder.min.css'
 
 const customViewports = {
   mobile: {
@@ -26,6 +28,11 @@ export const decorators = [
   withTests({
     results,
   }),
+  (Story) => (
+      <div id="benefit-finder">
+        <Story />
+      </div>
+    ),
 ]
 
 const preview = {

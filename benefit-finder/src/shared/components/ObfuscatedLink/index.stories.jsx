@@ -24,10 +24,3 @@ export const NoCarrot = {
     noCarrot: true,
   },
 }
-
-export const AccordionButtonExternal = {
-  args: {
-    children: 'Aplicar para el beneficio de suma global por muerte',
-    ext: true,
-  },
-}

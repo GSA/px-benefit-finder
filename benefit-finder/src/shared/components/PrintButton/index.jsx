@@ -16,7 +16,7 @@ const PrintButton = ({ ui }) => {
 
   return (
     <Button secondary onClick={handleClick}>
-      {ui}
+      {ui || 'Print'}
     </Button>
   )
 }

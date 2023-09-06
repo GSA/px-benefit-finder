@@ -19,7 +19,7 @@ import * as es from '../shared/locales/es/es.json'
  * a functional component that renders our application.
  * @component
  */
-function App() {
+function App({ appContent }) {
   // we create context state to provide translations for our two languages
   const LanguageContext = createContext({ en, es })
 
@@ -30,7 +30,9 @@ function App() {
    * @return {state} returns null if not set
    */
   const [content, setContent] = useState(() => {
-    apiCalls.GET.LifeEvent().then(response => setContent(response.data))
+    apiCalls.GET.LifeEvent().then(response =>
+      response.data ? setContent(response.data) : setContent(appContent)
+    )
   })
 
   // set data state

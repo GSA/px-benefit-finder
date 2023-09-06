@@ -1,14 +1,14 @@
 import Fieldset from './index.jsx'
-import { Button } from '../index'
+import { TextInput } from '../index'
 
 export default {
   component: Fieldset,
   tags: ['autodocs'],
   args: {
-    children: <Button>Button</Button>,
+    children: <TextInput label="Text input label" />,
     legend: 'Legend',
     hint: 'Hint',
-    required: false,
+    required: 'FALSE',
   },
 }
 
@@ -16,6 +16,6 @@ export const Primary = {}
 export const Required = {
   args: {
     ...Primary.args,
-    required: true,
+    required: 'TRUE',
   },
 }

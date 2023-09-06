@@ -1,18 +1,16 @@
 import BenefitAccordionGroup from './index.jsx'
-import content from '../../api/mock-data/content-data.js'
+import content from '../../api/mock-data/current.js'
 
-const { benefits } = JSON.parse(content)
-const data = [benefits[0], benefits[0]]
-const entryKey = Object.keys(data[0])
+const { data } = JSON.parse(content)
+const { benefits } = data
+const b = [benefits[0], benefits[1]]
+const entryKey = Object.keys(b[0])
 
 export default {
   component: BenefitAccordionGroup,
   tags: ['autodocs'],
-  parameters: {
-    layout: 'fullscreen',
-  },
   args: {
-    data,
+    data: b,
     entryKey: entryKey[0],
   },
 }

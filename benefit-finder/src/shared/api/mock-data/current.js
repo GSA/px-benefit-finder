@@ -4,7 +4,7 @@ const content = `{
       "id": "death",
       "timeEstimate": "60 minutes",
       "titlePrefix": "",
-      "title": "Find federal benefits after the loss of a loved one",
+      "title": "NEW Find federal benefits after the loss of a loved one",
       "summary": "<p>Find government benefits after the loss of a loved one including funeral, housing, and education help.</p>",
       "sectionsEligibilityCriteria": [
         {

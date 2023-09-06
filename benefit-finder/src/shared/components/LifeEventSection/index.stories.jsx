@@ -1,8 +1,9 @@
 import LifeEventSection from './index.jsx'
-import content from '../../api/mock-data/content-data.js'
+import content from '../../api/mock-data/current.js'
 import * as en from '../../locales/en/en.json'
 
-const { lifeEventForm } = JSON.parse(content)
+const { data } = JSON.parse(content)
+const { lifeEventForm } = data
 
 export default {
   component: LifeEventSection,

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.bears_criteria.field_b_name
     - field.field.node.bears_criteria.field_b_type
     - field.field.node.bears_criteria.field_b_values
+    - field.field.node.bears_criteria.field_language_toggle
     - node.type.bears_criteria
   module:
     - user
@@ -33,4 +34,5 @@ hidden:
   field_b_name: true
   field_b_type: true
   field_b_values: true
+  field_language_toggle: true
   langcode: true

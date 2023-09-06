@@ -12,7 +12,7 @@ readonly BENEFIT_FINDER_PROJECT_LOCATION="${SCRIPT_DIR}/benefit-finder/themes/"
 
 # USAGOV-2021 project
 readonly USAGOV_PROJECT_LOCATION="${SCRIPT_DIR}/usagov-2021/"
-readonly USAGOV_PROJECT_THEME_LOCATION="${USAGOV_PROJECT_LOCATION}web/themes/"
+readonly USAGOV_PROJECT_THEME_LOCATION="${USAGOV_PROJECT_LOCATION}web/themes/custom/usagov"
 
 
 cd $USAGOV_PROJECT_THEME_LOCATION && npm install && npm run build

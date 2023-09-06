@@ -39,7 +39,7 @@ jobs:
         labels: 'stale branch 🗑️'
 
     - name: Add comment
-      if: steps.check_if_issue_exists.outputs.exists == 'false'
+      if: steps.check_if_issue_exists.outputs.exists == 'true'
       uses: peter-evans/create-or-update-comment@v3
       with:
         repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'

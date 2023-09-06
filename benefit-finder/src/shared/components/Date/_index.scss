@@ -1,0 +1,35 @@
+#benefit-finder {
+  .usa-form-group {
+    width: 100%;
+  }
+
+  .usa-memorable-date {
+    max-width: 320px;
+    flex-wrap: wrap;
+  }
+
+  .usa-input,
+  .usa-select {
+    border-radius: 3px;
+  }
+
+  /* stylelint-disable selector-class-pattern */
+  .usa-form-group--month {
+    width: 242px;
+  }
+
+  .usa-form-group--day {
+    width: 64px;
+  }
+
+  .usa-form-group--year {
+    width: 95px;
+  }
+  /* stylelint-enable selector-class-pattern */
+
+  @media (width >= 1049px) {
+    .usa-memorable-date {
+      max-width: 100%;
+    }
+  }
+}

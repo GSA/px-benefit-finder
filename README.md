@@ -1,9 +1,10 @@
-# BEARS custom module
+# Benefit Finder custom module
 
 Docs to be written
 
 ## How to Clone the PX-BEARS-DRUPAL Repository with usagov-2021 Submodule
-This guide will walk you through the process of cloning the ***PX-BEARS-DRUPAL*** repository that includes a submodule. Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
+
+This guide will walk you through the process of cloning the **_PX-BEARS-DRUPAL_** repository that includes a submodule. Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
 
 To clone the repository with a submodule, follow these steps:
 
@@ -34,9 +35,9 @@ git submodule update
 
 7. If you've already cloned a repository with submodules and want to update them, follow these steps:
 
-    a. Navigate to the main repository's directory using the command line.
-    b. Run the following command to update the main repository along with its submodules:
-     
+   a. Navigate to the main repository's directory using the command line.
+   b. Run the following command to update the main repository along with its submodules:
+
 ```
 git pull --recurse-submodules
 ```
@@ -50,6 +51,7 @@ We are committed to making our site accessible to all visitors. Our ongoing acce
 # Local Development Environment
 
 ### Get USAgov code
+
 ```
 git clone git@github.com:usagov/usagov-2021.git poc
 cd poc
@@ -125,17 +127,18 @@ aws s3 ls s3://${AWS_BUCKET}/
 
 7. Run it again after using it to delete the service-key.
 
+
 # VDI Login Guide for the BEARS Team Members
+
 ## What is VDI?
 
 The Virtual Desktop Infrastructure (VDI) is a technology that allows you to access a remote desktop environment from your local device. This is particularly useful for accessing GSA resources and applications securely from outside the GSA network.
 
 ## Steps to Login
 
-
 1. Access https://secureauth.gsa.gov/secureauth14/, authenticate yourself with your GSA Credentials and get the TOKEN provided.
 
-2. In a different browser, access the Citrix VDI at https://vdi.anywhere.gsa.gov/ and make sure see the below secreen:
+2. In a different browser, access the Citrix VDI at https://vdi.anywhere.gsa.gov/ and make sure see the below screen:
 
 ![Here is the VDI Login Page you'll see](image.png)
 
@@ -152,7 +155,6 @@ The Virtual Desktop Infrastructure (VDI) is a technology that allows you to acce
 ## Additional Info
 
 You may get additional information about the VDI and the Citrix (a Windows virtual desktop client) app from the TTS Handbook at https://handbook.tts.gsa.gov/tools/virtual-desktop/.
-
 
 ## Tips
 

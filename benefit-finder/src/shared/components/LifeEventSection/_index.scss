@@ -1,0 +1,69 @@
+#benefit-finder {
+  .benefit-form,
+  .verify-selections-view {
+    background-color: #1a4480;
+    margin: 0 16px;
+    padding-bottom: 64px;
+  }
+
+  .section-wrapper {
+    background-color: #fff;
+    border: 1px solid white;
+    border-radius: 8px;
+
+    button {
+      margin-bottom: 18px;
+    }
+
+    button.step-back-link {
+      color: #979797 !important;
+      background-color: #fff !important;
+      width: auto !important;
+    }
+  }
+
+  .section {
+    margin: 50px 20px;
+  }
+
+  .section-heading {
+    background-color: #1a4480;
+    color: #fff;
+    margin: 0;
+    padding: 64px 16px;
+  }
+
+  .usa-fieldset {
+    padding-bottom: 30px;
+  }
+
+  #benefit-section {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .radio-group {
+    display: flex;
+    /* stylelint-disable selector-class-pattern */
+    .usa-radio__label {
+      margin-right: 32px;
+    }
+    /* stylelint-enable selector-class-pattern */
+  }
+
+  button,
+  .benefit-modal-group a {
+    width: 100%;
+  }
+
+  @media (width >= 1049px) {
+    .section {
+      margin: 50px 60px;
+    }
+
+    .radio-group {
+      display: inline;
+    }
+  }
+}

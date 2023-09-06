@@ -25,12 +25,12 @@ jobs:
 
 
       - run:
-          name: Moving the bears app into usagov-2021 module
+          name: Moving the benefit-finder app into usagov-2021 module
           command: |
             cd px-bears-drupal
-            bash ./mv-bears-app.sh
+            bash ./mv-benefit-finder-app.sh
             echo ".................."
-            echo "moving the bears-app module into the usagov-2021 directory"
+            echo "moving the benefit-finder-app module into the usagov-2021 directory"
             mv  usagov_bears usagov-2021/web/modules/custom
 
       - run: 
@@ -83,7 +83,7 @@ jobs:
             docker logout
 
       - run:
-          name: Enable bears module
+          name: Enable benefit-finder module
           command: |
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
             cf ssh cms --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0 && \

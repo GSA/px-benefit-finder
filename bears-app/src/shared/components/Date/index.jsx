@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+// import parseDate from '../../utils/parseDate'
 import './_index.scss'
 
 /**
@@ -13,16 +14,8 @@ const Date = ({ onChange, value, required, ui }) => {
   const { date, select } = ui
   const { labelDay, labelMonth, labelYear, monthOptions } = date
   const { dateDefaultValue } = select
-  /**
-   * a parse our date object
-   * @function
-   * @param {object} value - { day, month, year }
-   * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
-   */
-  const parseDate = value => {
-    const d = value && new window.Date(value.year, value.month, value.day)
-    return d
-  }
+
+  // Note: when we break each input into functional components they trigger unwanted rerenders
 
   return (
     <div className="usa-memorable-date">
@@ -38,11 +31,7 @@ const Date = ({ onChange, value, required, ui }) => {
           name="date_of_birth_month"
           aria-describedby="mdHint"
           required="required"
-          value={
-            new window.Date(parseDate(value)).getMonth() ||
-            (value && value.month) ||
-            ''
-          }
+          value={(value && value.month) || ''}
           onChange={onChange}
         >
           <option value="" key="default" disabled>
@@ -67,11 +56,7 @@ const Date = ({ onChange, value, required, ui }) => {
           maxLength="2"
           pattern="[0-9]*"
           inputMode="numeric"
-          value={
-            new window.Date(parseDate(value)).getDate() ||
-            (value && value.day) ||
-            ''
-          }
+          value={(value && value.day) || ''}
           onChange={onChange}
         />
       </div>
@@ -88,12 +73,7 @@ const Date = ({ onChange, value, required, ui }) => {
           maxLength="4"
           pattern="[0-9]*"
           inputMode="numeric"
-          value={
-            (value?.year?.length === 4 &&
-              new window.Date(parseDate(value)).getFullYear()) ||
-            (value && value.year) ||
-            ''
-          }
+          value={(value && value.year) || ''}
           onChange={onChange}
         />
       </div>

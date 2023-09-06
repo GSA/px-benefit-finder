@@ -149,19 +149,16 @@ const BenefitAccordionGroup = ({
               ? 'More Information Needed'
               : 'Not Eligible'
 
-          console.log(SourceLink)
+          const handleHidden =
+            notQualifiedView === false && eligibleStatus !== 'Likely Eligible'
+              ? true
+              : !!(
+                  notQualifiedView === true &&
+                  eligibleStatus === 'Likely Eligible'
+                )
 
           return (
             <Accordion
-              style={
-                notQualifiedView === false &&
-                eligibleStatus !== 'Likely Eligible'
-                  ? { display: 'none' }
-                  : notQualifiedView === true &&
-                    eligibleStatus === 'Likely Eligible'
-                  ? { display: 'none' }
-                  : {}
-              }
               key={`${index}-${title}`}
               id={`${index}-${title}`}
               heading={title}
@@ -170,6 +167,7 @@ const BenefitAccordionGroup = ({
               isExpanded={isExpandAll}
               data-analytics="benefit-accordion"
               data-analytics-content={title}
+              hidden={handleHidden}
             >
               <Heading className="benefit-detail-title" headingLevel={4}>
                 {`Provided by ${agency.title}`}

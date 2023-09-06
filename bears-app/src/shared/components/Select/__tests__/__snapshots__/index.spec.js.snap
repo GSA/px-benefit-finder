@@ -8,7 +8,7 @@ Array [
     Dropdown Label
   </label>,
   <select
-    className="usa-select "
+    className=""
     value=""
   >
     <option

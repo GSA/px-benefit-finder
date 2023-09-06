@@ -1,5 +1,6 @@
 import { Hint, Legend } from '../index'
 import PropTypes from 'prop-types'
+import { useHandleClassName } from '../../hooks/useHandleClassName'
 
 /**
  * a functional component that renders a string
@@ -7,9 +8,9 @@ import PropTypes from 'prop-types'
  * @param {React.ReactNode} children - inherited children
  * @param {string} legend - passed to Legend component
  * @param {string} hint - passed to Hint component
+ * @param {string} className - inherited classes
  * @return {html} returns a div
  */
-
 const Fieldset = ({
   children,
   legend,
@@ -18,7 +19,20 @@ const Fieldset = ({
   requiredLabel,
   hidden,
   hint,
+  className,
 }) => {
+  const handleHidden = hidden !== undefined && hidden ? ['display-none'] : ''
+  const defaultClasses = ['usa-fieldset']
+  const utilityClasses = handleHidden
+
+  /**
+   * a functional component that renders a legend with a required hint
+   * @component
+   * @param {React.ReactNode} children - inherited children
+   * @param {string} legend - passed to Legend component
+   * @param {object} requiredLabel - passed to Hint component
+   * @return {html} returns a div
+   */
   const RequiredFlag = () => (
     <>
       <Legend>
@@ -28,14 +42,17 @@ const Fieldset = ({
     </>
   )
 
+  // determine if we need to include a reqired hint
   const handleRequired =
     required === 'FALSE' ? <Legend>{legend}</Legend> : RequiredFlag()
 
   return (
     <fieldset
-      className={`usa-fieldset ${
-        hidden !== undefined && hidden ? 'display-none' : ''
-      }`}
+      className={useHandleClassName({
+        className,
+        defaultClasses,
+        utilityClasses,
+      })}
       ref={alertRef}
     >
       {hint}
@@ -48,7 +65,11 @@ const Fieldset = ({
 Fieldset.propTypes = {
   children: PropTypes.node,
   legend: PropTypes.string,
+  alertRef: PropTypes.any,
+  requiredLabel: PropTypes.object,
+  hidden: PropTypes.bool,
   hint: PropTypes.string,
+  className: PropTypes.string,
 }
 
 export default Fieldset

@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from 'react'
-import * as apiCalls from '../shared/api/api-calls'
+import * as apiCalls from '../shared/api/apiCalls'
 import {
   Intro,
   LifeEventSection,
@@ -30,19 +30,8 @@ function App() {
    * @return {state} returns null if not set
    */
   const [content, setContent] = useState(() => {
-    apiCalls.GETLifeEvent().then(response => setContent(response.data))
+    apiCalls.GET.LifeEvent().then(response => setContent(response.data))
   })
-
-  // handlers
-  /**
-   * a function that determines the context of ui translations
-   * based on a string match in the pathname of the window object
-   * @function
-   */
-  const handleLanguage = () => {
-    const string = /^\/es/
-    return string.test(window.location.pathname) ? es : en
-  }
 
   // set data state
   const [stepDataArray, setStepDataArray] = useState()
@@ -55,7 +44,7 @@ function App() {
   }, [content])
 
   // state
-  const [t] = useState(handleLanguage) // tranlations
+  const [t] = useState(apiCalls.GET.Language() === 'es' ? es : en) // tranlations
   const [step, setStep] = useState(0) // steps indicator
   const [stepData, setStepData] = useState(
     () => stepDataArray && stepDataArray[step]

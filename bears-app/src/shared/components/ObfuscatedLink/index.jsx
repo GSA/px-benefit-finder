@@ -30,6 +30,8 @@ const ObfuscatedLink = ({
     ? ['usa-button', 'usa-link--external', 'obfuscated-link']
     : ['usa-button', 'obfuscated-link']
 
+  const handleCarrot = noCarrot === true ? null : <Carrot color="white" />
+
   return (
     <a
       href={href}
@@ -39,7 +41,7 @@ const ObfuscatedLink = ({
       {...props}
     >
       {children}
-      {noCarrot === true ? null : <Carrot color="white" />}
+      {handleCarrot}
     </a>
   )
 }

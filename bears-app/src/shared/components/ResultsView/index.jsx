@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
 import {
   BenefitAccordionGroup,
@@ -36,187 +37,14 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
 
   const [notQualifiedView, setNotQualifiedView] = useState(false)
 
-  const handleDateEligibility = (conditional, selectedValue) => {
-    // date values
-    // "<01-01-1978"
-    // "<2years (the deceased died within the last two years)"
-    // "<18years"
-    // ">=62years"
-    // ">=60years"
-    // ">=50years"
-    // ">18years"
-
-    // get the conditional
-    const text = conditional
-    const operators = /['>', '>=', '<', '<=', '=']/g
-    const operator = text.match(operators)
-    const integer = text.match(/\d+/)[0]
-
-    // calculate back
-    // get current date
-    // subtract integer
-    // if a date comes back in date format
-    const pattern = /-/
-    const conditionalDate = pattern.test(text)
-      ? new window.Date(text)
-      : new window.Date(
-          new Date().getFullYear() - integer,
-          new Date().getMonth(),
-          new Date().getDate()
-        )
-
-    // getTime in milliseconds so we can do a comparison
-    const epochConditionalDate = conditionalDate.getTime()
-
-    // example selected value for date
-    // const value = {
-    //   year: 2022,
-    //   month: 2,
-    //   day: 2,
-    // }
-
-    // calculate selected
-    const selectedDate = new window.Date(
-      Date.UTC(selectedValue.year, selectedValue.month, selectedValue.day)
-    )
-
-    const epochSelectedDate = selectedDate.getTime()
-
-    const isDateEligible = (
-      operator,
-      epochSelectedDate,
-      epochConditionalDate
-    ) => {
-      // ;['>', '>=', '<', '<=', '=']
-      switch (operator.length && operator.join('')) {
-        case '>':
-          return epochSelectedDate > epochConditionalDate
-        case '>=':
-          return epochSelectedDate >= epochConditionalDate
-        case '<':
-          return epochSelectedDate < epochConditionalDate
-        case '<=':
-          return epochSelectedDate <= epochConditionalDate
-        case '=':
-          return epochSelectedDate === epochConditionalDate
-        default:
-          return false
-      }
-    }
-    return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
-  }
-
-  // collect all the criteria keys and selected criteria values into an array
-  const selectedCriteria =
-    stepDataArray &&
-    stepDataArray
-      .map((item, i) =>
-        item.section.fieldsets
-          .map(item => {
-            // find selected values
-            const selected = item.fieldset.inputs[0].inputCriteria.values.find(
-              value => value.selected === true
-            )
-
-            const checkForChildrenValues = item => {
-              const children = []
-              if (item.fieldset.children.length > 0) {
-                item.fieldset.children.forEach(childItem => {
-                  const check =
-                    childItem.fieldsets[0].fieldset.inputs[0].inputCriteria.values.find(
-                      value => value.selected === true
-                    )
-                  if (check) {
-                    const criteriaKey =
-                      childItem.fieldsets[0].fieldset.criteriaKey
-
-                    children.push({ criteriaKey, values: check })
-                  }
-                })
-              }
-              return children && children
-            }
-
-            return (
-              selected &&
-              [
-                {
-                  criteriaKey: item.fieldset.inputs[0].inputCriteria.id,
-                  values: selected,
-                },
-                checkForChildrenValues(item) &&
-                  checkForChildrenValues(item).map((child, i) => ({
-                    criteriaKey: child.criteriaKey,
-                    values: child.values,
-                  })),
-              ].flat()
-            )
-          })
-          .flat()
-      )
-      .flat() // we flatten all to have only one array
-      .filter(element => element !== undefined) // remove undefined
-
-  // Total Criteria = y
-  // Met Criteria = x
-  // Not Met Criteria = z
-
-  // Criteria Met Length	Label
-  // x === y	"Likely Eligible"
-  // z === 0 && x === undefined length > 0 "More Information Needed"
-  // Criteria Not Met	Label
-  // z > 0	"Not Eligible"
-
-  // collect "Likely Eligible"
-
-  // for each benefit eligiblity compare compare selectedCriteria
-  // if there is a criteriakey match in a benefit
-  // check that the value === acceptable values
-
-  const handleData = (selectedCriteria, data) => {
-    // return all eligible items
-    const eligibleItems =
-      data &&
-      data.map((item, i) => {
-        // find all eligibility items that are matches to criteria key
-        selectedCriteria.forEach(selected => {
-          // match item to criteria key
-          const criteriaEligibility = item.benefit.eligibility.find(
-            criteria => criteria.criteriaKey === selected.criteriaKey
-          )
-
-          // determine it's eligiblity
-          if (criteriaEligibility !== undefined) {
-            // look for eligible matches
-            const isEligible = () => {
-              let eligibility
-
-              if (typeof selected.values.value === 'object') {
-                eligibility = criteriaEligibility.acceptableValues.find(value =>
-                  handleDateEligibility(value, selected.values.value)
-                )
-              } else {
-                eligibility = criteriaEligibility.acceptableValues.find(
-                  value => value === selected.values.value
-                )
-              }
-              return eligibility
-            }
-
-            // undefined === false
-            criteriaEligibility.isEligible = !!isEligible()
-          }
-        })
-        return item
-      })
-    // merge all arrays and objects into one array
-    const mergedEligibleItems = eligibleItems && [].concat(...eligibleItems)
-    return mergedEligibleItems
+  const handleViewToggle = () => {
+    setNotQualifiedView(!notQualifiedView)
+    window.scrollTo(0, 0)
   }
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [data, selectedCriteria])
+  }, [])
 
   // compare the selected criteria array with benefits
   return (
@@ -261,7 +89,13 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
           {/* map all the benefits into cards */}
           <div className="result-view-benefits">
             <BenefitAccordionGroup
-              data={handleData(selectedCriteria, data)}
+              data={
+                stepDataArray &&
+                apiCalls.GET.ElegibilityByCriteria(
+                  apiCalls.GET.SelectedValueAll(stepDataArray),
+                  data
+                )
+              }
               entryKey={'benefit'}
               notQualifiedView={notQualifiedView}
               expandAll
@@ -275,7 +109,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
                   notEligibleResults?.description
                 )}
               />
-              <Button onClick={() => setNotQualifiedView(true)}>
+              <Button onClick={handleViewToggle}>
                 {notEligibleResults?.cta}
               </Button>
             </div>

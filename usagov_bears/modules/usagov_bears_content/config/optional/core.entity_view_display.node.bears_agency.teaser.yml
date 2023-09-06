@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.bears_agency.field_b_lede
     - field.field.node.bears_agency.field_b_summary
+    - field.field.node.bears_agency.field_language_toggle
     - node.type.bears_agency
   module:
     - user
@@ -21,4 +22,5 @@ content:
 hidden:
   field_b_lede: true
   field_b_summary: true
+  field_language_toggle: true
   langcode: true

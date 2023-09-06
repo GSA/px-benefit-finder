@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.bears_life_event.field_b_id
     - field.field.node.bears_life_event.field_json_data_file
+    - field.field.node.bears_life_event.field_language_toggle
     - field.field.node.bears_life_event.field_summary
     - node.type.bears_life_event
   module:
@@ -22,5 +23,6 @@ content:
 hidden:
   field_b_id: true
   field_json_data_file: true
+  field_language_toggle: true
   field_summary: true
   langcode: true

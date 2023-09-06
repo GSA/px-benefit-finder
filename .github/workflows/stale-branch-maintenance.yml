@@ -22,19 +22,6 @@ jobs:
         comment-updates: true
         max-issues: 20
         tag-committer: true
-        stale-branch-label: 'stale branch 🗑️'
+        stale-branch-label: stale branch
         compare-branches: 'info'
         branches-filter-regex: '^((?!dependabot))'
-
-  add-comment:
-    if: ${{ github.event.label.name == 'stale branch 🗑️' }}
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Add comment
-        uses: peter-evans/create-or-update-comment@v3
-        with:
-          repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            Hi ${{ env.TECH_LEAD }}, this issue is available for your review. Thank you for your help! :sparkles:

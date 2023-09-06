@@ -25,15 +25,3 @@ jobs:
         stale-branch-label: stale branch
         compare-branches: 'info'
         branches-filter-regex: '^((?!dependabot))'
-  add-comment:
-    if: github.event.label.name == 'stale branch'
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-    steps:
-      - name: Add comment
-        uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            Hi @${{ env.TECH_LEAD }}, this issue is available for your review. Thank you for your help! :sparkles:

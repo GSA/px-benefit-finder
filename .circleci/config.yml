@@ -130,7 +130,7 @@ jobs:
       - run:
           name: Deploy Storybook
           command: |  
-             cd px-bears-drupal/bears-app
+             cd px-bears-drupal/benefit-finder
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
              npm run build:storybook

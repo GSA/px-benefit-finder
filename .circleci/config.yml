@@ -179,7 +179,7 @@ workflows:
           filters:
             branches:
               only: 
-                - main
+                - 422-mv-bears-app-script-name-update
 
   create-component-library-workflow:
     jobs:

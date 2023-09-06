@@ -1,3 +1,6 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/breakpoints/_index.scss' as *;
+
 #benefit-finder {
   .usa-form-group {
     width: 100%;
@@ -8,12 +11,15 @@
     flex-wrap: wrap;
   }
 
-  .usa-input,
-  .usa-select {
+  .usa-input {
     border-radius: 3px;
+
+    &.usa-input--error {
+      outline: 4px solid color.$alert-red !important;
+      border: none;
+    }
   }
 
-  /* stylelint-disable selector-class-pattern */
   .usa-form-group--month {
     width: 242px;
   }
@@ -25,9 +31,8 @@
   .usa-form-group--year {
     width: 95px;
   }
-  /* stylelint-enable selector-class-pattern */
 
-  @media (width >= 1049px) {
+  @media (width >= $desktop) {
     .usa-memorable-date {
       max-width: 100%;
     }

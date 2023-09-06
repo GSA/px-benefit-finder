@@ -1,7 +1,10 @@
+@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
+
 #benefit-finder {
   .legend {
-    font-size: 22px;
-    font-weight: 700;
-    padding-bottom: 24px;
+    @include h3;
+
+    padding-bottom: space.$padding-bottom-md-plus;
   }
 }

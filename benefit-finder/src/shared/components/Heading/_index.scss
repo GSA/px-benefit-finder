@@ -1,31 +1,23 @@
+@use '../../styles/mixins/_index.scss' as *;
+
 #benefit-finder {
   h1 {
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 100%;
+    @include h1;
   }
 
   h2 {
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 100%;
+    @include h2;
   }
 
   h3 {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 134.09%;
+    @include h3;
   }
 
   h4 {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 114.59%;
+    @include h4;
   }
 
   h5 {
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 134.09%;
+    @include h5;
   }
 }

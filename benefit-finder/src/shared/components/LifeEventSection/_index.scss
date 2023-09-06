@@ -1,13 +1,16 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/breakpoints/_index.scss' as *;
+
 #benefit-finder {
   .benefit-form,
   .verify-selections-view {
-    background-color: #1a4480;
+    background-color: color.$marine;
     margin: 0 16px;
     padding-bottom: 64px;
   }
 
   .section-wrapper {
-    background-color: #fff;
+    background-color: color.$white;
     border: 1px solid white;
     border-radius: 8px;
 
@@ -16,8 +19,8 @@
     }
 
     button.step-back-link {
-      color: #979797 !important;
-      background-color: #fff !important;
+      color: color.$medium-grey !important;
+      background-color: color.$white !important;
       width: auto !important;
     }
   }
@@ -27,8 +30,8 @@
   }
 
   .section-heading {
-    background-color: #1a4480;
-    color: #fff;
+    background-color: color.$marine;
+    color: color.$white;
     margin: 0;
     padding: 64px 16px;
   }
@@ -40,16 +43,15 @@
   #benefit-section {
     padding-bottom: 30px;
     margin-bottom: 40px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid color.$base-light-grey;
   }
 
   .radio-group {
     display: flex;
-    /* stylelint-disable selector-class-pattern */
+
     .usa-radio__label {
       margin-right: 32px;
     }
-    /* stylelint-enable selector-class-pattern */
   }
 
   button,
@@ -57,7 +59,7 @@
     width: 100%;
   }
 
-  @media (width >= 1049px) {
+  @media (width >= $desktop) {
     .section {
       margin: 50px 60px;
     }

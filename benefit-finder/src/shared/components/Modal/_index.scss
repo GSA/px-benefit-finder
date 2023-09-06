@@ -1,18 +1,21 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
+
 .modal-button {
   background-color: transparent;
   border: 0;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: space.$space-md-plus;
+  right: space.$space-md-plus;
   cursor: pointer;
 }
 
 .modal-heading {
-  color: #000;
+  @include h5;
+
+  color: color.$pure-black;
   text-align: center;
-  font-size: 16px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 130%;
-  margin: 24px 0;
+  margin: space.$space-md-plus 0;
 }

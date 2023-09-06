@@ -1,10 +1,13 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
+
 #benefit-finder {
   .time-indicator {
-    color: #979797;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18.8px;
+    @include p;
+
+    color: color.$medium-grey;
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: space.$space-lg;
   }
 }

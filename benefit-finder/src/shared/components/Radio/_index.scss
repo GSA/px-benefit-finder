@@ -1,7 +1,7 @@
+@use '../../styles/colors/_index.scss' as color;
+
 #benefit-finder {
-  /* stylelint-disable selector-class-pattern */
   .usa-input--error + .usa-radio__label::before {
-    box-shadow: 0 0 0 3px #d54309;
+    box-shadow: 0 0 0 3px color.$alert-red;
   }
-  /* stylelint-enable selector-class-pattern */
 }

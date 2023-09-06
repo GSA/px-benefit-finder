@@ -48,6 +48,7 @@
   },
   "scripts": {
     "check:uswds:version": "sh ../check-uswds-version.sh",
+    "mv:uswds:usagov": "sh ../mv-uswds-usagov-theme.sh",
     "start": "craco start",
     "dev": "npm run check:uswds:version && craco start",
     "build": "craco build",

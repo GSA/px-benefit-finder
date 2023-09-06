@@ -1,10 +1,14 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/breakpoints/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
+
 #benefit-finder {
   .result-view-details {
-    padding: 24px;
+    padding: space.$space-lg;
 
     button.step-back-link {
-      color: #979797 !important;
-      background-color: #fff !important;
+      color: color.$medium-grey !important;
+      background-color: color.$white !important;
       width: auto !important;
     }
   }
@@ -13,17 +17,17 @@
   .result-view-unmet,
   .result-view-relvant-benefits,
   .result-view-share-results {
-    padding: 16px 0;
-    border-bottom: 2px solid lightgrey;
+    padding: space.$space-md 0;
+    border-bottom: 2px solid color.$base-light-grey;
   }
 
   .result-view-unmet {
     button {
-      margin-bottom: 16px;
+      margin-bottom: space.$space-md;
     }
 
     p {
-      padding-bottom: 16px;
+      padding-bottom: space.$padding-bottom-md;
     }
   }
 
@@ -33,13 +37,13 @@
 
   .result-view-share-results-button-group {
     button {
-      margin-bottom: 8px;
+      margin-bottom: space.$space-sm;
     }
   }
 
-  @media (width >= 1049px) {
+  @media (width >= $desktop) {
     .result-view-details {
-      padding: 24px 164px;
+      padding: space.$space-md-plus 164px;
     }
   }
 }

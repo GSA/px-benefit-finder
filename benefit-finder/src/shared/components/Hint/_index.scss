@@ -1,8 +1,9 @@
+@use '../../styles/colors/_index.scss' as color;
+
 #benefit-finder {
   .required {
-    color: lightgrey;
+    color: color.$medium-grey;
     font-weight: 400;
-    font-size: #979797;
     margin-left: 10px;
   }
 }

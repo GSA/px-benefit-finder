@@ -1,0 +1,12 @@
+@use '../../styles/colors/_index.scss' as color;
+
+#benefit-finder {
+  .usa-select {
+    border-radius: 3px;
+
+    &.usa-input--error {
+      outline: 4px solid color.$alert-red !important;
+      border: none;
+    }
+  }
+}

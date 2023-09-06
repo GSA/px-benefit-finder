@@ -25,28 +25,15 @@ jobs:
         stale-branch-label: stale branch
         compare-branches: 'info'
         branches-filter-regex: '^((?!dependabot))'
-  # check-if-issue-exists:
-  #   runs-on: ubuntu-latest
-  #   needs: [ stale_branches ]
-  #   steps:
-  #   - name: check_if_issue_exists
-  #     uses: nickderobertis/check-if-issue-exists-action@master
-  #     id: check_if_issue_exists
-  #     with:
-  #       repo: GSA/px-bears-drupal
-  #       token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-  #       labels: stale branch
-  #       title: 
-
   add-comment:
     if: github.event.label.name == 'stale branch'
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
-    - name: Add comment
-      uses: peter-evans/create-or-update-comment@v3
-      with:
-        # repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
-        # repo: GSA/px-bears-drupal
-        issue-number: ${{ github.event.issue.number }}
-        body: |
-          Hi @${{ env.TECH_LEAD }}, this issue is available for your review. Thank you for your help! :sparkles:
+      - name: Add comment
+        uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Hi @${{ env.TECH_LEAD }}, this issue is available for your review. Thank you for your help! :sparkles:

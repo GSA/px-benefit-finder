@@ -141,6 +141,7 @@ jobs:
              cd .. 
              bash mv-uswds-usagov-theme.sh
              cd benefit-finder 
+             ls -l
              npm run build:storybook
              mv manifest.yml storybook-static/
              mv Staticfile storybook-static/

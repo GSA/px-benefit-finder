@@ -79,6 +79,51 @@ cd bin/cloudgov
 ./db-backup.sh
 ```
 
+### How to use awscli commands for s3 
+
+1. Make sure you login cloud.gov on your terminal and target your org and space.
+
+```
+cf login -a api.fr.cloud.gov --sso
+```
+
+2. Change directory to where the script lives.
+
+```
+cd bin/cloudgov
+```
+
+3. Export the bucket name in your terminal
+
+```
+export bucket_name=storage or export bucket_name=dbstorage 
+```
+
+4. Execute the following script. Make sure you `source` it!
+
+```
+source ./cloudgov-aws-creds.sh 
+```
+5. If you see the script finds a key and deletes it; make sure you run it again to create the key again. If the script finds a key, it will delete it.
+
+You'll see either of the below messages after running it. 
+
+```
+Getting bucket credentials...
+Key found. Deleting...
+
+or
+
+Getting bucket credentials...
+Key not found. Creating...
+```
+6. Start using `aws s3` commands like below:
+
+```
+aws s3 ls s3://${AWS_BUCKET}/
+```
+
+7. Run it again after using it to delete the service-key.
 
 # VDI Login Guide for the BEARS Team Members
 ## What is VDI?

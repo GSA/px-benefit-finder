@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.bears_benefit.field_b_source_link
     - field.field.node.bears_benefit.field_b_summary
     - field.field.node.bears_benefit.field_b_tags
+    - field.field.node.bears_benefit.field_language_toggle
     - node.type.bears_benefit
   module:
     - entity_reference_revisions
@@ -95,10 +96,26 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_language_toggle:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  langcode:
+    type: language
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  langcode: true
+hidden: {  }

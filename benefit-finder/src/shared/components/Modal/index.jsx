@@ -23,6 +23,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     width: '80%',
     borderRadius: '8px',
+    borderColor: '#005ea2',
     padding: '64px 24px',
     maxWidth: '520px',
   },

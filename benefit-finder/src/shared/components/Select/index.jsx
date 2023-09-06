@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { useHandleClassName } from '../../hooks/useHandleClassName'
 import { Label } from '../index'
+import './_index.scss'
 
 /**
  * a functional component to create a select from a list of options

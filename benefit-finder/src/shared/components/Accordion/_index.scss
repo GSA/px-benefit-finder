@@ -25,6 +25,10 @@
         background-image: none;
         background-color: color.$sky;
         color: color.$marine;
+
+        &:hover {
+          background-color: color.$dark-sky;
+        }
       }
 
       .heading {

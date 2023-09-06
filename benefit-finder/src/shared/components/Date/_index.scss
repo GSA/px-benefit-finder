@@ -1,3 +1,4 @@
+@use '../../styles/colors/_index.scss' as color;
 @use '../../styles/breakpoints/_index.scss' as *;
 
 #benefit-finder {
@@ -10,9 +11,13 @@
     flex-wrap: wrap;
   }
 
-  .usa-input,
-  .usa-select {
+  .usa-input {
     border-radius: 3px;
+
+    &.usa-input--error {
+      outline: 4px solid color.$alert-red !important;
+      border: none;
+    }
   }
 
   .usa-form-group--month {

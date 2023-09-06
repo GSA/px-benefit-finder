@@ -35,7 +35,6 @@ jobs:
       with:
         repo: GSA/px-bears-drupal
         token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-        title: fatma is testing....
         labels: 'stale branch 🗑️'
 
     - name: Add comment

@@ -130,18 +130,13 @@ jobs:
       - run:
           name: Deploy Storybook
           command: |  
-             cd px-bears-drupal
-             ls -l
-             cd benefit-finder
-             pwd
-             ls -l
+             cd px-bears-drupal/benefit-finder
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
              npm run build
              cd .. 
              bash mv-uswds-usagov-theme.sh
              cd benefit-finder 
-             ls -l
              npm run build:storybook
              mv manifest.yml storybook-static/
              mv Staticfile storybook-static/

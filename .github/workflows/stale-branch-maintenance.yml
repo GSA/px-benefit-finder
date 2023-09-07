@@ -9,19 +9,64 @@ permissions:
   issues: write
   contents: write
 
+
 jobs:
-  stale_branches:
+  stale-branch-cleanup:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Stale Branches
-      uses: crs-k/stale-branches@v3.0.0
-      with:
-        repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
-        days-before-stale: 120
-        days-before-delete: 180
-        comment-updates: true
-        max-issues: 20
-        tag-committer: true
-        stale-branch-label: stale branch
-        compare-branches: 'info'
-        branches-filter-regex: '^((?!dependabot))'
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install github command line tool
+      run: |
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+        sudo apt-add-repository https://cli.github.com/packages
+        sudo apt update
+        sudo apt install gh
+
+    - name: Find stale branches
+      run: |
+
+        cd px-bears-drupal
+        # Define the threshold for stale branches (e.g., 30 days)
+        STALE_THRESHOLD_DAYS=30
+
+        # Get the current date in ISO 8601 format
+        CURRENT_DATE=$(date -I)
+
+        # Loop through all branches in the repository
+        for branch in $(git for-each-ref --format='%(refname:short) %(committerdate:short)' refs/heads/); do
+          branch_name=$(echo $branch | cut -d ' ' -f 1)
+          last_commit_date=$(echo $branch | cut -d ' ' -f 2)
+
+          # Calculate the age of the branch in days
+          branch_age=$(( ($(date -d $CURRENT_DATE +%s) - $(date -d $last_commit_date +%s)) / 86400 ))
+
+          # Check if the branch is stale
+          if [ $branch_age -ge $STALE_THRESHOLD_DAYS ]; then
+            # Create a pull request to merge the stale branch into the main branch
+            # You can use the GitHub CLI or API to create the PR here
+            # Example using GitHub CLI:
+            gh pr create --base main --head $branch_name --title "Merge stale branch $branch_name"
+          fi
+        done
+      env:
+        GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
+  
+# jobs:
+#   stale_branches:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Stale Branches
+#       uses: crs-k/stale-branches@v3.0.0
+#       with:
+#         repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
+#         days-before-stale: 120
+#         days-before-delete: 180
+#         comment-updates: true
+#         max-issues: 20
+#         tag-committer: true
+#         stale-branch-label: stale branch
+#         compare-branches: 'info'
+#         branches-filter-regex: '^((?!dependabot))'

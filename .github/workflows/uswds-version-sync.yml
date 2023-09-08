@@ -43,9 +43,9 @@ jobs:
     
                   [1]: https://github.com/peter-evans/create-pull-request
                 labels: |
-                  USDWS version
+                  USDWS version sync
                   automated pr
                 assignees: ${{ env.TECH_LEAD }}
                 reviewers: ${{ env.TECH_LEAD }}
                 milestone: 1
-                draft: false
+                draft: true

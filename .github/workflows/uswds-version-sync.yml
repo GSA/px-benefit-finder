@@ -10,11 +10,19 @@ jobs:
     uswds-version-check:
         runs-on: ubuntu-latest
         environment: ${{ github.head_ref || github.ref_name }}
-        steps:      
+        steps:    
+            - name: Install github command line tool
+              run: |
+                curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+                echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+                sudo apt update
+                sudo apt install gh
             - name: Cloning the Repo and initiating the Submodule
+              env:
+                GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
               run: |
                 echo "cloning the repo and initiating the usagov-2021 submodule"
-                git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
+                gh repo clone GSA/px-bears-drupal
                 cd px-bears-drupal
                 git submodule init
                 git pull --recurse-submodules

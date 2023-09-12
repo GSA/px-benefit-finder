@@ -351,17 +351,21 @@ export async function DataDate(
         const inputValues =
           foundCriteria.fieldset?.inputs[0].inputCriteria.values
 
-        if (eventTargetID.includes('day')) {
-          inputValues[0].value.day = eventTargetValue
-        }
-        if (eventTargetID.includes('month')) {
-          inputValues[0].value.month = eventTargetValue
-        }
-        if (eventTargetID.includes('year')) {
-          inputValues[0].value.year = eventTargetValue
-        }
+        if (eventTargetID) {
+          if (eventTargetID.includes('day')) {
+            inputValues[0].value.day = eventTargetValue
+          }
+          if (eventTargetID.includes('month')) {
+            inputValues[0].value.month = eventTargetValue
+          }
+          if (eventTargetID.includes('year')) {
+            inputValues[0].value.year = eventTargetValue
+          }
 
-        inputValues[0].value = { ...inputValues[0].value }
+          inputValues[0].value = { ...inputValues[0].value }
+        } else {
+          inputValues[0].value = eventTargetValue
+        }
         inputValues[0].selected = true
         return setCurrentData(newData)
       }
@@ -392,9 +396,16 @@ export const DataFromParams = (
   params.filter(param => param.criteriaKey !== sharedToken)
 
   stepDataArray.forEach(arr => {
-    params.forEach(param =>
-      PUT.Data(param.criteriaKey, arr, setCurrentData, param.value)
-    )
+    arr.completed = true
+    params.forEach(param => {
+      const v = param.value.includes('{')
+        ? JSON.parse(param.value)
+        : param.value
+      console.log(v)
+      v !== undefined && typeof v === 'object'
+        ? PUT.DataDate(param.criteriaKey, arr, setCurrentData, v)
+        : PUT.Data(param.criteriaKey, arr, setCurrentData, v)
+    })
   })
 }
 

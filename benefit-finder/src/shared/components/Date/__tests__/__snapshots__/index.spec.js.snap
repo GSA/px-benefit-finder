@@ -103,9 +103,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
       className="usa-input "
       id="date_of_birth_day"
       inputMode="numeric"
-      maxLength="2"
       name="date_of_birth_day"
-      pattern="[0-9]*"
       value=""
     />
   </div>
@@ -123,10 +121,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
       className="usa-input "
       id="date_of_birth_year"
       inputMode="numeric"
-      maxLength="4"
-      minLength="4"
       name="date_of_birth_year"
-      pattern="[0-9]*"
       value=""
     />
   </div>

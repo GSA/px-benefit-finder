@@ -164,6 +164,31 @@ const LifeEventSection = ({
     )
   }
 
+  const handleInputValidation = event => {
+    if (/^[0-9]*$/.test(`${event.target.value}`)) {
+      if (event.target.id.includes('day')) {
+        if (event.target.value.length === 2) {
+          return /^(0?[1-9]|[12][0-9]|3[01])$/.test(`${event.target.value}`)
+        }
+        return event.target.value.length < 3
+      }
+      if (event.target.id.includes('year')) {
+        // if (/^[0-9]*$/.test(`${event.target.value}`)) {
+        if (event.target.value.length === 4) {
+          return /^(19[0-9][0-9]|200[0-9]|202[0-3])$/.test(
+            `${event.target.value}`
+          )
+        }
+        return event.target.value.length < 5
+        // }
+      }
+    }
+
+    if (event.target.id.includes('month')) {
+      return event.target.value.length === 1
+    }
+  }
+
   /**
    * a function that handles the current selected value of our radio
    * and clears validation error if resolved
@@ -171,13 +196,14 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
-    apiCalls.PUT.DataDate(
-      criteriaKey,
-      currentData,
-      setCurrentData,
-      event.target.value,
-      event.target.id
-    )
+    handleInputValidation(event) === true &&
+      apiCalls.PUT.DataDate(
+        criteriaKey,
+        currentData,
+        setCurrentData,
+        event.target.value,
+        event.target.id
+      )
   }
 
   // manage the display of our modal initializer
@@ -360,7 +386,9 @@ const LifeEventSection = ({
                                   required={
                                     Object.keys(
                                       input.inputCriteria.values[0]?.value
-                                    ).length < 3
+                                    ).length < 3 &&
+                                    input.inputCriteria.values[0]?.value?.year
+                                      ?.length !== 4
                                       ? item.fieldset.required
                                       : 'FALSE'
                                   }

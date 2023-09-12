@@ -53,8 +53,6 @@ const Date = ({ onChange, value, required, ui }) => {
           aria-describedby="mdHint"
           id="date_of_birth_day"
           name="date_of_birth_day"
-          maxLength="2"
-          pattern="[0-9]*"
           inputMode="numeric"
           value={(value && value.day) || ''}
           onChange={onChange}
@@ -69,9 +67,6 @@ const Date = ({ onChange, value, required, ui }) => {
           aria-describedby="mdHint"
           id="date_of_birth_year"
           name="date_of_birth_year"
-          minLength="4"
-          maxLength="4"
-          pattern="[0-9]*"
           inputMode="numeric"
           value={(value && value.year) || ''}
           onChange={onChange}

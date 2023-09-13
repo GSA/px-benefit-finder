@@ -67,7 +67,6 @@ function App({ appContent }) {
           setStepData,
           sharedToken
         )
-      stepDataArray && console.log(stepDataArray.length)
       stepDataArray && setStep(stepDataArray.length)
     }
   }, [windowQuery, hasQueryParams, stepDataArray])

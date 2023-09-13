@@ -401,7 +401,6 @@ export const DataFromParams = (
       const v = param.value.includes('{')
         ? JSON.parse(param.value)
         : param.value
-      console.log(v)
       v !== undefined && typeof v === 'object'
         ? PUT.DataDate(param.criteriaKey, arr, setCurrentData, v)
         : PUT.Data(param.criteriaKey, arr, setCurrentData, v)

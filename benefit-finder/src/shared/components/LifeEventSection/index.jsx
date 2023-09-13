@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
+import { dateInputValidation } from '../../utils/inputValidation'
 import * as apiCalls from '../../api/apiCalls'
 import {
   Alert,
@@ -183,13 +184,21 @@ const LifeEventSection = ({
    */
   const handleDateChanged = (event, criteriaKey) => {
     window.history.replaceState({}, '', window.location.pathname)
-    apiCalls.PUT.DataDate(
-      criteriaKey,
-      currentData,
-      setCurrentData,
-      event.target.value,
-      event.target.id
-    )
+    dateInputValidation(event) === true &&
+      apiCalls.PUT.DataDate(
+        criteriaKey,
+        currentData,
+        setCurrentData,
+        event.target.value,
+        event.target.id
+      )
+  }
+
+  const handleDateRequired = (values, item) => {
+    return Object.keys(values?.value).length === 3 &&
+      values?.value?.year?.length === 4
+      ? 'FALSE'
+      : item.fieldset.required
   }
 
   // manage the display of our modal initializer
@@ -202,8 +211,6 @@ const LifeEventSection = ({
     window.scrollTo(0, 0)
     getRequiredFields()
   }, [])
-
-  console.log('currentData', currentData, 'step', step)
 
   return (
     data && (
@@ -371,13 +378,10 @@ const LifeEventSection = ({
                             return (
                               <div key={fieldSetId}>
                                 <Date
-                                  required={
-                                    Object.keys(
-                                      input.inputCriteria.values[0]?.value
-                                    ).length < 3
-                                      ? item.fieldset.required
-                                      : 'FALSE'
-                                  }
+                                  required={handleDateRequired(
+                                    input.inputCriteria.values[0],
+                                    item
+                                  )}
                                   value={input.inputCriteria.values[0]?.value}
                                   onChange={event =>
                                     handleDateChanged(

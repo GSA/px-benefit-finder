@@ -184,6 +184,13 @@ const LifeEventSection = ({
       )
   }
 
+  const handleDateRequired = (values, item) => {
+    return Object.keys(values?.value).length === 3 &&
+      values?.value?.year?.length === 4
+      ? 'FALSE'
+      : item.fieldset.required
+  }
+
   // manage the display of our modal initializer
   useEffect(() => {
     data && step === data.length ? setModal(true) : setModal(false)
@@ -194,8 +201,6 @@ const LifeEventSection = ({
     window.scrollTo(0, 0)
     getRequiredFields()
   }, [])
-
-  console.log('currentData', currentData, 'step', step)
 
   return (
     data && (
@@ -363,7 +368,7 @@ const LifeEventSection = ({
                             return (
                               <div key={fieldSetId}>
                                 <Date
-                                  required={handleDateRequiered(
+                                  required={handleDateRequired(
                                     input.inputCriteria.values[0],
                                     item
                                   )}

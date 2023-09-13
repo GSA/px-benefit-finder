@@ -329,7 +329,7 @@ const LifeEventSection = ({
                                           !optionSelected &&
                                           item.fieldset.required
                                         }
-                                        id={inputId}
+                                        name={fieldSetId}
                                         key={inputId}
                                         label={option.value}
                                         value={option.value}

@@ -331,6 +331,7 @@ const LifeEventSection = ({
                                         }
                                         name={fieldSetId}
                                         key={inputId}
+                                        id={inputId}
                                         label={option.value}
                                         value={option.value}
                                         checked={option.selected || false}

@@ -371,6 +371,7 @@ Array [
               <input
                 checked={false}
                 className=""
+                id="applicant_citizen_status_0_0"
                 name="applicant_citizen_status_0"
                 onChange={[Function]}
                 type="radio"
@@ -378,6 +379,7 @@ Array [
               />
               <label
                 className=""
+                htmlFor="applicant_citizen_status_0_0"
               >
                 Yes
               </label>
@@ -388,6 +390,7 @@ Array [
               <input
                 checked={false}
                 className=""
+                id="applicant_citizen_status_0_1"
                 name="applicant_citizen_status_0"
                 onChange={[Function]}
                 type="radio"
@@ -395,6 +398,7 @@ Array [
               />
               <label
                 className=""
+                htmlFor="applicant_citizen_status_0_1"
               >
                 No
               </label>
@@ -418,6 +422,7 @@ Array [
               <input
                 checked={false}
                 className=""
+                id="applicant_care_for_child_0_0"
                 name="applicant_care_for_child_0"
                 onChange={[Function]}
                 type="radio"
@@ -425,6 +430,7 @@ Array [
               />
               <label
                 className=""
+                htmlFor="applicant_care_for_child_0_0"
               >
                 Yes
               </label>
@@ -435,6 +441,7 @@ Array [
               <input
                 checked={false}
                 className=""
+                id="applicant_care_for_child_0_1"
                 name="applicant_care_for_child_0"
                 onChange={[Function]}
                 type="radio"
@@ -442,6 +449,7 @@ Array [
               />
               <label
                 className=""
+                htmlFor="applicant_care_for_child_0_1"
               >
                 No
               </label>
@@ -465,6 +473,7 @@ Array [
               <input
                 checked={false}
                 className=""
+                id="applicant_paid_funeral_expenses_0_0"
                 name="applicant_paid_funeral_expenses_0"
                 onChange={[Function]}
                 type="radio"
@@ -472,6 +481,7 @@ Array [
               />
               <label
                 className=""
+                htmlFor="applicant_paid_funeral_expenses_0_0"
               >
                 Yes
               </label>
@@ -482,6 +492,7 @@ Array [
               <input
                 checked={false}
                 className=""
+                id="applicant_paid_funeral_expenses_0_1"
                 name="applicant_paid_funeral_expenses_0"
                 onChange={[Function]}
                 type="radio"
@@ -489,6 +500,7 @@ Array [
               />
               <label
                 className=""
+                htmlFor="applicant_paid_funeral_expenses_0_1"
               >
                 No
               </label>
@@ -512,6 +524,7 @@ Array [
               <input
                 checked={false}
                 className=""
+                id="applicant_funeral_reimbursement_0_0"
                 name="applicant_funeral_reimbursement_0"
                 onChange={[Function]}
                 type="radio"
@@ -519,6 +532,7 @@ Array [
               />
               <label
                 className=""
+                htmlFor="applicant_funeral_reimbursement_0_0"
               >
                 Yes
               </label>
@@ -529,6 +543,7 @@ Array [
               <input
                 checked={false}
                 className=""
+                id="applicant_funeral_reimbursement_0_1"
                 name="applicant_funeral_reimbursement_0"
                 onChange={[Function]}
                 type="radio"
@@ -536,6 +551,7 @@ Array [
               />
               <label
                 className=""
+                htmlFor="applicant_funeral_reimbursement_0_1"
               >
                 No
               </label>

@@ -42,6 +42,7 @@ const Radio = ({
           value={value || id}
           checked={checked}
           onChange={onChange}
+          id={id}
         />
         <Label className="usa-radio__label" htmlFor={id} label={label} />
       </div>

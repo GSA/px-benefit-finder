@@ -183,10 +183,10 @@ const LifeEventSection = ({
   }
 
   const handleDateRequiered = (values, item) => {
-    return Object.keys(values?.value).length < 3 &&
-      values?.value?.year?.length !== 4
-      ? item.fieldset.required
-      : 'FALSE'
+    return Object.keys(values?.value).length === 3 &&
+      values?.value?.year?.length === 4
+      ? 'FALSE'
+      : item.fieldset.required
   }
 
   // manage the display of our modal initializer

@@ -156,6 +156,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleChanged = (event, criteriaKey) => {
+    window.history.replaceState({}, '', window.location.pathname)
     apiCalls.PUT.Data(
       criteriaKey,
       currentData,
@@ -171,6 +172,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
+    window.history.replaceState({}, '', window.location.pathname)
     apiCalls.PUT.DataDate(
       criteriaKey,
       currentData,
@@ -190,6 +192,8 @@ const LifeEventSection = ({
     window.scrollTo(0, 0)
     getRequiredFields()
   }, [])
+
+  console.log('currentData', currentData, 'step', step)
 
   return (
     data && (

@@ -138,8 +138,18 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
           <div className="result-view-share-results">
             <Heading headingLevel={3}>{shareResults?.heading}</Heading>
             <div className="result-view-share-results-button-group">
-              <ShareButton ui={shareResults?.shareButton} />
-              <EmailButton ui={shareResults?.emailButton} />
+              <ShareButton
+                ui={shareResults?.shareButton}
+                data={
+                  stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
+                }
+              />
+              <EmailButton
+                ui={shareResults?.emailButton}
+                data={
+                  stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
+                }
+              />
               <PrintButton ui={shareResults?.printButton} />
             </div>
             <p>{shareResults?.description}</p>

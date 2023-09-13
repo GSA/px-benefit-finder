@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button } from '../index'
+import buildURIParameter from '../../utils/buildURIParameter'
 
 /**
  * a functional component that renders a button with copy-to-cipboard functionality
@@ -7,18 +8,20 @@ import { Button } from '../index'
  * @return {html} returns a semantic html button element with a custom function onClick event
  */
 
-const ShareButton = ({ ui }) => {
+const ShareButton = ({ ui, data }) => {
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href
    */
-  const [shareLink, setShareLink] = useState(() => window.location.href)
+  const [shareLink, setShareLink] = useState(() =>
+    buildURIParameter(window.location.href, data)
+  )
 
   /**
    * a handler that copies the current window location href to the users clipboard
    */
   const handleClick = () => {
-    setShareLink(window.location.href)
+    setShareLink(buildURIParameter(window.location.href, data))
     navigator.clipboard.writeText(shareLink).then(
       () => alert(`copied successfully! ${shareLink}`),
       err => alert('Failed to copy', err)

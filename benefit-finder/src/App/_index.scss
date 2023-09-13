@@ -9,7 +9,7 @@
   }
 
   .usa-step-indicator__segment-label {
-    color: color.$medium-grey;
+    color: color.$dark-medium-grey;
   }
 
   .usa-step-indicator__segment--complete .usa-step-indicator__segment-label {
@@ -25,7 +25,7 @@
   }
 
   .usa-hint--required {
-    color: color.$medium-grey !important;
+    color: color.$dark-medium-grey !important;
   }
 
   .usa-radio__input:checked + .usa-radio__label::before {

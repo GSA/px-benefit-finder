@@ -157,6 +157,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleChanged = (event, criteriaKey) => {
+    window.history.replaceState({}, '', window.location.pathname)
     apiCalls.PUT.Data(
       criteriaKey,
       currentData,
@@ -172,6 +173,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
+    window.history.replaceState({}, '', window.location.pathname)
     dateInputValidation(event) === true &&
       apiCalls.PUT.DataDate(
         criteriaKey,
@@ -180,13 +182,6 @@ const LifeEventSection = ({
         event.target.value,
         event.target.id
       )
-  }
-
-  const handleDateRequiered = (values, item) => {
-    return Object.keys(values?.value).length === 3 &&
-      values?.value?.year?.length === 4
-      ? 'FALSE'
-      : item.fieldset.required
   }
 
   // manage the display of our modal initializer
@@ -199,6 +194,8 @@ const LifeEventSection = ({
     window.scrollTo(0, 0)
     getRequiredFields()
   }, [])
+
+  console.log('currentData', currentData, 'step', step)
 
   return (
     data && (

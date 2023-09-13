@@ -131,12 +131,22 @@ const LifeEventSection = ({
    * @param {number} updateIndex - value which to update step count
    * @return {null} only executes inherited functions
    */
-  const handleUpdate = updateIndex => {
+  const handleForwardUpdate = updateIndex => {
     if (handleCheckRequriedFields() === true) {
       // set complete step usa-step-indicator__segment--complete
       setStep(step + updateIndex)
       setStepData(updateIndex)
     }
+  }
+
+  /**
+   * a function that updates our step count and set our data index
+   * @function
+   * @param {number} updateIndex - value which to update step count
+   * @return {null} only executes inherited functions
+   */
+  const handleBackUpdate = updateIndex => {
+    setStep(step + updateIndex)
   }
 
   /**
@@ -427,11 +437,11 @@ const LifeEventSection = ({
                 })}
               </div>
             )}
-            <Button secondary onClick={() => handleUpdate(-1)}>
+            <Button secondary onClick={() => handleBackUpdate(-1)}>
               {buttonGroup[0].value}
             </Button>
             {modal === false ? (
-              <Button onClick={() => handleUpdate(1)}>
+              <Button onClick={() => handleForwardUpdate(1)}>
                 {buttonGroup[1].value}
               </Button>
             ) : (

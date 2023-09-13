@@ -2,6 +2,7 @@ name: Stale Branches
 
 on:
   workflow_dispatch:
+# Runs on Mondays at 4 am
   schedule:
     - cron: '0 4 * * 1'
     
@@ -15,58 +16,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v4
 
-    - name: Install github command line tool
+    - name: stale-branches
+      id: stale-branches
+      shell: bash
       run: |
-        curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-        sudo apt update
-        sudo apt install gh
-
-    - name: Find stale branches
-      run: |
-
-        cd px-bears-drupal
-        # Define the threshold for stale branches (e.g., 30 days)
         STALE_THRESHOLD_DAYS=30
+        # Make a list of all branches
+        
+        git fetch --all --prune 
+        output=($(git branch -r |  grep -v "main\|release" | xargs echo -n ))
 
-        # Get the current date in ISO 8601 format
-        CURRENT_DATE=$(date -I)
-
-        # Loop through all branches in the repository
-        for branch in $(git for-each-ref --format='%(refname:short) %(committerdate:short)' refs/heads/); do
-          branch_name=$(echo $branch | cut -d ' ' -f 1)
-          last_commit_date=$(echo $branch | cut -d ' ' -f 2)
-
-          # Calculate the age of the branch in days
-          branch_age=$(( ($(date -d $CURRENT_DATE +%s) - $(date -d $last_commit_date +%s)) / 86400 ))
+        branches=""
+        for branch in "${output[@]}"; do 
+          echo "checking branch: ${branch}"
+          now=$(date +'%s')
+          commit_time=$(git log -1 --date=raw ${branch} | grep ^Date | awk '{print $2}')
+          commit_days=$(( (${now} - ${commit_time}) / 86400 ))
+          echo "Branch: $branch, Last Commit Date: $commit_time, Age: $commit_days days"
 
           # Check if the branch is stale
-          if [ $branch_age -ge $STALE_THRESHOLD_DAYS ]; then
-            # Create a pull request to merge the stale branch into the main branch
-            # You can use the GitHub CLI or API to create the PR here
-            # Example using GitHub CLI:
-            gh pr create --base main --head $branch_name --title "Merge stale branch $branch_name"
+          if [[ ${commit_days} -gt ${STALE_THRESHOLD_DAYS} ]]; then
+              branch_name=$(echo $branch | sed 's/origin\///g')
+              branches="${branches} ${branch_name}"
           fi
         done
+        echo "branches=$(echo ${branches} | xargs )">>$GITHUB_OUTPUT
+
+    - name: Create PR for Stale Branches
       env:
+        branches: ${{ steps.stale-branches.outputs.branches}}
         GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
-  
-# jobs:
-#   stale_branches:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Stale Branches
-#       uses: crs-k/stale-branches@v3.0.0
-#       with:
-#         repo-token: '${{ secrets.ADD_TO_PROJECT_PAT }}'
-#         days-before-stale: 120
-#         days-before-delete: 180
-#         comment-updates: true
-#         max-issues: 20
-#         tag-committer: true
-#         stale-branch-label: stale branch
-#         compare-branches: 'info'
-#         branches-filter-regex: '^((?!dependabot))'
+        Tech_Lead: '${{ vars.TECH_LEAD }}'
+      run: |
+        branches=( ${branches} )
+        for branch in "${branches[@]}"; do
+          git fetch --all
+          git checkout ${branch}
+          git branch --show-current
+          gh pr create --base "main" --head ${branch} --title  "[Stale Branch] - Please review ${branch}" --assignee ${{ env.Tech_Lead }} --reviewer ${{ env.Tech_Lead }} --body "Hi @${{ env.Tech_Lead }} This PR is ready for your review! This branch has been stale. Thank you!"
+        done

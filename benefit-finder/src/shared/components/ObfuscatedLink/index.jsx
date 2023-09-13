@@ -23,6 +23,7 @@ const ObfuscatedLink = ({
   target,
   ext,
   noCarrot,
+  triggerRef,
   ...props
 }) => {
   // set our link as external, will be decorated by uswds css
@@ -38,6 +39,7 @@ const ObfuscatedLink = ({
       rel={rel}
       target={target}
       className={useHandleClassName({ className, defaultClasses })}
+      ref={triggerRef}
       {...props}
     >
       {children}

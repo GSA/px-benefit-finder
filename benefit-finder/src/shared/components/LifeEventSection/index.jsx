@@ -90,6 +90,7 @@ const LifeEventSection = ({
       field.classList.remove('usa-input--error')
     })
     currentData.completed = true
+    console.log(currentData, currentData.completed)
     setValues([])
     return true
   }
@@ -230,7 +231,7 @@ const LifeEventSection = ({
               data={data}
               backLinkLabel={stepIndicator.stepBackLink}
               handleCheckRequriedFields={() => handleCheckRequriedFields()}
-              completed={currentData.section.completed}
+              completed={data}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (

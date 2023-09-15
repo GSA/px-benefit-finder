@@ -22,6 +22,7 @@ Array [
             className="usa-step-indicator__segments"
           >
             <li
+              aria-current={true}
               className="usa-step-indicator__segment usa-step-indicator__segment--current usa-step-indicator__segment--complete"
               onClick={[Function]}
             >
@@ -29,13 +30,10 @@ Array [
                 className="usa-step-indicator__segment-label"
               >
                 About the applicant
-                 
-                <span
-                  className="usa-sr-only"
-                />
               </span>
             </li>
             <li
+              aria-current={false}
               className="usa-step-indicator__segment usa-step-indicator__segment "
               onClick={[Function]}
             >
@@ -43,10 +41,6 @@ Array [
                 className="usa-step-indicator__segment-label"
               >
                 About the deceased
-                 
-                <span
-                  className="usa-sr-only"
-                />
               </span>
             </li>
           </ol>

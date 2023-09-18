@@ -75,7 +75,7 @@ const StepIndicator = ({
           className="usa-step-indicator__segment-label"
         >
           {!noHeadings && heading}
-          {completed && (
+          {current === index ? null : (
             <CompletedSR
               key={`step-indicator-sr-${index}`}
               current={current}
@@ -89,7 +89,7 @@ const StepIndicator = ({
 
   return (
     <div>
-      <div className="usa-step-indicator" aria-label="progress">
+      <div className="usa-step-indicator" aria-label="progress" tabIndex={0}>
         <ol className="usa-step-indicator__segments">
           {data &&
             data.map((step, i) => {

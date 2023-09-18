@@ -17,6 +17,7 @@ Array [
         <div
           aria-label="progress"
           className="usa-step-indicator"
+          tabIndex={0}
         >
           <ol
             className="usa-step-indicator__segments"
@@ -41,6 +42,11 @@ Array [
                 className="usa-step-indicator__segment-label"
               >
                 About the deceased
+                <span
+                  className="usa-sr-only"
+                >
+                  not-completed
+                </span>
               </span>
             </li>
           </ol>

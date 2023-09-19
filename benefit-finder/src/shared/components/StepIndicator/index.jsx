@@ -21,7 +21,6 @@ const StepIndicator = ({
   setCurrent,
   backLinkLabel,
   handleCheckRequriedFields,
-  completed,
 }) => {
   /**
    * a functional component that supports a11y for completed steps
@@ -75,7 +74,7 @@ const StepIndicator = ({
           className="usa-step-indicator__segment-label"
         >
           {!noHeadings && heading}
-          {current === index ? null : (
+          {current === index && completed !== true ? null : (
             <CompletedSR
               key={`step-indicator-sr-${index}`}
               current={current}

@@ -62,7 +62,6 @@ Array [
       </div>
       <div
         id="benefit-section"
-        onChange={[Function]}
       >
         <div
           className=""

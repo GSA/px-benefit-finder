@@ -37,7 +37,10 @@ const LifeEventSection = ({
   setVerifyStep,
   setViewResults,
   ui,
+  modalOpen,
+  setModalOpen,
 }) => {
+  // const currentStep = step - 1
   // state
   const [modal, setModal] = useState(false)
   const [currentData, setCurrentData] = useState(() => data && data[step - 1])
@@ -51,6 +54,17 @@ const LifeEventSection = ({
     requiredLabel,
     sectionHeadings,
   } = ui
+
+  /**
+   * a function that updates our current data state
+   * @function
+   * @return {object} object as state
+   */
+  const handleUpdateData = () => {
+    data[step - 1] = { ...currentData }
+    handleData([...data])
+    // setCurrentData(currentData)
+  }
 
   /**
    *
@@ -90,7 +104,7 @@ const LifeEventSection = ({
       field.classList.remove('usa-input--error')
     })
     currentData.completed = true
-    console.log(currentData, currentData.completed)
+    handleUpdateData()
     setValues([])
     return true
   }
@@ -149,16 +163,6 @@ const LifeEventSection = ({
    */
   const handleBackUpdate = updateIndex => {
     setStep(step + updateIndex)
-  }
-
-  /**
-   * a function that updates our current data state
-   * @function
-   * @return {object} object as state
-   */
-  const handleUpdateData = () => {
-    handleData([...currentData])
-    setCurrentData(currentData)
   }
 
   /**
@@ -231,11 +235,10 @@ const LifeEventSection = ({
               data={data}
               backLinkLabel={stepIndicator.stepBackLink}
               handleCheckRequriedFields={() => handleCheckRequriedFields()}
-              completed={data}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
-              <div id="benefit-section" onChange={() => handleUpdateData}>
+              <div id="benefit-section">
                 <Alert
                   alertFieldRef={alertFieldRef}
                   heading={ui.alertBanner.heading}
@@ -461,6 +464,9 @@ const LifeEventSection = ({
                   navItemTwoFunction={setViewResults}
                   triggerLabel={buttonGroup[1].value}
                   handleCheckRequriedFields={handleCheckRequriedFields}
+                  modalOpen={modalOpen}
+                  setModalOpen={setModalOpen}
+                  completed={currentData.completed}
                 />
               </div>
             )}

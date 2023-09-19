@@ -337,8 +337,9 @@ const LifeEventSection = ({
                                           !optionSelected &&
                                           item.fieldset.required
                                         }
-                                        id={inputId}
+                                        name={fieldSetId}
                                         key={inputId}
+                                        id={inputId}
                                         label={option.value}
                                         value={option.value}
                                         checked={option.selected || false}

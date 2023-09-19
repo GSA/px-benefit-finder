@@ -1,4 +1,5 @@
 @use '../shared/styles/colors/index.scss' as color;
+@use '../shared/styles/mixins/_index.scss' as *;
 
 #benefit-finder {
   html,
@@ -9,7 +10,7 @@
   }
 
   .usa-step-indicator__segment-label {
-    color: color.$medium-grey;
+    color: color.$dark-medium-grey;
   }
 
   .usa-step-indicator__segment--complete .usa-step-indicator__segment-label {
@@ -25,12 +26,16 @@
   }
 
   .usa-hint--required {
-    color: color.$medium-grey !important;
+    color: color.$dark-medium-grey !important;
   }
 
   .usa-radio__input:checked + .usa-radio__label::before {
     background-color: color.$officer-navy;
     box-shadow: 0 0 0 2px color.$officer-navy;
+  }
+
+  .a11y-sr-only {
+    @include sr-only;
   }
 }
 

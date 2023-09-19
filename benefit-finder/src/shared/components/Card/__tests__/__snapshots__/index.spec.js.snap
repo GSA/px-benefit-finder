@@ -13,6 +13,7 @@ exports[`Card renders a match to the previous snapshot 1`] = `
       >
         <h3
           className=""
+          id=""
         />
       </div>
       <p

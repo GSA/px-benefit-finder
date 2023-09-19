@@ -9,6 +9,7 @@ exports[`VerifySelectionsView renders a match to the previous snapshot 1`] = `
   >
     <h1
       className=""
+      id="skip-to-h1"
     />
     <div
       className="section-wrapper"

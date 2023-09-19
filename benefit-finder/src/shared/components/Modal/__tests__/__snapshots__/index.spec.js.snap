@@ -7,6 +7,8 @@ exports[`Modal renders a match to the previous snapshot 1`] = `
   <a
     className=""
     onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
   />
 </div>
 `;

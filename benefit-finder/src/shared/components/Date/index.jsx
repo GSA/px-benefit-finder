@@ -23,13 +23,16 @@ const Date = ({ onChange, value, required, ui }) => {
         <label className="usa-label" htmlFor="date_of_birth_month">
           {labelMonth}
         </label>
+        <div id="month-description" className="a11y-sr-only">
+          Select a month from the list
+        </div>
         <select
           className={`usa-select ${
             required === 'TRUE' ? 'required-field' : ''
           }`}
           id="date_of_birth_month"
           name="date_of_birth_month"
-          aria-describedby="mdHint"
+          aria-describedby="month-description"
           required="required"
           value={(value && value.month) || ''}
           onChange={onChange}
@@ -48,9 +51,12 @@ const Date = ({ onChange, value, required, ui }) => {
         <label className="usa-label" htmlFor="date_of_birth_day">
           {labelDay}
         </label>
+        <div id="day-description" className="a11y-sr-only">
+          Enter numerals for day
+        </div>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
-          aria-describedby="mdHint"
+          aria-describedby="day-description"
           id="date_of_birth_day"
           name="date_of_birth_day"
           inputMode="numeric"
@@ -62,9 +68,12 @@ const Date = ({ onChange, value, required, ui }) => {
         <label className="usa-label" htmlFor="date_of_birth_year">
           {labelYear}
         </label>
+        <div id="year-description" className="a11y-sr-only">
+          Enter numerals for year
+        </div>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
-          aria-describedby="mdHint"
+          aria-describedby="year-description"
           id="date_of_birth_year"
           name="date_of_birth_year"
           inputMode="numeric"

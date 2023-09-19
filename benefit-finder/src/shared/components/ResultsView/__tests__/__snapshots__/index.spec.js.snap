@@ -12,6 +12,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
     >
       <h1
         className=""
+        id="skip-to-h1"
       >
         Your Custom List
       </h1>
@@ -39,6 +40,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
       </button>
       <h3
         className=""
+        id=""
       >
         Results
       </h3>
@@ -69,6 +71,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
       >
         <h3
           className=""
+          id=""
         >
           Benefits you did not qualify for
         </h3>
@@ -92,6 +95,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
       >
         <h3
           className=""
+          id=""
         >
           Other benefits that might be relevant to you
         </h3>
@@ -111,6 +115,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
                   >
                     <h3
                       className=""
+                      id=""
                     >
                       Approaching Retirement
                     </h3>
@@ -137,6 +142,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
                   >
                     <h3
                       className=""
+                      id=""
                     >
                       Living with disability or illness
                     </h3>
@@ -157,6 +163,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
       >
         <h3
           className=""
+          id=""
         >
           Sharing and printing
         </h3>

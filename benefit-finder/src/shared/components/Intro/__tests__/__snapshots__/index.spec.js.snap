@@ -12,6 +12,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
     >
       <h1
         className=""
+        id="skip-to-h1"
       >
         NEW Find federal benefits after the loss of a loved one
       </h1>
@@ -29,6 +30,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
   >
     <h2
       className=""
+      id=""
     >
       Steps
     </h2>
@@ -82,6 +84,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
       >
         <h2
           className=""
+          id=""
         >
           Before you start:
         </h2>

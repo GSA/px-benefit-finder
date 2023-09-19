@@ -124,8 +124,14 @@ Array [
                 >
                   Month
                 </label>
+                <div
+                  className="a11y-sr-only"
+                  id="month-description"
+                >
+                  Select a month from the list
+                </div>
                 <select
-                  aria-describedby="mdHint"
+                  aria-describedby="month-description"
                   className="usa-select required-field"
                   id="date_of_birth_month"
                   name="date_of_birth_month"
@@ -210,8 +216,14 @@ Array [
                 >
                   Day
                 </label>
+                <div
+                  className="a11y-sr-only"
+                  id="day-description"
+                >
+                  Enter numerals for day
+                </div>
                 <input
-                  aria-describedby="mdHint"
+                  aria-describedby="day-description"
                   className="usa-input required-field"
                   id="date_of_birth_day"
                   inputMode="numeric"
@@ -229,8 +241,14 @@ Array [
                 >
                   Year
                 </label>
+                <div
+                  className="a11y-sr-only"
+                  id="year-description"
+                >
+                  Enter numerals for year
+                </div>
                 <input
-                  aria-describedby="mdHint"
+                  aria-describedby="year-description"
                   className="usa-input required-field"
                   id="date_of_birth_year"
                   inputMode="numeric"

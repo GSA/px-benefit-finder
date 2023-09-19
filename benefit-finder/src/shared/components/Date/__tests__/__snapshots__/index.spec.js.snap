@@ -13,8 +13,14 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     >
       Month
     </label>
+    <div
+      className="a11y-sr-only"
+      id="month-description"
+    >
+      Select a month from the list
+    </div>
     <select
-      aria-describedby="mdHint"
+      aria-describedby="month-description"
       className="usa-select "
       id="date_of_birth_month"
       name="date_of_birth_month"
@@ -98,8 +104,14 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     >
       Day
     </label>
+    <div
+      className="a11y-sr-only"
+      id="day-description"
+    >
+      Enter numerals for day
+    </div>
     <input
-      aria-describedby="mdHint"
+      aria-describedby="day-description"
       className="usa-input "
       id="date_of_birth_day"
       inputMode="numeric"
@@ -116,8 +128,14 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     >
       Year
     </label>
+    <div
+      className="a11y-sr-only"
+      id="year-description"
+    >
+      Enter numerals for year
+    </div>
     <input
-      aria-describedby="mdHint"
+      aria-describedby="year-description"
       className="usa-input "
       id="date_of_birth_year"
       inputMode="numeric"

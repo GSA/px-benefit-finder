@@ -171,7 +171,7 @@ jobs:
           name: Injecting container name to the manifest.yml
           command: |
             cd px-benefit-finder/usagov-2021
-            sed -i "s/    image: .*waf-latest*/    image: ghcr.io/gsa/px-benefit-finder/benefit-finder-waf:main-latest/g" manifest.yml
+            sed -i "s/    image: gsatts\/usagov-2021:waf-latest/    image: ghcr.io\/gsa\/px-benefit-finder\/benefit-finder-waf:main-latest/g" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^- name: waf#- name: benefit-finder-waf-main#" manifest.yml
             sed -i "s/  - secrets/  - secrets-$CIRCLE_BRANCH/g" manifest.yml

@@ -43,10 +43,6 @@ jobs:
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
-            sed -i -e '/CMS_HOST=/s/grep cms/grep benefit-finder-cms-main/' scripts/bootstrap.sh
-            sed -i -e '/S3_BUCKET=/s/storage/storage-main/' scripts/bootstrap.sh
-            sed -i -e '/S3_ENDPOINT=/s/storage/storage-main/' scripts/bootstrap.sh
-            sed -i -e '/SECRETS=/s/secrets/secrets-main/' scripts/bootstrap.sh
             sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/g" web/sites/default/settings.php
 
       - run: 
@@ -72,10 +68,6 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
-            sed -i "s/  - database/  - database-$CIRCLE_BRANCH/g" manifest.yml
-            sed -i "s/  - secrets/  - secrets-$CIRCLE_BRANCH/g" manifest.yml
-            sed -i "s/  - storage/  - storage-$CIRCLE_BRANCH/g" manifest.yml
-            sed -i "s/  - dbstorage/  - dbstorage-$CIRCLE_BRANCH/g" manifest.yml
             cat manifest.yml
 
       - run:
@@ -177,8 +169,7 @@ jobs:
             cd px-benefit-finder/usagov-2021
             sed -i "s/    image: gsatts\\/usagov-2021:waf-latest/    image: ghcr.io\\/gsa\\/px-benefit-finder\\/benefit-finder-waf:main-latest/g" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
-            sed -i "s#^- name: waf#- name: benefit-finder-waf-main#" manifest.yml
-            sed -i "s/  - secrets/  - secrets-$CIRCLE_BRANCH/g" manifest.yml
+            sed -i "s#^- name: waf#- name: benefit-finder-waf#" manifest.yml
             echo "      allow "$IP_S";      allow "$IP_1";      allow "$IP_3";      allow "$IP_4";      allow "$IP_5";      allow "$IP_6";      allow "$IP_7";      allow "$IP_8";      allow "$IP_9";      allow "$IP_10";      allow "$IP_BXL";      allow "$IP_2";" >> manifest.yml
 
       - run:
@@ -194,7 +185,7 @@ jobs:
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_main"
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-waf-main  --docker-image "ghcr.io/gsa/px-benefit-finder/benefit-finder-waf:main-latest" --docker-username "$CF_USER"
+            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-waf  --docker-image "ghcr.io/gsa/px-benefit-finder/benefit-finder-waf:main-latest" --docker-username "$CF_USER"
             docker logout
 
 # Orchestrate our job run sequence

@@ -45,7 +45,8 @@ jobs:
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
             sed -i -e '/CMS_HOST=/s/grep cms/grep benefit-finder-cms-main/' scripts/bootstrap.sh
             sed -i -e '/S3_BUCKET=/s/storage/storage-main/' scripts/bootstrap.sh
-            sed -i -e '/S3_ENDPOINT/s/storage/storage-main/' scripts/bootstrap.sh
+            sed -i -e '/S3_ENDPOINT=/s/storage/storage-main/' scripts/bootstrap.sh
+            sed -i -e '/SECRETS=/s/secrets/secrets-main/' scripts/bootstrap.sh
             sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/g" web/sites/default/settings.php
 
       - run: 

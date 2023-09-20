@@ -5,10 +5,10 @@ default_config: &defaults
   disk_quota: 1G
   timeout: 180
   routes:
-    - route: bears-storybook.app.cloud.gov
+    - route: benefit-finder-storybook.app.cloud.gov
       protocol: http2
 applications:
-- name: bears-storybook
+- name: benefit-finder-storybook
   <<: *defaults
   memory: 64M
   stack: cflinuxfs4

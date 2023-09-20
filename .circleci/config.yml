@@ -65,6 +65,10 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
+            sed -i "s#^  - database#  - database-'${CIRCLE_BRANCH}'#" manifest.yml
+            sed -i "s#^  - secrets#  - secrets-'${CIRCLE_BRANCH}'#" manifest.yml
+            sed -i "s#^  - storage#  - storage-'${CIRCLE_BRANCH}'#" manifest.yml
+            sed -i "s#^  - dbstorage#  - dbstorage-'${CIRCLE_BRANCH}'#" manifest.yml
             cat manifest.yml
 
       - run:
@@ -167,6 +171,7 @@ jobs:
             sed -i "s#^    image: .*waf-latest*#    image: ghcr.io/gsa/px-benefit-finder/benefit-finder-waf:main-latest#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^- name: waf#- name: benefit-finder-waf-main#" manifest.yml
+            sed -i "s#^  - secrets#  - secrets-'${CIRCLE_BRANCH}'#" manifest.yml
             echo "      allow "$IP_S";      allow "$IP_1";      allow "$IP_3";      allow "$IP_4";      allow "$IP_5";      allow "$IP_6";      allow "$IP_7";      allow "$IP_8";      allow "$IP_9";      allow "$IP_10";      allow "$IP_BXL";      allow "$IP_2";" >> manifest.yml
 
       - run:

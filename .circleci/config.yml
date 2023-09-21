@@ -55,6 +55,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             docker push "$DOCKERREPO:$IMAGE_TAG"
             docker logout
+            
 
       - run:
           name: Injecting container name to the manifest.yml

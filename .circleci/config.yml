@@ -89,8 +89,6 @@ jobs:
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
             cd px-benefit-finder/usagov-2021
-            cf spaces
-            cf target -o "$CF_ORG"  -s "$CF_SPACE_dev"
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
@@ -137,8 +135,6 @@ jobs:
             sudo dpkg -i cf-cli_amd64.deb
             cf -v
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
-            cf spaces
-            cf target -o "$CF_ORG"  -s "$CF_SPACE_dev"
             
       - run:
           name: Deploy Storybook

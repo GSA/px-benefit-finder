@@ -72,7 +72,7 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
-            sed -i "s#^    - database#  - benefit-finder-mysql-dev#" manifest.yml
+            sed -i "s#^    - database#    - benefit-finder-mysql-dev#" manifest.yml
             sed -i "s#^    - secrets#    - benefit-finder-secrets-dev#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-dev#" manifest.yml
             sed -i "s#^    - dbstorage#    - cloud.govbackup#" manifest.yml
@@ -91,6 +91,8 @@ jobs:
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
+            cf target -o "$CF_ORG"  -s "$CF_SPACE_dev"
+            cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"

@@ -96,7 +96,7 @@ jobs:
             cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
+            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
 
       - run:

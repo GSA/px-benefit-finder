@@ -72,7 +72,10 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
-            sed -i "s#^    - database: 1.5G#  memory: 512M#" manifest.yml
+            sed -i "s#^    - database#  - benefit-finder-mysql-dev#" manifest.yml
+            sed -i "s#^    - secrets#    - benefit-finder-secrets-dev#" manifest.yml
+            sed -i "s#^    - storage#    - benefit-finder-storage-dev#" manifest.yml
+            sed -i "s#^    - dbstorage#    - cloud.govbackup#" manifest.yml
             cat manifest.yml
 
       - run:

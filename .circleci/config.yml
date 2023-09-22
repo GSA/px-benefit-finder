@@ -89,6 +89,7 @@ jobs:
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_main"
             cd px-benefit-finder/usagov-2021
+            cf target -o "$CF_ORG"  -s "$CF_SPACE_main"
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
@@ -97,6 +98,7 @@ jobs:
           name: Enable benefit-finder module
           command: |
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_main"
+            cf target -o "$CF_ORG"  -s "$CF_SPACE_main"
             cf ssh cms --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0 && \
                                   /var/www/vendor/bin/drush pm:uninstall usagov_login && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_block && \

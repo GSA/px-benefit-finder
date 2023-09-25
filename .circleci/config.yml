@@ -77,7 +77,7 @@ jobs:
             sed -i "s#^    - database#    - benefit-finder-mysql-dev#" manifest.yml
             sed -i "s#^    - secrets#    - benefit-finder-secrets-dev#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-dev#" manifest.yml
-            sed -i "s#^    - dbstorage#    - cloud.govbackup#" manifest.yml
+            sed -i "s#^    - dbstorage#    - backup#" manifest.yml
             cat manifest.yml
 
       - run:

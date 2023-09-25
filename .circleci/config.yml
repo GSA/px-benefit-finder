@@ -161,47 +161,6 @@ jobs:
              echo "${storybook_username}:${storybook_password}" > Staticfile.auth
              cf push 
 
-  deploy_waf:
-    machine:
-      image: ubuntu-2004:202107-02
-
-    steps:
-      - run:
-          name: Cloning the Repo and initiating the Submodule
-          command: |
-            echo "cloning the repo and initiating the usagov-2021 submodule"
-            git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
-            cd px-benefit-finder
-            git submodule init
-            git submodule update
-
-
-      - run:
-          name: Injecting container name to the manifest.yml
-          command: |
-            cd px-benefit-finder/usagov-2021
-            sed -i "s/    image: gsatts\\/usagov-2021:waf-latest/    image: ghcr.io\\/gsa\\/px-benefit-finder\\/benefit-finder-waf:main-latest/g" manifest.yml
-            sed -i "s#^    - secauthsecrets##" manifest.yml
-            sed -i "s#^- name: waf#- name: benefit-finder-waf#" manifest.yml
-            echo "      allow "$IP_S";      allow "$IP_1";      allow "$IP_3";      allow "$IP_4";      allow "$IP_5";      allow "$IP_6";      allow "$IP_7";      allow "$IP_8";      allow "$IP_9";      allow "$IP_10";      allow "$IP_BXL";      allow "$IP_2";" >> manifest.yml
-
-      - run:
-          name: Setup CF CLI
-          command: |
-            curl -v -L -o cf-cli_amd64.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github"
-            sudo dpkg -i cf-cli_amd64.deb
-            cf -v
-
-      - run:
-          name: Deploy the the app to cloud.gov
-          command: |
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
-            
-            cf target -o "$CF_ORG"  -s "$CF_SPACE_dev"
-            cd px-benefit-finder/usagov-2021
-            echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-waf  --docker-image "ghcr.io/gsa/px-benefit-finder/benefit-finder-waf:main-latest" --docker-username "$CF_USER"
-            docker logout
 
 # Orchestrate our job run sequence
 workflows:
@@ -222,13 +181,6 @@ workflows:
               only:
                 - main
 
-# deploy_waf_workflow gets only triggered when we manually enter 'manual_deploy' parameter and set it to true boolean value. 
-  deploy_waf_workflow:
-    when:
-      and:
-        - equal: [ true, << pipeline.parameters.manual_deploy >> ]
-    jobs:
-      - deploy_waf
 
       
 

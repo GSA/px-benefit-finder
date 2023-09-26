@@ -107,6 +107,25 @@ export async function FindCriteria(arr, criteriaKey) {
 }
 
 /**
+ * a function that takes the search string and parses them into an array
+ * @function
+ * @param {string} url - array of fieldsets
+ * @return {array} returns array of objects
+ */
+export function GetQueryParams(url) {
+  const paramArray = url.slice(url.indexOf('?') + 1).split('&')
+  const selectedArray = paramArray.map(elem => {
+    const [key, val] = elem.split('=')
+
+    return {
+      criteriaKey: key,
+      value: decodeURIComponent(val),
+    }
+  })
+  return selectedArray
+}
+
+/**
  *
  * GET FUNCTIONS
  *
@@ -272,7 +291,7 @@ export const ElegibilityByCriteria = (selectedCriteria, data) => {
  * @param {object} currentData
  * @param {function} setCurrentData
  * @param {string} eventTargetValue
- * @return {JSON || Sring} returns JSON data if succesfull
+ * @return {JSON || String} returns JSON data if succesfull
  */
 export async function Data(
   criteriaKey,
@@ -298,7 +317,6 @@ export async function Data(
         })
         return setCurrentData(newData)
       }
-      throw new Error('No criteria found.')
     })
     .catch(error => {
       // eslint-disable-next-line no-console
@@ -315,7 +333,7 @@ export async function Data(
  * @param {function} setCurrentData
  * @param {string} eventTargetValue
  * @param {string} eventTargetID
- * @return {JSON || Sring} returns JSON data if succesfull
+ * @return {JSON || String} returns JSON data if succesfull
  */
 export async function DataDate(
   criteriaKey,
@@ -333,17 +351,21 @@ export async function DataDate(
         const inputValues =
           foundCriteria.fieldset?.inputs[0].inputCriteria.values
 
-        if (eventTargetID.includes('day')) {
-          inputValues[0].value.day = eventTargetValue
-        }
-        if (eventTargetID.includes('month')) {
-          inputValues[0].value.month = eventTargetValue
-        }
-        if (eventTargetID.includes('year')) {
-          inputValues[0].value.year = eventTargetValue
-        }
+        if (eventTargetID) {
+          if (eventTargetID.includes('day')) {
+            inputValues[0].value.day = eventTargetValue
+          }
+          if (eventTargetID.includes('month')) {
+            inputValues[0].value.month = eventTargetValue
+          }
+          if (eventTargetID.includes('year')) {
+            inputValues[0].value.year = eventTargetValue
+          }
 
-        inputValues[0].value = { ...inputValues[0].value }
+          inputValues[0].value = { ...inputValues[0].value }
+        } else {
+          inputValues[0].value = eventTargetValue
+        }
         inputValues[0].selected = true
         return setCurrentData(newData)
       }
@@ -354,6 +376,36 @@ export async function DataDate(
       console.log(error)
       return 'Something went wrong.'
     })
+}
+
+/**
+ * updates our data based on the window.location.search value
+ * @function
+ * @param {string} windowQuery
+ * @param {array} stepDataArray
+ * @param {function} setCurrentData
+ * @param {string} sharedToken
+ */
+export const DataFromParams = (
+  windowQuery,
+  stepDataArray,
+  setCurrentData,
+  sharedToken
+) => {
+  const params = UTILS.GetQueryParams(decodeURI(windowQuery))
+  params.filter(param => param.criteriaKey !== sharedToken)
+
+  stepDataArray.forEach(arr => {
+    arr.completed = true
+    params.forEach(param => {
+      const v = param.value.includes('{')
+        ? JSON.parse(param.value)
+        : param.value
+      v !== undefined && typeof v === 'object'
+        ? PUT.DataDate(param.criteriaKey, arr, setCurrentData, v)
+        : PUT.Data(param.criteriaKey, arr, setCurrentData, v)
+    })
+  })
 }
 
 export const GET = {
@@ -368,9 +420,11 @@ export const GET = {
 export const PUT = {
   Data,
   DataDate,
+  DataFromParams,
 }
 
 export const UTILS = {
   FindCriteria,
   DateEligibility,
+  GetQueryParams,
 }

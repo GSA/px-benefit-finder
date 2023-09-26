@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
 import { ObfuscatedLink } from '../index'
@@ -65,6 +65,7 @@ const Modal = ({
 }) => {
   // state
   const [modalIsOpen, setIsOpen] = useState(false)
+  const triggerRef = useRef(null)
 
   // handlers
   /**
@@ -81,11 +82,15 @@ const Modal = ({
    * a function that triggers the modal to a closed state
    * @function
    */
-  const handleCloseModal = () => {
+  const handleCloseModal = triggerRef => {
+    // focus the trigger if it is still in the DOM
+    triggerRef && triggerRef.current.focus()
     // clear the hash
     window.location.hash = ''
     setIsOpen(false)
   }
+
+  const handleKeyValidation = e => e.which === 32 || e.which === 13
 
   // effects
   useEffect(() => {
@@ -100,9 +105,15 @@ const Modal = ({
    * @param {string} triggerLabel - passed to button for triggering modal
    * @return {html} returns an obfustacted anchor element
    */
-  const Trigger = ({ triggerLabel, onClick }) => {
+  const Trigger = ({ triggerLabel, onClick, onKeyDown }) => {
     return (
-      <ObfuscatedLink onClick={onClick} noCarrot>
+      <ObfuscatedLink
+        onClick={onClick}
+        onKeyDown={onKeyDown}
+        noCarrot
+        tabIndex="0"
+        triggerRef={triggerRef}
+      >
         {triggerLabel}
       </ObfuscatedLink>
     )
@@ -131,7 +142,9 @@ const Modal = ({
             id="navItemOneBtn"
             className="nav-item-one width-full"
             onClick={() => navItemOneFunction()}
+            onKeyDown={e => handleKeyValidation(e) && navItemOneFunction()}
             noCarrot
+            tabIndex="0"
           >
             {navItemOneLabel}
           </ObfuscatedLink>
@@ -141,7 +154,9 @@ const Modal = ({
             id="navItemTwoBtn"
             className="nav-item-two width-full"
             onClick={() => navItemTwoFunction()}
+            onKeyDown={e => handleKeyValidation(e) && navItemTwoFunction()}
             noCarrot
+            tabIndex="0"
           >
             {navItemTwoLabel}
           </ObfuscatedLink>
@@ -155,6 +170,7 @@ const Modal = ({
       <Trigger
         triggerLabel={triggerLabel}
         onClick={() => handleOpenModal()}
+        onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}
       ></Trigger>
       <NavModal
         isOpen={modalIsOpen}
@@ -164,7 +180,7 @@ const Modal = ({
         <button
           type="button"
           className="modal-button"
-          onClick={() => handleCloseModal()}
+          onClick={() => handleCloseModal(triggerRef)}
         >
           <Close alt="a close out icon" />
         </button>

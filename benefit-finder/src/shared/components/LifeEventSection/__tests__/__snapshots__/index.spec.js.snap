@@ -4,6 +4,7 @@ exports[`LifeEventSection renders a match to the previous snapshot 1`] = `
 Array [
   <h1
     className=""
+    id="skip-to-h1"
   >
     Complete Questions
   </h1>,
@@ -84,6 +85,7 @@ Array [
         </div>
         <h2
           className=""
+          id=""
         >
           About the applicant
         </h2>
@@ -122,8 +124,14 @@ Array [
                 >
                   Month
                 </label>
+                <div
+                  className="a11y-sr-only"
+                  id="month-description"
+                >
+                  Select a month from the list
+                </div>
                 <select
-                  aria-describedby="mdHint"
+                  aria-describedby="month-description"
                   className="usa-select required-field"
                   id="date_of_birth_month"
                   name="date_of_birth_month"
@@ -208,15 +216,19 @@ Array [
                 >
                   Day
                 </label>
+                <div
+                  className="a11y-sr-only"
+                  id="day-description"
+                >
+                  Enter numerals for day
+                </div>
                 <input
-                  aria-describedby="mdHint"
+                  aria-describedby="day-description"
                   className="usa-input required-field"
                   id="date_of_birth_day"
                   inputMode="numeric"
-                  maxLength="2"
                   name="date_of_birth_day"
                   onChange={[Function]}
-                  pattern="[0-9]*"
                   value=""
                 />
               </div>
@@ -229,16 +241,19 @@ Array [
                 >
                   Year
                 </label>
+                <div
+                  className="a11y-sr-only"
+                  id="year-description"
+                >
+                  Enter numerals for year
+                </div>
                 <input
-                  aria-describedby="mdHint"
+                  aria-describedby="year-description"
                   className="usa-input required-field"
                   id="date_of_birth_year"
                   inputMode="numeric"
-                  maxLength="4"
-                  minLength="4"
                   name="date_of_birth_year"
                   onChange={[Function]}
-                  pattern="[0-9]*"
                   value=""
                 />
               </div>
@@ -370,7 +385,7 @@ Array [
                 checked={false}
                 className=""
                 id="applicant_citizen_status_0_0"
-                name="applicant_citizen_status_0_0"
+                name="applicant_citizen_status_0"
                 onChange={[Function]}
                 type="radio"
                 value="Yes"
@@ -389,7 +404,7 @@ Array [
                 checked={false}
                 className=""
                 id="applicant_citizen_status_0_1"
-                name="applicant_citizen_status_0_1"
+                name="applicant_citizen_status_0"
                 onChange={[Function]}
                 type="radio"
                 value="No"
@@ -421,7 +436,7 @@ Array [
                 checked={false}
                 className=""
                 id="applicant_care_for_child_0_0"
-                name="applicant_care_for_child_0_0"
+                name="applicant_care_for_child_0"
                 onChange={[Function]}
                 type="radio"
                 value="Yes"
@@ -440,7 +455,7 @@ Array [
                 checked={false}
                 className=""
                 id="applicant_care_for_child_0_1"
-                name="applicant_care_for_child_0_1"
+                name="applicant_care_for_child_0"
                 onChange={[Function]}
                 type="radio"
                 value="No"
@@ -472,7 +487,7 @@ Array [
                 checked={false}
                 className=""
                 id="applicant_paid_funeral_expenses_0_0"
-                name="applicant_paid_funeral_expenses_0_0"
+                name="applicant_paid_funeral_expenses_0"
                 onChange={[Function]}
                 type="radio"
                 value="Yes"
@@ -491,7 +506,7 @@ Array [
                 checked={false}
                 className=""
                 id="applicant_paid_funeral_expenses_0_1"
-                name="applicant_paid_funeral_expenses_0_1"
+                name="applicant_paid_funeral_expenses_0"
                 onChange={[Function]}
                 type="radio"
                 value="No"
@@ -523,7 +538,7 @@ Array [
                 checked={false}
                 className=""
                 id="applicant_funeral_reimbursement_0_0"
-                name="applicant_funeral_reimbursement_0_0"
+                name="applicant_funeral_reimbursement_0"
                 onChange={[Function]}
                 type="radio"
                 value="Yes"
@@ -542,7 +557,7 @@ Array [
                 checked={false}
                 className=""
                 id="applicant_funeral_reimbursement_0_1"
-                name="applicant_funeral_reimbursement_0_1"
+                name="applicant_funeral_reimbursement_0"
                 onChange={[Function]}
                 type="radio"
                 value="No"

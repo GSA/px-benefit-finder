@@ -22,6 +22,9 @@ import * as es from '../shared/locales/es/es.json'
 function App({ appContent }) {
   // we create context state to provide translations for our two languages
   const LanguageContext = createContext({ en, es })
+  const sharedToken = 'shared'
+  const windowQuery = window.location.search
+  const hasQueryParams = windowQuery.includes(sharedToken)
 
   /**
    * lazy load our data state.
@@ -47,12 +50,26 @@ function App({ appContent }) {
 
   // state
   const [t] = useState(apiCalls.GET.Language() === 'es' ? es : en) // tranlations
-  const [step, setStep] = useState(0) // steps indicator
+  const [step, setStep] = useState(hasQueryParams ? null : 0) // steps indicator
+
   const [stepData, setStepData] = useState(
     () => stepDataArray && stepDataArray[step]
   ) // content
   const [verifyStep, setVerifyStep] = useState(false) // verification view
-  const [viewResults, setViewResults] = useState(false) // resuts view
+  const [viewResults, setViewResults] = useState(hasQueryParams) // resuts view
+
+  useEffect(() => {
+    if (hasQueryParams) {
+      stepDataArray &&
+        apiCalls.PUT.DataFromParams(
+          windowQuery,
+          stepDataArray,
+          setStepData,
+          sharedToken
+        )
+      stepDataArray && setStep(stepDataArray.length)
+    }
+  }, [windowQuery, hasQueryParams, stepDataArray])
 
   return (
     content && (

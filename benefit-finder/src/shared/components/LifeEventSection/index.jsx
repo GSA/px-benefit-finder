@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
+import { dateInputValidation } from '../../utils/inputValidation'
 import * as apiCalls from '../../api/apiCalls'
 import {
   Alert,
@@ -131,12 +132,22 @@ const LifeEventSection = ({
    * @param {number} updateIndex - value which to update step count
    * @return {null} only executes inherited functions
    */
-  const handleUpdate = updateIndex => {
+  const handleForwardUpdate = updateIndex => {
     if (handleCheckRequriedFields() === true) {
       // set complete step usa-step-indicator__segment--complete
       setStep(step + updateIndex)
       setStepData(updateIndex)
     }
+  }
+
+  /**
+   * a function that updates our step count and set our data index
+   * @function
+   * @param {number} updateIndex - value which to update step count
+   * @return {null} only executes inherited functions
+   */
+  const handleBackUpdate = updateIndex => {
+    setStep(step + updateIndex)
   }
 
   /**
@@ -156,6 +167,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleChanged = (event, criteriaKey) => {
+    window.history.replaceState({}, '', window.location.pathname)
     apiCalls.PUT.Data(
       criteriaKey,
       currentData,
@@ -171,13 +183,22 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
-    apiCalls.PUT.DataDate(
-      criteriaKey,
-      currentData,
-      setCurrentData,
-      event.target.value,
-      event.target.id
-    )
+    window.history.replaceState({}, '', window.location.pathname)
+    dateInputValidation(event) === true &&
+      apiCalls.PUT.DataDate(
+        criteriaKey,
+        currentData,
+        setCurrentData,
+        event.target.value,
+        event.target.id
+      )
+  }
+
+  const handleDateRequired = (values, item) => {
+    return Object.keys(values?.value).length === 3 &&
+      values?.value?.year?.length === 4
+      ? 'FALSE'
+      : item.fieldset.required
   }
 
   // manage the display of our modal initializer
@@ -315,8 +336,9 @@ const LifeEventSection = ({
                                           !optionSelected &&
                                           item.fieldset.required
                                         }
-                                        id={inputId}
+                                        name={fieldSetId}
                                         key={inputId}
+                                        id={inputId}
                                         label={option.value}
                                         value={option.value}
                                         checked={option.selected || false}
@@ -357,13 +379,10 @@ const LifeEventSection = ({
                             return (
                               <div key={fieldSetId}>
                                 <Date
-                                  required={
-                                    Object.keys(
-                                      input.inputCriteria.values[0]?.value
-                                    ).length < 3
-                                      ? item.fieldset.required
-                                      : 'FALSE'
-                                  }
+                                  required={handleDateRequired(
+                                    input.inputCriteria.values[0],
+                                    item
+                                  )}
                                   value={input.inputCriteria.values[0]?.value}
                                   onChange={event =>
                                     handleDateChanged(
@@ -423,11 +442,11 @@ const LifeEventSection = ({
                 })}
               </div>
             )}
-            <Button secondary onClick={() => handleUpdate(-1)}>
+            <Button secondary onClick={() => handleBackUpdate(-1)}>
               {buttonGroup[0].value}
             </Button>
             {modal === false ? (
-              <Button onClick={() => handleUpdate(1)}>
+              <Button onClick={() => handleForwardUpdate(1)}>
                 {buttonGroup[1].value}
               </Button>
             ) : (

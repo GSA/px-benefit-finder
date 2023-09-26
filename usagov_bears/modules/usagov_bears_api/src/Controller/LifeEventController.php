@@ -65,7 +65,7 @@ class LifeEventController {
     $this->fileSystem->prepareDirectory($directory, FileSystemInterface:: CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
 
     // Get JSON data.
-    $data = new JsonResponse([
+    $data = json_encode([
         'data' => $this->getData($id),
         'method' => 'GET',
         'status' => 200

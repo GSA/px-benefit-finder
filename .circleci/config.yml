@@ -47,7 +47,7 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            # sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
+            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -100,26 +100,26 @@ jobs:
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
 
-      # - run:
-      #     name: Enable benefit-finder module
-      #     command: |
-      #       cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
-      #       cf target -o "$CF_ORG"  -s "$CF_SPACE_dev"
-      #       cf ssh benefit-finder-cms --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0 && \
-      #                             /var/www/vendor/bin/drush pm:uninstall usagov_login && \
-      #                             /var/www/vendor/bin/drush pm:enable usagov_bears_block && \
-      #                             /var/www/vendor/bin/drush pm:enable usagov_bears_content && \
-      #                             /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
-      #                             /var/www/vendor/bin/drush pm:enable usagov_bears && \
-      #                             /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
-      #                             cd ../var/www/web/sites/default/files && \
-      #                             mkdir -p bears/api/life_event && \
-      #                             cd ../../../../.. && \
-      #                             /var/www/vendor/bin/drush cr && \
-      #                             cd www/scripts && \
-      #                             mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
-      #                             mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
-      #                             /var/www/vendor/bin/drush cr"
+      - run:
+          name: Enable benefit-finder module
+          command: |
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
+            cf target -o "$CF_ORG"  -s "$CF_SPACE_dev"
+            cf ssh benefit-finder-cms --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0 && \
+                                  /var/www/vendor/bin/drush pm:uninstall usagov_login && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_bears_block && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_bears_content && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_bears && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
+                                  cd ../var/www/web/sites/default/files && \
+                                  mkdir -p bears/api/life_event && \
+                                  cd ../../../../.. && \
+                                  /var/www/vendor/bin/drush cr && \
+                                  cd www/scripts && \
+                                  mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
+                                  mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
+                                  /var/www/vendor/bin/drush cr"
   
   component-library:
     machine:

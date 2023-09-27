@@ -196,6 +196,17 @@ workflows:
               only: 
                 - main
 
+  scheduled_cms_build_and_deploy_workflow:
+    triggers:
+      - schedule:
+          cron: '0 7 * * *'
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - build_and_deploy
+
   create-component-library-workflow:
     jobs:
       - component-library:
@@ -203,6 +214,7 @@ workflows:
             branches:
               only:
                 - main
+
 
 # deploy_waf_workflow gets only triggered when we manually enter 'manual_deploy' parameter and set it to true boolean value. 
   deploy_waf_workflow:

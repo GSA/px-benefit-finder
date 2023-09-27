@@ -145,7 +145,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
                 }
               />
               <EmailButton
-                ui={shareResults?.emailButton}
+                ui={shareResults}
                 data={
                   stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
                 }

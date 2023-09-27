@@ -209,6 +209,7 @@ workflows:
             branches:
               only:
                 - main
+                
 
 # deploy_waf_workflow gets only triggered when we manually enter 'manual_deploy' parameter and set it to true boolean value. 
   deploy_waf_workflow:

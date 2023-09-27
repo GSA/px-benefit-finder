@@ -189,12 +189,15 @@ jobs:
 workflows:
 # This workflow only gets triggered when there is a push to `main` branch.
   cms_build_and_deploy_workflow:
-    jobs:
-      - build_and_deploy:
+    triggers:
+      - schedule:
+          cron: '*/10 * * * *'
           filters:
             branches:
-              only: 
-                - main
+              only:
+                - 561-run-deploy-pipeline-on-cron
+    jobs:
+      - build_and_deploy:
 
   create-component-library-workflow:
     jobs:

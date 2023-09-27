@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
 import { ObfuscatedLink } from '../index'
@@ -62,20 +62,33 @@ const Modal = ({
   navItemTwoLabel,
   navItemTwoFunction,
   handleCheckRequriedFields,
+  completed,
+  modalOpen,
+  setModalOpen,
 }) => {
   // state
-  const [modalIsOpen, setIsOpen] = useState(false)
   const triggerRef = useRef(null)
 
-  // handlers
   /**
    * a function that checks for errors and then triggers the modal to open state
    * @function
    */
+  // const handleOpenModal = useCallback(() => {
+  //   completed === true
+  //     ? setModalOpen(true)
+  //     : handleCheckRequriedFields() === true && setModalOpen
+  //   if (completed === true) {
+  //     setModalOpen(true)
+  //   }
+  // }, [completed, handleCheckRequriedFields, setModalOpen])
+
   const handleOpenModal = () => {
-    handleCheckRequriedFields
-      ? handleCheckRequriedFields() === true && setIsOpen(true)
-      : setIsOpen(true)
+    // completed === true
+    //   ? setModalOpen(true)
+    //   : handleCheckRequriedFields() === true && setModalOpen
+    if (handleCheckRequriedFields() === true) {
+      setModalOpen(true)
+    }
   }
 
   /**
@@ -87,7 +100,7 @@ const Modal = ({
     triggerRef && triggerRef.current.focus()
     // clear the hash
     window.location.hash = ''
-    setIsOpen(false)
+    setModalOpen(false)
   }
 
   const handleKeyValidation = e => e.which === 32 || e.which === 13
@@ -105,7 +118,7 @@ const Modal = ({
    * @param {string} triggerLabel - passed to button for triggering modal
    * @return {html} returns an obfustacted anchor element
    */
-  const Trigger = ({ triggerLabel, onClick, onKeyDown }) => {
+  const Trigger = ({ triggerLabel, onKeyDown, onClick }) => {
     return (
       <ObfuscatedLink
         onClick={onClick}
@@ -169,12 +182,12 @@ const Modal = ({
     <div id={id} className="benefit-modal-group">
       <Trigger
         triggerLabel={triggerLabel}
-        onClick={() => handleOpenModal()}
         onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}
+        onClick={() => handleOpenModal()}
       ></Trigger>
       <NavModal
-        isOpen={modalIsOpen}
-        onRequestClose={handleCloseModal}
+        isOpen={modalOpen}
+        onRequestClose={() => handleCloseModal(triggerRef)}
         style={customStyles}
       >
         <button

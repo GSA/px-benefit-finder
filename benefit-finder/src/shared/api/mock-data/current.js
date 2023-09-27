@@ -257,7 +257,7 @@ const content = `{
                 "fieldset": {
                   "criteriaKey": "deceased_date_of_death",
                   "legend": "Date of death",
-                  "required": "FALSE",
+                  "required": "TRUE",
                   "hint": "",
                   "inputs": [
                     {

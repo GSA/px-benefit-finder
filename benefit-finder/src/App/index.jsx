@@ -41,6 +41,7 @@ function App({ appContent }) {
   // set data state
   const [stepDataArray, setStepDataArray] = useState()
   const [benfitsArray, setBenefitsArray] = useState()
+  const [modalOpen, setModalOpen] = useState(false)
 
   useEffect(() => {
     content && setBenefitsArray([...content.benefits])
@@ -104,13 +105,21 @@ function App({ appContent }) {
                   step={step}
                   setStep={setStep}
                   data={stepDataArray}
-                  handleData={() => setStepDataArray()}
+                  handleData={setStepDataArray}
                   stepData={stepData}
                   setStepData={setStepData}
                   verifyStep={verifyStep}
-                  setVerifyStep={() => setVerifyStep(true)}
-                  setViewResults={() => setViewResults(true)}
+                  setVerifyStep={() => {
+                    setVerifyStep(true)
+                    setModalOpen(false)
+                  }}
+                  setViewResults={() => {
+                    setViewResults(true)
+                    setModalOpen(false)
+                  }}
                   ui={t}
+                  modalOpen={modalOpen}
+                  setModalOpen={setModalOpen}
                 />
               </Form>
             </div>

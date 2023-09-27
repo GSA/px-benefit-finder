@@ -21,18 +21,21 @@ const StepIndicator = ({
   setCurrent,
   backLinkLabel,
   handleCheckRequriedFields,
-  completed,
 }) => {
   /**
    * a functional component that supports a11y for completed steps
    * @component
-   * @param {boolean} completed - assigns if the step has been completed
+   * @param {boolean} status - assigns if the step has been completed
    * @param {boolean} noHeadings - determinate to render headings or not
    * @return {html} returns markup for a usa step indicator
    */
-  const CompletedSR = ({ completed }) => (
-    <span className="usa-sr-only">{completed}</span>
-  )
+  const CompletedSR = ({ current, index }) => {
+    return (
+      <span className="usa-sr-only">
+        {current < index ? 'not-completed' : 'completed'}
+      </span>
+    )
+  }
 
   /**
    * a functional component that creates our step in the list
@@ -58,9 +61,9 @@ const StepIndicator = ({
         className={`usa-step-indicator__segment usa-step-indicator__segment${statusClass} ${
           current < index ? '' : 'usa-step-indicator__segment--complete'
         }`}
-        aria-current={completed}
+        aria-current={current === index}
         onClick={() =>
-          completed === false &&
+          completed !== true &&
           handleCheckRequriedFields() === true &&
           setCurrent(index + 1)
         }
@@ -70,8 +73,14 @@ const StepIndicator = ({
           key={`step-indicator-label-${index}`}
           className="usa-step-indicator__segment-label"
         >
-          {!noHeadings && heading}{' '}
-          <CompletedSR key={`step-indicator-sr-${index}`} status={completed} />
+          {!noHeadings && heading}
+          {current === index && completed !== true ? null : (
+            <CompletedSR
+              key={`step-indicator-sr-${index}`}
+              current={current}
+              index={index}
+            />
+          )}
         </span>
       </li>
     )
@@ -79,11 +88,13 @@ const StepIndicator = ({
 
   return (
     <div>
-      <div className="usa-step-indicator" aria-label="progress">
+      <div className="usa-step-indicator" aria-label="progress" tabIndex={0}>
         <ol className="usa-step-indicator__segments">
           {data &&
             data.map((step, i) => {
               const heading = step.section.heading
+              const isCompleted = step.completed
+
               return (
                 <StepIndicatorSegment
                   heading={heading}
@@ -91,7 +102,7 @@ const StepIndicator = ({
                   index={i}
                   current={current}
                   setCurrent={setCurrent}
-                  completed={completed}
+                  completed={isCompleted}
                   handleCheckRequriedFields={handleCheckRequriedFields}
                 />
               )

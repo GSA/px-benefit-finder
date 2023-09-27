@@ -198,7 +198,10 @@ workflows:
                 - 561-run-deploy-pipeline-on-cron
     jobs:
       - build_and_deploy:
-
+          filters:
+            branches:
+              only:
+                - 561-run-deploy-pipeline-on-cron
   create-component-library-workflow:
     jobs:
       - component-library:

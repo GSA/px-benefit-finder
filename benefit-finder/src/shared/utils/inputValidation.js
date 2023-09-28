@@ -22,6 +22,6 @@ export const dateInputValidation = event => {
   }
 
   if (event.target.id.includes('month')) {
-    return event.target.value.length === 1
+    return event.target.value.length >= 1
   }
 }

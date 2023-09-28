@@ -69,28 +69,6 @@ const LifeEventSection = ({
 
   const handleFieldAlerts = () => {
     setHasError(document.querySelectorAll(`.${classError}`))
-    console.log(hasError)
-    // hasError.forEach(error => console.log(error.id))
-    // ✅ You can read or write refs in event handlers
-    // console.log(
-    //   'month',
-    //   monthFieldRef.current.className,
-    //   monthFieldRef.current.classList.contains(classError)
-    // )
-    // if (monthFieldRef.current.classList.contains(classError)) {
-    //   return setAlertBanner(true)
-    // } else {
-    //   return setAlertBanner(false)
-    // }
-    // const childGroupElements = Array.from(dateRef.current.children)
-    // const childInputElements = childGroupElements.map(child => child.children)
-    // // console.log(childInputElements)
-    // childInputElements.forEach(child => console.log(child[2]))
-    // if (monthFieldRef.current.classList.contains(classError)) {
-    //   return setAlertBanner(true)
-    // } else {
-    //   return setAlertBanner(false)
-    // }
   }
 
   /**
@@ -216,7 +194,6 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
-    handleFieldAlerts()
     window.history.replaceState({}, '', window.location.pathname)
     dateInputValidation(event) === true &&
       apiCalls.PUT.DataDate(

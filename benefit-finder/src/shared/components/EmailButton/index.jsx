@@ -15,22 +15,20 @@ const EmailButton = ({ ui, data }) => {
   const [shareLink, setShareLink] = useState(() =>
     buildURIParameter(window.location.href, data)
   )
-  const emailSubject = 'Interesting information'
-  const emailBody = `I thought you might find this information interesting %0D%0A%0D%0A${encodeURIComponent(
-    shareLink
-  )}`
+
+  const emailBody = `${encodeURIComponent(shareLink)}`
 
   /**
    * a handler that triggers an email with context from the users window location href
    */
   const handleClick = () => {
     setShareLink(buildURIParameter(window.location.href, data))
-    window.location = `mailto:?subject=${emailSubject}&body=${emailBody}`
+    window.location = `mailto:?subject=${ui?.emailSubject}&body=${emailBody}`
   }
 
   return (
     <Button secondary onClick={handleClick}>
-      {ui || 'Email'}
+      {ui?.emailButton || 'Email'}
     </Button>
   )
 }

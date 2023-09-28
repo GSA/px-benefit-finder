@@ -19,7 +19,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
       <div
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits.Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual applications.</p></div>",
+            "__html": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits. Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual application.</p></div>",
           }
         }
       />
@@ -175,21 +175,21 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Share Link
+            Share link
           </button>
           <button
             className=""
             onClick={[Function]}
             type="button"
           >
-            Email Results
+            Email results
           </button>
           <button
             className=""
             onClick={[Function]}
             type="button"
           >
-            Print Results
+            Print results
           </button>
         </div>
         <p>

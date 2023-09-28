@@ -137,6 +137,7 @@
     "dateDefaultValue": "-Select-"
   },
   "date": {
+    "alert": "Date should follow the format 01 - January 22 1977",
     "labelDay": "Day",
     "labelMonth": "Month",
     "labelYear": "Year",

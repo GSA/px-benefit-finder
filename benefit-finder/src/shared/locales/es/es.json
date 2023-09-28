@@ -137,6 +137,7 @@
     "dateDefaultValue": "-Seleccionar-"
   },
   "date": {
+    "alert": "La fecha debe seguir el formato 01 - 22 de enero de 1977.",
     "labelDay": "Día",
     "labelMonth": "Mes",
     "labelYear": "Año",

@@ -25,13 +25,19 @@ import './_index.scss'
  * @param {array} stepDataArray inherited state of inupt values from form entry
  * @return {html} returns a view page of filtered benefits
  */
-const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
+const ResultsView = ({
+  handleStepBack,
+  ui,
+  data,
+  stepDataArray,
+  relevantBenefits,
+}) => {
   const {
     stepBackLink,
     notQualified,
     qualified,
     notEligibleResults,
-    relativeBenefits,
+    resultsRelativeBenefits,
     shareResults,
   } = ui
 
@@ -114,27 +120,33 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
               </Button>
             </div>
           )}
-          <div className="result-view-relvant-benefits">
-            <Heading headingLevel={3}>{relativeBenefits?.heading}</Heading>
-            <ul className="add-list-reset">
-              <li key="benefit-card-one">
-                <Card
-                  className="relative-benefit-card"
-                  title={'Approaching Retirement'}
-                  cta={'Learn More'}
-                  noCarrot
-                ></Card>
-              </li>
-              <li key="benefit-card-two">
-                <Card
-                  className="relative-benefit-card"
-                  title={'Living with disability or illness'}
-                  cta={'Learn More'}
-                  noCarrot
-                ></Card>
-              </li>
-            </ul>
-          </div>
+          {relevantBenefits && (
+            <div className="result-view-relvant-benefits">
+              <Heading headingLevel={3}>
+                {resultsRelativeBenefits?.heading}
+              </Heading>
+              <ul className="add-list-reset">
+                <li key="benefit-card-one">
+                  <Card
+                    className="relative-benefit-card"
+                    title={`${relevantBenefits[0].lifeEvent.title}`}
+                    cta={'Learn More'}
+                    href={`${relevantBenefits[0].lifeEvent.link}`}
+                    noCarrot
+                  ></Card>
+                </li>
+                <li key="benefit-card-two">
+                  <Card
+                    className="relative-benefit-card"
+                    title={`${relevantBenefits[1].lifeEvent.title}`}
+                    cta={'Learn More'}
+                    href={`${relevantBenefits[1].lifeEvent.link}`}
+                    noCarrot
+                  ></Card>
+                </li>
+              </ul>
+            </div>
+          )}
           <div className="result-view-share-results">
             <Heading headingLevel={3}>{shareResults?.heading}</Heading>
             <div className="result-view-share-results-button-group">

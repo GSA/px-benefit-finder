@@ -10,7 +10,6 @@ import {
   Card,
   Chevron,
   ShareButton,
-  PrintButton,
 } from '../index'
 import createMarkup from '../../utils/createMarkup'
 import './_index.scss'
@@ -150,7 +149,6 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
                   stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
                 }
               />
-              <PrintButton ui={shareResults?.printButton} />
             </div>
             <p>{shareResults?.description}</p>
           </div>

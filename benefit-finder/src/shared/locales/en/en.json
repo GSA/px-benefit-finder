@@ -98,7 +98,7 @@
       "description": "<div>Based on your answers you are not eligible for these benefits. <strong>You may become eligible if you enter additional information or your situation changes.</strong></div>",
       "cta": "See benefits you did not qualify for"
     },
-    "relativeBenefits": {
+    "resultsRelativeBenefits": {
       "heading": "Other benefits that might be relevant to you"
     },
     "shareResults": {

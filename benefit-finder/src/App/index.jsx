@@ -90,6 +90,7 @@ function App({ appContent }) {
           ) : viewResults === true ? (
             <ResultsView
               stepDataArray={stepDataArray}
+              relevantBenefits={content?.relevantBenefits}
               data={benfitsArray}
               setBenefitsArray={() => setBenefitsArray()}
               ui={t.resultsView}

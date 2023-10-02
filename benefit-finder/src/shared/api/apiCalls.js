@@ -11,7 +11,7 @@
  * @param {object} selectedValue - date object
  * @return {boolean} true or false based on the conditional
  */
-export const DateEligibility = (conditional, selectedValue) => {
+export const DateEligibility = ({ selectedValue, conditional }) => {
   // date values
   // "<01-01-1978"
   // "<2years (the deceased died within the last two years)"
@@ -40,8 +40,11 @@ export const DateEligibility = (conditional, selectedValue) => {
         new Date().getDate()
       )
 
+  const epochConditionalDateOffset = new Date(
+    conditionalDate.getTime() + conditionalDate.getTimezoneOffset() * 60000
+  )
   // getTime in milliseconds so we can do a comparison
-  const epochConditionalDate = conditionalDate.getTime()
+  const epochConditionalDate = epochConditionalDateOffset.getTime()
 
   // example selected value for date
   // const value = {
@@ -55,7 +58,11 @@ export const DateEligibility = (conditional, selectedValue) => {
     Date.UTC(selectedValue.year, selectedValue.month, selectedValue.day)
   )
 
-  const epochSelectedDate = selectedDate.getTime()
+  const epochSelectedDateOffset = new Date(
+    selectedDate.getTime() + selectedDate.getTimezoneOffset() * 60000
+  )
+
+  const epochSelectedDate = epochSelectedDateOffset.getTime()
 
   const isDateEligible = (
     operator,
@@ -63,17 +70,27 @@ export const DateEligibility = (conditional, selectedValue) => {
     epochConditionalDate
   ) => {
     // ;['>', '>=', '<', '<=', '=']
+    // epoch time measures the number of seconds that have elapsed since the start of the Unix epoch on January 1st, 1970, at midnight UTC/GMT, minus the leap seconds.
+    const diff = pattern.test(text)
+      ? epochSelectedDate - epochConditionalDate
+      : epochConditionalDate - epochSelectedDate
+
+    // tests
+    // you are under 18 years
+    // deceased died after may 20th, 2020
+    // you are over 62 years
+
     switch (operator.length && operator.join('')) {
       case '>':
-        return epochSelectedDate > epochConditionalDate
+        return diff > 0
       case '>=':
-        return epochSelectedDate >= epochConditionalDate
+        return diff >= 0
       case '<':
-        return epochSelectedDate < epochConditionalDate
+        return diff < 0
       case '<=':
-        return epochSelectedDate <= epochConditionalDate
+        return diff <= 0
       case '=':
-        return epochSelectedDate === epochConditionalDate
+        return diff === 0
       default:
         return false
     }
@@ -257,7 +274,10 @@ export const ElegibilityByCriteria = (selectedCriteria, data) => {
 
             if (typeof selected.values.value === 'object') {
               eligibility = criteriaEligibility.acceptableValues.find(value =>
-                UTILS.DateEligibility(value, selected.values.value)
+                UTILS.DateEligibility({
+                  selectedValue: selected.values.value,
+                  conditional: value,
+                })
               )
             } else {
               eligibility = criteriaEligibility.acceptableValues.find(

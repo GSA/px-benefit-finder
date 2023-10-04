@@ -98,7 +98,7 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
                                   /var/www/vendor/bin/drush cr && \
                                   cd ../var/www/web/sites/default/files && \
-                                  ls -l && \
+                                  mkdir -p bears/api/life_event && \
                                   chown -R nginx:nginx bears
                                   curl https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
                                   curl https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \

@@ -32,8 +32,8 @@ jobs:
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             mv  usagov_bears usagov-2021/web/modules/custom
-            mv death.json usagov-2021/scripts/death.json
-            mv es_death.json usagov-2021/scripts/es_death.json
+            # mv death.json usagov-2021/scripts/death.json
+            # mv es_death.json usagov-2021/scripts/es_death.json
 
       - run: 
           name: Pre-docker-build configurations
@@ -97,12 +97,21 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
                                   cd ../var/www/web/sites/default/files && \
-                                  mkdir -p bears/api/life_event && \
-                                  cd ../../../../.. && \
-                                  /var/www/vendor/bin/drush cr && \
-                                  cd www/scripts && \
-                                  mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
-                                  mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
+                                  ls -l && \
+                                  chown -R nginx:nginx bears
+                                  curl https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
+                                  curl https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
+                                  curl https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \
+                                  curl https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \
+                                  curl https://bears-waf.app.cloud.gov/bears/api/life-event/disability/jsonfile && \
+                                  curl https://bears-waf.app.cloud.gov/bears/api/life-event/es_disability/jsonfile && \
+                                  cd bears && ls - && \
+                                  # mkdir -p bears/api/life_event && \
+                                  # cd ../../../../.. && \
+                                  # /var/www/vendor/bin/drush cr && \
+                                  # cd www/scripts && \
+                                  # mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
+                                  # mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
                                   /var/www/vendor/bin/drush cr"
   
   component-library:
@@ -194,7 +203,7 @@ workflows:
           filters:
             branches:
               only: 
-                - main
+                - 584-reconfigure-pipeline-to-use-all-life-events
 
   scheduled_cms_build_and_deploy_workflow:
     triggers:

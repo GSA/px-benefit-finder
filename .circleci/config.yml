@@ -108,12 +108,7 @@ jobs:
                                   curl https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \
                                   curl https://bears-waf.app.cloud.gov/bears/api/life-event/disability/jsonfile && \
                                   curl https://bears-waf.app.cloud.gov/bears/api/life-event/es_disability/jsonfile && \
-                                  # mkdir -p bears/api/life_event && \
-                                  # cd ../../../../.. && \
-                                  # /var/www/vendor/bin/drush cr && \
-                                  # cd www/scripts && \
-                                  # mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
-                                  # mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
+                                  ls -l && \
                                   /var/www/vendor/bin/drush cr"
   
   component-library:

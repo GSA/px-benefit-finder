@@ -96,6 +96,7 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
+                                  /var/www/vendor/bin/drush cr && \
                                   cd ../var/www/web/sites/default/files && \
                                   ls -l && \
                                   chown -R nginx:nginx bears

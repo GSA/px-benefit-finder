@@ -101,8 +101,8 @@ jobs:
                                   cd ../var/www/web/sites/default/files && \
                                   mkdir -p bears/api/life_event && \
                                   pwd && ls -l && \
-                                  cd bears && ls -l && \
                                   chown -R nginx:nginx bears
+                                  cd bears && ls -l && \
                                   curl https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
                                   curl https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
                                   curl https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \

@@ -17,11 +17,11 @@ jobs:
           command: |
             apt update 
             apt install -y tzdata libterm-readline-perl-perl git curl debconf
-            DEBIAN_FRONTEND=noninteractive
-            echo 'debconf debconf/frontend select Dialog' | sudo debconf-set-selections
-            echo "tzdata tzdata/Areas select America" | sudo debconf-set-selections
-            echo "tzdata tzdata/Zones/America select New_York" | sudo debconf-set-selections
-            dpkg-reconfigure -f noninteractive tzdata
+            # DEBIAN_FRONTEND=noninteractive
+            # echo 'debconf debconf/frontend select Dialog' | sudo debconf-set-selections
+            # echo "tzdata tzdata/Areas select America" | sudo debconf-set-selections
+            # echo "tzdata tzdata/Zones/America select New_York" | sudo debconf-set-selections
+            # dpkg-reconfigure -f noninteractive tzdata
             export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
             apt install -y apt-transport-https ca-certificates curl software-properties-common
             curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg

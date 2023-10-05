@@ -13,7 +13,7 @@ export const dateInputValidation = event => {
       if (event.target.value.length === 4) {
         // 1900 - currentyear
         const range = new RegExp(
-          `^(19[0-9][0-9]|200[0-9]|202[0-${yearLimit}])$`
+          `^(19[0-9][0-9]|200[0-9]|20[0-2][0-${yearLimit}])$`
         )
         return range.test(`${event.target.value}`)
       }

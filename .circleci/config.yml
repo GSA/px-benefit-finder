@@ -105,13 +105,13 @@ jobs:
                                   cd bears/api/life_event && \
                                   pwd && \
                                   netstat -tuna && \
-                                  curl -vvv https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile  
-                                  # curl -vvv http://127.0.0.1:8080/bears/api/life-event/death/jsonfile && \
-                                  # curl -vvv http://127.0.0.1:8080/bears/api/life-event/es_death/jsonfile && \
-                                  # curl -vvv http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile && \
-                                  # curl -vvv http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile && \
-                                  # curl -vvv http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile && \
-                                  # curl -vvv http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile && \
+                                  curl -vvv http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile  
+                                  curl -vvv http://127.0.0.1:8080/bears/api/life-event/death/jsonfile && \
+                                  curl -vvv http://127.0.0.1:8080/bears/api/life-event/es_death/jsonfile && \
+                                  curl -vvv http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile && \
+                                  curl -vvv http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile && \
+                                  curl -vvv http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile && \
+                                  curl -vvv http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile && \
                                   ls -l && \
                                   /var/www/vendor/bin/drush cr"
 

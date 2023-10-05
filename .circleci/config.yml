@@ -204,7 +204,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 584-reconfigure-pipeline-to-use-all-life-events
+                - main
 
   scheduled_cms_build_and_deploy_workflow:
     triggers:

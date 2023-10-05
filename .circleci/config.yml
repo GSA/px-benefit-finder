@@ -50,6 +50,16 @@ jobs:
       - run: 
           name: Pre-docker-build configurations
           command: |
+            apt update 
+            apt install curl -y
+            apt install -y apt-transport-https ca-certificates curl software-properties-common
+            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+            echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+            apt update
+            apt install -y docker-ce docker-ce-cli containerd.io
+            systemctl enable docker
+            systemctl start docker
+            docker --version
             cd px-bears-drupal/usagov-2021
             mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms  
@@ -60,6 +70,15 @@ jobs:
       - run: 
           name: Building, tagging, pushing the Docker Image
           command: |
+            apt update 
+            apt install curl -y
+            apt install -y apt-transport-https ca-certificates curl software-properties-common
+            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+            echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+            apt update
+            apt install -y docker-ce docker-ce-cli containerd.io
+            systemctl enable docker
+            systemctl start docker
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
             cd px-bears-drupal/usagov-2021

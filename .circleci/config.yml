@@ -101,14 +101,13 @@ jobs:
                                   mkdir -p bears/api/life_event && \
                                   pwd && ls -l && \
                                   chown -R nginx:nginx bears && \
-                                  cd bears && ls -l && \
+                                  cd bears/api/life_event && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/disability/jsonfile && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_disability/jsonfile && \
-                                  ls -l && pwd && exit \
                                   /var/www/vendor/bin/drush cr"
   
   component-library:

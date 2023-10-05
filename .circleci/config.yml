@@ -96,18 +96,26 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
-                                  /var/www/vendor/bin/drush cr && \
+                                  /var/www/vendor/bin/drush cr"
+
+
+      - run:
+          name: Enable all current life events
+          command: |
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE"
+            cf ssh cms --command "pwd && \
                                   cd ../var/www/web/sites/default/files && \
+                                  pwd && \
                                   mkdir -p bears/api/life_event && \
-                                  pwd && ls -l && \
                                   chown -R nginx:nginx bears && \
                                   cd bears/api/life_event && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
-                                  # curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
-                                  # curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \
-                                  # curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \
-                                  # curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/disability/jsonfile && \
-                                  # curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_disability/jsonfile && \
+                                  curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
+                                  curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \
+                                  curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \
+                                  curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/disability/jsonfile && \
+                                  curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_disability/jsonfile && \
+                                  ls -l && \
                                   /var/www/vendor/bin/drush cr"
 
 

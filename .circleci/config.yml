@@ -107,7 +107,7 @@ jobs:
                                   pwd && ls -l && \
                                   chown -R nginx:nginx bears && \
                                   cd bears/api/life_event && \
-                                  curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
+                                  curl -L --connect-timeout 20 --max-time 30 https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
                                   # curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
                                   # curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \
                                   # curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \

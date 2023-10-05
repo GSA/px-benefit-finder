@@ -103,7 +103,7 @@ jobs:
                                   chown -R nginx:nginx bears && \
                                   cd bears/api/life_event && \
                                   pwd && \
-                                  natstat -tuna && \
+                                  netstat -tuna && \
                                   curl -vvv http://127.0.0.1:8080/bears/api/life-event/death/jsonfile && \
                                   curl -vvv http://127.0.0.1:8080/bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
                                   curl -vvv http://127.0.0.1:8080/bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \

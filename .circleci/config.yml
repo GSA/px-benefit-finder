@@ -9,7 +9,7 @@ jobs:
   build_and_deploy:
     circleci_ip_ranges: true
     docker:
-      image: ubuntu:20.04
+      - image: ubuntu:20.04
 
     steps:
       - run:

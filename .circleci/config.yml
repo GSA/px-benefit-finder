@@ -109,7 +109,7 @@ jobs:
                                   mkdir -p bears/api/life_event && \
                                   chown -R nginx:nginx bears && \
                                   cd bears/api/life_event && \
-                                  curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
+                                  curl --connect-timeout 10 https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \
                                   curl -L https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \

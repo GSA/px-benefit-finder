@@ -200,13 +200,6 @@ workflows:
                 - main
 
 
-# deploy_waf_workflow gets only triggered when we manually enter 'manual_deploy' parameter and set it to true boolean value. 
-  deploy_waf_workflow:
-    when:
-      and:
-        - equal: [ true, << pipeline.parameters.manual_deploy >> ]
-    jobs:
-      - deploy_waf
 
       
 

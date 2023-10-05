@@ -109,12 +109,12 @@ jobs:
                                   mkdir -p bears/api/life_event && \
                                   chown -R nginx:nginx bears && \
                                   cd bears/api/life_event && \
-                                  curl -H "X-curl-json-key: $JSON_KEY" https://bears-waf.app.cloud.gov/bears/api/life-event/death/jsonfile && \
-                                  curl -H "X-curl-json-key: $JSON_KEY" https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
-                                  curl -H "X-curl-json-key: $JSON_KEY" https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \
-                                  curl -H "X-curl-json-key: $JSON_KEY" https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \
-                                  curl -H "X-curl-json-key: $JSON_KEY" https://bears-waf.app.cloud.gov/bears/api/life-event/disability/jsonfile && \
-                                  curl -H "X-curl-json-key: $JSON_KEY" https://bears-waf.app.cloud.gov/bears/api/life-event/es_disability/jsonfile && \
+                                  curl https://127.0.0.1:8080/bears/api/life-event/death/jsonfile && \
+                                  # curl -H "X-curl-json-key: ${JSON_KEY}" https://bears-waf.app.cloud.gov/bears/api/life-event/es_death/jsonfile && \
+                                  # curl -H "X-curl-json-key: ${JSON_KEY}" https://bears-waf.app.cloud.gov/bears/api/life-event/retirement/jsonfile && \
+                                  # curl -H "X-curl-json-key: ${JSON_KEY}" https://bears-waf.app.cloud.gov/bears/api/life-event/es_retirement/jsonfile && \
+                                  # curl -H "X-curl-json-key: ${JSON_KEY}" https://bears-waf.app.cloud.gov/bears/api/life-event/disability/jsonfile && \
+                                  # curl -H "X-curl-json-key: ${JSON_KEY}" https://bears-waf.app.cloud.gov/bears/api/life-event/es_disability/jsonfile && \
                                   ls -l && \
                                   /var/www/vendor/bin/drush cr"
 

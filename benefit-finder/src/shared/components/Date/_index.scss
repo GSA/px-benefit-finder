@@ -2,6 +2,11 @@
 @use '../../styles/breakpoints/_index.scss' as *;
 
 #benefit-finder {
+  .date-alert {
+    display: block;
+    width: 100%;
+  }
+
   .usa-form-group {
     width: 100%;
   }

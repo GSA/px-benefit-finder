@@ -75,18 +75,18 @@
     "qualified": {
       "chevron": {
         "heading": "Your Custom List",
-        "description": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits.Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual applications.</p></div>"
+        "description": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits. Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual application.</p></div>"
       },
       "heading": "Results",
       "description": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>"
     },
     "notQualified": {
       "chevron": {
-        "heading": "Your Custom List",
-        "description": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits.Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual applications.</p></div>"
+        "heading": "Benefits You Did Not Qualify For",
+        "description": ""
       },
       "heading": "Results",
-      "description": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>"
+      "description": "<div><strong>Based on your answers you did not meet the criteria to qualify for these benefits:</strong></div>"
     },
     "stepBackLink": "Back",
     "eligibleResults": {
@@ -103,9 +103,9 @@
     },
     "shareResults": {
       "heading": "Sharing and printing",
-      "shareButton": "Share Link",
-      "emailButton": "Email Results",
-      "printButton": "Print Results",
+      "shareButton": "Share link",
+      "emailButton": "Email results",
+      "emailSubject": "Results from USAGov’s benefit finder",
       "description": "Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible."
     }
   },
@@ -136,6 +136,7 @@
     "dateDefaultValue": "-Select-"
   },
   "date": {
+    "alert": "Date should follow the format 01 - January 22 1977",
     "labelDay": "Day",
     "labelMonth": "Month",
     "labelYear": "Year",

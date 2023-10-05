@@ -37,11 +37,16 @@ const LifeEventSection = ({
   setVerifyStep,
   setViewResults,
   ui,
+  modalOpen,
+  setModalOpen,
 }) => {
+  // const currentStep = step - 1
   // state
   const [modal, setModal] = useState(false)
   const [currentData, setCurrentData] = useState(() => data && data[step - 1])
   const [values, setValues] = useState([])
+  const [hasError, setHasError] = useState([])
+  const classError = 'usa-input--error'
 
   // desctructure data
   const {
@@ -51,6 +56,20 @@ const LifeEventSection = ({
     requiredLabel,
     sectionHeadings,
   } = ui
+
+  /**
+   * a function that updates our current data state
+   * @function
+   * @return {object} object as state
+   */
+  const handleUpdateData = () => {
+    data[step - 1] = { ...currentData }
+    handleData([...data])
+  }
+
+  const handleFieldAlerts = () => {
+    setHasError(document.querySelectorAll(`.${classError}`))
+  }
 
   /**
    *
@@ -71,8 +90,9 @@ const LifeEventSection = ({
     // add to all the collected error fields an error class
     values.forEach(field => {
       field.classList.contains('required-field') &&
-        field.classList.add('usa-input--error')
+        field.classList.add(classError)
     })
+    handleFieldAlerts()
     currentData.completed = false
     window.scrollTo(0, 0)
     return false
@@ -87,9 +107,10 @@ const LifeEventSection = ({
     alertFieldRef.current.classList.add('display-none')
     // remove from all the collected error fields the error class
     values.forEach(field => {
-      field.classList.remove('usa-input--error')
+      field.classList.remove(classError)
     })
     currentData.completed = true
+    handleUpdateData()
     setValues([])
     return true
   }
@@ -151,16 +172,6 @@ const LifeEventSection = ({
   }
 
   /**
-   * a function that updates our current data state
-   * @function
-   * @return {object} object as state
-   */
-  const handleUpdateData = () => {
-    handleData([...currentData])
-    setCurrentData(currentData)
-  }
-
-  /**
    * a function that handles the current selected value of our radio
    * and clears validation error if resolved
    * @function
@@ -201,6 +212,10 @@ const LifeEventSection = ({
       : item.fieldset.required
   }
 
+  // useEffect(() => {
+  //   handleFieldAlerts()
+  // }, [])
+
   // manage the display of our modal initializer
   useEffect(() => {
     data && step === data.length ? setModal(true) : setModal(false)
@@ -230,11 +245,10 @@ const LifeEventSection = ({
               data={data}
               backLinkLabel={stepIndicator.stepBackLink}
               handleCheckRequriedFields={() => handleCheckRequriedFields()}
-              completed={currentData.section.completed}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
-              <div id="benefit-section" onChange={() => handleUpdateData}>
+              <div id="benefit-section">
                 <Alert
                   alertFieldRef={alertFieldRef}
                   heading={ui.alertBanner.heading}
@@ -391,6 +405,13 @@ const LifeEventSection = ({
                                     )
                                   }
                                   ui={ui}
+                                  id={fieldSetId}
+                                  valid={
+                                    hasError.length &&
+                                    Array.from(hasError)
+                                      .map(item => item.id.includes(fieldSetId))
+                                      .includes(true)
+                                  }
                                 />
                               </div>
                             )
@@ -460,6 +481,9 @@ const LifeEventSection = ({
                   navItemTwoFunction={setViewResults}
                   triggerLabel={buttonGroup[1].value}
                   handleCheckRequriedFields={handleCheckRequriedFields}
+                  modalOpen={modalOpen}
+                  setModalOpen={setModalOpen}
+                  completed={currentData.completed}
                 />
               </div>
             )}

@@ -82,8 +82,8 @@
     },
     "notQualified": {
       "chevron": {
-        "heading": "Sus beneficios potenciales",
-        "description": "<div><p>Aquí hay una lista de beneficios federales para los que no calificó.<strong> Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</strong></p></div>"
+        "heading": "Beneficios a los cuales no calificó",
+        "description": ""
       },
       "heading": "Resultados",
       "description": "<div><strong>De acuerdo a sus respuestas usted no cumple con los requisitos para acceder a estos beneficios:<strong/></div>"
@@ -103,9 +103,9 @@
     },
     "shareResults": {
       "heading": "Imprimir y Compartir",
-      "shareButton": "Compartir Resultados",
-      "emailButton": "Enviar Resultados",
-      "printButton": "Imprimir resultados",
+      "shareButton": "Compartir resultados",
+      "emailButton": "Enviar resultados",
+      "emailSubject": "Resultados del buscador de beneficios de USAGov",
       "description": "Copie un enlace a esta página con los criterios que seleccionó anteriormente. Asegúrate de compartirlo solo con aquellos en los que confías, ya que tus respuestas serán visibles."
     }
   },
@@ -136,6 +136,7 @@
     "dateDefaultValue": "-Seleccionar-"
   },
   "date": {
+    "alert": "La fecha debe seguir el formato 01 - 22 de enero de 1977.",
     "labelDay": "Día",
     "labelMonth": "Mes",
     "labelYear": "Año",

@@ -10,7 +10,6 @@ import {
   Card,
   Chevron,
   ShareButton,
-  PrintButton,
 } from '../index'
 import createMarkup from '../../utils/createMarkup'
 import './_index.scss'
@@ -51,14 +50,14 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
     <div className="result-view">
       <Chevron
         heading={
-          notQualifiedView
-            ? notQualified.chevron.heading
-            : qualified.chevron.heading
+          notQualifiedView === false
+            ? qualified.chevron.heading
+            : notQualified.chevron.heading
         }
         description={
-          notQualifiedView
-            ? notQualified.chevron.description
-            : qualified.chevron.description
+          notQualifiedView === false
+            ? qualified.chevron.description
+            : notQualified.chevron.description
         }
       />
       <div className="grid-container">
@@ -145,12 +144,11 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
                 }
               />
               <EmailButton
-                ui={shareResults?.emailButton}
+                ui={shareResults}
                 data={
                   stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
                 }
               />
-              <PrintButton ui={shareResults?.printButton} />
             </div>
             <p>{shareResults?.description}</p>
           </div>

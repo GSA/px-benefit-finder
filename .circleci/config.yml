@@ -7,28 +7,13 @@ parameters:
 # Define the jobs we want to run for this project
 jobs:
   build_and_deploy:
-    circleci_ip_ranges: true
-    docker:
-      - image: ubuntu:20.04
+    machine:
+      image: ubuntu-2004:202107-02
 
     steps:
       - run:
           name: Cloning the Repo and initiating the Submodule
           command: |
-            apt update 
-            apt install -y libterm-readline-perl-perl git curl
-            export TZ=America/New_York
-            ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-            apt install -y tzdata
-            apt update
-            export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
-            apt install -y apt-transport-https ca-certificates curl software-properties-common
-            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-            echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
-            apt update
-            apt install -y docker-ce docker-ce-cli containerd.io
-            service docker start
-            docker --version
             echo "cloning the repo and initiating the usagov-2021 submodule"
             git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
             cd px-bears-drupal
@@ -47,22 +32,12 @@ jobs:
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             mv  usagov_bears usagov-2021/web/modules/custom
-            # mv death.json usagov-2021/scripts/death.json
-            # mv es_death.json usagov-2021/scripts/es_death.json
+            mv death.json usagov-2021/scripts/death.json
+            mv es_death.json usagov-2021/scripts/es_death.json
 
       - run: 
           name: Pre-docker-build configurations
           command: |
-            # apt update 
-            # apt install curl -y
-            # apt install -y apt-transport-https ca-certificates curl software-properties-common
-            # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-            # echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
-            # apt update
-            # apt install -y docker-ce docker-ce-cli containerd.io
-            # systemctl enable docker
-            # systemctl start docker
-            docker --version
             cd px-bears-drupal/usagov-2021
             mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms  
@@ -73,15 +48,6 @@ jobs:
       - run: 
           name: Building, tagging, pushing the Docker Image
           command: |
-            # apt update 
-            # apt install curl -y
-            # apt install -y apt-transport-https ca-certificates curl software-properties-common
-            # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-            # echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
-            # apt update
-            # apt install -y docker-ce docker-ce-cli containerd.io
-            # systemctl enable docker
-            # systemctl start docker
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-bears-drupal/bears-cms"
             cd px-bears-drupal/usagov-2021

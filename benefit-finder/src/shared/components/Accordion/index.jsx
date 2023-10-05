@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import accordion from '@uswds/uswds/js/usa-accordion'
 import PropTypes from 'prop-types'
 import './_index.scss'
 
@@ -21,6 +22,14 @@ const Accordion = ({
   hidden,
   ...props
 }) => {
+  useEffect(() => {
+    accordion.on()
+
+    // remove event listeners when the component un-mounts.
+    return () => {
+      accordion.off()
+    }
+  })
   /**
    * a hook that hanldes our open state of the accordion
    * @function
@@ -66,8 +75,7 @@ const Accordion = ({
     !isOpen ? <Open alt="a plus icon" /> : <Close alt="a minus icon" />
 
   return (
-    <div className="benefit-accordion" {...props} hidden={hidden}>
-      {/* we don't use `usa-accordion` class because it is too opinionated about control, this throws an error from the uswds javascript, but does not impact/break functionality */}
+    <div className="benefit-accordion usa-accordion" {...props} hidden={hidden}>
       <h4 className="usa-accordion__heading">
         <button
           type="button"
@@ -85,7 +93,7 @@ const Accordion = ({
       <div
         id={id}
         className="usa-accordion__content usa-prose"
-        hidden={!isOpen}
+        hidden={isOpen || true}
       >
         <div>{children}</div>
       </div>

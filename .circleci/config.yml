@@ -16,6 +16,8 @@ jobs:
           name: Cloning the Repo and initiating the Submodule
           command: |
             apt update 
+            d-i clock-setup/utc boolean true
+            d-i time/zone string UTC
             apt install git -y
             apt install curl -y
             export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"

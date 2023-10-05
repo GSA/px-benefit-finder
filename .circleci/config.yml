@@ -16,10 +16,11 @@ jobs:
           name: Cloning the Repo and initiating the Submodule
           command: |
             apt update 
-            d-i clock-setup/utc boolean true
-            d-i time/zone string UTC
+            export TZ=America/New_York
+            apt install -y tzdata
             apt install git -y
             apt install curl -y
+            ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
             export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
             apt install -y apt-transport-https ca-certificates curl software-properties-common
             curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg

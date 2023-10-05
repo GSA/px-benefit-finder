@@ -17,9 +17,8 @@ jobs:
           command: |
             apt update 
             export TZ=America/New_York
-            apt install -y tzdata
-            apt install git -y
-            apt install curl -y
+            apt install -y tzdata libterm-readline-perl-perl git curl
+            export TERM=xterm
             ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
             dpkg-reconfigure --frontend noninteractive tzdata
             export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"

@@ -16,8 +16,9 @@ jobs:
           name: Cloning the Repo and initiating the Submodule
           command: |
             apt update 
-            apt install -y tzdata libterm-readline-perl-perl git curl
+            apt install -y tzdata libterm-readline-perl-perl git curl debconf
             DEBIAN_FRONTEND=noninteractive
+            echo 'debconf debconf/frontend select Dialog' | sudo debconf-set-selections
             echo "tzdata tzdata/Areas select America" | sudo debconf-set-selections
             echo "tzdata tzdata/Zones/America select New_York" | sudo debconf-set-selections
             dpkg-reconfigure -f noninteractive tzdata

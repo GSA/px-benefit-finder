@@ -8,8 +8,8 @@ parameters:
 jobs:
   build_and_deploy:
     circleci_ip_ranges: true
-    machine:
-      image: ubuntu-2004:202107-02
+    docker:
+      image: ubuntu:20.04
 
     steps:
       - run:

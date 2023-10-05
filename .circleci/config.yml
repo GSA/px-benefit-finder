@@ -21,6 +21,7 @@ jobs:
             apt install git -y
             apt install curl -y
             ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+            dpkg-reconfigure --frontend noninteractive tzdata
             export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
             apt install -y apt-transport-https ca-certificates curl software-properties-common
             curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg

@@ -27,8 +27,8 @@ jobs:
             echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
             apt update
             apt install -y docker-ce docker-ce-cli containerd.io
-            systemctl enable docker
-            systemctl start docker
+            service docker start
+            docker --version
             echo "cloning the repo and initiating the usagov-2021 submodule"
             git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
             cd px-bears-drupal

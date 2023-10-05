@@ -17,6 +17,7 @@ jobs:
           command: |
             apt update 
             apt install git -y
+            export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
             echo "cloning the repo and initiating the usagov-2021 submodule"
             git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
             cd px-bears-drupal

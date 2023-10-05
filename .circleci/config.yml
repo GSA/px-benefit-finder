@@ -98,7 +98,7 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
                                   /var/www/vendor/bin/drush cr && \
                                   cd ../var/www/web/sites/default/files && \
-                                  mkdir -p bears/api/life-event && \
+                                  mkdir -p bears/api/life_event && \
                                   pwd && ls -l && \
                                   chown -R nginx:nginx bears && \
                                   cd bears && ls -l && \

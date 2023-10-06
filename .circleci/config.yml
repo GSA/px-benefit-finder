@@ -70,10 +70,10 @@ jobs:
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#- name: cms#- name: benefit-finder-cms#" manifest.yml
             sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
-            sed -i "s#^    - database#    - benefit-finder-mysql-dev#" manifest.yml
-            sed -i "s#^    - secrets#    - benefit-finder-secrets-dev#" manifest.yml
-            sed -i "s#^    - storage#    - benefit-finder-storage-dev#" manifest.yml
-            sed -i "s#^    - dbstorage#    - backup#" manifest.yml
+            sed -i "s#^    - database#    - benefit-finder-mysql-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i "s#^    - dbstorage##" manifest.yml
             cat manifest.yml
 
       - run:
@@ -88,8 +88,8 @@ jobs:
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
-            cf target -o "$CF_ORG"  -s "$CF_SPACE_dev"
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
             cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
@@ -100,8 +100,8 @@ jobs:
       - run:
           name: Enable benefit-finder module
           command: |
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
-            cf target -o "$CF_ORG"  -s "$CF_SPACE_dev"
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
             cf ssh benefit-finder-cms --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0 && \
                                   /var/www/vendor/bin/drush pm:uninstall usagov_login && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_block && \
@@ -147,7 +147,7 @@ jobs:
             curl -v -L -o cf-cli_amd64.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github"
             sudo dpkg -i cf-cli_amd64.deb
             cf -v
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "$CF_SPACE_dev"
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
             
       - run:
           name: Deploy Storybook
@@ -179,6 +179,7 @@ workflows:
             branches:
               only: 
                 - main
+                - dev
 
   scheduled_cms_build_and_deploy_workflow:
     triggers:
@@ -188,6 +189,7 @@ workflows:
             branches:
               only:
                 - main
+                - dev
     jobs:
       - build_and_deploy
 
@@ -198,6 +200,7 @@ workflows:
             branches:
               only:
                 - main
+                - dev
 
 
 

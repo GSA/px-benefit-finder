@@ -153,14 +153,14 @@ jobs:
           name: Deploy Storybook
           command: |  
              cd px-benefit-finder/benefit-finder
+             envsubst < manifest.yml > manifest.yml
+             cat manifest.yml 
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
              npm run build
              cd .. 
              bash mv-uswds-usagov-theme.sh
              cd benefit-finder
-             envsubst < manifest.yml > manifest.yml
-             cat manifest.yml 
              npm run build:storybook
              mv manifest.yml storybook-static/
              mv Staticfile storybook-static/

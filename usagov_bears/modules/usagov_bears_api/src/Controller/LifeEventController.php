@@ -352,17 +352,20 @@ class LifeEventController {
       $benefit_eligibility = [];
 
       $criteria = current($eligibility->get('field_b_criteria_key')->referencedEntities());
-      $ckey = $criteria->get('field_b_criteria_key')->value;
+      if ($criteria) {
+        $ckey = $criteria->get('field_b_criteria_key')->value;
 
-      $benefit_eligibility['criteriaKey'] = $ckey;
-      $benefit_eligibility['label'] = $eligibility->get('field_b_label')->value ?? "";
+        $benefit_eligibility['criteriaKey'] = $ckey;
+        $benefit_eligibility['label'] = $eligibility->get('field_b_label')->value ?? "";
 
-      $acceptableValues = $eligibility->get('field_b_acceptable_values')->getValue();
-      foreach ($acceptableValues as $key => $acceptableValue) {
-        $benefit_eligibility['acceptableValues'][] = $acceptableValue['value'];
+        $acceptableValues = $eligibility->get('field_b_acceptable_values')->getValue();
+        foreach ($acceptableValues as $key => $acceptableValue) {
+          $benefit_eligibility['acceptableValues'][] = $acceptableValue['value'];
+        }
+
+        $benefit_eligibilitys[] = $benefit_eligibility;
       }
 
-      $benefit_eligibilitys[] = $benefit_eligibility;
     }
 
     $benefit['eligibility'] = $benefit_eligibilitys;

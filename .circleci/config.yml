@@ -167,7 +167,7 @@ jobs:
              mv nginx storybook-static/
              cd storybook-static
              echo "${storybook_username}:${storybook_password}" > Staticfile.auth
-             cf push           
+             cf push benefit-finder-storybook-${CIRCLE_BRANCH}          
 
 
 

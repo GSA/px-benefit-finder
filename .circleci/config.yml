@@ -158,7 +158,8 @@ jobs:
              npm run build
              cd .. 
              bash mv-uswds-usagov-theme.sh
-             cd benefit-finder 
+             cd benefit-finder
+             envsubst < manifest.yml   
              npm run build:storybook
              mv manifest.yml storybook-static/
              mv Staticfile storybook-static/

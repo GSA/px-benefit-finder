@@ -68,7 +68,7 @@ jobs:
             cd px-benefit-finder/usagov-2021
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
-            sed -i "s#- name: cms#- name: benefit-finder-cms#" manifest.yml
+            sed -i "s#- name: cms#- name: benefit-finder-cms-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
             sed -i "s#^    - database#    - benefit-finder-mysql-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
@@ -93,7 +93,7 @@ jobs:
             cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
+            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
             sleep 20
 

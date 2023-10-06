@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.field.node.bears_life_event_form.field_b_elg_criteria_desc
     - field.field.node.bears_life_event_form.field_b_id
+    - field.field.node.bears_life_event_form.field_b_json_file
+    - field.field.node.bears_life_event_form.field_b_relevant_benefits
     - field.field.node.bears_life_event_form.field_b_sections_elg_criteria
     - field.field.node.bears_life_event_form.field_b_summary
     - field.field.node.bears_life_event_form.field_b_time_estimate
@@ -34,7 +36,7 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_b_sections_elg_criteria:
+  field_b_relevant_benefits:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
@@ -42,6 +44,15 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_b_sections_elg_criteria:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_b_summary:
     type: text_default
@@ -72,7 +83,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   langcode:
     type: language
@@ -81,11 +92,12 @@ content:
       link_to_entity: false
       native_language: false
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
-hidden: {  }
+hidden:
+  field_b_json_file: true

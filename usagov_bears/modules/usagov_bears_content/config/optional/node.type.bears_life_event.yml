@@ -7,19 +7,20 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
-    parent: 'main:'
+      - left-menu-english
+      - left-menu-spanish
+    parent: 'left-menu-english:'
   node_menus:
-    enabled: 0
+    enabled: 1
     languages:
       en:
         available_menus:
-          - main
-        parent: 'main:'
+          - left-menu-english
+        parent: 'left-menu-english:'
       es:
         available_menus:
-          - main
-        parent: 'main:'
+          - left-menu-spanish
+        parent: 'left-menu-spanish:'
 name: 'Bears Life Event'
 type: bears_life_event
 description: 'Bears Life Event'

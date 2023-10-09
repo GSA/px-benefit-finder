@@ -122,6 +122,7 @@
     "shareResults": {
       "heading": "Share results",
       "shareButton": "Share link",
+      "shareLinkContent": "Copied",
       "emailButton": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",
       "description": "Copy or email these results. Your answers will be visible. Only share with those you trust."

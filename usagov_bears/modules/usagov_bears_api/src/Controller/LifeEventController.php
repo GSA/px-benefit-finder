@@ -83,8 +83,19 @@ class LifeEventController {
    *  The response.
    */
   public function saveJsonData($id) {
+    // Get JSON data mode.
+    if (empty($this->mode)) {
+      $this->mode = $this->request->get('mode') ?? "published";
+    }
+
     // Prepare directory.
-    $directory = "public://bears/api/life_event";
+    if ($this->mode == "published") {
+      $directory = "public://bears/api/life_event";
+    }
+    else if ($this->mode == "draft") {
+      $directory = "public://bears/api/draft/life_event";
+    }
+
     $this->fileSystem->prepareDirectory($directory, FileSystemInterface:: CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
 
     // Get JSON data.

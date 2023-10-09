@@ -24,7 +24,17 @@ const BenefitAccordionGroup = ({
   entryKey,
   expandAll,
   notQualifiedView,
+  ui,
 }) => {
+  const { benefitAccordion, benefitAccordionGroup } = ui
+  const {
+    eligibleStatusLabels,
+    agencyPrefix,
+    visitLabel,
+    unmetLabel,
+    additionalDescription,
+  } = benefitAccordion
+  const { closedState, openState } = benefitAccordionGroup
   /**
    * a hook that hanldes our open state of the accordions in our group
    * @function
@@ -38,7 +48,7 @@ const BenefitAccordionGroup = ({
    * @function
    * @return {stroing} returns label for our button
    */
-  const handleExpandIcon = isExpandAll ? 'Collapse all -' : 'Expand all +'
+  const handleExpandIcon = isExpandAll ? `${openState} -` : `${closedState} +`
 
   /**
    * a functional component that renders a button and controls the expansion of our accordions
@@ -69,7 +79,7 @@ const BenefitAccordionGroup = ({
   const NotEligibleList = ({ items }) => {
     return (
       <div className="unmet-criteria-group">
-        <div className="unmet-criteria-title">UNMET CRITERIA</div>
+        <div className="unmet-criteria-title">{unmetLabel}</div>
         <ul className="unmet-criteria-list">
           {items.map((item, index) => {
             const { label } = item
@@ -96,7 +106,7 @@ const BenefitAccordionGroup = ({
   const MoreInfoList = ({ items }) => {
     return (
       <div className="unmet-criteria-group">
-        <div className="unmet-criteria-title">MORE INFORMATION NEEDED</div>
+        <div className="unmet-criteria-title">{eligibleStatusLabels[1]}</div>
         <ul className="unmet-criteria-list">
           {items.map((item, index) => {
             const { label } = item
@@ -143,11 +153,11 @@ const BenefitAccordionGroup = ({
           // z > 0	"Not Eligible"
           const eligibleStatus =
             eligibleBenefits.length === eligibility.length
-              ? 'Likely Eligible'
+              ? eligibleStatusLabels[0]
               : notEligibleBenefits.length === 0 &&
                 moreInformationNeeded.length > 0
-              ? 'More Information Needed'
-              : 'Not Eligible'
+              ? eligibleStatusLabels[1]
+              : eligibleStatusLabels[2]
 
           const handleHidden =
             notQualifiedView === false && eligibleStatus !== 'Likely Eligible'
@@ -170,7 +180,7 @@ const BenefitAccordionGroup = ({
               hidden={handleHidden}
             >
               <Heading className="benefit-detail-title" headingLevel={4}>
-                {`Provided by ${agency.title}`}
+                {`${agencyPrefix} ${agency.title}`}
               </Heading>
               <div
                 className="benefit-detail-summary"
@@ -180,6 +190,7 @@ const BenefitAccordionGroup = ({
                 className="benefit-criteria-list"
                 data={eligibleBenefits}
                 initialEligibilityLength={eligibility.length}
+                ui={benefitAccordion}
               />
               {notEligibleBenefits.length > 0 && (
                 <NotEligibleList items={notEligibleBenefits} />
@@ -187,17 +198,14 @@ const BenefitAccordionGroup = ({
               {moreInformationNeeded.length > 0 && (
                 <MoreInfoList items={moreInformationNeeded} />
               )}
-              <Alert className="benefit-alert">
-                Additional eligibility criteria may apply. Please visit agency
-                for full requirements.
-              </Alert>
+              <Alert className="benefit-alert">{additionalDescription}</Alert>
               <ObfuscatedLink
                 className="benefit-link"
                 href={SourceLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit {agency.title}
+                {visitLabel} {agency.title}
               </ObfuscatedLink>
             </Accordion>
           )

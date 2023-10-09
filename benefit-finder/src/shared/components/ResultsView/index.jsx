@@ -98,6 +98,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
               entryKey={'benefit'}
               notQualifiedView={notQualifiedView}
               expandAll
+              ui={ui}
             />
           </div>
           {notQualifiedView === false && (

@@ -124,6 +124,22 @@ class LifeEventController {
       "summary" => $life_event_form_node->get('field_b_summary')->value ?? ""
     ];
 
+    // Get Relevant Benefits.
+    $relevant_benefits = $life_event_form_node->get('field_b_relevant_benefits')->referencedEntities();
+
+    // Build Relevant Benefits.
+    $life_event_form_relevant_benefits = [];
+    foreach ($relevant_benefits as $relevant_benefit) {
+      $life_event_form_relevant_benefit = [
+        "title" => current($relevant_benefit->get('field_b_life_event_form')->referencedEntities())->get('title')->value ?? "",
+        "body" => $relevant_benefit->get('field_b_body')->value ?? "",
+        "link" => $relevant_benefit->get('field_b_link')->value ?? "",
+        "cta" => $relevant_benefit->get('field_b_cta')->value ?? ""
+      ];
+      $life_event_form_relevant_benefits[]['lifeEvent'] = $life_event_form_relevant_benefit;
+    }
+    $life_event_form['relevantBenefits'] = $life_event_form_relevant_benefits;
+
     // Get Sections of Eligibility Criteria.
     $sections = $life_event_form_node->get('field_b_sections_elg_criteria')->referencedEntities();
 

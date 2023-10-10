@@ -209,7 +209,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 618-add-draft-json-data-program-in-pipeline
+                - main
 
   scheduled_cms_build_and_deploy_workflow:
     triggers:

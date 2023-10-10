@@ -162,7 +162,8 @@ jobs:
           name: Deploy Storybook
           command: |  
              cd px-benefit-finder/benefit-finder
-             envsubst < manifest.yml > manifest.yml
+             mv manifest.yml manifest.yml.tpl
+             envsubst < manifest.yml.tpl > manifest.yml
              echo "---------------------------------------------"
              pwd
              ls -l

@@ -463,9 +463,6 @@ const LifeEventSection = ({
               </div>
             )}
             <div className="section-nav-btn-group">
-              <Button secondary onClick={() => handleBackUpdate(-1)}>
-                {buttonGroup[0].value}
-              </Button>
               {modal === false ? (
                 <Button onClick={() => handleForwardUpdate(1)}>
                   {buttonGroup[1].value}
@@ -487,6 +484,9 @@ const LifeEventSection = ({
                   />
                 </div>
               )}
+              <Button secondary onClick={() => handleBackUpdate(-1)}>
+                {buttonGroup[0].value}
+              </Button>
             </div>
           </div>
         </div>

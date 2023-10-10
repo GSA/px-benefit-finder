@@ -9,6 +9,7 @@ Array [
   </label>,
   <select
     className=""
+    required={false}
     value=""
   >
     <option

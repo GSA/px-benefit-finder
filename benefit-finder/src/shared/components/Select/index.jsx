@@ -58,6 +58,7 @@ function Select({
         id={htmlFor}
         onChange={onChange}
         value={selected || ''}
+        required={required === 'TRUE'}
       >
         <option value="" key="default" disabled>
           {defaultValue}

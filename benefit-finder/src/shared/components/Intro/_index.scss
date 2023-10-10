@@ -10,7 +10,14 @@
     }
 
     .cta-wrapper {
+      display: flex;
+      justify-content: center;
       margin: space.$space-lg space.$space-lg space.$space-xl;
+    }
+
+    .cta-wrapper button {
+      margin: 0 auto;
+      width: 248px;
     }
 
     @media (width >= $desktop) {
@@ -24,15 +31,6 @@
 
       .intro-process-group {
         display: flex;
-      }
-
-      .cta-wrapper {
-        text-align: center;
-      }
-
-      .cta-wrapper button {
-        margin: 0 auto;
-        min-width: 420px;
       }
     }
   }

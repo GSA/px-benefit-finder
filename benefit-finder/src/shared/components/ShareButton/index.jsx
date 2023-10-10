@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '../index'
 import buildURIParameter from '../../utils/buildURIParameter'
+import './_index.scss'
 
 /**
  * a functional component that renders a button with copy-to-cipboard functionality
@@ -29,7 +30,7 @@ const ShareButton = ({ ui, data }) => {
   }
 
   return (
-    <Button secondary onClick={handleClick}>
+    <Button className="share-button" secondary onClick={handleClick}>
       {ui || 'Share'}
     </Button>
   )

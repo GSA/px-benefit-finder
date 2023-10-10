@@ -576,20 +576,24 @@ Array [
           </div>
         </fieldset>
       </div>
-      <button
-        className=""
-        onClick={[Function]}
-        type="button"
+      <div
+        className="section-nav-btn-group"
       >
-        Back
-      </button>
-      <button
-        className=""
-        onClick={[Function]}
-        type="button"
-      >
-        Continue
-      </button>
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          Back
+        </button>
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          Continue
+        </button>
+      </div>
     </div>
   </div>,
 ]

@@ -462,30 +462,32 @@ const LifeEventSection = ({
                 })}
               </div>
             )}
-            <Button secondary onClick={() => handleBackUpdate(-1)}>
-              {buttonGroup[0].value}
-            </Button>
-            {modal === false ? (
-              <Button onClick={() => handleForwardUpdate(1)}>
-                {buttonGroup[1].value}
+            <div className="section-nav-btn-group">
+              <Button secondary onClick={() => handleBackUpdate(-1)}>
+                {buttonGroup[0].value}
               </Button>
-            ) : (
-              <div>
-                <Modal
-                  id="nav-modal"
-                  modalHeading={reviewSelectionModal.heading}
-                  navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
-                  navItemOneFunction={setVerifyStep}
-                  navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
-                  navItemTwoFunction={setViewResults}
-                  triggerLabel={buttonGroup[1].value}
-                  handleCheckRequriedFields={handleCheckRequriedFields}
-                  modalOpen={modalOpen}
-                  setModalOpen={setModalOpen}
-                  completed={currentData.completed}
-                />
-              </div>
-            )}
+              {modal === false ? (
+                <Button onClick={() => handleForwardUpdate(1)}>
+                  {buttonGroup[1].value}
+                </Button>
+              ) : (
+                <div>
+                  <Modal
+                    id="nav-modal"
+                    modalHeading={reviewSelectionModal.heading}
+                    navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
+                    navItemOneFunction={setVerifyStep}
+                    navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
+                    navItemTwoFunction={setViewResults}
+                    triggerLabel={buttonGroup[1].value}
+                    handleCheckRequriedFields={handleCheckRequriedFields}
+                    modalOpen={modalOpen}
+                    setModalOpen={setModalOpen}
+                    completed={currentData.completed}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </>

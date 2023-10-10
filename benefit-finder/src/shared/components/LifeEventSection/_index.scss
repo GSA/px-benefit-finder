@@ -30,6 +30,17 @@
     margin: 50px 20px;
   }
 
+  .section-nav-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    button,
+    .benefit-modal-group a {
+      width: 248px;
+    }
+  }
+
   .section-heading {
     @include h3;
 
@@ -59,11 +70,6 @@
     .usa-radio__label {
       margin-right: 32px;
     }
-  }
-
-  button,
-  .benefit-modal-group a {
-    width: 100%;
   }
 
   @media (width >= $desktop) {

@@ -154,7 +154,9 @@ jobs:
           command: |  
              cd px-benefit-finder/benefit-finder
              envsubst < manifest.yml > manifest.yml
-             cat manifest.yml 
+             echo "---------------------------------------------"
+             cat manifest.yml
+             echo "---------------------------------------------"
              nvm install node --reinstall-packages-from=node
              npm i @craco/craco
              npm run build

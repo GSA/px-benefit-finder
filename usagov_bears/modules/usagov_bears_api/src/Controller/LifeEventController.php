@@ -42,7 +42,28 @@ class LifeEventController {
   protected $fileUrlGenerator;
 
   /**
-   * {@inheritdoc}
+   * Active database connection.
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $database;
+
+  /**
+   * Retrieves the currently active request object.
+   *
+   * @var \Symfony\Component\HttpFoundation\Request
+   */
+  protected $request;
+
+  /**
+   * The JSON data mode.
+   *
+   * @var string
+   */
+  protected $mode;
+
+  /**
+   * Constructs a new LifeEventController object.
    */
   public function __construct()
   {
@@ -50,6 +71,8 @@ class LifeEventController {
     $this->fileSystem = \Drupal::service('file_system');
     $this->fileRepository = \Drupal::service('file.repository');
     $this->fileUrlGenerator = \Drupal::service('file_url_generator');
+    $this->database = \Drupal::service('database');
+    $this->request = \Drupal::request();
   }
 
   /**
@@ -60,8 +83,19 @@ class LifeEventController {
    *  The response.
    */
   public function saveJsonData($id) {
+    // Get JSON data mode.
+    if (empty($this->mode)) {
+      $this->mode = $this->request->get('mode') ?? "published";
+    }
+
     // Prepare directory.
-    $directory = "public://bears/api/life_event";
+    if ($this->mode == "published") {
+      $directory = "public://bears/api/life_event";
+    }
+    else if ($this->mode == "draft") {
+      $directory = "public://bears/api/draft/life_event";
+    }
+
     $this->fileSystem->prepareDirectory($directory, FileSystemInterface:: CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
 
     // Get JSON data.
@@ -111,8 +145,23 @@ class LifeEventController {
     $benefits = [];
     $result = [];
 
+    // Get JSON data mode.
+    if (empty($this->mode)) {
+      $this->mode = $this->request->get('mode') ?? "published";
+    }
+
     // Get life event form node and node ID of given life event.
     $life_event_form_node = $this->getLifeEventForm($id);
+    if (empty($life_event_form_node)) {
+      $result = [];
+      $json = json_encode($result, JSON_PRETTY_PRINT);
+      print_r("<p>JSON Data<pre>");
+      print_r($json);
+      print_r("</pre>");
+      return $result;
+    }
+
+    // Get node ID of life event form.
     $life_event_form_node_id = $life_event_form_node->id();
 
     // Build life event form.
@@ -123,6 +172,22 @@ class LifeEventController {
       "title" => $life_event_form_node->get('title')->value ?? "",
       "summary" => $life_event_form_node->get('field_b_summary')->value ?? ""
     ];
+
+    // Get Relevant Benefits.
+    $relevant_benefits = $life_event_form_node->get('field_b_relevant_benefits')->referencedEntities();
+
+    // Build Relevant Benefits.
+    $life_event_form_relevant_benefits = [];
+    foreach ($relevant_benefits as $relevant_benefit) {
+      $life_event_form_relevant_benefit = [
+        "title" => current($relevant_benefit->get('field_b_life_event_form')->referencedEntities())->get('title')->value ?? "",
+        "body" => $relevant_benefit->get('field_b_body')->value ?? "",
+        "link" => $relevant_benefit->get('field_b_link')->value ?? "",
+        "cta" => $relevant_benefit->get('field_b_cta')->value ?? ""
+      ];
+      $life_event_form_relevant_benefits[]['lifeEvent'] = $life_event_form_relevant_benefit;
+    }
+    $life_event_form['relevantBenefits'] = $life_event_form_relevant_benefits;
 
     // Get Sections of Eligibility Criteria.
     $sections = $life_event_form_node->get('field_b_sections_elg_criteria')->referencedEntities();
@@ -142,6 +207,7 @@ class LifeEventController {
       // Build criteria fieldsets.
       $criteria_fieldsets = [];
       foreach ($criterias as $criteria) {
+        $criteria_fieldset = [];
         if ($criteria->type->target_id == "b_levent_elg_criteria") {
           $criteria_fieldset = $this->buildCriteriaFieldset($criteria);
         } else if ($criteria->type->target_id == "b_levent_elg_criteria_group") {
@@ -189,9 +255,7 @@ class LifeEventController {
       ->condition('field_b_id', $id)
       ->range(0, 1);
     $node_id = current($query->execute());
-    $service = $this->entityTypeManager->getStorage('node');
-    $node = $service->load($node_id);
-    return $node;
+    return $this->getNode($node_id, $this->mode);
   }
 
   /**
@@ -201,11 +265,14 @@ class LifeEventController {
    *   The benefit nodes.
    */
   public function getBenefits($nid) {
+    $nodes = [];
     $query = \Drupal::entityQuery('node')
       ->condition('type', 'bears_benefit')
       ->condition('field_b_life_event_forms', $nid, 'CONTAINS');
     $nids = $query->execute();
-    $nodes = Node::loadMultiple($nids);
+    foreach ($nids as $nid) {
+      $nodes[] = $this->getNode($nid, $this->mode);
+    }
     return $nodes;
   }
 
@@ -247,6 +314,15 @@ class LifeEventController {
   {
     $criteria_fieldset = [];
 
+    // Get criteria node.
+    $target_id = $criteria->get('field_b_criteria_key')->target_id;
+    $criteria_node = $this->getCriteria($target_id);
+
+    // Do not build missing criteria.
+    if (empty($criteria_node)) {
+      return $criteria_fieldset;
+    }
+
     // Build criteria fieldset.
     $criteria_fieldset = [
       "criteriaKey" => current($criteria->get('field_b_criteria_key')->referencedEntities())->get('field_b_id')->value,
@@ -254,9 +330,6 @@ class LifeEventController {
       "required" => $criteria->get('field_b_required')->value ? "TRUE":"FALSE",
       "hint" => $criteria->get('field_b_hint')->value ?? ""
     ];
-
-    // Get criteria node.
-    $criteria_node = current($criteria->get('field_b_criteria_key')->referencedEntities());
 
     // Build inputCriteria.
     $inputCriteria = [
@@ -295,6 +368,7 @@ class LifeEventController {
     }
     else {
       foreach ($criterias_1 as $criteria_1) {
+        $criteria_fieldset_1 = [];
         if ($criteria_1->type->target_id == "b_levent_elg_criteria") {
           $criteria_fieldset_1 = $this->buildCriteriaFieldset($criteria_1);
         } else if ($criteria_1->type->target_id == "b_levent_elg_criteria_group") {
@@ -323,13 +397,19 @@ class LifeEventController {
       "SourceIsEnglish" => $node->get('field_b_source_is_english')->value ? "TRUE": "FALSE"
     ];
 
-    // Build agency.
-    $agency = current($node->get('field_b_agency')->referencedEntities());
-    $benefit["agency"] = [
-      "title" => $agency->get('title')->value,
-      "summary" => $agency->get('field_b_summary')->value ?? "",
-      "lede" => $agency->get('field_b_lede')->value ?? ""
-    ];
+    // Get agency node and build benefit agency.
+    $target_id = $node->get('field_b_agency')->target_id;
+    $agency = $this->getAgency($target_id);
+    if ($agency) {
+      $benefit["agency"] = [
+        "title" => $agency->get('title')->value,
+        "summary" => $agency->get('field_b_summary')->value ?? "",
+        "lede" => $agency->get('field_b_lede')->value ?? ""
+      ];
+    }
+    else {
+      $benefit["agency"] = [];
+    }
 
     // Build tags.
     $tags = $node->get('field_b_tags')->referencedEntities();
@@ -351,22 +431,98 @@ class LifeEventController {
     foreach ($eligibilities as $eligibility) {
       $benefit_eligibility = [];
 
-      $criteria = current($eligibility->get('field_b_criteria_key')->referencedEntities());
-      $ckey = $criteria->get('field_b_criteria_key')->value;
+      $target_id = $eligibility->get('field_b_criteria_key')->target_id;
+      $criteria_node = $this->getCriteria($target_id);
+      if ($criteria_node) {
+        $ckey = $criteria_node->get('field_b_criteria_key')->value;
 
-      $benefit_eligibility['criteriaKey'] = $ckey;
-      $benefit_eligibility['label'] = $eligibility->get('field_b_label')->value ?? "";
+        $benefit_eligibility['criteriaKey'] = $ckey;
+        $benefit_eligibility['label'] = $eligibility->get('field_b_label')->value ?? "";
 
-      $acceptableValues = $eligibility->get('field_b_acceptable_values')->getValue();
-      foreach ($acceptableValues as $key => $acceptableValue) {
-        $benefit_eligibility['acceptableValues'][] = $acceptableValue['value'];
+        $acceptableValues = $eligibility->get('field_b_acceptable_values')->getValue();
+        foreach ($acceptableValues as $key => $acceptableValue) {
+          $benefit_eligibility['acceptableValues'][] = $acceptableValue['value'];
+        }
+
+        $benefit_eligibilitys[] = $benefit_eligibility;
       }
 
-      $benefit_eligibilitys[] = $benefit_eligibility;
     }
 
     $benefit['eligibility'] = $benefit_eligibilitys;
 
     return $benefit;
   }
+
+  /**
+   * Gets criteria of given nid.
+   *
+   * @param $nid
+   *   The criteria node ID.
+   * @return \Drupal\node\NodeInterface
+   *   The criteria node.
+   */
+  public function getCriteria($nid) {
+    return $this->getNode($nid, $this->mode);
+  }
+
+  /**
+   * Gets agency of given nid.
+   *
+   * @param $nid
+   *   The agency node ID.
+   * @return \Drupal\node\NodeInterface
+   *   The agency node.
+   */
+  public function getAgency($nid) {
+    return $this->getNode($nid, $this->mode);
+  }
+
+  /**
+   * Gets node of given nid and mode.
+   *
+   * @param $nid
+   *   The node ID.
+   * @param $mode
+   *   The mode.
+   * @return \Drupal\node\NodeInterface
+   *   The node.
+   */
+  public function getNode($nid, $mode) {
+    $vid = 0;
+
+    // Do not use node of moderation state archived.
+    $id = $this->database
+      ->query('SELECT id FROM content_moderation_state_field_data
+                        WHERE moderation_state = :mstate AND content_entity_id = :nid',
+                        [':mstate' => 'archived', ':nid' => $nid])
+      ->fetchField();
+    if ($id) {
+      return NULL;
+    }
+
+    if ($mode == "published") {
+      $vid = $this->database
+        ->query('SELECT MAX(vid) AS vid FROM node_field_revision WHERE status = 1 AND nid = :nid', [':nid' => $nid])
+        ->fetchField();
+    }
+    else if ($mode == "draft") {
+      $vid = $this->database
+        ->query('SELECT MAX(vid) AS vid FROM node_field_revision WHERE nid = :nid', [':nid' => $nid])
+        ->fetchField();
+    }
+    else {
+      // @todo Unknown
+    }
+
+    if ($vid) {
+      $node = node_revision_load($vid);
+    }
+    else {
+      $node = NULL;
+    }
+
+    return $node;
+  }
+
 }

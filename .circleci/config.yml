@@ -31,9 +31,8 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
-            mv  usagov_bears usagov-2021/web/modules/custom
-            mv death.json usagov-2021/scripts/death.json
-            mv es_death.json usagov-2021/scripts/es_death.json
+            mv usagov_bears usagov-2021/web/modules/custom
+            mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
 
       - run: 
           name: Pre-docker-build configurations

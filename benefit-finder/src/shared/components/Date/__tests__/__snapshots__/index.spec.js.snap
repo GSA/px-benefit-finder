@@ -25,7 +25,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
       className="usa-select "
       id="date_of_birth_month-undefined"
       name="date_of_birth_month-undefined"
-      required="required"
+      required={false}
       value=""
     >
       <option
@@ -117,6 +117,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
       id="date_of_birth_day-undefined"
       inputMode="numeric"
       name="date_of_birth_day-undefined"
+      required={false}
       value=""
     />
   </div>
@@ -141,6 +142,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
       id="date_of_birth_year-undefined"
       inputMode="numeric"
       name="date_of_birth_year-undefined"
+      required={false}
       value=""
     />
   </div>

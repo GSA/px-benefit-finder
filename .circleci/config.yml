@@ -108,7 +108,10 @@ jobs:
                                   curl http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile && \
                                   curl http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile && \
                                   curl http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile && \           
+                                  curl http://127.0.0.1:8080/bears/api/life-event/death/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile?mode=draft  && \
                                   ls -l && \
                                   /var/www/vendor/bin/drush cr"
 
@@ -204,7 +207,7 @@ workflows:
           filters:
             branches:
               only: 
-                - main
+                - 618-add-draft-json-data-program-in-pipeline
 
   scheduled_cms_build_and_deploy_workflow:
     triggers:

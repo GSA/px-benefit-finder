@@ -2,7 +2,7 @@
 default_config: &defaults
   buildpacks:
     - staticfile_buildpack
-  disk_quota: 0.5G
+  disk_quota: 1G
   timeout: 180
   routes:
     - route: benefit-finder-storybook-${CIRCLE_BRANCH}.app.cloud.gov
@@ -10,7 +10,7 @@ default_config: &defaults
 applications:
 - name: benefit-finder-storybook-${CIRCLE_BRANCH}
   <<: *defaults
-  memory: 32M
+  memory: 64M
   stack: cflinuxfs4
   instances: 1
   random-route: false

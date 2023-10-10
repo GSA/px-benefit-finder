@@ -203,7 +203,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 610-devops-pipeline-update
+                - main
 
   scheduled_cms_build_and_deploy_workflow:
     triggers:

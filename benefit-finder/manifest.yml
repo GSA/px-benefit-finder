@@ -9,8 +9,9 @@ default_config: &defaults
       protocol: http2
 applications:
 - name: benefit-finder-storybook-${CIRCLE_BRANCH}
-  # <<: *defaults
+  <<: *defaults
   memory: 64M
   stack: cflinuxfs4
   instances: 1
   random-route: false
+

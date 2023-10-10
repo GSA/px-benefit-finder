@@ -155,6 +155,8 @@ jobs:
              cd px-benefit-finder/benefit-finder
              envsubst < manifest.yml > manifest.yml
              echo "---------------------------------------------"
+             pwd
+             ls -l
              cat manifest.yml
              echo "---------------------------------------------"
              nvm install node --reinstall-packages-from=node

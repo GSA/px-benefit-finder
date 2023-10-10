@@ -1,6 +1,46 @@
 @use '../shared/styles/colors/index.scss' as color;
 @use '../shared/styles/mixins/_index.scss' as *;
 
+@font-face {
+  font-family: PublicSans-ExtraBold;
+  src: local('PublicSans'),
+    url("../shared/fonts/public-sans/fonts/webfonts/PublicSans-ExtraBold.woff")
+      format('woff'),
+    local('PublicSans'),
+    url("../shared/fonts/public-sans/fonts/webfonts/PublicSans-ExtraBold.woff2")
+      format('woff2');
+}
+
+@font-face {
+  font-family: PublicSans-Bold;
+  src: local('PublicSans'),
+    url("../shared/fonts/public-sans/fonts/webfonts/PublicSans-Bold.woff")
+      format('woff'),
+    local('PublicSans'),
+    url("../shared/fonts/public-sans/fonts/webfonts/PublicSans-Bold.woff2")
+      format('woff2');
+}
+
+@font-face {
+  font-family: PublicSans-Regular;
+  src: local('PublicSans'),
+    url("../shared/fonts/public-sans/fonts/webfonts/PublicSans-Regular.woff")
+      format('woff'),
+    local('PublicSans'),
+    url("../shared/fonts/public-sans/fonts/webfonts/PublicSans-Regular.woff2")
+      format('woff2');
+}
+
+@font-face {
+  font-family: PublicSans-ExtraLight;
+  src: local('PublicSans'),
+    url("../shared/fonts/public-sans/fonts/webfonts/PublicSans-ExtraLight.woff")
+      format('woff'),
+    local('PublicSans'),
+    url("../shared/fonts/public-sans/fonts/webfonts/PublicSans-ExtraLight.woff2")
+      format('woff2');
+}
+
 #benefit-finder {
   html,
   .benefit-finder.form {
@@ -25,10 +65,6 @@
     background-color: color.$officer-navy !important;
   }
 
-  .usa-hint--required {
-    color: color.$dark-medium-grey !important;
-  }
-
   .usa-radio__input:checked + .usa-radio__label::before {
     background-color: color.$officer-navy;
     box-shadow: 0 0 0 2px color.$officer-navy;
@@ -51,6 +87,8 @@
 .nav-item-one,
 .nav-item-two {
   &.usa-button {
+    @include important-bold;
+
     background-color: color.$pop-blue !important;
     color: color.$white !important;
     width: 100% !important;

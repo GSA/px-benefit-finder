@@ -1,5 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/breakpoints/_index.scss' as *;
+@use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
   .benefit-form,
@@ -30,6 +31,8 @@
   }
 
   .section-heading {
+    @include h3;
+
     background-color: color.$marine;
     color: color.$white;
     margin: 0;
@@ -44,6 +47,10 @@
     padding-bottom: 30px;
     margin-bottom: 40px;
     border-bottom: 1px solid color.$base-light-grey;
+
+    h2.benefit-section-heading {
+      @include h3;
+    }
   }
 
   .radio-group {

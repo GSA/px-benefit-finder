@@ -3,7 +3,7 @@
 
 #benefit-finder {
   .legend {
-    @include h3;
+    @include h6;
 
     padding-bottom: space.$padding-bottom-md-plus;
   }

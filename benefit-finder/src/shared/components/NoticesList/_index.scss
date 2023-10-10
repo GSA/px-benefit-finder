@@ -1,5 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/space/_index.scss' as space;
+@use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
   .notices-list {
@@ -8,6 +9,10 @@
 
   .notice {
     margin-bottom: space.$space-md-plus;
+  }
+
+  .notice-item {
+    @include important-bold;
   }
 
   .line-sperator-wrapper {

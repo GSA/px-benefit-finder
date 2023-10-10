@@ -32,13 +32,13 @@
       }
 
       .heading {
-        @include h4;
+        @include h6;
 
         letter-spacing: 0;
       }
 
       .sub-heading {
-        @include h5;
+        @include p;
 
         letter-spacing: 0;
       }

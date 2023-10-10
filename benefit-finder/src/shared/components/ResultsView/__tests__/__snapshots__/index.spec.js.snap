@@ -17,6 +17,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
         Your Custom List
       </h1>
       <div
+        className="chevron-description"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits. Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual application.</p></div>",
@@ -44,7 +45,8 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
       >
         Results
       </h3>
-      <p
+      <div
+        className="result-view-description"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>",
@@ -167,6 +169,9 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
         >
           Sharing and printing
         </h3>
+        <p>
+          Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible.
+        </p>
         <div
           className="result-view-share-results-button-group"
         >
@@ -185,9 +190,6 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
             Email results
           </button>
         </div>
-        <p>
-          Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible.
-        </p>
       </div>
     </div>
   </div>

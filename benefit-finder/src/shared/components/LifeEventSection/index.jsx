@@ -254,7 +254,7 @@ const LifeEventSection = ({
                   description={ui.alertBanner.description}
                   error
                 ></Alert>
-                <Heading headingLevel={2}>
+                <Heading className="benefit-section-heading" headingLevel={2}>
                   {currentData.section.heading}
                 </Heading>
                 <div

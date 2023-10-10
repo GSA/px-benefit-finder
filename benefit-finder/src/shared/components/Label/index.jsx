@@ -1,6 +1,8 @@
 import { useHandleClassName } from '../../hooks/useHandleClassName'
 import PropTypes from 'prop-types'
 
+import './_index.scss'
+
 /**
  * a functional component to create a label for inputs.
  * @function

@@ -1,5 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/space/_index.scss' as space;
+@use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
   .relative-benefit-card {
@@ -30,7 +31,13 @@
       padding-bottom: 0;
     }
 
+    h3.usa-card__heading {
+      @include h6;
+    }
+
     .usa-card__body {
+      @include p;
+
       padding-top: 0;
       padding-bottom: space.$padding-bottom-md-plus;
       margin-top: 0;

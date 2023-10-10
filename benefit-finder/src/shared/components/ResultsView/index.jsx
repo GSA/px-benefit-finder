@@ -75,10 +75,11 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
               {stepBackLink}
             </Button>
           )}
-          <Heading headingLevel={3}>
+          <Heading className="result-view-heading" headingLevel={3}>
             {notQualifiedView ? notQualified.heading : qualified.heading}
           </Heading>
-          <p
+          <div
+            className="result-view-description"
             dangerouslySetInnerHTML={
               notQualifiedView
                 ? createMarkup(notQualified.description)
@@ -102,7 +103,9 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
           </div>
           {notQualifiedView === false && (
             <div className="result-view-unmet">
-              <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
+              <Heading className="result-view-unmet-heading" headingLevel={3}>
+                {notEligibleResults?.heading}
+              </Heading>
               <p
                 dangerouslySetInnerHTML={createMarkup(
                   notEligibleResults?.description
@@ -114,7 +117,12 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
             </div>
           )}
           <div className="result-view-relvant-benefits">
-            <Heading headingLevel={3}>{relativeBenefits?.heading}</Heading>
+            <Heading
+              className="result-view-relvant-benefits-heading"
+              headingLevel={3}
+            >
+              {relativeBenefits?.heading}
+            </Heading>
             <ul className="add-list-reset">
               <li key="benefit-card-one">
                 <Card
@@ -135,7 +143,13 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
             </ul>
           </div>
           <div className="result-view-share-results">
-            <Heading headingLevel={3}>{shareResults?.heading}</Heading>
+            <Heading
+              className="result-view-share-results-heading"
+              headingLevel={3}
+            >
+              {shareResults?.heading}
+            </Heading>
+            <p>{shareResults?.description}</p>
             <div className="result-view-share-results-button-group">
               <ShareButton
                 ui={shareResults?.shareButton}
@@ -150,7 +164,6 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
                 }
               />
             </div>
-            <p>{shareResults?.description}</p>
           </div>
         </div>
       </div>

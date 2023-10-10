@@ -2,7 +2,7 @@
 default_config: &defaults
   buildpacks:
     - staticfile_buildpack
-  disk_quota: 1G
+  disk_quota: 0.5G
   timeout: 180
   routes:
     - route: benefit-finder-storybook-${CIRCLE_BRANCH}.app.cloud.gov

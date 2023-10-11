@@ -23,7 +23,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
             <div
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<div>Your information<strong> will not</strong> be shared, saved, or submitted.</div>",
+                  "__html": "<div>Your information<strong> is not</strong> shared, saved, or submitted.</div>",
                 }
               }
             />
@@ -47,7 +47,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
             <div
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "Provide complete and accurate information to get the most relevant results.",
+                  "__html": "Provide complete info to get more relevant results.",
                 }
               }
             />

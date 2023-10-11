@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-// import parseDate from '../../utils/parseDate'
+import { Alert } from '../index'
 import './_index.scss'
 
 /**
@@ -10,30 +10,39 @@ import './_index.scss'
  * @param {object} value - inherited state values
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
-const Date = ({ onChange, value, required, ui }) => {
+const Date = ({ onChange, value, required, ui, id, valid }) => {
   const { date, select } = ui
-  const { labelDay, labelMonth, labelYear, monthOptions } = date
+  const { labelDay, labelMonth, labelYear, monthOptions, alert } = date
   const { dateDefaultValue } = select
 
   // Note: when we break each input into functional components they trigger unwanted rerenders
 
   return (
-    <div className="usa-memorable-date">
+    <div id={`usa-memorable-date-${id}`} className="usa-memorable-date">
+      {valid === true && (
+        <Alert
+          className="date-alert"
+          heading={ui.alertBanner.heading}
+          description={alert}
+          error
+        ></Alert>
+      )}
       <div className="usa-form-group usa-form-group--month usa-form-group--select">
-        <label className="usa-label" htmlFor="date_of_birth_month">
+        <label className="usa-label" htmlFor={`date_of_birth_month-${id}`}>
           {labelMonth}
         </label>
-        <div id="month-description" className="a11y-sr-only">
+        <div id={`month-description-${id}`} className="a11y-sr-only">
           Select a month from the list
         </div>
         <select
           className={`usa-select ${
             required === 'TRUE' ? 'required-field' : ''
           }`}
-          id="date_of_birth_month"
-          name="date_of_birth_month"
-          aria-describedby="month-description"
-          required="required"
+          // ref={monthFieldRef}
+          id={`date_of_birth_month-${id}`}
+          name={`date_of_birth_month-${id}`}
+          aria-describedby={`month-description-${id}`}
+          required={required === 'TRUE'}
           value={(value && value.month) || ''}
           onChange={onChange}
         >
@@ -48,37 +57,39 @@ const Date = ({ onChange, value, required, ui }) => {
         </select>
       </div>
       <div className="usa-form-group usa-form-group--day">
-        <label className="usa-label" htmlFor="date_of_birth_day">
+        <label className="usa-label" htmlFor={`date_of_birth_day-${id}`}>
           {labelDay}
         </label>
-        <div id="day-description" className="a11y-sr-only">
+        <div id={`day-description-${id}`} className="a11y-sr-only">
           Enter numerals for day
         </div>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
-          aria-describedby="day-description"
-          id="date_of_birth_day"
-          name="date_of_birth_day"
+          aria-describedby={`day-description-${id}`}
+          id={`date_of_birth_day-${id}`}
+          name={`date_of_birth_day-${id}`}
           inputMode="numeric"
           value={(value && value.day) || ''}
           onChange={onChange}
+          required={required === 'TRUE'}
         />
       </div>
       <div className="usa-form-group usa-form-group--year">
-        <label className="usa-label" htmlFor="date_of_birth_year">
+        <label className="usa-label" htmlFor={`date_of_birth_year-${id}`}>
           {labelYear}
         </label>
-        <div id="year-description" className="a11y-sr-only">
+        <div id={`year-description-${id}`} className="a11y-sr-only">
           Enter numerals for year
         </div>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
-          aria-describedby="year-description"
-          id="date_of_birth_year"
-          name="date_of_birth_year"
+          aria-describedby={`year-description-${id}`}
+          id={`date_of_birth_year-${id}`}
+          name={`date_of_birth_year-${id}`}
           inputMode="numeric"
           value={(value && value.year) || ''}
           onChange={onChange}
+          required={required === 'TRUE'}
         />
       </div>
     </div>

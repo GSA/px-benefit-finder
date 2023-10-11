@@ -106,7 +106,6 @@
       "shareButton": "Share link",
       "emailButton": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",
-      "printButton": "Print results",
       "description": "Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible."
     }
   },
@@ -137,6 +136,7 @@
     "dateDefaultValue": "-Select-"
   },
   "date": {
+    "alert": "Date should follow the format 01 - January 22 1977",
     "labelDay": "Day",
     "labelMonth": "Month",
     "labelYear": "Year",

@@ -3,28 +3,29 @@
 exports[`Date renders a match to the previous snapshot 1`] = `
 <div
   className="usa-memorable-date"
+  id="usa-memorable-date-undefined"
 >
   <div
     className="usa-form-group usa-form-group--month usa-form-group--select"
   >
     <label
       className="usa-label"
-      htmlFor="date_of_birth_month"
+      htmlFor="date_of_birth_month-undefined"
     >
       Month
     </label>
     <div
       className="a11y-sr-only"
-      id="month-description"
+      id="month-description-undefined"
     >
       Select a month from the list
     </div>
     <select
-      aria-describedby="month-description"
+      aria-describedby="month-description-undefined"
       className="usa-select "
-      id="date_of_birth_month"
-      name="date_of_birth_month"
-      required="required"
+      id="date_of_birth_month-undefined"
+      name="date_of_birth_month-undefined"
+      required={false}
       value=""
     >
       <option
@@ -100,22 +101,23 @@ exports[`Date renders a match to the previous snapshot 1`] = `
   >
     <label
       className="usa-label"
-      htmlFor="date_of_birth_day"
+      htmlFor="date_of_birth_day-undefined"
     >
       Day
     </label>
     <div
       className="a11y-sr-only"
-      id="day-description"
+      id="day-description-undefined"
     >
       Enter numerals for day
     </div>
     <input
-      aria-describedby="day-description"
+      aria-describedby="day-description-undefined"
       className="usa-input "
-      id="date_of_birth_day"
+      id="date_of_birth_day-undefined"
       inputMode="numeric"
-      name="date_of_birth_day"
+      name="date_of_birth_day-undefined"
+      required={false}
       value=""
     />
   </div>
@@ -124,22 +126,23 @@ exports[`Date renders a match to the previous snapshot 1`] = `
   >
     <label
       className="usa-label"
-      htmlFor="date_of_birth_year"
+      htmlFor="date_of_birth_year-undefined"
     >
       Year
     </label>
     <div
       className="a11y-sr-only"
-      id="year-description"
+      id="year-description-undefined"
     >
       Enter numerals for year
     </div>
     <input
-      aria-describedby="year-description"
+      aria-describedby="year-description-undefined"
       className="usa-input "
-      id="date_of_birth_year"
+      id="date_of_birth_year-undefined"
       inputMode="numeric"
-      name="date_of_birth_year"
+      name="date_of_birth_year-undefined"
+      required={false}
       value=""
     />
   </div>

@@ -116,13 +116,6 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
           >
             Email results
           </button>
-          <button
-            className=""
-            onClick={[Function]}
-            type="button"
-          >
-            Print results
-          </button>
         </div>
         <p>
           Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible.

@@ -84,6 +84,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
+            sleep 20
 
       - run:
           name: Enable benefit-finder module
@@ -96,14 +97,23 @@ jobs:
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears && \
                                   /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
+                                  /var/www/vendor/bin/drush cr && \
                                   cd ../var/www/web/sites/default/files && \
                                   mkdir -p bears/api/life_event && \
-                                  cd ../../../../.. && \
-                                  /var/www/vendor/bin/drush cr && \
-                                  cd www/scripts && \
-                                  mv death.json /var/www/web/sites/default/files/bears/api/life_event/death.json && \
-                                  mv es_death.json /var/www/web/sites/default/files/bears/api/life_event/es_death.json && \
+                                  chown -R nginx:nginx bears && \
+                                  cd bears/api/life_event && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile  
+                                  curl http://127.0.0.1:8080/bears/api/life-event/death/jsonfile && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_death/jsonfile && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile && \
+                                  ls -l && \
                                   /var/www/vendor/bin/drush cr"
+
+
+
   
   component-library:
     machine:

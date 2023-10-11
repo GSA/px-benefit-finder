@@ -113,29 +113,30 @@ Array [
           <div>
             <div
               className="usa-memorable-date"
+              id="usa-memorable-date-applicant_date_of_birth_0"
             >
               <div
                 className="usa-form-group usa-form-group--month usa-form-group--select"
               >
                 <label
                   className="usa-label"
-                  htmlFor="date_of_birth_month"
+                  htmlFor="date_of_birth_month-applicant_date_of_birth_0"
                 >
                   Month
                 </label>
                 <div
                   className="a11y-sr-only"
-                  id="month-description"
+                  id="month-description-applicant_date_of_birth_0"
                 >
                   Select a month from the list
                 </div>
                 <select
-                  aria-describedby="month-description"
+                  aria-describedby="month-description-applicant_date_of_birth_0"
                   className="usa-select required-field"
-                  id="date_of_birth_month"
-                  name="date_of_birth_month"
+                  id="date_of_birth_month-applicant_date_of_birth_0"
+                  name="date_of_birth_month-applicant_date_of_birth_0"
                   onChange={[Function]}
-                  required="required"
+                  required={true}
                   value=""
                 >
                   <option
@@ -211,23 +212,24 @@ Array [
               >
                 <label
                   className="usa-label"
-                  htmlFor="date_of_birth_day"
+                  htmlFor="date_of_birth_day-applicant_date_of_birth_0"
                 >
                   Day
                 </label>
                 <div
                   className="a11y-sr-only"
-                  id="day-description"
+                  id="day-description-applicant_date_of_birth_0"
                 >
                   Enter numerals for day
                 </div>
                 <input
-                  aria-describedby="day-description"
+                  aria-describedby="day-description-applicant_date_of_birth_0"
                   className="usa-input required-field"
-                  id="date_of_birth_day"
+                  id="date_of_birth_day-applicant_date_of_birth_0"
                   inputMode="numeric"
-                  name="date_of_birth_day"
+                  name="date_of_birth_day-applicant_date_of_birth_0"
                   onChange={[Function]}
+                  required={true}
                   value=""
                 />
               </div>
@@ -236,23 +238,24 @@ Array [
               >
                 <label
                   className="usa-label"
-                  htmlFor="date_of_birth_year"
+                  htmlFor="date_of_birth_year-applicant_date_of_birth_0"
                 >
                   Year
                 </label>
                 <div
                   className="a11y-sr-only"
-                  id="year-description"
+                  id="year-description-applicant_date_of_birth_0"
                 >
                   Enter numerals for year
                 </div>
                 <input
-                  aria-describedby="year-description"
+                  aria-describedby="year-description-applicant_date_of_birth_0"
                   className="usa-input required-field"
-                  id="date_of_birth_year"
+                  id="date_of_birth_year-applicant_date_of_birth_0"
                   inputMode="numeric"
-                  name="date_of_birth_year"
+                  name="date_of_birth_year-applicant_date_of_birth_0"
                   onChange={[Function]}
+                  required={true}
                   value=""
                 />
               </div>
@@ -279,6 +282,7 @@ Array [
               id="applicant_relationship_to_the_deceased_0"
               name="applicant_relationship_to_the_deceased_0"
               onChange={[Function]}
+              required={false}
               value=""
             >
               <option
@@ -335,6 +339,7 @@ Array [
               id="applicant_marital_status_0"
               name="applicant_marital_status_0"
               onChange={[Function]}
+              required={false}
               value=""
             >
               <option

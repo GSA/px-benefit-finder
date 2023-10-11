@@ -1,5 +1,6 @@
 #benefit-finder {
-  .carrot {
+  .carrot,
+  .carrot-two {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -10,5 +11,9 @@
     &::after {
       content: '\25B8';
     }
+  }
+
+  .carrot-two {
+    transform: rotate(0deg);
   }
 }

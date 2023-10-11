@@ -16,8 +16,16 @@ exports[`Card renders a match to the previous snapshot 1`] = `
           id=""
         />
       </div>
-      <p
-        className=""
+      <div
+        className="usa-card__body"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+      />
+      <div
+        className="usa-card__cta"
       />
       <svg
         className="carrot"

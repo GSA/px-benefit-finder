@@ -129,18 +129,20 @@ const ResultsView = ({
                   <Card
                     className="relative-benefit-card"
                     title={`${relevantBenefits[0].lifeEvent.title}`}
-                    cta={'Learn More'}
+                    body={`${relevantBenefits[0].lifeEvent.body}`}
+                    cta={`${relevantBenefits[0].lifeEvent.cta}`}
                     href={`${relevantBenefits[0].lifeEvent.link}`}
-                    noCarrot
+                    carrotType={2}
                   ></Card>
                 </li>
                 <li key="benefit-card-two">
                   <Card
                     className="relative-benefit-card"
                     title={`${relevantBenefits[1].lifeEvent.title}`}
-                    cta={'Learn More'}
+                    body={`${relevantBenefits[1].lifeEvent.body}`}
+                    cta={`${relevantBenefits[1].lifeEvent.cta}`}
                     href={`${relevantBenefits[1].lifeEvent.link}`}
-                    noCarrot
+                    carrotType={2}
                   ></Card>
                 </li>
               </ul>

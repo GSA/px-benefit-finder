@@ -127,11 +127,6 @@ jobs:
                                   curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile?mode=draft && \ 
                                   ls -l && \
                                   /var/www/vendor/bin/drush cr"
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> px-bears-drual/main
   component-library:
     machine:
       image: ubuntu-2004:202107-02

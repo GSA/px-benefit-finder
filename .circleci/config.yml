@@ -84,7 +84,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push cms  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 30
+            sleep 20
 
       - run:
           name: Enable benefit-finder module
@@ -209,7 +209,7 @@ workflows:
           filters:
             branches:
               only: 
-                - main
+                - 618-add-draft-json-data-program-in-pipeline
 
   scheduled_cms_build_and_deploy_workflow:
     triggers:

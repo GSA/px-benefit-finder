@@ -165,16 +165,19 @@ export const Language = () => {
  * @return {JSON} returns JSON data if succesfull
  */
 export async function LifeEvent(lifeEvent) {
-  let language
+  let language, params, mode
   // get life-event from location
   if (lifeEvent === undefined) {
     const string = /^\/es/
     language = string.test(window.location.pathname) ? 'es_' : ''
+    const windowQuery = window.location.search
+    params = new URLSearchParams(windowQuery)
+    mode = params.get('mode') ? `${params.get('mode')}/` : ''
     const location = window.location.pathname
     lifeEvent = location.substring(location.lastIndexOf('/') + 1)
   }
   const response = await fetch(
-    `/sites/default/files/bears/api/life_event/${language}${lifeEvent}.json`
+    `/sites/default/files/bears/api/${mode}life_event/${language}${lifeEvent}.json`
   )
     .then(response => {
       if (response?.ok) {

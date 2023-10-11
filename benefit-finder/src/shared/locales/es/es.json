@@ -22,10 +22,10 @@
           "notice": "<div>Su información <strong>no será</strong> compartida, guardada o presentada.</div>"
         },
         {
-          "notice": "Ingrese la información más completa para obtener una lista más relevante de resultados."
+          "notice": "Ingrese la información completa para obtener resultados más relevantes."
         },
         {
-          "notice": "<div><strong>Este formulario no es una aplicación.</strong> Tendrá que presentar una solicitud por cada beneficio.</div>"
+          "notice": "<div><strong>Este formulario no es una aplicación.</strong> Tiene que presentar una solicitud por cada beneficio.</div>"
         }
       ]
     },
@@ -43,7 +43,7 @@
   },
   "buttonGroup": [
     {
-      "value": "Volver atrás"
+      "value": "Volver"
     },
     {
       "value": "Continuar"
@@ -62,6 +62,7 @@
   },
   "verifySelectionsView": {
     "heading": "Revisar y confirmar",
+    "noResultsLabel": "No se ha dado ninguna entrada",
     "buttonGroup": [
       {
         "value": "Volver"
@@ -75,23 +76,40 @@
     "qualified": {
       "chevron": {
         "heading": "Sus beneficios potenciales",
-        "description": "<div><p>Necesita verificar los requisitos y visitar la página de cada agencia para aplicar.<strong> Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</strong></p></div>"
+        "description": "<div><p>Visite la página de cada agencia para verificar los requisitos y aplicar. Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</p></div>"
       },
       "heading": "Resultados",
-      "description": "<div><strong>Usted puede calificar para los siguientes beneficios:<strong/></div>"
+      "description": "<div><strong>Podría calificar para estos beneficios:<strong/></div>"
     },
     "notQualified": {
       "chevron": {
-        "heading": "Beneficios a los cuales no calificó",
-        "description": ""
+        "heading": "Beneficios a los que no calificó",
+        "description": "Según sus respuestas usted no es elegible para estos beneficios."
       },
       "heading": "Resultados",
-      "description": "<div><strong>De acuerdo a sus respuestas usted no cumple con los requisitos para acceder a estos beneficios:<strong/></div>"
+      "description": "<div><strong>Según sus respuestas no es elegible para estos beneficios.<strong/> Podría calificar si tiene información adicional o si su situación cambia.</div>"
     },
     "stepBackLink": "Volver",
     "eligibleResults": {
       "heading": "Resultados",
       "description": "Podría calificar para estos beneficios:"
+    },
+    "benefitAccordionGroup": {
+      "closedState": "Abrir todos",
+      "openState": "Cerrar todos"
+    },
+    "benefitAccordion": {
+      "eligibleStatusLabels": [
+        "Likely Eligible",
+        "Más información requerida",
+        "Not Eligible"
+      ],
+      "agencyPrefix": "",
+      "benefitSummary": "Criterios de elegibilidad Cumple",
+      "benefitSummaryConjunction": "de",
+      "unmetLabel": "No cumplió con",
+      "additionalDescription": "Puede haber requisitos adicionales. Visite el enlace abajo para más información y para aplicar.",
+      "visitLabel": "Visita"
     },
     "notEligibleResults": {
       "heading": "Beneficios a los que no calificó",
@@ -99,14 +117,15 @@
       "cta": "Vea los beneficios a los que no calificó"
     },
     "relativeBenefits": {
-      "heading": "Sugerencias"
+      "heading": "Más beneficios"
     },
     "shareResults": {
-      "heading": "Imprimir y Compartir",
+      "heading": "Imprima y comparta",
       "shareButton": "Compartir resultados",
       "emailButton": "Enviar resultados",
+      "shareLinkContent": "Copiado",
       "emailSubject": "Resultados del buscador de beneficios de USAGov",
-      "description": "Copie un enlace a esta página con los criterios que seleccionó anteriormente. Asegúrate de compartirlo solo con aquellos en los que confías, ya que tus respuestas serán visibles."
+      "description": "Copie o envíe sus resultados por correo. Sus respuestas serán visibles. Solo comparta con quienes confíe."
     }
   },
   "shareResults": {
@@ -120,10 +139,6 @@
         "value": "Enviar resultados"
       }
     ]
-  },
-  "benefitAccordionGroup": {
-    "closedState": "Abrir todos",
-    "openState": "Cerrar todos"
   },
   "sectionHeadings": {
     "start": "Preguntas completas",

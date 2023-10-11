@@ -42,7 +42,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           id={`date_of_birth_month-${id}`}
           name={`date_of_birth_month-${id}`}
           aria-describedby={`month-description-${id}`}
-          required="required"
+          required={required === 'TRUE'}
           value={(value && value.month) || ''}
           onChange={onChange}
         >
@@ -71,7 +71,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           inputMode="numeric"
           value={(value && value.day) || ''}
           onChange={onChange}
-          // ref={dayFieldRef}
+          required={required === 'TRUE'}
         />
       </div>
       <div className="usa-form-group usa-form-group--year">
@@ -89,7 +89,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           inputMode="numeric"
           value={(value && value.year) || ''}
           onChange={onChange}
-          // ref={yearFieldRef}
+          required={required === 'TRUE'}
         />
       </div>
     </div>

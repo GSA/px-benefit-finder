@@ -120,8 +120,11 @@ const LifeEventSection = ({
    * @function
    */
   const getRequiredFields = () => {
-    const collectedNodeList = document.querySelectorAll('.required-field')
-    setValues(Array.from(collectedNodeList))
+    const collectedNodeList = document.querySelectorAll('input, select')
+    const requiredNodeList = Array.from(collectedNodeList).filter(
+      node => node.attributes.required
+    )
+    setValues(Array.from(requiredNodeList))
   }
 
   /**
@@ -211,10 +214,6 @@ const LifeEventSection = ({
       ? 'FALSE'
       : item.fieldset.required
   }
-
-  // useEffect(() => {
-  //   handleFieldAlerts()
-  // }, [])
 
   // manage the display of our modal initializer
   useEffect(() => {

@@ -136,7 +136,7 @@ Array [
                   id="date_of_birth_month-applicant_date_of_birth_0"
                   name="date_of_birth_month-applicant_date_of_birth_0"
                   onChange={[Function]}
-                  required="required"
+                  required={true}
                   value=""
                 >
                   <option
@@ -229,6 +229,7 @@ Array [
                   inputMode="numeric"
                   name="date_of_birth_day-applicant_date_of_birth_0"
                   onChange={[Function]}
+                  required={true}
                   value=""
                 />
               </div>
@@ -254,6 +255,7 @@ Array [
                   inputMode="numeric"
                   name="date_of_birth_year-applicant_date_of_birth_0"
                   onChange={[Function]}
+                  required={true}
                   value=""
                 />
               </div>
@@ -280,6 +282,7 @@ Array [
               id="applicant_relationship_to_the_deceased_0"
               name="applicant_relationship_to_the_deceased_0"
               onChange={[Function]}
+              required={false}
               value=""
             >
               <option
@@ -336,6 +339,7 @@ Array [
               id="applicant_marital_status_0"
               name="applicant_marital_status_0"
               onChange={[Function]}
+              required={false}
               value=""
             >
               <option

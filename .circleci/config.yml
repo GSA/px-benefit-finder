@@ -117,9 +117,6 @@ jobs:
                                   ls -l && \
                                   /var/www/vendor/bin/drush cr"
 
-
-
-  
   component-library:
     machine:
       image: ubuntu-2004:202107-02
@@ -209,7 +206,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 618-add-draft-json-data-program-in-pipeline
+                - main
 
   scheduled_cms_build_and_deploy_workflow:
     triggers:

@@ -172,7 +172,7 @@ export async function LifeEvent(lifeEvent) {
     language = string.test(window.location.pathname) ? 'es_' : ''
     const windowQuery = window.location.search
     params = new URLSearchParams(windowQuery)
-    mode = params.get('mode') ? `${params.get('mode')}/` : ''
+    mode = params.get('mode') === 'draft' ? `${params.get('mode')}/` : ''
     const location = window.location.pathname
     lifeEvent = location.substring(location.lastIndexOf('/') + 1)
   }

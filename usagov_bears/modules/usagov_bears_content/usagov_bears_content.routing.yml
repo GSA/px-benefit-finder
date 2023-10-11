@@ -1,3 +1,15 @@
+usagov_bears_content.report:
+  path: '/benefit-finder/content/report'
+  defaults:
+    _controller: '\Drupal\usagov_bears_content\Controller\CheckDataController:checkData'
+    _title: 'USAgov bears content report'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      id:
+        type: string
 usagov_bears_content.load_life_event:
   path: '/bears/import-life-event'
   defaults:

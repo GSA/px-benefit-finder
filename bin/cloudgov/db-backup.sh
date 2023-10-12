@@ -19,12 +19,12 @@ wait_for_tunnel() {
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
-cf connect-to-service --no-client cms database > backup.txt &
+cf connect-to-service --no-client benefit-finder-cms-${env} benefit-finder-mysql-${env} > backup.txt &
 
 wait_for_tunnel
 
 ## Create variables and credential file for MySQL login.
-echo "Backing up bears database..."
+echo "Backing up benefit-finder main database..."
 {
   host=$(cat backup.txt | grep -i host | awk '{print $2}')
   port=$(cat backup.txt | grep -i port | awk '{print $2}')
@@ -46,10 +46,10 @@ echo "Backing up bears database..."
     --host=${host} \
     --port=${port} \
     --protocol=TCP \
-    ${dbname} >> $(date +"%Y_%m_%d_%H-%M-%S")_db_backup.sql
+    ${dbname} >> $(date +"%Y_%m_%d")_db_backup.sql
 
   ## Patch out any MySQL 'SET' commands that require admin.
-  sed -i 's/^SET /-- &/' $(date +"%Y_%m_%d_%H-%M-%S")_db_backup.sql
+  sed -i 's/^SET /-- &/' $(date +"%Y_%m_%d")_db_backup.sql
 
 } >/dev/null 2>&1
 
@@ -65,4 +65,4 @@ rm -rf backup.txt ~/.mysql
 
 ## Compress the backup file
 echo "Compressing the database dump..."
-gzip $(date +"%Y_%m_%d_*")_db_backup.sql
+gzip $(date +"%Y_%m_%d")_db_backup.sql

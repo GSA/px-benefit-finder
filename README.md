@@ -75,7 +75,12 @@ cf login -a api.fr.cloud.gov --sso
 cd bin/cloudgov
 ```
 
-3. Execute the following script.
+4. Set `env` variable depending on your space; `main` or `dev`. This is required by the script.
+
+```
+export env=dev  or export env=main
+```
+4. Execute the following script.
 
 ```
 ./db-backup.sh

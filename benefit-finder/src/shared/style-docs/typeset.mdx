@@ -5,17 +5,11 @@ import { Meta, Typeset } from '@storybook/blocks'
 <Meta title="Typography" />
 
 export const typography = {
-  type: {
-    extraBold: 'PublicSans-ExtraBold',
-    bold: 'PublicSans-Bold',
-    regular: 'PublicSans-Regular',
-    extraLight: 'PublicSans-ExtraLight',
-  },
   weight: {
+    extraLight: '200',
     regular: '400',
     bold: '700',
     extrabold: '800',
-    extraLight: '200',
   },
   size: {
     h0: 36,
@@ -49,7 +43,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.h0)]}
   fontWeight={typography.weight.extrabold}
   sampleText={`${typography.size.h0}px  Heading 0 - Sample`}
-  fontFamily={typography.type.extraBold}
+  fontFamily="Public Sans"
 />
 
 ### H1
@@ -58,7 +52,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.h1)]}
   fontWeight={typography.weight.extrabold}
   sampleText={`${typography.size.h1}px H1 Heading 1 - Sample`}
-  fontFamily={typography.type.extrabold}
+  fontFamily="Public Sans"
 />
 
 ### H2
@@ -67,7 +61,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.h2)]}
   fontWeight={typography.weight.extrabold}
   sampleText={`${typography.size.h2}px H2 Heading 2 - Sample`}
-  fontFamily={typography.type.extrabold}
+  fontFamily="Public Sans"
 />
 
 ### H3
@@ -76,7 +70,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.h3)]}
   fontWeight={typography.weight.bold}
   sampleText={`${typography.size.h3}px H3 Heading 3 - Sample`}
-  fontFamily={typography.type.bold}
+  fontFamily="Public Sans"
 />
 
 ### H4
@@ -85,7 +79,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.h4)]}
   fontWeight={typography.weight.extrabold}
   sampleText={`${typography.size.h4}px H4 Heading 4 - Sample`}
-  fontFamily={typography.type.extrabold}
+  fontFamily="Public Sans"
 />
 
 ### H5
@@ -94,7 +88,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.h5)]}
   fontWeight={typography.weight.bold}
   sampleText={`${typography.size.h5}px H5 Heading 5 - Sample`}
-  fontFamily={typography.type.bold}
+  fontFamily="Public Sans"
 />
 
 ### H6
@@ -103,7 +97,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.h6)]}
   fontWeight={typography.weight.bold}
   sampleText={`${typography.size.h5}px H6 Heading 6 - Sample`}
-  fontFamily={typography.type.bold}
+  fontFamily="Public Sans"
 />
 
 ## Primary Typeface
@@ -111,19 +105,19 @@ export const SampleText =
 ### Important Extra Bold
 
 <Typeset
-  fontSizes={[Number(typography.size.paragraph)]}
+  fontSizes={[Number(typography.size.importantXBold)]}
   fontWeight={typography.weight.extraBold}
   sampleText={SampleText}
-  fontFamily={typography.type.extraBold}
+  fontFamily="Public Sans"
 />
 
 ### Important Bold
 
 <Typeset
-  fontSizes={[Number(typography.size.paragraph)]}
+  fontSizes={[Number(typography.size.importantBold)]}
   fontWeight={typography.weight.bold}
   sampleText={SampleText}
-  fontFamily={typography.type.bold}
+  fontFamily="Public Sans"
 />
 
 ### Paragraph
@@ -132,7 +126,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.p)]}
   fontWeight={typography.weight.p}
   sampleText={SampleText}
-  fontFamily={typography.type.regular}
+  fontFamily="Public Sans"
 />
 
 ### Paragraph 1
@@ -141,7 +135,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.p1)]}
   fontWeight={typography.weight.regular}
   sampleText={SampleText}
-  fontFamily={typography.type.regular}
+  fontFamily="Public Sans"
 />
 
 ### Paragraph 2
@@ -150,7 +144,7 @@ export const SampleText =
   fontSizes={[Number(typography.size.p2)]}
   fontWeight={typography.weight.regular}
   sampleText={SampleText}
-  fontFamily={typography.type.regular}
+  fontFamily="Public Sans"
 />
 
 ### Paragraph 3
@@ -159,5 +153,5 @@ export const SampleText =
   fontSizes={[Number(typography.size.p3)]}
   fontWeight={typography.weight.extraLight}
   sampleText={SampleText}
-  fontFamily={typography.type.extraLight}
+  fontFamily="Public Sans"
 />

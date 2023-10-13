@@ -1,49 +1,10 @@
 @use '../shared/styles/colors/index.scss' as color;
 @use '../shared/styles/mixins/_index.scss' as *;
 
-@font-face {
-  font-family: PublicSans-ExtraBold;
-  src: local('PublicSans'),
-    url('../shared/fonts/public-sans/fonts/webfonts/PublicSans-ExtraBold.woff')
-      format('woff'),
-    local('PublicSans'),
-    url('../shared/fonts/public-sans/fonts/webfonts/PublicSans-ExtraBold.woff2')
-      format('woff2');
-}
-
-@font-face {
-  font-family: PublicSans-Bold;
-  src: local('PublicSans'),
-    url('../shared/fonts/public-sans/fonts/webfonts/PublicSans-Bold.woff')
-      format('woff'),
-    local('PublicSans'),
-    url('../shared/fonts/public-sans/fonts/webfonts/PublicSans-Bold.woff2')
-      format('woff2');
-}
-
-@font-face {
-  font-family: PublicSans-Regular;
-  src: local('PublicSans'),
-    url('../shared/fonts/public-sans/fonts/webfonts/PublicSans-Regular.woff')
-      format('woff'),
-    local('PublicSans'),
-    url('../shared/fonts/public-sans/fonts/webfonts/PublicSans-Regular.woff2')
-      format('woff2');
-}
-
-@font-face {
-  font-family: PublicSans-ExtraLight;
-  src: local('PublicSans'),
-    url('../shared/fonts/public-sans/fonts/webfonts/PublicSans-ExtraLight.woff')
-      format('woff'),
-    local('PublicSans'),
-    url('../shared/fonts/public-sans/fonts/webfonts/PublicSans-ExtraLight.woff2')
-      format('woff2');
-}
-
 #benefit-finder {
   html,
   .benefit-finder.form {
+    font-family: 'Public Sans', sans-serif;
     background-color: color.$marine;
     height: 100%;
     min-height: 100vh;

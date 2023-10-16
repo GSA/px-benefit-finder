@@ -104,6 +104,7 @@ const ResultsView = ({
               entryKey={'benefit'}
               notQualifiedView={notQualifiedView}
               expandAll
+              ui={ui}
             />
           </div>
           {notQualifiedView === false && (
@@ -152,7 +153,7 @@ const ResultsView = ({
             <Heading headingLevel={3}>{shareResults?.heading}</Heading>
             <div className="result-view-share-results-button-group">
               <ShareButton
-                ui={shareResults?.shareButton}
+                ui={shareResults}
                 data={
                   stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
                 }

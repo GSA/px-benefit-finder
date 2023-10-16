@@ -19,10 +19,10 @@
       "heading": "Before you start:",
       "list": [
         {
-          "notice": "<div>Your information<strong> will not</strong> be shared, saved, or submitted.</div>"
+          "notice": "<div>Your information<strong> is not</strong> shared, saved, or submitted.</div>"
         },
         {
-          "notice": "Provide complete and accurate information to get the most relevant results."
+          "notice": "Provide complete info to get more relevant results."
         },
         {
           "notice": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>"
@@ -62,6 +62,7 @@
   },
   "verifySelectionsView": {
     "heading": "Review and Confirm",
+    "noResultsLabel": "No input given",
     "buttonGroup": [
       {
         "value": "Back"
@@ -74,24 +75,41 @@
   "resultsView": {
     "qualified": {
       "chevron": {
-        "heading": "Your Custom List",
-        "description": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits. Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual application.</p></div>"
+        "heading": "Your potential benefits",
+        "description": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>"
       },
       "heading": "Results",
-      "description": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>"
+      "description": "<div><strong>You may be eligible for these benefits:</strong></div>"
     },
     "notQualified": {
       "chevron": {
-        "heading": "Benefits You Did Not Qualify For",
-        "description": ""
+        "heading": "Benefits you did not qualify for",
+        "description": "According to your answers you are not eligible for these benefits."
       },
       "heading": "Results",
-      "description": "<div><strong>Based on your answers you did not meet the criteria to qualify for these benefits:</strong></div>"
+      "description": "<div><strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes.</div>"
     },
     "stepBackLink": "Back",
     "eligibleResults": {
       "heading": "Results",
       "description": "You may be eligible for these benefits."
+    },
+    "benefitAccordionGroup": {
+      "closedState": "Open all",
+      "openState": "Close all"
+    },
+    "benefitAccordion": {
+      "eligibleStatusLabels": [
+        "Likely Eligible",
+        "More Information Needed",
+        "Not Eligible"
+      ],
+      "agencyPrefix": "By",
+      "benefitSummary": "Key eligibility criteria Met",
+      "benefitSummaryConjunction": "of",
+      "unmetLabel": "Unmet criteria",
+      "additionalDescription": "Additional eligibility criteria may apply. Visit the link below for more information and to apply.",
+      "visitLabel": "Visit"
     },
     "notEligibleResults": {
       "heading": "Benefits you did not qualify for",
@@ -99,14 +117,15 @@
       "cta": "See benefits you did not qualify for"
     },
     "resultsRelativeBenefits": {
-      "heading": "Other benefits that might be relevant to you"
+      "heading": "More benefits"
     },
     "shareResults": {
-      "heading": "Sharing and printing",
+      "heading": "Share results",
       "shareButton": "Share link",
+      "shareLinkContent": "Copied",
       "emailButton": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",
-      "description": "Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible."
+      "description": "Copy or email these results. Your answers will be visible. Only share with those you trust."
     }
   },
   "shareResults": {
@@ -120,10 +139,6 @@
         "value": "Email results"
       }
     ]
-  },
-  "benefitAccordionGroup": {
-    "closedState": "Open all",
-    "openState": "Close all"
   },
   "sectionHeadings": {
     "start": "Complete Questions",

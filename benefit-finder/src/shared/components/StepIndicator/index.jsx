@@ -59,13 +59,13 @@ const StepIndicator = ({
     return (
       <li
         className={`usa-step-indicator__segment usa-step-indicator__segment${statusClass} ${
-          current < index ? '' : 'usa-step-indicator__segment--complete'
+          completed === true ? 'usa-step-indicator__segment--complete' : ''
         }`}
         aria-current={current === index}
         onClick={() =>
-          completed !== true &&
-          handleCheckRequriedFields() === true &&
-          setCurrent(index + 1)
+          completed !== true
+            ? handleCheckRequriedFields() === true && setCurrent(index + 1)
+            : setCurrent(index + 1)
         }
         key={`step-indicator-${heading}`}
       >

@@ -25,7 +25,7 @@ Array [
           >
             <li
               aria-current={true}
-              className="usa-step-indicator__segment usa-step-indicator__segment--current usa-step-indicator__segment--complete"
+              className="usa-step-indicator__segment usa-step-indicator__segment--current "
               onClick={[Function]}
             >
               <span

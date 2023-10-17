@@ -22,18 +22,22 @@ exports[`VerifySelectionsView renders a match to the previous snapshot 1`] = `
           type="button"
         />
         <div />
-        <button
-          className=""
-          type="button"
+        <div
+          className="section-nav-btn-group"
         >
-          Back
-        </button>
-        <button
-          className=""
-          type="button"
-        >
-          Confirm
-        </button>
+          <button
+            className=""
+            type="button"
+          >
+            Confirm
+          </button>
+          <button
+            className=""
+            type="button"
+          >
+            Back
+          </button>
+        </div>
       </div>
     </div>
   </div>

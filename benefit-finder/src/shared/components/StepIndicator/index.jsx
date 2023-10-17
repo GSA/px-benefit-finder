@@ -88,27 +88,29 @@ const StepIndicator = ({
 
   return (
     <div>
-      <div className="usa-step-indicator" aria-label="progress" tabIndex={0}>
-        <ol className="usa-step-indicator__segments">
-          {data &&
-            data.map((step, i) => {
-              const heading = step.section.heading
-              const isCompleted = step.completed
+      {data && data.length > 0 && (
+        <div className="usa-step-indicator" aria-label="progress" tabIndex={0}>
+          <ol className="usa-step-indicator__segments">
+            {data &&
+              data.map((step, i) => {
+                const heading = step.section.heading
+                const isCompleted = step.completed
 
-              return (
-                <StepIndicatorSegment
-                  heading={heading}
-                  key={`${heading}-${i}`}
-                  index={i}
-                  current={current}
-                  setCurrent={setCurrent}
-                  completed={isCompleted}
-                  handleCheckRequriedFields={handleCheckRequriedFields}
-                />
-              )
-            })}
-        </ol>
-      </div>
+                return (
+                  <StepIndicatorSegment
+                    heading={heading}
+                    key={`${heading}-${i}`}
+                    index={i}
+                    current={current}
+                    setCurrent={setCurrent}
+                    completed={isCompleted}
+                    handleCheckRequriedFields={handleCheckRequriedFields}
+                  />
+                )
+              })}
+          </ol>
+        </div>
+      )}
       <StepBackLink currentIndex={current} setCurrent={setCurrent}>
         {backLinkLabel}
       </StepBackLink>

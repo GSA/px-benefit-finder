@@ -24,14 +24,14 @@ const ShareButton = ({ ui, data }) => {
   const handleClick = () => {
     setShareLink(buildURIParameter(window.location.href, data))
     navigator.clipboard.writeText(shareLink).then(
-      () => alert(`copied successfully! ${shareLink}`),
+      () => alert(`${ui?.shareLinkContent} ${shareLink}`),
       err => alert('Failed to copy', err)
     )
   }
 
   return (
     <Button className="share-button" secondary onClick={handleClick}>
-      {ui || 'Share'}
+      {ui?.shareButton || 'Share'}
     </Button>
   )
 }

@@ -24,13 +24,19 @@ import './_index.scss'
  * @param {array} stepDataArray inherited state of inupt values from form entry
  * @return {html} returns a view page of filtered benefits
  */
-const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
+const ResultsView = ({
+  handleStepBack,
+  ui,
+  data,
+  stepDataArray,
+  relevantBenefits,
+}) => {
   const {
     stepBackLink,
     notQualified,
     qualified,
     notEligibleResults,
-    relativeBenefits,
+    resultsRelativeBenefits,
     shareResults,
   } = ui
 
@@ -99,6 +105,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
               entryKey={'benefit'}
               notQualifiedView={notQualifiedView}
               expandAll
+              ui={ui}
             />
           </div>
           {notQualifiedView === false && (
@@ -116,32 +123,35 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
               </Button>
             </div>
           )}
-          <div className="result-view-relvant-benefits">
-            <Heading
-              className="result-view-relvant-benefits-heading"
-              headingLevel={3}
-            >
-              {relativeBenefits?.heading}
-            </Heading>
-            <ul className="add-list-reset">
-              <li key="benefit-card-one">
-                <Card
-                  className="relative-benefit-card"
-                  title={'Approaching Retirement'}
-                  cta={'Learn More'}
-                  noCarrot
-                ></Card>
-              </li>
-              <li key="benefit-card-two">
-                <Card
-                  className="relative-benefit-card"
-                  title={'Living with disability or illness'}
-                  cta={'Learn More'}
-                  noCarrot
-                ></Card>
-              </li>
-            </ul>
-          </div>
+          {relevantBenefits && (
+            <div className="result-view-relvant-benefits">
+              <Heading headingLevel={3}>
+                {resultsRelativeBenefits?.heading}
+              </Heading>
+              <ul className="add-list-reset">
+                <li key="benefit-card-one">
+                  <Card
+                    className="relative-benefit-card"
+                    title={`${relevantBenefits[0].lifeEvent.title}`}
+                    body={`${relevantBenefits[0].lifeEvent.body}`}
+                    cta={`${relevantBenefits[0].lifeEvent.cta}`}
+                    href={`${relevantBenefits[0].lifeEvent.link}`}
+                    carrotType={2}
+                  ></Card>
+                </li>
+                <li key="benefit-card-two">
+                  <Card
+                    className="relative-benefit-card"
+                    title={`${relevantBenefits[1].lifeEvent.title}`}
+                    body={`${relevantBenefits[1].lifeEvent.body}`}
+                    cta={`${relevantBenefits[1].lifeEvent.cta}`}
+                    href={`${relevantBenefits[1].lifeEvent.link}`}
+                    carrotType={2}
+                  ></Card>
+                </li>
+              </ul>
+            </div>
+          )}
           <div className="result-view-share-results">
             <Heading
               className="result-view-share-results-heading"
@@ -152,7 +162,7 @@ const ResultsView = ({ handleStepBack, ui, data, stepDataArray }) => {
             <p>{shareResults?.description}</p>
             <div className="result-view-share-results-button-group">
               <ShareButton
-                ui={shareResults?.shareButton}
+                ui={shareResults}
                 data={
                   stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
                 }

@@ -2,7 +2,7 @@
 
 exports[`Accordion renders a match to the previous snapshot 1`] = `
 <div
-  className="benefit-accordion"
+  className="benefit-accordion usa-accordion"
 >
   <h4
     className="usa-accordion__heading"

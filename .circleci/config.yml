@@ -31,9 +31,8 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
-            mv  usagov_bears usagov-2021/web/modules/custom
-            mv death.json usagov-2021/scripts/death.json
-            mv es_death.json usagov-2021/scripts/es_death.json
+            mv usagov_bears usagov-2021/web/modules/custom
+            mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
 
       - run: 
           name: Pre-docker-build configurations
@@ -106,15 +105,17 @@ jobs:
                                   curl http://127.0.0.1:8080/bears/api/life-event/death/jsonfile && \
                                   curl http://127.0.0.1:8080/bears/api/life-event/es_death/jsonfile && \
                                   curl http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile && \
                                   curl http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile && \           
+                                  curl http://127.0.0.1:8080/bears/api/life-event/death/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile?mode=draft && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_death/jsonfile?mode=draft && \
+                                  curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile?mode=draft && \ 
                                   ls -l && \
                                   /var/www/vendor/bin/drush cr"
 
-
-
-  
   component-library:
     machine:
       image: ubuntu-2004:202107-02

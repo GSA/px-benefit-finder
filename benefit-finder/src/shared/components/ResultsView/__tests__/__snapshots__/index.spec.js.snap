@@ -14,13 +14,13 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
         className=""
         id="skip-to-h1"
       >
-        Your Custom List
+        Your potential benefits
       </h1>
       <div
         className="chevron-description"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<div><p><strong>Here is your list of potential Federal Benefits.</strong> Your state, city or employer may offer other benefits. Visit each agency providing the benefit to learn if you are truly eligible and conduct an actual application.</p></div>",
+            "__html": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>",
           }
         }
       />
@@ -49,7 +49,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
         className="result-view-description"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<div><strong>Based on your answers you meet the criteria to qualify for these benefits:</strong></div>",
+            "__html": "<div><strong>You may be eligible for these benefits:</strong></div>",
           }
         }
       />
@@ -64,7 +64,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Expand all +
+            Open all +
           </button>
         </div>
       </div>
@@ -93,84 +93,16 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
         </button>
       </div>
       <div
-        className="result-view-relvant-benefits"
-      >
-        <h3
-          className=""
-          id=""
-        >
-          Other benefits that might be relevant to you
-        </h3>
-        <ul
-          className="add-list-reset"
-        >
-          <li>
-            <li
-              className=""
-            >
-              <a>
-                <div
-                  className="usa-card__container"
-                >
-                  <div
-                    className="usa-card__header"
-                  >
-                    <h3
-                      className=""
-                      id=""
-                    >
-                      Approaching Retirement
-                    </h3>
-                  </div>
-                  <p
-                    className=""
-                  >
-                    Learn More
-                  </p>
-                </div>
-              </a>
-            </li>
-          </li>
-          <li>
-            <li
-              className=""
-            >
-              <a>
-                <div
-                  className="usa-card__container"
-                >
-                  <div
-                    className="usa-card__header"
-                  >
-                    <h3
-                      className=""
-                      id=""
-                    >
-                      Living with disability or illness
-                    </h3>
-                  </div>
-                  <p
-                    className=""
-                  >
-                    Learn More
-                  </p>
-                </div>
-              </a>
-            </li>
-          </li>
-        </ul>
-      </div>
-      <div
         className="result-view-share-results"
       >
         <h3
           className=""
           id=""
         >
-          Sharing and printing
+          Share results
         </h3>
         <p>
-          Copy a link to this page with the criteria you selected above. Make sure to share it only with those you trust as your answers will be visible.
+          Copy or email these results. Your answers will be visible. Only share with those you trust.
         </p>
         <div
           className="result-view-share-results-button-group"

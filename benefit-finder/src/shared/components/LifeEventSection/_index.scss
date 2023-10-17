@@ -1,5 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/breakpoints/_index.scss' as *;
+@use '../../styles/sizes/_index.scss' as *;
 @use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
@@ -37,7 +38,7 @@
 
     button,
     .benefit-modal-group a {
-      width: 248px;
+      width: $button-max-width;
     }
   }
 

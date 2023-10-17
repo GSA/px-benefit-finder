@@ -1,5 +1,6 @@
 @use '../shared/styles/colors/index.scss' as color;
 @use '../shared/styles/mixins/_index.scss' as *;
+@use '../shared/styles/sizes/_index.scss' as *;
 
 #benefit-finder {
   html,
@@ -51,7 +52,9 @@
 
     background-color: color.$pop-blue !important;
     color: color.$white !important;
-    width: 100% !important;
+
+    // width: 100% !important;
+    width: $button-max-width !important;
   }
 
   &.usa-button:hover {

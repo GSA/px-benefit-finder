@@ -21,8 +21,14 @@ a.nav-item-one {
 .modal-heading {
   @include important-bold;
 
+  font-weight: 600;
   color: color.$pure-black;
   text-align: center;
   font-style: normal;
   margin: space.$space-md-plus 0;
+}
+
+.modal.usa-button-group.width-full {
+  margin: 0 auto;
+  text-align: center;
 }

@@ -1,3 +1,5 @@
+@use '../../styles/sizes/_index.scss' as *;
+
 .share-button.usa-button {
-  width: 248px;
+  width: $button-max-width;
 }

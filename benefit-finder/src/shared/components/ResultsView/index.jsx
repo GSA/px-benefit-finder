@@ -125,7 +125,10 @@ const ResultsView = ({
           )}
           {relevantBenefits && (
             <div className="result-view-relvant-benefits">
-              <Heading headingLevel={3}>
+              <Heading
+                className="result-view-relvant-benefits-heading"
+                headingLevel={3}
+              >
                 {resultsRelativeBenefits?.heading}
               </Heading>
               <ul className="add-list-reset">

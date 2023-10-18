@@ -21,6 +21,13 @@
       steps:
         - name: checkout code
           uses: actions/checkout@v4
+
+        - run: |
+            pwd
+            ls -l
+            cd px-benefit-finder
+            ls -l
+
   
         - name: Run Snyk to check for vulnerabilities
           uses: snyk/actions/node@master
@@ -29,8 +36,9 @@
             SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           with:
             args: --sarif-file-output=snyk.sarif
+
   
-        - name: Check to see if the SARIF a was generated
+        - name: Check to see if the SARIF was generated
           id: sarif_file_exists
           uses: andstor/file-existence-action@v2
           with:

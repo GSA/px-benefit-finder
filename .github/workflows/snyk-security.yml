@@ -25,7 +25,7 @@
         - run: |
             pwd
             ls -l
-            cd px-benefit-finder
+            cd benefit-finder
             ls -l
 
   

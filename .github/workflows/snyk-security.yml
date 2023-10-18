@@ -35,7 +35,7 @@
           env:
             SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           with:
-            args: --sarif-file-output=snyk.sarif
+            command: test --all-projects
 
   
         - name: Check to see if the SARIF was generated
@@ -46,6 +46,6 @@
   
         - name: Upload the SARIF file
           uses: github/codeql-action/upload-sarif@v2
-           # if: steps.sarif_file_exists.outputs.files_exists == 'true'
+          if: steps.sarif_file_exists.outputs.files_exists == 'true'
           with:
             sarif_file: snyk.sarif

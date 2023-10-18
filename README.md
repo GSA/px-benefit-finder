@@ -2,9 +2,9 @@
 
 Docs to be written
 
-## How to Clone the PX-BEARS-DRUPAL Repository with usagov-2021 Submodule
+## How to Clone the PX-BENEFIT-FINDER Repository with usagov-2021 Submodule
 
-This guide will walk you through the process of cloning the **_PX-BEARS-DRUPAL_** repository that includes a submodule. Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
+This guide will walk you through the process of cloning the **_PX-BENEFIT-FINDER_** repository that includes a submodule. Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
 
 To clone the repository with a submodule, follow these steps:
 
@@ -15,13 +15,13 @@ To clone the repository with a submodule, follow these steps:
 3. Use the following command to clone the main repository:
 
 ```
-git clone git@github.com:GSA/px-bears-drupal.git
+git clone git@github.com:GSA/px-benefit-finder.git
 ```
 
 4. Once the cloning process completes, navigate into the cloned repository's directory using the cd command.
 
 ```
-cd px-bears-drupal
+cd px-benefit-finder
 ```
 
 5. usagov-2021 directory is there but empty. You must run the following two commands to initialize your local configuration file and fetch all the data from that project.
@@ -132,8 +132,77 @@ aws s3 ls s3://${AWS_BUCKET}/
 
 7. Run it again after using it to delete the service-key.
 
+# Infrastructure (provisioned by Terraform)
 
-# VDI Login Guide for the BEARS Team Members
+
+## Cloud.gov Infrastructure
+
+### Environments/Spaces:
+#### Benefit-finder-dev : Sandbox environment for the tech team.
+      CMS App main page URL: 
+
+      https://benefit-finder-waf-dev.app.cloud.gov
+#### Benefit-finder-main : The main/pre-release environment.
+      CMS App main page URL: 
+
+      https://benefit-finder-waf-main.app.cloud.gov
+
+## How to use terraform to manage the infrastructure
+
+1. Make sure you login cloud.gov on your terminal and target your org and `benefit-finder-dev` space
+
+```
+cf login -a api.fr.cloud.gov --sso
+```
+
+2. Change directory to infra/benefit-finder-infra directory.
+
+```
+cd infra/benefit-finder-infra
+```
+
+3. Set bucket_name variable.
+
+```
+export bucket_name="terraform-backend" 
+```
+
+4. Execute the script to authenticate to use terraform backend
+
+```
+source scripts/cloudgov-aws-creds.sh
+```
+
+5. Get `terraform.tfvars` file in a secure way and put it in the `infra/benefit-finder-infra` directory.
+
+6. Initialize your local terraform folder.
+
+```
+terraform init
+```
+7. Make sure you see terraform workspaces
+
+```
+terraform workspace list
+```
+![terraform workspace list](image-2.png)
+
+8. Choose the workspace you need to work on
+
+```
+terraform workspace select dev
+```
+9. Plan
+
+```
+terraform plan
+```
+
+
+
+
+
+# VDI Login Guide for the Benefit-finder Team Members
 
 ## What is VDI?
 

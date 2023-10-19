@@ -28,7 +28,8 @@
           env:
             SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           with:
-            command: test --all-projects --sarif > snyk.sarif
+            command: test --all-projects
+            args: --sarif-file-output=snyk.sarif
 
         - name: Check to see if the SARIF was generated
           id: sarif_file_exists

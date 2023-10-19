@@ -1,7 +1,5 @@
 ---
   name: Snyk Scan
-  
-  # yamllint disable-line rule:truthy
   on:
     #  pull_request:
     workflow_dispatch:
@@ -21,13 +19,8 @@
       steps:
         - name: checkout code
           uses: actions/checkout@v4
-
-        # - run: |
-        #     pwd
-        #     ls -l
-        #     cd benefit-finder
-        #     ls -l
-
+          with:
+            ref: main
   
         - name: Run Snyk to check for vulnerabilities
           uses: snyk/actions/node@master

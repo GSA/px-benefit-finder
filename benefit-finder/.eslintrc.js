@@ -8,6 +8,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:react/jsx-runtime',
     'plugin:storybook/recommended',
+    'plugin:cypress/recommended',
   ],
   rules: {
     'react/prop-types': 'off',

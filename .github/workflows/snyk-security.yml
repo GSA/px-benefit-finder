@@ -28,17 +28,16 @@
           env:
             SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           with:
-            command: test --all-projects --sarif 
+            command: test --all-projects --sarif > snyk.sarif
 
-  
-        # - name: Check to see if the SARIF was generated
-        #   id: sarif_file_exists
-        #   uses: andstor/file-existence-action@v2
-        #   with:
-        #     files: "snyk.sarif"
+        - name: Check to see if the SARIF was generated
+          id: sarif_file_exists
+          uses: andstor/file-existence-action@v2
+          with:
+            files: "snyk.sarif"
   
         - name: Upload the SARIF file
           uses: github/codeql-action/upload-sarif@v2
-          # if: steps.sarif_file_exists.outputs.files_exists == 'true'
+          if: steps.sarif_file_exists.outputs.files_exists == 'true'
           with:
             sarif_file: snyk.sarif

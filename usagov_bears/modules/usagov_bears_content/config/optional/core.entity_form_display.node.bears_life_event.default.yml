@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.bears_life_event.field_b_id
+    - field.field.node.bears_life_event.field_draft_json_data_file
     - field.field.node.bears_life_event.field_json_data_file
     - field.field.node.bears_life_event.field_language_toggle
     - field.field.node.bears_life_event.field_summary
@@ -29,6 +30,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_draft_json_data_file:
+    type: file_generic
+    weight: 26
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_json_data_file:
     type: file_generic
@@ -102,6 +110,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

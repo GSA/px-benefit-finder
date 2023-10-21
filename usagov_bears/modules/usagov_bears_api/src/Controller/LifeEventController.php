@@ -111,6 +111,23 @@ class LifeEventController {
     $file = $this->fileRepository->writeData($data, $filename, FileSystemInterface::EXISTS_REPLACE);
 
     $fileUrlString = $this->fileUrlGenerator->generate($filename)->toString();
+
+    // Assign the file to JSON data file field of life event of given ID.
+    $life_event = $this->getLifeEvent($id);
+    if ($life_event) {
+      $field_name = '';
+      if ($this->mode == "published") {
+        $field_name = 'field_json_data_file';
+      }
+      else if ($this->mode == "draft") {
+        $field_name = 'field_draft_json_data_file';
+      }
+      $life_event->set($field_name, [
+        'target_id' => $file->id(),
+      ]);
+      $life_event->save();
+    }
+
     return new JsonResponse([
         'data' => "Saved JSON data to " . $fileUrlString,
         'method' => 'GET',
@@ -244,6 +261,22 @@ class LifeEventController {
   }
 
   /**
+   * Gets life event of given ID.
+   * @param $id
+   * @return \Drupal\node\NodeInterface
+   *   The life event node.
+   */
+  public function getLifeEvent($id) {
+    $query = \Drupal::entityQuery('node')
+      ->accessCheck(TRUE)
+      ->condition('type', 'bears_life_event')
+      ->condition('field_b_id', $id)
+      ->range(0, 1);
+    $node_id = current($query->execute());
+    return $this->getNode($node_id, $this->mode);
+  }
+
+  /**
    * Gets life event form of given ID.
    * @param $id
    * @return \Drupal\node\NodeInterface
@@ -251,6 +284,7 @@ class LifeEventController {
    */
   public function getLifeEventForm($id) {
     $query = \Drupal::entityQuery('node')
+      ->accessCheck(TRUE)
       ->condition('type', 'bears_life_event_form')
       ->condition('field_b_id', $id)
       ->range(0, 1);
@@ -267,6 +301,7 @@ class LifeEventController {
   public function getBenefits($nid) {
     $nodes = [];
     $query = \Drupal::entityQuery('node')
+      ->accessCheck(TRUE)
       ->condition('type', 'bears_benefit')
       ->condition('field_b_life_event_forms', $nid, 'CONTAINS');
     $nids = $query->execute();

@@ -136,6 +136,7 @@ EOD;
   public function checkCriteria() {
     $nodes = [];
     $query = \Drupal::entityQuery('node')
+      ->accessCheck(TRUE)
       ->condition('type', 'bears_criteria')
       ->condition('langcode', $this->langcode)
       ->sort('field_b_id', 'ASC')
@@ -201,6 +202,7 @@ EOD;
   public function checkBenefit() {
     $nodes = [];
     $query = \Drupal::entityQuery('node')
+      ->accessCheck(TRUE)
       ->condition('type', 'bears_benefit')
       ->condition('langcode', $this->langcode)
       ->sort('title', 'ASC')
@@ -313,6 +315,7 @@ EOD;
   public function checkLifeEventForm() {
     $nodes = [];
     $query = \Drupal::entityQuery('node')
+      ->accessCheck(TRUE)
       ->condition('type', 'bears_life_event_form')
       ->condition('langcode', $this->langcode)
       ->sort('field_b_id', 'ASC')

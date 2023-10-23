@@ -14,12 +14,12 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
         className=""
         id="skip-to-h1"
       >
-        NEW Find federal benefits after the loss of a loved one
+        Benefit finder: death of a loved one
       </h1>
       <div
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>Find government benefits after the loss of a loved one including funeral, housing, and education help.</p>",
+            "__html": "<p><strong>Losing a loved one is hard.</strong> Finding help shouldn’t be.</p><p>Screen the federal benefits you may be eligible for.</p>",
           }
         }
       />
@@ -39,7 +39,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
     >
       Time to complete
        
-      60 minutes
+      2-5 minutes
     </div>
     <div
       className="intro-process-group"

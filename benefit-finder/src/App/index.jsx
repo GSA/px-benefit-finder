@@ -19,11 +19,11 @@ import * as es from '../shared/locales/es/es.json'
  * a functional component that renders our application.
  * @component
  */
-function App({ appContent }) {
+function App({ appContent, query }) {
   // we create context state to provide translations for our two languages
   const LanguageContext = createContext({ en, es })
   const sharedToken = 'shared'
-  const windowQuery = window.location.search
+  const windowQuery = query || window.location.search
   const hasQueryParams = windowQuery.includes(sharedToken)
 
   /**
@@ -79,6 +79,7 @@ function App({ appContent }) {
           className={`benefit-finder ${
             step !== 0 && viewResults !== true ? 'form' : ''
           }`}
+          data-testid="app"
         >
           {step === 0 ? (
             <Intro

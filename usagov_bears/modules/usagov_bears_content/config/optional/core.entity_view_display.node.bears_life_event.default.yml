@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.bears_life_event.field_b_id
+    - field.field.node.bears_life_event.field_draft_json_data_file
     - field.field.node.bears_life_event.field_json_data_file
     - field.field.node.bears_life_event.field_language_toggle
     - field.field.node.bears_life_event.field_summary
@@ -22,6 +23,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_draft_json_data_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_json_data_file:
     type: file_default

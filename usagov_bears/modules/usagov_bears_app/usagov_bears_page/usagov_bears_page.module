@@ -58,6 +58,9 @@ function usagov_bears_page_preprocess_page(&$variables) {
       $field_json_data_file = $node->get('field_json_data_file')->referencedEntities();
       $uri = $field_json_data_file[0]->getFileUri();
       $variables['json_data_file_path'] = \Drupal::service('file_url_generator')->generate($uri)->toString();
+      $field_draft_json_data_file = $node->get('field_draft_json_data_file')->referencedEntities();
+      $uri = $field_draft_json_data_file[0]->getFileUri();
+      $variables['draft_json_data_file_path'] = \Drupal::service('file_url_generator')->generate($uri)->toString();
     }
   }
 }

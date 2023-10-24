@@ -31,10 +31,8 @@ const Carrot = ({ color, type }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        // eslint-disable-next-line react/no-unknown-property
-        fill-rule="evenodd"
-        // eslint-disable-next-line react/no-unknown-property
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M3.18079 1.18074C2.79027 0.790216 2.1571 0.790215 1.76658 1.18074L0.706337 2.24098C0.316114 2.6312 0.315768 3.26377 0.705565 3.65442L7.33029 10.2936C7.71979 10.684 7.71979 11.3159 7.33029 11.7063L0.705566 18.3455C0.315768 18.7361 0.316113 19.3687 0.706336 19.7589L1.76658 20.8192C2.1571 21.2097 2.79027 21.2097 3.18079 20.8192L12.2929 11.7071C12.6834 11.3165 12.6834 10.6834 12.2929 10.2928L3.18079 1.18074Z"
         fill="#162E51"
       />

@@ -124,7 +124,6 @@ const BenefitAccordionGroup = ({
   return (
     <div className="benefit-accordion-group">
       <ExpandAll />
-      {console.log(data)}
       {data &&
         data.map((item, index) => {
           const { agency, eligibility, SourceLink, summary, title } =

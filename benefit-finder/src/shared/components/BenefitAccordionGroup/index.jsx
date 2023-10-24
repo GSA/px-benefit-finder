@@ -124,6 +124,7 @@ const BenefitAccordionGroup = ({
   return (
     <div className="benefit-accordion-group">
       <ExpandAll />
+      {console.log(data)}
       {data &&
         data.map((item, index) => {
           const { agency, eligibility, SourceLink, summary, title } =
@@ -160,11 +161,12 @@ const BenefitAccordionGroup = ({
               : eligibleStatusLabels[2]
 
           const handleHidden =
-            notQualifiedView === false && eligibleStatus !== 'Likely Eligible'
+            notQualifiedView === false &&
+            eligibleStatus !== eligibleStatusLabels[0]
               ? true
               : !!(
                   notQualifiedView === true &&
-                  eligibleStatus === 'Likely Eligible'
+                  eligibleStatus === eligibleStatusLabels[0]
                 )
 
           return (

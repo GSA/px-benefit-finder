@@ -1,5 +1,5 @@
 name: USAgov bears content
 type: module
 description: 'Prepare content for bears v2.'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 package: USAgov bears

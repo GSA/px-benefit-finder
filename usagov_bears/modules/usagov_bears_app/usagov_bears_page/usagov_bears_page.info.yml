@@ -1,5 +1,5 @@
 name: 'USAgov bears page'
 type: module
 description: 'Provides page template for React app.'
-core_version_requirement: '^8 || ^9'
+core_version_requirement: ^9 || ^10
 package: 'USAgov bears'

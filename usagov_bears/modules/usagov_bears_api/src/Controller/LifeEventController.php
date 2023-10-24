@@ -251,6 +251,7 @@ class LifeEventController {
    */
   public function getLifeEventForm($id) {
     $query = \Drupal::entityQuery('node')
+      ->accessCheck(TRUE)
       ->condition('type', 'bears_life_event_form')
       ->condition('field_b_id', $id)
       ->range(0, 1);
@@ -267,6 +268,7 @@ class LifeEventController {
   public function getBenefits($nid) {
     $nodes = [];
     $query = \Drupal::entityQuery('node')
+      ->accessCheck(TRUE)
       ->condition('type', 'bears_benefit')
       ->condition('field_b_life_event_forms', $nid, 'CONTAINS');
     $nids = $query->execute();

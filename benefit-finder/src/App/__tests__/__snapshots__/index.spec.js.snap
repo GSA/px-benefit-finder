@@ -5191,7 +5191,7 @@ exports[`loads window query 1 1`] = `
               <ul
                 class="add-list-reset"
               >
-                <li>
+                <div>
                   <li
                     class=""
                   >
@@ -5241,8 +5241,8 @@ exports[`loads window query 1 1`] = `
                       </div>
                     </a>
                   </li>
-                </li>
-                <li>
+                </div>
+                <div>
                   <li
                     class=""
                   >
@@ -5292,7 +5292,7 @@ exports[`loads window query 1 1`] = `
                       </div>
                     </a>
                   </li>
-                </li>
+                </div>
               </ul>
             </div>
             <div
@@ -10603,7 +10603,7 @@ exports[`loads window query 2 1`] = `
               <ul
                 class="add-list-reset"
               >
-                <li>
+                <div>
                   <li
                     class=""
                   >
@@ -10653,8 +10653,8 @@ exports[`loads window query 2 1`] = `
                       </div>
                     </a>
                   </li>
-                </li>
-                <li>
+                </div>
+                <div>
                   <li
                     class=""
                   >
@@ -10704,7 +10704,7 @@ exports[`loads window query 2 1`] = `
                       </div>
                     </a>
                   </li>
-                </li>
+                </div>
               </ul>
             </div>
             <div
@@ -16030,7 +16030,7 @@ exports[`loads window query 3 1`] = `
               <ul
                 class="add-list-reset"
               >
-                <li>
+                <div>
                   <li
                     class=""
                   >
@@ -16080,8 +16080,8 @@ exports[`loads window query 3 1`] = `
                       </div>
                     </a>
                   </li>
-                </li>
-                <li>
+                </div>
+                <div>
                   <li
                     class=""
                   >
@@ -16131,7 +16131,7 @@ exports[`loads window query 3 1`] = `
                       </div>
                     </a>
                   </li>
-                </li>
+                </div>
               </ul>
             </div>
             <div

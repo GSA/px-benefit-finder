@@ -32,11 +32,13 @@ function App({ appContent, query }) {
    * @param {promise} setData - the state of environment
    * @return {state} returns null if not set
    */
-  const [content, setContent] = useState(() => {
-    apiCalls.GET.LifeEvent().then(response =>
-      response.data ? setContent(response.data) : setContent(appContent)
-    )
-  })
+  const [content, setContent] = useState(() =>
+    !appContent
+      ? apiCalls.GET.LifeEvent().then(response =>
+          response.data ? setContent(response.data) : setContent(appContent)
+        )
+      : appContent
+  )
 
   // set data state
   const [stepDataArray, setStepDataArray] = useState()

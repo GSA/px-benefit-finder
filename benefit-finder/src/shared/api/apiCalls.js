@@ -392,7 +392,6 @@ export async function DataDate(
         inputValues[0].selected = true
         return setCurrentData(newData)
       }
-      throw new Error('Date not updated.')
     })
     .catch(error => {
       // eslint-disable-next-line no-console

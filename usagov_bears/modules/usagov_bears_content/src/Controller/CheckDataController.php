@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\usagov_bears_content\Controller;
+namespace Drupal\usagov_benefit_finder_content\Controller;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\node\Entity\node;
@@ -9,7 +9,7 @@ use Drupal\file\FileInterface;
 
 /**
  * Class CheckDataController
- * @package Drupal\usagov_bears_content\Controller
+ * @package Drupal\usagov_benefit_finder_content\Controller
  */
 class CheckDataController {
 

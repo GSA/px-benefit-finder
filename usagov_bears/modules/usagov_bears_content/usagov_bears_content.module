@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Module contains functions related to usagov_bears_content.
+ * Module contains functions related to usagov_benefit_finder_content.
  */
 
 /**
  * Implements hook_form_alter().
  */
-function usagov_bears_content_form_alter(&$form, &$form_state, $form_id) {
+function usagov_benefit_finder_content_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == "node_bears_benefit_edit_form") {
     $i = 0;
     do {

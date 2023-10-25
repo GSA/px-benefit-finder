@@ -69,6 +69,7 @@
     "dev:storybook": "npm run build && npm run mv:uswds:usagov && npm run prebuild:storybook && storybook dev -p 6006",
     "build:storybook": "npm run prebuild:storybook && storybook build",
     "cy:run:chrome": "npx cypress run --component --browser chrome && npx cypress run --browser chrome"
+"cy:run:chrome" : <missing>
   },
   "browserslist": {
     "production": [

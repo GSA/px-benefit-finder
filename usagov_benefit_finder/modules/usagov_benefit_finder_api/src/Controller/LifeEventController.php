@@ -128,19 +128,6 @@ class LifeEventController {
       $life_event->save();
     }
 
-    // Prepare directory1.
-    if ($this->mode == "published") {
-      $directory1 = "public://benefit-finder/api/life-event";
-    }
-    else if ($this->mode == "draft") {
-      $directory1 = "public://benefit-finder/api/draft/life-event";
-    }
-    $this->fileSystem->prepareDirectory($directory1, FileSystemInterface:: CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
-
-    // Write JSON data file.
-    $filename1 = "$directory1/$id.json";
-    $file1 = $this->fileRepository->writeData($data, $filename1, FileSystemInterface::EXISTS_REPLACE);
-
     return new JsonResponse([
         'data' => "Saved JSON data to " . $fileUrlString,
         'method' => 'GET',

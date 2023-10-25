@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\usagov_bears_api\Controller;
+namespace Drupal\usagov_benefit_finder_api\Controller;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\node\Entity\node;
@@ -9,7 +9,7 @@ use Drupal\file\FileInterface;
 
 /**
  * Class LifeEventController
- * @package Drupal\usagov_bears_api\Controller
+ * @package Drupal\usagov_benefit_finder_api\Controller
  */
 class LifeEventController {
 

@@ -1,8 +1,8 @@
-usagov_bears_api.life_event:
+usagov_benefit_finder_api.life_event:
   path: '/bears/api/life-event/{id}'
   defaults:
-    _controller: '\Drupal\usagov_bears_api\Controller\LifeEventController:getJsonData'
-    _title: 'USAgov bears JSON API of life event'
+    _controller: '\Drupal\usagov_benefit_finder_api\Controller\LifeEventController:getJsonData'
+    _title: 'USAgov Benefit Finder JSON API of life event'
   methods: [GET]
   requirements:
     _access: 'TRUE'
@@ -13,8 +13,8 @@ usagov_bears_api.life_event:
 usagov_bears_api.life_event_json_file:
   path: '/bears/api/life-event/{id}/jsonfile'
   defaults:
-    _controller: '\Drupal\usagov_bears_api\Controller\LifeEventController:saveJsonData'
-    _title: 'USAgov bears JSON file of life event'
+    _controller: '\Drupal\usagov_benefit_finder_api\Controller\LifeEventController:saveJsonData'
+    _title: 'USAgov Benefit Finder JSON file of life event'
   methods: [GET]
   requirements:
     _access: 'TRUE'

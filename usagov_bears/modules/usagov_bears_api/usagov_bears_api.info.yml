@@ -1,5 +1,5 @@
-name: 'USAgov bears API'
+name: 'USAgov Benefit Finder API'
 type: module
-description: 'Provides JSON API for Bears content.'
+description: 'Provides JSON API for Benefit Finder content.'
 core_version_requirement: ^9 || ^10
-package: 'USAgov bears'
+package: 'USAgov Benefit Finder'

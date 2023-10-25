@@ -1,7 +1,5 @@
-name: USAgov bears
+name: USAgov Benefit Finder
 type: module
-description: USAgov bears module.
+description: USAgov Benefit Finder module.
 core_version_requirement: ^9 || ^10
-package: USAgov bears
-dependencies:
-  - drupal:block
+package: USAgov Benefit Finder

@@ -90,10 +90,10 @@ class LifeEventController {
 
     // Prepare directory.
     if ($this->mode == "published") {
-      $directory = "public://bears/api/life_event";
+      $directory = "public://benefit-finder/api/life-event";
     }
     else if ($this->mode == "draft") {
-      $directory = "public://bears/api/draft/life_event";
+      $directory = "public://benefit-finder/api/draft/life-event";
     }
 
     $this->fileSystem->prepareDirectory($directory, FileSystemInterface:: CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);

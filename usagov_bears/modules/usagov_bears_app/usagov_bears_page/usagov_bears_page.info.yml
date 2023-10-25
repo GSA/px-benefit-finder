@@ -1,5 +1,5 @@
-name: 'USAgov bears page'
+name: 'USAgov Benefit Finder page'
 type: module
 description: 'Provides page template for React app.'
 core_version_requirement: ^9 || ^10
-package: 'USAgov bears'
+package: 'USAgov Benefit Finder'

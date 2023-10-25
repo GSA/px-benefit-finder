@@ -3,9 +3,9 @@
 # get current directory
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-# BEARS_MODULE
-BEARS_MODULE="usagov_bears"
-readonly BEARS_MODULE_LOCATION="${SCRIPT_DIR}/${BEARS_MODULE}"
+# BENEFIT_FINDER_MODULE
+BENEFIT_FINDER_MODULE="usagov_benefit_finder"
+readonly BENEFIT_FINDER_MODULE_LOCATION="${SCRIPT_DIR}/${BENEFIT_FINDER_MODULE}"
 
 # USAGOV-2021 project
 readonly USAGOV_PROJECT_LOCATION="${SCRIPT_DIR}/usagov-2021"
@@ -24,10 +24,10 @@ else
 fi
 
 # check if module directory exist
-if test -d "$BEARS_MODULE_LOCATION"
+if test -d "$BENEFIT_FINDER_MODULE_LOCATION"
 then
-    echo "\xE2\x9C\x94 usa.gov bears module exist"
-    echo "Moving BEARS custom module to usa.gov project..."
-    cp -r $BEARS_MODULE_LOCATION $USAGOV_PROJECT_CUSTOM_MODULES_LOCATION
-    test -f "${USAGOV_PROJECT_CUSTOM_MODULES_LOCATION}${BEARS_MODULE}"; echo -e "\xE2\x9C\x94 BEARS Module successfully moved"
+    echo "\xE2\x9C\x94 usa.gov benefit-finder module exist"
+    echo "Moving BENEFIT_FINDER custom module to usa.gov project..."
+    cp -r $BENEFIT_FINDER_MODULE_LOCATION $USAGOV_PROJECT_CUSTOM_MODULES_LOCATION
+    test -f "${USAGOV_PROJECT_CUSTOM_MODULES_LOCATION}${BENEFIT_FINDER_MODULE}"; echo -e "\xE2\x9C\x94 BENEFIT_FINDER Module successfully moved"
 fi

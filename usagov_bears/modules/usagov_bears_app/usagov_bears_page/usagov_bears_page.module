@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Module contains functions related to usagov_bears_page.
+ * Module contains functions related to usagov_benefit_finder_page.
  */
 
 /**
@@ -11,7 +11,7 @@
  * @return array
  */
 function usagov_bears_page_theme() {
-  $theme['page__bears_life_event'] = [
+  $theme['page__benefit_finder_life_event'] = [
     'base hook' => 'page',
   ];
   return $theme;
@@ -27,7 +27,7 @@ function usagov_bears_page_theme_suggestions_page_alter(array &$suggestions, arr
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node && $node->bundle() == "bears_life_event") {
     if (\Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
-      $suggestions[] = 'page__bears_life_event';
+      $suggestions[] = 'page__benefit_finder_life_event';
     }
   }
 }
@@ -41,7 +41,7 @@ function usagov_bears_page_page_attachments_alter(array &$page) {
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node && $node->bundle() == "bears_life_event") {
     if (\Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
-      $page['#attached']['library'][] = 'usagov_bears_page/bears_app';
+      $page['#attached']['library'][] = 'usagov_bears_page/benefit_finder_app';
     }
   }
 }

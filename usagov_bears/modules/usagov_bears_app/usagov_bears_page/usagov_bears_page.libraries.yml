@@ -1,4 +1,4 @@
-bears_app:
+benefit_finder_app:
   version: 1.x
   js:
     js/benefit-finder.min.js: {}

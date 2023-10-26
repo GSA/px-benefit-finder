@@ -23,9 +23,11 @@
     "@testing-library/user-event": "^13.5.0",
     "@uswds/uswds": "^3.0.1",
     "cross-env": "^7.0.3",
+    "cypress": "^13.3.1",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.12",
@@ -37,9 +39,9 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "react-scripts": "5.0.1",
     "react-test-renderer": "^18.2.0",
-    "react-modal": "^3.16.1",
     "sass": "^1.63.4",
     "storybook": "^7.5.0",
     "stylelint": "^15.10.1",
@@ -64,8 +66,9 @@
     "lint-staged": "lint-staged",
     "generate:component": "plop",
     "prebuild:storybook": "npm run test:generate-output",
-    "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
-    "build:storybook": "npm run prebuild:storybook && storybook build"
+    "dev:storybook": "npm run build && npm run mv:uswds:usagov && npm run prebuild:storybook && storybook dev -p 6006",
+    "build:storybook": "npm run prebuild:storybook && storybook build",
+    "cy:run:chrome": "npx cypress run --component --browser chrome && npx cypress run --browser chrome"
   },
   "browserslist": {
     "production": [
@@ -83,6 +86,11 @@
     "moduleNameMapper": {
       "@uswds/uswds/js/usa-accordion": "<rootDir>/node_modules/@uswds/uswds/packages/usa-accordion/src/index",
       "@uswds/uswds/js/usa-modal": "<rootDir>/node_modules/@uswds/uswds/packages/usa-modal/src/index"
-    }
+    },
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)",
+      "!**/__tests__/**/*.cy.jsx"
+    ]
   }
 }

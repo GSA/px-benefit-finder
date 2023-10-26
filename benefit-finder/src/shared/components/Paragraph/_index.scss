@@ -4,29 +4,23 @@
 #benefit-finder {
   p,
   p.regular {
-    @include p;
+    @include p1;
   }
 
   p.bold {
-    @include p;
-
-    font-weight: 700;
+    @include important-bold;
   }
 
   p.extrabold {
-    @include p;
-
-    font-weight: 800;
+    @include important-x-bold;
   }
 
   p.light {
-    @include p;
-
-    font-weight: 300;
+    @include p3;
   }
 
   p.thin {
-    @include p;
+    @include p3;
 
     font-weight: 100;
   }

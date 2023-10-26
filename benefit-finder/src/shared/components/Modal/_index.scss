@@ -3,6 +3,8 @@
 @use '../../styles/space/_index.scss' as space;
 
 .modal-button {
+  @include important-bold;
+
   background-color: transparent;
   border: 0;
   position: absolute;
@@ -11,11 +13,22 @@
   cursor: pointer;
 }
 
-.modal-heading {
-  @include h5;
+a.nav-item-one,
+a.nav-item-one {
+  @include important-bold;
+}
 
+.modal-heading {
+  @include important-bold;
+
+  font-weight: 600;
   color: color.$pure-black;
   text-align: center;
   font-style: normal;
   margin: space.$space-md-plus 0;
+}
+
+.modal.usa-button-group.width-full {
+  margin: 0 auto;
+  text-align: center;
 }

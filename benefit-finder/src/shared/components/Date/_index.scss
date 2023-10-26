@@ -1,5 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/breakpoints/_index.scss' as *;
+@use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
   .date-alert {
@@ -18,6 +19,8 @@
 
   .usa-input {
     border-radius: 3px;
+
+    @include p;
 
     &.usa-input--error {
       outline: 4px solid color.$alert-red !important;

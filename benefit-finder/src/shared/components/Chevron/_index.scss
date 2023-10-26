@@ -1,8 +1,13 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/breakpoints/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
+@use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
+  h1.chevron-heading {
+    @include h0;
+  }
+
   .chevron {
     position: relative;
     background-color: color.$marine;
@@ -10,6 +15,22 @@
     margin: 0 auto;
     color: color.$white;
     margin-bottom: 140px;
+
+    .grid-container {
+      max-width: 850px;
+    }
+  }
+
+  .chevron-description p {
+    @include p;
+
+    line-height: 25.92px;
+  }
+
+  .chevron-description p strong {
+    @include important-x-bold;
+
+    line-height: 25.92px;
   }
 
   // triangle down

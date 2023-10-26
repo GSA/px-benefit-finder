@@ -1,0 +1,5 @@
+@use '../../styles/sizes/_index.scss' as *;
+
+.email-button.usa-button {
+  width: $button-max-width;
+}

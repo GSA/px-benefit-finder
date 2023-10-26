@@ -17,6 +17,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
         NEW Find federal benefits after the loss of a loved one
       </h1>
       <div
+        className="chevron-description"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<p>Find government benefits after the loss of a loved one including funeral, housing, and education help.</p>",
@@ -53,31 +54,38 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
           <li
             className="usa-process-list__item"
           >
-            <h4
+            <h3
               className="usa-process-list__heading"
             >
               Answer questions
-            </h4>
+            </h3>
           </li>
           <li
             className="usa-process-list__item"
           >
-            <h4
+            <h3
               className="usa-process-list__heading"
             >
               Review Results
-            </h4>
+            </h3>
           </li>
           <li
             className="usa-process-list__item"
           >
-            <h4
+            <h3
               className="usa-process-list__heading"
             >
               Find out how to apply
-            </h4>
+            </h3>
           </li>
         </ol>
+      </div>
+      <div
+        className="line-sperator-wrapper--vertical"
+      >
+        <div
+          className="line-sperator--vertical"
+        />
       </div>
       <div
         className="intro-process-notices"
@@ -108,6 +116,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
                     className="usa-alert__text"
                   >
                     <div
+                      className="notice-item"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "<div>Your information<strong> is not</strong> shared, saved, or submitted.</div>",
@@ -132,6 +141,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
                     className="usa-alert__text"
                   >
                     <div
+                      className="notice-item"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Provide complete info to get more relevant results.",
@@ -156,6 +166,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
                     className="usa-alert__text"
                   >
                     <div
+                      className="notice-item"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",

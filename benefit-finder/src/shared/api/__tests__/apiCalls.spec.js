@@ -44,19 +44,19 @@ const younger18 = { year: 2006, month: 0, day: 1 }
 
 const conditionalsSpecificDate = [
   {
-    value: '>01-01-2023', // before 2023
+    value: '>01-01-2023', // before 2023 (ie. 2022)
     isSame: false,
     isCloser: false,
     isFurther: true,
   },
   {
-    value: '>=01-01-2023', // before or in 2023
+    value: '>=01-01-2023', // before or in 2023 (ie. 2022)
     isSame: true,
     isCloser: false,
     isFurther: true,
   },
   {
-    value: '<01-01-2023', // after 2023
+    value: '<01-01-2023', // after 2023 (ie. 2023-01-01)
     isSame: false,
     isCloser: true,
     isFurther: false,
@@ -205,7 +205,7 @@ test('correctly accepts and evaluates a date object compared to a length of time
   )
 })
 
-test('other correctly accepts and evaluates a date object compared to a length of time of the conditional where the conditional time values are younger', () => {
+test('other correctly accepts and evaluates a date object compared to a length of time of the conditional where the conditional time values are diffr', () => {
   conditionalsOthers.forEach(conditional =>
     expect(
       apiCalls.UTILS.DateEligibility({

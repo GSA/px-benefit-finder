@@ -12,6 +12,7 @@
  * @return {boolean} true or false based on the conditional
  */
 export const DateEligibility = ({ selectedValue, conditional }) => {
+  // console.log({ selectedValue, conditional })
   // date values
   // "<01-01-1978"
   // "<2years (the deceased died within the last two years)"
@@ -32,6 +33,7 @@ export const DateEligibility = ({ selectedValue, conditional }) => {
   // subtract integer
   // if a date comes back in date format
   const pattern = /-/
+  console.log(pattern.test(text))
   const conditionalDate = pattern.test(text)
     ? new window.Date(text)
     : new window.Date(
@@ -40,62 +42,173 @@ export const DateEligibility = ({ selectedValue, conditional }) => {
         new Date().getDate()
       )
 
-  const epochConditionalDateOffset = new Date(
-    conditionalDate.getTime() + conditionalDate.getTimezoneOffset() * 60000
-  )
-  // getTime in milliseconds so we can do a comparison
-  const epochConditionalDate = epochConditionalDateOffset.getTime()
+  // const epochConditionalDateOffset = new Date(
+  //   Math.abs(
+  //     conditionalDate.setHours(0, 0, 0, 0) +
+  //       conditionalDate.getTimezoneOffset() * 60000
+  //   )
+  // )
+  // // getTime in milliseconds so we can do a comparison
+  // const epochConditionalDate = epochConditionalDateOffset.getTime()
 
   // example selected value for date
   // const value = {
   //   year: 2022,
-  //   month: 2,
+  //   month: 2,(month index)
   //   day: 2,
   // }
 
   // calculate selected
   const selectedDate = new window.Date(
-    Date.UTC(selectedValue.year, selectedValue.month, selectedValue.day)
+    Date.UTC(
+      selectedValue.year,
+      selectedValue.month,
+      selectedValue.day,
+      0,
+      0,
+      0
+    )
   )
 
-  const epochSelectedDateOffset = new Date(
-    selectedDate.getTime() + selectedDate.getTimezoneOffset() * 60000
-  )
+  // console.log({ selectedDate }, { conditionalDate })
 
-  const epochSelectedDate = epochSelectedDateOffset.getTime()
+  // const epochSelectedDateOffset = new Date(
+  //   Math.abs(
+  //     selectedDate.setHours(0, 0, 0, 0) +
+  //       selectedDate.getTimezoneOffset() * 60000
+  //   )
+  // )
+
+  // const epochSelectedDate = epochSelectedDateOffset.getTime()
 
   const isDateEligible = (
     operator,
-    epochSelectedDate,
-    epochConditionalDate
+    conditionalDate,
+    selectedDate
+    // epochSelectedDate,
+    // epochConditionalDate
   ) => {
-    // ;['>', '>=', '<', '<=', '=']
+    // ['>', '>=', '<', '<=', '=']
     // epoch time measures the number of seconds that have elapsed since the start of the Unix epoch on January 1st, 1970, at midnight UTC/GMT, minus the leap seconds.
-    const diff = pattern.test(text)
-      ? epochSelectedDate - epochConditionalDate
-      : epochConditionalDate - epochSelectedDate
+    // const diff = pattern.test(text) // in seconds
+    //   ? Math.abs(epochSelectedDate - epochConditionalDate) / 1000
+    //   : epochConditionalDate - epochSelectedDate
+    // console.log(
+    //   { operator },
+    //   { epochSelectedDate },
+    //   { epochConditionalDate },
+    //   pattern.test(text),
+    //   { diff },
+    //   epochSelectedDate - epochConditionalDate,
+    //   epochConditionalDate - epochSelectedDate,
+    //   Math.abs(epochConditionalDate - epochSelectedDate)
+    // )
+    // conditionalDate.setTime(0, 0, 0)
+    const x = selectedDate
+    const y = new window.Date(
+      Date.UTC(
+        conditionalDate.getUTCFullYear(),
+        conditionalDate.getUTCMonth(),
+        conditionalDate.getUTCDate(),
+        0,
+        0,
+        0
+      )
+    )
 
-    // tests
-    // you are under 18 years
-    // deceased died after may 20th, 2020
-    // you are over 62 years
+    // if (!pattern.test(text)) {
+    console.log({ x }, { y })
+    console.log(x.getTime(), y.getTime())
+
+    const diff = !pattern.test(text)
+      ? y.getTime() - x.getTime()
+      : y.getTime() - x.getTime()
+
+    console.log(diff)
 
     switch (operator.length && operator.join('')) {
       case '>':
+        console.log(operator.join(''), diff > 0)
         return diff > 0
       case '>=':
+        console.log(operator.join(''), diff >= 0)
         return diff >= 0
       case '<':
+        console.log(operator.join(''), diff < 0)
         return diff < 0
       case '<=':
+        console.log(operator.join(''), diff <= 0)
         return diff <= 0
       case '=':
-        return diff === 0
+        console.log(operator.join(''), +diff === 0)
+        return +diff === 0
       default:
         return false
+      // }
+      // } else {
+      //   console.log({ x }, { y })
+      //   switch (operator.length && operator.join('')) {
+      //     case '>':
+      //       console.log(operator.join(''), x > y)
+      //       return x > y
+      //     case '>=':
+      //       console.log(operator.join(''), x >= y)
+      //       return x >= y
+      //     case '<':
+      //       console.log(operator.join(''), x < y)
+      //       return x < y
+      //     case '<=':
+      //       console.log(operator.join(''), x <= y)
+      //       return x <= y
+      //     case '=':
+      //       console.log(operator.join(''), +x === +y)
+      //       return +x === +y
+      //     default:
+      //       return false
+      //   }
+
+      // console.log(x.getTime(), y.getTime())
+
+      // // less than, greater than is fine:
+      // console.log('x < y', x < y) // false
+      // console.log('x > y', x > y) // false
+      // console.log('x <= y', x <= y) // true
+      // console.log('x >= y', x >= y) // true
+      // console.log('x === y', x === y) // false, oops!
+
+      // // anything involving '==' or '===' should use the '+' prefix
+      // // it will then compare the dates' millisecond values
+
+      // console.log('+x === +y', +x === +y) // true
+
+      // tests
+      // you are under 18 years
+      // deceased died after may 20th, 2020
+      // you are over 62 years
+      // const oneDay = 86400 // in seconds
+
+      // switch (operator.length && operator.join('')) {
+      //   case '>':
+      //     console.log(operator.join(''), diff > oneDay, diff)
+      //     return diff > oneDay
+      //   case '>=':
+      //     console.log(operator.join(''), diff >= oneDay, diff)
+      //     return diff >= oneDay
+      //   case '<':
+      //     console.log(operator.join(''), diff < oneDay, diff)
+      //     return diff < oneDay
+      //   case '<=':
+      //     console.log(operator.join(''), diff <= oneDay, diff)
+      //     return diff <= oneDay
+      //   case '=':
+      //     console.log(operator.join(''), diff === oneDay, diff)
+      //     return diff === oneDay
+      //   default:
+      //     return false
     }
   }
-  return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
+  // return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
+  return isDateEligible(operator, conditionalDate, selectedDate)
 }
 
 /**

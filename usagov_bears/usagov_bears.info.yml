@@ -1,7 +1,0 @@
-name: USAgov bears
-type: module
-description: USAgov bears module.
-core_version_requirement: ^9 || ^10
-package: USAgov bears
-dependencies:
-  - drupal:block

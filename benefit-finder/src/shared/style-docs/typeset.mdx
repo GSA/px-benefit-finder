@@ -5,24 +5,26 @@ import { Meta, Typeset } from '@storybook/blocks'
 <Meta title="Typography" />
 
 export const typography = {
-  type: {
-    primary:
-      'Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif',
-  },
   weight: {
+    extraLight: '200',
     regular: '400',
     bold: '700',
     extrabold: '800',
-    light: '300',
-    thin: '100',
   },
   size: {
-    h1: 32,
+    h0: 36,
+    h1: 36,
     h2: 32,
-    h3: 24,
-    h4: 22,
-    h5: 20,
-    paragraph: 16,
+    h3: 32,
+    h4: 24,
+    h5: 22,
+    h6: 20,
+    importantXBold: 16,
+    importantBold: 16,
+    p: 16,
+    p1: 16,
+    p2: 15,
+    p3: 15,
   },
 }
 
@@ -35,22 +37,31 @@ export const SampleText =
 
 ## Headings
 
+### H0
+
+<Typeset
+  fontSizes={[Number(typography.size.h0)]}
+  fontWeight={typography.weight.extrabold}
+  sampleText={`${typography.size.h0}px  Heading 0 - Sample`}
+  fontFamily="Public Sans"
+/>
+
 ### H1
 
 <Typeset
   fontSizes={[Number(typography.size.h1)]}
   fontWeight={typography.weight.extrabold}
   sampleText={`${typography.size.h1}px H1 Heading 1 - Sample`}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
 />
 
 ### H2
 
 <Typeset
   fontSizes={[Number(typography.size.h2)]}
-  fontWeight={typography.weight.bold}
+  fontWeight={typography.weight.extrabold}
   sampleText={`${typography.size.h2}px H2 Heading 2 - Sample`}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
 />
 
 ### H3
@@ -59,70 +70,88 @@ export const SampleText =
   fontSizes={[Number(typography.size.h3)]}
   fontWeight={typography.weight.bold}
   sampleText={`${typography.size.h3}px H3 Heading 3 - Sample`}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
 />
 
 ### H4
 
 <Typeset
   fontSizes={[Number(typography.size.h4)]}
-  fontWeight={typography.weight.bold}
+  fontWeight={typography.weight.extrabold}
   sampleText={`${typography.size.h4}px H4 Heading 4 - Sample`}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
 />
 
 ### H5
 
 <Typeset
   fontSizes={[Number(typography.size.h5)]}
-  fontWeight={typography.weight.extrabold}
+  fontWeight={typography.weight.bold}
   sampleText={`${typography.size.h5}px H5 Heading 5 - Sample`}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
+/>
+
+### H6
+
+<Typeset
+  fontSizes={[Number(typography.size.h6)]}
+  fontWeight={typography.weight.bold}
+  sampleText={`${typography.size.h5}px H6 Heading 6 - Sample`}
+  fontFamily="Public Sans"
 />
 
 ## Primary Typeface
 
-### Regular
+### Important Extra Bold
 
 <Typeset
-  fontSizes={[Number(typography.size.paragraph)]}
-  fontWeight={typography.weight.regular}
+  fontSizes={[Number(typography.size.importantXBold)]}
+  fontWeight={typography.weight.extraBold}
   sampleText={SampleText}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
 />
 
-### Bold
+### Important Bold
 
 <Typeset
-  fontSizes={[Number(typography.size.paragraph)]}
+  fontSizes={[Number(typography.size.importantBold)]}
   fontWeight={typography.weight.bold}
   sampleText={SampleText}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
 />
 
-### Extrabold
+### Paragraph
 
 <Typeset
-  fontSizes={[Number(typography.size.paragraph)]}
-  fontWeight={typography.weight.extrabold}
+  fontSizes={[Number(typography.size.p)]}
+  fontWeight={typography.weight.p}
   sampleText={SampleText}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
 />
 
-### Light
+### Paragraph 1
 
 <Typeset
-  fontSizes={[Number(typography.size.paragraph)]}
-  fontWeight={typography.weight.light}
+  fontSizes={[Number(typography.size.p1)]}
+  fontWeight={typography.weight.regular}
   sampleText={SampleText}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
 />
 
-### Thin
+### Paragraph 2
 
 <Typeset
-  fontSizes={[Number(typography.size.paragraph)]}
-  fontWeight={typography.weight.thin}
+  fontSizes={[Number(typography.size.p2)]}
+  fontWeight={typography.weight.regular}
   sampleText={SampleText}
-  fontFamily={typography.type.primary}
+  fontFamily="Public Sans"
+/>
+
+### Paragraph 3
+
+<Typeset
+  fontSizes={[Number(typography.size.p3)]}
+  fontWeight={typography.weight.extraLight}
+  sampleText={SampleText}
+  fontFamily="Public Sans"
 />

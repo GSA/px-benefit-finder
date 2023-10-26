@@ -5,7 +5,9 @@
 #benefit-finder {
   .benefit-accordion {
     .usa-accordion__button {
+      padding-bottom: space.$padding-bottom-md-plus;
       position: relative;
+      box-shadow: 0 4px 4px 0 rgb(0 0 0 / 11%);
 
       svg {
         position: absolute;
@@ -32,13 +34,13 @@
       }
 
       .heading {
-        @include h4;
+        @include h6;
 
         letter-spacing: 0;
       }
 
       .sub-heading {
-        @include h5;
+        @include p;
 
         letter-spacing: 0;
       }

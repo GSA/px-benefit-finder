@@ -24,7 +24,10 @@ const NoticesList = ({ data }) => {
         return (
           <li className="notice" key={`notice-${i}`}>
             <Alert noBackground>
-              <div dangerouslySetInnerHTML={createMarkup(item.notice)}></div>
+              <div
+                className="notice-item"
+                dangerouslySetInnerHTML={createMarkup(item.notice)}
+              ></div>
             </Alert>
           </li>
         )

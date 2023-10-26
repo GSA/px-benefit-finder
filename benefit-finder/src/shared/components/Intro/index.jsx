@@ -37,6 +37,9 @@ const Intro = ({ data, ui, setStep, step }) => {
             <div className="intro-process-list">
               <ProcessList steps={steps.list} description={steps.title} />
             </div>
+            <div className="line-sperator-wrapper--vertical">
+              <div className="line-sperator--vertical" />
+            </div>
             <div className="intro-process-notices">
               <Heading
                 className="intro-process-notices-heading"

@@ -4,7 +4,7 @@
 
 #benefit-finder {
   .verify-criteria-value {
-    @include h4;
+    @include h6;
 
     margin-bottom: space.$space-lg;
     border-bottom: 1px solid color.$base-light-grey;
@@ -18,6 +18,8 @@
   }
 
   .verify-criteria-section-heading {
+    @include h4;
+
     border-bottom: 2px solid color.$marine;
     padding-bottom: space.$padding-bottom-lg;
   }

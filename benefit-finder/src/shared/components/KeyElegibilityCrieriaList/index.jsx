@@ -17,7 +17,7 @@ const KeyElegibilityCrieriaList = ({
   initialEligibilityLength,
   ui,
 }) => {
-  const { benefitSummary, benefitSummaryConjunction } = ui
+  const { benefitSummary, benefitSummaryPrefix, benefitSummaryConjunction } = ui
   const defaultClasses = ['key-eligibility-criteria-group']
 
   return (
@@ -29,8 +29,9 @@ const KeyElegibilityCrieriaList = ({
             className="key-eligibility-criteria-heading"
             headingLevel={5}
           >
-            {`${benefitSummary} ${data.length} ${benefitSummaryConjunction}
-            ${initialEligibilityLength}`}
+            {`${benefitSummary}`}
+            <p className="key-eligibility-criteria-sub-heading">{`${benefitSummaryPrefix} ${data.length} ${benefitSummaryConjunction}
+            ${initialEligibilityLength}`}</p>
           </Heading>
           <ul className="key-eligibility-criteria-list">
             {data.map((item, index) => {

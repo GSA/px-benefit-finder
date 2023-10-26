@@ -12,6 +12,8 @@
       }
 
       .benefit-detail-title {
+        @include h6;
+
         padding: 0;
         margin: 0 0 24px;
         text-align: left;
@@ -20,6 +22,8 @@
       .benefit-detail-summary,
       .benefit-criteria-list,
       .benefit-alert {
+        @include p;
+
         margin: 0 0 24px;
       }
 
@@ -45,7 +49,7 @@
       @include p;
 
       background-color: transparent !important;
-      color: color.$pop-blue !important;
+      color: color.$electric-blue !important;
       margin-bottom: space.$space-lg;
     }
   }

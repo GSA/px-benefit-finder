@@ -1,36 +1,91 @@
+@mixin h0 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 100%;
+}
+
 @mixin h1 {
+  font-family: 'Public Sans', sans-serif;
   font-size: 36px;
   font-weight: 800;
   line-height: 100%;
 }
 
 @mixin h2 {
+  font-family: 'Public Sans', sans-serif;
   font-size: 32px;
   font-weight: 800;
   line-height: 100%;
 }
 
 @mixin h3 {
-  font-size: 22px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 32px;
   font-weight: 700;
   line-height: 134.09%;
 }
 
 @mixin h4 {
-  font-size: 20px;
-  font-weight: 700;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
   line-height: 114.59%;
 }
 
 @mixin h5 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 134.09%;
+}
+
+@mixin h6 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 134.09%;
+}
+
+@mixin important-x-bold {
+  font-family: 'Public Sans', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 134.09%;
 }
 
-@mixin p {
-  font-weight: 400;
+@mixin important-bold {
+  font-family: 'Public Sans', sans-serif;
   font-size: 16px;
+  font-weight: 700;
+  line-height: 134.09%;
+}
+
+@mixin p {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.8px;
+}
+
+@mixin p1 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.8px;
+}
+
+@mixin p2 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18.8px;
+}
+
+@mixin p3 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 200;
   line-height: 18.8px;
 }
 

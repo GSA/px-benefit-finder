@@ -81,10 +81,11 @@ const ResultsView = ({
               {stepBackLink}
             </Button>
           )}
-          <Heading headingLevel={3}>
+          <Heading className="result-view-heading" headingLevel={3}>
             {notQualifiedView ? notQualified.heading : qualified.heading}
           </Heading>
-          <p
+          <div
+            className="result-view-description"
             dangerouslySetInnerHTML={
               notQualifiedView
                 ? createMarkup(notQualified.description)
@@ -109,7 +110,9 @@ const ResultsView = ({
           </div>
           {notQualifiedView === false && (
             <div className="result-view-unmet">
-              <Heading headingLevel={3}>{notEligibleResults?.heading}</Heading>
+              <Heading className="result-view-unmet-heading" headingLevel={3}>
+                {notEligibleResults?.heading}
+              </Heading>
               <p
                 dangerouslySetInnerHTML={createMarkup(
                   notEligibleResults?.description
@@ -122,35 +125,50 @@ const ResultsView = ({
           )}
           {relevantBenefits && (
             <div className="result-view-relvant-benefits">
-              <Heading headingLevel={3}>
+              <Heading
+                className="result-view-relvant-benefits-heading"
+                headingLevel={3}
+              >
                 {resultsRelativeBenefits?.heading}
               </Heading>
-              <ul className="add-list-reset">
-                <li key="benefit-card-one">
-                  <Card
-                    className="relative-benefit-card"
-                    title={`${relevantBenefits[0].lifeEvent.title}`}
-                    body={`${relevantBenefits[0].lifeEvent.body}`}
-                    cta={`${relevantBenefits[0].lifeEvent.cta}`}
-                    href={`${relevantBenefits[0].lifeEvent.link}`}
-                    carrotType={2}
-                  ></Card>
-                </li>
-                <li key="benefit-card-two">
-                  <Card
-                    className="relative-benefit-card"
-                    title={`${relevantBenefits[1].lifeEvent.title}`}
-                    body={`${relevantBenefits[1].lifeEvent.body}`}
-                    cta={`${relevantBenefits[1].lifeEvent.cta}`}
-                    href={`${relevantBenefits[1].lifeEvent.link}`}
-                    carrotType={2}
-                  ></Card>
-                </li>
-              </ul>
+              {relevantBenefits && (
+                <ul className="add-list-reset">
+                  {relevantBenefits[0] && (
+                    <li key="benefit-card-one">
+                      <Card
+                        className="relative-benefit-card"
+                        title={`${relevantBenefits[0].lifeEvent.title}`}
+                        body={`${relevantBenefits[0].lifeEvent.body}`}
+                        cta={`${relevantBenefits[0].lifeEvent.cta}`}
+                        href={`${relevantBenefits[0].lifeEvent.link}`}
+                        carrotType={2}
+                      ></Card>
+                    </li>
+                  )}
+                  {relevantBenefits[1] && (
+                    <li key="benefit-card-two">
+                      <Card
+                        className="relative-benefit-card"
+                        title={`${relevantBenefits[1].lifeEvent.title}`}
+                        body={`${relevantBenefits[1].lifeEvent.body}`}
+                        cta={`${relevantBenefits[1].lifeEvent.cta}`}
+                        href={`${relevantBenefits[1].lifeEvent.link}`}
+                        carrotType={2}
+                      ></Card>
+                    </li>
+                  )}
+                </ul>
+              )}
             </div>
           )}
           <div className="result-view-share-results">
-            <Heading headingLevel={3}>{shareResults?.heading}</Heading>
+            <Heading
+              className="result-view-share-results-heading"
+              headingLevel={3}
+            >
+              {shareResults?.heading}
+            </Heading>
+            <p>{shareResults?.description}</p>
             <div className="result-view-share-results-button-group">
               <ShareButton
                 ui={shareResults}
@@ -165,7 +183,6 @@ const ResultsView = ({
                 }
               />
             </div>
-            <p>{shareResults?.description}</p>
           </div>
         </div>
       </div>

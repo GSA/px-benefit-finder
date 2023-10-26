@@ -177,7 +177,7 @@ export async function LifeEvent(lifeEvent) {
     lifeEvent = location.substring(location.lastIndexOf('/') + 1)
   }
   const response = await fetch(
-    `/sites/default/files/bears/api/${mode}life_event/${language}${lifeEvent}.json`
+    `/sites/default/files/benefit-finder/api/${mode}life-event/${language}${lifeEvent}.json`
   )
     .then(response => {
       if (response?.ok) {

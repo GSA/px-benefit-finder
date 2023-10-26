@@ -100,9 +100,9 @@
     },
     "benefitAccordion": {
       "eligibleStatusLabels": [
-        "Likely Eligible",
+        "Probablemente elegible",
         "Más información requerida",
-        "Not Eligible"
+        "No elegible"
       ],
       "agencyPrefix": "",
       "benefitSummary": "Criterios de elegibilidad",

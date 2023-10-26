@@ -1,7 +1,0 @@
-bears_app:
-  version: 1.x
-  js:
-    js/benefit-finder.min.js: {}
-  css:
-    theme:
-      css/benefit-finder.min.css: {}

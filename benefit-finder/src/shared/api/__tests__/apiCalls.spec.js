@@ -29,18 +29,40 @@ import * as apiCalls from '../apiCalls'
 // criteria format 2: 18years
 
 // loop through our array of operators
+// then compare to the expected output
 
-// compare to the expected output
-
-// month: === monthIndex
+// note: month: === monthIndex
 // 0 - 11
 const sameDate = { year: 2023, month: 0, day: 1 }
 const closerDate = { year: 2023, month: 0, day: 2 } // younger
 const furtherDate = { year: 2022, month: 11, day: 30 } // older
-const same18 = { year: 2005, month: 9, day: 26 }
-const older18 = { year: 2005, month: 0, day: 1 }
-const younger18 = { year: 2006, month: 0, day: 1 }
-// const deathDate = { year: 1977, month: 0, day: 1 }
+
+// dynamicly generate to -18 years from todays date
+const age18 = new window.Date(
+  new Date().getFullYear() - 18,
+  new Date().getMonth(),
+  new Date().getDate()
+)
+
+const same18 = {
+  year: age18.getFullYear(),
+  month: age18.getMonth(),
+  day: age18.getDate(),
+}
+
+// one day earlier
+const older18 = {
+  year: age18.getFullYear(),
+  month: age18.getMonth(),
+  day: age18.getDate() - 1,
+}
+
+// one day later
+const younger18 = {
+  year: age18.getFullYear(),
+  month: age18.getMonth(),
+  day: age18.getDate() + 1,
+}
 
 const conditionalsSpecificDate = [
   {
@@ -108,6 +130,12 @@ const conditionalsLengthOfTime = [
   },
 ]
 
+const today = new window.Date(
+  new Date().getFullYear(),
+  new Date().getMonth(),
+  new Date().getDate()
+)
+
 const conditionalsOthers = [
   {
     value: '<01-01-1978', // after 1978
@@ -120,24 +148,53 @@ const conditionalsOthers = [
     eval: true,
   },
   {
+    // dynamic
     value: '<2years', // less
-    selectedValue: { year: 2023, month: 9, day: 27 },
+    selectedValue: {
+      year: today.getFullYear(),
+      month: today.getMonth(),
+      day: today.getDate() - 1,
+    },
     eval: true,
   },
   {
+    value: '<2years', // more
+    selectedValue: {
+      year: today.getFullYear() - 3,
+      month: today.getMonth(),
+      day: today.getDate(),
+    },
+    eval: false,
+  },
+  {
+    // dynamic
     value: '>=62years', // younger than
-    selectedValue: { year: 1961, month: 9, day: 26 },
+    selectedValue: {
+      year: today.getFullYear() - 61,
+      month: today.getMonth(),
+      day: today.getDate(),
+    },
+    eval: false,
+  },
+  {
+    value: '>=62years', // equal to
+    selectedValue: {
+      year: today.getFullYear() - 62,
+      month: today.getMonth(),
+      day: today.getDate(),
+    },
+    eval: true,
+  },
+  {
+    value: '>=62years', // older than
+    selectedValue: {
+      year: today.getFullYear() - 64,
+      month: today.getMonth(),
+      day: today.getDate(),
+    },
     eval: true,
   },
 ]
-
-// "<01-01-1978"
-// "<2years (the deceased died within the last two years)"
-// "<18years"
-// ">=62years"
-// ">=60years"
-// ">=50years"
-// ">18years"
 
 test('correctly accepts and evaluates a date object compared to a specific date of the conditional where the conditional time values are equal in time', () => {
   conditionalsSpecificDate.forEach(conditional =>

@@ -105,7 +105,8 @@
         "Not Eligible"
       ],
       "agencyPrefix": "By",
-      "benefitSummary": "Key eligibility criteria Met",
+      "benefitSummary": "Key eligibility criteria",
+      "benefitSummaryPrefix": "Met ",
       "benefitSummaryConjunction": "of",
       "unmetLabel": "Unmet criteria",
       "additionalDescription": "Additional eligibility criteria may apply. Visit the link below for more information and to apply.",

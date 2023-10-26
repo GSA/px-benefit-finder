@@ -1,4 +1,5 @@
 @use '../../styles/breakpoints/_index.scss' as *;
+@use '../../styles/sizes/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
 #benefit-finder {
@@ -10,7 +11,14 @@
     }
 
     .cta-wrapper {
+      display: flex;
+      justify-content: center;
       margin: space.$space-lg space.$space-lg space.$space-xl;
+    }
+
+    .cta-wrapper button {
+      margin: 0 auto;
+      width: $button-max-width;
     }
 
     @media (width >= $desktop) {
@@ -24,15 +32,6 @@
 
       .intro-process-group {
         display: flex;
-      }
-
-      .cta-wrapper {
-        text-align: center;
-      }
-
-      .cta-wrapper button {
-        margin: 0 auto;
-        min-width: 420px;
       }
     }
   }

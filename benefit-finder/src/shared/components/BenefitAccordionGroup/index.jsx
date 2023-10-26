@@ -160,11 +160,12 @@ const BenefitAccordionGroup = ({
               : eligibleStatusLabels[2]
 
           const handleHidden =
-            notQualifiedView === false && eligibleStatus !== 'Likely Eligible'
+            notQualifiedView === false &&
+            eligibleStatus !== eligibleStatusLabels[0]
               ? true
               : !!(
                   notQualifiedView === true &&
-                  eligibleStatus === 'Likely Eligible'
+                  eligibleStatus === eligibleStatusLabels[0]
                 )
 
           return (

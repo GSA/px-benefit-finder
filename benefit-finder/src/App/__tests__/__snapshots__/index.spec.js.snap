@@ -17,12 +17,14 @@ exports[`loads intro 1`] = `
             class="grid-container"
           >
             <h1
-              class="font-family-sans"
+              class="chevron-heading font-family-sans"
               id="skip-to-h1"
             >
               Benefit finder: death of a loved one
             </h1>
-            <div>
+            <div
+              class="chevron-description"
+            >
               <p>
                 <strong>
                   Losing a loved one is hard.
@@ -63,31 +65,38 @@ exports[`loads intro 1`] = `
                 <li
                   class="usa-process-list__item"
                 >
-                  <h4
+                  <h3
                     class="usa-process-list__heading"
                   >
                     Answer questions
-                  </h4>
+                  </h3>
                 </li>
                 <li
                   class="usa-process-list__item"
                 >
-                  <h4
+                  <h3
                     class="usa-process-list__heading"
                   >
                     Review Results
-                  </h4>
+                  </h3>
                 </li>
                 <li
                   class="usa-process-list__item"
                 >
-                  <h4
+                  <h3
                     class="usa-process-list__heading"
                   >
                     Find out how to apply
-                  </h4>
+                  </h3>
                 </li>
               </ol>
+            </div>
+            <div
+              class="line-sperator-wrapper--vertical"
+            >
+              <div
+                class="line-sperator--vertical"
+              />
             </div>
             <div
               class="intro-process-notices"
@@ -117,7 +126,9 @@ exports[`loads intro 1`] = `
                         <div
                           class="usa-alert__text"
                         >
-                          <div>
+                          <div
+                            class="notice-item"
+                          >
                             <div>
                               Your information
                               <strong>
@@ -143,7 +154,9 @@ exports[`loads intro 1`] = `
                         <div
                           class="usa-alert__text"
                         >
-                          <div>
+                          <div
+                            class="notice-item"
+                          >
                             Provide complete info to get more relevant results.
                           </div>
                         </div>
@@ -163,7 +176,9 @@ exports[`loads intro 1`] = `
                         <div
                           class="usa-alert__text"
                         >
-                          <div>
+                          <div
+                            class="notice-item"
+                          >
                             <div>
                               <strong>
                                 This form is not an application.
@@ -220,12 +235,14 @@ exports[`loads window query scenario 1 1`] = `
             class="grid-container"
           >
             <h1
-              class="font-family-sans"
+              class="chevron-heading font-family-sans"
               id="skip-to-h1"
             >
               Your potential benefits
             </h1>
-            <div>
+            <div
+              class="chevron-description"
+            >
               <div>
                 <p>
                   Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.
@@ -247,18 +264,20 @@ exports[`loads window query scenario 1 1`] = `
               Back
             </button>
             <h3
-              class="font-family-sans"
+              class="result-view-heading font-family-sans"
               id=""
             >
               Results
             </h3>
-            <p>
+            <div
+              class="result-view-description"
+            >
               <div>
                 <strong>
                   You may be eligible for these benefits:
                 </strong>
               </div>
-            </p>
+            </div>
             <div
               class="result-view-benefits"
             >
@@ -343,8 +362,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -498,8 +522,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -653,8 +682,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             3
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -803,8 +837,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -959,8 +998,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             3
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -1109,8 +1153,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             6
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -1274,8 +1323,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -1435,8 +1489,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             6
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -1601,8 +1660,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -1761,8 +1825,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -1921,8 +1990,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -2081,8 +2155,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             2
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -2227,8 +2306,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -2387,8 +2471,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             3
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -2537,8 +2626,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -2692,8 +2786,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -2848,8 +2947,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             2
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -2993,8 +3097,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             2
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -3138,8 +3247,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -3293,8 +3407,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -3453,8 +3572,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             7
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -3623,8 +3747,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -3779,8 +3908,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -3934,8 +4068,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -4094,8 +4233,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             7
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -4264,8 +4408,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -4424,8 +4573,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             6
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -4589,8 +4743,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -4750,8 +4909,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             6
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -4915,8 +5079,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -5070,8 +5239,13 @@ exports[`loads window query scenario 1 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -5159,7 +5333,7 @@ exports[`loads window query scenario 1 1`] = `
               class="result-view-unmet"
             >
               <h3
-                class="font-family-sans"
+                class="result-view-unmet-heading font-family-sans"
                 id=""
               >
                 Benefits you did not qualify for
@@ -5183,7 +5357,7 @@ exports[`loads window query scenario 1 1`] = `
               class="result-view-relvant-benefits"
             >
               <h3
-                class="font-family-sans"
+                class="result-view-relvant-benefits-heading font-family-sans"
                 id=""
               >
                 More benefits
@@ -5191,7 +5365,7 @@ exports[`loads window query scenario 1 1`] = `
               <ul
                 class="add-list-reset"
               >
-                <div>
+                <li>
                   <li
                     class="relative-benefit-card usa-card add-list-reset"
                   >
@@ -5241,8 +5415,8 @@ exports[`loads window query scenario 1 1`] = `
                       </div>
                     </a>
                   </li>
-                </div>
-                <div>
+                </li>
+                <li>
                   <li
                     class="relative-benefit-card usa-card add-list-reset"
                   >
@@ -5292,37 +5466,37 @@ exports[`loads window query scenario 1 1`] = `
                       </div>
                     </a>
                   </li>
-                </div>
+                </li>
               </ul>
             </div>
             <div
               class="result-view-share-results"
             >
               <h3
-                class="font-family-sans"
+                class="result-view-share-results-heading font-family-sans"
                 id=""
               >
                 Share results
               </h3>
+              <p>
+                Copy or email these results. Your answers will be visible. Only share with those you trust.
+              </p>
               <div
                 class="result-view-share-results-button-group"
               >
                 <button
-                  class="usa-button usa-button--outline"
+                  class="share-button usa-button usa-button--outline"
                   type="button"
                 >
                   Share link
                 </button>
                 <button
-                  class="usa-button usa-button--outline"
+                  class="email-button usa-button usa-button--outline"
                   type="button"
                 >
                   Email results
                 </button>
               </div>
-              <p>
-                Copy or email these results. Your answers will be visible. Only share with those you trust.
-              </p>
             </div>
           </div>
         </div>
@@ -5349,12 +5523,14 @@ exports[`loads window query scenario 2 1`] = `
             class="grid-container"
           >
             <h1
-              class="font-family-sans"
+              class="chevron-heading font-family-sans"
               id="skip-to-h1"
             >
               Your potential benefits
             </h1>
-            <div>
+            <div
+              class="chevron-description"
+            >
               <div>
                 <p>
                   Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.
@@ -5376,18 +5552,20 @@ exports[`loads window query scenario 2 1`] = `
               Back
             </button>
             <h3
-              class="font-family-sans"
+              class="result-view-heading font-family-sans"
               id=""
             >
               Results
             </h3>
-            <p>
+            <div
+              class="result-view-description"
+            >
               <div>
                 <strong>
                   You may be eligible for these benefits:
                 </strong>
               </div>
-            </p>
+            </div>
             <div
               class="result-view-benefits"
             >
@@ -5472,8 +5650,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -5641,8 +5824,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -5810,8 +5998,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             3
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -5974,8 +6167,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -6144,8 +6342,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             3
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -6307,8 +6510,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             6
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -6485,8 +6693,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 4 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  4 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -6647,8 +6860,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             6
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -6826,8 +7044,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -6999,8 +7222,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 2 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  2 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -7173,8 +7401,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -7347,8 +7580,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             2
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -7506,8 +7744,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 2 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  2 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -7680,8 +7923,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             3
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -7844,8 +8092,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 3 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  3 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -8000,8 +8253,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -8170,8 +8428,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             2
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -8316,8 +8579,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             2
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -8462,8 +8730,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -8631,8 +8904,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 2 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  2 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -8792,8 +9070,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 2 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  2 of
             7
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -8975,8 +9258,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 4 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  4 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -9119,8 +9407,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 3 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  3 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -9274,8 +9567,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 5 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  5 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -9422,8 +9720,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 5 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  5 of
             7
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -9593,8 +9896,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 0 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  0 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -9766,8 +10074,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             6
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -9945,8 +10258,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 2 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  2 of
             5
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -10120,8 +10438,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 2 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  2 of
             6
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -10299,8 +10622,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -10468,8 +10796,13 @@ exports[`loads window query scenario 2 1`] = `
                           class="key-eligibility-criteria-heading font-family-sans"
                           id=""
                         >
-                          Key eligibility criteria Met 1 of
+                          Key eligibility criteria
+                          <p
+                            class="key-eligibility-criteria-sub-heading"
+                          >
+                            Met  1 of
             4
+                          </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
@@ -10571,7 +10904,7 @@ exports[`loads window query scenario 2 1`] = `
               class="result-view-unmet"
             >
               <h3
-                class="font-family-sans"
+                class="result-view-unmet-heading font-family-sans"
                 id=""
               >
                 Benefits you did not qualify for
@@ -10595,7 +10928,7 @@ exports[`loads window query scenario 2 1`] = `
               class="result-view-relvant-benefits"
             >
               <h3
-                class="font-family-sans"
+                class="result-view-relvant-benefits-heading font-family-sans"
                 id=""
               >
                 More benefits
@@ -10603,7 +10936,7 @@ exports[`loads window query scenario 2 1`] = `
               <ul
                 class="add-list-reset"
               >
-                <div>
+                <li>
                   <li
                     class="relative-benefit-card usa-card add-list-reset"
                   >
@@ -10653,8 +10986,8 @@ exports[`loads window query scenario 2 1`] = `
                       </div>
                     </a>
                   </li>
-                </div>
-                <div>
+                </li>
+                <li>
                   <li
                     class="relative-benefit-card usa-card add-list-reset"
                   >
@@ -10704,37 +11037,37 @@ exports[`loads window query scenario 2 1`] = `
                       </div>
                     </a>
                   </li>
-                </div>
+                </li>
               </ul>
             </div>
             <div
               class="result-view-share-results"
             >
               <h3
-                class="font-family-sans"
+                class="result-view-share-results-heading font-family-sans"
                 id=""
               >
                 Share results
               </h3>
+              <p>
+                Copy or email these results. Your answers will be visible. Only share with those you trust.
+              </p>
               <div
                 class="result-view-share-results-button-group"
               >
                 <button
-                  class="usa-button usa-button--outline"
+                  class="share-button usa-button usa-button--outline"
                   type="button"
                 >
                   Share link
                 </button>
                 <button
-                  class="usa-button usa-button--outline"
+                  class="email-button usa-button usa-button--outline"
                   type="button"
                 >
                   Email results
                 </button>
               </div>
-              <p>
-                Copy or email these results. Your answers will be visible. Only share with those you trust.
-              </p>
             </div>
           </div>
         </div>

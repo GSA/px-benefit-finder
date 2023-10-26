@@ -1,6 +1,7 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/breakpoints/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
+@use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
   .result-view-details {
@@ -10,6 +11,14 @@
       color: color.$dark-medium-grey !important;
       background-color: color.$white !important;
       width: auto !important;
+    }
+
+    .result-view-heading {
+      @include h2;
+    }
+
+    .result-view-description {
+      @include h6;
     }
   }
 
@@ -24,11 +33,30 @@
   .result-view-unmet {
     button {
       margin-bottom: space.$space-md;
+      width: 100%;
     }
 
     p {
       padding-bottom: space.$padding-bottom-md;
     }
+  }
+
+  .result-view-unmet-heading {
+    @include h4;
+
+    text-align: center;
+  }
+
+  .result-view-relvant-benefits-heading {
+    @include h4;
+
+    text-align: center;
+  }
+
+  .result-view-share-results-heading {
+    @include h4;
+
+    text-align: center;
   }
 
   .result-view-share-results {

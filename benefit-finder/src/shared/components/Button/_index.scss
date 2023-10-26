@@ -1,12 +1,17 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
   .usa-button {
+    @include important-bold;
+
     background-color: color.$pop-blue !important;
     color: color.$white !important;
   }
 
   .usa-button--unstyled {
+    @include p;
+
     background-color: transparent !important;
     color: color.$pop-blue !important;
   }

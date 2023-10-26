@@ -4,7 +4,7 @@
 
 #benefit-finder {
   .time-indicator {
-    @include p;
+    @include important-bold;
 
     color: color.$dark-medium-grey;
     text-align: center;

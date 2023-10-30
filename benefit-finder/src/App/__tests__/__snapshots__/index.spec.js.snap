@@ -5665,6 +5665,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Applicant's relationship to the deceased is: spouse, child, parent, or other family member
                           </li>
@@ -5839,6 +5840,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse, child, parent, or other family member
                           </li>
@@ -6013,6 +6015,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse, child, parent, or other family member
                           </li>
@@ -6182,11 +6185,13 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_date_of_death"
                           >
                             Deceased died before 1978
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse
                           </li>
@@ -6708,21 +6713,25 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_died_of_COVID"
                           >
                             The deceased died due to COVID-19
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_death_location_is_US"
                           >
                             The deceased died in the U.S.
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_citizen_status"
                           >
                             You are a U.S. citizen or eligible non-citizen
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_paid_funeral_expenses"
                           >
                             You paid for funeral or burial expenses and were not reimbursed
                           </li>
@@ -7237,11 +7246,13 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_marital_status"
                           >
                             Marital status: unmarried or widowed
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Applicant's relationship to the deceased: spouse
                           </li>
@@ -7416,6 +7427,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse or child
                           </li>
@@ -7759,11 +7771,13 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_marital_status"
                           >
                             Your marital status is widowed
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse
                           </li>
@@ -7938,6 +7952,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse, child, parent, or other family member
                           </li>
@@ -8107,16 +8122,19 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_paid_into_SS"
                           >
                             The deceased worked and paid Social Security taxes
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_citizen_status"
                           >
                             You are a U.S. citizen or eligible non-citizen
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse or child
                           </li>
@@ -8268,6 +8286,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse, child, parent, or other family member
                           </li>
@@ -8443,6 +8462,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse, child, parent, or other family member
                           </li>
@@ -8594,6 +8614,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse or child
                           </li>
@@ -8745,6 +8766,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse or child
                           </li>
@@ -8919,11 +8941,13 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_paid_into_SS"
                           >
                             The deceased worked and paid Social Security taxes
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_citizen_status"
                           >
                             You are a U.S. citizen or eligible non-citizen
                           </li>
@@ -9085,11 +9109,13 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_paid_into_SS"
                           >
                             The deceased worked and paid Social Security taxes
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_citizen_status"
                           >
                             You are a U.S. citizen or eligible non-citizen
                           </li>
@@ -9273,21 +9299,25 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_paid_into_SS"
                           >
                             The deceased worked and paid Social Security taxes
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_marital_status"
                           >
                             Your marital status is unmarried or widowed
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_citizen_status"
                           >
                             You are a US citizen or eligible non-citizen
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_care_for_child"
                           >
                             You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16
                           </li>
@@ -9422,16 +9452,19 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_paid_into_SS"
                           >
                             The deceased worked and paid Social Security taxes
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_date_of_birth"
                           >
                             You are over 62 years
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_citizen_status"
                           >
                             You are a US citizen or eligible non-citizen
                           </li>
@@ -9582,26 +9615,31 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_paid_into_SS"
                           >
                             The deceased worked and paid Social Security taxes
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_date_of_birth"
                           >
                             You are over 60 years
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_marital_status"
                           >
                             Your marital status is widowed or divorced
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_citizen_status"
                           >
                             You are a US citizen or eligible non-citizen
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse
                           </li>
@@ -9735,26 +9773,31 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="deceased_paid_into_SS"
                           >
                             The deceased worked and paid Social Security taxes
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_date_of_birth"
                           >
                             You are over 50 years
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_marital_status"
                           >
                             Your marital status is widowed or divorced
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_citizen_status"
                           >
                             You are a US citizen or eligible non-citizen
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse
                           </li>
@@ -10089,6 +10132,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_date_of_birth"
                           >
                             You are under 18 years
                           </li>
@@ -10273,11 +10317,13 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_marital_status"
                           >
                             Your marital status is unmarried or widowed
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse
                           </li>
@@ -10453,11 +10499,13 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse, child, parent, or other family member
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_paid_funeral_expenses"
                           >
                             You paid for funeral or burial expenses
                           </li>
@@ -10637,6 +10685,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse, child, parent, or other family member
                           </li>
@@ -10811,6 +10860,7 @@ exports[`loads window query scenario 2 1`] = `
                         >
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                            data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse, child, parent, or other family member
                           </li>

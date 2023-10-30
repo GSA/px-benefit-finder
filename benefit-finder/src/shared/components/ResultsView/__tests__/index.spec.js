@@ -65,6 +65,7 @@ test('scenario 1 loads in view', async () => {
   )
   await screen.findByTestId('result-view')
   expect(view.baseElement).toMatchSnapshot()
-})
 
-// check benefit filtering
+  await screen.findAllByTestId('applicant_relationship_to_the_deceased')
+  expect(view.baseElement).toMatchSnapshot()
+})

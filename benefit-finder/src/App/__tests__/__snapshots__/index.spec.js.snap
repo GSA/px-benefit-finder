@@ -227,6 +227,7 @@ exports[`loads window query scenario 1 1`] = `
     >
       <div
         class="result-view"
+        data-testid="result-view"
       >
         <div
           class="chevron"
@@ -5515,6 +5516,7 @@ exports[`loads window query scenario 2 1`] = `
     >
       <div
         class="result-view"
+        data-testid="result-view"
       >
         <div
           class="chevron"
@@ -6171,13 +6173,18 @@ exports[`loads window query scenario 2 1`] = `
                           <p
                             class="key-eligibility-criteria-sub-heading"
                           >
-                            Met  1 of
+                            Met  2 of
             4
                           </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
                         >
+                          <li
+                            class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          >
+                            Deceased died before 1978
+                          </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           >
@@ -6196,11 +6203,6 @@ exports[`loads window query scenario 2 1`] = `
                         <ul
                           class="unmet-criteria-list"
                         >
-                          <li
-                            class="unmet-criteria-item"
-                          >
-                            Deceased died before 1978
-                          </li>
                           <li
                             class="unmet-criteria-item"
                           >

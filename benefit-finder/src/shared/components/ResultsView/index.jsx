@@ -53,7 +53,7 @@ const ResultsView = ({
 
   // compare the selected criteria array with benefits
   return (
-    <div className="result-view">
+    <div className="result-view" data-testid="result-view">
       <Chevron
         heading={
           notQualifiedView === false

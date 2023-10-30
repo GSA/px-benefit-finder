@@ -12,6 +12,7 @@
  * @return {boolean} true or false based on the conditional
  */
 export const DateEligibility = ({ selectedValue, conditional }) => {
+  // console.log({ selectedValue, conditional })
   // date values
   // "<01-01-1978"
   // "<2years (the deceased died within the last two years)"
@@ -40,45 +41,44 @@ export const DateEligibility = ({ selectedValue, conditional }) => {
         new Date().getDate()
       )
 
-  const epochConditionalDateOffset = new Date(
-    conditionalDate.getTime() + conditionalDate.getTimezoneOffset() * 60000
-  )
-  // getTime in milliseconds so we can do a comparison
-  const epochConditionalDate = epochConditionalDateOffset.getTime()
-
   // example selected value for date
   // const value = {
   //   year: 2022,
-  //   month: 2,
+  //   month: 2,(month index)
   //   day: 2,
   // }
 
   // calculate selected
   const selectedDate = new window.Date(
-    Date.UTC(selectedValue.year, selectedValue.month, selectedValue.day)
+    Date.UTC(
+      selectedValue.year,
+      selectedValue.month,
+      selectedValue.day,
+      0,
+      0,
+      0
+    )
   )
 
-  const epochSelectedDateOffset = new Date(
-    selectedDate.getTime() + selectedDate.getTimezoneOffset() * 60000
-  )
-
-  const epochSelectedDate = epochSelectedDateOffset.getTime()
-
-  const isDateEligible = (
-    operator,
-    epochSelectedDate,
-    epochConditionalDate
-  ) => {
-    // ;['>', '>=', '<', '<=', '=']
+  const isDateEligible = (operator, conditionalDate, selectedDate) => {
+    // ['>', '>=', '<', '<=', '=']
     // epoch time measures the number of seconds that have elapsed since the start of the Unix epoch on January 1st, 1970, at midnight UTC/GMT, minus the leap seconds.
-    const diff = pattern.test(text)
-      ? epochSelectedDate - epochConditionalDate
-      : epochConditionalDate - epochSelectedDate
 
-    // tests
-    // you are under 18 years
-    // deceased died after may 20th, 2020
-    // you are over 62 years
+    const x = selectedDate
+    const y = new window.Date(
+      Date.UTC(
+        conditionalDate.getUTCFullYear(),
+        conditionalDate.getUTCMonth(),
+        conditionalDate.getUTCDate(),
+        0,
+        0,
+        0
+      )
+    )
+
+    const diff = !pattern.test(text)
+      ? y.getTime() - x.getTime()
+      : y.getTime() - x.getTime()
 
     switch (operator.length && operator.join('')) {
       case '>':
@@ -90,12 +90,12 @@ export const DateEligibility = ({ selectedValue, conditional }) => {
       case '<=':
         return diff <= 0
       case '=':
-        return diff === 0
+        return +diff === 0
       default:
         return false
     }
   }
-  return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
+  return isDateEligible(operator, conditionalDate, selectedDate)
 }
 
 /**

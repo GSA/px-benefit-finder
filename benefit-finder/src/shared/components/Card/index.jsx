@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-import { Heading, Carrot, Paragraph } from '../index'
+import { Heading, Carrot } from '../index'
 import { useHandleClassName } from '../../hooks/useHandleClassName'
+import createMarkup from '../../utils/createMarkup'
 import './_index.scss'
 
 /**
@@ -9,13 +10,15 @@ import './_index.scss'
  * @param {string} className - inherited class(es)
  * @param {string} href - location
  * @param {string} title - content
+ * @param {string} body - content
  * @param {string} cta - content
  * @param {noCarrot} boolean - adds a decorative carrot to the link
  * @return {html} returns a semantic html list element
  */
-const Card = ({ className, title, cta, href, noCarrot }) => {
+const Card = ({ className, title, body, cta, href, noCarrot, carrotType }) => {
   const defaultClasses = ['usa-card add-list-reset']
-  const handleCarrot = noCarrot === true ? null : <Carrot color="#162E51" />
+  const handleCarrot =
+    noCarrot === true ? null : <Carrot color="#162E51" type={carrotType} />
 
   return (
     <li
@@ -32,7 +35,11 @@ const Card = ({ className, title, cta, href, noCarrot }) => {
               {title}
             </Heading>
           </div>
-          <Paragraph className="usa-card__body">{cta}</Paragraph>
+          <div
+            className="usa-card__body"
+            dangerouslySetInnerHTML={createMarkup(body)}
+          />
+          <div className="usa-card__cta">{cta}</div>
           {handleCarrot}
         </div>
       </a>

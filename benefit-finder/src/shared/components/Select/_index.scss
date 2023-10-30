@@ -1,8 +1,13 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
 
 #benefit-finder {
   .usa-select {
     border-radius: 3px;
+
+    option {
+      @include p;
+    }
 
     &.usa-input--error {
       outline: 4px solid color.$alert-red !important;

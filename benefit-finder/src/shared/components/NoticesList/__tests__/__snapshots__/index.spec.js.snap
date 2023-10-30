@@ -21,6 +21,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
             className="usa-alert__text"
           >
             <div
+              className="notice-item"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": "<div>Your information<strong> is not</strong> shared, saved, or submitted.</div>",
@@ -45,6 +46,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
             className="usa-alert__text"
           >
             <div
+              className="notice-item"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": "Provide complete info to get more relevant results.",
@@ -69,6 +71,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
             className="usa-alert__text"
           >
             <div
+              className="notice-item"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",

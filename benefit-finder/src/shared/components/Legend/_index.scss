@@ -3,8 +3,9 @@
 
 #benefit-finder {
   .legend {
-    @include h3;
+    @include h6;
 
-    padding-bottom: space.$padding-bottom-md-plus;
+    padding-bottom: space.$padding-bottom-md;
+    max-width: fit-content;
   }
 }

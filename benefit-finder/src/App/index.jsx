@@ -19,11 +19,11 @@ import * as es from '../shared/locales/es/es.json'
  * a functional component that renders our application.
  * @component
  */
-function App({ appContent }) {
+function App({ appContent, query }) {
   // we create context state to provide translations for our two languages
   const LanguageContext = createContext({ en, es })
   const sharedToken = 'shared'
-  const windowQuery = window.location.search
+  const windowQuery = query || window.location.search
   const hasQueryParams = windowQuery.includes(sharedToken)
 
   /**
@@ -32,11 +32,13 @@ function App({ appContent }) {
    * @param {promise} setData - the state of environment
    * @return {state} returns null if not set
    */
-  const [content, setContent] = useState(() => {
-    apiCalls.GET.LifeEvent().then(response =>
-      response.data ? setContent(response.data) : setContent(appContent)
-    )
-  })
+  const [content, setContent] = useState(() =>
+    !appContent
+      ? apiCalls.GET.LifeEvent().then(response =>
+          response.data ? setContent(response.data) : setContent(appContent)
+        )
+      : appContent
+  )
 
   // set data state
   const [stepDataArray, setStepDataArray] = useState()
@@ -79,6 +81,7 @@ function App({ appContent }) {
           className={`benefit-finder ${
             step !== 0 && viewResults !== true ? 'form' : ''
           }`}
+          data-testid="app"
         >
           {step === 0 ? (
             <Intro
@@ -90,6 +93,7 @@ function App({ appContent }) {
           ) : viewResults === true ? (
             <ResultsView
               stepDataArray={stepDataArray}
+              relevantBenefits={content?.lifeEventForm?.relevantBenefits}
               data={benfitsArray}
               setBenefitsArray={() => setBenefitsArray()}
               ui={t.resultsView}

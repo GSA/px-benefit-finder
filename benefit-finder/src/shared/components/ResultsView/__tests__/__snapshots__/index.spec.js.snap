@@ -17,6 +17,7 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
         Your potential benefits
       </h1>
       <div
+        className="chevron-description"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>",
@@ -44,7 +45,8 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
       >
         Results
       </h3>
-      <p
+      <div
+        className="result-view-description"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<div><strong>You may be eligible for these benefits:</strong></div>",
@@ -91,74 +93,6 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
         </button>
       </div>
       <div
-        className="result-view-relvant-benefits"
-      >
-        <h3
-          className=""
-          id=""
-        >
-          More benefits
-        </h3>
-        <ul
-          className="add-list-reset"
-        >
-          <li>
-            <li
-              className=""
-            >
-              <a>
-                <div
-                  className="usa-card__container"
-                >
-                  <div
-                    className="usa-card__header"
-                  >
-                    <h3
-                      className=""
-                      id=""
-                    >
-                      Approaching Retirement
-                    </h3>
-                  </div>
-                  <p
-                    className=""
-                  >
-                    Learn More
-                  </p>
-                </div>
-              </a>
-            </li>
-          </li>
-          <li>
-            <li
-              className=""
-            >
-              <a>
-                <div
-                  className="usa-card__container"
-                >
-                  <div
-                    className="usa-card__header"
-                  >
-                    <h3
-                      className=""
-                      id=""
-                    >
-                      Living with disability or illness
-                    </h3>
-                  </div>
-                  <p
-                    className=""
-                  >
-                    Learn More
-                  </p>
-                </div>
-              </a>
-            </li>
-          </li>
-        </ul>
-      </div>
-      <div
         className="result-view-share-results"
       >
         <h3
@@ -167,6 +101,9 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
         >
           Share results
         </h3>
+        <p>
+          Copy or email these results. Your answers will be visible. Only share with those you trust.
+        </p>
         <div
           className="result-view-share-results-button-group"
         >
@@ -185,9 +122,6 @@ exports[`ResultsView renders a match to the previous snapshot 1`] = `
             Email results
           </button>
         </div>
-        <p>
-          Copy or email these results. Your answers will be visible. Only share with those you trust.
-        </p>
       </div>
     </div>
   </div>

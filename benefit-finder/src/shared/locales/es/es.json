@@ -100,12 +100,13 @@
     },
     "benefitAccordion": {
       "eligibleStatusLabels": [
-        "Likely Eligible",
+        "Probablemente elegible",
         "Más información requerida",
-        "Not Eligible"
+        "No elegible"
       ],
       "agencyPrefix": "",
-      "benefitSummary": "Criterios de elegibilidad Cumple",
+      "benefitSummary": "Criterios de elegibilidad",
+      "benefitSummaryPrefix": "Cumple ",
       "benefitSummaryConjunction": "de",
       "unmetLabel": "No cumplió con",
       "additionalDescription": "Puede haber requisitos adicionales. Visite el enlace abajo para más información y para aplicar.",

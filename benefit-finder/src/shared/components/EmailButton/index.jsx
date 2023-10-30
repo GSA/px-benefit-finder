@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '../index'
 import buildURIParameter from '../../utils/buildURIParameter.js'
+import './_index.scss'
 
 /**
  * a functional component that renders a button with mailto email context
@@ -27,7 +28,7 @@ const EmailButton = ({ ui, data }) => {
   }
 
   return (
-    <Button secondary onClick={handleClick}>
+    <Button className="email-button" secondary onClick={handleClick}>
       {ui?.emailButton || 'Email'}
     </Button>
   )

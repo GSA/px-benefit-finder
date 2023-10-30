@@ -60,7 +60,7 @@ class LifeEventController {
    *
    * @var string
    */
-  protected $mode;
+  public $mode;
 
   /**
    * Constructs a new LifeEventController object.

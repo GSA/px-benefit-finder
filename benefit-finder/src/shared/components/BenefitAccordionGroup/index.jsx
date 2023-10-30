@@ -179,6 +179,7 @@ const BenefitAccordionGroup = ({
               data-analytics="benefit-accordion"
               data-analytics-content={title}
               hidden={handleHidden}
+              data-testid="benefit"
             >
               <Heading className="benefit-detail-title" headingLevel={4}>
                 {`${agencyPrefix} ${agency.title}`}

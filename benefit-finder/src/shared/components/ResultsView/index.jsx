@@ -123,7 +123,7 @@ const ResultsView = ({
               </Button>
             </div>
           )}
-          {relevantBenefits && (
+          {relevantBenefits?.length > 0 && (
             <div className="result-view-relvant-benefits">
               <Heading
                 className="result-view-relvant-benefits-heading"
@@ -134,7 +134,7 @@ const ResultsView = ({
               {relevantBenefits && (
                 <ul className="add-list-reset">
                   {relevantBenefits[0] && (
-                    <li key="benefit-card-one">
+                    <div key="benefit-card-one">
                       <Card
                         className="relative-benefit-card"
                         title={`${relevantBenefits[0].lifeEvent.title}`}
@@ -143,10 +143,10 @@ const ResultsView = ({
                         href={`${relevantBenefits[0].lifeEvent.link}`}
                         carrotType={2}
                       ></Card>
-                    </li>
+                    </div>
                   )}
                   {relevantBenefits[1] && (
-                    <li key="benefit-card-two">
+                    <div key="benefit-card-two">
                       <Card
                         className="relative-benefit-card"
                         title={`${relevantBenefits[1].lifeEvent.title}`}
@@ -155,7 +155,7 @@ const ResultsView = ({
                         href={`${relevantBenefits[1].lifeEvent.link}`}
                         carrotType={2}
                       ></Card>
-                    </li>
+                    </div>
                   )}
                 </ul>
               )}

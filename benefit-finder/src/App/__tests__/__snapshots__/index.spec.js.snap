@@ -6193,6 +6193,11 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
+                            Deceased died before 1978
+                          </li>
+                          <li
+                            class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          >
                             Your relationship to the deceased is: spouse
                           </li>
                         </ul>

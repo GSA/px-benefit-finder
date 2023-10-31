@@ -26,7 +26,7 @@ const noop = () => {}
 Object.defineProperty(window, 'scrollTo', { value: noop, writable: true })
 
 test('loads intro', async () => {
-  const view = render(<App appContent={data} />)
+  const view = render(<App testAppContent={data} />)
   await screen.findByTestId('app')
   expect(view.baseElement).toMatchSnapshot()
 })
@@ -34,7 +34,7 @@ test('loads intro', async () => {
 for (const scenario of scenarios.death) {
   test(`loads window query scenario ${scenario.scenario}`, async () => {
     const windowQuery = scenario && scenario.windowQuery
-    const view = render(<App appContent={data} query={windowQuery} />)
+    const view = render(<App testAppContent={data} testQuery={windowQuery} />)
     await screen.findByTestId('app')
     await screen.findAllByTestId('benefit')
     expect(view.baseElement).toMatchSnapshot()

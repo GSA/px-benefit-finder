@@ -7,7 +7,7 @@ export default {
   component: App,
   tags: ['autodocs'],
   args: {
-    appContent: data,
+    testAppContent: data,
   },
   parameters: {
     layout: 'fullscreen',

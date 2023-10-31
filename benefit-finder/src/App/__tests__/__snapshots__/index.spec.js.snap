@@ -17,7 +17,7 @@ exports[`loads intro 1`] = `
             class="grid-container"
           >
             <h1
-              class="chevron-heading font-family-sans"
+              class=""
               id="skip-to-h1"
             >
               Benefit finder: death of a loved one
@@ -41,7 +41,7 @@ exports[`loads intro 1`] = `
           class="grid-container"
         >
           <h2
-            class="font-family-sans"
+            class=""
             id=""
           >
             Steps
@@ -102,7 +102,7 @@ exports[`loads intro 1`] = `
               class="intro-process-notices"
             >
               <h2
-                class="intro-process-notices-heading font-family-sans"
+                class=""
                 id=""
               >
                 Before you start:
@@ -117,7 +117,7 @@ exports[`loads intro 1`] = `
                     class="notice"
                   >
                     <div
-                      class="usa-alert usa-alert--info no-background"
+                      class=""
                       role="alert"
                     >
                       <div
@@ -145,7 +145,7 @@ exports[`loads intro 1`] = `
                     class="notice"
                   >
                     <div
-                      class="usa-alert usa-alert--info no-background"
+                      class=""
                       role="alert"
                     >
                       <div
@@ -167,7 +167,7 @@ exports[`loads intro 1`] = `
                     class="notice"
                   >
                     <div
-                      class="usa-alert usa-alert--info no-background"
+                      class=""
                       role="alert"
                     >
                       <div
@@ -205,7 +205,7 @@ exports[`loads intro 1`] = `
             class="cta-wrapper"
           >
             <button
-              class="usa-button"
+              class=""
               type="button"
             >
               Start
@@ -235,7 +235,7 @@ exports[`loads window query scenario 1 1`] = `
             class="grid-container"
           >
             <h1
-              class="chevron-heading font-family-sans"
+              class=""
               id="skip-to-h1"
             >
               Your potential benefits
@@ -258,13 +258,13 @@ exports[`loads window query scenario 1 1`] = `
             class="result-view-details"
           >
             <button
-              class="step-back-link usa-button usa-button--unstyled"
+              class=""
               type="button"
             >
               Back
             </button>
             <h3
-              class="result-view-heading font-family-sans"
+              class=""
               id=""
             >
               Results
@@ -285,7 +285,7 @@ exports[`loads window query scenario 1 1`] = `
                 class="benefit-accordion-group"
               >
                 <button
-                  class="expand-all usa-button usa-button--unstyled"
+                  class=""
                   type="button"
                 >
                   Open all +
@@ -342,7 +342,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Defense (DOD)
@@ -355,11 +355,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -408,7 +408,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -422,7 +422,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -502,7 +502,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Defense (DOD)
@@ -515,11 +515,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -568,7 +568,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -582,7 +582,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -662,7 +662,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -675,11 +675,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -723,7 +723,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -737,7 +737,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -817,7 +817,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Defense (DOD)
@@ -830,11 +830,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -883,7 +883,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -897,7 +897,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://militarypay.defense.gov/Benefits/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -977,7 +977,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -991,11 +991,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -1039,7 +1039,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -1053,7 +1053,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/eligibility/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1133,7 +1133,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -1146,11 +1146,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -1209,7 +1209,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -1223,7 +1223,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1303,7 +1303,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By  Federal Emergency Management Agency (FEMA)
@@ -1316,11 +1316,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -1374,7 +1374,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -1388,7 +1388,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1468,7 +1468,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -1482,11 +1482,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -1545,7 +1545,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -1559,7 +1559,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1639,7 +1639,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -1653,11 +1653,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -1711,7 +1711,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -1725,7 +1725,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1805,7 +1805,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -1818,11 +1818,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -1876,7 +1876,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -1890,7 +1890,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1970,7 +1970,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -1983,11 +1983,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -2041,7 +2041,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -2055,7 +2055,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/education/survivor-dependent-benefits/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -2135,7 +2135,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Interior (DOI) - Indian Affairs
@@ -2148,11 +2148,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -2191,7 +2191,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -2205,7 +2205,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -2285,7 +2285,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -2299,11 +2299,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -2357,7 +2357,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -2371,7 +2371,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -2451,7 +2451,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -2464,11 +2464,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -2512,7 +2512,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -2526,7 +2526,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -2606,7 +2606,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -2619,11 +2619,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -2672,7 +2672,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -2686,7 +2686,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -2766,7 +2766,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -2779,11 +2779,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -2832,7 +2832,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -2846,7 +2846,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -2926,7 +2926,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Justice (DOJ)
@@ -2940,11 +2940,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -2983,7 +2983,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -2997,7 +2997,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://bja.ojp.gov/program/psob/benefits"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -3077,7 +3077,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Justice (DOJ)
@@ -3090,11 +3090,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -3133,7 +3133,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -3147,7 +3147,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -3227,7 +3227,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Defense (DOD)
@@ -3240,11 +3240,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -3293,7 +3293,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -3307,7 +3307,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://bja.ojp.gov/program/psob/benefits"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -3387,7 +3387,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -3400,11 +3400,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -3458,7 +3458,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -3472,7 +3472,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -3552,7 +3552,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -3565,11 +3565,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -3633,7 +3633,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -3647,7 +3647,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -3727,7 +3727,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -3740,11 +3740,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -3793,7 +3793,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -3807,7 +3807,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/forms/ssa-5.html"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -3887,7 +3887,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -3901,11 +3901,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -3954,7 +3954,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -3968,7 +3968,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -4048,7 +4048,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -4061,11 +4061,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -4119,7 +4119,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -4133,7 +4133,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -4213,7 +4213,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -4226,11 +4226,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -4294,7 +4294,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -4308,7 +4308,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -4388,7 +4388,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -4401,11 +4401,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -4459,7 +4459,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -4473,7 +4473,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -4553,7 +4553,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -4566,11 +4566,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -4629,7 +4629,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -4643,7 +4643,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -4723,7 +4723,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -4736,11 +4736,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -4794,7 +4794,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -4808,7 +4808,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -4888,7 +4888,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -4902,11 +4902,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -4965,7 +4965,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -4979,7 +4979,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -5059,7 +5059,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -5072,11 +5072,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -5125,7 +5125,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -5139,7 +5139,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -5219,7 +5219,7 @@ exports[`loads window query scenario 1 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -5232,11 +5232,11 @@ exports[`loads window query scenario 1 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -5285,7 +5285,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -5299,7 +5299,7 @@ exports[`loads window query scenario 1 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -5333,7 +5333,7 @@ exports[`loads window query scenario 1 1`] = `
               class="result-view-unmet"
             >
               <h3
-                class="result-view-unmet-heading font-family-sans"
+                class=""
                 id=""
               >
                 Benefits you did not qualify for
@@ -5347,7 +5347,7 @@ exports[`loads window query scenario 1 1`] = `
                 </div>
               </p>
               <button
-                class="usa-button"
+                class=""
                 type="button"
               >
                 See benefits you did not qualify for
@@ -5357,7 +5357,7 @@ exports[`loads window query scenario 1 1`] = `
               class="result-view-relvant-benefits"
             >
               <h3
-                class="result-view-relvant-benefits-heading font-family-sans"
+                class=""
                 id=""
               >
                 More benefits
@@ -5367,7 +5367,7 @@ exports[`loads window query scenario 1 1`] = `
               >
                 <div>
                   <li
-                    class="relative-benefit-card usa-card add-list-reset"
+                    class=""
                   >
                     <a
                       href="/bears/life_event/retirement"
@@ -5379,7 +5379,7 @@ exports[`loads window query scenario 1 1`] = `
                           class="usa-card__header"
                         >
                           <h3
-                            class="usa-card__heading font-family-sans"
+                            class=""
                             id=""
                           >
                             Benefit finder: retirement
@@ -5418,7 +5418,7 @@ exports[`loads window query scenario 1 1`] = `
                 </div>
                 <div>
                   <li
-                    class="relative-benefit-card usa-card add-list-reset"
+                    class=""
                   >
                     <a
                       href="/bears/life_event/disability"
@@ -5430,7 +5430,7 @@ exports[`loads window query scenario 1 1`] = `
                           class="usa-card__header"
                         >
                           <h3
-                            class="usa-card__heading font-family-sans"
+                            class=""
                             id=""
                           >
                             Benefit finder: disability
@@ -5473,7 +5473,7 @@ exports[`loads window query scenario 1 1`] = `
               class="result-view-share-results"
             >
               <h3
-                class="result-view-share-results-heading font-family-sans"
+                class=""
                 id=""
               >
                 Share results
@@ -5485,13 +5485,13 @@ exports[`loads window query scenario 1 1`] = `
                 class="result-view-share-results-button-group"
               >
                 <button
-                  class="share-button usa-button usa-button--outline"
+                  class=""
                   type="button"
                 >
                   Share link
                 </button>
                 <button
-                  class="email-button usa-button usa-button--outline"
+                  class=""
                   type="button"
                 >
                   Email results
@@ -5523,7 +5523,7 @@ exports[`loads window query scenario 2 1`] = `
             class="grid-container"
           >
             <h1
-              class="chevron-heading font-family-sans"
+              class=""
               id="skip-to-h1"
             >
               Your potential benefits
@@ -5546,13 +5546,13 @@ exports[`loads window query scenario 2 1`] = `
             class="result-view-details"
           >
             <button
-              class="step-back-link usa-button usa-button--unstyled"
+              class=""
               type="button"
             >
               Back
             </button>
             <h3
-              class="result-view-heading font-family-sans"
+              class=""
               id=""
             >
               Results
@@ -5573,7 +5573,7 @@ exports[`loads window query scenario 2 1`] = `
                 class="benefit-accordion-group"
               >
                 <button
-                  class="expand-all usa-button usa-button--unstyled"
+                  class=""
                   type="button"
                 >
                   Open all +
@@ -5630,7 +5630,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Defense (DOD)
@@ -5643,11 +5643,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -5710,7 +5710,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -5724,7 +5724,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -5804,7 +5804,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Defense (DOD)
@@ -5817,11 +5817,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -5884,7 +5884,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -5898,7 +5898,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -5978,7 +5978,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -5991,11 +5991,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -6053,7 +6053,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -6067,7 +6067,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -6147,7 +6147,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Defense (DOD)
@@ -6160,11 +6160,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -6227,7 +6227,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -6241,7 +6241,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://militarypay.defense.gov/Benefits/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -6321,7 +6321,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -6335,11 +6335,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -6396,7 +6396,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -6410,7 +6410,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/eligibility/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -6490,7 +6490,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -6503,11 +6503,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -6579,7 +6579,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -6593,7 +6593,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -6673,7 +6673,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By  Federal Emergency Management Agency (FEMA)
@@ -6686,11 +6686,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -6745,7 +6745,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -6759,7 +6759,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -6839,7 +6839,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -6853,11 +6853,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -6929,7 +6929,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -6943,7 +6943,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -7023,7 +7023,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -7037,11 +7037,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -7108,7 +7108,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -7122,7 +7122,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -7202,7 +7202,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -7215,11 +7215,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -7287,7 +7287,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -7301,7 +7301,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -7381,7 +7381,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -7394,11 +7394,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -7466,7 +7466,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -7480,7 +7480,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/education/survivor-dependent-benefits/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -7560,7 +7560,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Interior (DOI) - Indian Affairs
@@ -7573,11 +7573,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -7629,7 +7629,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -7643,7 +7643,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -7723,7 +7723,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -7737,11 +7737,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -7809,7 +7809,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -7823,7 +7823,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -7903,7 +7903,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -7916,11 +7916,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -7978,7 +7978,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -7992,7 +7992,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -8072,7 +8072,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -8085,11 +8085,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -8139,7 +8139,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -8153,7 +8153,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -8233,7 +8233,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -8246,11 +8246,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -8313,7 +8313,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -8327,7 +8327,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -8407,7 +8407,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Justice (DOJ)
@@ -8421,11 +8421,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -8465,7 +8465,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -8479,7 +8479,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://bja.ojp.gov/program/psob/benefits"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -8559,7 +8559,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Justice (DOJ)
@@ -8572,11 +8572,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -8616,7 +8616,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -8630,7 +8630,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -8710,7 +8710,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Department of Defense (DOD)
@@ -8723,11 +8723,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -8790,7 +8790,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -8804,7 +8804,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://bja.ojp.gov/program/psob/benefits"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -8884,7 +8884,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -8897,11 +8897,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -8956,7 +8956,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -8970,7 +8970,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -9050,7 +9050,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -9063,11 +9063,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -9145,7 +9145,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -9159,7 +9159,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -9238,7 +9238,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -9251,11 +9251,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -9292,7 +9292,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -9306,7 +9306,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/forms/ssa-5.html"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -9386,7 +9386,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -9400,11 +9400,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -9454,7 +9454,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -9468,7 +9468,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -9547,7 +9547,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -9560,11 +9560,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -9606,7 +9606,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -9620,7 +9620,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -9700,7 +9700,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Social Security Administration (SSA)
@@ -9713,11 +9713,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -9782,7 +9782,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -9796,7 +9796,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -9876,7 +9876,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -9889,11 +9889,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -9960,7 +9960,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -9974,7 +9974,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -10054,7 +10054,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -10067,11 +10067,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -10144,7 +10144,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -10158,7 +10158,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -10238,7 +10238,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -10251,11 +10251,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -10323,7 +10323,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -10337,7 +10337,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -10417,7 +10417,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -10431,11 +10431,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -10508,7 +10508,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -10522,7 +10522,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -10602,7 +10602,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -10615,11 +10615,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -10682,7 +10682,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -10696,7 +10696,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -10776,7 +10776,7 @@ exports[`loads window query scenario 2 1`] = `
                   >
                     <div>
                       <h4
-                        class="benefit-detail-title font-family-sans"
+                        class=""
                         id=""
                       >
                         By Veterans Affairs Department (VA)
@@ -10789,11 +10789,11 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class="benefit-criteria-list key-eligibility-criteria-group"
+                        class=""
                       >
                          
                         <h5
-                          class="key-eligibility-criteria-heading font-family-sans"
+                          class=""
                           id=""
                         >
                           Key eligibility criteria
@@ -10856,7 +10856,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="benefit-alert usa-alert usa-alert--info "
+                        class=""
                         role="alert"
                       >
                         <div
@@ -10870,7 +10870,7 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class="benefit-link usa-button obfuscated-link"
+                        class=""
                         href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -10904,7 +10904,7 @@ exports[`loads window query scenario 2 1`] = `
               class="result-view-unmet"
             >
               <h3
-                class="result-view-unmet-heading font-family-sans"
+                class=""
                 id=""
               >
                 Benefits you did not qualify for
@@ -10918,7 +10918,7 @@ exports[`loads window query scenario 2 1`] = `
                 </div>
               </p>
               <button
-                class="usa-button"
+                class=""
                 type="button"
               >
                 See benefits you did not qualify for
@@ -10928,7 +10928,7 @@ exports[`loads window query scenario 2 1`] = `
               class="result-view-relvant-benefits"
             >
               <h3
-                class="result-view-relvant-benefits-heading font-family-sans"
+                class=""
                 id=""
               >
                 More benefits
@@ -10938,7 +10938,7 @@ exports[`loads window query scenario 2 1`] = `
               >
                 <div>
                   <li
-                    class="relative-benefit-card usa-card add-list-reset"
+                    class=""
                   >
                     <a
                       href="/bears/life_event/retirement"
@@ -10950,7 +10950,7 @@ exports[`loads window query scenario 2 1`] = `
                           class="usa-card__header"
                         >
                           <h3
-                            class="usa-card__heading font-family-sans"
+                            class=""
                             id=""
                           >
                             Benefit finder: retirement
@@ -10989,7 +10989,7 @@ exports[`loads window query scenario 2 1`] = `
                 </div>
                 <div>
                   <li
-                    class="relative-benefit-card usa-card add-list-reset"
+                    class=""
                   >
                     <a
                       href="/bears/life_event/disability"
@@ -11001,7 +11001,7 @@ exports[`loads window query scenario 2 1`] = `
                           class="usa-card__header"
                         >
                           <h3
-                            class="usa-card__heading font-family-sans"
+                            class=""
                             id=""
                           >
                             Benefit finder: disability
@@ -11044,7 +11044,7 @@ exports[`loads window query scenario 2 1`] = `
               class="result-view-share-results"
             >
               <h3
-                class="result-view-share-results-heading font-family-sans"
+                class=""
                 id=""
               >
                 Share results
@@ -11056,13 +11056,13 @@ exports[`loads window query scenario 2 1`] = `
                 class="result-view-share-results-button-group"
               >
                 <button
-                  class="share-button usa-button usa-button--outline"
+                  class=""
                   type="button"
                 >
                   Share link
                 </button>
                 <button
-                  class="email-button usa-button usa-button--outline"
+                  class=""
                   type="button"
                 >
                   Email results

@@ -54,7 +54,7 @@ test('loads view', async () => {
 })
 
 // render view with data
-test('scenario 1 loads in view', async () => {
+test('scenario 1 loads in view with the correct amount of likely eligible items', async () => {
   expect(expectedUpdate[0]).toHaveProperty('selected', true)
   const view = render(
     <ResultsView
@@ -63,9 +63,26 @@ test('scenario 1 loads in view', async () => {
       data={benfitsArray}
     />
   )
-  await screen.findByTestId('result-view')
+
+  const eligibility = apiCalls.GET.ElegibilityByCriteria(
+    stepDataArray,
+    benfitsArray
+  )
+
+  await screen.findAllByTestId('benefit')
   expect(view.baseElement).toMatchSnapshot()
 
-  await screen.findAllByTestId('applicant_relationship_to_the_deceased')
-  expect(view.baseElement).toMatchSnapshot()
+  const e = eligibility.filter(item => {
+    const f = item.benefit.eligibility.filter(item => item.isEligible === true)
+    return f.length === item.benefit.eligibility.length
+  })
+
+  expect(e.length).toBe(2)
+  expect(screen.getAllByText('Likely Eligible')).toBeTruthy()
+  expect(screen.getAllByText('Likely Eligible').length).toBe(2)
+  expect(
+    screen.getAllByText('Survivors benefits for mothers/fathers')
+  ).toBeTruthy()
+  expect(screen.getAllByText('Met 4 of 4')).toBeTruthy()
+  expect(screen.getAllByText('Met 4 of 4').length).toBe(1)
 })

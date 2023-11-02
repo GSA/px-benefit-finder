@@ -76,23 +76,38 @@ export const DateEligibility = ({ selectedValue, conditional }) => {
       )
     )
 
-    const diff = !pattern.test(text)
-      ? y.getTime() - x.getTime()
-      : y.getTime() - x.getTime()
+    if (pattern.test(text) === false) {
+      const diff = y.getTime() - x.getTime()
 
-    switch (operator.length && operator.join('')) {
-      case '>':
-        return diff > 0
-      case '>=':
-        return diff >= 0
-      case '<':
-        return diff < 0
-      case '<=':
-        return diff <= 0
-      case '=':
-        return +diff === 0
-      default:
-        return false
+      switch (operator.length && operator.join('')) {
+        case '>':
+          return diff > 0
+        case '>=':
+          return diff >= 0
+        case '<':
+          return diff < 0
+        case '<=':
+          return diff <= 0
+        case '=':
+          return +diff === 0
+        default:
+          return false
+      }
+    } else {
+      switch (operator.length && operator.join('')) {
+        case '>':
+          return x.getTime() > y.getTime()
+        case '>=':
+          return x.getTime() >= y.getTime()
+        case '<':
+          return x.getTime() < y.getTime()
+        case '<=':
+          return x.getTime() <= y.getTime()
+        case '=':
+          return +x.getTime() === +y.getTime()
+        default:
+          return false
+      }
     }
   }
   return isDateEligible(operator, conditionalDate, selectedDate)

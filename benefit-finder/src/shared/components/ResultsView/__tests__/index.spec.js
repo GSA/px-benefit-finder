@@ -16,15 +16,10 @@ const scenarios = {
       windowQuery:
         '?applicant_date_of_birth=%7B"month"%3A"3"%2C"day"%3A"5"%2C"year"%3A"1960"%7D&applicant_relationship_to_the_deceased=Spouse&applicant_marital_status=Widowed&applicant_citizen_status=Yes&applicant_care_for_child=Yes&applicant_paid_funeral_expenses=Yes&deceased_date_of_death=%7B"month"%3A"1"%2C"day"%3A"3"%2C"year"%3A"2022"%7D&deceased_death_location_is_US=Yes&deceased_paid_into_SS=Yes&deceased_public_safety_officer=No&deceased_miner=No&deceased_american_indian=No&deceased_died_of_COVID=Yes&deceased_served_in_active_military=No&shared=true%27',
     },
-    {
-      scenario: 2,
-      windowQuery:
-        '?applicant_date_of_birth=%7B%22month%22%3A%223%22%2C%22day%22%3A%225%22%2C%22year%22%3A%221960%22%7D&applicant_relationship_to_the_deceased=Spouse&applicant_marital_status=Widowed&applicant_citizen_status=Yes&applicant_care_for_child=Yes&applicant_paid_funeral_expenses=Yes&deceased_date_of_death=%7B%22month%22%3A%221%22%2C%22day%22%3A%223%22%2C%22year%22%3A%222022%22%7D&deceased_death_location_is_US=Yes&deceased_paid_into_SS=Yes&deceased_public_safety_officer=No&deceased_miner=No&deceased_american_indian=No&deceased_died_of_COVID=Yes&deceased_served_in_active_military=No&shared=true',
-    },
   ],
 }
 
-const windowQuery = scenarios.death[1].windowQuery // Returns:'?q=123'
+const windowQuery = scenarios.death[0].windowQuery // Returns:'?q=123'
 const benfitsArray = [...data.benefits]
 const sharedToken = 'shared'
 let stepDataArray

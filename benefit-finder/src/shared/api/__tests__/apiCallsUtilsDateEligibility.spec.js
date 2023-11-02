@@ -167,6 +167,24 @@ const conditionalsOthers = [
     eval: false,
   },
   {
+    value: '>18years', // older than
+    selectedValue: {
+      year: 1978,
+      month: 0,
+      day: 1,
+    },
+    eval: true,
+  },
+  {
+    value: '<64years', // younger than
+    selectedValue: {
+      year: 1978,
+      month: 0,
+      day: 1,
+    },
+    eval: true,
+  },
+  {
     // dynamic
     value: '>=62years', // younger than
     selectedValue: {

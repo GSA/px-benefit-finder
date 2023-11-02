@@ -796,19 +796,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         <p
                           class="key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                          Met  1 of
             4
                         </p>
                       </h5>
                       <ul
                         class="key-eligibility-criteria-list"
                       >
-                        <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
-                          data-testid="deceased_date_of_death"
-                        >
-                          Deceased died before 1978
-                        </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
@@ -828,6 +822,11 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       <ul
                         class="unmet-criteria-list"
                       >
+                        <li
+                          class="unmet-criteria-item"
+                        >
+                          Deceased died before 1978
+                        </li>
                         <li
                           class="unmet-criteria-item"
                         >

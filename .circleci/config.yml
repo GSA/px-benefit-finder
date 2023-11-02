@@ -345,7 +345,7 @@ workflows:
               only: 
                 - main
 
-  scheduled_cms_build_and_deploy_workflow:
+  scheduled_cms_build_and_deploy_workflow_main:
     triggers:
       - schedule:
           cron: '0 7 * * *'
@@ -353,10 +353,19 @@ workflows:
             branches:
               only:
                 - main
+    jobs:
+      - build_and_deploy_main
+
+  scheduled_cms_build_and_deploy_workflow_dev:
+    triggers:
+      - schedule:
+          cron: '0 6 * * *'
+          filters:
+            branches:
+              only:
                 - dev
     jobs:
       - build_and_deploy_dev
-      - build_and_deploy_main
 
   create-component-library-workflow:
     jobs:

@@ -724,7 +724,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 aria-expanded="false"
                 class="benefit-accordion usa-accordion"
                 data-analytics="benefit-accordion"
-                data-analytics-content="Annuity for Certain Military Surviving Spouses"
+                data-analytics-content="Annuity for certain military surviving spouses"
                 data-testid="benefit"
                 hidden=""
               >
@@ -732,7 +732,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="usa-accordion__heading"
                 >
                   <button
-                    aria-controls="3-Annuity for Certain Military Surviving Spouses"
+                    aria-controls="3-Annuity for certain military surviving spouses"
                     aria-expanded="false"
                     class="usa-accordion__button"
                     type="button"
@@ -740,7 +740,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <span
                       class="heading"
                     >
-                      Annuity for Certain Military Surviving Spouses
+                      Annuity for certain military surviving spouses
                     </span>
                     <br />
                     <span
@@ -768,7 +768,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="usa-accordion__content usa-prose"
                   hidden=""
-                  id="3-Annuity for Certain Military Surviving Spouses"
+                  id="3-Annuity for certain military surviving spouses"
                 >
                   <div>
                     <h4
@@ -1253,7 +1253,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-analytics="benefit-accordion"
                 data-analytics-content="COVID-19 funeral assistance"
                 data-testid="benefit"
-                hidden=""
               >
                 <h4
                   class="usa-accordion__heading"
@@ -1273,7 +1272,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <span
                       class="sub-heading"
                     >
-                      Not Eligible
+                      Likely Eligible
                     </span>
                     <svg
                       height="24"
@@ -1323,7 +1322,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         <p
                           class="key-eligibility-criteria-sub-heading"
                         >
-                          Met  4 of
+                          Met  5 of
             5
                         </p>
                       </h5>
@@ -1344,6 +1343,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          data-testid="deceased_date_of_death"
+                        >
+                          The deceased died after May 20th, 2020
+                        </li>
+                        <li
+                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
@@ -1353,24 +1358,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           data-testid="applicant_paid_funeral_expenses"
                         >
                           You paid for funeral or burial expenses and were not reimbursed
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      class="unmet-criteria-group"
-                    >
-                      <div
-                        class="unmet-criteria-title"
-                      >
-                        Unmet criteria
-                      </div>
-                      <ul
-                        class="unmet-criteria-list"
-                      >
-                        <li
-                          class="unmet-criteria-item"
-                        >
-                          The deceased died after May 20th, 2020
                         </li>
                       </ul>
                     </div>
@@ -2662,7 +2649,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-analytics="benefit-accordion"
                 data-analytics-content="Lump-sum death benefit"
                 data-testid="benefit"
-                hidden=""
               >
                 <h4
                   class="usa-accordion__heading"
@@ -2682,7 +2668,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <span
                       class="sub-heading"
                     >
-                      Not Eligible
+                      Likely Eligible
                     </span>
                     <svg
                       height="24"
@@ -2732,7 +2718,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         <p
                           class="key-eligibility-criteria-sub-heading"
                         >
-                          Met  3 of
+                          Met  4 of
             4
                         </p>
                       </h5>
@@ -2747,6 +2733,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          data-testid="deceased_date_of_death"
+                        >
+                          The deceased died within the last two years
+                        </li>
+                        <li
+                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
@@ -2756,24 +2748,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      class="unmet-criteria-group"
-                    >
-                      <div
-                        class="unmet-criteria-title"
-                      >
-                        Unmet criteria
-                      </div>
-                      <ul
-                        class="unmet-criteria-list"
-                      >
-                        <li
-                          class="unmet-criteria-item"
-                        >
-                          The deceased died within the last two years
                         </li>
                       </ul>
                     </div>
@@ -2999,7 +2973,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 aria-expanded="false"
                 class="benefit-accordion usa-accordion"
                 data-analytics="benefit-accordion"
-                data-analytics-content="Public Safety Officers' Death Benefits"
+                data-analytics-content="Public safety officers' death benefits"
                 data-testid="benefit"
                 hidden=""
               >
@@ -3007,7 +2981,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="usa-accordion__heading"
                 >
                   <button
-                    aria-controls="16-Public Safety Officers' Death Benefits"
+                    aria-controls="16-Public safety officers' death benefits"
                     aria-expanded="false"
                     class="usa-accordion__button"
                     type="button"
@@ -3015,7 +2989,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <span
                       class="heading"
                     >
-                      Public Safety Officers' Death Benefits
+                      Public safety officers' death benefits
                     </span>
                     <br />
                     <span
@@ -3043,7 +3017,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="usa-accordion__content usa-prose"
                   hidden=""
-                  id="16-Public Safety Officers' Death Benefits"
+                  id="16-Public safety officers' death benefits"
                 >
                   <div>
                     <h4
@@ -3152,7 +3126,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 aria-expanded="false"
                 class="benefit-accordion usa-accordion"
                 data-analytics="benefit-accordion"
-                data-analytics-content="Public Safety Officers' Educational Assistance Program"
+                data-analytics-content="Public safety officers' Educational Assistance Program"
                 data-testid="benefit"
                 hidden=""
               >
@@ -3160,7 +3134,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="usa-accordion__heading"
                 >
                   <button
-                    aria-controls="17-Public Safety Officers' Educational Assistance Program"
+                    aria-controls="17-Public safety officers' Educational Assistance Program"
                     aria-expanded="false"
                     class="usa-accordion__button"
                     type="button"
@@ -3168,7 +3142,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <span
                       class="heading"
                     >
-                      Public Safety Officers' Educational Assistance Program
+                      Public safety officers' Educational Assistance Program
                     </span>
                     <br />
                     <span
@@ -3196,7 +3170,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="usa-accordion__content usa-prose"
                   hidden=""
-                  id="17-Public Safety Officers' Educational Assistance Program"
+                  id="17-Public safety officers' Educational Assistance Program"
                 >
                   <div>
                     <h4
@@ -5109,13 +5083,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         <p
                           class="key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                          Met  3 of
             6
                         </p>
                       </h5>
                       <ul
                         class="key-eligibility-criteria-list"
                       >
+                        <li
+                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          data-testid="deceased_date_of_death"
+                        >
+                          The deceased died within the last two years
+                        </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
@@ -5141,11 +5121,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       <ul
                         class="unmet-criteria-list"
                       >
-                        <li
-                          class="unmet-criteria-item"
-                        >
-                          The deceased died within the last two years
-                        </li>
                         <li
                           class="unmet-criteria-item"
                         >

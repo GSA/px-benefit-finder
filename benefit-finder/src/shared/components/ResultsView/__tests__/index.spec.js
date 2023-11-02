@@ -16,10 +16,15 @@ const scenarios = {
       windowQuery:
         '?applicant_date_of_birth=%7B"month"%3A"3"%2C"day"%3A"5"%2C"year"%3A"1960"%7D&applicant_relationship_to_the_deceased=Spouse&applicant_marital_status=Widowed&applicant_citizen_status=Yes&applicant_care_for_child=Yes&applicant_paid_funeral_expenses=Yes&deceased_date_of_death=%7B"month"%3A"1"%2C"day"%3A"3"%2C"year"%3A"2022"%7D&deceased_death_location_is_US=Yes&deceased_paid_into_SS=Yes&deceased_public_safety_officer=No&deceased_miner=No&deceased_american_indian=No&deceased_died_of_COVID=Yes&deceased_served_in_active_military=No&shared=true%27',
     },
+    {
+      scenario: 2,
+      windowQuery:
+        '?applicant_date_of_birth=%7B%22month%22%3A%223%22%2C%22day%22%3A%225%22%2C%22year%22%3A%221960%22%7D&applicant_relationship_to_the_deceased=Spouse&applicant_marital_status=Widowed&applicant_citizen_status=Yes&applicant_care_for_child=Yes&applicant_paid_funeral_expenses=Yes&deceased_date_of_death=%7B%22month%22%3A%221%22%2C%22day%22%3A%223%22%2C%22year%22%3A%222022%22%7D&deceased_death_location_is_US=Yes&deceased_paid_into_SS=Yes&deceased_public_safety_officer=No&deceased_miner=No&deceased_american_indian=No&deceased_died_of_COVID=Yes&deceased_served_in_active_military=No&shared=true',
+    },
   ],
 }
 
-const windowQuery = scenarios.death[0].windowQuery // Returns:'?q=123'
+const windowQuery = scenarios.death[1].windowQuery // Returns:'?q=123'
 const benfitsArray = [...data.benefits]
 const sharedToken = 'shared'
 let stepDataArray
@@ -33,6 +38,7 @@ function setCurrentData(updatedData) {
 // handle window.scrollTo
 const noop = () => {}
 Object.defineProperty(window, 'scrollTo', { value: noop, writable: true })
+
 beforeAll(() => {
   stepDataArray = [...data.lifeEventForm.sectionsEligibilityCriteria]
   setCurrentData(stepDataArray[0])
@@ -69,20 +75,25 @@ test('scenario 1 loads in view with the correct amount of likely eligible items'
     benfitsArray
   )
 
-  await screen.findAllByTestId('benefit')
-  expect(view.baseElement).toMatchSnapshot()
-
   const e = eligibility.filter(item => {
     const f = item.benefit.eligibility.filter(item => item.isEligible === true)
     return f.length === item.benefit.eligibility.length
   })
 
-  expect(e.length).toBe(2)
-  expect(screen.getAllByText('Likely Eligible')).toBeTruthy()
-  expect(screen.getAllByText('Likely Eligible').length).toBe(2)
-  expect(
-    screen.getAllByText('Survivors benefits for mothers/fathers')
-  ).toBeTruthy()
-  expect(screen.getAllByText('Met 4 of 4')).toBeTruthy()
-  expect(screen.getAllByText('Met 4 of 4').length).toBe(1)
+  const n = eligibility.filter(item => {
+    const f = item.benefit.eligibility.filter(item => item.isEligible === false)
+    return f.length > 0
+  })
+
+  const m = eligibility.filter(item => {
+    const f = item.benefit.eligibility.filter(item => item.isEligible !== false)
+    return f.length > 0
+  })
+
+  expect(e.length).toBe(4)
+  expect(n.length).toBe(26)
+  expect(m.length - e.length - n.length).toBe(1)
+
+  await screen.findAllByTestId('benefit')
+  expect(view.baseElement).toMatchSnapshot()
 })

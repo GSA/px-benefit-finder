@@ -645,14 +645,14 @@
               "criteriaKey": "deceased_service_status",
               "label": "The service status of the deceased is: active-duty member",
               "acceptableValues": [
-                "Active-duty member"
+                "Active-duty service member"
               ]
             },
             {
               "criteriaKey": "deceased_military_death_circumstance",
               "label": "One of the following applies to the deceased: died on active duty",
               "acceptableValues": [
-                "Died on active duty"
+                "Died while on active duty"
               ]
             },
             {
@@ -765,7 +765,7 @@
       },
       {
         "benefit": {
-          "title": "Annuity for Certain Military Surviving Spouses",
+          "title": "Annuity for certain military surviving spouses",
           "summary": "<p>Financial support for surviving spouses of members of the uniformed services.</p>",
           "SourceLink": "https://militarypay.defense.gov/Benefits/",
           "SourceIsEnglish": "TRUE",
@@ -776,6 +776,9 @@
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -929,6 +932,9 @@
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_died_of_COVID",
@@ -948,7 +954,7 @@
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died after May 20th, 2020",
               "acceptableValues": [
-                ">01-20-2020 (died after May 20th, 2020)"
+                ">01-20-2020"
               ]
             },
             {
@@ -1357,6 +1363,9 @@
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
@@ -1369,7 +1378,7 @@
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died within the last two years",
               "acceptableValues": [
-                "<2years (the deceased died within the last two years)"
+                "<2years"
               ]
             },
             {
@@ -1446,7 +1455,7 @@
       },
       {
         "benefit": {
-          "title": "Public Safety Officers' Death Benefits",
+          "title": "Public safety officers' death benefits",
           "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->A one-time benefit for survivors of law enforcement officers, firefighters, and other first responders whose deaths were related to an injury sustained during the line of duty.</p>",
           "SourceLink": "https://bja.ojp.gov/program/psob/benefits",
           "SourceIsEnglish": "TRUE",
@@ -1457,6 +1466,9 @@
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -1481,7 +1493,7 @@
       },
       {
         "benefit": {
-          "title": "Public Safety Officers' Educational Assistance Program",
+          "title": "Public safety officers' Educational Assistance Program",
           "summary": "<p>Financial assistance for higher education to spouses and children of police, fire, and emergency public safety officers killed in the line of duty.</p>",
           "SourceLink": "https://psob.bja.ojp.gov/PSOB_Education2018.pdf",
           "SourceIsEnglish": "TRUE",
@@ -1492,6 +1504,9 @@
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -1964,6 +1979,9 @@
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
@@ -2078,12 +2096,15 @@
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died within the last two years",
               "acceptableValues": [
-                "<2years (The deceased died within the last two years.)"
+                "<2years"
               ]
             },
             {

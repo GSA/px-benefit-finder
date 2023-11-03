@@ -348,7 +348,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 15-configure-pipeline-to-use-sync-module
+                - main
 
   scheduled_cms_build_and_deploy_workflow_main:
     triggers:

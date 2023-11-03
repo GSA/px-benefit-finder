@@ -41,7 +41,6 @@ const BenefitAccordionGroup = ({
    * @return {boolean} returns true or false
    */
   const [isExpandAll, setExpandAll] = useState(false)
-  // const [filterData, setFilterData] = useState(null)
 
   /**
    * a function that returns the string value of our expanded action

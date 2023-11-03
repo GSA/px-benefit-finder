@@ -7,7 +7,7 @@
 #benefit-finder {
   .benefit-form,
   .verify-selections-view {
-    background-color: color.$marine;
+    background-color: color.$officer-navy;
     margin: 0 space.$space-md;
     padding-bottom: space.$padding-bottom-xl;
   }
@@ -47,7 +47,7 @@
   .section-heading {
     @include h3;
 
-    background-color: color.$marine;
+    background-color: color.$officer-navy;
     color: color.$white;
     margin: 0;
     padding: space.$space-xl space.$space-md;

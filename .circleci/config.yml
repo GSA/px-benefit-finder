@@ -177,7 +177,7 @@ jobs:
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
             sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
-            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e '$content_directories['sync'] = DRUPAL_ROOT . '/content/sync'; \'  web/sites/default/settings.php
+            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image

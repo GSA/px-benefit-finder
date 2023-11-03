@@ -104,7 +104,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 30
+            sleep 60
 
       - run:
           name: Enable benefit-finder module
@@ -176,7 +176,7 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
+            # sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -238,7 +238,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 30
+            sleep 60
 
       - run:
           name: Enable benefit-finder module
@@ -345,7 +345,7 @@ workflows:
               only: 
                 - main
 
-  scheduled_cms_build_and_deploy_workflow:
+  scheduled_cms_build_and_deploy_workflow_main:
     triggers:
       - schedule:
           cron: '0 7 * * *'
@@ -353,10 +353,19 @@ workflows:
             branches:
               only:
                 - main
+    jobs:
+      - build_and_deploy_main
+
+  scheduled_cms_build_and_deploy_workflow_dev:
+    triggers:
+      - schedule:
+          cron: '0 6 * * *'
+          filters:
+            branches:
+              only:
                 - dev
     jobs:
       - build_and_deploy_dev
-      - build_and_deploy_main
 
   create-component-library-workflow:
     jobs:

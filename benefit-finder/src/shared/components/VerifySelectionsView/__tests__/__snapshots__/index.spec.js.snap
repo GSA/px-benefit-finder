@@ -29,13 +29,13 @@ exports[`VerifySelectionsView renders a match to the previous snapshot 1`] = `
             className=""
             type="button"
           >
-            Confirm
+            Back
           </button>
           <button
             className=""
             type="button"
           >
-            Back
+            Confirm
           </button>
         </div>
       </div>

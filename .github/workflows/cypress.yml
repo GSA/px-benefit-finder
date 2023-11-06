@@ -13,10 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           component: true
+          working-directory: benefit-finder
 
       - uses: actions/upload-artifact@v3
         if: failure ()

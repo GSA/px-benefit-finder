@@ -544,14 +544,14 @@ Array [
           onClick={[Function]}
           type="button"
         >
-          Continue
+          Back
         </button>
         <button
           className=""
           onClick={[Function]}
           type="button"
         >
-          Back
+          Continue
         </button>
       </div>
     </div>

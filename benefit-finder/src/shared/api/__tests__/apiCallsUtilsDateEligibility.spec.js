@@ -66,28 +66,28 @@ const younger18 = {
 
 const conditionalsSpecificDate = [
   {
-    value: '>01-01-2023', // before 2023 (ie. 2022)
-    isSame: false,
-    isCloser: false,
-    isFurther: true,
-  },
-  {
-    value: '>=01-01-2023', // before or in 2023 (ie. 2022)
-    isSame: true,
-    isCloser: false,
-    isFurther: true,
-  },
-  {
-    value: '<01-01-2023', // after 2023 (ie. 2023-01-01)
+    value: '>01-01-2023', // after 2023 (ie. 2022)
     isSame: false,
     isCloser: true,
     isFurther: false,
+  },
+  {
+    value: '>=01-01-2023', // after or in 2023 (ie. 2022)
+    isSame: true,
+    isCloser: true,
+    isFurther: false,
+  },
+  {
+    value: '<01-01-2023', // before 2023 (ie. 2023-01-01)
+    isSame: false,
+    isCloser: false,
+    isFurther: true,
   },
   {
     value: '<=01-01-2023',
     isSame: true,
-    isCloser: true,
-    isFurther: false,
+    isCloser: false,
+    isFurther: true,
   },
   {
     value: '=01-01-2023',
@@ -138,14 +138,14 @@ const today = new window.Date(
 
 const conditionalsOthers = [
   {
-    value: '<01-01-1978', // after 1978
-    selectedValue: { year: 1977, month: 0, day: 1 },
-    eval: false,
-  },
-  {
-    value: '>01-01-1978', // before 1978
+    value: '<01-01-1978', // before 1978
     selectedValue: { year: 1977, month: 0, day: 1 },
     eval: true,
+  },
+  {
+    value: '>01-01-1978', // after 1978
+    selectedValue: { year: 1977, month: 0, day: 1 },
+    eval: false,
   },
   {
     // dynamic
@@ -165,6 +165,24 @@ const conditionalsOthers = [
       day: today.getDate(),
     },
     eval: false,
+  },
+  {
+    value: '>18years', // older than
+    selectedValue: {
+      year: 1978,
+      month: 0,
+      day: 1,
+    },
+    eval: true,
+  },
+  {
+    value: '<64years', // younger than
+    selectedValue: {
+      year: 1978,
+      month: 0,
+      day: 1,
+    },
+    eval: true,
   },
   {
     // dynamic

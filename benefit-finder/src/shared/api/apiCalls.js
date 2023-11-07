@@ -194,11 +194,11 @@ export async function LifeEvent(lifeEvent) {
 
   let fetchPath
   if (process.env.NODE_ENV === 'production') {
-    const head = document.getElementById('head')
+    const app = document.getElementById('benefit-finder')
 
-    if (head !== null) {
-      const publishedData = head.getAttribute('json-data-file-path')
-      const draftData = head.getAttribute('draft-json-data-file-path')
+    if (app !== null) {
+      const publishedData = app.getAttribute('json-data-file-path')
+      const draftData = app.getAttribute('draft-json-data-file-path')
       fetchPath = params.get('mode') === 'draft' ? draftData : publishedData
     }
   } else {

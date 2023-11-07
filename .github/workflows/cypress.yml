@@ -1,0 +1,27 @@
+name: Run Cypress Tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+permissions: read-all
+
+jobs:
+  install:
+    name: cypress-run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          component: true
+          working-directory: benefit-finder
+
+      - uses: actions/upload-artifact@v3
+        if: failure ()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots

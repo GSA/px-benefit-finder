@@ -2,6 +2,8 @@ import { Hint, Legend } from '../index'
 import PropTypes from 'prop-types'
 import { useHandleClassName } from '../../hooks/useHandleClassName'
 
+import './_index.scss'
+
 /**
  * a functional component that renders a string
  * @component
@@ -55,7 +57,7 @@ const Fieldset = ({
       })}
       ref={alertRef}
     >
-      {hint}
+      {hint && <div className="hint">{hint}</div>}
       {legend && handleRequired}
       {children}
     </fieldset>

@@ -6,7 +6,7 @@
   html,
   .benefit-finder.form {
     font-family: 'Public Sans', sans-serif;
-    background-color: color.$marine;
+    background-color: color.$officer-navy;
     height: 100%;
     min-height: 100vh;
   }
@@ -28,6 +28,7 @@
   }
 
   .usa-radio__input:checked + .usa-radio__label::before {
+    background-color: #005ea2 !important;
     box-shadow: 0 0 0 2px #005ea2, inset 0 0 0 2px white !important;
   }
 

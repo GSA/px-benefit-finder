@@ -191,24 +191,38 @@ export async function LifeEvent(lifeEvent) {
     const location = window.location.pathname
     lifeEvent = location.substring(location.lastIndexOf('/') + 1)
   }
-  const response = await fetch(
-    `/sites/default/files/benefit-finder/api/${mode}life-event/${language}${lifeEvent}.json`
-  )
-    .then(response => {
-      if (response?.ok) {
-        return response.json()
-      }
-      throw new Error(response?.status)
-    })
-    .then(responseJson => {
-      return responseJson?.data ? responseJson : 'Something went wrong.'
-    })
-    .catch(error => {
-      // eslint-disable-next-line no-console
-      console.log(error)
-      return 'Something went wrong.'
-    })
-  return response
+
+  let fetchPath
+  if (process.env.NODE_ENV === 'production') {
+    const head = document.getElementById('head')
+
+    if (head !== null) {
+      const publishedData = head.getAttribute('json-data-file-path')
+      const draftData = head.getAttribute('draft-json-data-file-path')
+      fetchPath = params.get('mode') === 'draft' ? draftData : publishedData
+    }
+  } else {
+    fetchPath = `/sites/default/files/benefit-finder/api/${mode}life-event/${language}${lifeEvent}.json`
+  }
+
+  if (fetchPath !== undefined) {
+    const response = await fetch(fetchPath)
+      .then(response => {
+        if (response?.ok) {
+          return response.json()
+        }
+        throw new Error(response?.status)
+      })
+      .then(responseJson => {
+        return responseJson?.data ? responseJson : 'Something went wrong.'
+      })
+      .catch(error => {
+        // eslint-disable-next-line no-console
+        console.log(error)
+        return 'Something went wrong.'
+      })
+    return response
+  }
 }
 
 /**

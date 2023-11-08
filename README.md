@@ -1,4 +1,4 @@
-# Benefit Finder custom module
+# Benefit Finder v2
 
 [Jump to Getting Started](#getting-started)
 

@@ -5,6 +5,8 @@
   |-.husky
     |-git-hooks
   |-.storybook
+  |-cypress
+  |-nginx
   |-public
     |-index.html
   |-src

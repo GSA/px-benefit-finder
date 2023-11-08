@@ -1,10 +1,14 @@
 # Benefit Finder custom module
 
+[Jump to Getting Started](#getting-started)
+
 ## Synopsis
 
 Benefit Finder v2, is built as a progressively decoupled JavaScript application that is designed to be integrated as a custom module within the USAGov Drupal CMS.
 
-## Tech
+## Tech Resources
+
+A short list of technologies used in this project.
 
 ### Devops
 
@@ -38,9 +42,13 @@ Benefit Finder v2, is built as a progressively decoupled JavaScript application 
 
 ## Getting Started
 
-### How to Clone the `px-benefit-finder` Repository with usagov-2021 Submodule
+> Detailed README(s) for the [drupal module](./usagov_benefit_finder/README.md) or the [JS application](./benefit-finder/README.md)
 
-This guide will walk you through the process of cloning the `px-benefit-finder` repository that includes a submodule. Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
+### How to Clone the `px-benefit-finder` Repository with `usagov-2021` Submodule
+
+This guide will walk you through the process of cloning the `px-benefit-finder` repository that includes a submodule.
+
+> Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
 
 To clone the repository with a submodule, follow these steps:
 

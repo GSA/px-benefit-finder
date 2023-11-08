@@ -48,6 +48,8 @@
 | `src/shared/components` | Components, constants, machines, hooks, styles, utils etc; |
 | `src/shared/hooks`      | Custom Hooks                                               |
 | `src/shared/style-docs` | mdx files for !stories documentation                       |
+| `src/shared/styles`     | scss partials                                              |
+| `src/shared/utils`      | custom Javascript utilities                                |
 |                         | **_Any module is allowed to import from shared._**         |
 
 <br>
@@ -276,16 +278,16 @@ npm run test
 
 #### **6. Components**
 
-We build each of our components with `spec`, `scss`, `storeies` and `jsx` files
+We build each of our components with `spec`, `scss`, `stories` and `jsx` files
 
 ```
 |-ComponentName
   |-__tests__
     |-__snapshots__
     |-index.spec.js
+  |-_index.scss
   |-index.jsx
   |-index.stories.jsx
-  |-_index.scss
 ```
 
 To generate a component with these files based on a name space,

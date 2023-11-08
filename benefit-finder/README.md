@@ -21,8 +21,11 @@
           |-index.jsx
           |-index.stories.jsx
           |-_index.scss
-        |-style-docs
       |-hooks
+      |-locales
+      |-style-docs
+      |-styles
+      |-utils
   |-index.jsx
   |-README.md
 ```

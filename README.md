@@ -12,33 +12,33 @@ A short list of technologies used in this project.
 
 ### Devops
 
-[Git](https://git-scm.com/) - Version control system
-[Github](https://github.com/) - Git repository management
-[CircleCI](https://circleci.com/) - Continuous Integration and delivery
-[Terraform](https://www.terraform.io/) - Infrastructure automation to provision and manage resources in any cloud or data center
-[Docker](https://www.docker.com/) - Build, Share, Run containerized applications
-[Cloud.gov](https://cloud.gov/) - Environment Platform
-[CodeQL](https://codeql.github.com/) - Semantic code analysis engine
-[Dependabot](https://github.com/dependabot) - Dependency vulnerability monitoring
+- [Git](https://git-scm.com/) - Version control system
+- [Github](https://github.com/) - Git repository management
+- [CircleCI](https://circleci.com/) - Continuous Integration and delivery
+- [Terraform](https://www.terraform.io/) - Infrastructure automation to provision and manage resources in any cloud or data center
+- [Docker](https://www.docker.com/) - Build, Share, Run containerized applications
+- [Cloud.gov](https://cloud.gov/) - Environment Platform
+- [CodeQL](https://codeql.github.com/) - Semantic code analysis engine
+- [Dependabot](https://github.com/dependabot) - Dependency vulnerability monitoring
 
 ### BackEnd
 
-[Drupal](https://www.drupal.org/) - Open-source Content Management System (CMS)
-[PHP](https://www.php.net/) - Hypertext Preprocessor
-[Twig](https://twig.symfony.com/) - PHP template engine
+- [Drupal](https://www.drupal.org/) - Open-source Content Management System (CMS)
+- [PHP](https://www.php.net/) - Hypertext Preprocessor
+- [Twig](https://twig.symfony.com/) - PHP template engine
 
 ### FrontEnd
 
-[React](https://react.dev/) - Javascript library for web and native user interfaces
-[Jest](https://jestjs.io/) - Javascript testing framework
-[USWDS](https://designsystem.digital.gov/) - United States Web Design System
-[SCSS](https://sass-lang.com/) - CSS Extension
-[Webpack](https://webpack.js.org/) - Module bundler
-[Storybook](https://storybook.js.org/) - Front End workshop for UI development
+- [React](https://react.dev/) - Javascript library for web and native user interfaces
+- [Jest](https://jestjs.io/) - Javascript testing framework
+- [USWDS](https://designsystem.digital.gov/) - United States Web Design System
+- [SCSS](https://sass-lang.com/) - CSS Extension
+- [Webpack](https://webpack.js.org/) - Module bundler
+- [Storybook](https://storybook.js.org/) - Front End workshop for UI development
 
 ### Automated Testing
 
-[Cypress](https://www.cypress.io/) - E2E testing framework
+- [Cypress](https://www.cypress.io/) - E2E testing framework
 
 ## Getting Started
 

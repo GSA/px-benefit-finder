@@ -11,7 +11,7 @@
           "lifeEvent": {
             "title": "Benefit finder: retirement",
             "body": "<p>Find out what financial, health care, and other benefits may be available as you enter this next phase of your life.</p>",
-            "link": "/bears/life_event/retirement",
+            "link": "/benefit-finder/life_event/retirement",
             "cta": "Call to action (retirement)"
           }
         },
@@ -19,7 +19,7 @@
           "lifeEvent": {
             "title": "Benefit finder: disability",
             "body": "<p>Whether you are newly disabled or have a lifelong challenge, assistance may be available, including financial help.</p>",
-            "link": "/bears/life_event/disability",
+            "link": "/benefit-finder/life_event/disability",
             "cta": "Call to action (disability)"
           }
         }

@@ -5371,7 +5371,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="relative-benefit-card usa-card add-list-reset"
                   >
                     <a
-                      href="/bears/life_event/retirement"
+                      href="/benefit-finder/life_event/retirement"
                     >
                       <div
                         class="usa-card__container"
@@ -5422,7 +5422,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="relative-benefit-card usa-card add-list-reset"
                   >
                     <a
-                      href="/bears/life_event/disability"
+                      href="/benefit-finder/life_event/disability"
                     >
                       <div
                         class="usa-card__container"
@@ -10967,7 +10967,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="relative-benefit-card usa-card add-list-reset"
                   >
                     <a
-                      href="/bears/life_event/retirement"
+                      href="/benefit-finder/life_event/retirement"
                     >
                       <div
                         class="usa-card__container"
@@ -11018,7 +11018,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="relative-benefit-card usa-card add-list-reset"
                   >
                     <a
-                      href="/bears/life_event/disability"
+                      href="/benefit-finder/life_event/disability"
                     >
                       <div
                         class="usa-card__container"

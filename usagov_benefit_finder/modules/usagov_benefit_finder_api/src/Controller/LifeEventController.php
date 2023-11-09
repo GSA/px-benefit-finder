@@ -56,6 +56,13 @@ class LifeEventController {
   protected $request;
 
   /**
+   * The display data control variable.
+   *
+   * @var string
+   */
+  protected $displayData;
+
+  /**
    * The JSON data mode.
    *
    * @var string
@@ -73,6 +80,7 @@ class LifeEventController {
     $this->fileUrlGenerator = \Drupal::service('file_url_generator');
     $this->database = \Drupal::service('database');
     $this->request = \Drupal::request();
+    $this->displayData = TRUE;
   }
 
   /**
@@ -99,6 +107,7 @@ class LifeEventController {
     $this->fileSystem->prepareDirectory($directory, FileSystemInterface:: CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
 
     // Get JSON data.
+    $this->displayData = FALSE;
     $data = json_encode([
         'data' => $this->getData($id),
         'method' => 'GET',
@@ -253,9 +262,12 @@ class LifeEventController {
       "benefits" => $benefits
     ];
     $json = json_encode($result, JSON_PRETTY_PRINT);
-    print_r("<p>JSON Data<pre>");
-    print_r($json);
-    print_r("</pre>");
+
+    if ($this->displayData) {
+      print_r("<p>JSON Data<pre>");
+      print_r($json);
+      print_r("</pre>");
+    }
 
     return $result;
   }

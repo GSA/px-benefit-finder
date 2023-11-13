@@ -117,13 +117,13 @@ class LifeEventController {
     if ($life_event) {
       $field_name = '';
       if ($this->mode == "published") {
-        $field_name = 'field_json_data_file';
+        $field_name = 'field_json_data_file_path';
       }
       else if ($this->mode == "draft") {
-        $field_name = 'field_draft_json_data_file';
+        $field_name = 'field_draft_json_data_file_path';
       }
       $life_event->set($field_name, [
-        'target_id' => $file->id(),
+        'value' =>  $fileUrlString,
       ]);
       $life_event->save();
     }

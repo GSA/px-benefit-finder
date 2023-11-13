@@ -1,10 +1,54 @@
-# Benefit Finder custom module
+# Benefit Finder v2
 
-Docs to be written
+[Jump to Getting Started](#getting-started)
 
-## How to Clone the PX-BEARS-DRUPAL Repository with usagov-2021 Submodule
+## Synopsis
 
-This guide will walk you through the process of cloning the **_PX-BEARS-DRUPAL_** repository that includes a submodule. Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
+Benefit Finder v2, is built as a progressively decoupled JavaScript application that is designed to be integrated as a custom module within the USAGov Drupal CMS.
+
+## Tech Resources
+
+A short list of technologies used in this project.
+
+### Devops
+
+- [Git](https://git-scm.com/) - Version control system
+- [Github](https://github.com/) - Git repository management
+- [CircleCI](https://circleci.com/) - Continuous Integration and delivery
+- [Terraform](https://www.terraform.io/) - Infrastructure automation to provision and manage resources in any cloud or data center
+- [Docker](https://www.docker.com/) - Build, Share, Run containerized applications
+- [Cloud.gov](https://cloud.gov/) - Environment Platform
+- [CodeQL](https://codeql.github.com/) - Semantic code analysis engine
+- [Dependabot](https://github.com/dependabot) - Dependency vulnerability monitoring
+
+### BackEnd
+
+- [Drupal](https://www.drupal.org/) - Open-source Content Management System (CMS)
+- [PHP](https://www.php.net/) - Hypertext Preprocessor
+- [Twig](https://twig.symfony.com/) - PHP template engine
+
+### FrontEnd
+
+- [React](https://react.dev/) - Javascript library for web and native user interfaces
+- [Jest](https://jestjs.io/) - Javascript testing framework
+- [USWDS](https://designsystem.digital.gov/) - United States Web Design System
+- [SCSS](https://sass-lang.com/) - CSS Extension
+- [Webpack](https://webpack.js.org/) - Module bundler
+- [Storybook](https://storybook.js.org/) - Front End workshop for UI development
+
+### Automated Testing
+
+- [Cypress](https://www.cypress.io/) - E2E testing framework
+
+## Getting Started
+
+> Detailed README(s) for the [drupal module](./usagov_benefit_finder/README.md) or the [JS application](./benefit-finder/README.md)
+
+### How to Clone the `px-benefit-finder` Repository with `usagov-2021` Submodule
+
+This guide will walk you through the process of cloning the `px-benefit-finder` repository that includes a submodule.
+
+> Submodules are repositories embedded within another repository, allowing you to include external dependencies or shared code as part of your project. When you clone such a project, by default you get the directories that contain submodules, but none of the files within them yet.
 
 To clone the repository with a submodule, follow these steps:
 
@@ -15,13 +59,13 @@ To clone the repository with a submodule, follow these steps:
 3. Use the following command to clone the main repository:
 
 ```
-git clone git@github.com:GSA/px-bears-drupal.git
+git clone git@github.com:GSA/px-benefit-finder.git
 ```
 
 4. Once the cloning process completes, navigate into the cloned repository's directory using the cd command.
 
 ```
-cd px-bears-drupal
+cd px-benefit-finder
 ```
 
 5. usagov-2021 directory is there but empty. You must run the following two commands to initialize your local configuration file and fetch all the data from that project.
@@ -44,24 +88,20 @@ git pull --recurse-submodules
 
 This command updates the main repository and its submodules to the latest commit.
 
-# Accessibility Statement
+### Local Development Environment
 
-We are committed to making our site accessible to all visitors. Our ongoing accessibility effort works towards conforming to Web Content Accessibility Guidelines (WCAG) version 2.1, level AA criteria and by performing regular automatic and manual testing audits.
-
-# Local Development Environment
-
-### Get USAgov code
+#### Get USAgov code
 
 ```
 git clone git@github.com:usagov/usagov-2021.git poc
 cd poc
 ```
 
-### Get USAgov code
+#### Get USAgov code
 
 Set up local development site following README.md.
 
-### Get a Database Dump
+#### Get a Database Dump
 
 1. Make sure you login cloud.gov on your terminal and target your org and space.
 
@@ -80,13 +120,14 @@ cd bin/cloudgov
 ```
 export env=dev  or export env=main
 ```
+
 4. Execute the following script.
 
 ```
 ./db-backup.sh
 ```
 
-### How to use awscli commands for s3 
+### How to use awscli commands for s3
 
 1. Make sure you login cloud.gov on your terminal and target your org and space.
 
@@ -103,17 +144,18 @@ cd bin/cloudgov
 3. Export the bucket name in your terminal
 
 ```
-export bucket_name=storage or export bucket_name=dbstorage 
+export bucket_name=storage or export bucket_name=dbstorage
 ```
 
 4. Execute the following script. Make sure you `source` it!
 
 ```
-source ./cloudgov-aws-creds.sh 
+source ./cloudgov-aws-creds.sh
 ```
+
 5. If you see the script finds a key and deletes it; make sure you run it again to create the key again. If the script finds a key, it will delete it.
 
-You'll see either of the below messages after running it. 
+You'll see either of the below messages after running it.
 
 ```
 Getting bucket credentials...
@@ -124,6 +166,7 @@ or
 Getting bucket credentials...
 Key not found. Creating...
 ```
+
 6. Start using `aws s3` commands like below:
 
 ```
@@ -132,14 +175,13 @@ aws s3 ls s3://${AWS_BUCKET}/
 
 7. Run it again after using it to delete the service-key.
 
+## VDI Login Guide
 
-# VDI Login Guide for the BEARS Team Members
-
-## What is VDI?
+### What is VDI?
 
 The Virtual Desktop Infrastructure (VDI) is a technology that allows you to access a remote desktop environment from your local device. This is particularly useful for accessing GSA resources and applications securely from outside the GSA network.
 
-## Steps to Login
+### Steps to Login
 
 1. Access https://secureauth.gsa.gov/secureauth14/, authenticate yourself with your GSA Credentials and get the TOKEN provided.
 
@@ -157,10 +199,14 @@ The Virtual Desktop Infrastructure (VDI) is a technology that allows you to acce
 
 6. Click on the monitor icon for the Desktop you want to launch. This time (and going forward) the Desktop should launch without showing a downloaded file.
 
-## Additional Info
+### Additional Info
 
 You may get additional information about the VDI and the Citrix (a Windows virtual desktop client) app from the TTS Handbook at https://handbook.tts.gsa.gov/tools/virtual-desktop/.
 
-## Tips
+### Tips
 
 To move files between your laptop and your Citrix desktop, use Google Drive. You can use Chrome in the Citrix desktop to download and upload files.
+
+## Accessibility Statement
+
+We are committed to making our application accessible to all visitors. Our ongoing accessibility effort works towards conforming to Web Content Accessibility Guidelines (WCAG) version 2.1, level AA criteria and by performing regular automatic and manual testing audits.

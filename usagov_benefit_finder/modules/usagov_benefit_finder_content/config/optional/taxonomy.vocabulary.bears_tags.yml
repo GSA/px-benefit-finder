@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-name: 'Bears Tags'
+name: 'Benefit Finder Tags'
 vid: bears_tags
-description: 'Bears Tags'
+description: ''
 weight: 0

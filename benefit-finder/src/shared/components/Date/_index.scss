@@ -1,0 +1,48 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/breakpoints/_index.scss' as *;
+@use '../../styles/mixins/_index.scss' as *;
+
+#benefit-finder {
+  .date-alert {
+    display: block;
+    width: 100%;
+  }
+
+  .usa-form-group {
+    width: 100%;
+  }
+
+  .usa-memorable-date {
+    max-width: 320px;
+    flex-wrap: wrap;
+  }
+
+  .usa-input {
+    border-radius: 3px;
+
+    @include p;
+
+    &.usa-input--error {
+      outline: 4px solid color.$alert-red !important;
+      border: none;
+    }
+  }
+
+  .usa-form-group--month {
+    width: 242px;
+  }
+
+  .usa-form-group--day {
+    width: 64px;
+  }
+
+  .usa-form-group--year {
+    width: 95px;
+  }
+
+  @media (width >= $desktop) {
+    .usa-memorable-date {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoticesList renders a match to the previous snapshot 1`] = `
+<div
+  className="notices"
+>
+  <ul
+    className="notices-list add-list-reset"
+  >
+    <li
+      className="notice"
+    >
+      <div
+        className=""
+        role="alert"
+      >
+        <div
+          className="usa-alert__body"
+        >
+          <div
+            className="usa-alert__text"
+          >
+            <div
+              className="notice-item"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<div>Your information<strong> is not</strong> shared, saved, or submitted.</div>",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="notice"
+    >
+      <div
+        className=""
+        role="alert"
+      >
+        <div
+          className="usa-alert__body"
+        >
+          <div
+            className="usa-alert__text"
+          >
+            <div
+              className="notice-item"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Provide complete info to get more relevant results.",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="notice"
+    >
+      <div
+        className=""
+        role="alert"
+      >
+        <div
+          className="usa-alert__body"
+        >
+          <div
+            className="usa-alert__text"
+          >
+            <div
+              className="notice-item"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

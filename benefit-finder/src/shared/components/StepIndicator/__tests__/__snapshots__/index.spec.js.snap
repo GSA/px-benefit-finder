@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepIndicator renders a match to the previous snapshot 1`] = `
+<div>
+  <button
+    className=""
+    onClick={[Function]}
+    type="button"
+  >
+    Back
+  </button>
+</div>
+`;

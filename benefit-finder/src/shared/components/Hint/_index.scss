@@ -1,0 +1,22 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
+
+#benefit-finder {
+  .usa-hint--required {
+    @include p;
+
+    color: color.$dark-medium-grey !important;
+  }
+
+  .required {
+    @include p;
+
+    color: color.$dark-medium-grey;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+
+  .usa-hint {
+    @include p;
+  }
+}

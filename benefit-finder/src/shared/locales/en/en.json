@@ -1,0 +1,198 @@
+{
+  "intro": {
+    "heading": "Steps",
+    "timeIndicator": "Time to complete",
+    "steps": {
+      "list": [
+        {
+          "title": "Answer questions"
+        },
+        {
+          "title": "Review Results"
+        },
+        {
+          "title": "Find out how to apply"
+        }
+      ]
+    },
+    "notices": {
+      "heading": "Before you start:",
+      "list": [
+        {
+          "notice": "<div>Your information<strong> is not</strong> shared, saved, or submitted.</div>"
+        },
+        {
+          "notice": "Provide complete info to get more relevant results."
+        },
+        {
+          "notice": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>"
+        }
+      ]
+    },
+    "button": "Start"
+  },
+  "stepIndicator": {
+    "stepBackLink": "Back"
+  },
+  "requiredLabel": {
+    "value": "Required"
+  },
+  "alertBanner": {
+    "heading": "Error status",
+    "description": "All fields marked required must be completed."
+  },
+  "buttonGroup": [
+    {
+      "value": "Back"
+    },
+    {
+      "value": "Continue"
+    }
+  ],
+  "reviewSelectionModal": {
+    "heading": "Select an option:",
+    "buttonGroup": [
+      {
+        "value": "Review selections"
+      },
+      {
+        "value": "See results"
+      }
+    ]
+  },
+  "verifySelectionsView": {
+    "heading": "Review and Confirm",
+    "noResultsLabel": "No input given",
+    "buttonGroup": [
+      {
+        "value": "Back"
+      },
+      {
+        "value": "Confirm"
+      }
+    ]
+  },
+  "resultsView": {
+    "qualified": {
+      "chevron": {
+        "heading": "Your potential benefits",
+        "description": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>"
+      },
+      "heading": "Results",
+      "description": "<div><strong>You may be eligible for these benefits:</strong></div>"
+    },
+    "notQualified": {
+      "chevron": {
+        "heading": "Benefits you did not qualify for",
+        "description": "According to your answers you are not eligible for these benefits."
+      },
+      "heading": "Results",
+      "description": "<div><strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes.</div>"
+    },
+    "stepBackLink": "Back",
+    "eligibleResults": {
+      "heading": "Results",
+      "description": "You may be eligible for these benefits."
+    },
+    "benefitAccordionGroup": {
+      "closedState": "Open all",
+      "openState": "Close all"
+    },
+    "benefitAccordion": {
+      "eligibleStatusLabels": [
+        "Likely Eligible",
+        "More Information Needed",
+        "Not Eligible"
+      ],
+      "agencyPrefix": "By",
+      "benefitSummary": "Key eligibility criteria",
+      "benefitSummaryPrefix": "Met ",
+      "benefitSummaryConjunction": "of",
+      "unmetLabel": "Unmet criteria",
+      "additionalDescription": "Additional eligibility criteria may apply. Visit the link below for more information and to apply.",
+      "visitLabel": "Visit"
+    },
+    "notEligibleResults": {
+      "heading": "Benefits you did not qualify for",
+      "description": "<div>Based on your answers you are not eligible for these benefits. <strong>You may become eligible if you enter additional information or your situation changes.</strong></div>",
+      "cta": "See benefits you did not qualify for"
+    },
+    "resultsRelativeBenefits": {
+      "heading": "More benefits"
+    },
+    "shareResults": {
+      "heading": "Share results",
+      "shareButton": "Share link",
+      "shareLinkContent": "Copied",
+      "emailButton": "Email results",
+      "emailSubject": "Results from USAGov’s benefit finder",
+      "description": "Copy or email these results. Your answers will be visible. Only share with those you trust."
+    }
+  },
+  "shareResults": {
+    "heading": "Share results",
+    "description": "Your information will be viewable. Only share with those you trust.",
+    "buttonGroup": [
+      {
+        "value": "Share link"
+      },
+      {
+        "value": "Email results"
+      }
+    ]
+  },
+  "sectionHeadings": {
+    "start": "Complete Questions",
+    "continue": "Questions Continued",
+    "final": "Final Questions"
+  },
+  "select": {
+    "labelSelect": "Select",
+    "defaultValue": "Click to Select",
+    "dateDefaultValue": "-Select-"
+  },
+  "date": {
+    "alert": "Date should follow the format 01 - January 22 1977",
+    "labelDay": "Day",
+    "labelMonth": "Month",
+    "labelYear": "Year",
+    "monthOptions": [
+      {
+        "label": "01 - January"
+      },
+      {
+        "label": "02 - February"
+      },
+      {
+        "label": "03 - March"
+      },
+      {
+        "label": "04 - April"
+      },
+      {
+        "label": "05 - May"
+      },
+      {
+        "label": "06 - June"
+      },
+      {
+        "label": "07 - July"
+      },
+      {
+        "label": "08 - August"
+      },
+      {
+        "label": "09 - September"
+      },
+      {
+        "label": "10 - October"
+      },
+      {
+        "label": "11 - November"
+      },
+      {
+        "label": "12 - December"
+      }
+    ]
+  }
+}

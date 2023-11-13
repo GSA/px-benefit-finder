@@ -1,0 +1,157 @@
+{/* Typography.mdx */}
+
+import { Meta, Typeset } from '@storybook/blocks'
+
+<Meta title="Typography" />
+
+export const typography = {
+  weight: {
+    extraLight: '200',
+    regular: '400',
+    bold: '700',
+    extrabold: '800',
+  },
+  size: {
+    h0: 36,
+    h1: 36,
+    h2: 32,
+    h3: 32,
+    h4: 24,
+    h5: 22,
+    h6: 20,
+    importantXBold: 16,
+    importantBold: 16,
+    p: 16,
+    p1: 16,
+    p2: 15,
+    p3: 15,
+  },
+}
+
+export const SampleText =
+  'Lorem ipsum dolor sit amet consectetur. Consectetur felis fermentum eu nunc elit imperdiet. Aenean porta sem sed nulla rutrum orci morbi non. Sollicitudin proin lorem magna ultrices gravida sem donec.'
+
+# Typography
+
+**Font:** Public Sans
+
+## Headings
+
+### H0
+
+<Typeset
+  fontSizes={[Number(typography.size.h0)]}
+  fontWeight={typography.weight.extrabold}
+  sampleText={`${typography.size.h0}px  Heading 0 - Sample`}
+  fontFamily="Public Sans"
+/>
+
+### H1
+
+<Typeset
+  fontSizes={[Number(typography.size.h1)]}
+  fontWeight={typography.weight.extrabold}
+  sampleText={`${typography.size.h1}px H1 Heading 1 - Sample`}
+  fontFamily="Public Sans"
+/>
+
+### H2
+
+<Typeset
+  fontSizes={[Number(typography.size.h2)]}
+  fontWeight={typography.weight.extrabold}
+  sampleText={`${typography.size.h2}px H2 Heading 2 - Sample`}
+  fontFamily="Public Sans"
+/>
+
+### H3
+
+<Typeset
+  fontSizes={[Number(typography.size.h3)]}
+  fontWeight={typography.weight.bold}
+  sampleText={`${typography.size.h3}px H3 Heading 3 - Sample`}
+  fontFamily="Public Sans"
+/>
+
+### H4
+
+<Typeset
+  fontSizes={[Number(typography.size.h4)]}
+  fontWeight={typography.weight.extrabold}
+  sampleText={`${typography.size.h4}px H4 Heading 4 - Sample`}
+  fontFamily="Public Sans"
+/>
+
+### H5
+
+<Typeset
+  fontSizes={[Number(typography.size.h5)]}
+  fontWeight={typography.weight.bold}
+  sampleText={`${typography.size.h5}px H5 Heading 5 - Sample`}
+  fontFamily="Public Sans"
+/>
+
+### H6
+
+<Typeset
+  fontSizes={[Number(typography.size.h6)]}
+  fontWeight={typography.weight.bold}
+  sampleText={`${typography.size.h5}px H6 Heading 6 - Sample`}
+  fontFamily="Public Sans"
+/>
+
+## Primary Typeface
+
+### Important Extra Bold
+
+<Typeset
+  fontSizes={[Number(typography.size.importantXBold)]}
+  fontWeight={typography.weight.extraBold}
+  sampleText={SampleText}
+  fontFamily="Public Sans"
+/>
+
+### Important Bold
+
+<Typeset
+  fontSizes={[Number(typography.size.importantBold)]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily="Public Sans"
+/>
+
+### Paragraph
+
+<Typeset
+  fontSizes={[Number(typography.size.p)]}
+  fontWeight={typography.weight.p}
+  sampleText={SampleText}
+  fontFamily="Public Sans"
+/>
+
+### Paragraph 1
+
+<Typeset
+  fontSizes={[Number(typography.size.p1)]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily="Public Sans"
+/>
+
+### Paragraph 2
+
+<Typeset
+  fontSizes={[Number(typography.size.p2)]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily="Public Sans"
+/>
+
+### Paragraph 3
+
+<Typeset
+  fontSizes={[Number(typography.size.p3)]}
+  fontWeight={typography.weight.extraLight}
+  sampleText={SampleText}
+  fontFamily="Public Sans"
+/>

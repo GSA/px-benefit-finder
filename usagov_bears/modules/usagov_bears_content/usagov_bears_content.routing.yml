@@ -1,7 +1,0 @@
-usagov_bears_content.load_life_event:
-  path: '/bears/import-life-event'
-  defaults:
-    _controller: '\Drupal\usagov_bears_content\Controller\ImportLifeEventController:import_life_event'
-    _title: 'Import Life Event'
-  requirements:
-    _permission: 'access content'

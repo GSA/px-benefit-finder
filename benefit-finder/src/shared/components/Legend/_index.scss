@@ -1,0 +1,11 @@
+@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
+
+#benefit-finder {
+  .legend {
+    @include h6;
+
+    padding-bottom: space.$padding-bottom-md;
+    max-width: fit-content;
+  }
+}

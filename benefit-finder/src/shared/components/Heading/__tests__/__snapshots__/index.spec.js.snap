@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders a match to the previous snapshot 1`] = `
+<h1
+  className=""
+  id="skip-to-h1"
+/>
+`;

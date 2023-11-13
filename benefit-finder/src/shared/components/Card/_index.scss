@@ -1,0 +1,70 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/space/_index.scss' as space;
+@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/breakpoints/_index.scss' as *;
+
+#benefit-finder {
+  .relative-benefit-card {
+    // .usa-card:last-child overide
+    margin-bottom: space.$space-md !important;
+
+    .usa-card__container {
+      background-color: color.$sky;
+      border-radius: 4px;
+      color: color.$officer-navy;
+      height: auto;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover .usa-card__container {
+      background-color: color.$dark-sky;
+    }
+
+    a:active .usa-card__container {
+      border: 2px solid color.$pop-blue;
+    }
+
+    .usa-card__header {
+      padding-bottom: 0;
+    }
+
+    h3.usa-card__heading {
+      @include h6;
+    }
+
+    .usa-card__body {
+      @include p;
+
+      display: none;
+    }
+
+    .usa-card__cta {
+      padding: space.$padding-bottom-md-plus;
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    @media (width >= $desktop) {
+      .usa-card__body {
+        display: block;
+        padding-top: 0;
+        padding-bottom: space.$padding-bottom-md-plus;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        p {
+          max-width: 90%;
+        }
+      }
+
+      .usa-card__cta {
+        display: none;
+      }
+    }
+  }
+}

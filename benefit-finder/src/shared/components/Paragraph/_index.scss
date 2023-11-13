@@ -1,0 +1,27 @@
+// ['regular', 'bold', 'extrabold', 'light', 'thin']
+@use '../../styles/mixins/_index.scss' as *;
+
+#benefit-finder {
+  p,
+  p.regular {
+    @include p1;
+  }
+
+  p.bold {
+    @include important-bold;
+  }
+
+  p.extrabold {
+    @include important-x-bold;
+  }
+
+  p.light {
+    @include p3;
+  }
+
+  p.thin {
+    @include p3;
+
+    font-weight: 100;
+  }
+}

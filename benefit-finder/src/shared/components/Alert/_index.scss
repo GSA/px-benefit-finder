@@ -1,0 +1,17 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
+
+#benefit-finder {
+  .no-background {
+    background-color: color.$white !important;
+    border-left-color: color.$white !important;
+  }
+
+  h4.usa-alert__heading {
+    @include h6;
+  }
+
+  .usa-alert__text {
+    @include p2;
+  }
+}

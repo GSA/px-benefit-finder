@@ -1,0 +1,20 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "unit-no-unknown": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "selector-class-pattern": null,
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": [
+          "PublicSans-ExtraBold",
+          "PublicSans-Bold",
+          "PublicSans-Regular",
+          "PublicSans-ExtraLight"
+        ]
+      }
+    ]
+  }
+}

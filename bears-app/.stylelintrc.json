@@ -1,8 +1,0 @@
-{
-  "extends": "stylelint-config-standard-scss",
-  "rules": {
-    "unit-no-unknown": null,
-    "no-descending-specificity": null,
-    "no-duplicate-selectors": null
-  }
-}

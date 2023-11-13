@@ -41,7 +41,6 @@ const BenefitAccordionGroup = ({
    * @return {boolean} returns true or false
    */
   const [isExpandAll, setExpandAll] = useState(false)
-  // const [filterData, setFilterData] = useState(null)
 
   /**
    * a function that returns the string value of our expanded action
@@ -160,11 +159,12 @@ const BenefitAccordionGroup = ({
               : eligibleStatusLabels[2]
 
           const handleHidden =
-            notQualifiedView === false && eligibleStatus !== 'Likely Eligible'
+            notQualifiedView === false &&
+            eligibleStatus !== eligibleStatusLabels[0]
               ? true
               : !!(
                   notQualifiedView === true &&
-                  eligibleStatus === 'Likely Eligible'
+                  eligibleStatus === eligibleStatusLabels[0]
                 )
 
           return (
@@ -178,6 +178,7 @@ const BenefitAccordionGroup = ({
               data-analytics="benefit-accordion"
               data-analytics-content={title}
               hidden={handleHidden}
+              data-testid="benefit"
             >
               <Heading className="benefit-detail-title" headingLevel={4}>
                 {`${agencyPrefix} ${agency.title}`}

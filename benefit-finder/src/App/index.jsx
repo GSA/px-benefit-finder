@@ -13,17 +13,16 @@ import './_index.scss'
 // data and ui content
 import * as en from '../shared/locales/en/en.json'
 import * as es from '../shared/locales/es/es.json'
-// import content from '../shared/api/mock-data/current.js'
 
 /**
  * a functional component that renders our application.
  * @component
  */
-function App({ appContent }) {
+function App({ testAppContent, testQuery }) {
   // we create context state to provide translations for our two languages
   const LanguageContext = createContext({ en, es })
   const sharedToken = 'shared'
-  const windowQuery = window.location.search
+  const windowQuery = testQuery || window.location.search
   const hasQueryParams = windowQuery.includes(sharedToken)
 
   /**
@@ -33,9 +32,24 @@ function App({ appContent }) {
    * @return {state} returns null if not set
    */
   const [content, setContent] = useState(() => {
-    apiCalls.GET.LifeEvent().then(response =>
-      response.data ? setContent(response.data) : setContent(appContent)
-    )
+    if (process.env.NODE_ENV === 'production') {
+      apiCalls.GET.LifeEvent().then(
+        response =>
+          response.status === 200
+            ? setContent(response.data)
+            : setContent(testAppContent) // fallback for storybook
+      )
+    }
+    if (
+      process.env.NODE_ENV === 'development' &&
+      testAppContent === undefined
+    ) {
+      apiCalls.GET.LifeEvent().then(
+        response => response.status === 200 && setContent(response.data)
+      )
+    }
+    // default to test state so we don't collide with component mounting
+    return testAppContent
   })
 
   // set data state
@@ -79,6 +93,7 @@ function App({ appContent }) {
           className={`benefit-finder ${
             step !== 0 && viewResults !== true ? 'form' : ''
           }`}
+          data-testid="app"
         >
           {step === 0 ? (
             <Intro
@@ -90,6 +105,7 @@ function App({ appContent }) {
           ) : viewResults === true ? (
             <ResultsView
               stepDataArray={stepDataArray}
+              relevantBenefits={content?.lifeEventForm?.relevantBenefits}
               data={benfitsArray}
               setBenefitsArray={() => setBenefitsArray()}
               ui={t.resultsView}

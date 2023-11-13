@@ -2,15 +2,6 @@
 
 exports[`StepIndicator renders a match to the previous snapshot 1`] = `
 <div>
-  <div
-    aria-label="progress"
-    className="usa-step-indicator"
-    tabIndex={0}
-  >
-    <ol
-      className="usa-step-indicator__segments"
-    />
-  </div>
   <button
     className=""
     onClick={[Function]}

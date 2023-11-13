@@ -12,6 +12,7 @@
  * @return {boolean} true or false based on the conditional
  */
 export const DateEligibility = ({ selectedValue, conditional }) => {
+  // console.log({ selectedValue, conditional })
   // date values
   // "<01-01-1978"
   // "<2years (the deceased died within the last two years)"
@@ -40,62 +41,76 @@ export const DateEligibility = ({ selectedValue, conditional }) => {
         new Date().getDate()
       )
 
-  const epochConditionalDateOffset = new Date(
-    conditionalDate.getTime() + conditionalDate.getTimezoneOffset() * 60000
-  )
-  // getTime in milliseconds so we can do a comparison
-  const epochConditionalDate = epochConditionalDateOffset.getTime()
-
   // example selected value for date
   // const value = {
   //   year: 2022,
-  //   month: 2,
+  //   month: 2,(month index)
   //   day: 2,
   // }
 
   // calculate selected
   const selectedDate = new window.Date(
-    Date.UTC(selectedValue.year, selectedValue.month, selectedValue.day)
+    Date.UTC(
+      selectedValue.year,
+      selectedValue.month,
+      selectedValue.day,
+      0,
+      0,
+      0
+    )
   )
 
-  const epochSelectedDateOffset = new Date(
-    selectedDate.getTime() + selectedDate.getTimezoneOffset() * 60000
-  )
-
-  const epochSelectedDate = epochSelectedDateOffset.getTime()
-
-  const isDateEligible = (
-    operator,
-    epochSelectedDate,
-    epochConditionalDate
-  ) => {
-    // ;['>', '>=', '<', '<=', '=']
+  const isDateEligible = (operator, conditionalDate, selectedDate) => {
+    // ['>', '>=', '<', '<=', '=']
     // epoch time measures the number of seconds that have elapsed since the start of the Unix epoch on January 1st, 1970, at midnight UTC/GMT, minus the leap seconds.
-    const diff = pattern.test(text)
-      ? epochSelectedDate - epochConditionalDate
-      : epochConditionalDate - epochSelectedDate
 
-    // tests
-    // you are under 18 years
-    // deceased died after may 20th, 2020
-    // you are over 62 years
+    const x = selectedDate
+    const y = new window.Date(
+      Date.UTC(
+        conditionalDate.getUTCFullYear(),
+        conditionalDate.getUTCMonth(),
+        conditionalDate.getUTCDate(),
+        0,
+        0,
+        0
+      )
+    )
 
-    switch (operator.length && operator.join('')) {
-      case '>':
-        return diff > 0
-      case '>=':
-        return diff >= 0
-      case '<':
-        return diff < 0
-      case '<=':
-        return diff <= 0
-      case '=':
-        return diff === 0
-      default:
-        return false
+    if (pattern.test(text) === false) {
+      const diff = y.getTime() - x.getTime()
+
+      switch (operator.length && operator.join('')) {
+        case '>':
+          return diff > 0
+        case '>=':
+          return diff >= 0
+        case '<':
+          return diff < 0
+        case '<=':
+          return diff <= 0
+        case '=':
+          return +diff === 0
+        default:
+          return false
+      }
+    } else {
+      switch (operator.length && operator.join('')) {
+        case '>':
+          return x.getTime() > y.getTime()
+        case '>=':
+          return x.getTime() >= y.getTime()
+        case '<':
+          return x.getTime() < y.getTime()
+        case '<=':
+          return x.getTime() <= y.getTime()
+        case '=':
+          return +x.getTime() === +y.getTime()
+        default:
+          return false
+      }
     }
   }
-  return isDateEligible(operator, epochSelectedDate, epochConditionalDate)
+  return isDateEligible(operator, conditionalDate, selectedDate)
 }
 
 /**
@@ -176,24 +191,38 @@ export async function LifeEvent(lifeEvent) {
     const location = window.location.pathname
     lifeEvent = location.substring(location.lastIndexOf('/') + 1)
   }
-  const response = await fetch(
-    `/sites/default/files/bears/api/${mode}life_event/${language}${lifeEvent}.json`
-  )
-    .then(response => {
-      if (response?.ok) {
-        return response.json()
-      }
-      throw new Error(response?.status)
-    })
-    .then(responseJson => {
-      return responseJson?.data ? responseJson : 'Something went wrong.'
-    })
-    .catch(error => {
-      // eslint-disable-next-line no-console
-      console.log(error)
-      return 'Something went wrong.'
-    })
-  return response
+
+  let fetchPath
+  if (process.env.NODE_ENV === 'production') {
+    const app = document.getElementById('benefit-finder')
+
+    if (app !== null) {
+      const publishedData = app.getAttribute('json-data-file-path')
+      const draftData = app.getAttribute('draft-json-data-file-path')
+      fetchPath = params.get('mode') === 'draft' ? draftData : publishedData
+    }
+  } else {
+    fetchPath = `/sites/default/files/benefit-finder/api/${mode}life-event/${language}${lifeEvent}.json`
+  }
+
+  if (fetchPath !== undefined) {
+    const response = await fetch(fetchPath)
+      .then(response => {
+        if (response?.ok) {
+          return response.json()
+        }
+        throw new Error(response?.status)
+      })
+      .then(responseJson => {
+        return responseJson?.data ? responseJson : 'Something went wrong.'
+      })
+      .catch(error => {
+        // eslint-disable-next-line no-console
+        console.log(error)
+        return 'Something went wrong.'
+      })
+    return response
+  }
 }
 
 /**
@@ -392,7 +421,6 @@ export async function DataDate(
         inputValues[0].selected = true
         return setCurrentData(newData)
       }
-      throw new Error('Date not updated.')
     })
     .catch(error => {
       // eslint-disable-next-line no-console

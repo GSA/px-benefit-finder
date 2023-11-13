@@ -1,10 +1,12 @@
 @use '../shared/styles/colors/index.scss' as color;
 @use '../shared/styles/mixins/_index.scss' as *;
+@use '../shared/styles/sizes/_index.scss' as *;
 
 #benefit-finder {
   html,
   .benefit-finder.form {
-    background-color: color.$marine;
+    font-family: 'Public Sans', sans-serif;
+    background-color: color.$officer-navy;
     height: 100%;
     min-height: 100vh;
   }
@@ -25,13 +27,9 @@
     background-color: color.$officer-navy !important;
   }
 
-  .usa-hint--required {
-    color: color.$dark-medium-grey !important;
-  }
-
   .usa-radio__input:checked + .usa-radio__label::before {
-    background-color: color.$officer-navy;
-    box-shadow: 0 0 0 2px color.$officer-navy;
+    background-color: #005ea2 !important;
+    box-shadow: 0 0 0 2px #005ea2, inset 0 0 0 2px white !important;
   }
 
   .a11y-sr-only {
@@ -51,9 +49,13 @@
 .nav-item-one,
 .nav-item-two {
   &.usa-button {
+    @include important-bold;
+
     background-color: color.$pop-blue !important;
     color: color.$white !important;
-    width: 100% !important;
+
+    // width: 100% !important;
+    width: $button-max-width !important;
   }
 
   &.usa-button:hover {

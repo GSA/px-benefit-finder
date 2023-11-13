@@ -2,10 +2,28 @@ const content = `{
   "data": {
     "lifeEventForm": {
       "id": "death",
-      "timeEstimate": "60 minutes",
+      "timeEstimate": "2-5 minutes",
       "titlePrefix": "",
-      "title": "NEW Find federal benefits after the loss of a loved one",
-      "summary": "<p>Find government benefits after the loss of a loved one including funeral, housing, and education help.</p>",
+      "title": "Benefit finder: death of a loved one",
+      "summary": "<p><strong>Losing a loved one is hard.</strong> Finding help shouldn’t be.</p><p>Screen the federal benefits you may be eligible for.</p>",
+      "relevantBenefits": [
+        {
+          "lifeEvent": {
+            "title": "Benefit finder: retirement",
+            "body": "<p>Find out what financial, health care, and other benefits may be available as you enter this next phase of your life.</p>",
+            "link": "/bears/life_event/retirement",
+            "cta": "Call to action (retirement)"
+          }
+        },
+        {
+          "lifeEvent": {
+            "title": "Benefit finder: disability",
+            "body": "<p>Whether you are newly disabled or have a lifelong challenge, assistance may be available, including financial help.</p>",
+            "link": "/bears/life_event/disability",
+            "cta": "Call to action (disability)"
+          }
+        }
+      ],
       "sectionsEligibilityCriteria": [
         {
           "section": {
@@ -17,7 +35,7 @@ const content = `{
                   "criteriaKey": "applicant_date_of_birth",
                   "legend": "Date of birth:",
                   "required": "TRUE",
-                  "hint": "Applicant's DOB: 1969/08/15",
+                  "hint": "",
                   "inputs": [
                     {
                       "inputCriteria": {
@@ -43,7 +61,7 @@ const content = `{
                 "fieldset": {
                   "criteriaKey": "applicant_relationship_to_the_deceased",
                   "legend": "Applicant’s relationship to the deceased:",
-                  "required": "FALSE",
+                  "required": "TRUE",
                   "hint": "",
                   "inputs": [
                     {
@@ -86,7 +104,7 @@ const content = `{
                 "fieldset": {
                   "criteriaKey": "applicant_marital_status",
                   "legend": "Marital Status",
-                  "required": "FALSE",
+                  "required": "TRUE",
                   "hint": "",
                   "inputs": [
                     {
@@ -213,37 +231,6 @@ const content = `{
                   ],
                   "children": []
                 }
-              },
-              {
-                "fieldset": {
-                  "criteriaKey": "applicant_funeral_reimbursement",
-                  "legend": "Did you pay for funeral or burial expenses?",
-                  "required": "FALSE",
-                  "hint": "",
-                  "inputs": [
-                    {
-                      "inputCriteria": {
-                        "id": "applicant_funeral_reimbursement",
-                        "type": "Radio",
-                        "name": "applicant_funeral_reimbursment",
-                        "label": "Did any organization or government agency reimburse you for any funeral or burial expenses?",
-                        "hasChild": "FALSE",
-                        "childDependencyOption": "",
-                        "values": [
-                          {
-                            "option": "Yes",
-                            "value": "Yes"
-                          },
-                          {
-                            "option": "No",
-                            "value": "No"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "children": []
-                }
               }
             ]
           }
@@ -266,33 +253,6 @@ const content = `{
                         "type": "Date",
                         "name": "deceased_date_of_death",
                         "label": "Date of death",
-                        "hasChild": "FALSE",
-                        "childDependencyOption": "",
-                        "values": [
-                          {
-                            "default": "",
-                            "value": {}
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "children": []
-                }
-              },
-              {
-                "fieldset": {
-                  "criteriaKey": "deceased_date_of_funeral",
-                  "legend": "Date of the funeral",
-                  "required": "FALSE",
-                  "hint": "",
-                  "inputs": [
-                    {
-                      "inputCriteria": {
-                        "id": "deceased_date_of_funeral",
-                        "type": "Date",
-                        "name": "deceased_date_of_funeral",
-                        "label": "Date of funeral",
                         "hasChild": "FALSE",
                         "childDependencyOption": "",
                         "values": [
@@ -465,7 +425,7 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "deceased_died_of_COVID",
-                  "legend": "Did the person die of COVID-19?",
+                  "legend": "Was the person’s death COVID-19 related?",
                   "required": "FALSE",
                   "hint": "",
                   "inputs": [
@@ -474,7 +434,7 @@ const content = `{
                         "id": "deceased_died_of_COVID",
                         "type": "Radio",
                         "name": "deceased_died_of_COVID",
-                        "label": "Did the person die of COVID-19?",
+                        "label": "Was the person’s death COVID-19 related?",
                         "hasChild": "FALSE",
                         "childDependencyOption": "",
                         "values": [
@@ -570,14 +530,14 @@ const content = `{
                         {
                           "fieldset": {
                             "criteriaKey": "deceased_military_death_circumstance",
-                            "legend": "Which option applies to the deceased?",
+                            "legend": "Which option best applies to the deceased?",
                             "required": "FALSE",
                             "hint": "",
                             "inputs": [
                               {
                                 "inputCriteria": {
                                   "id": "deceased_military_death_circumstance",
-                                  "type": "Radio",
+                                  "type": "Select",
                                   "name": "deceased_military_death_circumstance",
                                   "label": "Which option applies to the deceased?",
                                   "hasChild": "FALSE",
@@ -660,7 +620,7 @@ const content = `{
         "benefit": {
           "title": "Burial benefits",
           "summary": "<p>Burial and transport assistance for the deceased, and travel support for the spouse, children, and immediate family members of the service member.</p>",
-          "SourceLink": "https://www.dcms.uscg.mil/Portals/10/CG-1/PSC/PSD/docs/SurvivorsGuide2015.pdf?ver=2017-03-24-132033-397",
+          "SourceLink": "https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/",
           "SourceIsEnglish": "TRUE",
           "agency": {
             "title": "Department of Defense (DOD)",
@@ -669,6 +629,9 @@ const content = `{
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -682,14 +645,14 @@ const content = `{
               "criteriaKey": "deceased_service_status",
               "label": "The service status of the deceased is: active-duty member",
               "acceptableValues": [
-                "Active-duty member"
+                "Active-duty service member"
               ]
             },
             {
               "criteriaKey": "deceased_military_death_circumstance",
               "label": "One of the following applies to the deceased: died on active duty",
               "acceptableValues": [
-                "Died on active duty"
+                "Died while on active duty"
               ]
             },
             {
@@ -775,12 +738,12 @@ const content = `{
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
               "acceptableValues": [
-                "The deceased served in the active military"
+                "Yes"
               ]
             },
             {
               "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves ",
+              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
               "acceptableValues": [
                 "Active-duty service member",
                 "Discharged under conditions other than dishonorable",
@@ -802,7 +765,7 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Annuity for Certain Military Surviving Spouses",
+          "title": "Annuity for certain military surviving spouses",
           "summary": "<p>Financial support for surviving spouses of members of the uniformed services.</p>",
           "SourceLink": "https://militarypay.defense.gov/Benefits/",
           "SourceIsEnglish": "TRUE",
@@ -813,6 +776,9 @@ const content = `{
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -849,7 +815,7 @@ const content = `{
       {
         "benefit": {
           "title": "Burial in VA national cemetery",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Veterans, service members, and some family members may be eligible for burial in VA national cemeteries.</p>",
+          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Burial in VA national cemeteries for eligible veterans, service members, and some family members.</p>",
           "SourceLink": "https://www.va.gov/burials-memorials/eligibility/",
           "SourceIsEnglish": "TRUE",
           "agency": {
@@ -966,6 +932,9 @@ const content = `{
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_died_of_COVID",
@@ -985,7 +954,7 @@ const content = `{
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died after May 20th, 2020",
               "acceptableValues": [
-                ">01-20-2020 (died after May 20th, 2020)"
+                ">01-20-2020"
               ]
             },
             {
@@ -1022,9 +991,9 @@ const content = `{
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
-              "label": "Did the deceased serve in the active military, naval, or air service?",
+              "label": "The deceased served in the active military",
               "acceptableValues": [
-                "You served in the active military"
+                "Yes"
               ]
             },
             {
@@ -1138,17 +1107,20 @@ const content = `{
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
-              "label": "Did the deceased serve in the active military, naval, or air service?",
+              "label": "The deceased served in the active military",
               "acceptableValues": [
                 "Yes"
               ]
             },
             {
               "criteriaKey": "deceased_service_status",
-              "label": "What was the service status of the deceased?",
+              "label": "The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable",
               "acceptableValues": [
                 "Active-duty service member",
                 "Discharged under conditions other than dishonorable"
@@ -1156,7 +1128,7 @@ const content = `{
             },
             {
               "criteriaKey": "deceased_military_death_circumstance",
-              "label": "Which option applies to the deceased?",
+              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation",
               "acceptableValues": [
                 "Died while on active duty",
                 "Died as a result of a service-related disability/illness",
@@ -1165,7 +1137,7 @@ const content = `{
             },
             {
               "criteriaKey": "applicant_marital_status",
-              "label": "Marital status",
+              "label": "Marital status: unmarried or widowed",
               "acceptableValues": [
                 "Unmarried",
                 "Widowed"
@@ -1173,7 +1145,7 @@ const content = `{
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Applicant's relationship to the deceased:",
+              "label": "Applicant's relationship to the deceased: spouse",
               "acceptableValues": [
                 "Spouse"
               ]
@@ -1239,7 +1211,7 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Financial Assistance and Social Services (FASS)",
+          "title": "Financial Assistance and Social Services (FASS) for deceased",
           "summary": "<p>Assistance with burial expenses of deceased indigent Indians who do not have resources for funeral expenses.</p>",
           "SourceLink": "https://www.bia.gov/bia/ois/dhs/financial-assistance",
           "SourceIsEnglish": "FALSE",
@@ -1250,6 +1222,9 @@ const content = `{
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -1272,7 +1247,7 @@ const content = `{
       {
         "benefit": {
           "title": "Home loan program for survivors",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->VA-backed home loan to surviving spouses of veterans.</p>",
+          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->A VA-backed home loan to surviving spouses of veterans.</p>",
           "SourceLink": "https://www.va.gov/housing-assistance/home-loans/surviving-spouse/",
           "SourceIsEnglish": "TRUE",
           "agency": {
@@ -1282,6 +1257,9 @@ const content = `{
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -1293,7 +1271,7 @@ const content = `{
             },
             {
               "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is:",
+              "label": "The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable",
               "acceptableValues": [
                 "Active-duty service member",
                 "Discharged under conditions other than dishonorable"
@@ -1385,6 +1363,9 @@ const content = `{
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
@@ -1397,7 +1378,7 @@ const content = `{
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died within the last two years",
               "acceptableValues": [
-                "<2years (the deceased died within the last two years)"
+                "<2years"
               ]
             },
             {
@@ -1474,9 +1455,9 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Public Safety Officers' Death Benefits",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->A one-time benefit for survivors of law enforcement officers, firefighters, and other first responders whose deaths were the result of an injury sustained in the line of duty.</p>",
-          "SourceLink": "https://psob.bja.ojp.gov/PSOB_FactSheet2019.pdf",
+          "title": "Public safety officers' death benefits",
+          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->A one-time benefit for survivors of law enforcement officers, firefighters, and other first responders whose deaths were related to an injury sustained during the line of duty.</p>",
+          "SourceLink": "https://bja.ojp.gov/program/psob/benefits",
           "SourceIsEnglish": "TRUE",
           "agency": {
             "title": "Department of Justice (DOJ)",
@@ -1485,6 +1466,9 @@ const content = `{
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -1509,7 +1493,7 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Public Safety Officers' Educational Assistance Program",
+          "title": "Public safety officers' Educational Assistance Program",
           "summary": "<p>Financial assistance for higher education to spouses and children of police, fire, and emergency public safety officers killed in the line of duty.</p>",
           "SourceLink": "https://psob.bja.ojp.gov/PSOB_Education2018.pdf",
           "SourceIsEnglish": "TRUE",
@@ -1520,6 +1504,9 @@ const content = `{
           },
           "tags": [
             "Death of a loved one"
+          ],
+          "lifeEvents": [
+            "Death"
           ],
           "eligibility": [
             {
@@ -1543,8 +1530,8 @@ const content = `{
       {
         "benefit": {
           "title": "Survivor benefit plan",
-          "summary": "<p>Up to 55% of a service member's retired pay for survivors of active duty service members and some retired and reserve members.</p>",
-          "SourceLink": "https://militarypay.defense.gov/Benefits/Survivor-Benefit-Program/",
+          "summary": "<p>Offers up to 55% of a service member's retired pay for survivors of active duty service members and some retired and reserve members.</p>",
+          "SourceLink": "https://bja.ojp.gov/program/psob/benefits",
           "SourceIsEnglish": "TRUE",
           "agency": {
             "title": "Department of Defense (DOD)",
@@ -1593,7 +1580,7 @@ const content = `{
       {
         "benefit": {
           "title": "Survivors benefits for child",
-          "summary": "<p>Social Security survivors benefits paid to a child, stepchild, grandchild, or adopted child of eligible workers.</p>",
+          "summary": "<p>Offers Social Security survivors benefits to a child, stepchild, grandchild, or adopted child of eligible workers.</p>",
           "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h4",
           "SourceIsEnglish": "FALSE",
           "agency": {
@@ -1688,7 +1675,7 @@ const content = `{
             },
             {
               "criteriaKey": "applicant_disability",
-              "label": "You have a disability",
+              "label": "You have a disability or impairment",
               "acceptableValues": [
                 "Yes"
               ]
@@ -1874,7 +1861,7 @@ const content = `{
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
-              "label": "Did the deceased ever work and pay Social Security taxes on their earnings?",
+              "label": "The deceased worked and paid Social Security taxes",
               "acceptableValues": [
                 "Yes"
               ]
@@ -1903,7 +1890,7 @@ const content = `{
             },
             {
               "criteriaKey": "applicant_disability",
-              "label": "You have a disability",
+              "label": "You have a disability or impairment",
               "acceptableValues": [
                 "Yes"
               ]
@@ -1992,6 +1979,9 @@ const content = `{
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
@@ -2023,7 +2013,7 @@ const content = `{
             },
             {
               "criteriaKey": "applicant_disability",
-              "label": "You have a disability",
+              "label": "You have a disability or impairment",
               "acceptableValues": [
                 "Yes"
               ]
@@ -2106,12 +2096,15 @@ const content = `{
           "tags": [
             "Death of a loved one"
           ],
+          "lifeEvents": [
+            "Death"
+          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died within the last two years",
               "acceptableValues": [
-                "<2years (The deceased died within the last two years.)"
+                "<2years"
               ]
             },
             {
@@ -2254,46 +2247,6 @@ const content = `{
                 "Child",
                 "Parent",
                 "Other family member"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Coal Mine Workers' Compensation (black lung benefits)",
-          "summary": "<p>Compensation to coal miners who were totally disabled by black lung disease (pneumoconiosis) or surviving spouses of miners whose deaths are attributable to this disease.&nbsp;</p><p>Also provides medical coverage for treatment of related lung diseases.</p>",
-          "SourceLink": "https://www.dol.gov/agencies/owcp/dcmwc/filing_guide_miner",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Department of Labor (DOL)",
-            "summary": "<p>Promotes and improves the welfare, working conditions, opportunities, benefits and rights of wage earners, job seekers, and retirees of the United States.</p>",
-            "lede": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Promotes and improves the welfare, working conditions, opportunities, benefits and rights of wage earners, job seekers, and retirees of the United States.</p>"
-          },
-          "tags": [
-            "Disability benefits",
-            "Retirement"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "applicant_disability",
-              "label": "Do you have a physical or mental impairment (including an emotional or learning disability)?",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_ability_to_work",
-              "label": "You are unable to work for a year or more because of a disability or your disability is expected to result in death",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_miner",
-              "label": "You worked in the coal mining industry and suffer from an illness caused by black lung disease (pneumoconiosis)",
-              "acceptableValues": [
-                "Yes"
               ]
             }
           ]

@@ -2,7 +2,7 @@ version: 2.1
 
 # Define the jobs we want to run for this project
 jobs:
-  build_and_deploy:
+  build_and_deploy_dev:
     machine:
       image: ubuntu-2004:202107-02
 
@@ -27,7 +27,7 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
-            mv usagov_bears usagov-2021/web/modules/custom
+            mv usagov_benefit_finder usagov-2021/web/modules/custom
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
 
       - run: 
@@ -43,6 +43,7 @@ jobs:
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
             sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
+            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -78,9 +79,19 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
-            curl -v -L -o cf-cli_amd64.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github"
-            sudo dpkg -i cf-cli_amd64.deb
+            if [ "$(whoami)" != "root" ]; then
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              sudo apt-get update
+              sudo apt-get install -y cf8-cli
+            else
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              apt-get update
+              apt-get install -y cf8-cli
+            fi
             cf -v
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
 
       - run:
           name: Deploy the app to cloud.gov
@@ -94,7 +105,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 30
+            sleep 60
 
       - run:
           name: Enable benefit-finder module
@@ -103,28 +114,173 @@ jobs:
             cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
             cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0 && \
                                   /var/www/vendor/bin/drush pm:uninstall usagov_login && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_bears_block && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_bears_content && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_bears_api && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_bears && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_bears_page && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_benefit_finder && \
+                                  /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page && \
                                   /var/www/vendor/bin/drush cr && \
-                                  cd ../var/www/web/sites/default/files && \
-                                  mkdir -p bears/api/life_event && \
-                                  chown -R nginx:nginx bears && \
-                                  cd bears/api/life_event && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile  
-                                  curl http://127.0.0.1:8080/bears/api/life-event/death/jsonfile && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_death/jsonfile && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile && \           
-                                  curl http://127.0.0.1:8080/bears/api/life-event/death/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/retirement/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/disability/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_retirement/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_death/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/bears/api/life-event/es_disability/jsonfile?mode=draft && \ 
+                                  cd ../var/www/web/ && \
+                                  pwd && ls -l && \
+                                  mkdir -p content/sync && \
+                                  chown -R nginx:nginx content && \
+                                  pwd && ls -l && \
+                                  cd sites/default/files && \
+                                  mkdir -p benefit-finder/api/life-event && \
+                                  chown -R nginx:nginx benefit-finder && \
+                                  cd benefit-finder/api/life-event && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile  
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile && \           
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile?mode=draft && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile?mode=draft && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile?mode=draft && \ 
+                                  ls -l && \
+                                  /var/www/vendor/bin/drush cr"
+
+  build_and_deploy_main:
+    machine:
+      image: ubuntu-2004:202107-02
+
+    steps:
+      - run:
+          name: Cloning the Repo and initiating the Submodule
+          command: |
+            echo "cloning the repo and initiating the usagov-2021 submodule"
+            git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
+            cd px-benefit-finder
+            git submodule init
+            git submodule update
+            cd usagov-2021
+            git checkout prod
+
+
+      - run:
+          name: Moving the benefit-finder app into usagov-2021 module
+          command: |
+            cd px-benefit-finder
+            bash ./mv-benefit-finder-app.sh
+            echo ".................."
+            echo "moving the benefit-finder-app module into the usagov-2021 directory"
+            mv usagov_benefit_finder usagov-2021/web/modules/custom
+            mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
+
+      - run: 
+          name: Pre-docker-build configurations
+          command: |
+            cd px-benefit-finder/usagov-2021
+            mv .docker/Dockerfile-cms .
+            sed -i 's/80/8080/g' Dockerfile-cms  
+            sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
+            sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
+            sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
+            sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
+            sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
+            sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
+            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
+            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
+            cat web/sites/default/settings.php
+
+      - run: 
+          name: Building, tagging, pushing the Docker Image
+          command: |
+            export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
+            export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
+            cd px-benefit-finder/usagov-2021
+            docker build -f ./Dockerfile-cms -t "$DOCKERREPO:$IMAGE_TAG" .
+            echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
+            docker push "$DOCKERREPO:$IMAGE_TAG"
+            docker logout
+            
+
+      - run:
+          name: Injecting container name to the manifest.yml
+          command: |
+            echo "......"
+            echo $CIRCLE_BRANCH
+            echo "......"
+            export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
+            export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
+            cd px-benefit-finder/usagov-2021
+            sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
+            sed -i "s#^    - secauthsecrets##" manifest.yml
+            sed -i "s#- name: cms#- name: benefit-finder-cms-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
+            sed -i "s#^    - database#    - benefit-finder-mysql-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i "s#^    - dbstorage##" manifest.yml
+            cat manifest.yml
+
+      - run:
+          name: Setup CF CLI
+          command: |
+            if [ "$(whoami)" != "root" ]; then
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              sudo apt-get update
+              sudo apt-get install -y cf8-cli
+            else
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              apt-get update
+              apt-get install -y cf8-cli
+            fi
+            cf -v
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+
+      - run:
+          name: Deploy the app to cloud.gov
+          command: |
+            export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
+            export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+            cf services
+            cd px-benefit-finder/usagov-2021
+            echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
+            CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
+            docker logout
+            sleep 60
+
+      - run:
+          name: Enable benefit-finder module
+          command: |
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0"
+            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:uninstall usagov_login || exit 0"
+            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content"
+            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api"
+            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder"
+            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page"
+            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush cr"
+            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "cd ../var/www/web/ && \
+                                  pwd && ls -l && \
+                                  mkdir -p content/sync && \
+                                  chown -R nginx:nginx content && \
+                                  pwd && ls -l && \
+                                  cd sites/default/files && \
+                                  mkdir -p benefit-finder/api/life-event && \
+                                  chown -R nginx:nginx benefit-finder && \
+                                  cd benefit-finder/api/life-event && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile  
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile && \           
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile?mode=draft  && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile?mode=draft && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile?mode=draft && \
+                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile?mode=draft && \ 
                                   ls -l && \
                                   /var/www/vendor/bin/drush cr"
   component-library:
@@ -191,14 +347,18 @@ workflows:
 # This workflow only gets triggered when there is a push to `main` branch.
   cms_build_and_deploy_workflow:
     jobs:
-      - build_and_deploy:
+      - build_and_deploy_dev:
+          filters:
+            branches:
+              only: 
+                - dev
+      - build_and_deploy_main:
           filters:
             branches:
               only: 
                 - main
-                - dev
 
-  scheduled_cms_build_and_deploy_workflow:
+  scheduled_cms_build_and_deploy_workflow_main:
     triggers:
       - schedule:
           cron: '0 7 * * *'
@@ -206,9 +366,19 @@ workflows:
             branches:
               only:
                 - main
+    jobs:
+      - build_and_deploy_main
+
+  scheduled_cms_build_and_deploy_workflow_dev:
+    triggers:
+      - schedule:
+          cron: '0 6 * * *'
+          filters:
+            branches:
+              only:
                 - dev
     jobs:
-      - build_and_deploy
+      - build_and_deploy_dev
 
   create-component-library-workflow:
     jobs:

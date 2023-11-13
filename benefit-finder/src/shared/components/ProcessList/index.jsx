@@ -11,7 +11,7 @@ const ProcessList = ({ steps }) => {
               key={`process-item-${index}`}
               className="usa-process-list__item"
             >
-              <h4 className="usa-process-list__heading">{step.title}</h4>
+              <h3 className="usa-process-list__heading">{step.title}</h3>
             </li>
           )
         })}

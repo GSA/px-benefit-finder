@@ -14,8 +14,13 @@ const Chevron = ({ heading, description }) => {
   return (
     <div className="chevron">
       <div className="grid-container">
-        <Heading headingLevel={1}>{heading}</Heading>
-        <div dangerouslySetInnerHTML={createMarkup(description)} />
+        <Heading className="chevron-heading" headingLevel={1}>
+          {heading}
+        </Heading>
+        <div
+          className="chevron-description"
+          dangerouslySetInnerHTML={createMarkup(description)}
+        />
       </div>
     </div>
   )

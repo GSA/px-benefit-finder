@@ -10,7 +10,7 @@ id: node.bears_life_event.field_draft_json_data_file
 field_name: field_draft_json_data_file
 entity_type: node
 bundle: bears_life_event
-label: 'Draft Json data file'
+label: 'Draft json data file'
 description: ''
 required: false
 translatable: false

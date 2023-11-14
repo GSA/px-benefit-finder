@@ -4,7 +4,9 @@ dependencies:
   config:
     - field.field.node.bears_life_event.field_b_id
     - field.field.node.bears_life_event.field_draft_json_data_file
+    - field.field.node.bears_life_event.field_draft_json_data_file_path
     - field.field.node.bears_life_event.field_json_data_file
+    - field.field.node.bears_life_event.field_json_data_file_path
     - field.field.node.bears_life_event.field_language_toggle
     - field.field.node.bears_life_event.field_summary
     - node.type.bears_life_event
@@ -33,17 +35,33 @@ content:
     third_party_settings: {  }
   field_draft_json_data_file:
     type: file_generic
-    weight: 26
+    weight: 16
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
+  field_draft_json_data_file_path:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_json_data_file:
     type: file_generic
-    weight: 13
+    weight: 15
     region: content
     settings:
       progress_indicator: throbber
+    third_party_settings: {  }
+  field_json_data_file_path:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_language_toggle:
     type: entity_reference_autocomplete

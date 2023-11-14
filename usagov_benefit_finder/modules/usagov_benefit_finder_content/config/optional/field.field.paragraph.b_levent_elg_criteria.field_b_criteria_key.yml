@@ -12,7 +12,7 @@ bundle: b_levent_elg_criteria
 label: 'Criteria Key'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

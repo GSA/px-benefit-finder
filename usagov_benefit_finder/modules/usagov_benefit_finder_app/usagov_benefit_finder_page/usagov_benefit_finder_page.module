@@ -56,7 +56,7 @@ function usagov_benefit_finder_page_preprocess_page(&$variables) {
   if ($node && $node->bundle() == "bears_life_event") {
     if (\Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
       $variables['json_data_file_path'] = $node->get('field_json_data_file_path')->value;
-      $variables['draft_json_data_file_path'] = $node->get('field_draft_json_data_file')->value;
+      $variables['draft_json_data_file_path'] = $node->get('field_draft_json_data_file_path')->value;
     }
   }
 }

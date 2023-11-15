@@ -21,17 +21,24 @@ jobs:
       with:
         ref: release
 
+    - name: Set Beta Version Tag
+      run: |
+        TAG_NAME="v1.0.0-beta.${{ github.run_number }}"
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }} # This token is provided by Actions, you do not need to create your own token
       with:
-        tag_name: ${{ github.ref }}
+        tag_name: "v0.1.0-beta.${{ github.run_number }}"
         release_name: Release ${{ github.ref }}
         body: |
           Changes in this Release
           - First Change
           - Second Change
-        draft: false
-        prerelease: false
+        draft: true
+        prerelease: true
+

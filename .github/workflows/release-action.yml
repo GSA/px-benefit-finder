@@ -25,7 +25,6 @@ jobs:
       run: |
         pwd
         ls -l
-        cd px-benefit-finder/px-benefit-finder
         bash ./mv-benefit-finder-app.sh
         ls -l
 

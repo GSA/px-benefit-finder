@@ -24,10 +24,11 @@ jobs:
     - name: Build benefit-finder module
       run: |
         pwd
-        cd px-benefit-finder
+        ls -l
+        cd px-benefit-finder/px-benefit-finder
         bash ./mv-benefit-finder-app.sh
         ls -l
-        
+
 
     # - name: Set Beta Version Tag
     #   run: |

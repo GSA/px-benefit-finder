@@ -6,12 +6,9 @@ on:
       tag_name: 
         description: "What is the tag you would like to publish?"
         required: true
-      draft:
-        description: "If you'd like to draft this release enter `--draft` at below area:"
-        required: false
       prerelease:
-        description: "If you'd like to publish this as prerelease, enter  `--prerelease` at below area:"
-        required: false       
+        description: "Is this a prerelease? If yes, enter `true` below if not leave blank"
+        required: false   
 
     
 permissions:
@@ -52,15 +49,18 @@ jobs:
       id: set_env_vars
       run: |
         echo "PRERELEASE=${{ github.event.inputs.prerelease }}" >> $GITHUB_ENV
-        echo "DRAFT=${{ github.event.inputs.draft }}" >> $GITHUB_ENV
       
     - name: Create release
       env:
         GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
         PRERELEASE: ${{ env.PRERELEASE }}
-        DRAFT: ${{ env.DRAFT }}
       run: |
-        gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release $([ "${PRERELEASE}" == "true" ] && echo "--prerelease") $([ "${DRAFT}" == "true" ] && echo "--draft") --generate-notes 
+
+        if [[ "${PRERELEASE}" == "true" ]]; then
+          gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --prerelease --generate-notes
+        else
+          gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --generate-notes
+        fi
 
         
 

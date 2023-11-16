@@ -40,7 +40,7 @@ jobs:
     - name: Set and push Version Tag
       run: |
         git branch --show-current
-        TAG_NAME=${{ github.event.inputs.tag_name }}
+        TAG_NAME="${{ github.event.inputs.tag_name }}"
         # TAG_NAME="v0.1.0-beta.${{ github.run_number }}"
         git tag $TAG_NAME
         git push origin $TAG_NAME
@@ -55,7 +55,7 @@ jobs:
         GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
         PRERELEASE: ${{ env.PRERELEASE }}
       run: |
-        export TAG_NAME= ${{ github.event.inputs.tag_name }}
+        export TAG_NAME= "${{ github.event.inputs.tag_name }}"
         gh release create "Release ${TAG_NAME}" *.tar.gz --target release --prerelease --generate-notes
 
 # if [ "${PRERELEASE}" == "true" ]; then

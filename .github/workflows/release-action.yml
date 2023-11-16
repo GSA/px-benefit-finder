@@ -35,7 +35,7 @@ jobs:
 
     - name: Compress the module
       run: |
-        tar -cvzf "benefit-finder-v0.1.0-beta.${{ github.run_number }}.tar.gz" usagov_benefit_finder
+        tar -cvzf "benefit-finder-${{ github.event.inputs.tag_name }}.${{ github.run_number }}.tar.gz" usagov_benefit_finder
         ls -l
 
     - name: Set and push Version Tag

@@ -2,10 +2,10 @@ name: Custom create release action
 
 on:
   workflow_dispatch:
-  push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+  # push:
+  #   # Sequence of patterns matched against refs/tags
+  #   tags:
+  #     - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
     
 permissions:
   issues: write
@@ -43,7 +43,7 @@ jobs:
         repo_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
         automatic_release_tag: "v0.1.0-beta.${{ github.run_number }}"
         prerelease: true
-        title: "Development Build"
+        title: "v0.1.0-beta.${{ github.run_number }} Release"
         files: |         
           *.tar.gz
 

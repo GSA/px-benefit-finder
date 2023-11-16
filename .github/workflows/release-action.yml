@@ -24,9 +24,9 @@ jobs:
     - name: Build benefit-finder module
       run: |
         pwd
-        ls -l
+        ls -l usagov_benefit_finder/modules/
         bash ./mv-benefit-finder-app.sh
-        ls -l
+        ls -l usagov_benefit_finder/modules/
 
 
     # - name: Set Beta Version Tag

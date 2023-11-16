@@ -13,10 +13,6 @@ on:
         description: "If you'd like to publish this as prerelease, enter  `--prerelease` at below area:"
         required: false       
 
-  # push:
-  #   # Sequence of patterns matched against refs/tags
-  #   tags:
-  #     - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
     
 permissions:
   issues: write
@@ -51,12 +47,22 @@ jobs:
         # TAG_NAME="v0.1.0-beta.${{ github.run_number }}"
         git tag $TAG_NAME
         git push origin $TAG_NAME
+
+    - name: Set Environment Variables
+      id: set_env_vars
+      run: |
+        echo "PRERELEASE=${{ github.event.inputs.prerelease }}" >> $GITHUB_ENV
+        echo "DRAFT=${{ github.event.inputs.draft }}" >> $GITHUB_ENV
       
     - name: Create release
       env:
         GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
       run: |
-        gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release ${{ github.event.inputs.prerelease }} ${{ github.event.inputs.draft }} --generate-notes 
+        gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz \
+        --target release \
+        $([[ "${PRERELEASE}" == "true" ]] && echo "--prerelease") \
+        $([[ "${DRAFT}" == "true" ]] && echo "--draft") \
+        --generate-notes 
 
         
 

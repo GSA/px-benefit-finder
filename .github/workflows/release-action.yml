@@ -55,7 +55,7 @@ jobs:
         GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
         PRERELEASE: ${{ env.PRERELEASE }}
       run: |
-        gh release create "Release ${TAG_NAME}" *.tar.gz --target release --prerelease --generate-notes
+        gh release create "Release ${TAG_NAME}" *.tar.gz --target release --draft --prerelease --generate-notes
 
 # if [ "${PRERELEASE}" == "true" ]; then
   # gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --prerelease --generate-notes

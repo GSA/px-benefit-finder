@@ -3,7 +3,7 @@ name: Custom create release action
 on:
   workflow_dispatch:
     inputs:
-      tag-name: 
+      tag_name: 
         description: "What is the tag you would like to publish?"
         required: true
       prerelease:
@@ -34,13 +34,13 @@ jobs:
 
     - name: Compress the module
       run: |
-        tar -cvzf "benefit-finder-${{ github.event.inputs.tag-name }}.${{ github.run_number }}.tar.gz" usagov_benefit_finder
+        tar -cvzf "benefit-finder-${{ github.event.inputs.tag_name }}.${{ github.run_number }}.tar.gz" usagov_benefit_finder
         ls -l
 
     - name: Set and push Version Tag
       run: |
         git branch --show-current
-        TAG_NAME=${{ github.event.inputs.tag-name }}
+        TAG_NAME=${{ github.event.inputs.tag_name }}
         # TAG_NAME="v0.1.0-beta.${{ github.run_number }}"
         git tag $TAG_NAME
         git push origin $TAG_NAME
@@ -55,15 +55,14 @@ jobs:
         GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
         PRERELEASE: ${{ env.PRERELEASE }}
       run: |
-        gh release create "Release ${{ github.event.inputs.tag-name }}" *.tar.gz --target release --prerelease --generate-notes
+        gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --prerelease --generate-notes
 
-        # if [ "${PRERELEASE}" == "true" ]; then
-        #   gh release create "Release ${{ github.event.inputs.tag-name }}" *.tar.gz --target release --prerelease --generate-notes
-        # else
-        #   gh release create "Release ${{ github.event.inputs.tag-name }}" *.tar.gz --target release --generate-notes
-        # fi
-
-        # gh release create "Release ${{ github.event.inputs.tag-name }}" *.tar.gz --target release ${{ github.event.inputs.prerelease }} ${{ github.event.inputs.draft }} --generate-notes
+# if [ "${PRERELEASE}" == "true" ]; then
+  # gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --prerelease --generate-notes
+# else
+  # gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --generate-notes
+# 
+# gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release ${{ github.event.inputs.prerelease }} ${{ github.event.inputs.draft }} --generate-notes
 
         
 

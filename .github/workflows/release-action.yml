@@ -57,6 +57,8 @@ jobs:
     - name: Create release
       env:
         GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
+        PRERELEASE: ${{ env.PRERELEASE }}
+        DRAFT: ${{ env.DRAFT }}
       run: |
         gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz \
         --target release \

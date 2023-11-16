@@ -60,11 +60,7 @@ jobs:
         PRERELEASE: ${{ env.PRERELEASE }}
         DRAFT: ${{ env.DRAFT }}
       run: |
-        gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz \
-        --target release \
-        $([[ "${PRERELEASE}" == "true" ]] && echo "--prerelease") \
-        $([[ "${DRAFT}" == "true" ]] && echo "--draft") \
-        --generate-notes 
+        gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release $([ "${PRERELEASE}" == "true" ] && echo "--prerelease") $([ "${DRAFT}" == "true" ] && echo "--draft") --generate-notes 
 
         
 

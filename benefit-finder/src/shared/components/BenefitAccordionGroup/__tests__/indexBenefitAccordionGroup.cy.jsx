@@ -23,7 +23,7 @@ describe('BenefitAccordionGroup component tests', () => {
   it('Validate clicking Expand all opens all accordions', () => {
     cy.mount(<ExpandAll />)
     cy.get('.expand-all').click()
-    cy.get('.expand-all').should('contain.text', 'Collapse all')
+    cy.get('.expand-all').should('contain.text', 'Close all')
     cy.get('.usa-accordion__button').each(accordion => {
       cy.wrap(accordion).should('have.attr', 'aria-expanded', 'true')
     })
@@ -33,7 +33,7 @@ describe('BenefitAccordionGroup component tests', () => {
     cy.mount(<ExpandAll />)
     cy.get('.expand-all').click()
     cy.get('.expand-all').click()
-    cy.get('.expand-all').should('contain.text', 'Expand all')
+    cy.get('.expand-all').should('contain.text', 'Open all')
     cy.get('.usa-accordion__button').each(accordion => {
       cy.wrap(accordion).should('have.attr', 'aria-expanded', 'false')
     })

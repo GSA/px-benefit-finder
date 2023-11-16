@@ -56,7 +56,7 @@ jobs:
         PRERELEASE: ${{ env.PRERELEASE }}
       run: |
 
-        if [[ "${PRERELEASE}" == "true" ]]; then
+        if [ "${PRERELEASE}" == "true" ]; then
           gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --prerelease --generate-notes
         else;
           gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --generate-notes

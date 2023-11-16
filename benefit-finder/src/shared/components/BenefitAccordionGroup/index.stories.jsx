@@ -6,6 +6,7 @@ const { data } = JSON.parse(content)
 const { benefits } = data
 const b = [benefits[0], benefits[1]]
 const entryKey = Object.keys(b[0])
+const { resultsView } = en
 
 export default {
   component: BenefitAccordionGroup,
@@ -13,7 +14,7 @@ export default {
   args: {
     data: b,
     entryKey: entryKey[0],
-    ui: en.resultsView,
+    ui: resultsView,
   },
 }
 

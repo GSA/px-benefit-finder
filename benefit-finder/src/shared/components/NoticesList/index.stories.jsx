@@ -1,11 +1,13 @@
 import NoticesList from './index.jsx'
 import * as en from '../../locales/en/en.json'
 
+const { intro } = en
+
 export default {
   component: NoticesList,
   tags: ['autodocs'],
   args: {
-    data: en.intro.notices.list,
+    data: intro.notices.list,
   },
 }
 

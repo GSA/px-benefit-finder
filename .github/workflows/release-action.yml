@@ -27,6 +27,9 @@ jobs:
         ls -l usagov_benefit_finder/modules/
         bash ./mv-benefit-finder-app.sh
         ls -l
+
+    - name: Compress the module
+      run: |
         tar -cvzf "benefit-finder-v0.1.0-beta.${{ github.run_number }}.tar.gz" usagov_benefit_finder
         ls -l
 
@@ -36,16 +39,24 @@ jobs:
         TAG_NAME="v0.1.0-beta.${{ github.run_number }}"
         git tag $TAG_NAME
         git push origin $TAG_NAME
+      
+    - name: Create release
+      env:
+        GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
+      run: |
+        gh release create "v0.1.0-beta.${{ github.run_number }}" *.tar.gz --target release --draft --prerelease --generate-notes 
 
-    - name: create release
-      uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-        automatic_release_tag: "v0.1.0-beta.${{ github.run_number }}"
-        prerelease: true
-        title: "v0.1.0-beta.${{ github.run_number }} Release"
-        files: |         
-          *.tar.gz
+        
+
+    # - name: create release
+    #   uses: "marvinpinto/action-automatic-releases@latest"
+    #   with:
+    #     repo_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+    #     automatic_release_tag: "v0.1.0-beta.${{ github.run_number }}"
+    #     prerelease: true
+    #     title: "v0.1.0-beta.${{ github.run_number }} Release"
+    #     files: |         
+    #       *.tar.gz
 
     # - name: Create Release
     #   id: create_release

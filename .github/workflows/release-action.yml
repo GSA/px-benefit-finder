@@ -26,14 +26,26 @@ jobs:
         pwd
         ls -l usagov_benefit_finder/modules/
         bash ./mv-benefit-finder-app.sh
-        ls -l usagov_benefit_finder/modules/
+        ls -l
+        tar -cvzf "benefit-finder-v0.1.0-beta.${{ github.run_number }}.tar.gz" usagov_benefit_finder
+        ls -l
 
+    - name: Set Beta Version Tag
+      run: |
+        git branch --show-current
+        TAG_NAME="v0.1.0-beta.${{ github.run_number }}"
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
 
-    # - name: Set Beta Version Tag
-    #   run: |
-    #     TAG_NAME="v0.1.0-beta.${{ github.run_number }}"
-    #     git tag $TAG_NAME
-    #     git push origin $TAG_NAME
+    - name: create release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+        automatic_release_tag: "v0.1.0-beta.${{ github.run_number }}"
+        prerelease: true
+        title: "Development Build"
+        files: |         
+          *.tar.gz
 
     # - name: Create Release
     #   id: create_release

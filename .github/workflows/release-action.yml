@@ -4,7 +4,7 @@ on:
   # This workflow will be triggered manually and create a draft release for review. It can be published manually once reviewed.
   workflow_dispatch:
     inputs:
-      # You will enter the tag name from the UI once you trigger this pipeline.
+      # You will enter the tag name from the UI while you trigger this pipeline.
       tag_name: 
         description: "What is the tag you would like to publish?"
         required: true  
@@ -32,7 +32,7 @@ jobs:
 
     - name: Compress the module
       run: |
-        tar -cvzf "benefit-finder-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
+        tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
         ls -l
 
     - name: Set and push Version Tag
@@ -43,10 +43,10 @@ jobs:
         git push origin $TAG_NAME
 
       
-    - name: Create prerelease
+    - name: Create pre-release
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
 
       run: |
-        echo "${{ github.event.inputs.tag_name }}"
+        # echo "${{ github.event.inputs.tag_name }}"
         gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz --target release --draft --prerelease --generate-notes

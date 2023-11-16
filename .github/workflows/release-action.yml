@@ -6,6 +6,12 @@ on:
       tag_name: 
         description: "What is the tag you would like to publish?"
         required: true
+      draft:
+        description: "If you'd like to draft this release enter `--draft` at below area:"
+        required: false
+      prerelease:
+        description: "If you'd like to publish this as prerelease, enter  `--prerelease` at below area:"
+        required: false       
 
   # push:
   #   # Sequence of patterns matched against refs/tags
@@ -50,7 +56,7 @@ jobs:
       env:
         GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
       run: |
-        gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release --draft --prerelease --generate-notes 
+        gh release create "Release ${{ github.event.inputs.tag_name }}" *.tar.gz --target release ${{ github.event.inputs.prerelease }} ${{ github.event.inputs.draft }} --generate-notes 
 
         
 

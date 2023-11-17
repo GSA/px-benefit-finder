@@ -19,8 +19,8 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: bears/api
-  file_extensions: 'txt json'
+  file_directory: benefit-finder/api/life-event
+  file_extensions: 'json'
   max_filesize: ''
   description_field: false
 field_type: file

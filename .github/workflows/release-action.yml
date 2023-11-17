@@ -25,12 +25,9 @@ jobs:
 
     - name: Build benefit-finder module
       run: |
-        pwd
-        ls -l usagov_benefit_finder/modules/
         bash ./mv-benefit-finder-app.sh
-        ls -l
 
-    - name: Compress the module
+    - name: Compress the module directory
       run: |
         tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
         ls -l
@@ -41,12 +38,9 @@ jobs:
         TAG_NAME="${{ github.event.inputs.tag_name }}"
         git tag $TAG_NAME
         git push origin $TAG_NAME
-
       
     - name: Create pre-release
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-
       run: |
-        # echo "${{ github.event.inputs.tag_name }}"
         gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz --target release --draft --prerelease --generate-notes

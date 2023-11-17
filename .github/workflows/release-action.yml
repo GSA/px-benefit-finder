@@ -1,4 +1,4 @@
-name: Create a release
+name: Create release
 
 on:
   # This workflow will be triggered manually and create a draft release for review. It can be published manually once reviewed.
@@ -16,31 +16,26 @@ permissions:
 jobs:
   release-benefit-finder:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout
       uses: actions/checkout@v4
       with:
         ref: release
-
     - name: Build benefit-finder module
       run: |
         bash ./mv-benefit-finder-app.sh
-
     - name: Compress the module directory
       run: |
         tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
         ls -l
-
     - name: Set and push Version Tag
       run: |
         git branch --show-current
         TAG_NAME="${{ github.event.inputs.tag_name }}"
         git tag $TAG_NAME
-        git push origin $TAG_NAME
-      
+        git push origin $TAG_NAME     
     - name: Create pre-release
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
-        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz --title "Release ${{ github.event.inputs.tag_name }}" --target release --draft --prerelease --generate-notes
+        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz -t "Release ${{ github.event.inputs.tag_name }}" --target release -d -p --generate-notes

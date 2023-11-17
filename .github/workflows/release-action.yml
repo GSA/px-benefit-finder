@@ -43,4 +43,4 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
-        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz --target release --draft --prerelease --generate-notes
+        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz --title "Release ${{ github.event.inputs.tag_name }}" --target release --draft --prerelease --generate-notes

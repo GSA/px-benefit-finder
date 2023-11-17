@@ -45,7 +45,7 @@ if test -f "$BENEFIT_FINDER_JS_FILE"; then
         echo "echoing benefit finder medie directory $BENEFIT_FINDER_MEDIA_DIRECTORY "
         echo "echoing benefit finder module library location $BENEFIT_FINDER_MODULE_LIBRARY_LOCATION"
         pwd
-        ls -l
+        ls -l $BENEFIT_FINDER_MEDIA_DIRECTORY
         cp -r $BENEFIT_FINDER_MEDIA_DIRECTORY $BENEFIT_FINDER_MODULE_LIBRARY_LOCATION
         test -f "${BENEFIT_FINDER_MODULE_JS_FILE_LOCATION}${BENEFIT_FINDER_JS_FILE_NAME}"
         echo "\xE2\x9C\x94 JS build file successfully moved"

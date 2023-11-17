@@ -1,4 +1,4 @@
-name: Custom create release action
+name: Create a release
 
 on:
   # This workflow will be triggered manually and create a draft release for review. It can be published manually once reviewed.

@@ -6,7 +6,7 @@ on:
     inputs:
       # You will enter the tag name from the UI while you trigger this pipeline.
       tag_name: 
-        description: "What is the tag you would like to publish?"
+        description: "Please enter the tag/version you would like to publish:"
         required: true  
     
 permissions:

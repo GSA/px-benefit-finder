@@ -35,10 +35,19 @@ jobs:
         from_branch: main
         target_branch: release
         github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-    - name: Pushing the merge to release branch
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+    - name: pushing changes to release branch
+      run: |
+        git git fetch --all
+        git branch --show-current
+        git checkout release
+        git branch --show-current
+        git commit -m "merge main into release"
+        git push
+     
+    # - name: Pushing the merge to release branch
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
     - name: Build benefit-finder module
       run: |
         bash ./mv-benefit-finder-app.sh

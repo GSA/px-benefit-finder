@@ -28,18 +28,20 @@ jobs:
     #     git fetch --all
     #     git merge origin/main --allow-unrelated-histories
     #     git status
-    - name: Merge main -> release
-      uses: devmasx/merge-branch@master
-      with:
-        type: now
-        from_branch: release
-        target_branch: main
-        github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+    # - name: Merge main -> release
+    #   uses: devmasx/merge-branch@master
+    #   with:
+    #     type: now
+    #     from_branch: release
+    #     target_branch: main
+    #     github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
     - name: pushing changes to release branch
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
         git fetch --all
+        git merge main
+        git commit -m "merge main in release"
         git branch --show-current
         git status
         git push

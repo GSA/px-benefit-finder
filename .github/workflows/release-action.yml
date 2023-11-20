@@ -20,7 +20,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        ref: 11-github-release-action
+        ref: release
     - name: Build benefit-finder module
       run: |
         bash ./mv-benefit-finder-app.sh
@@ -38,4 +38,4 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
-        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz -t "Release ${{ github.event.inputs.tag_name }}" --target 11-github-release-action -d -p --generate-notes
+        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz -t "Release ${{ github.event.inputs.tag_name }}" --target release -d -p --generate-notes

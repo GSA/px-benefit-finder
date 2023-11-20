@@ -40,21 +40,12 @@ if test -f "$BENEFIT_FINDER_JS_FILE"; then
         echo "\xE2\x9C\x94 Custom module directory exists"
         # move build file
         echo "Moving files to BENEFIT_FINDER module library..."
-        echo " echoing js file location $BENEFIT_FINDER_JS_FILE"
         cp $BENEFIT_FINDER_JS_FILE $BENEFIT_FINDER_MODULE_JS_FILE_LOCATION
         cp $BENEFIT_FINDER_CSS_FILE $BENEFIT_FINDER_MODULE_CSS_FILE_LOCATION
-        echo "echoing benefit finder medie directory $BENEFIT_FINDER_MEDIA_DIRECTORY "
-        echo "echoing benefit finder module library location $BENEFIT_FINDER_MODULE_LIBRARY_LOCATION"
-        pwd
-        cd build/static
-        pwd
-        ls -l
         cp -r $BENEFIT_FINDER_MEDIA_DIRECTORY $BENEFIT_FINDER_MODULE_LIBRARY_LOCATION
         test -f "${BENEFIT_FINDER_MODULE_JS_FILE_LOCATION}${BENEFIT_FINDER_JS_FILE_NAME}"
         echo "\xE2\x9C\x94 JS build file successfully moved"
         test -f "${BENEFIT_FINDER_MODULE_CSS_FILE_LOCATION}${BENEFIT_FINDER_CSS_FILE_NAME}"
         echo "\xE2\x9C\x94 CSS build file successfully moved"
-        test -d "${BENEFIT_FINDER_MODULE_MEDIA_DIRECTORY_LOCATION}"
-        echo "\xE2\x9C\x94 Media files successfully moved"
     fi
 fi

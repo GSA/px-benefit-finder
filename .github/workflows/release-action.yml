@@ -26,8 +26,12 @@ jobs:
        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
         git fetch --all
-        git merge origin/main --allow-unrelated-histories   
-        git push 
+        git merge origin/main --allow-unrelated-histories
+        git status
+    - name: Pushing the merge to release branch
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
     - name: Build benefit-finder module
       run: |
         bash ./mv-benefit-finder-app.sh

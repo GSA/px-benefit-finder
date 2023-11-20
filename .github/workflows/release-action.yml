@@ -37,7 +37,7 @@ jobs:
         github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
     - name: pushing changes to release branch
       run: |
-        git git fetch --all
+        git fetch --all
         git branch --show-current
         git checkout release
         git branch --show-current

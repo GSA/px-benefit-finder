@@ -10,7 +10,7 @@ assignees: ""
 
 # User Story
 
-As a BEARSv2 **\_\_\_**, in order to **\_\_\_**, I would like **\_\_\_\_** .
+As a **\_\_\_**, in order to **\_\_\_**, I would like **\_\_\_\_** .
 
 Pre-conditions:
 

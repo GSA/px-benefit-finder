@@ -23,6 +23,7 @@ jobs:
         ref: release
     - name: Getting the latest code from the main branch
       run: |
+        git fetch --all
         git merge main
         git push
     - name: Build benefit-finder module

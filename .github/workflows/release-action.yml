@@ -36,10 +36,10 @@ jobs:
         target_branch: release
         github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
     - name: pushing changes to release branch
+      env:
+        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
         git fetch --all
-        git branch --show-current
-        git checkout release
         git branch --show-current
         git commit -m "merge main into release"
         git push

@@ -123,23 +123,6 @@ jobs:
                                   mkdir -p content/sync && \
                                   chown -R nginx:nginx content && \
                                   pwd && ls -l && \
-                                  cd sites/default/files && \
-                                  mkdir -p benefit-finder/api/life-event && \
-                                  chown -R nginx:nginx benefit-finder && \
-                                  cd benefit-finder/api/life-event && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile  
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile && \           
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile?mode=draft && \ 
-                                  ls -l && \
                                   /var/www/vendor/bin/drush cr"
   build_and_deploy_main:
     machine:
@@ -180,7 +163,6 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
             sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
             cat web/sites/default/settings.php
 
@@ -263,23 +245,6 @@ jobs:
                                   mkdir -p content/sync && \
                                   chown -R nginx:nginx content && \
                                   pwd && ls -l && \
-                                  cd sites/default/files && \
-                                  mkdir -p benefit-finder/api/life-event && \
-                                  chown -R nginx:nginx benefit-finder && \
-                                  cd benefit-finder/api/life-event && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile  
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile && \           
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile?mode=draft && \ 
-                                  ls -l && \
                                   /var/www/vendor/bin/drush cr"
   component-library:
     machine:

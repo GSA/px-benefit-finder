@@ -6,6 +6,7 @@ import {
   ResultsView,
   VerifySelectionsView,
   Form,
+  Alert,
 } from '../shared/components'
 
 import './_index.scss'
@@ -22,8 +23,10 @@ function App({ testAppContent, testQuery }) {
   // we create context state to provide translations for our two languages
   const LanguageContext = createContext({ en, es })
   const sharedToken = 'shared'
+  const draftToken = 'draft'
   const windowQuery = testQuery || window.location.search
   const hasQueryParams = windowQuery.includes(sharedToken)
+  const isDraftMode = windowQuery.includes(draftToken)
 
   /**
    * lazy load our data state.
@@ -89,6 +92,7 @@ function App({ testAppContent, testQuery }) {
   return (
     content && (
       <LanguageContext.Provider value={t}>
+        {isDraftMode === true && <Alert>Draft Mode</Alert>}
         <div
           className={`benefit-finder ${
             step !== 0 && viewResults !== true ? 'form' : ''

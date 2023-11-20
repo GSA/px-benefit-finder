@@ -55,12 +55,8 @@ function usagov_benefit_finder_page_preprocess_page(&$variables) {
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node && $node->bundle() == "bears_life_event") {
     if (\Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
-      $field_json_data_file = $node->get('field_json_data_file')->referencedEntities();
-      $uri = $field_json_data_file[0]->getFileUri();
-      $variables['json_data_file_path'] = \Drupal::service('file_url_generator')->generate($uri)->toString();
-      $field_draft_json_data_file = $node->get('field_draft_json_data_file')->referencedEntities();
-      $uri = $field_draft_json_data_file[0]->getFileUri();
-      $variables['draft_json_data_file_path'] = \Drupal::service('file_url_generator')->generate($uri)->toString();
+      $variables['json_data_file_path'] = $node->get('field_json_data_file_path')->value;
+      $variables['draft_json_data_file_path'] = $node->get('field_draft_json_data_file_path')->value;
     }
   }
 }

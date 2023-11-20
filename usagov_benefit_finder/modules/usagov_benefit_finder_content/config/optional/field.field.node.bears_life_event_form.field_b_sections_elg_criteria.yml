@@ -14,7 +14,7 @@ bundle: bears_life_event_form
 label: 'Sections (Eligibility Criteria)'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

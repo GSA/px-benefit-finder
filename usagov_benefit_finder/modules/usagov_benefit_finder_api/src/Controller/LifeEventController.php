@@ -56,6 +56,13 @@ class LifeEventController {
   protected $request;
 
   /**
+   * The display data control variable.
+   *
+   * @var string
+   */
+  protected $displayData;
+
+  /**
    * The JSON data mode.
    *
    * @var string
@@ -73,6 +80,7 @@ class LifeEventController {
     $this->fileUrlGenerator = \Drupal::service('file_url_generator');
     $this->database = \Drupal::service('database');
     $this->request = \Drupal::request();
+    $this->displayData = TRUE;
   }
 
   /**
@@ -99,6 +107,7 @@ class LifeEventController {
     $this->fileSystem->prepareDirectory($directory, FileSystemInterface:: CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
 
     // Get JSON data.
+    $this->displayData = FALSE;
     $data = json_encode([
         'data' => $this->getData($id),
         'method' => 'GET',
@@ -117,13 +126,13 @@ class LifeEventController {
     if ($life_event) {
       $field_name = '';
       if ($this->mode == "published") {
-        $field_name = 'field_json_data_file';
+        $field_name = 'field_json_data_file_path';
       }
       else if ($this->mode == "draft") {
-        $field_name = 'field_draft_json_data_file';
+        $field_name = 'field_draft_json_data_file_path';
       }
       $life_event->set($field_name, [
-        'target_id' => $file->id(),
+        'value' =>  $fileUrlString,
       ]);
       $life_event->save();
     }
@@ -244,7 +253,9 @@ class LifeEventController {
 
     // Build benefits.
     foreach ($benefit_nodes as $benefit_node) {
-      $benefits[]["benefit"] = $this->buildBenefit($benefit_node);
+      if (!empty($benefit_node)) {
+        $benefits[]["benefit"] = $this->buildBenefit($benefit_node);
+      }
     }
 
     // Encode JSON data.
@@ -253,9 +264,12 @@ class LifeEventController {
       "benefits" => $benefits
     ];
     $json = json_encode($result, JSON_PRETTY_PRINT);
-    print_r("<p>JSON Data<pre>");
-    print_r($json);
-    print_r("</pre>");
+
+    if ($this->displayData) {
+      print_r("<p>JSON Data<pre>");
+      print_r($json);
+      print_r("</pre>");
+    }
 
     return $result;
   }

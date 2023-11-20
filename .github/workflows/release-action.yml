@@ -24,8 +24,8 @@ jobs:
     - name: Getting the latest code from the main branch
       run: |
         git fetch --all
-        git merge main
-        git push
+        git merge origin/main
+        git push origin/release
     - name: Build benefit-finder module
       run: |
         bash ./mv-benefit-finder-app.sh

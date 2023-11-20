@@ -32,8 +32,8 @@ jobs:
       uses: devmasx/merge-branch@master
       with:
         type: now
-        from_branch: main
-        target_branch: release
+        from_branch: release
+        target_branch: main
         github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
     - name: pushing changes to release branch
       env:

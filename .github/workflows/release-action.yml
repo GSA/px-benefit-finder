@@ -41,7 +41,7 @@ jobs:
       run: |
         git fetch --all
         git branch --show-current
-        git commit -m "merge main into release"
+        git status
         git push
      
     # - name: Pushing the merge to release branch

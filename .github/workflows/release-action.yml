@@ -22,6 +22,8 @@ jobs:
       with:
         ref: release
     - name: Getting the latest code from the main branch
+      env:
+       GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
         git fetch --all
         git merge origin/main --allow-unrelated-histories   

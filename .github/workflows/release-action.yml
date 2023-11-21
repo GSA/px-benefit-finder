@@ -40,6 +40,9 @@ jobs:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
         git fetch --all
+        git checkout origin/release
+        git config --global user.name "${{ env.COMMIT_AUTHOR }}"
+        git config --global user.email "${{ env.COMMIT_AUTHOR_EMAIL }}"
         git merge origin/main --allow-unrelated-histories 
         git commit -m "merge main in release"
         git branch --show-current

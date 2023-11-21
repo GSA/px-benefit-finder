@@ -31,8 +31,8 @@ locals {
         # ca_certificate = module.certificates.certificate.base64
         # ca_key         = module.certificates.key.base64
         cf_space       = local.env.space
-        cms_uri = terraform.workspace == "prod" ? "https://cms.vote.gov" : format(
-          "https://cms-%s.vote.gov",
+        cms_uri = terraform.workspace == "prod" ? "https://cms.<project-prefix>.gov" : format(
+          "https://cms-%s.<project-prefix>.gov",
           terraform.workspace
         )
         drupal_instances = try(
@@ -56,8 +56,8 @@ locals {
         #   local.env.internal_domain,
         #   var.mtls_port
         # )
-        # ssg_uri = terraform.workspace == "prod" ? "https://ssg.vote.gov" : format(
-        #   "https://ssg-%s.vote.gov",
+        # ssg_uri = terraform.workspace == "prod" ? "https://ssg.<project-prefix>.gov" : format(
+        #   "https://ssg-%s.<project-prefix>.gov",
         #   terraform.workspace
         # )
         # sso_x509_cert = var.sso_x509_cert

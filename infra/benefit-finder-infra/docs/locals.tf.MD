@@ -8,11 +8,11 @@ The locals.tf is the main file that needs to be edited to configure your infrast
 
 #### project
 
-This variable holds the prefix of your resource names. For example, this project uses `vote` as a prefix for service names.
+This variable holds the prefix of your resource names. For example, this project uses `benefit-finder` as a prefix for service names.
 
 #### project_full
 
-This variable is a longer, alternative name used in the project. For example, CircleCI calls this project `vote-gov`.
+This variable is a longer, alternative name used in the project. For example, CircleCI calls this project `benefit-finder-gov`.
 
 #### bootstrap_workspace
 

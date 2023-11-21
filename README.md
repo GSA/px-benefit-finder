@@ -175,9 +175,79 @@ aws s3 ls s3://${AWS_BUCKET}/
 
 7. Run it again after using it to delete the service-key.
 
-## VDI Login Guide
+# Infrastructure (provisioned by Terraform)
 
-### What is VDI?
+
+## Cloud.gov Infrastructure
+
+### Environments/Spaces:
+#### Benefit-finder-dev : Sandbox environment for the tech team.
+      CMS App main page URL: 
+
+      https://benefit-finder-waf-dev.app.cloud.gov
+#### Benefit-finder-main : The main/pre-release environment.
+      CMS App main page URL: 
+
+      https://benefit-finder-waf-main.app.cloud.gov
+
+## How to use terraform to manage the infrastructure
+
+1. Make sure you login cloud.gov on your terminal and target your org and `benefit-finder-dev` space
+
+```
+cf login -a api.fr.cloud.gov --sso
+```
+
+2. Change directory to infra/benefit-finder-infra directory.
+
+```
+cd infra/benefit-finder-infra
+```
+
+3. Set bucket_name variable.
+
+```
+export bucket_name="terraform-backend" 
+```
+
+4. Execute the script to authenticate to use terraform backend
+
+```
+source scripts/cloudgov-aws-creds.sh
+```
+
+5. Get `terraform.tfvars` file in a secure way and put it in the `infra/benefit-finder-infra` directory.
+
+6. Initialize your local terraform folder.
+
+```
+terraform init
+```
+7. Make sure you see terraform workspaces
+
+```
+terraform workspace list
+```
+![terraform workspace list](image-2.png)
+
+8. Choose the workspace you need to work on
+
+```
+terraform workspace select dev
+```
+9. Plan
+
+```
+terraform plan
+```
+
+
+
+
+
+# VDI Login Guide for the Benefit-finder Team Members
+
+## What is VDI?
 
 The Virtual Desktop Infrastructure (VDI) is a technology that allows you to access a remote desktop environment from your local device. This is particularly useful for accessing GSA resources and applications securely from outside the GSA network.
 

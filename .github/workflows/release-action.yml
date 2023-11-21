@@ -21,21 +21,8 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: release
-    # - name: Getting the latest code from the main branch
-    #   env:
-    #    GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-    #   run: |
-    #     git fetch --all
-    #     git merge origin/main --allow-unrelated-histories
-    #     git status
-    # - name: Merge main -> release
-    #   uses: devmasx/merge-branch@master
-    #   with:
-    #     type: now
-    #     from_branch: release
-    #     target_branch: main
-    #     github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-    - name: pushing changes to release branch
+
+    - name: Mergin main > release & pushing
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
@@ -47,25 +34,24 @@ jobs:
         git branch --show-current
         git status
         git push
-     
-    # - name: Pushing the merge to release branch
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-    - name: Build benefit-finder module
+
+    - name: Building benefit-finder module
       run: |
         bash ./mv-benefit-finder-app.sh
-    - name: Compress the module directory
+
+    - name: Compressing the module directory
       run: |
         tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
         ls -l
-    - name: Set and push Version Tag
+
+    - name: Setting and pushing Version Tag
       run: |
         git branch --show-current
         TAG_NAME="${{ github.event.inputs.tag_name }}"
         git tag $TAG_NAME
-        git push origin $TAG_NAME     
-    - name: Create pre-release
+        git push origin $TAG_NAME
+
+    - name: Creating pre-release
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |

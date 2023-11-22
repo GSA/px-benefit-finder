@@ -323,10 +323,10 @@ jobs:
             echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
             echo "Install Gulp on node "$(node --version)
             sudo npm install --global gulp-cli
-      # - run:
-      #     name: build benefit-finder app
-      #     command: |
-      #       bash mv-benefit-finder-app.sh
+      - run:
+          name: build benefit-finder app
+          command: |
+            bash mv-benefit-finder-app.sh
 
       - run:
           name: Install Linters and Sniffers
@@ -345,13 +345,13 @@ jobs:
             COMPOSER_DIR=$(composer -n config --global home)
             $COMPOSER_DIR/vendor/bin/parallel-lint -e php,module,inc,install,test,profile,theme ./benefit-finder ./benefit-finder | tee /tmp/results/php-lint.log
       - run:
-          name: PHP CodeSniff (ignore warnings)
+          name: PHP CodeSniff
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal -v ./usagov_benefit_finder
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal,Squiz,SlevomatCodingStandard -v ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - run:
           name: Theme Lint
-          command: npm run lint --prefix ./usagov_benefit_finder
+          command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - store_artifacts:
           path: /tmp/results
 

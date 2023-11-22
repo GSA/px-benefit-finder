@@ -87,6 +87,7 @@ class LifeEventController {
    * Saves JSON data file.
    *
    * @param $id
+   *
    * @return JsonResponse
    *  The response.
    */
@@ -145,7 +146,9 @@ class LifeEventController {
 
   /**
    * Gets Json Data of given life event.
+   *
    * @param $id
+   *
    * @return \Symfony\Component\HttpFoundation\JsonResponse
    *   The response.
    */
@@ -159,7 +162,9 @@ class LifeEventController {
 
   /**
    * Gets data of life event form and benefits of given life event.
+   *
    * @param $id
+   *
    * @return mixed
    *  The JSON encoded data.
    */
@@ -274,7 +279,9 @@ class LifeEventController {
 
   /**
    * Gets life event of given ID.
+   *
    * @param $id
+   *
    * @return \Drupal\node\NodeInterface
    *   The life event node.
    */
@@ -290,7 +297,9 @@ class LifeEventController {
 
   /**
    * Gets life event form of given ID.
+   *
    * @param $id
+   *
    * @return \Drupal\node\NodeInterface
    *   The life event form node.
    */
@@ -325,7 +334,9 @@ class LifeEventController {
 
   /**
    * Builds criteria group fieldset.
+   *
    * @param $criteria
+   *
    * @return array
    */
   public function buildCriteriaGroupFieldset($criteria) {
@@ -354,7 +365,9 @@ class LifeEventController {
 
   /**
    * Builds criteria fieldset.
+   *
    * @param $criteria
+   *
    * @return array
    */
   public function buildCriteriaFieldset($criteria)
@@ -431,7 +444,9 @@ class LifeEventController {
 
   /**
    * Builds benefit data of given benefit node.
+   *
    * @param $node
+   *
    * @return array
    */
   public function buildBenefit($node) {
@@ -507,6 +522,7 @@ class LifeEventController {
    *
    * @param $nid
    *   The criteria node ID.
+   *
    * @return \Drupal\node\NodeInterface
    *   The criteria node.
    */
@@ -519,6 +535,7 @@ class LifeEventController {
    *
    * @param $nid
    *   The agency node ID.
+   *
    * @return \Drupal\node\NodeInterface
    *   The agency node.
    */
@@ -533,6 +550,7 @@ class LifeEventController {
    *   The node ID.
    * @param $mode
    *   The mode.
+   *
    * @return \Drupal\node\NodeInterface
    *   The node.
    */

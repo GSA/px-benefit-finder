@@ -423,7 +423,9 @@ EOD;
 
   /**
    * Builds criteria group fieldset.
+   *
    * @param $criteria
+   *
    * @return array
    */
   public function buildCriteriaGroupFieldset($criteria) {
@@ -452,7 +454,9 @@ EOD;
 
   /**
    * Builds criteria fieldset.
+   *
    * @param $criteria
+   *
    * @return array
    */
   public function buildCriteriaFieldset($criteria)
@@ -532,6 +536,7 @@ EOD;
    *
    * @param $nid
    *   The criteria node ID.
+   *
    * @return \Drupal\node\NodeInterface
    *   The criteria node.
    */
@@ -558,6 +563,7 @@ EOD;
    *   The node ID.
    * @param $mode
    *   The mode.
+   *
    * @return \Drupal\node\NodeInterface
    *   The node.
    */

@@ -348,7 +348,7 @@ jobs:
           name: PHP CodeSniff (ignore warnings)
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal ./benefit-finder 
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal -v ./benefit-finder 
       - run:
           name: Theme Lint
           command: npm run lint --prefix ./benefit-finder 

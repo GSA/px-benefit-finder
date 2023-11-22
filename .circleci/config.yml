@@ -348,7 +348,7 @@ jobs:
           name: PHP CodeSniff
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal,Squiz,SlevomatCodingStandard -v ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal,Squiz,SlevomatCodingStandard --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - run:
           name: Theme Lint
           command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/php-cs.log

@@ -332,10 +332,9 @@ jobs:
           name: Install Linters and Sniffers
           command: |
             npm install --prefix ./benefit-finder
-            composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint
+            composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint squizlabs/php_codesniffer=*
             COMPOSER_DIR=$(composer -n config --global home)
             $COMPOSER_DIR/vendor/bin/phpcs --config-set installed_paths $COMPOSER_DIR/vendor/drupal/coder/coder_sniffer,$COMPOSER_DIR/vendor/sirbrillig/phpcs-variable-analysis,$COMPOSER_DIR/vendor/slevomat/coding-standard
-            COMPOSER_MEMORY_LIMIT=-1 composer install --ignore-platform-reqs --no-interaction --optimize-autoloader
             mkdir -p /tmp/results
             touch /tmp/results/php-lint.log
             touch /tmp/results/php-cs.log
@@ -349,7 +348,7 @@ jobs:
           name: PHP CodeSniff (ignore warnings)
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs -ns --standard=./.phpcs.xml.dist | tee /tmp/results/php-cs.log
+            $COMPOSER_DIR/vendor/bin/phpcs --standard==PSR2 | tee /tmp/results/php-cs.log
       - run:
           name: Theme Lint
           command: npm run lint --prefix ./benefit-finder | tee /tmp/results/theme-lint.log

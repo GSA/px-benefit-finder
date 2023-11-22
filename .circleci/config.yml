@@ -304,7 +304,39 @@ jobs:
              echo "${storybook_username}:${storybook_password}" > Staticfile.auth
              cf push benefit-finder-storybook-${CIRCLE_BRANCH}        
 
-
+  lint:
+    docker:
+      - image: cimg/php:8.0.16-node
+    steps:
+      - checkout
+      - install-node
+      - run:
+          name: Install Linters and Sniffers
+          command: |
+            bash mv-benefit-finder-app.sh
+            npm install --prefix ./usagov_benefit_finder
+            composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/phpcs --config-set installed_paths $COMPOSER_DIR/vendor/drupal/coder/coder_sniffer,$COMPOSER_DIR/vendor/sirbrillig/phpcs-variable-analysis,$COMPOSER_DIR/vendor/slevomat/coding-standard
+            mkdir -p /tmp/results
+            touch /tmp/results/php-lint.log
+            touch /tmp/results/php-cs.log
+            touch /tmp/results/theme-lint.log
+      - run:
+          name: PHP Lint
+          command: |
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/parallel-lint -e php,module,inc,install,test,profile,theme ./usagov_benefit_finder ./usagov_benefit_finder | tee /tmp/results/php-lint.log
+      - run:
+          name: PHP CodeSniff (ignore warnings)
+          command: |
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/phpcs -ns --standard=./.phpcs.xml.dist | tee /tmp/results/php-cs.log
+      - run:
+          name: Theme Lint
+          command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/theme-lint.log
+      - store_artifacts:
+          path: /tmp/results
 
 
 # Orchestrate our job run sequence
@@ -353,7 +385,9 @@ workflows:
               only:
                 - main
                 - dev
-
+  php-lint-code-snif:
+    jobs:
+      - lint
 
 
 

@@ -345,10 +345,10 @@ jobs:
             COMPOSER_DIR=$(composer -n config --global home)
             $COMPOSER_DIR/vendor/bin/parallel-lint -e php,module,inc,install,test,profile,theme ./benefit-finder ./benefit-finder | tee /tmp/results/php-lint.log
       - run:
-          name: PHP CodeSniff
+          name: PHP CodeSniff (Ignore warnings)
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal,Squiz,SlevomatCodingStandard --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal,Squiz,SlevomatCodingStandard -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - run:
           name: Theme Lint
           command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/php-cs.log

@@ -100,7 +100,7 @@ class LifeEventController {
     if ($this->mode == "published") {
       $directory = "public://benefit-finder/api/life-event";
     }
-    else if ($this->mode == "draft") {
+    elseif ($this->mode == "draft") {
       $directory = "public://benefit-finder/api/draft/life-event";
     }
 
@@ -236,7 +236,7 @@ class LifeEventController {
         $criteria_fieldset = [];
         if ($criteria->type->target_id == "b_levent_elg_criteria") {
           $criteria_fieldset = $this->buildCriteriaFieldset($criteria);
-        } else if ($criteria->type->target_id == "b_levent_elg_criteria_group") {
+        } elseif ($criteria->type->target_id == "b_levent_elg_criteria_group") {
           $criteria_fieldset = $this->buildCriteriaGroupFieldset($criteria);
         }
         $criteria_fieldsets[]['fieldset'] = $criteria_fieldset;
@@ -420,7 +420,7 @@ class LifeEventController {
         $criteria_fieldset_1 = [];
         if ($criteria_1->type->target_id == "b_levent_elg_criteria") {
           $criteria_fieldset_1 = $this->buildCriteriaFieldset($criteria_1);
-        } else if ($criteria_1->type->target_id == "b_levent_elg_criteria_group") {
+        } elseif ($criteria_1->type->target_id == "b_levent_elg_criteria_group") {
           $criteria_fieldset_1 = $this->buildCriteriaGroupFieldset($criteria_1);
         }
         $criteria_fieldset["children"][]["fieldsets"][]['fieldset'] = $criteria_fieldset_1;
@@ -555,7 +555,7 @@ class LifeEventController {
         ->query('SELECT MAX(vid) AS vid FROM node_field_revision WHERE status = 1 AND nid = :nid', [':nid' => $nid])
         ->fetchField();
     }
-    else if ($mode == "draft") {
+    elseif ($mode == "draft") {
       $vid = $this->database
         ->query('SELECT MAX(vid) AS vid FROM node_field_revision WHERE nid = :nid', [':nid' => $nid])
         ->fetchField();

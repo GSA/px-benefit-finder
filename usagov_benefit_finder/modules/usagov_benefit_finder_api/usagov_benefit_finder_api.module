@@ -10,8 +10,6 @@ use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_node_update().
- *
- * @param Node $node
  */
 function usagov_benefit_finder_api_node_update(Node $node) {
   save_json_data($node);
@@ -19,8 +17,6 @@ function usagov_benefit_finder_api_node_update(Node $node) {
 
 /**
  * Implements hook_node_insert().
- *
- * @param Node $node
  */
 function usagov_benefit_finder_api_node_insert(Node $node) {
   save_json_data($node);
@@ -28,8 +24,6 @@ function usagov_benefit_finder_api_node_insert(Node $node) {
 
 /**
  * Implements hook_node_delete().
- *
- * @param Node $node
  */
 function usagov_benefit_finder_api_node_delete(Node $node) {
   save_json_data($node);

@@ -348,10 +348,10 @@ jobs:
           name: PHP CodeSniff (ignore warnings)
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal -v ./benefit-finder 
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal -v ./usagov_benefit_finder
       - run:
           name: Theme Lint
-          command: npm run lint --prefix ./benefit-finder 
+          command: npm run lint --prefix ./usagov_benefit_finder
       - store_artifacts:
           path: /tmp/results
 

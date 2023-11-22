@@ -331,7 +331,7 @@ jobs:
       - run:
           name: Install Linters and Sniffers
           command: |
-            npm install --prefix ./usagov_benefit_finder
+            npm install --prefix ./benefit-finder
             composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint
             COMPOSER_DIR=$(composer -n config --global home)
             $COMPOSER_DIR/vendor/bin/phpcs --config-set installed_paths $COMPOSER_DIR/vendor/drupal/coder/coder_sniffer,$COMPOSER_DIR/vendor/sirbrillig/phpcs-variable-analysis,$COMPOSER_DIR/vendor/slevomat/coding-standard
@@ -343,7 +343,7 @@ jobs:
           name: PHP Lint
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/parallel-lint -e php,module,inc,install,test,profile,theme ./usagov_benefit_finder ./usagov_benefit_finder | tee /tmp/results/php-lint.log
+            $COMPOSER_DIR/vendor/bin/parallel-lint -e php,module,inc,install,test,profile,theme ./benefit-finder ./benefit-finder | tee /tmp/results/php-lint.log
       - run:
           name: PHP CodeSniff (ignore warnings)
           command: |
@@ -351,7 +351,7 @@ jobs:
             $COMPOSER_DIR/vendor/bin/phpcs -ns --standard=./.phpcs.xml.dist | tee /tmp/results/php-cs.log
       - run:
           name: Theme Lint
-          command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/theme-lint.log
+          command: npm run lint --prefix ./benefit-finder | tee /tmp/results/theme-lint.log
       - store_artifacts:
           path: /tmp/results
 

@@ -324,9 +324,13 @@ jobs:
             echo "Install Gulp on node "$(node --version)
             sudo npm install --global gulp-cli
       - run:
-          name: Install Linters and Sniffers
+          name: build benefit-finder app
           command: |
             bash mv-benefit-finder-app.sh
+
+      - run:
+          name: Install Linters and Sniffers
+          command: |
             npm install --prefix ./usagov_benefit_finder
             composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint
             COMPOSER_DIR=$(composer -n config --global home)

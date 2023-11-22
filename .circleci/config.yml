@@ -348,10 +348,10 @@ jobs:
           name: PHP CodeSniff (ignore warnings)
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs --standard=PSR2 ./benefit-finder | tee /tmp/results/php-cs.log
+            $COMPOSER_DIR/vendor/bin/phpcs --standard=PSR2 ./benefit-finder 
       - run:
           name: Theme Lint
-          command: npm run lint --prefix ./benefit-finder | tee /tmp/results/theme-lint.log
+          command: npm run lint --prefix ./benefit-finder 
       - store_artifacts:
           path: /tmp/results
 

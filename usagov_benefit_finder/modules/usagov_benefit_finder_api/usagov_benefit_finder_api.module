@@ -41,7 +41,7 @@ function save_json_data(Node $node) {
       'bears_agency',
       'bears_criteria',
       'bears_benefit',
-      'bears_life_event_form'
+      'bears_life_event_form',
     ];
     if (in_array($node->getType(), $content_types)) {
       $LifeEventController = new LifeEventController();

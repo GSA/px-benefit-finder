@@ -160,7 +160,7 @@ EOD;
         "Type" => $node->get('field_b_type')->value ?? "",
         "Has Child" => $node->get('field_b_type')->value ?? "",
         "Child Dependency Option" => $node->get('field_b_child_dependency_option')->value ?? "",
-        "values" => $values
+        "values" => $values,
       ];
     }
 
@@ -217,7 +217,7 @@ EOD;
         "title" => $node->get('title')->value,
         "summary" => $node->get('field_b_summary')->value ?? "",
         "SourceLink" => $node->get('field_b_source_link')->value ?? "",
-        "SourceIsEnglish" => $node->get('field_b_source_is_english')->value ? "TRUE" : "FALSE"
+        "SourceIsEnglish" => $node->get('field_b_source_is_english')->value ? "TRUE" : "FALSE",
       ];
 
       // Get agency node and build benefit agency.
@@ -227,7 +227,7 @@ EOD;
         $benefit["agency"] = [
           "title" => $agency->get('title')->value,
           "summary" => $agency->get('field_b_summary')->value ?? "",
-          "lede" => $agency->get('field_b_lede')->value ?? ""
+          "lede" => $agency->get('field_b_lede')->value ?? "",
         ];
       }
       else {
@@ -332,7 +332,7 @@ EOD;
         "timeEstimate" => $life_event_form_node->get('field_b_time_estimate')->value ?? "",
         "titlePrefix" => $life_event_form_node->get('field_b_title_prefix')->value ?? "",
         "title" => $life_event_form_node->get('title')->value ?? "",
-        "summary" => $life_event_form_node->get('field_b_summary')->value ?? ""
+        "summary" => $life_event_form_node->get('field_b_summary')->value ?? "",
       ];
 
       // Get Relevant Benefits.
@@ -345,7 +345,7 @@ EOD;
           "title" => current($relevant_benefit->get('field_b_life_event_form')->referencedEntities())->get('title')->value ?? "",
           "body" => $relevant_benefit->get('field_b_body')->value ?? "",
           "link" => $relevant_benefit->get('field_b_link')->value ?? "",
-          "cta" => $relevant_benefit->get('field_b_cta')->value ?? ""
+          "cta" => $relevant_benefit->get('field_b_cta')->value ?? "",
         ];
         $life_event_form_relevant_benefits[]['lifeEvent'] = $life_event_form_relevant_benefit;
       }
@@ -360,7 +360,7 @@ EOD;
       foreach ($sections as $section) {
         $life_event_form_section = [
           "heading" => $section->get('field_b_heading')->value ?? "",
-          "description" => $section->get('field_b_description')->value ?? ""
+          "description" => $section->get('field_b_description')->value ?? "",
         ];
 
         // Get criterias of a section.
@@ -432,7 +432,7 @@ EOD;
     // Build criteria group fieldset.
     $criteria_group_fieldset = [
       "heading" => $criteria->get("field_b_heading")->value ?? "",
-      "description" => $criteria->field_b_description->value ?? ""
+      "description" => $criteria->field_b_description->value ?? "",
     ];
 
     // Get criterias multi paragraphs.
@@ -473,7 +473,7 @@ EOD;
       "criteriaKey" => current($criteria->get('field_b_criteria_key')->referencedEntities())->get('field_b_id')->value,
       "legend" => $criteria->get('field_b_legend')->value ?? "",
       "required" => $criteria->get('field_b_required')->value ? "TRUE" : "FALSE",
-      "hint" => $criteria->get('field_b_hint')->value ?? ""
+      "hint" => $criteria->get('field_b_hint')->value ?? "",
     ];
 
     // Build inputCriteria.
@@ -483,7 +483,7 @@ EOD;
       "name" => $criteria_node->get('field_b_name')->value ?? "",
       "label" => $criteria_node->get('field_b_label')->value ?? "",
       "hasChild" => $criteria_node->get('field_b_has_child')->value ? "TRUE" : "FALSE",
-      "childDependencyOption" => $criteria_node->get('field_b_child_dependency_option')->value ?? ""
+      "childDependencyOption" => $criteria_node->get('field_b_child_dependency_option')->value ?? "",
     ];
 
     $criteria_values = [];
@@ -491,7 +491,7 @@ EOD;
     if ($criteria_node->get('field_b_type')->value == 'date' || $criteria_node->get('field_b_type')->value == "Date") {
       $criteria_values[] = array(
         "default" => "",
-        "value" => (object)[]
+        "value" => (object)[],
       );
     }
 
@@ -499,7 +499,7 @@ EOD;
     foreach ($b_values as $b_value) {
       $criteria_values[] = array(
         "option" => $b_value["value"],
-        "value" => $b_value["value"]
+        "value" => $b_value["value"],
       );
     }
     $inputCriteria["values"] = $criteria_values;

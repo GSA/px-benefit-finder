@@ -189,7 +189,7 @@ EOD;
   </div>
 </div>
 EOD;
-      $html = $html . $x1 . $x2. $x3;
+      $html = $html . $x1 . $x2 . $x3;
     }
 
     $html = "<h1>CRITERIA</h1>" . $html;
@@ -302,7 +302,7 @@ EOD;
   </div>
 </div>
 EOD;
-      $html = $html . $x1 . $x2. $x3;
+      $html = $html . $x1 . $x2 . $x3;
     }
 
     $html = "<h1>BENEFIT</h1>" . $html;
@@ -414,7 +414,7 @@ EOD;
   </div>
 </div>
 EOD;
-      $html = $html . $x1 . $x2. $x3;
+      $html = $html . $x1 . $x2 . $x3;
     }
 
     $html = "<h1>LIFE EVENT FORM</h1>" . $html;

@@ -408,7 +408,7 @@ workflows:
           filters:
             branches:
               only:
-                - '*'
+                - *
 
 
 

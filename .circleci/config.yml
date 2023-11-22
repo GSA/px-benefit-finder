@@ -351,7 +351,7 @@ jobs:
             $COMPOSER_DIR/vendor/bin/phpcs --standard=PSR2 | tee /tmp/results/php-cs.log
       - run:
           name: Theme Lint
-          command: npm run lint --prefix ./benefit-finder | tee /tmp/results/theme-lint.log
+          command: npm run lint --prefix ./benefit-finder ./benefit-finder| tee /tmp/results/theme-lint.log
       - store_artifacts:
           path: /tmp/results
 

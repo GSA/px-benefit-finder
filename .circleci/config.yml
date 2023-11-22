@@ -404,7 +404,11 @@ workflows:
                 - dev
   php-lint-code-snif:
     jobs:
-      - lint
+      - lint:
+          filters:
+            branches:
+              only:
+                - '*'
 
 
 

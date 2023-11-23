@@ -184,7 +184,7 @@ EOD;
   </h4>
   <div id="c$index" class="usa-accordion__content usa-prose">
 EOD;
-      $x2 = "<pre style='white-space: pre-wrap'>" . print_r($node, true) . "</pre>";
+      $x2 = "<pre style='white-space: pre-wrap'>" . print_r($node, TRUE) . "</pre>";
       $x3 = <<<EOD
   </div>
 </div>
@@ -297,7 +297,7 @@ EOD;
   </h4>
   <div id="b$index" class="usa-accordion__content usa-prose">
 EOD;
-      $x2 = "<pre style='white-space: pre-wrap'>" . print_r($node, true) . "</pre>";
+      $x2 = "<pre style='white-space: pre-wrap'>" . print_r($node, TRUE) . "</pre>";
       $x3 = <<<EOD
   </div>
 </div>
@@ -409,7 +409,7 @@ EOD;
   </h4>
   <div id="l$index" class="usa-accordion__content usa-prose">
 EOD;
-      $x2 = "<pre>" . print_r($node, true) . "</pre>";
+      $x2 = "<pre>" . print_r($node, TRUE) . "</pre>";
       $x3 = <<<EOD
   </div>
 </div>

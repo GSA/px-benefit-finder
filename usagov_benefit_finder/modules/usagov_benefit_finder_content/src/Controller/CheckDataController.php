@@ -217,7 +217,7 @@ EOD;
         "title" => $node->get('title')->value,
         "summary" => $node->get('field_b_summary')->value ?? "",
         "SourceLink" => $node->get('field_b_source_link')->value ?? "",
-        "SourceIsEnglish" => $node->get('field_b_source_is_english')->value ? "TRUE": "FALSE"
+        "SourceIsEnglish" => $node->get('field_b_source_is_english')->value ? "TRUE" : "FALSE"
       ];
 
       // Get agency node and build benefit agency.
@@ -372,7 +372,8 @@ EOD;
           $criteria_fieldset = [];
           if ($criteria->type->target_id == "b_levent_elg_criteria") {
             $criteria_fieldset = $this->buildCriteriaFieldset($criteria);
-          } elseif ($criteria->type->target_id == "b_levent_elg_criteria_group") {
+          }
+          elseif ($criteria->type->target_id == "b_levent_elg_criteria_group") {
             $criteria_fieldset = $this->buildCriteriaGroupFieldset($criteria);
           }
           $criteria_fieldsets[]['fieldset'] = $criteria_fieldset;
@@ -471,7 +472,7 @@ EOD;
     $criteria_fieldset = [
       "criteriaKey" => current($criteria->get('field_b_criteria_key')->referencedEntities())->get('field_b_id')->value,
       "legend" => $criteria->get('field_b_legend')->value ?? "",
-      "required" => $criteria->get('field_b_required')->value ? "TRUE":"FALSE",
+      "required" => $criteria->get('field_b_required')->value ? "TRUE" : "FALSE",
       "hint" => $criteria->get('field_b_hint')->value ?? ""
     ];
 
@@ -481,7 +482,7 @@ EOD;
       "type" => $criteria_node->get('field_b_type')->value,
       "name" => $criteria_node->get('field_b_name')->value ?? "",
       "label" => $criteria_node->get('field_b_label')->value ?? "",
-      "hasChild" => $criteria_node->get('field_b_has_child')->value ? "TRUE":"FALSE",
+      "hasChild" => $criteria_node->get('field_b_has_child')->value ? "TRUE" : "FALSE",
       "childDependencyOption" => $criteria_node->get('field_b_child_dependency_option')->value ?? ""
     ];
 
@@ -515,7 +516,8 @@ EOD;
         $criteria_fieldset_1 = [];
         if ($criteria_1->type->target_id == "b_levent_elg_criteria") {
           $criteria_fieldset_1 = $this->buildCriteriaFieldset($criteria_1);
-        } elseif ($criteria_1->type->target_id == "b_levent_elg_criteria_group") {
+        }
+        elseif ($criteria_1->type->target_id == "b_levent_elg_criteria_group") {
           $criteria_fieldset_1 = $this->buildCriteriaGroupFieldset($criteria_1);
         }
         $criteria_fieldset["children"][]["fieldsets"][]['fieldset'] = $criteria_fieldset_1;

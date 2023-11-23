@@ -4,6 +4,7 @@ namespace Drupal\usagov_benefit_finder_api\Controller;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\node\Entity\node;
+use Drupal\node\NodeInterface;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\file\FileInterface;
 
@@ -86,7 +87,8 @@ class LifeEventController {
   /**
    * Saves JSON data file.
    *
-   * @param $id
+   * @param string $id
+   *   The ID of life event form.
    *
    * @return JsonResponse
    *  The response.
@@ -147,7 +149,8 @@ class LifeEventController {
   /**
    * Gets Json Data of given life event.
    *
-   * @param $id
+   * @param string $id
+   *   The ID of life event form.
    *
    * @return \Symfony\Component\HttpFoundation\JsonResponse
    *   The response.
@@ -163,7 +166,8 @@ class LifeEventController {
   /**
    * Gets data of life event form and benefits of given life event.
    *
-   * @param $id
+   * @param string $id
+   *   The ID of life event form.
    *
    * @return mixed
    *  The JSON encoded data.
@@ -280,7 +284,8 @@ class LifeEventController {
   /**
    * Gets life event of given ID.
    *
-   * @param $id
+   * @param string $id
+   *   The ID of life event form.
    *
    * @return \Drupal\node\NodeInterface
    *   The life event node.
@@ -298,7 +303,8 @@ class LifeEventController {
   /**
    * Gets life event form of given ID.
    *
-   * @param $id
+   * @param string $id
+   *   The ID of life event form.
    *
    * @return \Drupal\node\NodeInterface
    *   The life event form node.
@@ -316,7 +322,8 @@ class LifeEventController {
   /**
    * Gets benefits of given life event form.
    *
-   * @param $nid
+   * @param int $nid
+   *   The benefit node ID.
    *
    * @return \Drupal\node\NodeInterface[]
    *   The benefit nodes.
@@ -337,7 +344,8 @@ class LifeEventController {
   /**
    * Builds criteria group fieldset.
    *
-   * @param $criteria
+   * @param \Drupal\paragraphs\ParagraphInterface $criteria
+   *   The criteria paragraph.
    *
    * @return array
    */
@@ -368,7 +376,8 @@ class LifeEventController {
   /**
    * Builds criteria fieldset.
    *
-   * @param $criteria
+   * @param \Drupal\paragraphs\ParagraphInterface $criteria
+   *   The criteria paragraph.
    *
    * @return array
    */
@@ -447,7 +456,8 @@ class LifeEventController {
   /**
    * Builds benefit data of given benefit node.
    *
-   * @param $node
+   * @param \Drupal\node\NodeInterface $node
+   *   The benefit node.
    *
    * @return array
    */
@@ -522,7 +532,7 @@ class LifeEventController {
   /**
    * Gets criteria of given nid.
    *
-   * @param $nid
+   * @param int $nid
    *   The criteria node ID.
    *
    * @return \Drupal\node\NodeInterface
@@ -535,7 +545,7 @@ class LifeEventController {
   /**
    * Gets agency of given nid.
    *
-   * @param $nid
+   * @param int $nid
    *   The agency node ID.
    *
    * @return \Drupal\node\NodeInterface
@@ -548,9 +558,9 @@ class LifeEventController {
   /**
    * Gets node of given nid and mode.
    *
-   * @param $nid
+   * @param int $nid
    *   The node ID.
-   * @param $mode
+   * @param string $mode
    *   The mode.
    *
    * @return \Drupal\node\NodeInterface

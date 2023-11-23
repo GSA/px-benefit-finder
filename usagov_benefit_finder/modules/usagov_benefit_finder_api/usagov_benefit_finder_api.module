@@ -7,6 +7,7 @@
 
 use Drupal\usagov_benefit_finder_api\Controller\LifeEventController;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_node_update().
@@ -32,9 +33,10 @@ function usagov_benefit_finder_api_node_delete(Node $node) {
 /**
  * Save Json data if node is benefit finder content.
  *
- * @param Node $node
+ * @param \Drupal\node\NodeInterface $node
+ *   The benefit node.
  */
-function save_json_data(Node $node) {
+function save_json_data($node) {
   $config = \Drupal::config('usagov_benefit_finder.settings');
   if ($config->get('automate_json_data_file_generating')) {
     $content_types = [

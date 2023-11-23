@@ -6,6 +6,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\node\Entity\node;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\file\FileInterface;
+use Drupal\paragraphs\ParagraphInterface;
 
 /**
  * Class CheckDataController
@@ -424,7 +425,8 @@ EOD;
   /**
    * Builds criteria group fieldset.
    *
-   * @param $criteria
+   * @param \Drupal\paragraphs\ParagraphInterface $criteria
+   *   The criteria paragraph.
    *
    * @return array
    */
@@ -455,7 +457,8 @@ EOD;
   /**
    * Builds criteria fieldset.
    *
-   * @param $criteria
+   * @param \Drupal\paragraphs\ParagraphInterface $criteria
+   *   The criteria paragraph.
    *
    * @return array
    */
@@ -534,7 +537,7 @@ EOD;
   /**
    * Gets criteria of given nid.
    *
-   * @param $nid
+   * @param int $nid
    *   The criteria node ID.
    *
    * @return \Drupal\node\NodeInterface
@@ -547,7 +550,7 @@ EOD;
   /**
    * Gets agency of given nid.
    *
-   * @param $nid
+   * @param int $nid
    *   The agency node ID.
    *
    * @return \Drupal\node\NodeInterface
@@ -560,9 +563,9 @@ EOD;
   /**
    * Gets node of given nid and mode.
    *
-   * @param $nid
+   * @param int $nid
    *   The node ID.
-   * @param $mode
+   * @param string $mode
    *   The mode.
    *
    * @return \Drupal\node\NodeInterface

@@ -13,21 +13,21 @@ use Drupal\usagov_benefit_finder_api\Controller\LifeEventController;
  * Implements hook_node_update().
  */
 function usagov_benefit_finder_api_node_update(Node $node) {
-  save_json_data($node);
+  usagov_benefit_finder_api_save_json_data($node);
 }
 
 /**
  * Implements hook_node_insert().
  */
 function usagov_benefit_finder_api_node_insert(Node $node) {
-  save_json_data($node);
+  usagov_benefit_finder_api_save_json_data($node);
 }
 
 /**
  * Implements hook_node_delete().
  */
 function usagov_benefit_finder_api_node_delete(Node $node) {
-  save_json_data($node);
+  usagov_benefit_finder_api_save_json_data($node);
 }
 
 /**
@@ -36,7 +36,7 @@ function usagov_benefit_finder_api_node_delete(Node $node) {
  * @param \Drupal\node\NodeInterface $node
  *   The benefit node.
  */
-function save_json_data($node) {
+function usagov_benefit_finder_api_save_json_data($node) {
   $config = \Drupal::config('usagov_benefit_finder.settings');
   if ($config->get('automate_json_data_file_generating')) {
     $content_types = [

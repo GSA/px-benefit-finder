@@ -92,7 +92,7 @@ class LifeEventController {
    * @param string $id
    *   The ID of life event form.
    *
-   * @return JsonResponse
+   * @return \Symfony\Component\HttpFoundation\JsonResponse
    *   The response.
    */
   public function saveJsonData($id) {

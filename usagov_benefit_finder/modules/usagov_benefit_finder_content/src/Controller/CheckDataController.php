@@ -2,14 +2,17 @@
 
 namespace Drupal\usagov_benefit_finder_content\Controller;
 
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Drupal\node\Entity\node;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\file\FileInterface;
+use Drupal\node\Entity\node;
 use Drupal\paragraphs\ParagraphInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
- * Class CheckDataController
+ * Class CheckDataController.
+ *
+ * Provides the content report.
+ *
  * @package Drupal\usagov_benefit_finder_content\Controller
  */
 class CheckDataController {
@@ -23,7 +26,7 @@ class CheckDataController {
 
   /**
    * The file system service.
-
+   *
    * @var \Drupal\Core\File\FileSystemInterface
    */
   protected $fileSystem;
@@ -80,8 +83,7 @@ class CheckDataController {
   /**
    * Constructs a new LifeEventController object.
    */
-  public function __construct()
-  {
+  public function __construct() {
     $this->entityTypeManager = \Drupal::service('entity_type.manager');
     $this->fileSystem = \Drupal::service('file_system');
     $this->fileRepository = \Drupal::service('file.repository');
@@ -429,6 +431,7 @@ EOD;
    *   The criteria paragraph.
    *
    * @return array
+   *   The criteria group fieldset.
    */
   public function buildCriteriaGroupFieldset($criteria) {
     $criteria_group_fieldset = [];
@@ -461,9 +464,9 @@ EOD;
    *   The criteria paragraph.
    *
    * @return array
+   *   The criteria fieldset.
    */
-  public function buildCriteriaFieldset($criteria)
-  {
+  public function buildCriteriaFieldset($criteria) {
     $criteria_fieldset = [];
 
     // Get criteria node.
@@ -498,7 +501,7 @@ EOD;
     if ($criteria_node->get('field_b_type')->value == 'date' || $criteria_node->get('field_b_type')->value == "Date") {
       $criteria_values[] = [
         "default" => "",
-        "value" => (object)[],
+        "value" => (object) [],
       ];
     }
 

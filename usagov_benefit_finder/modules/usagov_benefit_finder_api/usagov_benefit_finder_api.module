@@ -5,9 +5,9 @@
  * Provides usagov_benefit_finder_api.
  */
 
-use Drupal\usagov_benefit_finder_api\Controller\LifeEventController;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
+use Drupal\usagov_benefit_finder_api\Controller\LifeEventController;
 
 /**
  * Implements hook_node_update().

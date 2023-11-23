@@ -2,14 +2,17 @@
 
 namespace Drupal\usagov_benefit_finder_api\Controller;
 
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Drupal\node\Entity\node;
-use Drupal\node\NodeInterface;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\file\FileInterface;
+use Drupal\node\Entity\node;
+use Drupal\node\NodeInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
- * Class LifeEventController
+ * Class LifeEventController.
+ *
+ * Generates JSON data and file.
+ *
  * @package Drupal\usagov_benefit_finder_api\Controller
  */
 class LifeEventController {
@@ -23,7 +26,7 @@ class LifeEventController {
 
   /**
    * The file system service.
-
+   *
    * @var \Drupal\Core\File\FileSystemInterface
    */
   protected $fileSystem;
@@ -73,8 +76,7 @@ class LifeEventController {
   /**
    * Constructs a new LifeEventController object.
    */
-  public function __construct()
-  {
+  public function __construct() {
     $this->entityTypeManager = \Drupal::service('entity_type.manager');
     $this->fileSystem = \Drupal::service('file_system');
     $this->fileRepository = \Drupal::service('file.repository');
@@ -91,7 +93,7 @@ class LifeEventController {
    *   The ID of life event form.
    *
    * @return JsonResponse
-   *  The response.
+   *   The response.
    */
   public function saveJsonData($id) {
     // Get JSON data mode.
@@ -130,7 +132,7 @@ class LifeEventController {
       if ($this->mode == "published") {
         $field_name = 'field_json_data_file_path';
       }
-      else if ($this->mode == "draft") {
+      elseif ($this->mode == "draft") {
         $field_name = 'field_draft_json_data_file_path';
       }
       $life_event->set($field_name, [
@@ -170,7 +172,7 @@ class LifeEventController {
    *   The ID of life event form.
    *
    * @return mixed
-   *  The JSON encoded data.
+   *   The JSON encoded data.
    */
   public function getData($id) {
     $life_event_form = [];
@@ -348,6 +350,7 @@ class LifeEventController {
    *   The criteria paragraph.
    *
    * @return array
+   *   The criteria group fieldset.
    */
   public function buildCriteriaGroupFieldset($criteria) {
     $criteria_group_fieldset = [];
@@ -380,9 +383,9 @@ class LifeEventController {
    *   The criteria paragraph.
    *
    * @return array
+   *   The criteria fieldset.
    */
-  public function buildCriteriaFieldset($criteria)
-  {
+  public function buildCriteriaFieldset($criteria) {
     $criteria_fieldset = [];
 
     // Get criteria node.
@@ -460,6 +463,7 @@ class LifeEventController {
    *   The benefit node.
    *
    * @return array
+   *   The benefit array.
    */
   public function buildBenefit($node) {
     $benefit = [];

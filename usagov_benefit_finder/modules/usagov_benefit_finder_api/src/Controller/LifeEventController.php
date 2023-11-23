@@ -109,11 +109,10 @@ class LifeEventController {
     // Get JSON data.
     $this->displayData = FALSE;
     $data = json_encode([
-        'data' => $this->getData($id),
-        'method' => 'GET',
-        'status' => 200,
-      ]
-    );
+      'data' => $this->getData($id),
+      'method' => 'GET',
+      'status' => 200,
+    ]);
 
     // Write JSON data file.
     $filename = "$directory/$id.json";
@@ -138,11 +137,10 @@ class LifeEventController {
     }
 
     return new JsonResponse([
-        'data' => "Saved JSON data to " . $fileUrlString,
-        'method' => 'GET',
-        'status' => 200,
-      ]
-    );
+      'data' => "Saved JSON data to " . $fileUrlString,
+      'method' => 'GET',
+      'status' => 200,
+    ]);
   }
 
   /**
@@ -153,11 +151,10 @@ class LifeEventController {
    */
   public function getJsonData($id) {
     return new JsonResponse([
-        'data' => $this->getData($id),
-        'method' => 'GET',
-        'status' => 200,
-      ]
-    );
+      'data' => $this->getData($id),
+      'method' => 'GET',
+      'status' => 200,
+    ]);
   }
 
   /**

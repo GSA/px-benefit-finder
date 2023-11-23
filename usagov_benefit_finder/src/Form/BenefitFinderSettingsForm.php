@@ -5,6 +5,13 @@ namespace Drupal\usagov_benefit_finder\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * Class BenefitFinderSettingsForm.
+ *
+ * Provides Benefit Finder module configuration.
+ *
+ * @package Drupal\usagov_benefit_finder\Form
+ */
 class BenefitFinderSettingsForm extends ConfigFormBase {
 
   /**

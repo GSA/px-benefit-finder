@@ -496,18 +496,18 @@ EOD;
     $criteria_values = [];
 
     if ($criteria_node->get('field_b_type')->value == 'date' || $criteria_node->get('field_b_type')->value == "Date") {
-      $criteria_values[] = array(
+      $criteria_values[] = [
         "default" => "",
         "value" => (object)[],
-      );
+      ];
     }
 
     $b_values = $criteria_node->get('field_b_values')->getValue();
     foreach ($b_values as $b_value) {
-      $criteria_values[] = array(
+      $criteria_values[] = [
         "option" => $b_value["value"],
         "value" => $b_value["value"],
-      );
+      ];
     }
     $inputCriteria["values"] = $criteria_values;
 

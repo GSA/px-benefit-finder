@@ -513,7 +513,7 @@ EOD;
 
     $criteria_fieldset["inputs"][]["inputCriteria"] = $inputCriteria;
 
-    // Get criterias fieldsets multi paragraphs
+    // Get criterias fieldsets multi paragraphs.
     $criterias_1 = $criteria->get('field_b_children')->referencedEntities();
     if (empty($criterias_1)) {
       $criteria_fieldset["children"] = [];

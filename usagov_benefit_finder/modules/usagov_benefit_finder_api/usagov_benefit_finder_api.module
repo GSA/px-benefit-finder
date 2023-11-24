@@ -5,8 +5,8 @@
  * Provides usagov_benefit_finder_api.
  */
 
-use Drupal\usagov_benefit_finder_api\Controller\LifeEventController;
 use Drupal\node\Entity\Node;
+use Drupal\usagov_benefit_finder_api\Controller\LifeEventController;
 
 /**
  * Implements hook_node_update().
@@ -47,7 +47,7 @@ function save_json_data(Node $node) {
       'bears_agency',
       'bears_criteria',
       'bears_benefit',
-      'bears_life_event_form'
+      'bears_life_event_form',
     ];
     if (in_array($node->getType(), $content_types)) {
       $LifeEventController = new LifeEventController();

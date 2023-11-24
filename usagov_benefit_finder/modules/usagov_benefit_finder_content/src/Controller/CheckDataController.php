@@ -2,11 +2,6 @@
 
 namespace Drupal\usagov_benefit_finder_content\Controller;
 
-use Drupal\Core\File\FileSystemInterface;
-use Drupal\file\FileInterface;
-use Drupal\node\Entity\node;
-use Drupal\paragraphs\ParagraphInterface;
-
 /**
  * Class CheckDataController.
  *

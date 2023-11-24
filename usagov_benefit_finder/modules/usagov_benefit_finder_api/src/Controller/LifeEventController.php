@@ -3,9 +3,6 @@
 namespace Drupal\usagov_benefit_finder_api\Controller;
 
 use Drupal\Core\File\FileSystemInterface;
-use Drupal\file\FileInterface;
-use Drupal\node\Entity\node;
-use Drupal\node\NodeInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**

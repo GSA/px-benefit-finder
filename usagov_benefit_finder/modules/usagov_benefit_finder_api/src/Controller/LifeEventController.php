@@ -469,7 +469,7 @@ class LifeEventController {
     foreach ($lifeEvents as $lifeEvent) {
       $service = $this->entityTypeManager->getStorage('node');
       $node1 = $service->load($lifeEvent['target_id']);
-      $benefit['lifeEvents'][] = $node1->get('title')->value; // death-of-a-loved-one no Death of a loved one
+      $benefit['lifeEvents'][] = $node1->get('title')->value;
     }
 
     // Build eligibilities.

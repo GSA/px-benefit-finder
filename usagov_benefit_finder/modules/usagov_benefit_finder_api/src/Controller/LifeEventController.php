@@ -114,7 +114,7 @@ class LifeEventController {
 
     // Write JSON data file.
     $filename = "$directory/$id.json";
-    $file = $this->fileRepository->writeData($data, $filename, FileSystemInterface::EXISTS_REPLACE);
+    $this->fileRepository->writeData($data, $filename, FileSystemInterface::EXISTS_REPLACE);
 
     $fileUrlString = $this->fileUrlGenerator->generate($filename)->toString();
 
@@ -487,7 +487,7 @@ class LifeEventController {
         $benefit_eligibility['label'] = $eligibility->get('field_b_label')->value ?? "";
 
         $acceptableValues = $eligibility->get('field_b_acceptable_values')->getValue();
-        foreach ($acceptableValues as $key => $acceptableValue) {
+        foreach ($acceptableValues as $acceptableValue) {
           $benefit_eligibility['acceptableValues'][] = $acceptableValue['value'];
         }
 

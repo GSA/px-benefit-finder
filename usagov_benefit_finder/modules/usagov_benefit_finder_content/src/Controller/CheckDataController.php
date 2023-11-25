@@ -257,7 +257,7 @@ EOD;
           $benefit_eligibility['label'] = $eligibility->get('field_b_label')->value ?? "";
 
           $acceptableValues = $eligibility->get('field_b_acceptable_values')->getValue();
-          foreach ($acceptableValues as $key => $acceptableValue) {
+          foreach ($acceptableValues as $acceptableValue) {
             $benefit_eligibility['acceptableValues'][] = $acceptableValue['value'];
           }
 
@@ -318,7 +318,6 @@ EOD;
 
     foreach ($nids as $nid) {
       $life_event_form_node = $this->getNode($nid, $this->mode);
-      $life_event_form_node_id = $life_event_form_node->id();
 
       // Build life event form.
       $life_event_form = [

@@ -30,11 +30,10 @@ jobs:
         git branch --show-current
         git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
         git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
-        git merge origin/main --allow-unrelated-histories 
-        git commit -m "merging main to release"
+        git rebase origin/main
+        git push origin release
         git branch --show-current
         git status
-        git push
 
     - name: Building benefit-finder module
       run: |

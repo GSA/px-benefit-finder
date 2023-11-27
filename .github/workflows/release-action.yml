@@ -22,20 +22,20 @@ jobs:
       with:
         ref: release
 
-    - name: Mergin main > release & pushing
-      env:
-        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-      run: |
-        git fetch --all
-        git branch --show-current
-        git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
-        git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
-        git rebase origin/main
-        git branch --show-current
-        git status
-        git push
-        git branch --show-current
-        git status
+    # - name: Mergin main > release & pushing
+    #   env:
+    #     GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+    #   run: |
+    #     git fetch --all
+    #     git branch --show-current
+    #     git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
+    #     git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
+    #     git rebase origin/main
+    #     git branch --show-current
+    #     git status
+    #     git push
+    #     git branch --show-current
+    #     git status
 
     - name: Building benefit-finder module
       run: |
@@ -53,7 +53,7 @@ jobs:
         git tag $TAG_NAME
         git push origin $TAG_NAME
 
-    - name: Creating pre-release
+    - name: Creating draft pre-release
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |

@@ -309,6 +309,11 @@ jobs:
       - image: cimg/php:8.0.16-node
     steps:
       - checkout
+      - run: 
+          command: |
+            pwd && ls -l
+            git submodule init
+            git submodule update
       - run:
           name: Install Specific Node Version
           command: |

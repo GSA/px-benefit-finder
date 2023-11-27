@@ -304,7 +304,56 @@ jobs:
              echo "${storybook_username}:${storybook_password}" > Staticfile.auth
              cf push benefit-finder-storybook-${CIRCLE_BRANCH}        
 
+  lint:
+    docker:
+      - image: cimg/php:8.0.16-node
+    steps:
+      - checkout
+      - run:
+          name: Install Specific Node Version
+          command: |
+            set +e
+            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+            nvm install v18.3.0
+            nvm alias default 18.3.0
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+            echo "Install Gulp on node "$(node --version)
+            sudo npm install --global gulp-cli
+      - run:
+          name: build benefit-finder app
+          command: |
+            bash mv-benefit-finder-app.sh
 
+      - run:
+          name: Install Linters and Sniffers
+          command: |
+            npm install --prefix ./benefit-finder
+            composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint squizlabs/php_codesniffer=*
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/phpcs --config-set installed_paths $COMPOSER_DIR/vendor/drupal/coder/coder_sniffer,$COMPOSER_DIR/vendor/sirbrillig/phpcs-variable-analysis,$COMPOSER_DIR/vendor/slevomat/coding-standard
+            mkdir -p /tmp/results
+            touch /tmp/results/php-lint.log
+            touch /tmp/results/php-cs.log
+            touch /tmp/results/theme-lint.log
+      - run:
+          name: PHP Lint
+          command: |
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/parallel-lint -e php,module,inc,install,test,profile,theme ./benefit-finder ./benefit-finder | tee /tmp/results/php-lint.log
+      - run:
+          name: PHP CodeSniff (Ignore warnings)
+          command: |
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal,Squiz,SlevomatCodingStandard -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+      - run:
+          name: Theme Lint
+          command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+      - store_artifacts:
+          path: /tmp/results
 
 
 # Orchestrate our job run sequence
@@ -353,7 +402,9 @@ workflows:
               only:
                 - main
                 - dev
-
+  php-lint-code-snif:
+    jobs:
+      - lint
 
 
 

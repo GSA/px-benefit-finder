@@ -30,7 +30,7 @@ jobs:
         git branch --show-current
         git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
         git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
-        git rebase main
+        git rebase origin/main
         git branch --show-current
         git status
         git push

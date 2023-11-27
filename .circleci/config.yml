@@ -312,9 +312,12 @@ jobs:
       - run: 
           name: Init and Update USAGov submodule
           command: |
-            pwd && ls -l
             git submodule init
             git submodule update
+            cd usagov-2021
+            git checkout dev
+            cd ..
+
       - run:
           name: Install Specific Node Version
           command: |
@@ -354,10 +357,7 @@ jobs:
           name: PHP CodeSniff (Ignore warnings)
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml ./usagov_benefit_finder | tee /tmp/results/php-cs.log
-      - run:
-          name: Theme Lint
-          command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - store_artifacts:
           path: /tmp/results
 

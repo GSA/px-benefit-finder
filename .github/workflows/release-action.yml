@@ -28,7 +28,7 @@ jobs:
       run: |
         git fetch --all
         git branch --show-current
-        git config --global user.name "${{ vars.COMMIT_AUTHOR }}"2q
+        git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
         git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
         git merge origin/main --allow-unrelated-histories --strategy-option theirs 
         git branch --show-current

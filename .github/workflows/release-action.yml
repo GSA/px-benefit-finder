@@ -22,7 +22,7 @@ jobs:
       with:
         ref: release
 
-    - name: Mergin main > release & pushing
+    - name: Merging main > release & pushing
       env:
         GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
       run: |
@@ -30,10 +30,10 @@ jobs:
         git branch --show-current
         git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
         git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
-        git merge origin/main --allow-unrelated-histories 
+        git merge origin/main --allow-unrelated-histories --strategy-option theirs 
         git branch --show-current
         git status
-        git push
+        git push --force-with-lease
 
     - name: Building benefit-finder module
       run: |

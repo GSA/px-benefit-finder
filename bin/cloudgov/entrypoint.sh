@@ -1,7 +1,7 @@
 #!/bin/sh
 
 /var/www/vendor/bin/drush state:set system.maintenance_mode 0
-/var/www/vendor/bin/drush pm:uninstall usagov_login
+/var/www/vendor/bin/drush pm:uninstall usagov_login || exit 0
 /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content
 /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api
 /var/www/vendor/bin/drush pm:enable usagov_benefit_finder

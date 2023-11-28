@@ -39,6 +39,8 @@ jobs:
             ls -l
             chmod +x entrypoint.sh
             ls -l
+            cd ..
+            ls -l
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl

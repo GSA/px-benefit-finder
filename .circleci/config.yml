@@ -16,8 +16,7 @@ jobs:
             git submodule init
             git submodule update
             cd usagov-2021
-            git checkout dev
-            git checkout 3ff7fb93a47daef6d4e33d3ec9beef72b8e386cd
+            git checkout prod
 
 
       - run:
@@ -42,8 +41,8 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
             sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
+
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -61,6 +60,7 @@ jobs:
           name: Injecting container name to the manifest.yml
           command: |
             echo "......"
+            export CIRCLE_BRANCH="dev"
             echo $CIRCLE_BRANCH
             echo "......"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
@@ -96,6 +96,7 @@ jobs:
       - run:
           name: Deploy the app to cloud.gov
           command: |
+            export CIRCLE_BRANCH="dev"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
@@ -125,7 +126,6 @@ jobs:
                                   chown -R nginx:nginx content && \
                                   pwd && ls -l && \
                                   /var/www/vendor/bin/drush cr"
-
   build_and_deploy_main:
     machine:
       image: ubuntu-2004:202107-02
@@ -309,15 +309,6 @@ jobs:
       - image: cimg/php:8.0.16-node
     steps:
       - checkout
-      - run: 
-          name: Init and Update USAGov submodule
-          command: |
-            git submodule init
-            git submodule update
-            cd usagov-2021
-            git checkout dev
-            cd ..
-
       - run:
           name: Install Specific Node Version
           command: |
@@ -357,7 +348,10 @@ jobs:
           name: PHP CodeSniff (Ignore warnings)
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal,Squiz,SlevomatCodingStandard -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+      - run:
+          name: Theme Lint
+          command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - store_artifacts:
           path: /tmp/results
 
@@ -371,7 +365,7 @@ workflows:
           filters:
             branches:
               only: 
-                - dev
+                - 598-use-entrypoint-sh
       - build_and_deploy_main:
           filters:
             branches:
@@ -411,6 +405,7 @@ workflows:
   php-lint-code-snif:
     jobs:
       - lint
+
 
 
 

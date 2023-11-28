@@ -1,6 +1,8 @@
 import Select from './index.jsx'
 import * as en from '../../locales/en/en.json'
 
+const { select } = en
+
 const selectOptions = [
   { value: 'value-1', label: 'Option 1' },
   { value: 'value-2', label: 'Option 2' },
@@ -11,7 +13,7 @@ export default {
   component: Select,
   tags: ['autodocs'],
   args: {
-    ui: en.select,
+    ui: select,
     options: selectOptions,
   },
 }

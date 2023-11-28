@@ -28,14 +28,13 @@ jobs:
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             mv usagov_benefit_finder usagov-2021/web/modules/custom
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
-            mv bin/cloudgov/entrypoint.sh usagov-2021
+            mv bin/cloudgov/entrypoint.sh usagov-2021/web
 
       - run: 
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
-            ls -l
-            chmod +x entrypoint.sh
+            chmod +x web/entrypoint.sh
             mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl

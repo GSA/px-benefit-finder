@@ -1,0 +1,15 @@
+#!/bin/bash
+
+/var/www/vendor/bin/drush state:set system.maintenance_mode 0
+/var/www/vendor/bin/drush pm:uninstall usagov_login
+/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content
+/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api
+/var/www/vendor/bin/drush pm:enable usagov_benefit_finder
+/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page
+/var/www/vendor/bin/drush cr
+cd ../var/www/web/
+pwd && ls -l
+mkdir -p content/sync
+chown -R nginx:nginx content
+pwd && ls -l
+/var/www/vendor/bin/drush cr

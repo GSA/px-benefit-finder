@@ -28,11 +28,14 @@ jobs:
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             mv usagov_benefit_finder usagov-2021/web/modules/custom
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
+            mv bin/cloudgov/entrypoint.sh usagov-2021
 
       - run: 
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
+            ls -l
+            chmod +x entrypoint.sh
             mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
@@ -74,6 +77,7 @@ jobs:
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - dbstorage##" manifest.yml
+            sed -i '16i\  command: ./entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:
@@ -107,27 +111,27 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 60
+            # sleep 60
 
-      - run:
-          name: Enable benefit-finder module
-          command: |
-            export CIRCLE_BRANCH="dev"
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:uninstall usagov_login || exit 0"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush cr"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "cd ../var/www/web/ && \
-                                  pwd && ls -l && \
-                                  mkdir -p content/sync && \
-                                  chown -R nginx:nginx content && \
-                                  pwd && ls -l && \
-                                  /var/www/vendor/bin/drush cr"
+      # - run:
+      #     name: Enable benefit-finder module
+      #     command: |
+      #       export CIRCLE_BRANCH="dev"
+      #       cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+      #       cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+      #       cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0"
+      #       cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:uninstall usagov_login || exit 0"
+      #       cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content"
+      #       cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api"
+      #       cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder"
+      #       cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page"
+      #       cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush cr"
+      #       cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "cd ../var/www/web/ && \
+      #                             pwd && ls -l && \
+      #                             mkdir -p content/sync && \
+      #                             chown -R nginx:nginx content && \
+      #                             pwd && ls -l && \
+      #                             /var/www/vendor/bin/drush cr"
   build_and_deploy_main:
     machine:
       image: ubuntu-2004:202107-02

@@ -7,7 +7,7 @@
 /var/www/vendor/bin/drush pm:enable usagov_benefit_finder
 /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page
 /var/www/vendor/bin/drush cr
-cd ../var/www/web/
+cd ../web/
 pwd && ls -l
 mkdir -p content/sync
 chown -R nginx:nginx content

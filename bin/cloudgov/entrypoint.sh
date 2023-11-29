@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# /var/www/vendor/bin/drush state:set system.maintenance_mode 0
-# /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content
-# /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api
-# /var/www/vendor/bin/drush pm:enable usagov_benefit_finder
-# /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page
-# /var/www/vendor/bin/drush cr
+/var/www/vendor/bin/drush state:set system.maintenance_mode 0
+/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content
+/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api
+/var/www/vendor/bin/drush pm:enable usagov_benefit_finder
+/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page
+/var/www/vendor/bin/drush cr
 # cd ../web/
 # pwd && ls -l
 # mkdir -p content/sync

@@ -28,15 +28,14 @@ jobs:
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             mv usagov_benefit_finder usagov-2021/web/modules/custom
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
-            mv bin/cloudgov/entrypoint.sh usagov-2021/bin/entrypoint.sh
+            mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
+            mv bin/cloudgov/nginx-init.sh usagov-2021/scripts/nginx-init.sh
 
       - run: 
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
             mv .docker/Dockerfile-cms .
-            ls -l
-            chmod +x bin/entrypoint.sh
             ls -l bin
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
@@ -46,8 +45,6 @@ jobs:
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
             sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
-            echo "./entrypoint.sh" >> bin/init
-            cat bin/init
 
 
       - run: 
@@ -80,6 +77,7 @@ jobs:
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - dbstorage##" manifest.yml
+            sed -i '16i\  command: cd scripts && pwd && ls -l && ./entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:

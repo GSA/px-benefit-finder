@@ -11,3 +11,4 @@ cd /var/www/web/
 mkdir -p content/sync
 chown -R nginx:nginx content
 /var/www/vendor/bin/drush cr
+./nginx-init.sh

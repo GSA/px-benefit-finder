@@ -46,7 +46,7 @@ jobs:
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
             sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
-            echo "./bin/entrypoint.sh" >> bin/init
+            # echo "./bin/entrypoint.sh" >> bin/init
             cat bin/init
 
 

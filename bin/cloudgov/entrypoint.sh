@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo 'running' > $HOME/test.txt
+
 /var/www/vendor/bin/drush state:set system.maintenance_mode 0
 /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content
 /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api

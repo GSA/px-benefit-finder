@@ -28,7 +28,7 @@ jobs:
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             mv usagov_benefit_finder usagov-2021/web/modules/custom
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
-            mv bin/cloudgov/entrypoint.sh usagov-2021/entrypoint.sh
+            mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
 
       - run: 
           name: Pre-docker-build configurations
@@ -36,8 +36,8 @@ jobs:
             cd px-benefit-finder/usagov-2021
             mv .docker/Dockerfile-cms .
             ls -l
-            chmod +x entrypoint.sh
-            ls -l
+            chmod +x scripts/entrypoint.sh
+            ls -l scripts
             sed -i 's/80/8080/g' Dockerfile-cms  
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
@@ -78,7 +78,7 @@ jobs:
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - dbstorage##" manifest.yml
-            sed -i '16i\  command: pwd && ls -l web && ./web/entrypoint.sh' manifest.yml
+            sed -i '16i\  command: pwd && ls -l scripts && ./scripts/entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:

@@ -37,7 +37,8 @@ jobs:
             cd px-benefit-finder/usagov-2021
             mv .docker/Dockerfile-cms .
             ls -l bin
-            sed -i 's/80/8080/g' Dockerfile-cms  
+            sed -i 's/80/8080/g' Dockerfile-cms
+            sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
             sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
@@ -77,7 +78,7 @@ jobs:
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - dbstorage##" manifest.yml
-            sed -i '16i\  command: cd scripts && pwd && ls -l && ./entrypoint.sh' manifest.yml
+            # sed -i '16i\  command: cd scripts && pwd && ls -l && ./entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:

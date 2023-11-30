@@ -333,7 +333,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 598-use-entrypoint-sh
+                - dev
       - build_and_deploy_main:
           filters:
             branches:

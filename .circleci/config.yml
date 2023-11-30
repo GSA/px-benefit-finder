@@ -43,8 +43,6 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
-
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -152,8 +150,7 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
-
+          
       - run: 
           name: Building, tagging, pushing the Docker Image
           command: |

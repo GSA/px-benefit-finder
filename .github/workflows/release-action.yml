@@ -44,6 +44,8 @@ jobs:
         pwd
         cd benefit-finder
         pwd
+        ls -l
+        chmod +x mv-uswds-usagov-theme.sh 
         sed -i 's/^SCRIPT_DIR.*/SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" \&\& pwd)/' mv-uswds-usagov-theme.sh
         cat mv-uswds-usagov-theme.sh  
         npm i @craco/craco

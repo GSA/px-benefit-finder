@@ -43,6 +43,7 @@ jobs:
       run: |
         pwd
         cd benefit-finder
+        npm i @craco/craco
         npm run dev:storybook
 
     # - name: Compressing the module directory

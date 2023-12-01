@@ -52,7 +52,7 @@ jobs:
         pwd
         npm i @craco/craco
         npm run dev:storybook
-        /bin/bash npm cy:run:chrome
+        /bin/sh npm cy:run:chrome
 
     # - name: Compressing the module directory
     #   run: |

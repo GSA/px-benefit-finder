@@ -35,9 +35,9 @@ jobs:
         git status
         git push --force-with-lease
 
-    - name: Building benefit-finder module
-      run: |
-        bash ./mv-benefit-finder-app.sh
+    # - name: Building benefit-finder module
+    #   run: |
+    #     bash ./mv-benefit-finder-app.sh
 
     - name: Cypress testing
       run: |

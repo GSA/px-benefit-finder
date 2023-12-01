@@ -51,7 +51,7 @@ jobs:
         cd benefit-finder
         pwd
         npm i @craco/craco
-        npm run build && npm run mv:uswds:usagov && npm run prebuild:storybook && npm run storybook dev -p 6006 &
+        npm run build && npm run mv:uswds:usagov && npm run prebuild:storybook && npm run storybook dev &
         sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: 'http:\/\/127.0.0.1'/" cypress.config.js
         npm run cy:run:chrome
 

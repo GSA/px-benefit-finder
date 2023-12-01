@@ -51,8 +51,8 @@ jobs:
         cd benefit-finder
         pwd
         npm i @craco/craco
-        npm run dev:storybook
-        /bin/sh npm cy:run:chrome
+        npm run build && npm run mv:uswds:usagov && npm run prebuild:storybook && storybook dev -p 6006
+        npm run cy:run:chrome
 
     # - name: Compressing the module directory
     #   run: |

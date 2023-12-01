@@ -39,20 +39,26 @@ jobs:
       run: |
         bash ./mv-benefit-finder-app.sh
 
-    - name: Compressing the module directory
+    - name: Cypress testing
       run: |
-        tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
-        ls -l
+        pwd
+        cd benefit-finder
+        npm run dev:storybook
 
-    - name: Setting and pushing Version Tag
-      run: |
-        git branch --show-current
-        TAG_NAME="${{ github.event.inputs.tag_name }}"
-        git tag $TAG_NAME
-        git push origin $TAG_NAME
+    # - name: Compressing the module directory
+    #   run: |
+    #     tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
+    #     ls -l
 
-    - name: Creating pre-release
-      env:
-        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-      run: |
-        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz -t "Release ${{ github.event.inputs.tag_name }}" --target release -d -p --generate-notes
+    # - name: Setting and pushing Version Tag
+    #   run: |
+    #     git branch --show-current
+    #     TAG_NAME="${{ github.event.inputs.tag_name }}"
+    #     git tag $TAG_NAME
+    #     git push origin $TAG_NAME
+
+    # - name: Creating pre-release
+    #   env:
+    #     GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+    #   run: |
+    #     gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz -t "Release ${{ github.event.inputs.tag_name }}" --target release -d -p --generate-notes

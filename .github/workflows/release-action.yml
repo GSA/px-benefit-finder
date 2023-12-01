@@ -41,6 +41,8 @@ jobs:
 
     - name: Cypress testing
       run: |
+        git submodule init
+        git submodule update
         pwd
         ls -l 
         chmod +x mv-uswds-usagov-theme.sh 

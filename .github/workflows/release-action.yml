@@ -85,7 +85,7 @@ jobs:
         # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
         # source ~/.bashrc
         nvm --version
-        nvm install node --reinstall-packages-from=node
+        nvm install node # --reinstall-packages-from=node
         npm i @craco/craco
         npm run build
         cd .. 

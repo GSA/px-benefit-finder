@@ -39,6 +39,22 @@ jobs:
     #   run: |
     #     bash ./mv-benefit-finder-app.sh
 
+    - name: Setup CF CLI
+      run: |
+        if [ "$(whoami)" != "root" ]; then
+          wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+          echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.    list
+          sudo apt-get update
+          sudo apt-get install -y cf8-cli
+        else
+          wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+          echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+          apt-get update
+          apt-get install -y cf8-cli
+        fi
+        cf -v
+        cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-dev"
+
     - name: Cypress testing
       run: |
         git submodule init
@@ -50,9 +66,27 @@ jobs:
         cat mv-uswds-usagov-theme.sh 
         cd benefit-finder
         pwd
+        mv manifest.yml manifest.yml.tpl
+        envsubst < manifest.yml.tpl > manifest.yml
+        echo "---------------------------------------------"
+        pwd
+        ls -l
+        cat manifest.yml
+        echo "---------------------------------------------"
+        nvm install node --reinstall-packages-from=node
         npm i @craco/craco
-        npm run build && npm run mv:uswds:usagov && npm run prebuild:storybook && npm run storybook dev &
-        sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: 'http:\/\/127.0.0.1'/" cypress.config.js
+        npm run build
+        cd .. 
+        bash mv-uswds-usagov-theme.sh
+        cd benefit-finder
+        npm run build:storybook
+        mv manifest.yml storybook-static/
+        mv Staticfile storybook-static/
+        mv nginx storybook-static/
+        cd storybook-static
+        echo "${storybook_username}:${storybook_password}" > Staticfile.auth
+        cf push benefit-finder-storybook-dev     
+        sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: 'http://benefit-finder-storybook-dev.app.cloud.gov'" cypress.config.js
         npm run cy:run:chrome
 
     # - name: Compressing the module directory

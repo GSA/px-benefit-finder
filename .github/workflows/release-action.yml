@@ -97,13 +97,13 @@ jobs:
         mv manifest.yml storybook-static/
         mv Staticfile storybook-static/
         mv nginx storybook-static/
+        mv cypress.config.js cypress.config.js.tpl
+        envsubst < cypress.config.js.tpl > cypress.config.js
         cd storybook-static
         echo "${storybook_username}:${storybook_password}" > Staticfile.auth
         cf push benefit-finder-storybook-dev 
         cd ..    
-        sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: 'http:\/\/benefit-finder-storybook-dev.app.cloud.gov'/" cypress.config.js
-        cypress.config.js cypress.config.js.tpl
-        envsubst < cypress.config.js.tpl > cypress.config.js
+        # sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: 'http:\/\/benefit-finder-storybook-dev.app.cloud.gov'/" cypress.config.js
         npm run cy:run:chrome
 
     # - name: Compressing the module directory

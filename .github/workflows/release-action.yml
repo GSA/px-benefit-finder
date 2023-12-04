@@ -40,6 +40,10 @@ jobs:
     #     bash ./mv-benefit-finder-app.sh
 
     - name: Setup CF CLI
+      env:
+        CF_USER: "${{ secrets.CF_USER }}"
+        CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+        CF_ORG: "${{ secrets.CF_ORG }}"
       run: |
         if [ "$(whoami)" != "root" ]; then
           wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -

@@ -102,6 +102,8 @@ jobs:
         cf push benefit-finder-storybook-dev 
         cd ..    
         sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: 'http:\/\/benefit-finder-storybook-dev.app.cloud.gov'/" cypress.config.js
+        cypress.config.js cypress.config.js.tpl
+        envsubst < cypress.config.js.tpl > cypress.config.js
         npm run cy:run:chrome
 
     # - name: Compressing the module directory

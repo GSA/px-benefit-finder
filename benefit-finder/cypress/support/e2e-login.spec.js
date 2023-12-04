@@ -5,7 +5,7 @@ describe('Basic Auth E2E Test', () => {
       const password = Cypress.env('CYPRESS_password');
   
       // Construct the URL with basic authentication
-      const urlWithAuth = `https://${username}:${password}@${Cypress.env('CYPRESS_baseUrl')}`;
+      const urlWithAuth = `https://${username}:${password}@${Cypress.env('CYPRESS_baseUrl')}/iframe.html?args=&id=app--primary&viewMode=story`;
   
       cy.log('Before visit');
       // Visit the website with basic auth

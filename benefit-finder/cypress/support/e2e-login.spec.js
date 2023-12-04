@@ -7,12 +7,14 @@ describe('Basic Auth E2E Test', () => {
       // Construct the URL with basic authentication
       const urlWithAuth = `https://${username}:${password}@${Cypress.env('CYPRESS_baseUrl')}`;
   
+      cy.log('Before visit');
       // Visit the website with basic auth
-      cy.visit(urlWithAuth);
+      cy.visit(urlWithAuth, { timeout: 10000 });
+      cy.log('after visit');
   
       // Add your Cypress test commands here
       // For example:
-      cy.get('your-selector').should('contain', 'expected-text');
+    //   cy.get('your-selector').should('contain', 'expected-text');
     });
   });
   

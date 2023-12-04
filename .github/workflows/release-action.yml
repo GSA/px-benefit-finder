@@ -97,7 +97,8 @@ jobs:
         mv nginx storybook-static/
         cd storybook-static
         echo "${storybook_username}:${storybook_password}" > Staticfile.auth
-        cf push benefit-finder-storybook-dev     
+        cf push benefit-finder-storybook-dev 
+        cd ..    
         sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: 'http:\/\/benefit-finder-storybook-dev.app.cloud.gov'/" cypress.config.js
         npm run cy:run:chrome
 

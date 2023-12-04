@@ -35,10 +35,6 @@ jobs:
         git status
         git push --force-with-lease
 
-    # - name: Building benefit-finder module
-    #   run: |
-    #     bash ./mv-benefit-finder-app.sh
-
     - name: Setup CF CLI
       env:
         CF_USER: "${{ secrets.CF_USER }}"
@@ -64,6 +60,8 @@ jobs:
         CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
         CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
         CYPRESS_password: ${{ secrets.BASIC_AUTH_PASSWORD }}
+        storybook_username: ${{ secrets.storybook_username }}
+        storybook_password: ${{ secrets.storybook_password }}
       run: |
         git submodule init
         git submodule update

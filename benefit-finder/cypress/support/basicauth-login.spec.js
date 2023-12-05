@@ -3,8 +3,8 @@
 describe('Basic Auth Test', () => {
     it('should authenticate with Basic Auth', () => {
       // If using the Cypress Credentials Plugin
-      cy.getCredentials('yourWebsite').then(credentials => {
-        const { username, password } = credentials;
+      cy.getCredentials("$CYPRESS_baseUrl").then(credentials => {
+        const { $storybook_username, $storybook_password } = credentials;
   
         // Perform Basic Auth using cy.request
         cy.request({

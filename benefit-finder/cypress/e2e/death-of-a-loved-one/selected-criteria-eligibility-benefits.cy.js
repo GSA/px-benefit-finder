@@ -11,8 +11,8 @@ describe('Validate correct eligibility benefits display based on selected criter
     const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
     cy.visit('/iframe.html?args=&id=app--primary&viewMode=story', {
       auth: {
-          username: Cypress.env("authUsername"),
-          password: Cypress.env("authPassword"),
+          username: Cypress.env('authUsername'),
+          password: Cypress.env('authPassword'),
       },
     }) 
 

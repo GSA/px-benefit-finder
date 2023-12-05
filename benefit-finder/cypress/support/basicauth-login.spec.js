@@ -1,25 +1,25 @@
 // your_spec.js
+// your_spec.js
 
-describe('Basic Auth Test', () => {
-    it('should authenticate with Basic Auth', () => {
-      // If using the Cypress Credentials Plugin
-      cy.getCredentials("$CYPRESS_baseUrl").then(credentials => {
-        const { $storybook_username, $storybook_password } = credentials;
+describe('Basic Auth Test with cy.visit()', () => {
+    it('should authenticate with Basic Auth using cy.visit()', () => {
+      const username = $storybook_username;
+      const password = $storybook_password;
+      const url = $CYPRESS_baseUrl;
   
-        // Perform Basic Auth using cy.request
-        cy.request({
-          method: 'GET',
-          url: $CYPRESS_baseUrl,
-          auth: {
-            $storybook_username,
-            $storybook_password,
-          },
-        }).then(response => {
-          // Validate that the request was successful
-          expect(response.status).to.eq(200);
-  
-          // Add your additional assertions if needed
-        });
+      cy.visit(url, {
+        onBeforeLoad(win) {
+          // Set Basic Auth headers
+          const credentials = btoa(`${username}:${password}`);
+          win.XMLHttpRequest = () => {
+            const xhr = new win.XMLHttpRequest();
+            xhr.setRequestHeader('Authorization', `Basic ${credentials}`);
+            return xhr;
+          };
+        },
       });
+  
+      // Add your assertions here
     });
   });
+

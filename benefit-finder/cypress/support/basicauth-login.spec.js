@@ -9,10 +9,10 @@ describe('Basic Auth Test', () => {
         // Perform Basic Auth using cy.request
         cy.request({
           method: 'GET',
-          url: $baseUrl,
+          url: $CYPRESS_baseUrl,
           auth: {
-            $authUsername,
-            $authPassword,
+            $storybook_username,
+            $storybook_password,
           },
         }).then(response => {
           // Validate that the request was successful

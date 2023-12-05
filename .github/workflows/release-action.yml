@@ -55,7 +55,7 @@ jobs:
         cf -v
         cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-dev"
 
-    - name: Cypress testing
+    - name: Building & Deploying Storybook App to Dev Env
       env:
         CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
         CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
@@ -80,11 +80,11 @@ jobs:
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
         nvm --version
+        cd benefit-finder
         nvm install node # --reinstall-packages-from=node
         npm i @craco/craco
         npm run build
-        bash mv-uswds-usagov-theme.sh
-        cd benefit-finder
+        bash ../mv-uswds-usagov-theme.sh
         npm run build:storybook
         mv manifest.yml storybook-static/
         mv Staticfile storybook-static/

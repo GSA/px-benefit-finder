@@ -19,21 +19,21 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      with:
-        ref: release
+      # with:
+      #   ref: release
 
-    - name: Merging main > release & pushing
-      env:
-        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-      run: |
-        git fetch --all
-        git branch --show-current
-        git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
-        git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
-        git merge origin/main --allow-unrelated-histories --strategy-option theirs 
-        git branch --show-current
-        git status
-        git push --force-with-lease
+    # - name: Merging main > release & pushing
+    #   env:
+    #     GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+    #   run: |
+    #     git fetch --all
+    #     git branch --show-current
+    #     git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
+    #     git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
+    #     git merge origin/main --allow-unrelated-histories --strategy-option theirs 
+    #     git branch --show-current
+    #     git status
+    #     git push --force-with-lease
 
     - name: Setup CF CLI
       env:
@@ -63,6 +63,8 @@ jobs:
         storybook_username: ${{ secrets.storybook_username }}
         storybook_password: ${{ secrets.storybook_password }}
       run: |
+        git branch --show-current
+        pwd
         git submodule init
         git submodule update
         pwd

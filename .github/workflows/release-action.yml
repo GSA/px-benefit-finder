@@ -60,8 +60,8 @@ jobs:
         CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
         CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
         CYPRESS_password: ${{ secrets.BASIC_AUTH_PASSWORD }}
-        storybook_username: ${{ secrets.storybook_username }}
-        storybook_password: ${{ secrets.storybook_password }}
+        storybook_username: ${{ secrets.STORYBOOK_USERNAME }}
+        storybook_password: ${{ secrets.STORYBOOK_PASSWORD }}
       run: |
         git branch --show-current
         pwd

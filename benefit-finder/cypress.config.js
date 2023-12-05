@@ -4,8 +4,8 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: "$CYPRESS_baseUrl",
     env: {
-      authUsername: $storybook_username,
-      authPassword: $storybook_password,
+      authUsername: "$storybook_username",
+      authPassword: "$storybook_password"
     },
     setupNodeEvents(on, config) {
       // implement node event listeners here

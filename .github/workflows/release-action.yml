@@ -102,6 +102,8 @@ jobs:
         mv cypress.config.js cypress.config.js.tpl
         envsubst < cypress.config.js.tpl > cypress.config.js
         cat cypress.config.js
+        mv cypress/support/basicauth-login.spec.js cypress/support/basicauth-login.spec.js.tpl
+        envsubst < cypress/support/basicauth-login.spec.js.tpl > cypress/support/basicauth-login.spec.js
         cat cypress/support/basicauth-login.spec.js
         cd storybook-static
         echo "${storybook_username}:${storybook_password}" > Staticfile.auth

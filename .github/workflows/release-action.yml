@@ -103,6 +103,7 @@ jobs:
         envsubst < cypress.config.js.tpl > cypress.config.js
         cat cypress.config.js
         mv cypress/support/basicauth-login.spec.js cypress/support/basicauth-login.spec.js.tpl
+        echo "${CYPRESS_baseUrl} ${storybook_username} ${storybook_password}"
         envsubst < cypress/support/basicauth-login.spec.js.tpl > cypress/support/basicauth-login.spec.js
         cat cypress/support/basicauth-login.spec.js
         cd storybook-static

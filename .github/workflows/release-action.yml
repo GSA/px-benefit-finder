@@ -103,6 +103,8 @@ jobs:
         storybook_username: ${{ secrets.STORYBOOK_USERNAME }}
         storybook_password: ${{ secrets.STORYBOOK_PASSWORD }}
       run: |
+        pwd
+        cd benefit-finder
         npm run cy:run:chrome
 
     # - name: Compressing the module directory

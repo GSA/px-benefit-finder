@@ -72,27 +72,17 @@ jobs:
         chmod +x mv-uswds-usagov-theme.sh 
         sed -i 's/^SCRIPT_DIR.*/SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" \&\& pwd)/' mv-uswds-usagov-theme.sh
         cat mv-uswds-usagov-theme.sh 
-        cd benefit-finder
         pwd
-        mv manifest.yml manifest.yml.tpl
+        mv benefit-finder/manifest.yml benefit-finder/manifest.yml.tpl
         export CIRCLE_BRANCH="dev"
-        envsubst < manifest.yml.tpl > manifest.yml
-        echo "---------------------------------------------"
-        pwd
-        ls -l
-        cat manifest.yml
-        echo "---------------------------------------------"
+        envsubst < benefit-finder/manifest.yml.tpl > benefit-finder/manifest.yml
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-        # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-        # source ~/.bashrc
         nvm --version
         nvm install node # --reinstall-packages-from=node
         npm i @craco/craco
         npm run build
-        cd .. 
         bash mv-uswds-usagov-theme.sh
         cd benefit-finder
         npm run build:storybook
@@ -101,12 +91,18 @@ jobs:
         mv nginx storybook-static/
         mv cypress.config.js cypress.config.js.tpl
         envsubst < cypress.config.js.tpl > cypress.config.js
-        cat cypress.config.js
         cd storybook-static
         echo "${storybook_username}:${storybook_password}" > Staticfile.auth
-        cf push benefit-finder-storybook-dev 
-        cd ..    
-        # sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: 'http:\/\/benefit-finder-storybook-dev.app.cloud.gov'/" cypress.config.js
+        cf push benefit-finder-storybook-dev
+        
+    - name: Cypres Testing
+      env:
+        CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
+        CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
+        CYPRESS_password: ${{ secrets.BASIC_AUTH_PASSWORD }}
+        storybook_username: ${{ secrets.STORYBOOK_USERNAME }}
+        storybook_password: ${{ secrets.STORYBOOK_PASSWORD }}
+      run: |
         npm run cy:run:chrome
 
     # - name: Compressing the module directory

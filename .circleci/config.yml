@@ -336,7 +336,7 @@ workflows:
           filters:
             branches:
               only: 
-                - dev
+                - 694-Pipeline-Failing-in-Main
       - build_and_deploy_main:
           filters:
             branches:

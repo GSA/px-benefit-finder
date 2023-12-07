@@ -26,6 +26,7 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
+            rm -r usagov-2021/web/modules/custom/usagov_benefit_finder
             mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
             mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh

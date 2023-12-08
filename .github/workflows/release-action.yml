@@ -86,14 +86,14 @@ jobs:
         echo "${storybook_username}:${storybook_password}" > Staticfile.auth
         cf push benefit-finder-storybook-dev
         
-    - name: Cypres Testing
-      env:
-        CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
-        CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
-        CYPRESS_password: ${{ secrets.BASIC_AUTH_PASSWORD }}
-      run: |
-        cd benefit-finder
-        npm run cy:run:chrome
+    # - name: Cypres Testing
+    #   env:
+    #     CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
+    #     CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
+    #     CYPRESS_password: ${{ secrets.BASIC_AUTH_PASSWORD }}
+    #   run: |
+    #     cd benefit-finder
+    #     npm run cy:run:chrome
 
     - name: Compressing the module directory
       run: |

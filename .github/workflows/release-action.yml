@@ -109,12 +109,9 @@ jobs:
         # ls -l
         tar -xzvf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
         # ls -l
-        test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/cs || { echo "Error: There is no css directory in the zip file"; exit 1; }
-        # test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js || { echo "Error: There is no js directory in the zip file"; exit 1; }
-        # cd usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page
-        # ls -l
-        # cd usagov_benefit_finder_page
-        # ls -l
+        test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css || { echo "ERROR!!! There is no css directory in the zip file"; exit 1; }
+        # test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js || { echo "ERROR!!! There is no js directory in the zip file"; exit 1; }
+ 
       
 
 

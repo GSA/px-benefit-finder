@@ -64,22 +64,15 @@ jobs:
         storybook_password: ${{ secrets.STORYBOOK_PASSWORD }}
       run: |
         git branch --show-current
-        pwd
         git submodule init
-        git submodule update
-        pwd
-        ls -l 
-        chmod +x mv-uswds-usagov-theme.sh 
+        git submodule update 
         sed -i 's/^SCRIPT_DIR.*/SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" \&\& pwd)/' mv-uswds-usagov-theme.sh
-        cat mv-uswds-usagov-theme.sh 
-        pwd
         mv benefit-finder/manifest.yml benefit-finder/manifest.yml.tpl
         export CIRCLE_BRANCH="dev"
         envsubst < benefit-finder/manifest.yml.tpl > benefit-finder/manifest.yml
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-        nvm --version
         cd benefit-finder
         nvm install node # --reinstall-packages-from=node
         npm i @craco/craco
@@ -103,7 +96,6 @@ jobs:
         storybook_username: ${{ secrets.STORYBOOK_USERNAME }}
         storybook_password: ${{ secrets.STORYBOOK_PASSWORD }}
       run: |
-        pwd
         cd benefit-finder
         npm run cy:run:chrome
 

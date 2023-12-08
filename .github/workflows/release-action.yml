@@ -104,6 +104,9 @@ jobs:
       run: |
         pwd
         ls -l
+        echo "removing usagov_benefit_finder"
+        rm -r usagov_benefit_finder
+        ls -l
         tar -xzvf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
         ls -l
         cd "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"

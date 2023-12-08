@@ -63,7 +63,6 @@ jobs:
         storybook_username: ${{ secrets.STORYBOOK_USERNAME }}
         storybook_password: ${{ secrets.STORYBOOK_PASSWORD }}
       run: |
-        git branch --show-current
         git submodule init
         git submodule update 
         mv benefit-finder/manifest.yml benefit-finder/manifest.yml.tpl
@@ -96,10 +95,21 @@ jobs:
         cd benefit-finder
         npm run cy:run:chrome
 
-    # - name: Compressing the module directory
-    #   run: |
-    #     tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
-    #     ls -l
+    - name: Compressing the module directory
+      run: |
+        tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
+        ls -l
+
+    - name: Checking if the zip file has all the items expected
+      run: |
+        pwd
+        ls -l
+        tar -xzvf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
+        ls -l
+      
+
+
+
 
     # - name: Setting and pushing Version Tag
     #   run: |

@@ -66,13 +66,12 @@ jobs:
         git branch --show-current
         git submodule init
         git submodule update 
-        # sed -i 's/^SCRIPT_DIR.*/SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" \&\& pwd)/' mv-uswds-usagov-theme.sh
         mv benefit-finder/manifest.yml benefit-finder/manifest.yml.tpl
         export CIRCLE_BRANCH="dev"
         envsubst < benefit-finder/manifest.yml.tpl > benefit-finder/manifest.yml
-        export NVM_DIR="$HOME/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+        # export NVM_DIR="$HOME/.nvm"
+        # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
         cd benefit-finder
         nvm install node # --reinstall-packages-from=node
         npm i @craco/craco
@@ -93,8 +92,6 @@ jobs:
         CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
         CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
         CYPRESS_password: ${{ secrets.BASIC_AUTH_PASSWORD }}
-        storybook_username: ${{ secrets.STORYBOOK_USERNAME }}
-        storybook_password: ${{ secrets.STORYBOOK_PASSWORD }}
       run: |
         cd benefit-finder
         npm run cy:run:chrome

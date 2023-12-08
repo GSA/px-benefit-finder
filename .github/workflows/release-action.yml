@@ -109,7 +109,7 @@ jobs:
         ls -l
         tar -xzvf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
         ls -l
-        cd usagov_benefit_finder
+        cd usagov_benefit_finder/modules/
         ls -l
       
 

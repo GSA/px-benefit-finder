@@ -100,13 +100,14 @@ jobs:
         tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
         ls -l
 
-    - name: Checking if the zip file has all the items expected
+    - name: Checking if the zip file has jss and js files expected
       run: |
         echo "removing usagov_benefit_finder.................."
         rm -r usagov_benefit_finder
         cp "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" "testing-benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
         ls -l
         tar -xzvf "testing-benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
+        ls -l
         test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css || { echo "ERROR!!! There is no css directory in the zip file"; }
         test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js || { echo "ERROR!!! There is no js directory in the zip file"; exit 1; }
  

@@ -19,21 +19,21 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      with:
-        ref: release
+    #   with:
+    #     ref: release
 
-    - name: Merging main > release & pushing
-      env:
-        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-      run: |
-        git fetch --all
-        git branch --show-current
-        git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
-        git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
-        git merge origin/main --allow-unrelated-histories --strategy-option theirs 
-        git branch --show-current
-        git status
-        git push --force-with-lease
+    # - name: Merging main > release & pushing
+    #   env:
+    #     GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+    #   run: |
+    #     git fetch --all
+    #     git branch --show-current
+    #     git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
+    #     git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
+    #     git merge origin/main --allow-unrelated-histories --strategy-option theirs 
+    #     git branch --show-current
+    #     git status
+    #     git push --force-with-lease
 
     - name: Setup CF CLI
       env:
@@ -80,6 +80,7 @@ jobs:
         mv manifest.yml storybook-static/
         mv Staticfile storybook-static/
         mv nginx storybook-static/
+        sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: '\$CYPRESS_baseUrl'/" cypress.config.js
         mv cypress.config.js cypress.config.js.tpl
         envsubst < cypress.config.js.tpl > cypress.config.js
         cd storybook-static
@@ -95,28 +96,28 @@ jobs:
         cd benefit-finder
         npm run cy:run:chrome
 
-    - name: Compressing the module directory
-      run: |
-        tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
-        ls -l
+    # - name: Compressing the module directory
+    #   run: |
+    #     tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
+    #     ls -l
 
-    - name: Checking if the zip file has css and js files expected
-      run: |
-        echo "removing usagov_benefit_finder directory.................."
-        rm -r usagov_benefit_finder
-        tar -xzvf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
-        test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css || { echo "ERROR!!! There is no css files in the zip file"; }
-        test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js || { echo "ERROR!!! There is no js files in the zip file"; exit 1; }
+    # - name: Checking if the zip file has css and js files expected
+    #   run: |
+    #     echo "removing usagov_benefit_finder directory.................."
+    #     rm -r usagov_benefit_finder
+    #     tar -xzvf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
+    #     test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css || { echo "ERROR!!! There is no css files in the zip file"; }
+    #     test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js || { echo "ERROR!!! There is no js files in the zip file"; exit 1; }
 
-    - name: Setting and pushing Version Tag
-      run: |
-        git branch --show-current
-        TAG_NAME="${{ github.event.inputs.tag_name }}"
-        git tag $TAG_NAME
-        git push origin $TAG_NAME
+    # - name: Setting and pushing Version Tag
+    #   run: |
+    #     git branch --show-current
+    #     TAG_NAME="${{ github.event.inputs.tag_name }}"
+    #     git tag $TAG_NAME
+    #     git push origin $TAG_NAME
 
-    - name: Creating pre-release
-      env:
-        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-      run: |
-        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz -t "Release ${{ github.event.inputs.tag_name }}" --target release -d -p --generate-notes
+    # - name: Creating pre-release
+    #   env:
+    #     GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+    #   run: |
+    #     gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz -t "Release ${{ github.event.inputs.tag_name }}" --target release -d -p --generate-notes

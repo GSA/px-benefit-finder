@@ -241,7 +241,52 @@ terraform workspace select dev
 terraform plan
 ```
 
+# Release Process
+### Versioning
 
+The versioning scheme adheres to Semantic Versioning (SemVer). Versions are of the form MAJOR.MINOR.PATCH:
+
+MAJOR: Increased for incompatible API changes.
+
+MINOR: Added for new features in a backward-compatible manner.
+
+PATCH: Incremented for backward-compatible bug fixes.
+
+### Branching Strategy
+
+The development process involves three main branches:
+
+1. `release`: Represents the latest stable release. No direct commits are made to this branch.
+
+2. `main`: Serves as the integration branch for ongoing development.
+
+3. Feature Branches: Created for each new feature or bug fix.
+
+
+### Pull Request Workflow
+
+All changes are made through feature branches, and pull requests to `main` are submitted for code review. A minimum of one approving review is required before merging.
+
+There are following automated tests that get triggered on each PR and need to pass:
+1. PHP Code Sniffer
+2. CodeQL
+3. Cypress Tests
+4. Snyk Scanning
+5. Frontend Testing
+
+### Release Candidate
+
+When `main` is deemed stable, a `pre-release draft` is created as below:
+
+1. Navigate to the repository.
+2. Go to the "Actions" Tab and click on it.
+3. From the list of workflows on the left, choose the `Create release` workflow to run manually.
+4. On the right-hand side, you should see a "Run workflow" button.
+5. Use workflow from `Branch:main`
+6. Enter the tag/version you would like to publish. You may check the earlier versions published in the `Releases` sections by clicking on it on the right buttom of the repository.
+7. After completing the 5th and 6th steps, click the "Run workflow" button to trigger the workflow manually.
+8. Once the workflow runs successfully, a `draft pre-release` is created, automated release notes are generated and a `benefit-finder-module-*.tar.gz` file is output under the `assets` section of the release.
+9. Edit the `draft pre-release`, evaluate the notes and publish it as the `release` or `pre-release`.
 
 
 

@@ -2,7 +2,7 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: '$CYPRESS_baseUrl',
+    baseUrl: 'http://localhost:6006',
     env: {
       authUsername: '$CYPRESS_username',
       authPassword: '$CYPRESS_password',

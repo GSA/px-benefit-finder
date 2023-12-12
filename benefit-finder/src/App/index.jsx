@@ -38,7 +38,7 @@ function App({ testAppContent, testQuery }) {
     if (process.env.NODE_ENV === 'production') {
       apiCalls.GET.LifeEvent().then(
         response =>
-          response.status === 200
+          response?.status === 200
             ? setContent(response.data)
             : setContent(testAppContent) // fallback for storybook
       )
@@ -48,7 +48,7 @@ function App({ testAppContent, testQuery }) {
       testAppContent === undefined
     ) {
       apiCalls.GET.LifeEvent().then(
-        response => response.status === 200 && setContent(response.data)
+        response => response?.status === 200 && setContent(response.data)
       )
     }
     // default to test state so we don't collide with component mounting

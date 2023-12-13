@@ -64,7 +64,9 @@ Array [
         id="benefit-section"
       >
         <div
+          aria-hidden="true"
           className=""
+          hidden={true}
           role="alert"
         >
           <div

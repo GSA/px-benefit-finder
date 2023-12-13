@@ -22,6 +22,7 @@ const Alert = ({
   description,
   error,
   noBackground,
+  ...props
 }) => {
   const defaultClasses = error
     ? ['usa-alert', 'usa-alert--error', 'display-none']
@@ -32,6 +33,7 @@ const Alert = ({
       className={useHandleClassName({ className, defaultClasses })}
       role="alert"
       ref={alertFieldRef}
+      {...props}
     >
       {children ? (
         <div className="usa-alert__body">

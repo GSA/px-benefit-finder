@@ -87,6 +87,8 @@ const LifeEventSection = ({
   const handleAlert = () => {
     // remove the display class from the alert
     alertFieldRef.current.classList.remove('display-none')
+    alertFieldRef.current.removeAttribute('hidden')
+    alertFieldRef.current.setAttribute('aria-hidden', false)
     // add to all the collected error fields an error class
     values.forEach(field => {
       field.classList.contains('required-field') &&
@@ -105,6 +107,8 @@ const LifeEventSection = ({
   const handleSuccess = () => {
     // hide alert by adding the display class
     alertFieldRef.current.classList.add('display-none')
+    alertFieldRef.current.setAttribute('hidden', true)
+    alertFieldRef.current.setAttribute('aria-hidden', true)
     // remove from all the collected error fields the error class
     values.forEach(field => {
       field.classList.remove(classError)
@@ -253,6 +257,8 @@ const LifeEventSection = ({
                   heading={ui.alertBanner.heading}
                   description={ui.alertBanner.description}
                   error
+                  hidden
+                  aria-hidden="true"
                 ></Alert>
                 <Heading className="benefit-section-heading" headingLevel={2}>
                   {currentData.section.heading}

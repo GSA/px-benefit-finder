@@ -6,8 +6,8 @@ import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mo
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
-  it.only('qa scenario 1 - Verify correct benefit results for query values in search parameter of URL', () => {
-    const benefitsCriteria = BENEFITS_ELIBILITY_DATA.Scenario_1.en.param
+  it('qa scenario 1 - Verify correct benefit results for query values in search parameter of URL', () => {
+    const benefitsCriteria = BENEFITS_ELIBILITY_DATA.scenario_1.en.param
     const applicant_date_of_birth = encodeURI(
       `{"month":"${
         benefitsCriteria.applicant_date_of_birth_month - 1
@@ -30,7 +30,7 @@ describe('Validate correct eligibility benefits display based on selected criter
       .filter(':visible')
       .should(
         'have.length',
-        BENEFITS_ELIBILITY_DATA.Scenario_1.en.results.likely_eligible.length
+        BENEFITS_ELIBILITY_DATA.scenario_1.en.results.eligible.length
       )
       .and('contain', 'Likely Eligible')
   })

@@ -1,0 +1,123 @@
+name: Create release
+
+on:
+  # This workflow will be triggered manually and create a draft release for review. It can be published manually once reviewed.
+  workflow_dispatch:
+    inputs:
+      # You will enter the tag name from the UI while you trigger this pipeline.
+      tag_name: 
+        description: "Please enter the tag/version you would like to publish:"
+        required: true  
+    
+permissions:
+  issues: write
+  contents: write
+
+jobs:
+  release-benefit-finder:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        ref: release
+
+    - name: Merging main > release & pushing
+      env:
+        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+      run: |
+        git fetch --all
+        git branch --show-current
+        git config --global user.name "${{ vars.COMMIT_AUTHOR }}"
+        git config --global user.email "${{ vars.COMMIT_AUTHOR_EMAIL }}"
+        git merge origin/main --allow-unrelated-histories --strategy-option theirs 
+        git branch --show-current
+        git status
+        git push --force-with-lease
+
+    - name: Setup CF CLI
+      env:
+        CF_USER: "${{ secrets.CF_USER }}"
+        CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+        CF_ORG: "${{ secrets.CF_ORG }}"
+      run: |
+        if [ "$(whoami)" != "root" ]; then
+          wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+          echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+          sudo apt-get update
+          sudo apt-get install -y cf8-cli
+        else
+          wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+          echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+          apt-get update
+          apt-get install -y cf8-cli
+        fi
+        cf -v
+        cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-dev"
+
+    - name: Building & Deploying Storybook App to Dev Env
+      env:
+        CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
+        CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
+        CYPRESS_password: ${{ secrets.BASIC_AUTH_PASSWORD }}
+        storybook_username: ${{ secrets.STORYBOOK_USERNAME }}
+        storybook_password: ${{ secrets.STORYBOOK_PASSWORD }}
+      run: |
+        git submodule init
+        git submodule update 
+        mv benefit-finder/manifest.yml benefit-finder/manifest.yml.tpl
+        export CIRCLE_BRANCH="dev" # This step makes sure this pipeline can deploy to the dev environment
+        envsubst < benefit-finder/manifest.yml.tpl > benefit-finder/manifest.yml
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+        cd benefit-finder
+        nvm install node # --reinstall-packages-from=node
+        npm i @craco/craco
+        npm run build
+        bash ../mv-uswds-usagov-theme.sh
+        npm run build:storybook
+        mv manifest.yml storybook-static/
+        mv Staticfile storybook-static/
+        mv nginx storybook-static/
+        sed -i "s/baseUrl: 'http:\/\/localhost:6006'/baseUrl: '\$CYPRESS_baseUrl'/" cypress.config.js
+        mv cypress.config.js cypress.config.js.tpl
+        envsubst < cypress.config.js.tpl > cypress.config.js
+        cd storybook-static
+        echo "${storybook_username}:${storybook_password}" > Staticfile.auth
+        cf push benefit-finder-storybook-dev
+        
+    - name: Cypres Testing
+      env:
+        CYPRESS_baseUrl: ${{ vars.CYPRESS_baseUrl }}
+        CYPRESS_username: ${{ secrets.BASIC_AUTH_USERNAME }}
+        CYPRESS_password: ${{ secrets.BASIC_AUTH_PASSWORD }}
+      run: |
+        cd benefit-finder
+        npm run cy:run:chrome
+
+    - name: Compressing the module directory
+      run: |
+        tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder
+        ls -l
+
+    - name: Checking if the zip file has css and js files expected
+      run: |
+        echo "removing usagov_benefit_finder directory.................."
+        rm -r usagov_benefit_finder
+        tar -xzvf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz"
+        test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css || { echo "ERROR!!! There is no css files in the zip file"; }
+        test -d usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js || { echo "ERROR!!! There is no js files in the zip file"; exit 1; }
+
+    - name: Setting and pushing Version Tag
+      run: |
+        git branch --show-current
+        TAG_NAME="${{ github.event.inputs.tag_name }}"
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
+
+    - name: Creating pre-release
+      env:
+        GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+      run: |
+        gh release create "${{ github.event.inputs.tag_name }}" *.tar.gz -t "Release ${{ github.event.inputs.tag_name }}" --target release -d -p --generate-notes

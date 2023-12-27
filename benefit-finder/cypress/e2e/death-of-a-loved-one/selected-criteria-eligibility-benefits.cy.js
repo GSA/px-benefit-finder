@@ -9,7 +9,13 @@ describe('Validate correct eligibility benefits display based on selected criter
     // 18 years ago minus one day - applicant under 18 years old
     // 1 day = 365.2425 (accounts for leap year)
     const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
-    cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+    cy.visit('/iframe.html?args=&id=app--primary&viewMode=story', {
+      auth: {
+          username: Cypress.env('authUsername'),
+          password: Cypress.env('authPassword'),
+      },
+    }) 
+
     pageObjects.button().contains('Start').click()
     cy.enterDateOfBirth(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
     pageObjects
@@ -42,13 +48,16 @@ describe('Validate correct eligibility benefits display based on selected criter
     const dateOfDeath = utils.getDateByOffset(-30)
     cy.enterDateOfDeath(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
 
-    // Date of funeral - 15 days ago
-    const dateOfFuneral = utils.getDateByOffset(-15)
-    cy.enterDateOfFuneral(
-      dateOfFuneral.month,
-      dateOfFuneral.day,
-      dateOfFuneral.year
-    )
+    pageObjects
+      .benefitSectionFieldset()
+      .contains(
+        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1]
+          .section.fieldsets[2].fieldset.inputs[0].inputCriteria.label
+      )
+      .parent()
+      .find('.usa-radio__label')
+      .contains('Yes')
+      .click()
 
     pageObjects
       .benefitSectionFieldset()
@@ -70,23 +79,23 @@ describe('Validate correct eligibility benefits display based on selected criter
       .filter(':visible')
       .should(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[19].benefit.eligibility[0].label
+        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[0].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[19].benefit.eligibility[1].label
+        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[1].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[19].benefit.eligibility[2].label
+        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[2].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[19].benefit.eligibility[3].label
+        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[3].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[19].benefit.eligibility[4].label
+        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[4].label
       )
   })
 })

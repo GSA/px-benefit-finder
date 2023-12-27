@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Bears Tags'
-vid: bears_tags
-description: 'Bears Tags'
-weight: 0

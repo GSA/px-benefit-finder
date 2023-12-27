@@ -16,8 +16,7 @@ jobs:
             git submodule init
             git submodule update
             cd usagov-2021
-            git checkout dev
-            git checkout 3ff7fb93a47daef6d4e33d3ec9beef72b8e386cd
+            git checkout prod
 
 
       - run:
@@ -27,23 +26,24 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
-            mv usagov_benefit_finder usagov-2021/web/modules/custom
+            rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
+            mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
+            mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
 
       - run: 
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
             mv .docker/Dockerfile-cms .
-            sed -i 's/80/8080/g' Dockerfile-cms  
+            sed -i 's/80/8080/g' Dockerfile-cms
+            sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
             sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
-            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -61,6 +61,7 @@ jobs:
           name: Injecting container name to the manifest.yml
           command: |
             echo "......"
+            export CIRCLE_BRANCH="dev"
             echo $CIRCLE_BRANCH
             echo "......"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
@@ -74,6 +75,7 @@ jobs:
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - dbstorage##" manifest.yml
+            sed -i '16i\  command: ./scripts/entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:
@@ -91,11 +93,13 @@ jobs:
               apt-get install -y cf8-cli
             fi
             cf -v
+            export CIRCLE_BRANCH="dev"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
 
       - run:
           name: Deploy the app to cloud.gov
           command: |
+            export CIRCLE_BRANCH="dev"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
@@ -105,43 +109,6 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 60
-
-      - run:
-          name: Enable benefit-finder module
-          command: |
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0 && \
-                                  /var/www/vendor/bin/drush pm:uninstall usagov_login && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_benefit_finder && \
-                                  /var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page && \
-                                  /var/www/vendor/bin/drush cr && \
-                                  cd ../var/www/web/ && \
-                                  pwd && ls -l && \
-                                  mkdir -p content/sync && \
-                                  chown -R nginx:nginx content && \
-                                  pwd && ls -l && \
-                                  cd sites/default/files && \
-                                  mkdir -p benefit-finder/api/life-event && \
-                                  chown -R nginx:nginx benefit-finder && \
-                                  cd benefit-finder/api/life-event && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile  
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile && \           
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile?mode=draft && \ 
-                                  ls -l && \
-                                  /var/www/vendor/bin/drush cr"
 
   build_and_deploy_main:
     machine:
@@ -167,8 +134,10 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
-            mv usagov_benefit_finder usagov-2021/web/modules/custom
+            rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
+            mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
+            mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
 
       - run: 
           name: Pre-docker-build configurations
@@ -176,16 +145,14 @@ jobs:
             cd px-benefit-finder/usagov-2021
             mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms  
+            sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
             sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i "s/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/      \/\/      \$settings\['s3fs.use_s3_for_public'\] = TRUE;/" web/sites/default/settings.php
-            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
-            cat web/sites/default/settings.php
-
+          
       - run: 
           name: Building, tagging, pushing the Docker Image
           command: |
@@ -215,6 +182,7 @@ jobs:
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - dbstorage##" manifest.yml
+            sed -i '16i\  command: ./scripts/entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:
@@ -246,43 +214,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 60
 
-      - run:
-          name: Enable benefit-finder module
-          command: |
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:uninstall usagov_login || exit 0"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush cr"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "cd ../var/www/web/ && \
-                                  pwd && ls -l && \
-                                  mkdir -p content/sync && \
-                                  chown -R nginx:nginx content && \
-                                  pwd && ls -l && \
-                                  cd sites/default/files && \
-                                  mkdir -p benefit-finder/api/life-event && \
-                                  chown -R nginx:nginx benefit-finder && \
-                                  cd benefit-finder/api/life-event && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile  
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile && \           
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/death/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/retirement/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/disability/jsonfile?mode=draft  && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_retirement/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_death/jsonfile?mode=draft && \
-                                  curl http://127.0.0.1:8080/benefit-finder/api/life-event/es_disability/jsonfile?mode=draft && \ 
-                                  ls -l && \
-                                  /var/www/vendor/bin/drush cr"
   component-library:
     machine:
       image: ubuntu-2004:202107-02
@@ -339,12 +271,67 @@ jobs:
              echo "${storybook_username}:${storybook_password}" > Staticfile.auth
              cf push benefit-finder-storybook-${CIRCLE_BRANCH}        
 
+  lint:
+    docker:
+      - image: cimg/php:8.0.16-node
+    steps:
+      - checkout
+      - run: 
+          name: Init and Update USAGov submodule
+          command: |
+            git submodule init
+            git submodule update
+            cd usagov-2021
+            git checkout dev
+            cd ..
 
+      - run:
+          name: Install Specific Node Version
+          command: |
+            set +e
+            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+            nvm install v18.3.0
+            nvm alias default 18.3.0
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+            echo "Install Gulp on node "$(node --version)
+            sudo npm install --global gulp-cli
+      - run:
+          name: build benefit-finder app
+          command: |
+            bash mv-benefit-finder-app.sh
+
+      - run:
+          name: Install Linters and Sniffers
+          command: |
+            npm install --prefix ./benefit-finder
+            composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint squizlabs/php_codesniffer=*
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/phpcs --config-set installed_paths $COMPOSER_DIR/vendor/drupal/coder/coder_sniffer,$COMPOSER_DIR/vendor/sirbrillig/phpcs-variable-analysis,$COMPOSER_DIR/vendor/slevomat/coding-standard
+            mkdir -p /tmp/results
+            touch /tmp/results/php-lint.log
+            touch /tmp/results/php-cs.log
+            touch /tmp/results/theme-lint.log
+      - run:
+          name: PHP Lint
+          command: |
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/parallel-lint -e php,module,inc,install,test,profile,theme ./benefit-finder ./benefit-finder | tee /tmp/results/php-lint.log
+      - run:
+          name: PHP CodeSniff (Ignore warnings)
+          command: |
+            COMPOSER_DIR=$(composer -n config --global home)
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+      - store_artifacts:
+          path: /tmp/results
 
 
 # Orchestrate our job run sequence
 workflows:
-# This workflow only gets triggered when there is a push to `main` branch.
+# This workflow only gets triggered when there is a push to `main` and `dev` branches.
   cms_build_and_deploy_workflow:
     jobs:
       - build_and_deploy_dev:
@@ -358,28 +345,6 @@ workflows:
               only: 
                 - main
 
-  scheduled_cms_build_and_deploy_workflow_main:
-    triggers:
-      - schedule:
-          cron: '0 7 * * *'
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
-      - build_and_deploy_main
-
-  scheduled_cms_build_and_deploy_workflow_dev:
-    triggers:
-      - schedule:
-          cron: '0 6 * * *'
-          filters:
-            branches:
-              only:
-                - dev
-    jobs:
-      - build_and_deploy_dev
-
   create-component-library-workflow:
     jobs:
       - component-library:
@@ -388,7 +353,9 @@ workflows:
               only:
                 - main
                 - dev
-
+  php-lint-code-snif:
+    jobs:
+      - lint
 
 
 

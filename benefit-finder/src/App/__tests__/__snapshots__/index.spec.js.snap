@@ -422,32 +422,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Defense (DOD)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Defense (DOD)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -582,32 +586,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Defense (DOD)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Defense (DOD)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -737,32 +745,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -897,32 +909,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://militarypay.defense.gov/Benefits/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Defense (DOD)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://militarypay.defense.gov/Benefits/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Defense (DOD)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1053,32 +1069,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/eligibility/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/eligibility/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1223,32 +1243,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1388,32 +1412,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                         Federal Emergency Management Agency (FEMA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                           Federal Emergency Management Agency (FEMA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1559,32 +1587,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1725,32 +1757,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1890,32 +1926,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2055,32 +2095,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/education/survivor-dependent-benefits/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/education/survivor-dependent-benefits/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2205,32 +2249,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Interior (DOI) - Indian Affairs
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Interior (DOI) - Indian Affairs
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2371,32 +2419,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2526,32 +2578,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2686,32 +2742,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2846,32 +2906,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2997,32 +3061,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://bja.ojp.gov/program/psob/benefits"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Justice (DOJ)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://bja.ojp.gov/program/psob/benefits"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Justice (DOJ)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3147,32 +3215,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Justice (DOJ)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Justice (DOJ)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3307,32 +3379,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://bja.ojp.gov/program/psob/benefits"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Defense (DOD)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://bja.ojp.gov/program/psob/benefits"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Defense (DOD)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3472,32 +3548,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3647,32 +3727,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3807,32 +3891,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/forms/ssa-5.html"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/forms/ssa-5.html"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3968,32 +4056,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4133,32 +4225,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4308,32 +4404,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4473,32 +4573,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/pension/survivors-pension/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/pension/survivors-pension/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4643,32 +4747,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/pension/survivors-pension/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/pension/survivors-pension/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4808,32 +4916,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/pension/survivors-pension/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/pension/survivors-pension/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4979,32 +5091,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5139,32 +5255,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5299,32 +5419,36 @@ exports[`loads window query scenario 1 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5742,32 +5866,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Defense (DOD)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Defense (DOD)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5933,32 +6061,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Defense (DOD)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Defense (DOD)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6119,32 +6251,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6310,32 +6446,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://militarypay.defense.gov/Benefits/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Defense (DOD)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://militarypay.defense.gov/Benefits/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Defense (DOD)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6479,32 +6619,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/eligibility/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/eligibility/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6662,32 +6806,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6899,32 +7047,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                         Federal Emergency Management Agency (FEMA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                           Federal Emergency Management Agency (FEMA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -7083,32 +7235,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -7262,32 +7418,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -7475,32 +7635,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -7671,32 +7835,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/education/survivor-dependent-benefits/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/education/survivor-dependent-benefits/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -7834,32 +8002,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Interior (DOI) - Indian Affairs
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Interior (DOI) - Indian Affairs
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -8048,32 +8220,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -8234,32 +8410,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -8449,32 +8629,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -8640,32 +8824,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -8809,32 +8997,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://bja.ojp.gov/program/psob/benefits"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Justice (DOJ)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://bja.ojp.gov/program/psob/benefits"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Justice (DOJ)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -8977,32 +9169,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Justice (DOJ)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Justice (DOJ)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -9168,32 +9364,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://bja.ojp.gov/program/psob/benefits"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Department of Defense (DOD)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://bja.ojp.gov/program/psob/benefits"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Department of Defense (DOD)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -9368,32 +9568,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -9591,32 +9795,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -9806,32 +10014,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/forms/ssa-5.html"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/forms/ssa-5.html"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -10019,32 +10231,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -10256,32 +10472,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -10517,32 +10737,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Social Security Administration (SSA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Social Security Administration (SSA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -10695,32 +10919,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/pension/survivors-pension/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/pension/survivors-pension/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -10896,32 +11124,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/pension/survivors-pension/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/pension/survivors-pension/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -11109,32 +11341,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/pension/survivors-pension/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/pension/survivors-pension/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -11345,32 +11581,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -11536,32 +11776,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -11727,32 +11971,36 @@ exports[`loads window query scenario 2 1`] = `
                           </div>
                         </div>
                       </div>
-                      <a
-                        class="benefit-link usa-button obfuscated-link"
-                        href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                      <div
+                        class="benefit-link-wrapper"
                       >
-                        Visit
-                         
-                        Veterans Affairs Department (VA)
-                        <svg
-                          class="carrot"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <a
+                          class="benefit-link usa-button obfuscated-link"
+                          href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </a>
+                          Visit
+                           
+                          Veterans Affairs Department (VA)
+                          <svg
+                            class="carrot"
+                            fill="white"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

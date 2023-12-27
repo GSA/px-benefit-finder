@@ -39,9 +39,12 @@
         }
       }
 
-      .benefit-link {
-        width: 100%;
-        margin-bottom: space.$space-lg;
+      .benefit-link-wrapper {
+        text-align: center;
+
+        .benefit-link {
+          margin-bottom: space.$space-lg;
+        }
       }
     }
 

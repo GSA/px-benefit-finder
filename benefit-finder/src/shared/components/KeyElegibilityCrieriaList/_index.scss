@@ -9,14 +9,14 @@
 
       background-color: color.$marine;
       border-radius: 4px 4px 0 0;
-      padding: space.$space-md space.$space-lg;
+      padding: space.$space-md-plus space.$space-lg;
       margin: 0;
       color: color.$white;
       text-align: center;
     }
 
     .key-eligibility-criteria-sub-heading {
-      margin-bottom: 0;
+      margin: space.$space-xs 0 0;
     }
 
     .key-eligibility-criteria-list {
@@ -35,7 +35,6 @@
           position: absolute;
           margin: 0;
           top: 50%;
-          transform: translateY(-50%);
           transform: translateY(-50%);
         }
       }

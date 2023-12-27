@@ -24,10 +24,20 @@
       margin: 0;
 
       .key-eligibility-criteria-list-item {
-        margin: 0;
-        padding: space.$space-md space.$space-lg;
+        position: relative;
+        padding: space.$space-md space.$space-lg space.$space-md
+          space.$space-xxl;
         border: 0.5px solid color.$pop-blue;
         background-color: color.$sky;
+
+        svg {
+          left: space.$space-lg;
+          position: absolute;
+          margin: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
       }
 
       li.usa-list {

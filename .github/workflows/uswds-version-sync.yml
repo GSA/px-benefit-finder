@@ -24,7 +24,7 @@
                 env:
                   GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
                 run: |
-                  cd px-bears-drupal
+                  cd px-bears-drupal/bin
                   bash check-uswds-version.sh
               - name: Create Pull Request
                 env:

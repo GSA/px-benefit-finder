@@ -200,14 +200,16 @@ const BenefitAccordionGroup = ({
                 <MoreInfoList items={moreInformationNeeded} />
               )}
               <Alert className="benefit-alert">{additionalDescription}</Alert>
-              <ObfuscatedLink
-                className="benefit-link"
-                href={SourceLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {visitLabel} {agency.title}
-              </ObfuscatedLink>
+              <div className="benefit-link-wrapper">
+                <ObfuscatedLink
+                  className="benefit-link"
+                  href={SourceLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {visitLabel} {agency.title}
+                </ObfuscatedLink>
+              </div>
             </Accordion>
           )
         })}

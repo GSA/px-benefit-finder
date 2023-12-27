@@ -287,6 +287,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Applicant's relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -346,32 +362,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Department of Defense (DOD)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Department of Defense (DOD)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -462,6 +482,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -521,32 +557,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Department of Defense (DOD)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Department of Defense (DOD)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -637,6 +677,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -691,32 +747,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -807,6 +867,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -866,32 +942,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://militarypay.defense.gov/Benefits/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Department of Defense (DOD)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://militarypay.defense.gov/Benefits/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Department of Defense (DOD)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1035,32 +1115,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/burials-memorials/eligibility/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/burials-memorials/eligibility/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1218,32 +1302,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1333,30 +1421,110 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_died_of_COVID"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased died due to COVID-19
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_death_location_is_US"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased died in the U.S.
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased died after May 20th, 2020
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You paid for funeral or burial expenses and were not reimbursed
                         </li>
                       </ul>
@@ -1375,32 +1543,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                       Federal Emergency Management Agency (FEMA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                         Federal Emergency Management Agency (FEMA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1559,32 +1731,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1738,32 +1914,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1854,12 +2034,44 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Marital status: unmarried or widowed
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Applicant's relationship to the deceased: spouse
                         </li>
                       </ul>
@@ -1919,32 +2131,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/disability/dependency-indemnity-compensation/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/disability/dependency-indemnity-compensation/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2035,6 +2251,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse or child
                         </li>
                       </ul>
@@ -2099,32 +2331,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/education/survivor-dependent-benefits/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/education/survivor-dependent-benefits/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2262,32 +2498,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Department of Interior (DOI) - Indian Affairs
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Department of Interior (DOI) - Indian Affairs
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2379,12 +2619,44 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your marital status is widowed
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -2444,32 +2716,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2560,6 +2836,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -2614,32 +2906,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2729,24 +3025,88 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased died within the last two years
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse or child
                         </li>
                       </ul>
@@ -2765,32 +3125,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Social Security Administration (SSA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Social Security Administration (SSA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2881,6 +3245,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -2940,32 +3320,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3057,6 +3441,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -3093,32 +3493,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://bja.ojp.gov/program/psob/benefits"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Department of Justice (DOJ)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://bja.ojp.gov/program/psob/benefits"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Department of Justice (DOJ)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3209,6 +3613,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse or child
                         </li>
                       </ul>
@@ -3245,32 +3665,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Department of Justice (DOJ)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Department of Justice (DOJ)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3361,6 +3785,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse or child
                         </li>
                       </ul>
@@ -3420,32 +3860,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://bja.ojp.gov/program/psob/benefits"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Department of Defense (DOD)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://bja.ojp.gov/program/psob/benefits"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Department of Defense (DOD)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3536,12 +3980,44 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                       </ul>
@@ -3588,32 +4064,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Social Security Administration (SSA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Social Security Administration (SSA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3704,12 +4184,44 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                       </ul>
@@ -3779,32 +4291,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Social Security Administration (SSA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Social Security Administration (SSA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3894,24 +4410,88 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your marital status is unmarried or widowed
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_care_for_child"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16
                         </li>
                       </ul>
@@ -3930,32 +4510,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.ssa.gov/forms/ssa-5.html"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Social Security Administration (SSA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.ssa.gov/forms/ssa-5.html"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Social Security Administration (SSA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4047,18 +4631,66 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are over 62 years
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are a US citizen or eligible non-citizen
                         </li>
                       </ul>
@@ -4095,32 +4727,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Social Security Administration (SSA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Social Security Administration (SSA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4210,30 +4846,110 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are over 60 years
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your marital status is widowed or divorced
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -4252,32 +4968,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Social Security Administration (SSA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Social Security Administration (SSA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4368,30 +5088,110 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are over 50 years
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your marital status is widowed or divorced
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -4433,32 +5233,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Social Security Administration (SSA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Social Security Administration (SSA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4611,32 +5415,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/pension/survivors-pension/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/pension/survivors-pension/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4727,6 +5535,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You are under 18 years
                         </li>
                       </ul>
@@ -4796,32 +5620,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/pension/survivors-pension/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/pension/survivors-pension/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4912,12 +5740,44 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your marital status is unmarried or widowed
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -4977,32 +5837,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/pension/survivors-pension/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/pension/survivors-pension/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5094,18 +5958,66 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           The deceased died within the last two years
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                         <li
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           You paid for funeral or burial expenses
                         </li>
                       </ul>
@@ -5165,32 +6077,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5281,6 +6197,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -5340,32 +6272,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5456,6 +6392,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                           
+                          <svg
+                            fill="none"
+                            height="20"
+                            viewBox="0 0 25 20"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              aria-hidden="true"
+                              clip-rule="evenodd"
+                              d="M24.5 4.15417C24.4925 4.52794 24.3515 4.88618 24.1033 5.16208L12.7975 16.6522L10.6157 18.8696C10.3442 19.1219 9.99174 19.2651 9.62397 19.2727C9.2562 19.2651 8.90371 19.1219 8.63223 18.8696L6.45041 16.6522L0.896694 11.0079C0.648478 10.732 0.507481 10.3738 0.5 10C0.507481 9.62626 0.648478 9.26802 0.896694 8.99212L3.07851 6.77473C3.34999 6.52246 3.70248 6.37917 4.07025 6.37156C4.43802 6.37917 4.79051 6.52246 5.06198 6.77473L9.62397 11.4111L19.7397 1.13046C20.0111 0.878193 20.3636 0.734897 20.7314 0.727295C21.0992 0.734897 21.4517 0.878193 21.7231 1.13046L23.905 3.34785C24.3017 3.54943 24.5 3.75101 24.5 4.15417Z"
+                              fill="forestgreen"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -5515,32 +6467,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         </div>
                       </div>
                     </div>
-                    <a
-                      class="benefit-link usa-button obfuscated-link"
-                      href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <div
+                      class="benefit-link-wrapper"
                     >
-                      Visit
-                       
-                      Veterans Affairs Department (VA)
-                      <svg
-                        class="carrot"
-                        fill="white"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <a
+                        class="benefit-link usa-button obfuscated-link"
+                        href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <path
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        />
-                        <path
-                          d="M7 10l5 5 5-5z"
-                        />
-                      </svg>
-                    </a>
+                        Visit
+                         
+                        Veterans Affairs Department (VA)
+                        <svg
+                          class="carrot"
+                          fill="white"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

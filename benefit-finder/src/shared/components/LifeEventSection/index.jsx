@@ -39,6 +39,7 @@ const LifeEventSection = ({
   ui,
   modalOpen,
   setModalOpen,
+  setHasData,
 }) => {
   // const currentStep = step - 1
   // state
@@ -181,6 +182,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleChanged = (event, criteriaKey) => {
+    event.target.value.length > 0 && setHasData(true)
     window.history.replaceState({}, '', window.location.pathname)
     apiCalls.PUT.Data(
       criteriaKey,
@@ -197,6 +199,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
+    event.target.value.length > 0 && setHasData(true)
     window.history.replaceState({}, '', window.location.pathname)
     dateInputValidation(event) === true &&
       apiCalls.PUT.DataDate(

@@ -11,13 +11,20 @@
   .chevron {
     position: relative;
     background-color: color.$officer-navy;
-    padding: space.$space-xl space.$space-lg 38px;
+    padding: 0 space.$space-lg 38px;
     margin: 0 auto;
     color: color.$white;
     margin-bottom: 140px;
 
     .grid-container {
       max-width: 850px;
+      padding-top: space.$space-xl;
+
+      .chevron-icon {
+        position: absolute;
+        bottom: 0;
+        left: 35%;
+      }
     }
   }
 
@@ -48,6 +55,17 @@
     .chevron {
       padding-bottom: space.$space-xl;
       margin-bottom: space.$space-xl;
+
+      .grid-container {
+        max-width: 850px;
+        padding-top: space.$space-xl;
+
+        .chevron-icon {
+          position: absolute;
+          bottom: 0;
+          left: 22%;
+        }
+      }
     }
 
     .chevron::before {

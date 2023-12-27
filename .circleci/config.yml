@@ -74,7 +74,7 @@ jobs:
             sed -i "s#^    - database#    - benefit-finder-mysql-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
-            sed -i "s#^    - dbstorage##" manifest.yml
+            sed -i "s#^    - dbstorage#    - benefit-finder-static-${CIRCLE_BRANCH}#" manifest.yml
             sed -i '16i\  command: ./scripts/entrypoint.sh' manifest.yml
             cat manifest.yml
 
@@ -338,7 +338,7 @@ workflows:
           filters:
             branches:
               only: 
-                - dev
+                - 657-static-site-in-sandbox
       - build_and_deploy_main:
           filters:
             branches:

@@ -76,7 +76,6 @@ jobs:
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - dbstorage#    - benefit-finder-static-${CIRCLE_BRANCH}#" manifest.yml
-            sed -i '16i\  command: ./scripts/entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:

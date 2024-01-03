@@ -202,7 +202,7 @@ export async function LifeEvent(lifeEvent) {
       fetchPath = params.get('mode') === 'draft' ? draftData : publishedData
     }
   } else {
-    fetchPath = `/sites/default/files/benefit-finder/api/${mode}life-event/${language}${lifeEvent}.json`
+    fetchPath = `/s3/files/benefit-finder/api/${mode}life-event/${language}${lifeEvent}.json`
   }
 
   if (fetchPath !== undefined) {

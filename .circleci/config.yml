@@ -385,6 +385,11 @@ workflows:
       - lint
   static-site-generation-workflow:
     jobs:
+      - build_and_deploy_dev:
+          filters:
+            branches:
+              only: 
+                - 657-static-site-in-sandbox
       - static_site_generation:
           filters:
             branches:

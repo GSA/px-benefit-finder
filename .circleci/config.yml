@@ -343,7 +343,7 @@ jobs:
           command: |
             apk add --no-cache gnupg
             wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | gpg --batch --import -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apk/repositories
+            echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apk/repositories
             apk update
             apk add cf8-cli
 

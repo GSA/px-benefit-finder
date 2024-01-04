@@ -332,34 +332,55 @@ jobs:
   
   static-site-generation:
     docker:
-      - image: ghcr.io/gsa/px-benefit-finder/benefit-finder-cms:49d23730
-        auth:
-          username: "$GH_USERNAME"
-          password: "$CR_PAT"
+      - image: cimg/base:stable
+        # auth:
+        #   username: "$GH_USERNAME"
+        #   password: "$CR_PAT"
     steps:
-      - checkout
+      - run:
+          name: Cloning the Repo and initiating the Submodule
+          command: |
+            echo "cloning the repo and initiating the usagov-2021 submodule"
+            git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
+            cd px-benefit-finder
+            git submodule init
+            git submodule update
+            cd usagov-2021
+            git checkout prod
+      -run:
+          name: Install Docker & Pull Modified Usagov-Benefit-Finder-Image
+          command: |
+            # Add Docker's official GPG key:
+            sudo apt-get update
+            sudo apt-get install ca-certificates curl gnupg
+            sudo install -m 0755 -d /etc/apt/keyrings
+            curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+            sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+            # Add the repository to Apt sources:
+            echo \
+              "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+              $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+              sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+            sudo apt-get update
+            sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+            docker --version
+
       - run:
           name: Setup CF CLI
           command: |
-            apk add --no-cache gnupg
-            wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | gpg --batch --import -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apk/repositories
-            apk update
-            apk add cf8-cli
-
-            # if [ "$(whoami)" != "root" ]; then
-            #   wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo gpg --batch --import -
-            #   echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apk/repositories
-            #   sudo apk update
-            #   sudo apk add cf8-cli
-            # else
-            #   wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | gpg --batch --import -
-            #   echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apk/repositories
-            #   apk update
-            #   apk add cf8-cli
-            # fi
+            if [ "$(whoami)" != "root" ]; then
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              sudo apt-get update
+              sudo apt-get install -y cf8-cli
+            else
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              apt-get update
+              apt-get install -y cf8-cli
+            fi
             cf -v
-            export CIRCLE_BRANCH="dev"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
 
       - run:

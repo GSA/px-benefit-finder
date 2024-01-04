@@ -341,7 +341,7 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
-            wget -O /etc/yum.repos.d/cloudfoundry-cli.repo https://packages.cloudfoundry.org/fedora/cloudfoundry-cli.repo
+            wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | gpg --batch --import -
             apk update
             apk add cf8-cli
             # apk add --no-cache gnupg

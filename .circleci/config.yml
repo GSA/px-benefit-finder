@@ -347,7 +347,7 @@ jobs:
             git submodule update
             cd usagov-2021
             git checkout prod
-      -run:
+      - run:
           name: Install Docker & Pull Modified Usagov-Benefit-Finder-Image
           command: |
             # Add Docker's official GPG key:

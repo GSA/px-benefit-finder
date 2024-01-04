@@ -338,35 +338,6 @@ jobs:
         #   password: "$CR_PAT"
     steps:
       - checkout
-      # - run:
-      #     name: Cloning the Repo and initiating the Submodule
-      #     command: |
-      #       echo "cloning the repo and initiating the usagov-2021 submodule"
-      #       git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
-      #       cd px-benefit-finder
-      #       git submodule init
-      #       git submodule update
-      #       cd usagov-2021
-      #       git checkout prod
-      - run:
-          name: Install Docker & Pull Modified Usagov-Benefit-Finder-Image
-          command: |
-            # Add Docker's official GPG key:
-            sudo apt-get update
-            sudo apt-get install ca-certificates curl gnupg
-            sudo install -m 0755 -d /etc/apt/keyrings
-            curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-            sudo chmod a+r /etc/apt/keyrings/docker.gpg
-
-            # Add the repository to Apt sources:
-            echo \
-              "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-              $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-              sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-            sudo apt-get update
-            sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-            docker --version
-
       - run:
           name: Setup CF CLI
           command: |
@@ -382,12 +353,19 @@ jobs:
               apt-get install -y cf8-cli
             fi
             cf -v
+            export CIRCLE_BRANCH="dev"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+      # - run:
+      #     name: Pull Modified Usagov-Benefit-Finder-Image
+      #     command: |
+      #       echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
+      #       docker pull ghcr.io/gsa/px-benefit-finder/benefit-finder-cms:49d23730
 
       - run:
           name: "Run Drush Cron and Generate Static Site"
           command: |
-            cf run-task benefit-finder-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} bin/cloud.gov/upkeep.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 512M
+            export CIRCLE_BRANCH="dev"
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} bin/cloud.gov/upkeep.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 512M
 
 # Orchestrate our job run sequence
 workflows:

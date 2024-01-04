@@ -365,7 +365,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} bin/cloud.gov/upkeep.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 512M
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} bin/cloud.gov/upkeep.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 250M
 
 # Orchestrate our job run sequence
 workflows:

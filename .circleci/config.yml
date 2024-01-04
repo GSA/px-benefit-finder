@@ -337,16 +337,17 @@ jobs:
         #   username: "$GH_USERNAME"
         #   password: "$CR_PAT"
     steps:
-      - run:
-          name: Cloning the Repo and initiating the Submodule
-          command: |
-            echo "cloning the repo and initiating the usagov-2021 submodule"
-            git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
-            cd px-benefit-finder
-            git submodule init
-            git submodule update
-            cd usagov-2021
-            git checkout prod
+      - checkout
+      # - run:
+      #     name: Cloning the Repo and initiating the Submodule
+      #     command: |
+      #       echo "cloning the repo and initiating the usagov-2021 submodule"
+      #       git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
+      #       cd px-benefit-finder
+      #       git submodule init
+      #       git submodule update
+      #       cd usagov-2021
+      #       git checkout prod
       - run:
           name: Install Docker & Pull Modified Usagov-Benefit-Finder-Image
           command: |

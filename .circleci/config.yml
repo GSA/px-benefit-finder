@@ -342,7 +342,8 @@ jobs:
           name: Setup CF CLI
           command: |
             wget -O /etc/yum.repos.d/cloudfoundry-cli.repo https://packages.cloudfoundry.org/fedora/cloudfoundry-cli.repo
-            yum install cf8-cli
+            apk update
+            apk add cf8-cli
             # apk add --no-cache gnupg
             # if [ "$(whoami)" != "root" ]; then
             #   wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo gpg --batch --import -

@@ -111,6 +111,7 @@ jobs:
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
 
+
   build_and_deploy_main:
     machine:
       image: ubuntu-2004:202107-02
@@ -328,7 +329,37 @@ jobs:
             $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - store_artifacts:
           path: /tmp/results
+  
+  static-site-generation:
+    docker:
+      - image: ghcr.io/gsa/px-benefit-finder/benefit-finder-cms:49d23730
+        auth:
+          username: "$GH_USERNAME"
+          password: "$CR_PAT"
+    steps:
+      - checkout
+      - run:
+          name: Setup CF CLI
+          command: |
+            if [ "$(whoami)" != "root" ]; then
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              sudo apt-get update
+              sudo apt-get install -y cf8-cli
+            else
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              apt-get update
+              apt-get install -y cf8-cli
+            fi
+            cf -v
+            export CIRCLE_BRANCH="dev"
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
 
+      - run:
+          name: "Run Drush Cron and Generate Static Site"
+          command: |
+            cf run-task benefit-finder-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} bin/cloud.gov/upkeep.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 512M
 
 # Orchestrate our job run sequence
 workflows:
@@ -339,7 +370,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - dev
       - build_and_deploy_main:
           filters:
             branches:
@@ -357,7 +388,13 @@ workflows:
   php-lint-code-snif:
     jobs:
       - lint
-
+  static-site-generation:
+    jobs:
+      - static-site-generation:
+          filters:
+            branches:
+              only: 
+                - 657-static-site-in-sandbox
 
 
 

@@ -341,6 +341,7 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
+            apk add --no-cache gnupg
             if [ "$(whoami)" != "root" ]; then
               wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
               echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list

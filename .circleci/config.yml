@@ -341,18 +341,20 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
-            apk add --no-cache gnupg
-            if [ "$(whoami)" != "root" ]; then
-              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo gpg --batch --import -
-              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apk/repositories
-              sudo apk update
-              sudo apk add cf8-cli
-            else
-              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | gpg --batch --import -
-              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apk/repositories
-              apk update
-              apk add cf8-cli
-            fi
+            sudo apt update
+            sudo apt install cf8-cli
+            # apk add --no-cache gnupg
+            # if [ "$(whoami)" != "root" ]; then
+            #   wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo gpg --batch --import -
+            #   echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apk/repositories
+            #   sudo apk update
+            #   sudo apk add cf8-cli
+            # else
+            #   wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | gpg --batch --import -
+            #   echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apk/repositories
+            #   apk update
+            #   apk add cf8-cli
+            # fi
             cf -v
             export CIRCLE_BRANCH="dev"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"

@@ -57,8 +57,8 @@ echo "'drush tome:static' task completed!"
 
 cd ${html_path}
 echo "Copying static files to '${bucket_name}'..."
-aws s3 sync . s3://${bucket} --delete --no-verify-ssl 2>/dev/null
-aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl 2>/dev/null
+aws s3 sync . s3://${bucket} --delete --no-verify-ssl # 2>/dev/null
+aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl # 2>/dev/null
 echo "Copy to '${bucket_name}' completed!"
 
 # export objects=($(aws s3 ls s3://${bucket} --recursive --no-verify-ssl 2>/dev/null | awk '{print $(NF)}' | sed -z -e 's/\n/ /g'))

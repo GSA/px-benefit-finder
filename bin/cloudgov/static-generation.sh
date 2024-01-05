@@ -33,7 +33,8 @@ echo "'drush cron' task completed!"
 
 echo "Running 'drush tome:static' in '${environment}'..."
 # /var/www/vendor/bin/drush tome:static --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
-/var/www/vendor/bin/drush tome:static --process-count=2 --retry-count=0 -y
+/var/www/vendor/bin/drush tome:static --path-pattern="/benefit-finder\/life-event\//" --process-count=2 --retry-count=0 -y
+# /var/www/vendor/bin/drush tome:static --process-count=2 --retry-count=0 -y
 # /var/www/vendor/bin/drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 echo "'drush tome:static' task completed!"
 

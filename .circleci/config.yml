@@ -140,6 +140,7 @@ jobs:
             mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
             mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
+            mv bin/cloudgov/static-generation.sh usagov-2021/scripts/static-generation.sh
 
       - run: 
           name: Pre-docker-build configurations
@@ -355,11 +356,6 @@ jobs:
             cf -v
             export CIRCLE_BRANCH="dev"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-      # - run:
-      #     name: Pull Modified Usagov-Benefit-Finder-Image
-      #     command: |
-      #       echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-      #       docker pull ghcr.io/gsa/px-benefit-finder/benefit-finder-cms:49d23730
 
       - run:
           name: "Run Drush Cron and Generate Static Site"
@@ -376,7 +372,7 @@ workflows:
           filters:
             branches:
               only: 
-                - dev
+                - 657-static-site-in-sandbox
       - build_and_deploy_main:
           filters:
             branches:

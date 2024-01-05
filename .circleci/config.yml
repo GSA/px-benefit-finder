@@ -45,7 +45,6 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            # sed -i 's/storage/benefit-finder-static-dev/g' scripts/tome-run.sh  
 
       - run: 
           name: Building, tagging, pushing the Docker Image
@@ -358,7 +357,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 250M
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 250M
 
 # Orchestrate our job run sequence
 workflows:
@@ -369,7 +368,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - dev #657-static-site-in-sandbox
       - build_and_deploy_main:
           filters:
             branches:

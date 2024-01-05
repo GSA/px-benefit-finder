@@ -76,8 +76,7 @@ jobs:
             sed -i "s#^    - database#    - benefit-finder-mysql-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
-            # sed -i "s#^    - dbstorage#    - benefit-finder-static-${CIRCLE_BRANCH}#" manifest.yml
-            sed -i "s#^    - dbstorage##" manifest.yml
+            sed -i "s#^    - dbstorage#    - benefit-finder-static-${CIRCLE_BRANCH}#" manifest.yml
             cat manifest.yml
 
       - run:
@@ -335,9 +334,6 @@ jobs:
   static-site-generation:
     docker:
       - image: cimg/base:stable
-        # auth:
-        #   username: "$GH_USERNAME"
-        #   password: "$CR_PAT"
     steps:
       - checkout
       - run:
@@ -362,7 +358,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && ENV=${CIRCLE_BRANCH} ./scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 250M
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && ENV=${CIRCLE_BRANCH} /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 250M
 
 # Orchestrate our job run sequence
 workflows:

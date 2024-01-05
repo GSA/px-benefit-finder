@@ -33,8 +33,8 @@ echo "'drush cron' task completed!"
 
 echo "Running 'drush tome:static' in '${environment}'..."
 # /var/www/vendor/bin/drush tome:static --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
-/var/www/vendor/bin/drush tome:static --path-pattern="/benefit-finder\/life-event\//" --process-count=2 --retry-count=0 -y
-# /var/www/vendor/bin/drush tome:static --process-count=2 --retry-count=0 -y
+# /var/www/vendor/bin/drush tome:static --path-pattern="/benefit-finder\/life-event\//" --process-count=2 --retry-count=0 -y
+/var/www/vendor/bin/drush tome:static --process-count=2 --retry-count=0 -y
 # /var/www/vendor/bin/drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 echo "'drush tome:static' task completed!"
 
@@ -66,5 +66,5 @@ export objects=($(aws s3 ls s3://${bucket} --recursive --no-verify-ssl 2>/dev/nu
 
 for object in "${objects[@]}"; do
   echo $object
-  aws s3api put-object-acl --bucket s3://${bucket} --key $object --grant-full-control id=c0eaf99010b9e4b073052b3a9b242980a2badf4e1db4044f53f49950609bf6cf --grant-read uri=http://acs.amazonaws.com/groups/global/AllUsers --no-verify-ssl 2>/dev/null
+  aws s3api put-object-acl --bucket s3://${bucket} --key $object --grant-full-control id=c0eaf99010b9e4b073052b3a9b242980a2badf4e1db4044f53f49950609bf6cf --grant-read uri=http://acs.amazonaws.com/groups/global/AllUsers --no-verify-ssl # 2>/dev/null
 done

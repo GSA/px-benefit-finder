@@ -361,7 +361,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && ENV=${CIRCLE_BRANCH} bin/cloud.gov/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 250M
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && ENV=${CIRCLE_BRANCH} ./scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 250M
 
 # Orchestrate our job run sequence
 workflows:
@@ -372,7 +372,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - dev
       - build_and_deploy_main:
           filters:
             branches:

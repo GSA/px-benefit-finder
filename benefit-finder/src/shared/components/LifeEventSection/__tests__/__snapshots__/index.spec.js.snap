@@ -220,7 +220,7 @@ Array [
                   className="a11y-sr-only"
                   id="day-description-applicant_date_of_birth_0"
                 >
-                  Enter numerals for day
+                  Enter four numerals for day
                 </div>
                 <input
                   aria-describedby="day-description-applicant_date_of_birth_0"
@@ -246,7 +246,7 @@ Array [
                   className="a11y-sr-only"
                   id="year-description-applicant_date_of_birth_0"
                 >
-                  Enter numerals for year
+                  Enter four numerals for year
                 </div>
                 <input
                   aria-describedby="year-description-applicant_date_of_birth_0"

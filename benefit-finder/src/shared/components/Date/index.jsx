@@ -61,7 +61,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           {labelDay}
         </label>
         <div id={`day-description-${id}`} className="a11y-sr-only">
-          Enter numerals for day
+          Enter four numerals for day
         </div>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
@@ -79,7 +79,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           {labelYear}
         </label>
         <div id={`year-description-${id}`} className="a11y-sr-only">
-          Enter numerals for year
+          Enter four numerals for year
         </div>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}

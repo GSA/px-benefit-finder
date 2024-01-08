@@ -7,9 +7,9 @@ import {
   EmailButton,
   Heading,
   StepBackLink,
-  Card,
   Chevron,
   ShareButton,
+  RelativeBenefitList,
 } from '../index'
 import createMarkup from '../../utils/createMarkup'
 import './_index.scss'
@@ -132,32 +132,10 @@ const ResultsView = ({
                 {resultsRelativeBenefits?.heading}
               </Heading>
               {relevantBenefits && (
-                <ul className="add-list-reset">
-                  {relevantBenefits[0] && (
-                    <div key="benefit-card-one">
-                      <Card
-                        className="relative-benefit-card"
-                        title={`${relevantBenefits[0].lifeEvent.title}`}
-                        body={`${relevantBenefits[0].lifeEvent.body}`}
-                        cta={`${relevantBenefits[0].lifeEvent.cta}`}
-                        href={`${relevantBenefits[0].lifeEvent.link}`}
-                        carrotType={2}
-                      ></Card>
-                    </div>
-                  )}
-                  {relevantBenefits[1] && (
-                    <div key="benefit-card-two">
-                      <Card
-                        className="relative-benefit-card"
-                        title={`${relevantBenefits[1].lifeEvent.title}`}
-                        body={`${relevantBenefits[1].lifeEvent.body}`}
-                        cta={`${relevantBenefits[1].lifeEvent.cta}`}
-                        href={`${relevantBenefits[1].lifeEvent.link}`}
-                        carrotType={2}
-                      ></Card>
-                    </div>
-                  )}
-                </ul>
+                <RelativeBenefitList
+                  data={relevantBenefits}
+                  carrotType={2}
+                ></RelativeBenefitList>
               )}
             </div>
           )}

@@ -350,7 +350,7 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             # docker pull "$DOCKERREPO:$IMAGE_TAG"
             docker --version
-            docker images 
+            docker pull ubuntu
           
       # - run:
       #     name: "Run Drush Cron and Generate Static Site"

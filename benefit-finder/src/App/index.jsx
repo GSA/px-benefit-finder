@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from 'react'
-import { useHandleUnload } from '../shared/hooks/useHandleUnload'
+// import { useHandleUnload } from '../shared/hooks/useHandleUnload'
 import * as apiCalls from '../shared/api/apiCalls'
 import {
   Intro,
@@ -28,9 +28,6 @@ function App({ testAppContent, testQuery }) {
   const windowQuery = testQuery || window.location.search
   const hasQueryParams = windowQuery.includes(sharedToken)
   const isDraftMode = windowQuery.includes(draftToken)
-
-  const [hasData, setHasData] = useState(false)
-  useHandleUnload(hasData) // alert the user if they try to go back in browser
 
   /**
    * lazy load our data state.
@@ -144,7 +141,6 @@ function App({ testAppContent, testQuery }) {
                   ui={t}
                   modalOpen={modalOpen}
                   setModalOpen={setModalOpen}
-                  setHasData={setHasData}
                 />
               </Form>
             </div>

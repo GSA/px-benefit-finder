@@ -68,6 +68,7 @@ jobs:
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cd px-benefit-finder/usagov-2021
+            sed -i 's/memory_limit       = 1G/memory_limit       = 500M/g' .docker/src-cms/etc/php81/php.ini
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#- name: cms#- name: benefit-finder-cms-${CIRCLE_BRANCH}#" manifest.yml
@@ -341,22 +342,15 @@ jobs:
             source ./bin/cloudgov/cf-install.sh
             export CIRCLE_BRANCH="dev"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+      -run:
+        name: Install AWSCli
+        command: |
+          source ./bin/cloudgov/awscli-install.sh
       - run:
-          name: Pull Benefit-finder-cms Image
+          name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
-            export IMAGE_TAG=$( cf app benefit-finder-cms-dev | grep "docker image" | awk '{print $NF}' | cut -d ":" -f2 )
-            export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
-            echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            echo "$DOCKERREPO:$IMAGE_TAG"
-            docker pull "$DOCKERREPO:$IMAGE_TAG"
-
-          
-      # - run:
-      #     name: "Run Drush Cron and Generate Static Site"
-      #     command: |
-      #       export CIRCLE_BRANCH="dev"
-      #       cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 350M
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 350M
 
 # Orchestrate our job run sequence
 workflows:
@@ -367,7 +361,7 @@ workflows:
           filters:
             branches:
               only: 
-                - dev #657-static-site-in-sandbox
+                - 657-static-site-in-sandbox
       - build_and_deploy_main:
           filters:
             branches:

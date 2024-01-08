@@ -36,6 +36,7 @@ jobs:
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
+            sed -i "s/memory_limit       = 1G/memory_limit       = 500M/g" .docker/src-cms/etc/php81/php.ini
             mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms
             sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
@@ -68,7 +69,6 @@ jobs:
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cd px-benefit-finder/usagov-2021
-            sed -i "s/memory_limit       = 1G/memory_limit       = 500M/g" .docker/src-cms/etc/php81/php.ini
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#- name: cms#- name: benefit-finder-cms-${CIRCLE_BRANCH}#" manifest.yml

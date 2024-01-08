@@ -348,9 +348,8 @@ jobs:
             export IMAGE_TAG=$( cf app benefit-finder-cms-dev | grep "docker image" | awk '{print $NF}' | cut -d ":" -f2 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            # docker pull "$DOCKERREPO:$IMAGE_TAG"
-            docker --version
-            docker pull ubuntu
+            docker pull "$DOCKERREPO:$IMAGE_TAG"
+
           
       # - run:
       #     name: "Run Drush Cron and Generate Static Site"

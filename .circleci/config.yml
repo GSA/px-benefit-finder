@@ -346,7 +346,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 350M
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 500M
 
 # Orchestrate our job run sequence
 workflows:

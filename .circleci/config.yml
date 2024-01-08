@@ -341,15 +341,12 @@ jobs:
           command: |
             source ./bin/cloudgov/cf-install.sh
             export CIRCLE_BRANCH="dev"
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-
-
-          
-      # - run:
-      #     name: "Run Drush Cron and Generate Static Site"
-      #     command: |
-      #       export CIRCLE_BRANCH="dev"
-      #       cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 350M
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"          
+      - run:
+          name: "Run Drush Cron and Generate Static Site"
+          command: |
+            export CIRCLE_BRANCH="dev"
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 350M
 
 # Orchestrate our job run sequence
 workflows:
@@ -360,7 +357,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - dev #657-static-site-in-sandbox
       - build_and_deploy_main:
           filters:
             branches:

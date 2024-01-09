@@ -16,7 +16,7 @@ import './_index.scss'
  * @return {html} returns a semantic html list element
  */
 const Card = ({ className, title, body, cta, href, noCarrot, carrotType }) => {
-  const defaultClasses = ['usa-card add-list-reset']
+  const defaultClasses = ['add-list-reset']
   const handleCarrot =
     noCarrot === true ? null : <Carrot color="#162E51" type={carrotType} />
 
@@ -28,20 +28,18 @@ const Card = ({ className, title, body, cta, href, noCarrot, carrotType }) => {
       })}
       key={`${title}`}
     >
-      <a href={href}>
-        <div className="usa-card__container">
-          <div className="usa-card__header">
-            <Heading className="usa-card__heading" headingLevel={3}>
-              {title}
-            </Heading>
-          </div>
-          <div
-            className="usa-card__body"
-            dangerouslySetInnerHTML={createMarkup(body)}
-          />
-          <div className="usa-card__cta">{cta}</div>
-          {handleCarrot}
+      <a className="usa-card__container" href={href}>
+        <div className="usa-card__header">
+          <Heading className="usa-card__heading" headingLevel={3}>
+            {title}
+          </Heading>
         </div>
+        <div
+          className="usa-card__body"
+          dangerouslySetInnerHTML={createMarkup(body)}
+        />
+        <div className="usa-card__cta">{cta}</div>
+        {handleCarrot}
       </a>
     </li>
   )

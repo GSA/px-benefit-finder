@@ -50,6 +50,8 @@ const LifeEventSection = ({
   const classError = 'usa-input--error'
   const [hasData, setHasData] = useState(false)
   useHandleUnload(hasData) // alert the user if they try to go back in browser
+  const tabbableElements = document.getElementsByClassName('usa-skipnav')
+  const skipNav = useRef(tabbableElements[0])
 
   // desctructure data
   const {
@@ -165,7 +167,7 @@ const LifeEventSection = ({
       // set complete step usa-step-indicator__segment--complete
       setStep(step + updateIndex)
       setStepData(updateIndex)
-      document.activeElement.blur()
+      skipNav && skipNav.current.focus()
     }
   }
 
@@ -177,7 +179,7 @@ const LifeEventSection = ({
    */
   const handleBackUpdate = updateIndex => {
     setStep(step + updateIndex)
-    document.activeElement.blur()
+    skipNav && skipNav.current.focus()
   }
 
   /**

@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { Button } from '../index'
 import './_index.scss'
@@ -11,12 +12,16 @@ import './_index.scss'
  * @return {html} returns markup for a usa unstyled button
  */
 const StepBackLink = ({ children, setCurrent, currentIndex }) => {
+  const tabbableElements = document.getElementsByClassName('usa-skipnav')
+  const skipNav = useRef(tabbableElements[0])
+
+  const handleStep = () => {
+    setCurrent(currentIndex)
+    skipNav && skipNav.current.focus()
+  }
+
   return (
-    <Button
-      className="step-back-link"
-      unstyled
-      onClick={() => setCurrent(currentIndex)}
-    >
+    <Button className="step-back-link" unstyled onClick={() => handleStep()}>
       {children || 'Back'}
     </Button>
   )

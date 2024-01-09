@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect } from 'react'
+import { useState, createContext, useEffect, useRef } from 'react'
 // import { useHandleUnload } from '../shared/hooks/useHandleUnload'
 import * as apiCalls from '../shared/api/apiCalls'
 import {
@@ -28,6 +28,8 @@ function App({ testAppContent, testQuery }) {
   const windowQuery = testQuery || window.location.search
   const hasQueryParams = windowQuery.includes(sharedToken)
   const isDraftMode = windowQuery.includes(draftToken)
+  const tabbableElements = document.getElementsByClassName('usa-skipnav')
+  const skipNav = useRef(tabbableElements[0])
 
   /**
    * lazy load our data state.
@@ -117,6 +119,7 @@ function App({ testAppContent, testQuery }) {
               handleStepBack={() => {
                 setVerifyStep(false)
                 setViewResults(false)
+                skipNav && skipNav.current.focus()
               }}
             />
           ) : verifyStep === false ? (
@@ -133,10 +136,12 @@ function App({ testAppContent, testQuery }) {
                   setVerifyStep={() => {
                     setVerifyStep(true)
                     setModalOpen(false)
+                    skipNav && skipNav.current.focus()
                   }}
                   setViewResults={() => {
                     setViewResults(true)
                     setModalOpen(false)
+                    skipNav && skipNav.current.focus()
                   }}
                   ui={t}
                   modalOpen={modalOpen}
@@ -149,9 +154,11 @@ function App({ testAppContent, testQuery }) {
               handleStepBack={() => {
                 setVerifyStep(false)
                 setViewResults(false)
+                skipNav && skipNav.current.focus()
               }}
               handleStepForward={() => {
                 setViewResults(true)
+                skipNav && skipNav.current.focus()
               }}
               ui={t}
               data={stepDataArray}

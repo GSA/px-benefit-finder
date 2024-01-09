@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
 import {
@@ -41,10 +41,13 @@ const ResultsView = ({
   } = ui
 
   const [notQualifiedView, setNotQualifiedView] = useState(false)
+  const tabbableElements = document.getElementsByClassName('usa-skipnav')
+  const skipNav = useRef(tabbableElements[0])
 
   const handleViewToggle = () => {
     setNotQualifiedView(!notQualifiedView)
     window.scrollTo(0, 0)
+    skipNav && skipNav.current.focus()
   }
 
   useEffect(() => {
@@ -75,7 +78,7 @@ const ResultsView = ({
           ) : (
             <Button
               className="step-back-link"
-              onClick={() => setNotQualifiedView(false)}
+              onClick={() => handleViewToggle()}
               unstyled
             >
               {stepBackLink}

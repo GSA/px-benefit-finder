@@ -109,7 +109,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
       className="a11y-sr-only"
       id="day-description-undefined"
     >
-      Enter four numerals for day
+      Enter two numerals for day
     </div>
     <input
       aria-describedby="day-description-undefined"

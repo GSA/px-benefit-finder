@@ -61,7 +61,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           {labelDay}
         </label>
         <div id={`day-description-${id}`} className="a11y-sr-only">
-          Enter four numerals for day
+          Enter two numerals for day
         </div>
         <input
           className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}

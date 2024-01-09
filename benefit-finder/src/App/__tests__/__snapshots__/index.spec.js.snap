@@ -119,6 +119,7 @@ exports[`loads intro 1`] = `
                     <div
                       class="usa-alert usa-alert--info no-background"
                       role="alert"
+                      tabindex="-1"
                     >
                       <div
                         class="usa-alert__body"
@@ -147,6 +148,7 @@ exports[`loads intro 1`] = `
                     <div
                       class="usa-alert usa-alert--info no-background"
                       role="alert"
+                      tabindex="-1"
                     >
                       <div
                         class="usa-alert__body"
@@ -169,6 +171,7 @@ exports[`loads intro 1`] = `
                     <div
                       class="usa-alert usa-alert--info no-background"
                       role="alert"
+                      tabindex="-1"
                     >
                       <div
                         class="usa-alert__body"
@@ -411,6 +414,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -571,6 +575,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -726,6 +731,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -886,6 +892,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -1042,6 +1049,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -1212,6 +1220,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -1377,6 +1386,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -1548,6 +1558,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -1714,6 +1725,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -1879,6 +1891,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -2044,6 +2057,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -2194,6 +2208,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -2360,6 +2375,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -2515,6 +2531,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -2675,6 +2692,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -2835,6 +2853,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -2986,6 +3005,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -3136,6 +3156,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -3296,6 +3317,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -3461,6 +3483,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -3636,6 +3659,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -3796,6 +3820,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -3957,6 +3982,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -4122,6 +4148,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -4297,6 +4324,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -4462,6 +4490,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -4632,6 +4661,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -4797,6 +4827,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -4968,6 +4999,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -5128,6 +5160,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -5288,6 +5321,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -5705,6 +5739,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -5880,6 +5915,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -6050,6 +6086,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -6225,6 +6262,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -6394,6 +6432,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -6577,6 +6616,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -6734,6 +6774,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -6918,6 +6959,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -7097,6 +7139,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -7278,6 +7321,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -7458,6 +7502,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -7621,6 +7666,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -7803,6 +7849,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -7973,6 +8020,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -8124,6 +8172,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -8299,6 +8348,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -8452,6 +8502,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -8604,6 +8655,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -8779,6 +8831,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -8947,6 +9000,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -9138,6 +9192,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -9289,6 +9344,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -9454,6 +9510,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -9611,6 +9668,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -9792,6 +9850,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -9970,6 +10029,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -10155,6 +10215,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -10336,6 +10397,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -10524,6 +10586,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -10699,6 +10762,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"
@@ -10874,6 +10938,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
+                        tabindex="0"
                       >
                         <div
                           class="usa-alert__body"

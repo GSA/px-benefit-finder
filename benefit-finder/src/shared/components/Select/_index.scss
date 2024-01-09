@@ -10,8 +10,10 @@
     }
 
     &.usa-input--error {
-      outline: 4px solid color.$alert-red !important;
-      border: none;
+      padding: 8px 32px 8px 8px;
+      height: initial;
+      border-radius: 3px;
+      border-color: color.$alert-red !important;
     }
   }
 }

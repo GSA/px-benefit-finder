@@ -335,6 +335,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -510,6 +511,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -680,6 +682,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -855,6 +858,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -1024,6 +1028,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -1207,6 +1212,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -1364,6 +1370,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -1548,6 +1555,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -1727,6 +1735,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -1908,6 +1917,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -2088,6 +2098,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -2251,6 +2262,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -2433,6 +2445,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -2603,6 +2616,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -2754,6 +2768,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -2929,6 +2944,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -3082,6 +3098,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -3234,6 +3251,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -3409,6 +3427,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -3577,6 +3596,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -3768,6 +3788,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -3919,6 +3940,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -4084,6 +4106,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -4241,6 +4264,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -4422,6 +4446,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -4600,6 +4625,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -4785,6 +4811,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -4966,6 +4993,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -5154,6 +5182,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -5329,6 +5358,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"
@@ -5504,6 +5534,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <div
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
+                      tabindex="0"
                     >
                       <div
                         class="usa-alert__body"

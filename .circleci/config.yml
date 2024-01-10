@@ -40,6 +40,7 @@ jobs:
             mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms
             sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
+            sed -i 's/storage/benefit-finder-static-dev/g' scripts/tome-sync.sh scripts/tome-static.sh scripts/tome-run.sh
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
             sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
@@ -381,7 +382,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - 657-static-site-in-sandbox1
 
 
 

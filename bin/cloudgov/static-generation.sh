@@ -58,9 +58,9 @@ echo "'drush tome:static' task completed!"
 
 cd ${html_path}
 echo "Copying static files to '${bucket_name}'..."
-cp -rfp /var/www/web/themes/custom/usagov/fonts  ${html_path}/themes/custom/usagov 
-cp -rfp /var/www/web/themes/custom/usagov/images ${html_path}/themes/custom/usagov 
-cp -rfp /var/www/web/themes/custom/usagov/assets ${html_path}/themes/custom/usagov 
+cp -r /var/www/web/themes/custom/usagov/fonts  ${html_path}/themes/custom/usagov 
+cp -r /var/www/web/themes/custom/usagov/images ${html_path}/themes/custom/usagov 
+cp -r /var/www/web/themes/custom/usagov/assets ${html_path}/themes/custom/usagov 
 aws s3 sync . s3://${bucket} --delete --no-verify-ssl # 2>/dev/null
 aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl # 2>/dev/null
 echo "Copy to '${bucket_name}' completed!"

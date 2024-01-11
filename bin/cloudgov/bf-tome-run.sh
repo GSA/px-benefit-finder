@@ -103,4 +103,4 @@ else
 #   fi
 # else
 #   echo "No change to block or node content in the last 30 minutes: no need for static site build" | tee -a $TOMELOG
-# fi
+fi

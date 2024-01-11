@@ -364,7 +364,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 350M
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m 350M
 
 # Orchestrate our job run sequence
 workflows:
@@ -375,7 +375,7 @@ workflows:
           filters:
             branches:
               only: 
-                - dev #657-static-site-in-sandbox
+                - 657-static-site-in-sandbox
       - build_and_deploy_main:
           filters:
             branches:
@@ -399,7 +399,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - X #657-static-site-in-sandbox
 
 
 

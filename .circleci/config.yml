@@ -399,7 +399,7 @@ workflows:
           filters:
             branches:
               only: 
-                - #657-static-site-in-sandbox
+                - X #657-static-site-in-sandbox
 
 
 

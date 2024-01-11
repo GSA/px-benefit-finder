@@ -375,7 +375,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - dev #657-static-site-in-sandbox
       - build_and_deploy_main:
           filters:
             branches:
@@ -399,7 +399,7 @@ workflows:
           filters:
             branches:
               only: 
-                - X #657-static-site-in-sandbox
+                - 657-static-site-in-sandbox
 
 
 

@@ -31,6 +31,10 @@ jobs:
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
             mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
             mv bin/cloudgov/static-generation.sh usagov-2021/scripts/static-generation.sh
+            mv bin/cloudgov/bf-tome-run.sh usagov-2021/scripts/bf-tome-run.sh
+            mv bin/cloudgov/bf-tome-static.sh usagov-2021/scripts/bf-tome-static.sh
+            mv bin/cloudgov/bf-tome-status-indicator-update.sh usagov-2021/scripts/bf-tome-status-indicator-update.sh
+            mv bin/cloudgov/bf-tome-sync.sh usagov-2021/scripts/bf-tome-sync.sh
 
       - run: 
           name: Pre-docker-build configurations
@@ -84,18 +88,7 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
-            if [ "$(whoami)" != "root" ]; then
-              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-              sudo apt-get update
-              sudo apt-get install -y cf8-cli
-            else
-              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
-              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-              apt-get update
-              apt-get install -y cf8-cli
-            fi
-            cf -v
+            source ./bin/cloudgov/cf-install.sh
             export CIRCLE_BRANCH="dev"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
 
@@ -193,18 +186,7 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
-            if [ "$(whoami)" != "root" ]; then
-              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-              sudo apt-get update
-              sudo apt-get install -y cf8-cli
-            else
-              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
-              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-              apt-get update
-              apt-get install -y cf8-cli
-            fi
-            cf -v
+            source ./bin/cloudgov/cf-install.sh
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
 
       - run:
@@ -237,18 +219,7 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
-            if [ "$(whoami)" != "root" ]; then
-              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-              sudo apt-get update
-              sudo apt-get install -y cf8-cli
-            else
-              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
-              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-              apt-get update
-              apt-get install -y cf8-cli
-            fi
-            cf -v
+            source ./bin/cloudgov/cf-install.sh
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
             
       - run:
@@ -348,7 +319,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 350M
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "benefit-finder-${CIRCLE_BRANCH}-ssg"  -k "2G" -m 350M
 
 # Orchestrate our job run sequence
 workflows:
@@ -383,7 +354,7 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox1
+                - x #657-static-site-in-sandbox1
 
 
 

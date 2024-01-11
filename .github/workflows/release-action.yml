@@ -19,6 +19,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+      with:
+        ref: release
 
     - name: Merging main > release & pushing
       env:
@@ -32,6 +34,10 @@ jobs:
         git branch --show-current
         git status
         git push --force-with-lease
+
+    - name: Building benefit-finder module
+      run: |
+        bash ./mv-benefit-finder-app.sh
 
     - name: Setup CF CLI
       env:

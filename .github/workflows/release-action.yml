@@ -34,7 +34,11 @@ jobs:
         git branch --show-current
         git status
         git push --force-with-lease
-
+      
+    - name: Building benefit-finder module
+      run: |
+        bash ./mv-benefit-finder-app.sh
+        
     - name: Setup CF CLI
       env:
         CF_USER: "${{ secrets.CF_USER }}"

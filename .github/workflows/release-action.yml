@@ -35,10 +35,6 @@ jobs:
         git status
         git push --force-with-lease
 
-    - name: Building benefit-finder module
-      run: |
-        bash ./mv-benefit-finder-app.sh
-
     - name: Setup CF CLI
       env:
         CF_USER: "${{ secrets.CF_USER }}"
@@ -99,7 +95,10 @@ jobs:
       run: |
         cd benefit-finder
         npm run cy:run:chrome
-
+      
+    - name: Building benefit-finder module
+      run: |
+        bash ./mv-benefit-finder-app.sh
     - name: Compressing the module directory
       run: |
         tar -cvzf "benefit-finder-module-${{ github.event.inputs.tag_name }}.tar.gz" usagov_benefit_finder

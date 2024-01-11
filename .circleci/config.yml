@@ -115,8 +115,18 @@ jobs:
             cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
+            cf stop benefit-finder-cms-${CIRCLE_BRANCH}
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
+            while : ; do 
+              app_status=$( cf app benefit-finder-cms-${CIRCLE_BRANCH} | grep "#0" | awk '{print $2}' )
+              if [ "${app_status}" == "running" ]; then
+                break
+              else
+                echo "waiting for application to start..."
+                sleep 2
+              fi
+            done
 
 
   build_and_deploy_main:

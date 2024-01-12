@@ -185,10 +185,10 @@ locals {
             source      = "${path.cwd}/applications/nginx-waf/nginx/snippets/proxy-to-storage.conf.tmpl"
             destination = "${path.cwd}/applications/nginx-waf/nginx/snippets/proxy-to-storage.conf"
           },
-          # {
-          #   source      = "${path.cwd}/applications/nginx-waf/nginx/snippets/proxy-to-static.conf.tmpl"
-          #   destination = "${path.cwd}/applications/nginx-waf/nginx/snippets/proxy-to-static.conf"
-          # },
+          {
+            source      = "${path.cwd}/applications/nginx-waf/nginx/snippets/proxy-to-static.conf.tmpl"
+            destination = "${path.cwd}/applications/nginx-waf/nginx/snippets/proxy-to-static.conf"
+          },
           {
             source      = "${path.cwd}/applications/nginx-waf/nginx/snippets/proxy-to-app.conf.tmpl"
             destination = "${path.cwd}/applications/nginx-waf/nginx/snippets/proxy-to-app.conf"
@@ -254,6 +254,10 @@ locals {
           "proxy_password",
           "proxy_username",
           "proxy_uri",
+          "static_bucket",
+          "static_fips_endpoint",
+          "static_access_key_id",
+          "static_secret_access_key",
           "storage_bucket",
           "storage_fips_endpoint",
           "storage_access_key_id",
@@ -291,26 +295,26 @@ locals {
         ]
       }
 
-      ## S3 storage for the statically generated site.
-      # static = {
+      # S3 storage for the statically generated site.
+      static = {
 
-      #   ## Applications to bind to this service.
-      #   applications = ["waf"]
+        ## Applications to bind to this service.
+        applications = ["waf", "cms"]
 
-      #   ## Should a service key be generated for other applications to use?
-      #   service_key = true
+        ## Should a service key be generated for other applications to use?
+        service_key = true
 
-      #   ## The size of the instance to deploy.
-      #   service_plan = "basic-public-sandbox"
+        ## The size of the instance to deploy.
+        service_plan = "basic-public-sandbox"
 
-      #   ## The type of service to be deployed.
-      #   service_type = "s3"
+        ## The type of service to be deployed.
+        service_type = "s3"
 
-      #   ## Tags to add to the service.
-      #   tags = [
-      #     terraform.workspace
-      #   ]
-      # }
+        ## Tags to add to the service.
+        tags = [
+          terraform.workspace
+        ]
+      }
     }
 
     ## Variables to store in CircleCI as pipeline variables.
@@ -731,7 +735,7 @@ locals {
         services = {
           mysql   = local.globals.services.mysql
           secrets = local.globals.services.secrets
-          # static  = local.globals.services.static
+          static  = local.globals.services.static
           storage = local.globals.services.storage
         }
         circleci_variables = local.globals.circleci_variables
@@ -778,7 +782,7 @@ locals {
         services = {
           mysql   = local.globals.services.mysql
           secrets = local.globals.services.secrets
-          # static  = local.globals.services.static
+          static  = local.globals.services.static
           storage = local.globals.services.storage
         }
         circleci_variables = local.globals.circleci_variables

@@ -136,6 +136,7 @@ jobs:
       - run:
           name: Cloning the Repo and initiating the Submodule
           command: |
+            export CIRCLE_BRANCH="main"
             echo "cloning the repo and initiating the usagov-2021 submodule"
             git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
             cd px-benefit-finder
@@ -182,6 +183,7 @@ jobs:
       - run: 
           name: Building, tagging, pushing the Docker Image
           command: |
+            export CIRCLE_BRANCH="main"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cd px-benefit-finder/usagov-2021
@@ -195,6 +197,7 @@ jobs:
           name: Injecting container name to the manifest.yml
           command: |
             echo "......"
+            export CIRCLE_BRANCH="main"
             echo $CIRCLE_BRANCH
             echo "......"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
@@ -214,6 +217,7 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
+            export CIRCLE_BRANCH="main"
             if [ "$(whoami)" != "root" ]; then
               wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
               echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
@@ -231,6 +235,7 @@ jobs:
       - run:
           name: Deploy the app to cloud.gov
           command: |
+            export CIRCLE_BRANCH="main"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
@@ -399,6 +404,7 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
+            export CIRCLE_BRANCH="main"
             if [ "$(whoami)" != "root" ]; then
               wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
               echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
@@ -415,6 +421,7 @@ jobs:
       - run:
           name: "Run Drush Cron and Generate Static Site"
           command: |
+            export CIRCLE_BRANCH="main"
             cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
 
 # Orchestrate our job run sequence

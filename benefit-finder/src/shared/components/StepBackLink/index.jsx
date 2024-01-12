@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useResetElement } from '../../hooks/useResetElement'
 import PropTypes from 'prop-types'
 import { Button } from '../index'
 import './_index.scss'
@@ -12,12 +12,11 @@ import './_index.scss'
  * @return {html} returns markup for a usa unstyled button
  */
 const StepBackLink = ({ children, setCurrent, currentIndex }) => {
-  const tabbableElements = document.getElementsByClassName('usa-skipnav')
-  const skipNav = useRef(tabbableElements[0])
+  const resetElement = useResetElement()
 
   const handleStep = () => {
     setCurrent(currentIndex)
-    skipNav && skipNav.current.focus()
+    resetElement.current.focus()
   }
 
   return (

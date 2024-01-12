@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
 import { dateInputValidation } from '../../utils/inputValidation'
 import { useHandleUnload } from '../../hooks/useHandleUnload'
+import { useResetElement } from '../../hooks/useResetElement'
 import * as apiCalls from '../../api/apiCalls'
 import {
   Alert,
@@ -50,8 +51,11 @@ const LifeEventSection = ({
   const classError = 'usa-input--error'
   const [hasData, setHasData] = useState(false)
   useHandleUnload(hasData) // alert the user if they try to go back in browser
-  const tabbableElements = document.getElementsByClassName('usa-skipnav')
-  const skipNav = useRef(tabbableElements[0])
+  const resetElement = useResetElement()
+
+  useEffect(() => {
+    resetElement.current?.focus()
+  }, [resetElement])
 
   // desctructure data
   const {
@@ -167,7 +171,7 @@ const LifeEventSection = ({
       // set complete step usa-step-indicator__segment--complete
       setStep(step + updateIndex)
       setStepData(updateIndex)
-      skipNav && skipNav.current.focus()
+      resetElement && resetElement.current.focus()
     }
   }
 
@@ -179,7 +183,7 @@ const LifeEventSection = ({
    */
   const handleBackUpdate = updateIndex => {
     setStep(step + updateIndex)
-    skipNav && skipNav.current.focus()
+    resetElement.current.focus()
   }
 
   /**

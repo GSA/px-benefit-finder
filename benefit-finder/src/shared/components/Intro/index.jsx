@@ -1,4 +1,5 @@
-import { useRef } from 'react'
+// import { useRef } from 'react'
+import { useResetElement } from '../../hooks/useResetElement'
 import PropTypes from 'prop-types'
 import {
   Button,
@@ -23,12 +24,12 @@ import './_index.scss'
 const Intro = ({ data, ui, setStep, step }) => {
   const { timeEstimate, title, summary } = data
   const { heading, timeIndicator, steps, notices, button } = ui
-  const tabbableElements = document.getElementsByClassName('usa-skipnav')
-  const skipNav = useRef(tabbableElements[0])
+  // const resetElements = document.querySelectorAll('[tabindex="-1"]')
+  const resetElement = useResetElement()
 
   const handleStep = () => {
     setStep(step + 1)
-    skipNav && skipNav.current.focus()
+    resetElement.current.focus()
   }
 
   return (

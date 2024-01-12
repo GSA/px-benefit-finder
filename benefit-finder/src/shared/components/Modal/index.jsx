@@ -62,30 +62,13 @@ const Modal = ({
   navItemTwoLabel,
   navItemTwoFunction,
   handleCheckRequriedFields,
-  completed,
   modalOpen,
   setModalOpen,
 }) => {
   // state
   const triggerRef = useRef(null)
 
-  /**
-   * a function that checks for errors and then triggers the modal to open state
-   * @function
-   */
-  // const handleOpenModal = useCallback(() => {
-  //   completed === true
-  //     ? setModalOpen(true)
-  //     : handleCheckRequriedFields() === true && setModalOpen
-  //   if (completed === true) {
-  //     setModalOpen(true)
-  //   }
-  // }, [completed, handleCheckRequriedFields, setModalOpen])
-
   const handleOpenModal = () => {
-    // completed === true
-    //   ? setModalOpen(true)
-    //   : handleCheckRequriedFields() === true && setModalOpen
     if (handleCheckRequriedFields() === true) {
       setModalOpen(true)
     }

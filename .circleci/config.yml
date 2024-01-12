@@ -243,6 +243,7 @@ jobs:
             cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
+            cf stop benefit-finder-cms-${CIRCLE_BRANCH}
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
             while : ; do 
@@ -466,15 +467,15 @@ workflows:
     jobs:
       - lint
    
-  # static-site-generation-cron:
-  #   triggers:
-  #     - schedule:
-  #         cron: "0 0 * * *"
-  #         filters:
-  #           branches:
-  #             only:
-  #               - main
-  #   jobs:
-  #     - static-site-generation-main
+  static-site-generation-cron:
+    triggers:
+      - schedule:
+          cron: "0 3 * * *"
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - static-site-generation-main
 
       

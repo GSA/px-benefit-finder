@@ -157,7 +157,7 @@ jobs:
             mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
             mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
-            mv bin/cloudgov/static-generation.sh usagov-2021/scripts/static-generation.sh
+            # mv bin/cloudgov/static-generation.sh usagov-2021/scripts/static-generation.sh
             mv bin/cloudgov/bf-tome-run.sh usagov-2021/scripts/bf-tome-run.sh
             mv bin/cloudgov/bf-tome-static.sh usagov-2021/scripts/bf-tome-static.sh
             mv bin/cloudgov/bf-tome-status-indicator-update.sh usagov-2021/scripts/bf-tome-status-indicator-update.sh

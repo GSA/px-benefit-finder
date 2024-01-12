@@ -1,5 +1,4 @@
-// import { useRef } from 'react'
-import { useResetElement } from '../../hooks/useResetElement'
+import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import {
   Button,

@@ -77,6 +77,7 @@ const Modal = ({
   /**
    * a function that triggers the modal to a closed state
    * @function
+   * @param {ref} triggerRef - passed to button for triggering modal
    */
   const handleCloseModal = triggerRef => {
     // focus the trigger if it is still in the DOM

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
 import { dateInputValidation } from '../../utils/inputValidation'
 import { useHandleUnload } from '../../hooks/useHandleUnload'
-import { useResetElement } from '../../hooks/useResetElement'
+import { useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import {
   Alert,

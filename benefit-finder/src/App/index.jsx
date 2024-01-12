@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from 'react'
-import { useResetElement } from '../shared/hooks/useResetElement'
+import { useResetElement } from '../shared/hooks'
 import * as apiCalls from '../shared/api/apiCalls'
 import {
   Intro,

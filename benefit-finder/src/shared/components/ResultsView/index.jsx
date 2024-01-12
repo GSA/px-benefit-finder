@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useResetElement } from '../../hooks/useResetElement'
+import { useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
 import {

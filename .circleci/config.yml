@@ -436,14 +436,14 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - quick-fix-to-tome-script
       - static-site-generation-dev:
           requires:
             - build_and_deploy_dev
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - quick-fix-to-tome-script
       - build_and_deploy_main:
           filters:
             branches:

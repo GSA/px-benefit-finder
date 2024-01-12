@@ -31,10 +31,12 @@ locals {
         # ca_certificate = module.certificates.certificate.base64
         # ca_key         = module.certificates.key.base64
         cf_space       = local.env.space
-        cms_uri = terraform.workspace == "prod" ? "https://cms.<project-prefix>.gov" : format(
-          "https://cms-%s.<project-prefix>.gov",
-          terraform.workspace
-        )
+        # cms_uri = terraform.workspace == "prod" ? "https://cms.<project-prefix>.gov" : format(
+        #   "https://cms-%s.<project-prefix>.gov",
+        #   terraform.workspace
+        # )
+        cms_uri = terraform.workspace == "main" ? "https://bf-cms-main.bxdev.net" : "https://bf-cms-dev.bxdev.net"
+        
         drupal_instances = try(
           local.external_applications[terraform.workspace].drupal.instances,
           local.env.defaults.instances
@@ -60,6 +62,7 @@ locals {
         #   "https://ssg-%s.<project-prefix>.gov",
         #   terraform.workspace
         # )
+        ssg_uri = terraform.workspace == "main" ? "https://bf-static-main.bxdev.net" : "https://bf-static-dev.bxdev.net"
         # sso_x509_cert = var.sso_x509_cert
         waf_name      = format(local.env.name_pattern, "waf")
       },

@@ -395,6 +395,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="dev"
+            # cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
             cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
 
   static-site-generation-main:
@@ -423,6 +424,7 @@ jobs:
           name: "Run Drush Cron and Generate Static Site"
           command: |
             export CIRCLE_BRANCH="main"
+            # cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
             cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
 
 # Orchestrate our job run sequence
@@ -446,14 +448,14 @@ workflows:
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - main
       - static-site-generation-main:
           requires:
             - build_and_deploy_main
           filters:
             branches:
               only: 
-                - 657-static-site-in-sandbox
+                - main
 
   create-component-library-workflow:
     jobs:

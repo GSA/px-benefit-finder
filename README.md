@@ -15,11 +15,15 @@ A short list of technologies used in this project.
 - [Git](https://git-scm.com/) - Version control system
 - [Github](https://github.com/) - Git repository management
 - [CircleCI](https://circleci.com/) - Continuous Integration and delivery
+- [Github Actions](https://github.com/features/actions) - Continuous Integration and delivery
 - [Terraform](https://www.terraform.io/) - Infrastructure automation to provision and manage resources in any cloud or data center
 - [Docker](https://www.docker.com/) - Build, Share, Run containerized applications
 - [Cloud.gov](https://cloud.gov/) - Environment Platform
 - [CodeQL](https://codeql.github.com/) - Semantic code analysis engine
 - [Dependabot](https://github.com/dependabot) - Dependency vulnerability monitoring
+- [Snyk](https://snyk.io/) - Scans for vulnerabilities in dependencies and containers
+- [Lint](https://github.com/topics/lint) - Static code analysis tool
+- [Terraform](https://www.terraform.io/) - Infrastructure as Code
 
 ### BackEnd
 
@@ -246,11 +250,7 @@ terraform plan
 
 The versioning scheme adheres to Semantic Versioning (SemVer). Versions are of the form MAJOR.MINOR.PATCH:
 
-MAJOR: Increased for incompatible API changes.
-
-MINOR: Added for new features in a backward-compatible manner.
-
-PATCH: Incremented for backward-compatible bug fixes.
+We are currently in the beta stage. An example of our release tag is `v0.1.2.beta.1`.
 
 ### Branching Strategy
 
@@ -260,7 +260,7 @@ The development process involves three main branches:
 
 2. `main`: Serves as the integration branch for ongoing development.
 
-3. Feature Branches: Created for each new feature or bug fix.
+3. Feature Branches: These are created for each new feature or bug fix. They can be deployed to the cloud.gov `benefit-finder-dev` environment by altering the branch name which the `build_and_deploy_dev` CircleCI workflow deploys on.
 
 
 ### Pull Request Workflow
@@ -283,7 +283,7 @@ When `main` is deemed stable, a `pre-release draft` is created as below:
 3. From the list of workflows on the left, choose the `Create release` workflow to run manually.
 4. On the right-hand side, you should see a "Run workflow" button.
 5. Use workflow from `Branch:main`
-6. Enter the tag/version you would like to publish. You may check the earlier versions published in the `Releases` sections by clicking on it on the right buttom of the repository.
+6. Enter the tag/version you would like to publish. You may check the earlier versions published in the `Releases` sections by clicking on it on the right buttom of the repository. An example of our release tag is `v0.1.2.beta.1`.
 7. After completing the 5th and 6th steps, click the "Run workflow" button to trigger the workflow manually.
 8. Once the workflow runs successfully, a `draft pre-release` is created, automated release notes are generated and a `benefit-finder-module-*.tar.gz` file is output under the `assets` section of the release.
 9. Edit the `draft pre-release`, evaluate the notes and publish it as the `release` or `pre-release`.

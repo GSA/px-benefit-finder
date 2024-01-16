@@ -250,7 +250,7 @@ terraform plan
 
 The versioning scheme adheres to Semantic Versioning (SemVer). Versions are of the form MAJOR.MINOR.PATCH:
 
-We are currently in the beta stage. An example of our release tag is `v0.1.2.beta.1`.
+We are currently in the beta stage. An example of our release tag is [![Latest Release](https://img.shields.io/github/v/release/GSA/px-benefit-finder?label=latest%20release)](https://github.com/GSA/px-benefit-finder/releases/latest).
 
 ### Branching Strategy
 

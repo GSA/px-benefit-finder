@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import createMarkup from '../../utils/createMarkup'
 import { dateInputValidation } from '../../utils/inputValidation'
+import { useHandleUnload } from '../../hooks/useHandleUnload'
 import * as apiCalls from '../../api/apiCalls'
 import {
   Alert,
@@ -47,6 +48,8 @@ const LifeEventSection = ({
   const [values, setValues] = useState([])
   const [hasError, setHasError] = useState([])
   const classError = 'usa-input--error'
+  const [hasData, setHasData] = useState(false)
+  useHandleUnload(hasData) // alert the user if they try to go back in browser
 
   // desctructure data
   const {
@@ -87,6 +90,7 @@ const LifeEventSection = ({
   const handleAlert = () => {
     // remove the display class from the alert
     alertFieldRef.current.classList.remove('display-none')
+    alertFieldRef.current.focus()
     // add to all the collected error fields an error class
     values.forEach(field => {
       field.classList.contains('required-field') &&
@@ -161,6 +165,7 @@ const LifeEventSection = ({
       // set complete step usa-step-indicator__segment--complete
       setStep(step + updateIndex)
       setStepData(updateIndex)
+      document.activeElement.blur()
     }
   }
 
@@ -172,6 +177,7 @@ const LifeEventSection = ({
    */
   const handleBackUpdate = updateIndex => {
     setStep(step + updateIndex)
+    document.activeElement.blur()
   }
 
   /**
@@ -181,6 +187,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleChanged = (event, criteriaKey) => {
+    event.target.value.length > 0 && setHasData(true)
     window.history.replaceState({}, '', window.location.pathname)
     apiCalls.PUT.Data(
       criteriaKey,
@@ -197,6 +204,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
+    event.target.value.length > 0 && setHasData(true)
     window.history.replaceState({}, '', window.location.pathname)
     dateInputValidation(event) === true &&
       apiCalls.PUT.DataDate(

@@ -1,5 +1,8 @@
 import KeyElegibilityCrieriaList from './index.jsx'
 import content from '../../api/mock-data/current.js'
+import * as en from '../../locales/en/en.json'
+
+const { resultsView } = en
 
 const { data } = JSON.parse(content)
 const { benefits } = data
@@ -12,6 +15,7 @@ export default {
   args: {
     data: b,
     initialEligibilityLength,
+    ui: resultsView.benefitAccordion,
   },
 }
 

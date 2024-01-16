@@ -1,6 +1,6 @@
 version: 2.1
 
-# Define the jobs we want to run for this project
+# This workflow deploys the app to the cloud.gov environments.
 jobs:
   build_and_deploy_dev:
     machine:
@@ -26,22 +26,32 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
-            mv usagov_benefit_finder usagov-2021/web/modules/custom
+            rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
+            mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
+            mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
+            mv bin/cloudgov/static-generation.sh usagov-2021/scripts/static-generation.sh
+            mv bin/cloudgov/bf-tome-run.sh usagov-2021/scripts/bf-tome-run.sh
+            mv bin/cloudgov/bf-tome-static.sh usagov-2021/scripts/bf-tome-static.sh
+            mv bin/cloudgov/bf-tome-status-indicator-update.sh usagov-2021/scripts/bf-tome-status-indicator-update.sh
+            mv bin/cloudgov/bf-tome-sync.sh usagov-2021/scripts/bf-tome-sync.sh
+            mv bin/cloudgov/cf-install.sh usagov-2021/scripts/cf-install.sh
 
       - run: 
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
+            sed -i "s/memory_limit       = 1G/memory_limit       = 500M/g" .docker/src-cms/etc/php81/php.ini
             mv .docker/Dockerfile-cms .
-            sed -i 's/80/8080/g' Dockerfile-cms  
+            sed -i 's/80/8080/g' Dockerfile-cms
+            sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
+            sed -i 's/\["s3"\]\[\]?/s3\[\]/g' scripts/tome-run.sh scripts/tome-sync.sh
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
             sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
 
 
       - run: 
@@ -60,6 +70,7 @@ jobs:
           name: Injecting container name to the manifest.yml
           command: |
             echo "......"
+            export CIRCLE_BRANCH="dev"
             echo $CIRCLE_BRANCH
             echo "......"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
@@ -72,12 +83,13 @@ jobs:
             sed -i "s#^    - database#    - benefit-finder-mysql-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
-            sed -i "s#^    - dbstorage##" manifest.yml
+            sed -i "s#^    - dbstorage#    - benefit-finder-static-${CIRCLE_BRANCH}#" manifest.yml
             cat manifest.yml
 
       - run:
           name: Setup CF CLI
           command: |
+            export CIRCLE_BRANCH="dev"
             if [ "$(whoami)" != "root" ]; then
               wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
               echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
@@ -90,11 +102,12 @@ jobs:
               apt-get install -y cf8-cli
             fi
             cf -v
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"  
 
       - run:
           name: Deploy the app to cloud.gov
           command: |
+            export CIRCLE_BRANCH="dev"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
@@ -102,28 +115,19 @@ jobs:
             cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
+            cf stop benefit-finder-cms-${CIRCLE_BRANCH}
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 60
+            while : ; do 
+              app_status=$( cf app benefit-finder-cms-${CIRCLE_BRANCH} | grep "#0" | awk '{print $2}' )
+              if [ "${app_status}" == "running" ]; then
+                break
+              else
+                echo "waiting for application to start..."
+                sleep 2
+              fi
+            done
 
-      - run:
-          name: Enable benefit-finder module
-          command: |
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:uninstall usagov_login || exit 0"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush cr"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "cd ../var/www/web/ && \
-                                  pwd && ls -l && \
-                                  mkdir -p content/sync && \
-                                  chown -R nginx:nginx content && \
-                                  pwd && ls -l && \
-                                  /var/www/vendor/bin/drush cr"
   build_and_deploy_main:
     machine:
       image: ubuntu-2004:202107-02
@@ -132,6 +136,7 @@ jobs:
       - run:
           name: Cloning the Repo and initiating the Submodule
           command: |
+            # export CIRCLE_BRANCH="main"
             echo "cloning the repo and initiating the usagov-2021 submodule"
             git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"
             cd px-benefit-finder
@@ -148,27 +153,37 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
-            mv usagov_benefit_finder usagov-2021/web/modules/custom
+            rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
+            mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
             mv html.html.twig usagov-2021/web/themes/custom/usagov/templates/html.html.twig
+            mv bin/cloudgov/entrypoint.sh usagov-2021/scripts/entrypoint.sh
+            mv bin/cloudgov/static-generation.sh usagov-2021/scripts/static-generation.sh
+            mv bin/cloudgov/bf-tome-run.sh usagov-2021/scripts/bf-tome-run.sh
+            mv bin/cloudgov/bf-tome-static.sh usagov-2021/scripts/bf-tome-static.sh
+            mv bin/cloudgov/bf-tome-status-indicator-update.sh usagov-2021/scripts/bf-tome-status-indicator-update.sh
+            mv bin/cloudgov/bf-tome-sync.sh usagov-2021/scripts/bf-tome-sync.sh
+            mv bin/cloudgov/cf-install.sh usagov-2021/scripts/cf-install.sh
 
       - run: 
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
+            sed -i "s/memory_limit       = 1G/memory_limit       = 500M/g" .docker/src-cms/etc/php81/php.ini
             mv .docker/Dockerfile-cms .
             sed -i 's/80/8080/g' Dockerfile-cms  
+            sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
             sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            sed -i -e '$a\' -e '# Content Sync Module\' -e 'global $content_directories; \' -e "\$content_directories\['sync'\] = DRUPAL_ROOT . '/content/sync'; "  web/sites/default/settings.php
-            cat web/sites/default/settings.php
-
+            
+          
       - run: 
           name: Building, tagging, pushing the Docker Image
           command: |
+            export CIRCLE_BRANCH="main"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cd px-benefit-finder/usagov-2021
@@ -182,6 +197,7 @@ jobs:
           name: Injecting container name to the manifest.yml
           command: |
             echo "......"
+            export CIRCLE_BRANCH="main"
             echo $CIRCLE_BRANCH
             echo "......"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
@@ -194,12 +210,14 @@ jobs:
             sed -i "s#^    - database#    - benefit-finder-mysql-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
-            sed -i "s#^    - dbstorage##" manifest.yml
+            sed -i "s#^    - dbstorage#    - benefit-finder-static-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i '16i\  command: ./scripts/entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:
           name: Setup CF CLI
           command: |
+            export CIRCLE_BRANCH="main"
             if [ "$(whoami)" != "root" ]; then
               wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
               echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
@@ -217,6 +235,7 @@ jobs:
       - run:
           name: Deploy the app to cloud.gov
           command: |
+            export CIRCLE_BRANCH="main"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
@@ -224,28 +243,19 @@ jobs:
             cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
+            cf stop benefit-finder-cms-${CIRCLE_BRANCH}
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            sleep 60
+            while : ; do 
+              app_status=$( cf app benefit-finder-cms-${CIRCLE_BRANCH} | grep "#0" | awk '{print $2}' )
+              if [ "${app_status}" == "running" ]; then
+                break
+              else
+                echo "waiting for application to start..."
+                sleep 2
+              fi
+            done
 
-      - run:
-          name: Enable benefit-finder module
-          command: |
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush state:set system.maintenance_mode 0"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:uninstall usagov_login || exit 0"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_content"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_api"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush pm:enable usagov_benefit_finder_page"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "/var/www/vendor/bin/drush cr"
-            cf ssh benefit-finder-cms-${CIRCLE_BRANCH} --command "cd ../var/www/web/ && \
-                                  pwd && ls -l && \
-                                  mkdir -p content/sync && \
-                                  chown -R nginx:nginx content && \
-                                  pwd && ls -l && \
-                                  /var/www/vendor/bin/drush cr"
   component-library:
     machine:
       image: ubuntu-2004:202107-02
@@ -307,6 +317,15 @@ jobs:
       - image: cimg/php:8.0.16-node
     steps:
       - checkout
+      - run: 
+          name: Init and Update USAGov submodule
+          command: |
+            git submodule init
+            git submodule update
+            cd usagov-2021
+            git checkout dev
+            cd ..
+
       - run:
           name: Install Specific Node Version
           command: |
@@ -346,20 +365,81 @@ jobs:
           name: PHP CodeSniff (Ignore warnings)
           command: |
             COMPOSER_DIR=$(composer -n config --global home)
-            $COMPOSER_DIR/vendor/bin/phpcs  --standard=Drupal,Squiz,SlevomatCodingStandard -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
-      - run:
-          name: Theme Lint
-          command: npm run lint --prefix ./usagov_benefit_finder | tee /tmp/results/php-cs.log
+            $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - store_artifacts:
           path: /tmp/results
+  
+  static-site-generation-dev:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: Setup CF CLI
+          command: |
+            export CIRCLE_BRANCH="dev"
+            if [ "$(whoami)" != "root" ]; then
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              sudo apt-get update
+              sudo apt-get install -y cf8-cli
+            else
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              apt-get update
+              apt-get install -y cf8-cli
+            fi
+            cf -v
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"         
+      - run:
+          name: "Run Drush Cron and Generate Static Site"
+          command: |
+            export CIRCLE_BRANCH="dev"
+            # cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
 
+  static-site-generation-main:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: Setup CF CLI
+          command: |
+            export CIRCLE_BRANCH="main"
+            if [ "$(whoami)" != "root" ]; then
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              sudo apt-get update
+              sudo apt-get install -y cf8-cli
+            else
+              wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
+              echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+              apt-get update
+              apt-get install -y cf8-cli
+            fi
+            cf -v
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"         
+      - run:
+          name: "Run Drush Cron and Generate Static Site"
+          command: |
+            export CIRCLE_BRANCH="main"
+            # cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
 
 # Orchestrate our job run sequence
 workflows:
-# This workflow only gets triggered when there is a push to `main` branch.
+# This workflow only gets triggered when there is a push to `main` and `dev` branches.
   cms_build_and_deploy_workflow:
     jobs:
       - build_and_deploy_dev:
+          filters:
+            branches:
+              only: 
+                - dev
+      - static-site-generation-dev:
+          requires:
+            - build_and_deploy_dev
           filters:
             branches:
               only: 
@@ -369,28 +449,13 @@ workflows:
             branches:
               only: 
                 - main
-
-  scheduled_cms_build_and_deploy_workflow_main:
-    triggers:
-      - schedule:
-          cron: '0 7 * * *'
+      - static-site-generation-main:
+          requires:
+            - build_and_deploy_main
           filters:
             branches:
-              only:
+              only: 
                 - main
-    jobs:
-      - build_and_deploy_main
-
-  scheduled_cms_build_and_deploy_workflow_dev:
-    triggers:
-      - schedule:
-          cron: '0 6 * * *'
-          filters:
-            branches:
-              only:
-                - dev
-    jobs:
-      - build_and_deploy_dev
 
   create-component-library-workflow:
     jobs:
@@ -403,9 +468,17 @@ workflows:
   php-lint-code-snif:
     jobs:
       - lint
-
-
+   
+  static-site-generation-cron:
+    triggers:
+      - schedule:
+          cron: "0 3 * * *"
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - static-site-generation-main
 
 
       
-

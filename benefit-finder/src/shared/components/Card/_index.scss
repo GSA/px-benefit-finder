@@ -20,11 +20,11 @@
       text-decoration: none;
     }
 
-    a:hover .usa-card__container {
+    a:hover.usa-card__container {
       background-color: color.$dark-sky;
     }
 
-    a:active .usa-card__container {
+    a:active.usa-card__container {
       border: 2px solid color.$pop-blue;
     }
 

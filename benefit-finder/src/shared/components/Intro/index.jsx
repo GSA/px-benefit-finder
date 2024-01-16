@@ -23,6 +23,8 @@ const Intro = ({ data, ui, setStep, step }) => {
   const { timeEstimate, title, summary } = data
   const { heading, timeIndicator, steps, notices, button } = ui
 
+  const handleStep = () => setStep(step + 1) && document.activeElement.blur()
+
   return (
     data && (
       <div className="intro">
@@ -57,7 +59,7 @@ const Intro = ({ data, ui, setStep, step }) => {
             <div className="line-sperator" />
           </div>
           <div className="cta-wrapper">
-            <Button onClick={() => setStep(step + 1)}>{button}</Button>
+            <Button onClick={() => handleStep()}>{button}</Button>
           </div>
         </div>
       </div>

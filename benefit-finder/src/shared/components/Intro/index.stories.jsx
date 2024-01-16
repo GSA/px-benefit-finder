@@ -4,6 +4,7 @@ import * as en from '../../locales/en/en.json'
 
 const { data } = JSON.parse(content)
 const { lifeEventForm } = data
+const { intro } = en
 
 export default {
   component: Intro,
@@ -13,7 +14,7 @@ export default {
   tags: ['autodocs'],
   args: {
     data: lifeEventForm,
-    ui: en.intro,
+    ui: intro,
   },
 }
 

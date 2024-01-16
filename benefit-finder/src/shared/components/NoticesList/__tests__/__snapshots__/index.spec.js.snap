@@ -13,6 +13,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
       <div
         className=""
         role="alert"
+        tabIndex={-1}
       >
         <div
           className="usa-alert__body"
@@ -38,6 +39,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
       <div
         className=""
         role="alert"
+        tabIndex={-1}
       >
         <div
           className="usa-alert__body"
@@ -63,6 +65,7 @@ exports[`NoticesList renders a match to the previous snapshot 1`] = `
       <div
         className=""
         role="alert"
+        tabIndex={-1}
       >
         <div
           className="usa-alert__body"

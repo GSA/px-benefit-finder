@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
 import {
@@ -41,10 +42,16 @@ const ResultsView = ({
   } = ui
 
   const [notQualifiedView, setNotQualifiedView] = useState(false)
+  const resetElement = useResetElement()
+
+  useEffect(() => {
+    resetElement.current?.focus()
+  }, [resetElement])
 
   const handleViewToggle = () => {
     setNotQualifiedView(!notQualifiedView)
     window.scrollTo(0, 0)
+    resetElement.current.focus()
   }
 
   useEffect(() => {
@@ -69,13 +76,16 @@ const ResultsView = ({
       <div className="grid-container">
         <div className="result-view-details">
           {notQualifiedView === false ? (
-            <StepBackLink setCurrent={handleStepBack}>
+            <StepBackLink
+              onClick={() => resetElement.current.focus()}
+              setCurrent={handleStepBack}
+            >
               {stepBackLink}
             </StepBackLink>
           ) : (
             <Button
               className="step-back-link"
-              onClick={() => setNotQualifiedView(false)}
+              onClick={() => handleViewToggle()}
               unstyled
             >
               {stepBackLink}

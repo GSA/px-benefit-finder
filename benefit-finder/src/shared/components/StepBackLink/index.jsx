@@ -1,3 +1,4 @@
+import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import { Button } from '../index'
 import './_index.scss'
@@ -11,12 +12,15 @@ import './_index.scss'
  * @return {html} returns markup for a usa unstyled button
  */
 const StepBackLink = ({ children, setCurrent, currentIndex }) => {
+  const resetElement = useResetElement()
+
+  const handleStep = () => {
+    setCurrent(currentIndex)
+    resetElement.current.focus()
+  }
+
   return (
-    <Button
-      className="step-back-link"
-      unstyled
-      onClick={() => setCurrent(currentIndex)}
-    >
+    <Button className="step-back-link" unstyled onClick={() => handleStep()}>
       {children || 'Back'}
     </Button>
   )

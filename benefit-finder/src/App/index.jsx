@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from 'react'
-// import { useHandleUnload } from '../shared/hooks/useHandleUnload'
+import { useResetElement } from '../shared/hooks'
 import * as apiCalls from '../shared/api/apiCalls'
 import {
   Intro,
@@ -28,6 +28,8 @@ function App({ testAppContent, testQuery }) {
   const windowQuery = testQuery || window.location.search
   const hasQueryParams = windowQuery.includes(sharedToken)
   const isDraftMode = windowQuery.includes(draftToken)
+  // create our reset element
+  useResetElement()
 
   /**
    * lazy load our data state.

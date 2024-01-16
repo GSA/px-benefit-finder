@@ -436,14 +436,14 @@ workflows:
           filters:
             branches:
               only: 
-                - quick-fix-to-tome-script
+                - dev
       - static-site-generation-dev:
           requires:
             - build_and_deploy_dev
           filters:
             branches:
               only: 
-                - quick-fix-to-tome-script
+                - dev
       - build_and_deploy_main:
           filters:
             branches:

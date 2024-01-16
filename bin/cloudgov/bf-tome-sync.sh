@@ -128,28 +128,28 @@ fi
 
 
 # lower case all filenames in the copied dir before uploading
-LCF=0
-echo "Lower-casing files:"
-old_IFS="$IFS"
-IFS=$'\n'
-for f in `find $RENDER_DIR/*`; do
-  ff=$(echo $f | tr '[A-Z]' '[a-z]');
-  if [ "$f" != "$ff" ]; then
-    # VERBOSE MODE
-    # mv -v "$f" "$fff"
-    mv -v "$f" "$ff" > /dev/null
-    LCF=$((LCF+1))
-  fi
-done
-IFS="$old_IFS"
-echo "    $LCF"
+# LCF=0
+# echo "Lower-casing files:"
+# old_IFS="$IFS"
+# IFS=$'\n'
+# for f in `find $RENDER_DIR/*`; do
+#   ff=$(echo $f | tr '[A-Z]' '[a-z]');
+#   if [ "$f" != "$ff" ]; then
+#     # VERBOSE MODE
+#     # mv -v "$f" "$fff"
+#     mv -v "$f" "$ff" > /dev/null
+#     LCF=$((LCF+1))
+#   fi
+# done
+# IFS="$old_IFS"
+# echo "    $LCF"
 
 # get a count of current AWS files, total and by extension
 echo "S3 dir storage files : count total" | tee -a $TOMELOG
-S3_COUNT=$(aws s3 ls --recursive s3://$BUCKET_NAME/web/ $S3_EXTRA_PARAMS 2>&1 | uniq | grep "^\d\{4\}\-" | grep -v "\bweb\/s3\/files\/" | wc -l)
+S3_COUNT=$(aws s3 ls --recursive s3://$BUCKET_NAME/ $S3_EXTRA_PARAMS 2>&1 | uniq | grep "^\d\{4\}\-" | grep -v "\/s3\/files\/" | wc -l)
 echo "     $S3_COUNT" | tee -a $TOMELOG
 echo "S3 dir storage files : count by extension" | tee -a $TOMELOG
-S3_COUNT_BY_EXT=$(aws s3 ls --recursive s3://$BUCKET_NAME/web/ $S3_EXTRA_PARAMS 2>&1 | uniq | grep "^\d\{4\}\-" | grep -v "\bweb\/s3\/files\/" | grep -o ".[^.]\+$" | sort | uniq -c)
+S3_COUNT_BY_EXT=$(aws s3 ls --recursive s3://$BUCKET_NAME/ $S3_EXTRA_PARAMS 2>&1 | uniq | grep "^\d\{4\}\-" | grep -v "\/s3\/files\/" | grep -o ".[^.]\+$" | sort | uniq -c)
 echo "  $S3_COUNT_BY_EXT" | tee -a $TOMELOG
 
 # get a count of tome generated files, total and by extension
@@ -268,8 +268,8 @@ if [ "$EN_HOME_HTML_BAD" == "1" ]; then
 fi
 
 if [ "$TOME_PUSH_NEW_CONTENT" == "1" ]; then
-  echo "Pushing Content to S3: $RENDER_DIR -> $BUCKET_NAME/web/" | tee -a $TOMELOG
-  aws s3 sync $RENDER_DIR s3://$BUCKET_NAME/web/ --only-show-errors --delete --acl public-read $S3_EXTRA_PARAMS 2>&1 | tee -a $TOMELOG
+  echo "Pushing Content to S3: $RENDER_DIR -> $BUCKET_NAME/" | tee -a $TOMELOG
+  aws s3 sync $RENDER_DIR s3://$BUCKET_NAME/ --only-show-errors --delete --acl public-read $S3_EXTRA_PARAMS 2>&1 | tee -a $TOMELOG
   $SCRIPT_PATH/bf-tome-status-indicator-update.sh "$TR_START_TIME" "Static Site Generation and Sync Completed Successfully"
 else
   echo "Not pushing content to S3."

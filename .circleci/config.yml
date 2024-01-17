@@ -396,7 +396,7 @@ jobs:
           command: |
             export CIRCLE_BRANCH="dev"
             # cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m "1G"
 
   static-site-generation-main:
     docker:
@@ -436,14 +436,14 @@ workflows:
           filters:
             branches:
               only: 
-                - dev
+                - 792-update-bf-tome-static
       - static-site-generation-dev:
           requires:
             - build_and_deploy_dev
           filters:
             branches:
               only: 
-                - dev
+                - 792-update-bf-tome-static
       - build_and_deploy_main:
           filters:
             branches:

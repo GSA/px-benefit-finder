@@ -436,14 +436,14 @@ workflows:
           filters:
             branches:
               only: 
-                - 792-update-bf-tome-static
+                - dev
       - static-site-generation-dev:
           requires:
             - build_and_deploy_dev
           filters:
             branches:
               only: 
-                - 792-update-bf-tome-static
+                - dev
       - build_and_deploy_main:
           filters:
             branches:

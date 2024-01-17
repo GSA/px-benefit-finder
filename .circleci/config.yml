@@ -78,7 +78,7 @@ jobs:
             sed -i "s#^    image: .*cms-latest*#    image: $DOCKERREPO:$IMAGE_TAG#" manifest.yml
             sed -i "s#^    - secauthsecrets##" manifest.yml
             sed -i "s#- name: cms#- name: benefit-finder-cms-${CIRCLE_BRANCH}#" manifest.yml
-            sed -i "s#^  memory: 1.5G#  memory: 512M#" manifest.yml
+            sed -i "s#^  memory: 1.5G#  memory: 1G#" manifest.yml
             sed -i "s#^    - database#    - benefit-finder-mysql-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
@@ -396,7 +396,7 @@ jobs:
           command: |
             export CIRCLE_BRANCH="dev"
             # cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/static-generation.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
-            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m ${TOME_MEMORY}
+            cf run-task benefit-finder-cms-${CIRCLE_BRANCH} --command "pwd && ls -l && sh /var/www/scripts/bf-tome-run.sh" --name "bf-static-${CIRCLE_BRANCH}"  -k "2G" -m "1G"
 
   static-site-generation-main:
     docker:

@@ -90,7 +90,8 @@
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
       "**/?(*.)+(spec|test).[jt]s?(x)",
-      "!**/__tests__/**/*.cy.jsx"
+      "!**/__tests__/**/*.cy.jsx",
+      "!**/__tests__/assets/*.jsx"
     ]
   }
 }

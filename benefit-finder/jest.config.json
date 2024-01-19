@@ -7,7 +7,8 @@
     "src/**/*.{js,jsx}",
     "!src/**/*.stories.jsx",
     "!<rootDir>/node_modules/",
-    "!<rootDir>/jest-test-results.json"
+    "!<rootDir>/jest-test-results.json",
+    "!**/__tests__/assets/*.jsx"
   ],
   "coverageThreshold": {
     "global": {

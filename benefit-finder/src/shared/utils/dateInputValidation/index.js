@@ -1,4 +1,5 @@
-export const dateInputValidation = event => {
+const dateInputValidation = event => {
+  console.log(event)
   if (/^[0-9]*$/.test(`${event.target.value}`)) {
     if (event.target.id.includes('day')) {
       if (event.target.value.length === 2) {
@@ -25,3 +26,5 @@ export const dateInputValidation = event => {
     return event.target.value.length >= 1
   }
 }
+
+export default dateInputValidation

@@ -1,5 +1,4 @@
 const dateInputValidation = event => {
-  console.log(event)
   if (/^[0-9]*$/.test(`${event.target.value}`)) {
     if (event.target.id.includes('day')) {
       if (event.target.value.length === 2) {

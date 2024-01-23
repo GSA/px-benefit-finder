@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import parseDate from '../../utils/parseDate'
+import { parseDate } from '../../utils'
 import * as apiCalls from '../../api/apiCalls'
 import { Heading, Button } from '../index'
 

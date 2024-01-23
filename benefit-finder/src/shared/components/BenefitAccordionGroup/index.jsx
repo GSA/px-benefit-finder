@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import createMarkup from '../../utils/createMarkup'
+import { createMarkup } from '../../utils'
 import {
   Accordion,
   Alert,

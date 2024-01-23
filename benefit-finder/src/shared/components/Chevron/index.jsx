@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { Heading } from '../index'
-import createMarkup from '../../utils/createMarkup'
+import { createMarkup } from '../../utils'
 import './_index.scss'
 
 /**

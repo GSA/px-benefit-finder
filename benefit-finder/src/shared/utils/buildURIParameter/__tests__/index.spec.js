@@ -138,7 +138,7 @@ Object.defineProperty(window, 'location', {
 })
 
 describe('test buildURIParameter utility', () => {
-  it('renders a match to the previous snapshot', () => {
+  it('returns a URI string', () => {
     expect(buildURIParameter(window.location.href, mockSelectedData)).toBe(
       expectedURI
     )

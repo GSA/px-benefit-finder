@@ -1,6 +1,6 @@
 import { Heading } from '../index'
 import PropTypes from 'prop-types'
-import { useHandleClassName } from '../../hooks/useHandleClassName'
+import { useHandleClassName } from '../../hooks'
 import './_index.scss'
 
 /**

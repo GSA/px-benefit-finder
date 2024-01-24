@@ -7,11 +7,7 @@ import { useEffect, useState } from 'react'
  * @param {array} utilityClasses - The utility classes in components
  * @return {string} returns a string
  */
-export const useHandleClassName = ({
-  className,
-  defaultClasses,
-  utilityClasses,
-}) => {
+const useHandleClassName = ({ className, defaultClasses, utilityClasses }) => {
   /**
    * a state function to manage an array of className strings
    * @function
@@ -33,3 +29,5 @@ export const useHandleClassName = ({
 
   return classes
 }
+
+export default useHandleClassName

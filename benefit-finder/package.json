@@ -90,7 +90,20 @@
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
       "**/?(*.)+(spec|test).[jt]s?(x)",
-      "!**/__tests__/**/*.cy.jsx"
+      "!**/__tests__/**/*.cy.jsx",
+      "!**/__tests__/assets/*.spec.jsx"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/*.stories.jsx",
+      "!src/**/*.cy.jsx",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/jest-test-results.json",
+      "!src/**/hooks/index.js",
+      "!src/**/components/index.js",
+      "!src/reportWebVitals.js",
+      "!src/index.jsx",
+      "!src/**/assets/*"
     ]
   }
 }

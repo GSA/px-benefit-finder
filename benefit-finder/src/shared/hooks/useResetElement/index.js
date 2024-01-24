@@ -22,7 +22,7 @@ const useResetElement = () => {
   useEffect(() => {
     if (document.getElementById('index-reset') === null) {
       document.body.insertAdjacentHTML(
-        'beforebegin',
+        'afterBegin',
         '<span tabIndex="-1" id="index-reset" data-testid="index-reset" class="a11y-sr-only"/>'
       )
     }

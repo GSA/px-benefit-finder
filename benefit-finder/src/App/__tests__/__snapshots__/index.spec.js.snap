@@ -2,6 +2,12 @@
 
 exports[`loads intro 1`] = `
 <body>
+  <span
+    class="a11y-sr-only"
+    data-testid="index-reset"
+    id="index-reset"
+    tabindex="-1"
+  />
   <div>
     <div
       class="benefit-finder "
@@ -223,6 +229,12 @@ exports[`loads intro 1`] = `
 
 exports[`loads window query scenario 1 1`] = `
 <body>
+  <span
+    class="a11y-sr-only"
+    data-testid="index-reset"
+    id="index-reset"
+    tabindex="-1"
+  />
   <div>
     <div
       class="benefit-finder "
@@ -5533,6 +5545,12 @@ exports[`loads window query scenario 1 1`] = `
 
 exports[`loads window query scenario 2 1`] = `
 <body>
+  <span
+    class="a11y-sr-only"
+    data-testid="index-reset"
+    id="index-reset"
+    tabindex="-1"
+  />
   <div>
     <div
       class="benefit-finder "

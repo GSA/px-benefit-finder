@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import createMarkup from '../../utils/createMarkup'
-import { dateInputValidation } from '../../utils/inputValidation'
+import { dateInputValidation, createMarkup } from '../../utils'
 import { useHandleUnload, useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import {

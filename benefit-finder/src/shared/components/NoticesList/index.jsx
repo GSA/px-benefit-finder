@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import createMarkup from '../../utils/createMarkup'
+import { createMarkup } from '../../utils'
 import { Alert } from '../index'
 
 import './_index.scss'

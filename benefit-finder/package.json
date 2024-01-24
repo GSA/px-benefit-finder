@@ -2,7 +2,7 @@
   "name": "benefit-finder",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost",
+  "proxy": "https://benefit-finder-waf-main.app.cloud.gov/",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.22.5",
@@ -103,7 +103,8 @@
       "!src/**/components/index.js",
       "!src/reportWebVitals.js",
       "!src/index.jsx",
-      "!src/**/assets/*"
+      "!src/**/assets/*",
+      "!src/**/utils/index.js"
     ]
   }
 }

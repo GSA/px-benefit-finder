@@ -68,6 +68,10 @@ class PageObjects {
   accordion(heading) {
     return cy.get(`[data-analytics-content="${heading}"]`)
   }
+
+  benefitsAccordion() {
+    return cy.get('.main-content .usa-accordion__button')
+  }
 }
 
 export const pageObjects = new PageObjects()

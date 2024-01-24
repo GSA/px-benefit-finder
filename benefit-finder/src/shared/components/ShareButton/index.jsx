@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button } from '../index'
-import buildURIParameter from '../../utils/buildURIParameter'
+import { buildURIParameter } from '../../utils'
 import './_index.scss'
 
 /**

@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import createMarkup from '../../utils/createMarkup'
-import { dateInputValidation } from '../../utils/inputValidation'
-import { useHandleUnload } from '../../hooks/useHandleUnload'
-import { useResetElement } from '../../hooks'
+import { dateInputValidation, createMarkup } from '../../utils'
+import { useHandleUnload, useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import {
   Alert,
@@ -285,7 +283,9 @@ const LifeEventSection = ({
                       // case select
                       //
                       //
-                      <>
+                      <Fragment
+                        key={`select-${item.fieldset.criteriaKey}+${index}`}
+                      >
                         <Fieldset
                           key={`select-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
@@ -325,7 +325,7 @@ const LifeEventSection = ({
                           })}
                         </Fieldset>
                         {children || null}
-                      </>
+                      </Fragment>
                     ) : item.fieldset.inputs[0].inputCriteria.type ===
                       'Radio' ? (
                       //
@@ -333,7 +333,9 @@ const LifeEventSection = ({
                       // case radio
                       //
                       //
-                      <>
+                      <Fragment
+                        key={`radio-${item.fieldset.criteriaKey}+${index}`}
+                      >
                         <Fieldset
                           key={`radio-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
@@ -384,7 +386,7 @@ const LifeEventSection = ({
                           })}
                         </Fieldset>
                         {children || null}
-                      </>
+                      </Fragment>
                     ) : item.fieldset.inputs[0].inputCriteria.type ===
                       'Date' ? (
                       //
@@ -392,7 +394,9 @@ const LifeEventSection = ({
                       // case date
                       //
                       //
-                      <>
+                      <Fragment
+                        key={`date-${item.fieldset.criteriaKey}+${index}`}
+                      >
                         <Fieldset
                           key={`date-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
@@ -431,7 +435,7 @@ const LifeEventSection = ({
                           })}
                         </Fieldset>
                         {children || null}
-                      </>
+                      </Fragment>
                     ) : null
 
                   const parentElement = ({ item, i }) =>

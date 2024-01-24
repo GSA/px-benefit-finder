@@ -1,4 +1,4 @@
-import { useHandleClassName } from '../../hooks/useHandleClassName'
+import { useHandleClassName } from '../../hooks'
 import { Label } from '../index'
 import PropTypes from 'prop-types'
 

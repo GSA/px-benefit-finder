@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { Heading, Carrot } from '../index'
-import { useHandleClassName } from '../../hooks/useHandleClassName'
+import { useHandleClassName } from '../../hooks'
 import { createMarkup } from '../../utils'
 import './_index.scss'
 

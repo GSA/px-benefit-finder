@@ -319,6 +319,12 @@ const LifeEventSection = ({
                                       item.fieldset.criteriaKey
                                     )
                                   }
+                                  invalid={
+                                    hasError.length &&
+                                    Array.from(hasError)
+                                      .map(item => item.id.includes(fieldSetId))
+                                      .includes(true)
+                                  }
                                 />
                               </div>
                             )
@@ -353,7 +359,16 @@ const LifeEventSection = ({
                             )
 
                             return (
-                              <div className="radio-group" key={fieldSetId}>
+                              <div
+                                className="radio-group"
+                                key={fieldSetId}
+                                aria-invalid={
+                                  hasError.length &&
+                                  Array.from(hasError)
+                                    .map(item => item.id.includes(fieldSetId))
+                                    .includes(true)
+                                }
+                              >
                                 {/* map the options */}
                                 {input.inputCriteria.values.map(
                                   (option, index) => {
@@ -423,7 +438,7 @@ const LifeEventSection = ({
                                   }
                                   ui={ui}
                                   id={fieldSetId}
-                                  valid={
+                                  invalid={
                                     hasError.length &&
                                     Array.from(hasError)
                                       .map(item => item.id.includes(fieldSetId))

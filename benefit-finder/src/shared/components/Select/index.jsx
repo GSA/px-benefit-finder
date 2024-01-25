@@ -13,6 +13,7 @@ import './_index.scss'
  * @param {function} onChange - The inherited onChange handler
  * @param {object} ui - The inherited object for ui translations
  * @param {string} className - inherited class string
+ * @param {boolean} invalid - state of validity passed from handler
  * @return {html} returns a semantic html select element with options
  */
 function Select({
@@ -24,6 +25,7 @@ function Select({
   required,
   ui,
   className,
+  invalid,
 }) {
   const { labelSelect, defaultValue } = ui
   const handleRequired = required === 'TRUE' ? ['required-field'] : ''
@@ -59,6 +61,7 @@ function Select({
         onChange={onChange}
         value={selected || ''}
         required={required === 'TRUE'}
+        aria-invalid={invalid === true}
       >
         <option value="" key="default" disabled>
           {defaultValue}

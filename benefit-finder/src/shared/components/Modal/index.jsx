@@ -176,6 +176,7 @@ const Modal = ({
       >
         <button
           type="button"
+          aria-label="Close button"
           className="modal-button"
           onClick={() => handleCloseModal(triggerRef)}
         >

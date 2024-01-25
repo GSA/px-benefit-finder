@@ -110,6 +110,7 @@ const Modal = ({
         noCarrot
         tabIndex="0"
         triggerRef={triggerRef}
+        aria-label="Continue button"
       >
         {triggerLabel}
       </ObfuscatedLink>

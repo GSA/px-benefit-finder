@@ -111,6 +111,7 @@ const Modal = ({
         tabIndex="0"
         triggerRef={triggerRef}
         aria-label="Continue button"
+        role="button"
       >
         {triggerLabel}
       </ObfuscatedLink>

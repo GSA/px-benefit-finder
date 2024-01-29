@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`StepIndicator > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      class="step-back-link usa-button usa-button--unstyled"
+      type="button"
+    >
+      Back
+    </button>
+  </div>
+</DocumentFragment>
+`;

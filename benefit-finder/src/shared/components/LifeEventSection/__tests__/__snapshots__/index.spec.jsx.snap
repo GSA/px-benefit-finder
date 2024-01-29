@@ -1,0 +1,534 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <h1
+    class="section-heading font-family-sans"
+    id="skip-to-h1"
+  >
+    Complete Questions
+  </h1>
+  <div
+    class="section-wrapper"
+  >
+    <div
+      class="section"
+    >
+      <div>
+        <div
+          aria-label="progress"
+          class="usa-step-indicator"
+          tabindex="0"
+        >
+          <ol
+            class="usa-step-indicator__segments"
+          >
+            <li
+              aria-current="true"
+              class="usa-step-indicator__segment usa-step-indicator__segment--current "
+            >
+              <span
+                class="usa-step-indicator__segment-label"
+              >
+                About the applicant
+              </span>
+            </li>
+            <li
+              aria-current="false"
+              class="usa-step-indicator__segment usa-step-indicator__segment "
+            >
+              <span
+                class="usa-step-indicator__segment-label"
+              >
+                About the deceased
+                <span
+                  class="usa-sr-only"
+                >
+                  not-completed
+                </span>
+              </span>
+            </li>
+          </ol>
+        </div>
+        <button
+          class="step-back-link usa-button usa-button--unstyled"
+          type="button"
+        >
+          Back
+        </button>
+      </div>
+      <div
+        id="benefit-section"
+      >
+        <div
+          class="usa-alert usa-alert--error display-none"
+          role="alert"
+          tabindex="0"
+        >
+          <div
+            class="usa-alert__body"
+          >
+            <h4
+              class="usa-alert__heading"
+            >
+              Error status
+            </h4>
+            <p
+              class="usa-alert__text"
+            >
+              All fields marked required must be completed.
+            </p>
+          </div>
+        </div>
+        <h2
+          class="benefit-section-heading font-family-sans"
+          id=""
+        >
+          About the applicant
+        </h2>
+        <div>
+          <p>
+            About the person looking for benefits
+          </p>
+        </div>
+        <fieldset
+          class="usa-fieldset "
+        >
+          <legend
+            class="usa-legend legend"
+          >
+            Date of birth:
+            <span
+              class="usa-hint usa-hint--required required"
+              title="required"
+            >
+              (Required)
+            </span>
+          </legend>
+          <div>
+            <div
+              class="usa-memorable-date"
+              id="usa-memorable-date-applicant_date_of_birth_0"
+            >
+              <div
+                class="usa-form-group usa-form-group--month usa-form-group--select"
+              >
+                <label
+                  class="usa-label"
+                  for="date_of_birth_month-applicant_date_of_birth_0"
+                >
+                  Month
+                </label>
+                <div
+                  class="a11y-sr-only"
+                  id="month-description-applicant_date_of_birth_0"
+                >
+                  Select a month from the list
+                </div>
+                <select
+                  aria-describedby="month-description-applicant_date_of_birth_0"
+                  class="usa-select required-field"
+                  id="date_of_birth_month-applicant_date_of_birth_0"
+                  name="date_of_birth_month-applicant_date_of_birth_0"
+                  required=""
+                >
+                  <option
+                    disabled=""
+                    value=""
+                  >
+                    -Select-
+                  </option>
+                  <option
+                    value="0"
+                  >
+                    01 - January
+                  </option>
+                  <option
+                    value="1"
+                  >
+                    02 - February
+                  </option>
+                  <option
+                    value="2"
+                  >
+                    03 - March
+                  </option>
+                  <option
+                    value="3"
+                  >
+                    04 - April
+                  </option>
+                  <option
+                    value="4"
+                  >
+                    05 - May
+                  </option>
+                  <option
+                    value="5"
+                  >
+                    06 - June
+                  </option>
+                  <option
+                    value="6"
+                  >
+                    07 - July
+                  </option>
+                  <option
+                    value="7"
+                  >
+                    08 - August
+                  </option>
+                  <option
+                    value="8"
+                  >
+                    09 - September
+                  </option>
+                  <option
+                    value="9"
+                  >
+                    10 - October
+                  </option>
+                  <option
+                    value="10"
+                  >
+                    11 - November
+                  </option>
+                  <option
+                    value="11"
+                  >
+                    12 - December
+                  </option>
+                </select>
+              </div>
+              <div
+                class="usa-form-group usa-form-group--day"
+              >
+                <label
+                  class="usa-label"
+                  for="date_of_birth_day-applicant_date_of_birth_0"
+                >
+                  Day
+                </label>
+                <div
+                  class="a11y-sr-only"
+                  id="day-description-applicant_date_of_birth_0"
+                >
+                  Enter two numerals for day
+                </div>
+                <input
+                  aria-describedby="day-description-applicant_date_of_birth_0"
+                  class="usa-input required-field"
+                  id="date_of_birth_day-applicant_date_of_birth_0"
+                  inputmode="numeric"
+                  name="date_of_birth_day-applicant_date_of_birth_0"
+                  required=""
+                  value=""
+                />
+              </div>
+              <div
+                class="usa-form-group usa-form-group--year"
+              >
+                <label
+                  class="usa-label"
+                  for="date_of_birth_year-applicant_date_of_birth_0"
+                >
+                  Year
+                </label>
+                <div
+                  class="a11y-sr-only"
+                  id="year-description-applicant_date_of_birth_0"
+                >
+                  Enter four numerals for year
+                </div>
+                <input
+                  aria-describedby="year-description-applicant_date_of_birth_0"
+                  class="usa-input required-field"
+                  id="date_of_birth_year-applicant_date_of_birth_0"
+                  inputmode="numeric"
+                  name="date_of_birth_year-applicant_date_of_birth_0"
+                  required=""
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          class="usa-fieldset "
+        >
+          <legend
+            class="usa-legend legend"
+          >
+            Applicant’s relationship to the deceased:
+            <span
+              class="usa-hint usa-hint--required required"
+              title="required"
+            >
+              (Required)
+            </span>
+          </legend>
+          <div>
+            <label
+              class="usa-label"
+              for="applicant_relationship_to_the_deceased_0"
+            >
+              Select
+            </label>
+            <select
+              class="usa-select required-field"
+              id="applicant_relationship_to_the_deceased_0"
+              name="applicant_relationship_to_the_deceased_0"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Click to Select
+              </option>
+              <option
+                value="Spouse"
+              >
+                Spouse
+              </option>
+              <option
+                value="Child"
+              >
+                Child
+              </option>
+              <option
+                value="Parent"
+              >
+                Parent
+              </option>
+              <option
+                value="Other family member"
+              >
+                Other family member
+              </option>
+              <option
+                value="Personal or official representative"
+              >
+                Personal or official representative
+              </option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset
+          class="usa-fieldset "
+        >
+          <legend
+            class="usa-legend legend"
+          >
+            Marital Status
+            <span
+              class="usa-hint usa-hint--required required"
+              title="required"
+            >
+              (Required)
+            </span>
+          </legend>
+          <div>
+            <label
+              class="usa-label"
+              for="applicant_marital_status_0"
+            >
+              Select
+            </label>
+            <select
+              class="usa-select required-field"
+              id="applicant_marital_status_0"
+              name="applicant_marital_status_0"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Click to Select
+              </option>
+              <option
+                value="Married"
+              >
+                Married
+              </option>
+              <option
+                value="Unmarried"
+              >
+                Unmarried
+              </option>
+              <option
+                value="Widowed"
+              >
+                Widowed
+              </option>
+              <option
+                value="Divorced"
+              >
+                Divorced
+              </option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset
+          class="usa-fieldset "
+        >
+          <legend
+            class="usa-legend legend"
+          >
+            Are you a U.S. citizen or eligible non-citizen?
+          </legend>
+          <div
+            class="radio-group"
+          >
+            <div
+              class="usa-radio"
+            >
+              <input
+                class="usa-radio__input "
+                id="applicant_citizen_status_0_0"
+                name="applicant_citizen_status_0"
+                type="radio"
+                value="Yes"
+              />
+              <label
+                class="usa-radio__label usa-label"
+                for="applicant_citizen_status_0_0"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              class="usa-radio"
+            >
+              <input
+                class="usa-radio__input "
+                id="applicant_citizen_status_0_1"
+                name="applicant_citizen_status_0"
+                type="radio"
+                value="No"
+              />
+              <label
+                class="usa-radio__label usa-label"
+                for="applicant_citizen_status_0_1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          class="usa-fieldset "
+        >
+          <legend
+            class="usa-legend legend"
+          >
+            Are you caring for a child of the deceased who is disabled or under the age of 16?
+          </legend>
+          <div
+            class="radio-group"
+          >
+            <div
+              class="usa-radio"
+            >
+              <input
+                class="usa-radio__input "
+                id="applicant_care_for_child_0_0"
+                name="applicant_care_for_child_0"
+                type="radio"
+                value="Yes"
+              />
+              <label
+                class="usa-radio__label usa-label"
+                for="applicant_care_for_child_0_0"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              class="usa-radio"
+            >
+              <input
+                class="usa-radio__input "
+                id="applicant_care_for_child_0_1"
+                name="applicant_care_for_child_0"
+                type="radio"
+                value="No"
+              />
+              <label
+                class="usa-radio__label usa-label"
+                for="applicant_care_for_child_0_1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          class="usa-fieldset "
+        >
+          <legend
+            class="usa-legend legend"
+          >
+            Did you pay for funeral or burial expenses?
+          </legend>
+          <div
+            class="radio-group"
+          >
+            <div
+              class="usa-radio"
+            >
+              <input
+                class="usa-radio__input "
+                id="applicant_paid_funeral_expenses_0_0"
+                name="applicant_paid_funeral_expenses_0"
+                type="radio"
+                value="Yes"
+              />
+              <label
+                class="usa-radio__label usa-label"
+                for="applicant_paid_funeral_expenses_0_0"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              class="usa-radio"
+            >
+              <input
+                class="usa-radio__input "
+                id="applicant_paid_funeral_expenses_0_1"
+                name="applicant_paid_funeral_expenses_0"
+                type="radio"
+                value="No"
+              />
+              <label
+                class="usa-radio__label usa-label"
+                for="applicant_paid_funeral_expenses_0_1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div
+        class="section-nav-btn-group"
+      >
+        <button
+          class="usa-button usa-button--outline"
+          type="button"
+        >
+          Back
+        </button>
+        <button
+          class="usa-button"
+          type="button"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

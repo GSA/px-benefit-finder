@@ -1,0 +1,213 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Intro > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="intro"
+  >
+    <div
+      class="chevron"
+    >
+      <div
+        class="grid-container"
+      >
+        <h1
+          class="chevron-heading font-family-sans"
+          id="skip-to-h1"
+        >
+          Benefit finder: death of a loved one
+        </h1>
+        <div
+          class="chevron-description"
+        >
+          <p>
+            <strong>
+              Losing a loved one is hard.
+            </strong>
+             Finding help shouldn’t be.
+          </p>
+          <p>
+            Screen the federal benefits you may be eligible for.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="grid-container"
+    >
+      <h2
+        class="font-family-sans"
+        id=""
+      >
+        Steps
+      </h2>
+      <div
+        class="time-indicator"
+      >
+        Time to complete 2-5 minutes
+      </div>
+      <div
+        class="intro-process-group"
+      >
+        <div
+          class="intro-process-list"
+        >
+          <ol
+            class="usa-process-list"
+          >
+            <li
+              class="usa-process-list__item"
+            >
+              <h3
+                class="usa-process-list__heading"
+              >
+                Answer questions
+              </h3>
+            </li>
+            <li
+              class="usa-process-list__item"
+            >
+              <h3
+                class="usa-process-list__heading"
+              >
+                Review Results
+              </h3>
+            </li>
+            <li
+              class="usa-process-list__item"
+            >
+              <h3
+                class="usa-process-list__heading"
+              >
+                Find out how to apply
+              </h3>
+            </li>
+          </ol>
+        </div>
+        <div
+          class="line-sperator-wrapper--vertical"
+        >
+          <div
+            class="line-sperator--vertical"
+          />
+        </div>
+        <div
+          class="intro-process-notices"
+        >
+          <h2
+            class="intro-process-notices-heading font-family-sans"
+            id=""
+          >
+            Before you start:
+          </h2>
+          <div
+            class="notices"
+          >
+            <ul
+              class="notices-list add-list-reset"
+            >
+              <li
+                class="notice"
+              >
+                <div
+                  class="usa-alert usa-alert--info no-background"
+                  role="alert"
+                  tabindex="-1"
+                >
+                  <div
+                    class="usa-alert__body"
+                  >
+                    <div
+                      class="usa-alert__text"
+                    >
+                      <div
+                        class="notice-item"
+                      >
+                        <div>
+                          Your information
+                          <strong>
+                             is not
+                          </strong>
+                           shared, saved, or submitted.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="notice"
+              >
+                <div
+                  class="usa-alert usa-alert--info no-background"
+                  role="alert"
+                  tabindex="-1"
+                >
+                  <div
+                    class="usa-alert__body"
+                  >
+                    <div
+                      class="usa-alert__text"
+                    >
+                      <div
+                        class="notice-item"
+                      >
+                        Provide complete info to get more relevant results.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="notice"
+              >
+                <div
+                  class="usa-alert usa-alert--info no-background"
+                  role="alert"
+                  tabindex="-1"
+                >
+                  <div
+                    class="usa-alert__body"
+                  >
+                    <div
+                      class="usa-alert__text"
+                    >
+                      <div
+                        class="notice-item"
+                      >
+                        <div>
+                          <strong>
+                            This form is not an application.
+                          </strong>
+                           You will need to apply for benefits with each agency.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="line-sperator-wrapper"
+      >
+        <div
+          class="line-sperator"
+        />
+      </div>
+      <div
+        class="cta-wrapper"
+      >
+        <button
+          class="usa-button"
+          type="button"
+        >
+          Start
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

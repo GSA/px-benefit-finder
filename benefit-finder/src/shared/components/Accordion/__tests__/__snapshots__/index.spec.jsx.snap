@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Accordion > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="benefit-accordion usa-accordion"
+  >
+    <h4
+      class="usa-accordion__heading"
+    >
+      <button
+        aria-expanded="false"
+        class="usa-accordion__button"
+        type="button"
+      >
+        <span
+          class="heading"
+        />
+        <br />
+        <span
+          class="sub-heading"
+        />
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+            fill="#1a4480"
+          />
+        </svg>
+      </button>
+    </h4>
+    <div
+      class="usa-accordion__content usa-prose"
+      hidden=""
+    >
+      <div />
+    </div>
+  </div>
+</DocumentFragment>
+`;

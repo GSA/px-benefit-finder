@@ -38,7 +38,6 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           className={`usa-select ${
             required === 'TRUE' ? 'required-field' : ''
           }`}
-          // ref={monthFieldRef}
           id={`date_of_birth_month-${id}`}
           name={`date_of_birth_month-${id}`}
           aria-describedby={`month-description-${id}`}

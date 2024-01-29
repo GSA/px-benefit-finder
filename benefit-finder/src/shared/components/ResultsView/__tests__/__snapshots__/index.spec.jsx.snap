@@ -1,0 +1,138 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`test > loads view 1`] = `
+<body>
+  <span
+    class="a11y-sr-only"
+    data-testid="index-reset"
+    id="index-reset"
+    tabindex="-1"
+  />
+  <div>
+    <div
+      class="result-view"
+      data-testid="result-view"
+    >
+      <div
+        class="chevron"
+      >
+        <div
+          class="grid-container"
+        >
+          <h1
+            class="chevron-heading font-family-sans"
+            id="skip-to-h1"
+          >
+            Your potential benefits
+          </h1>
+          <div
+            class="chevron-description"
+          >
+            <div>
+              <p>
+                Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid-container"
+      >
+        <div
+          class="result-view-details"
+        >
+          <button
+            class="step-back-link usa-button usa-button--unstyled"
+            type="button"
+          >
+            Back
+          </button>
+          <h3
+            class="result-view-heading font-family-sans"
+            id=""
+          >
+            Results
+          </h3>
+          <div
+            class="result-view-description"
+          >
+            <div>
+              <strong>
+                You may be eligible for these benefits:
+              </strong>
+            </div>
+          </div>
+          <div
+            class="result-view-benefits"
+          >
+            <div
+              class="benefit-accordion-group"
+            >
+              <button
+                class="expand-all usa-button usa-button--unstyled"
+                type="button"
+              >
+                Open all +
+              </button>
+            </div>
+          </div>
+          <div
+            class="result-view-unmet"
+          >
+            <h3
+              class="result-view-unmet-heading font-family-sans"
+              id=""
+            >
+              Benefits you did not qualify for
+            </h3>
+            <p>
+              <div>
+                Based on your answers you are not eligible for these benefits. 
+                <strong>
+                  You may become eligible if you enter additional information or your situation changes.
+                </strong>
+              </div>
+            </p>
+            <button
+              class="usa-button"
+              type="button"
+            >
+              See benefits you did not qualify for
+            </button>
+          </div>
+          <div
+            class="result-view-share-results"
+          >
+            <h3
+              class="result-view-share-results-heading font-family-sans"
+              id=""
+            >
+              Share results
+            </h3>
+            <p>
+              Copy or email these results. Your answers will be visible. Only share with those you trust.
+            </p>
+            <div
+              class="result-view-share-results-button-group"
+            >
+              <button
+                class="share-button usa-button usa-button--outline"
+                type="button"
+              >
+                Share link
+              </button>
+              <button
+                class="email-button usa-button usa-button--outline"
+                type="button"
+              >
+                Email results
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

@@ -1,0 +1,148 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Date > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="usa-memorable-date"
+    id="usa-memorable-date-undefined"
+  >
+    <div
+      class="usa-form-group usa-form-group--month usa-form-group--select"
+    >
+      <label
+        class="usa-label"
+        for="date_of_birth_month-undefined"
+      >
+        Month
+      </label>
+      <div
+        class="a11y-sr-only"
+        id="month-description-undefined"
+      >
+        Select a month from the list
+      </div>
+      <select
+        aria-describedby="month-description-undefined"
+        class="usa-select "
+        id="date_of_birth_month-undefined"
+        name="date_of_birth_month-undefined"
+      >
+        <option
+          disabled=""
+          value=""
+        >
+          -Select-
+        </option>
+        <option
+          value="0"
+        >
+          01 - January
+        </option>
+        <option
+          value="1"
+        >
+          02 - February
+        </option>
+        <option
+          value="2"
+        >
+          03 - March
+        </option>
+        <option
+          value="3"
+        >
+          04 - April
+        </option>
+        <option
+          value="4"
+        >
+          05 - May
+        </option>
+        <option
+          value="5"
+        >
+          06 - June
+        </option>
+        <option
+          value="6"
+        >
+          07 - July
+        </option>
+        <option
+          value="7"
+        >
+          08 - August
+        </option>
+        <option
+          value="8"
+        >
+          09 - September
+        </option>
+        <option
+          value="9"
+        >
+          10 - October
+        </option>
+        <option
+          value="10"
+        >
+          11 - November
+        </option>
+        <option
+          value="11"
+        >
+          12 - December
+        </option>
+      </select>
+    </div>
+    <div
+      class="usa-form-group usa-form-group--day"
+    >
+      <label
+        class="usa-label"
+        for="date_of_birth_day-undefined"
+      >
+        Day
+      </label>
+      <div
+        class="a11y-sr-only"
+        id="day-description-undefined"
+      >
+        Enter two numerals for day
+      </div>
+      <input
+        aria-describedby="day-description-undefined"
+        class="usa-input "
+        id="date_of_birth_day-undefined"
+        inputmode="numeric"
+        name="date_of_birth_day-undefined"
+        value=""
+      />
+    </div>
+    <div
+      class="usa-form-group usa-form-group--year"
+    >
+      <label
+        class="usa-label"
+        for="date_of_birth_year-undefined"
+      >
+        Year
+      </label>
+      <div
+        class="a11y-sr-only"
+        id="year-description-undefined"
+      >
+        Enter four numerals for year
+      </div>
+      <input
+        aria-describedby="year-description-undefined"
+        class="usa-input "
+        id="date_of_birth_year-undefined"
+        inputmode="numeric"
+        name="date_of_birth_year-undefined"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -34,14 +34,15 @@ export default defineConfig({
     include: ['**/?(*.)+(spec|test).[jt]s?(x)'],
     exclude: ['**/__tests__/assets/*.spec.jsx'],
     coverage: {
-      reporter: ['text', 'json', 'html'],
+      reportsDirectory: '../coverage',
+      reporter: ['text', 'json'],
       thresholds: {
         branches: 50,
         functions: 50,
         lines: 50,
         statements: 50,
       },
-      include: ['**/*.{js,jsx}', ,],
+      include: ['**/*.{js,jsx}'],
       exclude: [
         'node_modules/',
         'setupTests.ts',
@@ -49,7 +50,6 @@ export default defineConfig({
         '**/*.stories.jsx',
         '**/*.cy.jsx',
         '<rootDir>/node_modules/',
-        '<rootDir>/jest-test-results.json',
         '**/hooks/index.js',
         '**/components/index.js',
         'reportWebVitals.js',

@@ -1,12 +1,13 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
+import eslint from 'vite-plugin-eslint'
 
 const env = loadEnv('all', process.cwd())
 const proxyURL = env.VITE_PROXY_URL
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), eslint()],
   base: './',
   server: {
     port: 3000,

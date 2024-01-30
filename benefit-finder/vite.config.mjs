@@ -38,10 +38,10 @@ export default defineConfig({
       reportsDirectory: '../coverage',
       reporter: ['text', 'json'],
       thresholds: {
-        branches: 50,
-        functions: 50,
-        lines: 50,
-        statements: 50,
+        branches: 80,
+        functions: 55,
+        lines: 80,
+        statements: 80,
       },
       include: ['**/*.{js,jsx}'],
       exclude: [

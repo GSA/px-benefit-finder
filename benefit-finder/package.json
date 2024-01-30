@@ -5,6 +5,29 @@
   "engines": {
     "node": "20.x.x"
   },
+  "scripts": {
+    "check:uswds:version": "sh ../check-uswds-version.sh",
+    "mv:uswds:usagov": "sh ../mv-uswds-usagov-theme.sh",
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest watch",
+    "test:no-watch": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:generate-output": "vitest --run --reporter=json --outputFile=.jest-test-results.json",
+    "format": "prettier --write '**/*.{js,jsx}'",
+    "lint:scss": "stylelint 'src/**/*.scss'",
+    "lint:scss:fix": "stylelint 'src/**/*.scss' --fix",
+    "lint:js": "eslint . --ext .js,.jsx",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "postinstall": "cd .. && husky install benefit-finder/.husky",
+    "lint-staged": "lint-staged",
+    "generate:component": "plop",
+    "prebuild:storybook": "npm run build && npm run mv:uswds:usagov",
+    "dev:storybook": "storybook dev -p 6006",
+    "build:storybook": "npm run prebuild:storybook && storybook build",
+    "cy:run:chrome": "npx cypress run --component --browser chrome && npx cypress run --browser chrome"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
@@ -47,29 +70,6 @@
     "vite": "^5.0.12",
     "vitest": "^1.2.2",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "check:uswds:version": "sh ../check-uswds-version.sh",
-    "mv:uswds:usagov": "sh ../mv-uswds-usagov-theme.sh",
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "test": "vitest watch",
-    "test:no-watch": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:generate-output": "vitest --run --reporter=json --outputFile=.jest-test-results.json",
-    "format": "prettier --write '**/*.{js,jsx}'",
-    "lint:scss": "stylelint 'src/**/*.scss'",
-    "lint:scss:fix": "stylelint 'src/**/*.scss' --fix",
-    "lint:js": "eslint . --ext .js,.jsx",
-    "lint:js:fix": "npm run lint:js -- --fix",
-    "postinstall": "cd .. && husky install benefit-finder/.husky",
-    "lint-staged": "lint-staged",
-    "generate:component": "plop",
-    "prebuild:storybook": "npm run build && npm run mv:uswds:usagov",
-    "dev:storybook": "storybook dev -p 6006",
-    "build:storybook": "npm run prebuild:storybook && storybook build",
-    "cy:run:chrome": "npx cypress run --component --browser chrome && npx cypress run --browser chrome"
   },
   "browserslist": {
     "production": [

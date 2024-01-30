@@ -29,6 +29,7 @@
     "cy:run:chrome": "npx cypress run --component --browser chrome && npx cypress run --browser chrome"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@storybook/addon-a11y": "^7.6.10",

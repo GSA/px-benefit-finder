@@ -13,7 +13,12 @@ const selectOptions = [
 describe('Select', () => {
   it('renders a match to the previous snapshot', () => {
     const { asFragment } = render(
-      <Select label={selectLabel} options={selectOptions} ui={en.select} />
+      <Select
+        label={selectLabel}
+        options={selectOptions}
+        ui={en.select}
+        onChange={() => {}}
+      />
     )
     expect(asFragment()).toMatchSnapshot()
   })

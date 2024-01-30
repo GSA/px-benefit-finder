@@ -19,9 +19,11 @@ const scenarios = {
   ],
 }
 
-// handle window.scrollTo
-const noop = () => {}
-Object.defineProperty(window, 'scrollTo', { value: noop, writable: true })
+beforeAll(() => {
+  // handle window.scrollTo
+  const noop = () => {}
+  Object.defineProperty(window, 'scrollTo', { value: noop, writable: true })
+})
 
 test('loads intro', async () => {
   const view = render(<App testAppContent={data} />)

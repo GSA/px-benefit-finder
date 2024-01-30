@@ -1,9 +1,7 @@
-import { render } from '@testing-library/react'
-import ResultsView from '../index.jsx'
-import * as en from '../../../locales/en/en.json'
-
-// import react-testing methods
 import { render, screen } from '@testing-library/react'
+import ResultsView from '../index.jsx'
+import * as apiCalls from '../../../api/apiCalls.js'
+import * as en from '../../../locales/en/en.json'
 import content from '../../../api/mock-data/current.js'
 const { data } = JSON.parse(content)
 
@@ -28,11 +26,11 @@ function setCurrentData(updatedData) {
   currentData = updatedData
 }
 
-// handle window.scrollTo
-const noop = () => {}
-Object.defineProperty(window, 'scrollTo', { value: noop, writable: true })
-
 beforeAll(() => {
+  // handle window.scrollTo
+  const noop = () => {}
+  Object.defineProperty(window, 'scrollTo', { value: noop, writable: true })
+
   stepDataArray = [...data.lifeEventForm.sectionsEligibilityCriteria]
   setCurrentData(stepDataArray[0])
   apiCalls.PUT.DataFromParams(
@@ -45,55 +43,48 @@ beforeAll(() => {
     currentData.section.fieldsets[1].fieldset.inputs[0].inputCriteria.values
 })
 
-describe('test', () => {
-  it('loads view', async () => {
-    const view = render(<ResultsView ui={en.resultsView} />)
-    await screen.findByTestId('result-view')
-    expect(view.baseElement).toMatchSnapshot()
-  })
-})
 // render view without data
-// test('loads view', async () => {
-//   const view = render(<ResultsView ui={en.resultsView} />)
-//   await screen.findByTestId('result-view')
-//   expect(view.baseElement).toMatchSnapshot()
-// })
+test('loads view', async () => {
+  const view = render(<ResultsView ui={en.resultsView} />)
+  await screen.findByTestId('result-view')
+  expect(view.baseElement).toMatchSnapshot()
+})
 
 // render view with data
-// test('scenario 1 loads in view with the correct amount of likely eligible items', async () => {
-//   expect(expectedUpdate[0]).toHaveProperty('selected', true)
-//   const view = render(
-//     <ResultsView
-//       ui={en.resultsView}
-//       stepDataArray={stepDataArray}
-//       data={benfitsArray}
-//     />
-//   )
+test('scenario 1 loads in view with the correct amount of likely eligible items', async () => {
+  expect(expectedUpdate[0]).toHaveProperty('selected', true)
+  const view = render(
+    <ResultsView
+      ui={en.resultsView}
+      stepDataArray={stepDataArray}
+      data={benfitsArray}
+    />
+  )
 
-//   const eligibility = apiCalls.GET.ElegibilityByCriteria(
-//     stepDataArray,
-//     benfitsArray
-//   )
+  const eligibility = apiCalls.GET.ElegibilityByCriteria(
+    stepDataArray,
+    benfitsArray
+  )
 
-//   const e = eligibility.filter(item => {
-//     const f = item.benefit.eligibility.filter(item => item.isEligible === true)
-//     return f.length === item.benefit.eligibility.length
-//   })
+  const e = eligibility.filter(item => {
+    const f = item.benefit.eligibility.filter(item => item.isEligible === true)
+    return f.length === item.benefit.eligibility.length
+  })
 
-//   const n = eligibility.filter(item => {
-//     const f = item.benefit.eligibility.filter(item => item.isEligible === false)
-//     return f.length > 0
-//   })
+  const n = eligibility.filter(item => {
+    const f = item.benefit.eligibility.filter(item => item.isEligible === false)
+    return f.length > 0
+  })
 
-//   const m = eligibility.filter(item => {
-//     const f = item.benefit.eligibility.filter(item => item.isEligible !== false)
-//     return f.length > 0
-//   })
+  const m = eligibility.filter(item => {
+    const f = item.benefit.eligibility.filter(item => item.isEligible !== false)
+    return f.length > 0
+  })
 
-//   expect(e.length).toBe(4)
-//   expect(n.length).toBe(26)
-//   expect(m.length - e.length - n.length).toBe(1)
+  expect(e.length).toBe(4)
+  expect(n.length).toBe(26)
+  expect(m.length - e.length - n.length).toBe(1)
 
-//   await screen.findAllByTestId('benefit')
-//   expect(view.baseElement).toMatchSnapshot()
-// })
+  await screen.findAllByTestId('benefit')
+  expect(view.baseElement).toMatchSnapshot()
+})

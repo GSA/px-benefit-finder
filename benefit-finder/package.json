@@ -14,16 +14,14 @@
     "@storybook/addon-links": "^7.6.10",
     "@storybook/addon-mdx-gfm": "^7.6.10",
     "@storybook/blocks": "^7.6.10",
-    "@storybook/react": "^7.6.10",
     "@storybook/react-vite": "^7.6.10",
-    "@storybook/react-webpack5": "^7.6.10",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@testing-library/jest-dom": "^6.3.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@uswds/uswds": "^3.0.1",
     "@vitejs/plugin-react": "^4.2.1",
-    "@vitest/ui": "^1.2.2",
+    "@vitest/coverage-v8": "^1.2.2",
     "cross-env": "^7.0.3",
     "cypress": "^13.3.1",
     "eslint": "^8.41.0",
@@ -57,7 +55,6 @@
     "build": "vite build",
     "serve": "vite preview",
     "test": "vitest watch",
-    "test:ui": "vitest --ui watch",
     "test:no-watch": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:generate-output": "vitest --run --reporter=json --outputFile=.jest-test-results.json",
@@ -85,8 +82,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "dependencies": {
-    "@vitest/coverage-v8": "^1.2.2"
   }
 }

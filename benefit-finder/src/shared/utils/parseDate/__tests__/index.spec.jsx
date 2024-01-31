@@ -1,8 +1,5 @@
-// parseDate(selected.value).toLocaleDateString(
-//               local,
-//               dateFormatOptions
-//             )
 import parseDate from '../index'
+
 let mockLocal
 const dateFormatOptions = {
   year: 'numeric',

@@ -46,7 +46,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/coverage-v8": "^1.2.2",
     "cross-env": "^7.0.3",
-    "cypress": "^13.3.1",
+    "cypress": "^13.6.4",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",

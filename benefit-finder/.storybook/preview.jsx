@@ -1,4 +1,3 @@
-/** @type { import('@storybook/react-vite').Preview } */
 // pull in our uswds dependencies
 import React from 'react'
 import '../node_modules/@uswds/uswds/dist/js/uswds'

@@ -64,6 +64,8 @@ Array [
         id="benefit-section"
       >
         <div
+          aria-hidden={true}
+          aria-live="polite"
           className=""
           role="alert"
           tabIndex={0}
@@ -132,6 +134,7 @@ Array [
                 </div>
                 <select
                   aria-describedby="month-description-applicant_date_of_birth_0"
+                  aria-invalid={false}
                   className="usa-select required-field"
                   id="date_of_birth_month-applicant_date_of_birth_0"
                   name="date_of_birth_month-applicant_date_of_birth_0"
@@ -224,6 +227,7 @@ Array [
                 </div>
                 <input
                   aria-describedby="day-description-applicant_date_of_birth_0"
+                  aria-invalid={false}
                   className="usa-input required-field"
                   id="date_of_birth_day-applicant_date_of_birth_0"
                   inputMode="numeric"
@@ -250,6 +254,7 @@ Array [
                 </div>
                 <input
                   aria-describedby="year-description-applicant_date_of_birth_0"
+                  aria-invalid={false}
                   className="usa-input required-field"
                   id="date_of_birth_year-applicant_date_of_birth_0"
                   inputMode="numeric"
@@ -284,6 +289,7 @@ Array [
               Select
             </label>
             <select
+              aria-invalid={false}
               className=""
               id="applicant_relationship_to_the_deceased_0"
               name="applicant_relationship_to_the_deceased_0"
@@ -347,6 +353,7 @@ Array [
               Select
             </label>
             <select
+              aria-invalid={false}
               className=""
               id="applicant_marital_status_0"
               name="applicant_marital_status_0"
@@ -392,6 +399,7 @@ Array [
             Are you a U.S. citizen or eligible non-citizen?
           </legend>
           <div
+            aria-invalid={0}
             className="radio-group"
           >
             <div
@@ -443,6 +451,7 @@ Array [
             Are you caring for a child of the deceased who is disabled or under the age of 16?
           </legend>
           <div
+            aria-invalid={0}
             className="radio-group"
           >
             <div
@@ -494,6 +503,7 @@ Array [
             Did you pay for funeral or burial expenses?
           </legend>
           <div
+            aria-invalid={0}
             className="radio-group"
           >
             <div

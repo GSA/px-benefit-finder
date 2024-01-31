@@ -75,7 +75,7 @@ const LifeEventSection = ({
   }
 
   const handleFieldAlerts = () => {
-    setHasError(document.querySelectorAll(`.${classError}`))
+    setHasError(Array.from(document.querySelectorAll(`.${classError}`)))
   }
 
   /**
@@ -152,6 +152,24 @@ const LifeEventSection = ({
       ? handleSuccess()
       : handleAlert()
   }
+
+  /**
+   * a function that updates our step count and set our data index
+   * @function
+   * @param {array} hasError - collection of error elements
+   * @param {event} event - passed in change handler
+   */
+  const updateAlertArray = (hasError, event) => {
+    hasError.forEach((element, index) => {
+      if (element.id.includes(event.target.id)) {
+        hasError.splice(index, 1)
+      }
+    })
+
+    if (hasError.length === 0) {
+      alertFieldRef.current.classList.add('display-none')
+    }
+  }
   /**
    *
    * end alert
@@ -199,7 +217,9 @@ const LifeEventSection = ({
       setCurrentData,
       event.target.value
     )
+    updateAlertArray(hasError, event)
   }
+  // console.log(hasError)
 
   /**
    * a function that handles the current selected value of our radio
@@ -210,7 +230,7 @@ const LifeEventSection = ({
   const handleDateChanged = (event, criteriaKey) => {
     event.target.value.length > 0 && setHasData(true)
     window.history.replaceState({}, '', window.location.pathname)
-    dateInputValidation(event) === true &&
+    if (dateInputValidation(event) === true) {
       apiCalls.PUT.DataDate(
         criteriaKey,
         currentData,
@@ -218,6 +238,8 @@ const LifeEventSection = ({
         event.target.value,
         event.target.id
       )
+      updateAlertArray(hasError, event)
+    }
   }
 
   const handleDateRequired = (values, item) => {
@@ -319,6 +341,12 @@ const LifeEventSection = ({
                                       item.fieldset.criteriaKey
                                     )
                                   }
+                                  invalid={
+                                    hasError.length &&
+                                    hasError
+                                      .map(item => item.id.includes(fieldSetId))
+                                      .includes(true)
+                                  }
                                 />
                               </div>
                             )
@@ -353,7 +381,16 @@ const LifeEventSection = ({
                             )
 
                             return (
-                              <div className="radio-group" key={fieldSetId}>
+                              <div
+                                className="radio-group"
+                                key={fieldSetId}
+                                aria-invalid={
+                                  hasError.length &&
+                                  hasError
+                                    .map(item => item.id.includes(fieldSetId))
+                                    .includes(true)
+                                }
+                              >
                                 {/* map the options */}
                                 {input.inputCriteria.values.map(
                                   (option, index) => {
@@ -407,6 +444,7 @@ const LifeEventSection = ({
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+
                             return (
                               <div key={fieldSetId}>
                                 <Date
@@ -423,9 +461,9 @@ const LifeEventSection = ({
                                   }
                                   ui={ui}
                                   id={fieldSetId}
-                                  valid={
+                                  invalid={
                                     hasError.length &&
-                                    Array.from(hasError)
+                                    hasError
                                       .map(item => item.id.includes(fieldSetId))
                                       .includes(true)
                                   }

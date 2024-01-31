@@ -1,15 +1,17 @@
 {
   "extends": [
-    "react-app",
-    "react-app/jest",
     "standard",
+    "react-app/jest",
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:prettier/recommended",
     "plugin:storybook/recommended",
     "plugin:cypress/recommended"
   ],
+  "plugins": ["react", "react-hooks", "prettier", "storybook", "cypress"],
+  "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
+  "settings": { "react": { "version": "18.2" } },
   "rules": {
     "react/prop-types": "off",
     "eqeqeq": [2, "smart"],

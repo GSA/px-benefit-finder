@@ -24,14 +24,13 @@
     "lint-staged": "lint-staged",
     "generate:component": "plop",
     "prebuild:storybook": "npm run build && npm run mv:uswds:usagov",
-    "dev:storybook": "storybook dev -p 6006",
+    "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
     "build:storybook": "npm run prebuild:storybook && storybook build",
     "cy:run:chrome": "npx cypress run --component --browser chrome && npx cypress run --browser chrome"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/preset-env": "^7.22.5",
-    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
     "@storybook/addon-a11y": "^7.6.10",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",

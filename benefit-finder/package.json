@@ -23,11 +23,13 @@
     "postinstall": "cd .. && husky install benefit-finder/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
-    "prebuild:storybook": "npm run build && npm run mv:uswds:usagov",
     "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
     "build:storybook": "npm run prebuild:storybook && storybook build",
+    "cy:prebuild:storybook": "NODE_ENV=test npm run build && npm run mv:uswds:usagov",
+    "cy:dev:storybook": "NODE_ENV=test npm run cy:prebuild:storybook && storybook dev -p 6006",
     "cy:run:component:chrome": "NODE_ENV=test npx cypress run --component --browser chrome",
-    "cy:run:e2e:chrome": "NODE_ENV=test npx cypress run --browser chrome"
+    "cy:run:e2e:chrome": "NODE_ENV=test npx cypress run --browser chrome",
+    "cy:run": "npm run cy:run:component:chrome && npm run cy:run:e2e:chrome"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.23.9",

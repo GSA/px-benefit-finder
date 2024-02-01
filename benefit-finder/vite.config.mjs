@@ -20,21 +20,20 @@ const devServer = {
     },
   },
 }
+const copyConfig = test
+  ? {}
+  : {
+      targets: distTargets,
+      flatten: false,
+      hook: 'writeBundle',
+    }
 
 const server = test ? testServer : devServer
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [
-    react(),
-    eslint(),
-    copy({
-      targets: distTargets,
-      flatten: false,
-      hook: 'writeBundle',
-    }),
-  ],
+  plugins: [react(), eslint(), copy(copyConfig)],
   server: { ...server },
   test: testConfig,
   build: {

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest shot v1, https://goo.gl/fbAQLP
 
-exports[`VerifySelectionsView renders a match to the previous snapshot 1`] = `
+exports[`VerifySelectionsView renders a match to the previous shot 1`] = `
 <div
   className="verify-selections-view"
 >

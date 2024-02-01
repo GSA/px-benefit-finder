@@ -3,8 +3,24 @@ import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
 import copy from 'rollup-plugin-copy'
 
-const env = loadEnv('all', process.cwd())
-const proxyURL = env.VITE_PROXY_URL
+const envLocal = loadEnv('all', process.cwd())
+const proxyURL = envLocal.VITE_PROXY_URL
+const test = process.env.NODE_ENV === 'test'
+const testServer = { port: 6006 }
+const devServer = {
+  port: 3000,
+  open: '/death',
+  proxy: {
+    '/s3': {
+      target: proxyURL,
+      changeOrigin: true,
+      secure: false,
+      ws: true,
+    },
+  },
+}
+
+const server = test ? testServer : devServer
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -82,18 +98,7 @@ export default defineConfig({
       hook: 'writeBundle',
     }),
   ],
-  server: {
-    port: 3000,
-    open: '/death',
-    proxy: {
-      '/s3': {
-        target: proxyURL,
-        changeOrigin: true,
-        secure: false,
-        ws: true,
-      },
-    },
-  },
+  server: { ...server },
   test: {
     root: 'src',
     environment: 'jsdom',

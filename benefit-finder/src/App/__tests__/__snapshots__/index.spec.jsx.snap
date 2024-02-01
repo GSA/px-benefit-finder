@@ -123,6 +123,7 @@ exports[`loads intro 1`] = `
                     class="notice"
                   >
                     <div
+                      aria-live="polite"
                       class="usa-alert usa-alert--info no-background"
                       role="alert"
                       tabindex="-1"
@@ -152,6 +153,7 @@ exports[`loads intro 1`] = `
                     class="notice"
                   >
                     <div
+                      aria-live="polite"
                       class="usa-alert usa-alert--info no-background"
                       role="alert"
                       tabindex="-1"
@@ -175,6 +177,7 @@ exports[`loads intro 1`] = `
                     class="notice"
                   >
                     <div
+                      aria-live="polite"
                       class="usa-alert usa-alert--info no-background"
                       role="alert"
                       tabindex="-1"
@@ -424,6 +427,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -585,6 +589,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -741,6 +746,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -902,6 +908,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -1059,6 +1066,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -1230,6 +1238,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -1396,6 +1405,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -1568,6 +1578,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -1735,6 +1746,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -1901,6 +1913,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -2067,6 +2080,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -2218,6 +2232,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -2385,6 +2400,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -2541,6 +2557,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -2702,6 +2719,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -2863,6 +2881,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -3015,6 +3034,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -3166,6 +3186,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -3327,6 +3348,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -3493,6 +3515,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -3669,6 +3692,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -3830,6 +3854,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -3992,6 +4017,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -4158,6 +4184,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -4334,6 +4361,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -4500,6 +4528,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -4671,6 +4700,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -4837,6 +4867,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -5009,6 +5040,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -5170,6 +5202,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -5331,6 +5364,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -5755,6 +5789,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -5931,6 +5966,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -6102,6 +6138,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -6278,6 +6315,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -6448,6 +6486,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -6632,6 +6671,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -6790,6 +6830,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -6975,6 +7016,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -7155,6 +7197,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -7337,6 +7380,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -7518,6 +7562,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -7682,6 +7727,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -7865,6 +7911,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -8036,6 +8083,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -8188,6 +8236,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -8364,6 +8413,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -8518,6 +8568,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -8671,6 +8722,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -8847,6 +8899,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -9016,6 +9069,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -9208,6 +9262,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -9360,6 +9415,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -9526,6 +9582,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -9684,6 +9741,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -9866,6 +9924,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -10045,6 +10104,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -10231,6 +10291,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -10413,6 +10474,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -10602,6 +10664,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -10778,6 +10841,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"
@@ -10954,6 +11018,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-live="polite"
                         class="benefit-alert usa-alert usa-alert--info "
                         role="alert"
                         tabindex="0"

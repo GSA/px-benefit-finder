@@ -61,6 +61,8 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         id="benefit-section"
       >
         <div
+          aria-hidden="true"
+          aria-live="polite"
           class="usa-alert usa-alert--error display-none"
           role="alert"
           tabindex="0"
@@ -127,6 +129,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 </div>
                 <select
                   aria-describedby="month-description-applicant_date_of_birth_0"
+                  aria-invalid="false"
                   class="usa-select required-field"
                   id="date_of_birth_month-applicant_date_of_birth_0"
                   name="date_of_birth_month-applicant_date_of_birth_0"
@@ -217,6 +220,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 </div>
                 <input
                   aria-describedby="day-description-applicant_date_of_birth_0"
+                  aria-invalid="false"
                   class="usa-input required-field"
                   id="date_of_birth_day-applicant_date_of_birth_0"
                   inputmode="numeric"
@@ -242,6 +246,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 </div>
                 <input
                   aria-describedby="year-description-applicant_date_of_birth_0"
+                  aria-invalid="false"
                   class="usa-input required-field"
                   id="date_of_birth_year-applicant_date_of_birth_0"
                   inputmode="numeric"
@@ -275,6 +280,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               Select
             </label>
             <select
+              aria-invalid="false"
               class="usa-select required-field"
               id="applicant_relationship_to_the_deceased_0"
               name="applicant_relationship_to_the_deceased_0"
@@ -336,6 +342,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               Select
             </label>
             <select
+              aria-invalid="false"
               class="usa-select required-field"
               id="applicant_marital_status_0"
               name="applicant_marital_status_0"
@@ -379,6 +386,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Are you a U.S. citizen or eligible non-citizen?
           </legend>
           <div
+            aria-invalid="0"
             class="radio-group"
           >
             <div
@@ -426,6 +434,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Are you caring for a child of the deceased who is disabled or under the age of 16?
           </legend>
           <div
+            aria-invalid="0"
             class="radio-group"
           >
             <div
@@ -473,6 +482,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Did you pay for funeral or burial expenses?
           </legend>
           <div
+            aria-invalid="0"
             class="radio-group"
           >
             <div

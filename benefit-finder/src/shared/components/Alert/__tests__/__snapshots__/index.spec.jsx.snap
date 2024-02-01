@@ -3,6 +3,7 @@
 exports[`Alert > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
+    aria-live="polite"
     class="usa-alert usa-alert--info "
     role="alert"
     tabindex="0"

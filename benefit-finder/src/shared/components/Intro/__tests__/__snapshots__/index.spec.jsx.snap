@@ -110,6 +110,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="notice"
               >
                 <div
+                  aria-live="polite"
                   class="usa-alert usa-alert--info no-background"
                   role="alert"
                   tabindex="-1"
@@ -139,6 +140,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="notice"
               >
                 <div
+                  aria-live="polite"
                   class="usa-alert usa-alert--info no-background"
                   role="alert"
                   tabindex="-1"
@@ -162,6 +164,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="notice"
               >
                 <div
+                  aria-live="polite"
                   class="usa-alert usa-alert--info no-background"
                   role="alert"
                   tabindex="-1"

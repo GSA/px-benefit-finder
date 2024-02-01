@@ -26,7 +26,8 @@
     "prebuild:storybook": "npm run build && npm run mv:uswds:usagov",
     "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
     "build:storybook": "npm run prebuild:storybook && storybook build",
-    "cy:run:chrome": "npx cypress run --component --browser chrome && npx cypress run --browser chrome"
+    "cy:run:component:chrome": "NODE_ENV=test npx cypress run --component --browser chrome",
+    "cy:run:e2e:chrome": "NODE_ENV=test npx cypress run --browser chrome"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.23.9",

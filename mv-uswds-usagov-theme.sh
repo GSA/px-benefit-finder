@@ -14,16 +14,18 @@ readonly USAGOV_PROJECT_THEME_LOCATION="${USAGOV_PROJECT_LOCATION}web/themes/cus
 readonly USAGOV_PROJECT_THEME_DIR="${USAGOV_PROJECT_LOCATION}web/themes"
 
 
-if [ -d $USAGOV_PROJECT_THEME_LOCATION ]
-then
-  cd $USAGOV_PROJECT_THEME_LOCATION && npm install && npm run build
-  if [ -d $STORYBOOK_THEMES_DIR ]
-  then
+if [ -d "$USAGOV_PROJECT_THEME_LOCATION" ]; then
+  cd "$USAGOV_PROJECT_THEME_LOCATION" || exit 1
+  npm install || exit 1
+  npm run build || exit 1
+
+  if [ -d "$STORYBOOK_THEMES_DIR" ]; then
     echo "Directory $STORYBOOK_THEMES_DIR exists."
-    cp -r $USAGOV_PROJECT_THEME_DIR $BENEFIT_FINDER_PROJECT_LOCATION
-  else
-    cp -r $USAGOV_PROJECT_THEME_DIR $STORYBOOK_THEMES_DIR
+    echo "Removing directory."
+    rm -rf "$STORYBOOK_THEMES_DIR" || exit 1
   fi
+  echo "Now moving usagov theme directory to storybook theme location."
+  cp -r "$USAGOV_PROJECT_THEME_DIR" "$STORYBOOK_THEMES_DIR" || exit 1
 else
   echo "Missing git submodule theme"
 fi

@@ -10,7 +10,7 @@ import './_index.scss'
  * @param {object} value - inherited state values
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
-const Date = ({ onChange, value, required, ui, id, valid }) => {
+const Date = ({ onChange, value, required, ui, id, invalid }) => {
   const { date, select } = ui
   const { labelDay, labelMonth, labelYear, monthOptions, alert } = date
   const { dateDefaultValue } = select
@@ -19,7 +19,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
 
   return (
     <div id={`usa-memorable-date-${id}`} className="usa-memorable-date">
-      {valid === true && (
+      {invalid === true && (
         <Alert
           className="date-alert"
           heading={ui.alertBanner.heading}
@@ -44,6 +44,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           required={required === 'TRUE'}
           value={(value && value.month) || ''}
           onChange={onChange}
+          aria-invalid={invalid === true}
         >
           <option value="" key="default" disabled>
             {dateDefaultValue}
@@ -71,6 +72,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           value={(value && value.day) || ''}
           onChange={onChange}
           required={required === 'TRUE'}
+          aria-invalid={invalid === true}
         />
       </div>
       <div className="usa-form-group usa-form-group--year">
@@ -89,6 +91,7 @@ const Date = ({ onChange, value, required, ui, id, valid }) => {
           value={(value && value.year) || ''}
           onChange={onChange}
           required={required === 'TRUE'}
+          aria-invalid={invalid === true}
         />
       </div>
     </div>

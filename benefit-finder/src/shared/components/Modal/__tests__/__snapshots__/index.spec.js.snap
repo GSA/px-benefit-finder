@@ -5,9 +5,11 @@ exports[`Modal renders a match to the previous snapshot 1`] = `
   className="benefit-modal-group"
 >
   <a
+    aria-label="Continue button"
     className=""
     onClick={[Function]}
     onKeyDown={[Function]}
+    role="button"
     tabIndex="0"
   />
 </div>

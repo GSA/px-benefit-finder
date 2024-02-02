@@ -35,11 +35,10 @@ jobs:
           cd ..
           git submodule init
           git submodule update
-          bash mv-uswds-usagov-theme.sh
           cd benefit-finder
 
-      - name: Start Storybook
-        run: npm run cy:dev:storybook
+      # - name: Start Storybook
+      #   run: npm run cy:dev:storybook
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,6 +48,8 @@ jobs:
         with:
           component: true
           working-directory: benefit-finder
+          build: "npm run cy:dev:storybook"
+          start: "npm run cy:run"
 
       - uses: actions/upload-artifact@v3
         if: failure ()

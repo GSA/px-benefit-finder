@@ -31,8 +31,8 @@
     "cy:build:storybook": "NODE_ENV=test npm run cy:prebuild:storybook && storybook build --test",
     "cy:run:component:chrome": "NODE_ENV=test npx cypress run --component --browser chrome",
     "cy:run:e2e:chrome": "NODE_ENV=test npx cypress run --browser chrome",
-    "cy:run": "npm run cy:run:component:chrome && npm run cy:run:e2e:chrome",
-    "cy:run:pipeline": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\"   \"http-server ./storybook-static --port 6006 --silent\"   \"wait-on tcp:6006 && npm run cy:run\" -Y"
+    "cy:run": "NODE_ENV=test npm run cy:run:component:chrome && npm run cy:run:e2e:chrome",
+    "cy:run:pipeline": "NODE_ENV=test concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\"   \"http-server ./storybook-static --port 6006 --silent\"   \"wait-on tcp:6006 && npm run cy:run\" -Y"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.23.9",

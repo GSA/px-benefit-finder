@@ -48,11 +48,11 @@ jobs:
         with:
           component: true
           working-directory: benefit-finder
-          build: "npm run cy:build:storybook"
+          build: "npm install concurrently http-server wait-on -g && npm run cy:build:storybook"
           start: |
-            npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-              "npx http-server ./storybook-static --port 6006 --silent" \
-              "npx wait-on tcp:6006 && npm run cy:run" -Y
+            concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+              "http-server ./storybook-static --port 6006 --silent" \
+              "wait-on tcp:6006 && npm run cy:run" -Y
 
       - uses: actions/upload-artifact@v3
         if: failure ()

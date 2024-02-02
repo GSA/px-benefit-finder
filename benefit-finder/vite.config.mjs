@@ -20,6 +20,7 @@ const devServer = {
     },
   },
 }
+
 const copyConfig = test
   ? {}
   : {

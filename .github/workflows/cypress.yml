@@ -11,6 +11,9 @@ jobs:
     name: cypress-run
     runs-on: ubuntu-latest
     steps:
+      - name: Build Dev Storybook
+        run: cd benefit-finder
+          npm run cy:dev:storybook
       - name: Checkout
         uses: actions/checkout@v4
 

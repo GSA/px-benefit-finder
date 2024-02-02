@@ -37,8 +37,8 @@ jobs:
           git submodule update
           cd benefit-finder
 
-      # - name: Start Storybook
-      #   run: npm run cy:dev:storybook
+      - name: Start Storybook
+        run: npm install concurrently http-server wait-on -g
 
       # - name: Checkout
       #   uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
         with:
           component: true
           working-directory: benefit-finder
-          build: "npm install concurrently http-server wait-on -g && npm run cy:build:storybook"
+          build: "npm run cy:build:storybook"
           start: |
             concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
               "http-server ./storybook-static --port 6006 --silent" \

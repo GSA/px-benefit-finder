@@ -37,8 +37,8 @@ jobs:
           git submodule update
           cd benefit-finder
 
-      - name: Start Storybook
-        run: npm install concurrently http-server wait-on -g
+      # - name: Start Storybook
+      #   run: npm install concurrently http-server wait-on -g
 
       # - name: Checkout
       #   uses: actions/checkout@v4

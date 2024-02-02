@@ -6,13 +6,33 @@ on:
 
 permissions: read-all
 
+defaults:
+  run:
+    working-directory: ./benefit-finder
+
 jobs:
   install:
     name: cypress-run
     runs-on: ubuntu-latest
     steps:
-      - name: Build Dev Storybook
-        run: cd benefit-finder && npm run cy:dev:storybook
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Read .nvmrc
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
+
+      - name: Use Node.js (.nvmrc)
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Start Storybook
+        run: npm run cy:dev:storybook
+
       - name: Checkout
         uses: actions/checkout@v4
 

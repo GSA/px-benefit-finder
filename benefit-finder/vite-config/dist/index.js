@@ -31,7 +31,7 @@ const distTargets = [
     src: [
       'src/shared/hooks/*',
       'src/shared/hooks/**/*',
-      '!src/shared/hooks /**/**/__tests__',
+      '!src/shared/hooks/**/**/__tests__',
     ],
     dest: 'dist/src/',
     expandDirectories: true,
@@ -43,9 +43,9 @@ const distTargets = [
   },
   {
     src: [
-      'src/shared/utils /*',
+      'src/shared/utils/*',
       'src/shared/utils/**/*',
-      '!src/shared/utils /**/**/__tests__',
+      '!src/shared/utils/**/**/__tests__',
     ],
     dest: 'dist/src/',
     expandDirectories: true,
@@ -53,10 +53,10 @@ const distTargets = [
   },
   {
     src: [
-      'src/shared/components /*',
+      'src/shared/components/*',
       'src/shared/components/**/*',
-      '!src/shared/components /**/**/__tests__',
-      '!src/shared/components /**/index.stories.jsx',
+      '!src/shared/components/**/**/__tests__',
+      '!src/shared/components/**/index.stories.jsx',
     ],
     dest: 'dist/src/',
     expandDirectories: true,

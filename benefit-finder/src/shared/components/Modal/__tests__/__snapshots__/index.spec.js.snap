@@ -5,7 +5,7 @@ exports[`Modal renders a match to the previous shot 1`] = `
   className="benefit-modal-group"
 >
   <a
-    aria-label="Continue button"
+    aria-label="Continue"
     className=""
     onClick={[Function]}
     onKeyDown={[Function]}

@@ -8133,6 +8133,7 @@ exports[`loads window query scenario 2 1`] = `
                   data-analytics="benefit-accordion"
                   data-analytics-content="Lump-sum death benefit"
                   data-testid="benefit"
+                  hidden=""
                 >
                   <h4
                     class="usa-accordion__heading"
@@ -8152,7 +8153,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="sub-heading"
                       >
-                        Likely Eligible
+                        Not Eligible
                       </span>
                       <svg
                         height="24"
@@ -8202,7 +8203,7 @@ exports[`loads window query scenario 2 1`] = `
                           <p
                             class="key-eligibility-criteria-sub-heading"
                           >
-                            Met  4 of
+                            Met  3 of
             4
                           </p>
                         </h5>
@@ -8217,12 +8218,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
-                            data-testid="deceased_date_of_death"
-                          >
-                            The deceased died within the last two years
-                          </li>
-                          <li
-                            class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
                             You are a U.S. citizen or eligible non-citizen
@@ -8232,6 +8227,24 @@ exports[`loads window query scenario 2 1`] = `
                             data-testid="applicant_relationship_to_the_deceased"
                           >
                             Your relationship to the deceased is: spouse or child
+                          </li>
+                        </ul>
+                      </div>
+                      <div
+                        class="unmet-criteria-group"
+                      >
+                        <div
+                          class="unmet-criteria-title"
+                        >
+                          Unmet criteria
+                        </div>
+                        <ul
+                          class="unmet-criteria-list"
+                        >
+                          <li
+                            class="unmet-criteria-item"
+                          >
+                            The deceased died within the last two years
                           </li>
                         </ul>
                       </div>
@@ -10595,19 +10608,13 @@ exports[`loads window query scenario 2 1`] = `
                           <p
                             class="key-eligibility-criteria-sub-heading"
                           >
-                            Met  3 of
+                            Met  2 of
             6
                           </p>
                         </h5>
                         <ul
                           class="key-eligibility-criteria-list"
                         >
-                          <li
-                            class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
-                            data-testid="deceased_date_of_death"
-                          >
-                            The deceased died within the last two years
-                          </li>
                           <li
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
@@ -10633,6 +10640,11 @@ exports[`loads window query scenario 2 1`] = `
                         <ul
                           class="unmet-criteria-list"
                         >
+                          <li
+                            class="unmet-criteria-item"
+                          >
+                            The deceased died within the last two years
+                          </li>
                           <li
                             class="unmet-criteria-item"
                           >

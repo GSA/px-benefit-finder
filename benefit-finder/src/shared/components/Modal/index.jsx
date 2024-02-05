@@ -110,7 +110,7 @@ const Modal = ({
         noCarrot
         tabIndex="0"
         triggerRef={triggerRef}
-        aria-label="Continue button"
+        aria-label="Continue"
         role="button"
       >
         {triggerLabel}
@@ -178,7 +178,7 @@ const Modal = ({
       >
         <button
           type="button"
-          aria-label="Close button"
+          aria-label="Close"
           className="modal-button"
           onClick={() => handleCloseModal(triggerRef)}
         >

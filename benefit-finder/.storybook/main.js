@@ -12,5 +12,8 @@ const config = {
     autodocs: 'tag',
   },
   framework: '@storybook/react-vite',
+  core: {
+    builder: '@storybook/builder-vite',
+  },
 }
 export default config

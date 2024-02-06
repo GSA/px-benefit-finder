@@ -18,23 +18,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Read .nvmrc
-        run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_OUTPUT
-        id: nvm
-
-      - name: Use Node.js (.nvmrc)
+      - name: Install Node
         uses: actions/setup-node@v4
-        with:
-          node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
-      - name: Move Theme
+      - name: Install Submodule
         run: |
           cd ..
           git submodule init
           git submodule update
           cd benefit-finder
 
-      - name: Cypress run
+      - name: Cypress Run
         uses: cypress-io/github-action@v6
         with:
           component: true

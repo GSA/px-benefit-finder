@@ -345,6 +345,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -521,6 +522,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -692,6 +694,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -868,6 +871,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -1038,6 +1042,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -1222,6 +1227,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -1380,6 +1386,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -1565,6 +1572,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -1745,6 +1753,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -1927,6 +1936,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -2108,6 +2118,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -2272,6 +2283,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -2455,6 +2467,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -2626,6 +2639,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -2778,6 +2792,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -2954,6 +2969,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -3108,6 +3124,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -3261,6 +3278,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -3437,6 +3455,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -3606,6 +3625,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -3798,6 +3818,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -3950,6 +3971,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -4116,6 +4138,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -4274,6 +4297,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -4456,6 +4480,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -4635,6 +4660,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -4821,6 +4847,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -5003,6 +5030,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -5192,6 +5220,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -5368,6 +5397,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
@@ -5544,6 +5574,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
+                      aria-live="polite"
                       class="benefit-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"

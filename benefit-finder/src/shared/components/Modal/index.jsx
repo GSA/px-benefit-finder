@@ -110,6 +110,8 @@ const Modal = ({
         noCarrot
         tabIndex="0"
         triggerRef={triggerRef}
+        aria-label="Continue"
+        role="button"
       >
         {triggerLabel}
       </ObfuscatedLink>
@@ -176,6 +178,7 @@ const Modal = ({
       >
         <button
           type="button"
+          aria-label="Close"
           className="modal-button"
           onClick={() => handleCloseModal(triggerRef)}
         >

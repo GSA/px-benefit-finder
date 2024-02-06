@@ -2,6 +2,7 @@
 
 exports[`Alert renders a match to the previous snapshot 1`] = `
 <div
+  aria-live="polite"
   className=""
   role="alert"
   tabIndex={0}

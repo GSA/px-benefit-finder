@@ -38,6 +38,7 @@ export default defineConfig({
   server: { ...server },
   test: testConfig,
   build: {
+    emptyOutDir: true,
     outDir: 'build',
     rollupOptions: {
       output: {

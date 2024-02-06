@@ -6,7 +6,6 @@
     "node": "20.x.x"
   },
   "scripts": {
-    "check:uswds:version": "bash ../check-uswds-version.sh",
     "mv:uswds:usagov": "bash ../mv-uswds-usagov-theme.sh",
     "start": "vite",
     "build": "vite build",
@@ -25,7 +24,7 @@
     "generate:component": "plop",
     "prebuild:storybook": "npm run build && npm run mv:uswds:usagov",
     "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
-    "build:storybook": "npm run prebuild:storybook && storybook build -o _site",
+    "build:storybook": "npm run prebuild:storybook && storybook build",
     "cy:prebuild:storybook": "NODE_ENV=test npm run build && npm run mv:uswds:usagov",
     "cy:dev:storybook": "NODE_ENV=test npm run cy:prebuild:storybook && storybook dev -p 6006",
     "cy:build:storybook": "NODE_ENV=test npm run cy:prebuild:storybook && storybook build --test",
@@ -79,8 +78,7 @@
     "vite": "^5.0.12",
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^1.2.2",
-    "wait-on": "^7.2.0",
-    "web-vitals": "^2.1.4"
+    "wait-on": "^7.2.0"
   },
   "browserslist": {
     "production": [

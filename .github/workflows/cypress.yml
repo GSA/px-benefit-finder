@@ -21,7 +21,8 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: "./package.json"
+          cache-dependency-path: ""
+          node-version-file: "./benefit-finder/package.json"
 
       - name: Install Submodule
         run: |

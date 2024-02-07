@@ -29,6 +29,14 @@ const copyConfig = test
       hook: 'writeBundle',
     }
 
+const poscssConfig = {
+  plugins: process.env.NODE_ENV === 'production' ? [] : [
+    transformers.prependID({
+      id: 'benefit-finder'
+    }),
+  ]
+}
+
 const server = test ? testServer : devServer
 
 // https://vitejs.dev/config/
@@ -39,6 +47,9 @@ export default defineConfig({
     eslint(),
     copy(copyConfig),
   ],
+  css: {
+    postcss: poscssConfig,
+  },
   server: { ...server },
   test: testConfig,
   build: {

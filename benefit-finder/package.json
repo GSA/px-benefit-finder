@@ -7,7 +7,7 @@
   },
   "scripts": {
     "mv:uswds:usagov": "bash ../mv-uswds-usagov-theme.sh",
-    "start": "vite",
+    "start": "npm run prebuild:storybook && vite",
     "build": "vite build",
     "serve": "vite preview",
     "test": "vitest watch",
@@ -22,7 +22,7 @@
     "postinstall": "cd .. && husky install benefit-finder/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
-    "prebuild:storybook": "npm run build && npm run mv:uswds:usagov",
+    "prebuild:storybook": "npm run mv:uswds:usagov && npm run build",
     "dev:storybook": "npm run prebuild:storybook && storybook dev -p 6006",
     "build:storybook": "npm run prebuild:storybook && storybook build",
     "cy:prebuild:storybook": "NODE_ENV=test npm run build && npm run mv:uswds:usagov",

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useHandleClassName } from '../../hooks/useHandleClassName'
+import { useHandleClassName } from '../../hooks'
 import PropTypes from 'prop-types'
 import './_index.scss'
 

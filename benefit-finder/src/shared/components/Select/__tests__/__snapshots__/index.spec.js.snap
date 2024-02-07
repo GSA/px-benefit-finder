@@ -8,6 +8,7 @@ Array [
     Dropdown Label
   </label>,
   <select
+    aria-invalid={false}
     className=""
     required={false}
     value=""

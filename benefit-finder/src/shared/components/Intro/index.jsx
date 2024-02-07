@@ -1,3 +1,4 @@
+import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import {
   Button,
@@ -22,8 +23,13 @@ import './_index.scss'
 const Intro = ({ data, ui, setStep, step }) => {
   const { timeEstimate, title, summary } = data
   const { heading, timeIndicator, steps, notices, button } = ui
+  // const resetElements = document.querySelectorAll('[tabindex="-1"]')
+  const resetElement = useResetElement()
 
-  const handleStep = () => setStep(step + 1) && document.activeElement.blur()
+  const handleStep = () => {
+    setStep(step + 1)
+    resetElement.current.focus()
+  }
 
   return (
     data && (

@@ -1,7 +1,7 @@
 /**
  * a parse our date object
  * @function
- * @param {string} uri - window.location.herf
+ * @param {string} uri - window.location.href
  * @param {array} data - selected data
  * @return {string} returns a uri with the urlParameters
  */
@@ -28,7 +28,7 @@ const buildURIParameter = (uri, data) => {
       }
       return uri + hash // finally append the hash as well
     })
-  return data ? `${uriArray[uriArray.length - 1]}&shared=true'` : ''
+  return data ? `${uriArray[uriArray.length - 1]}&shared=true` : ''
 }
 
 export default buildURIParameter

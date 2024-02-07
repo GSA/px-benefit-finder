@@ -1,4 +1,4 @@
-import { useHandleClassName } from '../../hooks/useHandleClassName'
+import { useHandleClassName } from '../../hooks'
 import { Carrot } from '../index'
 import PropTypes from 'prop-types'
 import './_index.scss'

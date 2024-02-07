@@ -22,6 +22,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     </div>
     <select
       aria-describedby="month-description-undefined"
+      aria-invalid={false}
       className="usa-select "
       id="date_of_birth_month-undefined"
       name="date_of_birth_month-undefined"
@@ -113,6 +114,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     </div>
     <input
       aria-describedby="day-description-undefined"
+      aria-invalid={false}
       className="usa-input "
       id="date_of_birth_day-undefined"
       inputMode="numeric"
@@ -138,6 +140,7 @@ exports[`Date renders a match to the previous snapshot 1`] = `
     </div>
     <input
       aria-describedby="year-description-undefined"
+      aria-invalid={false}
       className="usa-input "
       id="date_of_birth_year-undefined"
       inputMode="numeric"

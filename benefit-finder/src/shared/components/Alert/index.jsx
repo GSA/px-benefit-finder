@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useHandleClassName } from '../../hooks/useHandleClassName'
+import { useHandleClassName } from '../../hooks'
 import './_index.scss'
 
 /**
@@ -34,6 +34,8 @@ const Alert = ({
       role="alert"
       ref={alertFieldRef}
       tabIndex={tabIndex || 0}
+      aria-live="polite"
+      aria-hidden={error}
     >
       {children ? (
         <div className="usa-alert__body">

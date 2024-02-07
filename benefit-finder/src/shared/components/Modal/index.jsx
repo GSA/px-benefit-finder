@@ -62,30 +62,13 @@ const Modal = ({
   navItemTwoLabel,
   navItemTwoFunction,
   handleCheckRequriedFields,
-  completed,
   modalOpen,
   setModalOpen,
 }) => {
   // state
   const triggerRef = useRef(null)
 
-  /**
-   * a function that checks for errors and then triggers the modal to open state
-   * @function
-   */
-  // const handleOpenModal = useCallback(() => {
-  //   completed === true
-  //     ? setModalOpen(true)
-  //     : handleCheckRequriedFields() === true && setModalOpen
-  //   if (completed === true) {
-  //     setModalOpen(true)
-  //   }
-  // }, [completed, handleCheckRequriedFields, setModalOpen])
-
   const handleOpenModal = () => {
-    // completed === true
-    //   ? setModalOpen(true)
-    //   : handleCheckRequriedFields() === true && setModalOpen
     if (handleCheckRequriedFields() === true) {
       setModalOpen(true)
     }
@@ -94,6 +77,7 @@ const Modal = ({
   /**
    * a function that triggers the modal to a closed state
    * @function
+   * @param {ref} triggerRef - passed to button for triggering modal
    */
   const handleCloseModal = triggerRef => {
     // focus the trigger if it is still in the DOM
@@ -126,6 +110,8 @@ const Modal = ({
         noCarrot
         tabIndex="0"
         triggerRef={triggerRef}
+        aria-label="Continue"
+        role="button"
       >
         {triggerLabel}
       </ObfuscatedLink>
@@ -192,6 +178,7 @@ const Modal = ({
       >
         <button
           type="button"
+          aria-label="Close"
           className="modal-button"
           onClick={() => handleCloseModal(triggerRef)}
         >

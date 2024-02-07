@@ -2,55 +2,53 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
-#benefit-finder {
-  .benefit-accordion-group {
-    .benefit-accordion {
-      margin-bottom: space.$space-md-plus;
+.benefit-accordion-group {
+  .benefit-accordion {
+    margin-bottom: space.$space-md-plus;
 
-      .usa-accordion__button {
-        border-radius: 3px;
-      }
-
-      .benefit-detail-title {
-        @include h6;
-
-        padding: 0;
-        margin: 0 0 24px;
-        text-align: left;
-      }
-
-      .benefit-detail-summary,
-      .benefit-criteria-list,
-      .benefit-alert {
-        @include p;
-
-        margin: 0 0 24px;
-      }
-
-      .unmet-criteria-group {
-        margin: 0 0 24px;
-
-        .unmet-criteria-title {
-          @include p;
-
-          width: 100%;
-          text-align: center;
-          color: color.$pure-black;
-        }
-      }
-
-      .benefit-link {
-        width: 100%;
-        margin-bottom: space.$space-lg;
-      }
+    .usa-accordion__button {
+      border-radius: 3px;
     }
 
-    .expand-all {
+    .benefit-detail-title {
+      @include h6;
+
+      padding: 0;
+      margin: 0 0 24px;
+      text-align: left;
+    }
+
+    .benefit-detail-summary,
+    .benefit-criteria-list,
+    .benefit-alert {
       @include p;
 
-      background-color: transparent !important;
-      color: color.$electric-blue !important;
+      margin: 0 0 24px;
+    }
+
+    .unmet-criteria-group {
+      margin: 0 0 24px;
+
+      .unmet-criteria-title {
+        @include p;
+
+        width: 100%;
+        text-align: center;
+        color: color.$pure-black;
+      }
+    }
+
+    .benefit-link {
+      width: 100%;
       margin-bottom: space.$space-lg;
     }
+  }
+
+  .expand-all {
+    @include p;
+
+    background-color: transparent !important;
+    color: color.$electric-blue !important;
+    margin-bottom: space.$space-lg;
   }
 }

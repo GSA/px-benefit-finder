@@ -1,9 +1,7 @@
 @use '../../styles/mixins/_index.scss' as *;
 
-#benefit-finder {
-  .usa-label {
-    @include p;
+.usa-label {
+  @include p;
 
-    margin-top: 0;
-  }
+  margin-top: 0;
 }

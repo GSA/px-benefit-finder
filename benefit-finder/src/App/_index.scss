@@ -2,39 +2,39 @@
 @use '../shared/styles/mixins/_index.scss' as *;
 @use '../shared/styles/sizes/_index.scss' as *;
 
-#benefit-finder {
-  html,
-  .benefit-finder.form {
-    font-family: 'Public Sans', sans-serif;
-    background-color: color.$officer-navy;
-    height: 100%;
-    min-height: 100vh;
-  }
+html,
+.benefit-finder.form {
+  font-family: 'Public Sans', sans-serif;
+  background-color: color.$officer-navy;
+  height: 100%;
+  min-height: 100vh;
+}
 
-  .usa-step-indicator__segment-label {
-    color: color.$dark-medium-grey;
-  }
+.usa-step-indicator__segment-label {
+  color: color.$dark-medium-grey;
+}
 
-  .usa-step-indicator__segment--complete .usa-step-indicator__segment-label {
-    color: color.$officer-navy !important;
-  }
+.usa-step-indicator__segment--complete .usa-step-indicator__segment-label {
+  color: color.$officer-navy !important;
+}
 
-  .usa-step-indicator__segment--current::after {
-    background-color: color.$officer-navy !important;
-  }
+.usa-step-indicator__segment--current::after {
+  background-color: color.$officer-navy !important;
+}
 
-  .usa-step-indicator__segment--complete::after {
-    background-color: color.$officer-navy !important;
-  }
+.usa-step-indicator__segment--complete::after {
+  background-color: color.$officer-navy !important;
+}
 
-  .usa-radio__input:checked + .usa-radio__label::before {
-    background-color: #005ea2 !important;
-    box-shadow: 0 0 0 2px #005ea2, inset 0 0 0 2px white !important;
-  }
+.usa-radio__input:checked + .usa-radio__label::before {
+  background-color: #005ea2 !important;
+  box-shadow:
+    0 0 0 2px #005ea2,
+    inset 0 0 0 2px white !important;
+}
 
-  .a11y-sr-only {
-    @include sr-only;
-  }
+.a11y-sr-only {
+  @include sr-only;
 }
 
 // try some usa-gov overides

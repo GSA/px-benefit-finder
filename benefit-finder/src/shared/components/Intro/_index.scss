@@ -2,37 +2,35 @@
 @use '../../styles/sizes/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
-#benefit-finder {
-  .intro {
-    padding-bottom: space.$padding-bottom-lg;
+.intro {
+  padding-bottom: space.$padding-bottom-lg;
 
-    h2 {
-      text-align: center;
+  h2 {
+    text-align: center;
+  }
+
+  .cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: space.$space-lg space.$space-lg space.$space-xl;
+  }
+
+  .cta-wrapper button {
+    margin: 0 auto;
+    width: $button-max-width;
+  }
+
+  @media (width >= $desktop) {
+    .intro-process-list {
+      min-width: 50%;
     }
 
-    .cta-wrapper {
+    .intro-process-notices-heading {
+      display: none;
+    }
+
+    .intro-process-group {
       display: flex;
-      justify-content: center;
-      margin: space.$space-lg space.$space-lg space.$space-xl;
-    }
-
-    .cta-wrapper button {
-      margin: 0 auto;
-      width: $button-max-width;
-    }
-
-    @media (width >= $desktop) {
-      .intro-process-list {
-        min-width: 50%;
-      }
-
-      .intro-process-notices-heading {
-        display: none;
-      }
-
-      .intro-process-group {
-        display: flex;
-      }
     }
   }
 }

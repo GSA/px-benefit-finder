@@ -2,55 +2,53 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
-#benefit-finder {
-  .benefit-accordion {
-    .usa-accordion__button {
-      padding-bottom: space.$padding-bottom-md-plus;
-      position: relative;
-      box-shadow: 0 4px 4px 0 rgb(0 0 0 / 11%);
+.benefit-accordion {
+  .usa-accordion__button {
+    padding-bottom: space.$padding-bottom-md-plus;
+    position: relative;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 11%);
 
-      svg {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 20px;
-        margin: auto 0;
-      }
+    svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      margin: auto 0;
+    }
 
-      &[aria-expanded='true'] {
-        background-image: none;
-        background-color: color.$marine;
-        color: color.$white;
-      }
+    &[aria-expanded='true'] {
+      background-image: none;
+      background-color: color.$marine;
+      color: color.$white;
+    }
 
-      &[aria-expanded='false'] {
-        background-image: none;
-        background-color: color.$sky;
-        color: color.$marine;
+    &[aria-expanded='false'] {
+      background-image: none;
+      background-color: color.$sky;
+      color: color.$marine;
 
-        &:hover {
-          background-color: color.$dark-sky;
-        }
-      }
-
-      .heading {
-        @include h6;
-
-        letter-spacing: 0;
-      }
-
-      .sub-heading {
-        @include p;
-
-        letter-spacing: 0;
+      &:hover {
+        background-color: color.$dark-sky;
       }
     }
 
-    .usa-accordion__content {
-      border-bottom: 1px solid color.$pop-blue;
-      border-left: 1px solid color.$pop-blue;
-      border-right: 1px solid color.$pop-blue;
-      padding-bottom: space.$space-md;
+    .heading {
+      @include h6;
+
+      letter-spacing: 0;
     }
+
+    .sub-heading {
+      @include p;
+
+      letter-spacing: 0;
+    }
+  }
+
+  .usa-accordion__content {
+    border-bottom: 1px solid color.$pop-blue;
+    border-left: 1px solid color.$pop-blue;
+    border-right: 1px solid color.$pop-blue;
+    padding-bottom: space.$space-md;
   }
 }

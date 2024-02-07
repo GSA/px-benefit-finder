@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
 import copy from 'rollup-plugin-copy'
 import { distTargets, testConfig } from './vite-config'
+import scss from 'rollup-plugin-scss'
 
 const envLocal = loadEnv('all', process.cwd())
 const proxyURL = envLocal.VITE_PROXY_URL
@@ -34,13 +35,25 @@ const server = test ? testServer : devServer
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [react(), eslint(), copy(copyConfig)],
+  plugins: [
+    react(),
+    eslint(),
+    copy(copyConfig),
+    scss({
+      processor: (css, map) => ({
+        css: `#benefit-finder {${css.replace('@charset "UTF-8";', '')}}`,
+        map,
+      }),
+    }),
+  ],
   server: { ...server },
   test: testConfig,
   build: {
     emptyOutDir: true,
     outDir: 'build',
+    minify: false,
     rollupOptions: {
+      plugins: [scss()],
       output: {
         manualChunks: {},
         entryFileNames: `assets/benefit-finder.min.js`,

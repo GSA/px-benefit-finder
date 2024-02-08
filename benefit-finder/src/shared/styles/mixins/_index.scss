@@ -88,12 +88,3 @@
   font-weight: 200;
   line-height: 18.8px;
 }
-
-@mixin sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}

@@ -31,7 +31,7 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
         <label className="usa-label" htmlFor={`date_of_birth_month-${id}`}>
           {labelMonth}
         </label>
-        <div id={`month-description-${id}`} className="a11y-sr-only">
+        <div id={`month-description-${id}`} className="usa-sr-only">
           Select a month from the list
         </div>
         <select
@@ -60,7 +60,7 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
         <label className="usa-label" htmlFor={`date_of_birth_day-${id}`}>
           {labelDay}
         </label>
-        <div id={`day-description-${id}`} className="a11y-sr-only">
+        <div id={`day-description-${id}`} className="usa-sr-only">
           Enter two numerals for day
         </div>
         <input
@@ -79,7 +79,7 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
         <label className="usa-label" htmlFor={`date_of_birth_year-${id}`}>
           {labelYear}
         </label>
-        <div id={`year-description-${id}`} className="a11y-sr-only">
+        <div id={`year-description-${id}`} className="usa-sr-only">
           Enter four numerals for year
         </div>
         <input

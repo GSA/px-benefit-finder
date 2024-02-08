@@ -122,7 +122,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                   Month
                 </label>
                 <div
-                  class="a11y-sr-only"
+                  class="usa-sr-only"
                   id="month-description-applicant_date_of_birth_0"
                 >
                   Select a month from the list
@@ -213,7 +213,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                   Day
                 </label>
                 <div
-                  class="a11y-sr-only"
+                  class="usa-sr-only"
                   id="day-description-applicant_date_of_birth_0"
                 >
                   Enter two numerals for day
@@ -239,7 +239,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                   Year
                 </label>
                 <div
-                  class="a11y-sr-only"
+                  class="usa-sr-only"
                   id="year-description-applicant_date_of_birth_0"
                 >
                   Enter four numerals for year

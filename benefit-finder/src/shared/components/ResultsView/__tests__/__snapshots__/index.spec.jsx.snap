@@ -3,7 +3,7 @@
 exports[`loads view 1`] = `
 <body>
   <span
-    class="a11y-sr-only"
+    class="usa-sr-only"
     data-testid="index-reset"
     id="index-reset"
     tabindex="-1"
@@ -140,7 +140,7 @@ exports[`loads view 1`] = `
 exports[`scenario 1 loads in view with the correct amount of likely eligible items 1`] = `
 <body>
   <span
-    class="a11y-sr-only"
+    class="usa-sr-only"
     data-testid="index-reset"
     id="index-reset"
     tabindex="-1"

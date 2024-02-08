@@ -16,7 +16,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
         Month
       </label>
       <div
-        class="a11y-sr-only"
+        class="usa-sr-only"
         id="month-description-undefined"
       >
         Select a month from the list
@@ -106,7 +106,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
         Day
       </label>
       <div
-        class="a11y-sr-only"
+        class="usa-sr-only"
         id="day-description-undefined"
       >
         Enter two numerals for day
@@ -131,7 +131,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
         Year
       </label>
       <div
-        class="a11y-sr-only"
+        class="usa-sr-only"
         id="year-description-undefined"
       >
         Enter four numerals for year

@@ -33,10 +33,6 @@ html,
     inset 0 0 0 2px white !important;
 }
 
-.a11y-sr-only {
-  @include sr-only;
-}
-
 // try some usa-gov overides
 .main-content {
   padding-bottom: 0 !important;

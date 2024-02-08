@@ -4,7 +4,7 @@
 @use '../../styles/breakpoints/_index.scss' as *;
 
 .relative-benefit-card {
-  margin-bottom: space.$space-md !important;
+  margin-bottom: space.$space-md;
 
   .benefit-card__container {
     background-color: color.$sky;

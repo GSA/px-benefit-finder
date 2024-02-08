@@ -5454,10 +5454,10 @@ exports[`loads window query scenario 1 1`] = `
                     href="/benefit-finder/life_event/retirement"
                   >
                     <div
-                      class="benefit-card__container usa-card__header"
+                      class="benefit-card__header usa-card__header"
                     >
                       <h3
-                        class="benefit-card__container usa-card__heading font-family-sans"
+                        class="benefit-card__heading usa-card__heading font-family-sans"
                         id=""
                       >
                         Benefit finder: retirement
@@ -5500,10 +5500,10 @@ exports[`loads window query scenario 1 1`] = `
                     href="/benefit-finder/life_event/disability"
                   >
                     <div
-                      class="benefit-card__container usa-card__header"
+                      class="benefit-card__header usa-card__header"
                     >
                       <h3
-                        class="benefit-card__container usa-card__heading font-family-sans"
+                        class="benefit-card__heading usa-card__heading font-family-sans"
                         id=""
                       >
                         Benefit finder: disability
@@ -11120,10 +11120,10 @@ exports[`loads window query scenario 2 1`] = `
                     href="/benefit-finder/life_event/retirement"
                   >
                     <div
-                      class="benefit-card__container usa-card__header"
+                      class="benefit-card__header usa-card__header"
                     >
                       <h3
-                        class="benefit-card__container usa-card__heading font-family-sans"
+                        class="benefit-card__heading usa-card__heading font-family-sans"
                         id=""
                       >
                         Benefit finder: retirement
@@ -11166,10 +11166,10 @@ exports[`loads window query scenario 2 1`] = `
                     href="/benefit-finder/life_event/disability"
                   >
                     <div
-                      class="benefit-card__container usa-card__header"
+                      class="benefit-card__header usa-card__header"
                     >
                       <h3
-                        class="benefit-card__container usa-card__heading font-family-sans"
+                        class="benefit-card__heading usa-card__heading font-family-sans"
                         id=""
                       >
                         Benefit finder: disability

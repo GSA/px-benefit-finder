@@ -4,7 +4,7 @@
 .benefit-hint--required {
   @include p;
 
-  color: color.$dark-medium-grey !important;
+  color: color.$dark-medium-grey;
 }
 
 .required {

@@ -5,6 +5,13 @@
   padding-bottom: space.$padding-bottom-md-plus;
 }
 
-.benefit-input--error + .benefit-radio__label::before {
+.usa-input--error + .benefit-radio__label::before {
   box-shadow: 0 0 0 3px color.$alert-red;
+}
+
+.benefit-radio__input:checked + .benefit-radio__label::before {
+  background-color: #005ea2;
+  box-shadow:
+    0 0 0 2px #005ea2,
+    inset 0 0 0 2px white;
 }

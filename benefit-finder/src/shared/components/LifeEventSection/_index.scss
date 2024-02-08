@@ -7,7 +7,7 @@
 .benefit-form,
 .verify-selections-view {
   background-color: color.$officer-navy;
-  margin: 0 space.$space-md;
+  margin: 0;
   padding-bottom: space.$padding-bottom-xl;
 }
 
@@ -21,9 +21,9 @@
   }
 
   button.step-back-link {
-    color: color.$dark-medium-grey !important;
-    background-color: color.$white !important;
-    width: auto !important;
+    color: color.$dark-medium-grey;
+    background-color: color.$white;
+    width: auto;
   }
 }
 

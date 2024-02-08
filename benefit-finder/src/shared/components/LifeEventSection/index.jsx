@@ -267,8 +267,8 @@ const LifeEventSection = ({
           {step === data.length
             ? `${sectionHeadings.final}`
             : step - 1 === 0
-            ? `${sectionHeadings.start}`
-            : `${sectionHeadings.continue}`}
+              ? `${sectionHeadings.start}`
+              : `${sectionHeadings.continue}`}
         </Heading>
         <div className="section-wrapper">
           <div className="section">

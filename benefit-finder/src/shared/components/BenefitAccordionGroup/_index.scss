@@ -47,8 +47,8 @@
   .expand-all {
     @include p;
 
-    background-color: transparent !important;
-    color: color.$electric-blue !important;
+    background-color: transparent;
+    color: color.$electric-blue;
     margin-bottom: space.$space-lg;
   }
 }

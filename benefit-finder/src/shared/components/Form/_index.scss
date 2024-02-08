@@ -1,0 +1,9 @@
+@use '../../styles/colors/index.scss' as color;
+
+form.benefit-form {
+  font-family: 'Public Sans', sans-serif;
+  background-color: color.$officer-navy;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+}

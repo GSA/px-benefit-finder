@@ -152,7 +152,7 @@ const Modal = ({
           </ObfuscatedLink>
         </li>
         <li
-          className="benefit-button-group__item width-full"
+          className="benefit-button-group__item usa-button-group__item width-full"
           key="nav-item-two"
         >
           <ObfuscatedLink

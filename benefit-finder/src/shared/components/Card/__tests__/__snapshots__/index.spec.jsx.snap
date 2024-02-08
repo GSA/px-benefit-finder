@@ -9,10 +9,10 @@ exports[`Card > renders a match to the previous snapshot 1`] = `
       class="benefit-card__container usa-card__container"
     >
       <div
-        class="benefit-card__container usa-card__header"
+        class="benefit-card__header usa-card__header"
       >
         <h3
-          class="benefit-card__container usa-card__heading font-family-sans"
+          class="benefit-card__heading usa-card__heading font-family-sans"
           id=""
         />
       </div>

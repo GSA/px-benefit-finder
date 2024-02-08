@@ -8,10 +8,10 @@
     @include p;
   }
 
-  &.benefit-input--error {
+  &.usa-input--error {
     padding: 8px 32px 8px 8px;
-    height: initial;
+    height: auto;
     border-radius: 3px;
-    border-color: color.$alert-red !important;
+    border-color: color.$alert-red;
   }
 }

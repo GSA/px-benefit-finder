@@ -29,9 +29,9 @@ const Card = ({ className, title, body, cta, href, noCarrot, carrotType }) => {
       key={`${title}`}
     >
       <a className="benefit-card__container usa-card__container" href={href}>
-        <div className="benefit-card__container usa-card__header">
+        <div className="benefit-card__header usa-card__header">
           <Heading
-            className="benefit-card__container usa-card__heading"
+            className="benefit-card__heading usa-card__heading"
             headingLevel={3}
           >
             {title}

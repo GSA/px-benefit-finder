@@ -2,8 +2,8 @@
 @use '../../styles/mixins/_index.scss' as *;
 
 .no-background {
-  background-color: color.$white !important;
-  border-left-color: color.$white !important;
+  background-color: color.$white;
+  border-left-color: color.$white;
 }
 
 h4.benefit-alert__heading {

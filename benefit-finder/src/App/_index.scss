@@ -2,36 +2,11 @@
 @use '../shared/styles/mixins/_index.scss' as *;
 @use '../shared/styles/sizes/_index.scss' as *;
 
-html,
-.benefit-finder.form {
+html {
   font-family: 'Public Sans', sans-serif;
   background-color: color.$officer-navy;
   height: 100%;
   min-height: 100vh;
-}
-
-.benefit-step-indicator__segment-label {
-  color: color.$dark-medium-grey;
-}
-
-.benefit-step-indicator__segment--complete
-  .benefit-step-indicator__segment-label {
-  color: color.$officer-navy !important;
-}
-
-.benefit-step-indicator__segment--current::after {
-  background-color: color.$officer-navy !important;
-}
-
-.benefit-step-indicator__segment--complete::after {
-  background-color: color.$officer-navy !important;
-}
-
-.benefit-radio__input:checked + .benefit-radio__label::before {
-  background-color: #005ea2 !important;
-  box-shadow:
-    0 0 0 2px #005ea2,
-    inset 0 0 0 2px white !important;
 }
 
 // try some benefit-gov overides
@@ -39,24 +14,6 @@ html,
   padding-bottom: 0 !important;
 }
 
-.benefit-footer {
+.usa-footer {
   padding-top: 0 !important;
-}
-
-.nav-item-one,
-.nav-item-two {
-  &.benefit-button {
-    @include important-bold;
-
-    background-color: color.$pop-blue !important;
-    color: color.$white !important;
-
-    // width: 100% !important;
-    width: $button-max-width !important;
-  }
-
-  &.benefit-button:hover {
-    background-color: color.$officer-navy !important;
-    color: color.$white !important;
-  }
 }

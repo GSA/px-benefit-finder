@@ -4,3 +4,20 @@
 .step-back-link {
   color: color.$dark-medium-grey;
 }
+
+.benefit-step-indicator__segment-label {
+  color: color.$dark-medium-grey;
+}
+
+.benefit-step-indicator__segment--complete
+  .benefit-step-indicator__segment-label {
+  color: color.$officer-navy;
+}
+
+.benefit-step-indicator__segment--current::after {
+  background-color: color.$officer-navy;
+}
+
+.benefit-step-indicator__segment--complete::after {
+  background-color: color.$officer-navy;
+}

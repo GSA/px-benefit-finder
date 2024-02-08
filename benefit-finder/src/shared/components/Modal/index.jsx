@@ -172,6 +172,7 @@ const Modal = ({
         onClick={() => handleOpenModal()}
       ></Trigger>
       <NavModal
+        id="benefit-finder"
         isOpen={modalOpen}
         onRequestClose={() => handleCloseModal(triggerRef)}
         style={customStyles}
@@ -193,22 +194,6 @@ const Modal = ({
             navItemTwoFunction={navItemTwoFunction}
           />
         )}
-        {/* child example: <ul className="usa-button-group">
-          <li className="usa-button-group__item">
-            <button type="button" className="usa-button" data-close-modal>
-              Continue without saving
-            </button>
-          </li>
-          <li className="usa-button-group__item">
-            <button
-              type="button"
-              className="usa-button padding-105 text-center"
-              data-close-modal
-            >
-              Go back
-            </button>
-          </li>
-        </ul> */}
       </NavModal>
     </div>
   )

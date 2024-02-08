@@ -53,6 +53,7 @@ jobs:
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
 
+
       - run: 
           name: Building, tagging, pushing the Docker Image
           command: |
@@ -126,7 +127,6 @@ jobs:
                 sleep 2
               fi
             done
-
 
   build_and_deploy_main:
     machine:
@@ -479,5 +479,6 @@ workflows:
                 - main
     jobs:
       - static-site-generation-main
+
 
       

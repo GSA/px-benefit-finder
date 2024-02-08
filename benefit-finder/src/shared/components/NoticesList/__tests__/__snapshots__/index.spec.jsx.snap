@@ -18,10 +18,10 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="usa-alert__body"
+            class="benefit-alert__body usa-alert__body"
           >
             <div
-              class="usa-alert__text"
+              class="benefit-alert__text usa-alert__text"
             >
               <div
                 class="notice-item"
@@ -48,10 +48,10 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="usa-alert__body"
+            class="benefit-alert__body usa-alert__body"
           >
             <div
-              class="usa-alert__text"
+              class="benefit-alert__text usa-alert__text"
             >
               <div
                 class="notice-item"
@@ -72,10 +72,10 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="usa-alert__body"
+            class="benefit-alert__body usa-alert__body"
           >
             <div
-              class="usa-alert__text"
+              class="benefit-alert__text usa-alert__text"
             >
               <div
                 class="notice-item"

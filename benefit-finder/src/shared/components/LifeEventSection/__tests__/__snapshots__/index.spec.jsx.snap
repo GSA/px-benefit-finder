@@ -68,15 +68,15 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           tabindex="0"
         >
           <div
-            class="usa-alert__body"
+            class="benefit-alert__body usa-alert__body"
           >
             <h4
-              class="usa-alert__heading"
+              class="benefit-alert__heading usa-alert__heading"
             >
               Error status
             </h4>
             <p
-              class="usa-alert__text"
+              class="benefit-alert__text usa-alert__text"
             >
               All fields marked required must be completed.
             </p>

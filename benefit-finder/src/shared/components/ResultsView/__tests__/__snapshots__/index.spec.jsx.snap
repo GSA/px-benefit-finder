@@ -351,10 +351,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -528,10 +528,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -700,10 +700,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -877,10 +877,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -1048,10 +1048,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -1233,10 +1233,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -1392,10 +1392,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -1578,10 +1578,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -1759,10 +1759,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -1942,10 +1942,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -2124,10 +2124,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -2289,10 +2289,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -2473,10 +2473,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -2645,10 +2645,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -2798,10 +2798,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -2975,10 +2975,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -3130,10 +3130,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -3284,10 +3284,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -3461,10 +3461,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -3631,10 +3631,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -3824,10 +3824,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -3977,10 +3977,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -4144,10 +4144,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -4303,10 +4303,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -4486,10 +4486,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -4666,10 +4666,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -4853,10 +4853,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -5036,10 +5036,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -5226,10 +5226,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -5403,10 +5403,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
@@ -5580,10 +5580,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       tabindex="0"
                     >
                       <div
-                        class="usa-alert__body"
+                        class="benefit-alert__body usa-alert__body"
                       >
                         <div
-                          class="usa-alert__text"
+                          class="benefit-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>

@@ -38,13 +38,15 @@ const Alert = ({
       aria-hidden={error}
     >
       {children ? (
-        <div className="usa-alert__body">
-          <div className="usa-alert__text">{children}</div>
+        <div className="benefit-alert__body usa-alert__body">
+          <div className="benefit-alert__text usa-alert__text">{children}</div>
         </div>
       ) : (
-        <div className="usa-alert__body">
-          <h4 className="usa-alert__heading">{heading}</h4>
-          <p className="usa-alert__text">{description}</p>
+        <div className="benefit-alert__body usa-alert__body">
+          <h4 className="benefit-alert__heading usa-alert__heading">
+            {heading}
+          </h4>
+          <p className="benefit-alert__text usa-alert__text">{description}</p>
         </div>
       )}
     </div>

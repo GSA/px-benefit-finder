@@ -6,10 +6,10 @@
   border-left-color: color.$white !important;
 }
 
-h4.usa-alert__heading {
+h4.benefit-alert__heading {
   @include h6;
 }
 
-.usa-alert__text {
+.benefit-alert__text {
   @include p2;
 }

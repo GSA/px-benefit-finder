@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Email > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="email-button usa-button usa-button--outline"
+    type="button"
+  >
+    Email
+  </button>
+</DocumentFragment>
+`;

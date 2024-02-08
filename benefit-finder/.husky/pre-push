@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 #! run all our tests before pushing up stream
-cd benefit-finder && CI=true npm run test
+cd benefit-finder && CI=true npm run test:coverage

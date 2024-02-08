@@ -1,0 +1,44 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="add-list-reset"
+  >
+    <a
+      class="usa-card__container"
+    >
+      <div
+        class="usa-card__header"
+      >
+        <h3
+          class="usa-card__heading font-family-sans"
+          id=""
+        />
+      </div>
+      <div
+        class="usa-card__body"
+      />
+      <div
+        class="usa-card__cta"
+      />
+      <svg
+        class="carrot"
+        fill="#162E51"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </a>
+  </li>
+</DocumentFragment>
+`;

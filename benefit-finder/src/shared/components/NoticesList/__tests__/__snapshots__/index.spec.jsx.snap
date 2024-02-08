@@ -1,0 +1,97 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NoticesList > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="notices"
+  >
+    <ul
+      class="notices-list add-list-reset"
+    >
+      <li
+        class="notice"
+      >
+        <div
+          aria-live="polite"
+          class="usa-alert usa-alert--info no-background"
+          role="alert"
+          tabindex="-1"
+        >
+          <div
+            class="usa-alert__body"
+          >
+            <div
+              class="usa-alert__text"
+            >
+              <div
+                class="notice-item"
+              >
+                <div>
+                  Your information
+                  <strong>
+                     is not
+                  </strong>
+                   shared, saved, or submitted.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="notice"
+      >
+        <div
+          aria-live="polite"
+          class="usa-alert usa-alert--info no-background"
+          role="alert"
+          tabindex="-1"
+        >
+          <div
+            class="usa-alert__body"
+          >
+            <div
+              class="usa-alert__text"
+            >
+              <div
+                class="notice-item"
+              >
+                Provide complete info to get more relevant results.
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="notice"
+      >
+        <div
+          aria-live="polite"
+          class="usa-alert usa-alert--info no-background"
+          role="alert"
+          tabindex="-1"
+        >
+          <div
+            class="usa-alert__body"
+          >
+            <div
+              class="usa-alert__text"
+            >
+              <div
+                class="notice-item"
+              >
+                <div>
+                  <strong>
+                    This form is not an application.
+                  </strong>
+                   You will need to apply for benefits with each agency.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

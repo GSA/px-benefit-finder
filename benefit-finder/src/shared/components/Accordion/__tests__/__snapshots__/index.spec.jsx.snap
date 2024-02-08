@@ -6,11 +6,11 @@ exports[`Accordion > renders a match to the previous snapshot 1`] = `
     class="benefit-accordion usa-accordion"
   >
     <h4
-      class="usa-accordion__heading"
+      class="benefit-accordion__heading usa-accordion__heading"
     >
       <button
         aria-expanded="false"
-        class="usa-accordion__button"
+        class="benefit-accordion__button usa-accordion__button"
         type="button"
       >
         <span
@@ -38,7 +38,7 @@ exports[`Accordion > renders a match to the previous snapshot 1`] = `
       </button>
     </h4>
     <div
-      class="usa-accordion__content usa-prose"
+      class="benefit-accordion__content usa-accordion__content usa-prose"
       hidden=""
     >
       <div />

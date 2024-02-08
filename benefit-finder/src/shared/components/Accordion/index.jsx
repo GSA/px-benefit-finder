@@ -76,10 +76,10 @@ const Accordion = ({
 
   return (
     <div className="benefit-accordion usa-accordion" {...props} hidden={hidden}>
-      <h4 className="usa-accordion__heading">
+      <h4 className="benefit-accordion__heading usa-accordion__heading">
         <button
           type="button"
-          className="usa-accordion__button"
+          className="benefit-accordion__button usa-accordion__button"
           aria-expanded={isOpen || false}
           aria-controls={id}
           onClick={() => setOpen(!isOpen)}
@@ -92,7 +92,7 @@ const Accordion = ({
       </h4>
       <div
         id={id}
-        className="usa-accordion__content usa-prose"
+        className="benefit-accordion__content usa-accordion__content usa-prose"
         hidden={isOpen || true}
       >
         <div>{children}</div>

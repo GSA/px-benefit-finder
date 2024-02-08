@@ -3,10 +3,13 @@
 @use '../../styles/space/_index.scss' as space;
 
 .benefit-accordion {
-  .usa-accordion__button {
+  .benefit-accordion__button {
     padding-bottom: space.$padding-bottom-md-plus;
     position: relative;
-    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 11%);
+
+    &:not:focus {
+      box-shadow: 0 4px 4px 0 rgb(0 0 0 / 11%);
+    }
 
     svg {
       position: absolute;
@@ -45,7 +48,7 @@
     }
   }
 
-  .usa-accordion__content {
+  .benefit-accordion__content {
     border-bottom: 1px solid color.$pop-blue;
     border-left: 1px solid color.$pop-blue;
     border-right: 1px solid color.$pop-blue;

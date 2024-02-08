@@ -221,12 +221,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="0-Burial benefits"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -258,7 +258,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="0-Burial benefits"
                 >
@@ -398,12 +398,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="1-Death gratuity"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -435,7 +435,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="1-Death gratuity"
                 >
@@ -575,12 +575,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="2-Burial flag"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -612,7 +612,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="2-Burial flag"
                 >
@@ -747,12 +747,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="3-Annuity for certain military surviving spouses"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -784,7 +784,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="3-Annuity for certain military surviving spouses"
                 >
@@ -924,12 +924,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="4-Burial in VA national cemetery"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -961,7 +961,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="4-Burial in VA national cemetery"
                 >
@@ -1095,12 +1095,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="5-Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1132,7 +1132,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="5-Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                 >
@@ -1279,12 +1279,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="benefit"
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="6-COVID-19 funeral assistance"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1316,7 +1316,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="6-COVID-19 funeral assistance"
                 >
@@ -1439,12 +1439,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="7-Dependency and Indemnity Compensation (DIC) for child"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1476,7 +1476,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="7-Dependency and Indemnity Compensation (DIC) for child"
                 >
@@ -1625,12 +1625,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="8-Dependency and Indemnity Compensation (DIC) for parent"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1662,7 +1662,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="8-Dependency and Indemnity Compensation (DIC) for parent"
                 >
@@ -1806,12 +1806,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="9-Dependency and Indemnity Compensation (DIC) for spouse"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1843,7 +1843,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="9-Dependency and Indemnity Compensation (DIC) for spouse"
                 >
@@ -1989,12 +1989,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="10-Education benefits (GI Bill) for survivors"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2026,7 +2026,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="10-Education benefits (GI Bill) for survivors"
                 >
@@ -2171,12 +2171,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="11-Financial Assistance and Social Services (FASS) for deceased"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2208,7 +2208,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="11-Financial Assistance and Social Services (FASS) for deceased"
                 >
@@ -2336,12 +2336,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="12-Home loan program for survivors"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2373,7 +2373,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="12-Home loan program for survivors"
                 >
@@ -2520,12 +2520,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="13-Life insurance for survivors of veterans"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2557,7 +2557,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="13-Life insurance for survivors of veterans"
                 >
@@ -2691,12 +2691,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="benefit"
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="14-Lump-sum death benefit"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2728,7 +2728,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="14-Lump-sum death benefit"
                 >
@@ -2845,12 +2845,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="15-Presidential Memorial Certificate"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2882,7 +2882,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="15-Presidential Memorial Certificate"
                 >
@@ -3022,12 +3022,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="16-Public safety officers' death benefits"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3059,7 +3059,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="16-Public safety officers' death benefits"
                 >
@@ -3177,12 +3177,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="17-Public safety officers' Educational Assistance Program"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3214,7 +3214,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="17-Public safety officers' Educational Assistance Program"
                 >
@@ -3331,12 +3331,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="18-Survivor benefit plan"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3368,7 +3368,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="18-Survivor benefit plan"
                 >
@@ -3508,12 +3508,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="19-Survivors benefits for child"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3545,7 +3545,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="19-Survivors benefits for child"
                 >
@@ -3678,12 +3678,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="20-Survivors benefits for child with disabilities"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3715,7 +3715,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="20-Survivors benefits for child with disabilities"
                 >
@@ -3870,12 +3870,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="benefit"
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="21-Survivors benefits for mothers/fathers"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3907,7 +3907,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="21-Survivors benefits for mothers/fathers"
                 >
@@ -4024,12 +4024,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="22-Survivors benefits for parents"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4061,7 +4061,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="22-Survivors benefits for parents"
                 >
@@ -4190,12 +4190,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="benefit"
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="23-Survivors benefits for spouse"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4227,7 +4227,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="23-Survivors benefits for spouse"
                 >
@@ -4350,12 +4350,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="24-Survivors benefits for spouse with disabilities"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4387,7 +4387,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="24-Survivors benefits for spouse with disabilities"
                 >
@@ -4533,12 +4533,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="25-Survivors pension for child"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4570,7 +4570,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="25-Survivors pension for child"
                 >
@@ -4713,12 +4713,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="26-Survivors pension for child with disabilities"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4750,7 +4750,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="26-Survivors pension for child with disabilities"
                 >
@@ -4900,12 +4900,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="27-Survivors pension for spouse"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4937,7 +4937,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="27-Survivors pension for spouse"
                 >
@@ -5083,12 +5083,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="28-Veterans burial allowance"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -5120,7 +5120,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="28-Veterans burial allowance"
                 >
@@ -5273,12 +5273,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="29-Veterans headstone and grave marker"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -5310,7 +5310,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="29-Veterans headstone and grave marker"
                 >
@@ -5450,12 +5450,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 hidden=""
               >
                 <h4
-                  class="usa-accordion__heading"
+                  class="benefit-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="30-Veterans medallion"
                     aria-expanded="false"
-                    class="usa-accordion__button"
+                    class="benefit-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -5487,7 +5487,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="usa-accordion__content usa-prose"
+                  class="benefit-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="30-Veterans medallion"
                 >

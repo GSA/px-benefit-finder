@@ -4,7 +4,7 @@ version: 2.1
 jobs:
   build_and_deploy_dev:
     machine:
-      image: ubuntu-2004:202107-02
+      image: default
 
     steps:
       - run:
@@ -17,7 +17,6 @@ jobs:
             git submodule update
             cd usagov-2021
             git checkout prod
-
 
       - run:
           name: Moving the benefit-finder app into usagov-2021 module
@@ -37,7 +36,7 @@ jobs:
             mv bin/cloudgov/bf-tome-sync.sh usagov-2021/scripts/bf-tome-sync.sh
             mv bin/cloudgov/cf-install.sh usagov-2021/scripts/cf-install.sh
 
-      - run: 
+      - run:
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
@@ -53,7 +52,7 @@ jobs:
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
 
-      - run: 
+      - run:
           name: Building, tagging, pushing the Docker Image
           command: |
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
@@ -63,7 +62,6 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             docker push "$DOCKERREPO:$IMAGE_TAG"
             docker logout
-            
 
       - run:
           name: Injecting container name to the manifest.yml
@@ -101,7 +99,7 @@ jobs:
               apt-get install -y cf8-cli
             fi
             cf -v
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"  
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
 
       - run:
           name: Deploy the app to cloud.gov
@@ -117,7 +115,7 @@ jobs:
             cf stop benefit-finder-cms-${CIRCLE_BRANCH}
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            while : ; do 
+            while : ; do
               app_status=$( cf app benefit-finder-cms-${CIRCLE_BRANCH} | grep "#0" | awk '{print $2}' )
               if [ "${app_status}" == "running" ]; then
                 break
@@ -126,7 +124,6 @@ jobs:
                 sleep 2
               fi
             done
-
 
   build_and_deploy_main:
     machine:
@@ -144,7 +141,6 @@ jobs:
             git submodule update
             cd usagov-2021
             git checkout prod
-
 
       - run:
           name: Moving the benefit-finder app into usagov-2021 module
@@ -164,13 +160,13 @@ jobs:
             mv bin/cloudgov/bf-tome-sync.sh usagov-2021/scripts/bf-tome-sync.sh
             mv bin/cloudgov/cf-install.sh usagov-2021/scripts/cf-install.sh
 
-      - run: 
+      - run:
           name: Pre-docker-build configurations
           command: |
             cd px-benefit-finder/usagov-2021
             sed -i "s/memory_limit       = 1G/memory_limit       = 500M/g" .docker/src-cms/etc/php81/php.ini
             mv .docker/Dockerfile-cms .
-            sed -i 's/80/8080/g' Dockerfile-cms  
+            sed -i 's/80/8080/g' Dockerfile-cms
             sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
             sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/www.conf.tmpl
@@ -178,9 +174,8 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            
-          
-      - run: 
+
+      - run:
           name: Building, tagging, pushing the Docker Image
           command: |
             export CIRCLE_BRANCH="main"
@@ -191,7 +186,6 @@ jobs:
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
             docker push "$DOCKERREPO:$IMAGE_TAG"
             docker logout
-            
 
       - run:
           name: Injecting container name to the manifest.yml
@@ -246,7 +240,7 @@ jobs:
             cf stop benefit-finder-cms-${CIRCLE_BRANCH}
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
-            while : ; do 
+            while : ; do
               app_status=$( cf app benefit-finder-cms-${CIRCLE_BRANCH} | grep "#0" | awk '{print $2}' )
               if [ "${app_status}" == "running" ]; then
                 break
@@ -286,38 +280,38 @@ jobs:
             fi
             cf -v
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            
+
       - run:
           name: Deploy Storybook
-          command: |  
-             cd px-benefit-finder/benefit-finder
-             mv manifest.yml manifest.yml.tpl
-             envsubst < manifest.yml.tpl > manifest.yml
-             echo "---------------------------------------------"
-             pwd
-             ls -l
-             cat manifest.yml
-             echo "---------------------------------------------"
-             nvm install node --reinstall-packages-from=node
-             npm i @craco/craco
-             npm run build
-             cd .. 
-             bash mv-uswds-usagov-theme.sh
-             cd benefit-finder
-             npm run build:storybook
-             mv manifest.yml storybook-static/
-             mv Staticfile storybook-static/
-             mv nginx storybook-static/
-             cd storybook-static
-             echo "${storybook_username}:${storybook_password}" > Staticfile.auth
-             cf push benefit-finder-storybook-${CIRCLE_BRANCH}        
+          command: |
+            cd px-benefit-finder/benefit-finder
+            mv manifest.yml manifest.yml.tpl
+            envsubst < manifest.yml.tpl > manifest.yml
+            echo "---------------------------------------------"
+            pwd
+            ls -l
+            cat manifest.yml
+            echo "---------------------------------------------"
+            nvm install node --reinstall-packages-from=node
+            npm i @craco/craco
+            npm run build
+            cd ..
+            bash mv-uswds-usagov-theme.sh
+            cd benefit-finder
+            npm run build:storybook
+            mv manifest.yml storybook-static/
+            mv Staticfile storybook-static/
+            mv nginx storybook-static/
+            cd storybook-static
+            echo "${storybook_username}:${storybook_password}" > Staticfile.auth
+            cf push benefit-finder-storybook-${CIRCLE_BRANCH}
 
   lint:
     docker:
       - image: cimg/php:8.0.16-node
     steps:
       - checkout
-      - run: 
+      - run:
           name: Init and Update USAGov submodule
           command: |
             git submodule init
@@ -368,7 +362,7 @@ jobs:
             $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder | tee /tmp/results/php-cs.log
       - store_artifacts:
           path: /tmp/results
-  
+
   static-site-generation-dev:
     docker:
       - image: cimg/base:stable
@@ -390,7 +384,7 @@ jobs:
               apt-get install -y cf8-cli
             fi
             cf -v
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"         
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
       - run:
           name: "Run Drush Cron and Generate Static Site"
           command: |
@@ -419,7 +413,7 @@ jobs:
               apt-get install -y cf8-cli
             fi
             cf -v
-            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"         
+            cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
       - run:
           name: "Run Drush Cron and Generate Static Site"
           command: |
@@ -429,32 +423,32 @@ jobs:
 
 # Orchestrate our job run sequence
 workflows:
-# This workflow only gets triggered when there is a push to `main` and `dev` branches.
+  # This workflow only gets triggered when there is a push to `main` and `dev` branches.
   cms_build_and_deploy_workflow:
     jobs:
       - build_and_deploy_dev:
           filters:
             branches:
-              only: 
+              only:
                 - dev
       - static-site-generation-dev:
           requires:
             - build_and_deploy_dev
           filters:
             branches:
-              only: 
+              only:
                 - dev
       - build_and_deploy_main:
           filters:
             branches:
-              only: 
+              only:
                 - main
       - static-site-generation-main:
           requires:
             - build_and_deploy_main
           filters:
             branches:
-              only: 
+              only:
                 - main
 
   create-component-library-workflow:
@@ -468,7 +462,7 @@ workflows:
   php-lint-code-snif:
     jobs:
       - lint
-   
+
   static-site-generation-cron:
     triggers:
       - schedule:
@@ -479,5 +473,3 @@ workflows:
                 - main
     jobs:
       - static-site-generation-main
-
-      

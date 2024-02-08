@@ -281,14 +281,14 @@ const LifeEventSection = ({
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
-              <div id="benefit-section">
+              <div id="bf-usa-section">
                 <Alert
                   alertFieldRef={alertFieldRef}
                   heading={ui.alertBanner.heading}
                   description={ui.alertBanner.description}
                   error
                 ></Alert>
-                <Heading className="benefit-section-heading" headingLevel={2}>
+                <Heading className="bf-usa-section-heading" headingLevel={2}>
                   {currentData.section.heading}
                 </Heading>
                 <div

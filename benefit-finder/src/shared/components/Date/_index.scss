@@ -7,16 +7,16 @@
   width: 100%;
 }
 
-.benefit-form-group {
+.bf-usa-form-group {
   width: 100%;
 }
 
-.benefit-memorable-date {
+.bf-usa-memorable-date {
   max-width: 320px;
   flex-wrap: wrap;
 }
 
-.benefit-input {
+.bf-usa-input {
   border-radius: 3px;
 
   @include p;
@@ -29,20 +29,20 @@
   }
 }
 
-.benefit-form-group--month {
+.bf-usa-form-group--month {
   width: 242px;
 }
 
-.benefit-form-group--day {
+.bf-usa-form-group--day {
   width: 64px;
 }
 
-.benefit-form-group--year {
+.bf-usa-form-group--year {
   width: 95px;
 }
 
 @media (width >= $desktop) {
-  .benefit-memorable-date {
+  .bf-usa-memorable-date {
     max-width: 100%;
   }
 }

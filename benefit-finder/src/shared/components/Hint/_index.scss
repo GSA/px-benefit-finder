@@ -1,7 +1,7 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
 
-.benefit-hint--required {
+.bf-usa-hint--required {
   @include p;
 
   color: color.$dark-medium-grey;
@@ -15,6 +15,6 @@
   margin-left: 10px;
 }
 
-.benefit-hint {
+.bf-usa-hint {
   @include p;
 }

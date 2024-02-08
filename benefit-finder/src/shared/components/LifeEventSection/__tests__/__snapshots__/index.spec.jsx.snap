@@ -17,28 +17,28 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
       <div>
         <div
           aria-label="progress"
-          class="benefit-step-indicator usa-step-indicator"
+          class="bf-usa-step-indicator usa-step-indicator"
           tabindex="0"
         >
           <ol
-            class="benefit-step-indicator__segments usa-step-indicator__segments"
+            class="bf-usa-step-indicator__segments usa-step-indicator__segments"
           >
             <li
               aria-current="true"
-              class="benefit-step-indicator__segment usa-step-indicator__segment benefit-step-indicator__segment--current usa-step-indicator__segment--current "
+              class="bf-usa-step-indicator__segment usa-step-indicator__segment bf-usa-step-indicator__segment--current usa-step-indicator__segment--current "
             >
               <span
-                class="benefit-step-indicator__segment-label usa-step-indicator__segment-label"
+                class="bf-usa-step-indicator__segment-label usa-step-indicator__segment-label"
               >
                 About the applicant
               </span>
             </li>
             <li
               aria-current="false"
-              class="benefit-step-indicator__segment usa-step-indicator__segment benefit-step-indicator__segment usa-step-indicator__segment "
+              class="bf-usa-step-indicator__segment usa-step-indicator__segment bf-usa-step-indicator__segment usa-step-indicator__segment "
             >
               <span
-                class="benefit-step-indicator__segment-label usa-step-indicator__segment-label"
+                class="bf-usa-step-indicator__segment-label usa-step-indicator__segment-label"
               >
                 About the deceased
                 <span
@@ -51,39 +51,39 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </ol>
         </div>
         <button
-          class="step-back-link benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
+          class="step-back-link bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
           type="button"
         >
           Back
         </button>
       </div>
       <div
-        id="benefit-section"
+        id="bf-usa-section"
       >
         <div
           aria-hidden="true"
           aria-live="polite"
-          class="benefit-alert usa-alert usa-alert--error display-none"
+          class="bf-usa-alert usa-alert usa-alert--error display-none"
           role="alert"
           tabindex="0"
         >
           <div
-            class="benefit-alert__body usa-alert__body"
+            class="bf-usa-alert__body usa-alert__body"
           >
             <h4
-              class="benefit-alert__heading usa-alert__heading"
+              class="bf-usa-alert__heading usa-alert__heading"
             >
               Error status
             </h4>
             <p
-              class="benefit-alert__text usa-alert__text"
+              class="bf-usa-alert__text usa-alert__text"
             >
               All fields marked required must be completed.
             </p>
           </div>
         </div>
         <h2
-          class="benefit-section-heading font-family-sans"
+          class="bf-usa-section-heading font-family-sans"
           id=""
         >
           About the applicant
@@ -94,14 +94,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </p>
         </div>
         <fieldset
-          class="benefit-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset "
         >
           <legend
             class="usa-legend legend"
           >
             Date of birth:
             <span
-              class="benefit-hint usa-hint usa-hint--required benefit-hint--required required"
+              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required required"
               title="required"
             >
               (Required)
@@ -109,14 +109,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </legend>
           <div>
             <div
-              class="benefit-memorable-date usa-memorable-date"
-              id="benefit-memorable-date-applicant_date_of_birth_0 usa-memorable-date-applicant_date_of_birth_0"
+              class="bf-usa-memorable-date usa-memorable-date"
+              id="bf-usa-memorable-date-applicant_date_of_birth_0 usa-memorable-date-applicant_date_of_birth_0"
             >
               <div
-                class="benefit-form-group usa-form-group benefit-form-group--month usa-form-group--month benefit-form-group--select usa-form-group--select"
+                class="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select"
               >
                 <label
-                  class="benefit-label usa-label"
+                  class="bf-usa-label usa-label"
                   for="date_of_birth_month-applicant_date_of_birth_0"
                 >
                   Month
@@ -130,7 +130,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 <select
                   aria-describedby="month-description-applicant_date_of_birth_0"
                   aria-invalid="false"
-                  class="benefit-select usa-select required-field"
+                  class="bf-usa-select usa-select required-field"
                   id="date_of_birth_month-applicant_date_of_birth_0"
                   name="date_of_birth_month-applicant_date_of_birth_0"
                   required=""
@@ -204,10 +204,10 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 </select>
               </div>
               <div
-                class="benefit-form-group usa-form-group benefit-form-group--day usa-form-group--day"
+                class="bf-usa-form-group usa-form-group bf-usa-form-group--day usa-form-group--day"
               >
                 <label
-                  class="benefit-label usa-label"
+                  class="bf-usa-label usa-label"
                   for="date_of_birth_day-applicant_date_of_birth_0"
                 >
                   Day
@@ -221,7 +221,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 <input
                   aria-describedby="day-description-applicant_date_of_birth_0"
                   aria-invalid="false"
-                  class="benefit-input usa-input required-field"
+                  class="bf-usa-input usa-input required-field"
                   id="date_of_birth_day-applicant_date_of_birth_0"
                   inputmode="numeric"
                   name="date_of_birth_day-applicant_date_of_birth_0"
@@ -230,10 +230,10 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 />
               </div>
               <div
-                class="benefit-form-group usa-form-group benefit-form-group--year usa-form-group--year"
+                class="bf-usa-form-group usa-form-group bf-usa-form-group--year usa-form-group--year"
               >
                 <label
-                  class="benefit-label usa-label"
+                  class="bf-usa-label usa-label"
                   for="date_of_birth_year-applicant_date_of_birth_0"
                 >
                   Year
@@ -247,7 +247,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 <input
                   aria-describedby="year-description-applicant_date_of_birth_0"
                   aria-invalid="false"
-                  class="benefit-input usa-input required-field"
+                  class="bf-usa-input usa-input required-field"
                   id="date_of_birth_year-applicant_date_of_birth_0"
                   inputmode="numeric"
                   name="date_of_birth_year-applicant_date_of_birth_0"
@@ -259,14 +259,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="benefit-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset "
         >
           <legend
             class="usa-legend legend"
           >
             Applicant’s relationship to the deceased:
             <span
-              class="benefit-hint usa-hint usa-hint--required benefit-hint--required required"
+              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required required"
               title="required"
             >
               (Required)
@@ -274,14 +274,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </legend>
           <div>
             <label
-              class="benefit-label usa-label"
+              class="bf-usa-label usa-label"
               for="applicant_relationship_to_the_deceased_0"
             >
               Select
             </label>
             <select
               aria-invalid="false"
-              class="benefit-select usa-select required-field"
+              class="bf-usa-select usa-select required-field"
               id="applicant_relationship_to_the_deceased_0"
               name="applicant_relationship_to_the_deceased_0"
               required=""
@@ -321,14 +321,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="benefit-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset "
         >
           <legend
             class="usa-legend legend"
           >
             Marital Status
             <span
-              class="benefit-hint usa-hint usa-hint--required benefit-hint--required required"
+              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required required"
               title="required"
             >
               (Required)
@@ -336,14 +336,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </legend>
           <div>
             <label
-              class="benefit-label usa-label"
+              class="bf-usa-label usa-label"
               for="applicant_marital_status_0"
             >
               Select
             </label>
             <select
               aria-invalid="false"
-              class="benefit-select usa-select required-field"
+              class="bf-usa-select usa-select required-field"
               id="applicant_marital_status_0"
               name="applicant_marital_status_0"
               required=""
@@ -378,7 +378,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="benefit-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset "
         >
           <legend
             class="usa-legend legend"
@@ -390,34 +390,34 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             class="radio-group"
           >
             <div
-              class="benefit-radio usa-radio"
+              class="bf-usa-radio usa-radio"
             >
               <input
-                class="benefit-radio__input usa-radio__input "
+                class="bf-usa-radio__input usa-radio__input "
                 id="applicant_citizen_status_0_0"
                 name="applicant_citizen_status_0"
                 type="radio"
                 value="Yes"
               />
               <label
-                class="benefit-radio__label usa-radio__label benefit-label usa-label"
+                class="bf-usa-radio__label usa-radio__label bf-usa-label usa-label"
                 for="applicant_citizen_status_0_0"
               >
                 Yes
               </label>
             </div>
             <div
-              class="benefit-radio usa-radio"
+              class="bf-usa-radio usa-radio"
             >
               <input
-                class="benefit-radio__input usa-radio__input "
+                class="bf-usa-radio__input usa-radio__input "
                 id="applicant_citizen_status_0_1"
                 name="applicant_citizen_status_0"
                 type="radio"
                 value="No"
               />
               <label
-                class="benefit-radio__label usa-radio__label benefit-label usa-label"
+                class="bf-usa-radio__label usa-radio__label bf-usa-label usa-label"
                 for="applicant_citizen_status_0_1"
               >
                 No
@@ -426,7 +426,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="benefit-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset "
         >
           <legend
             class="usa-legend legend"
@@ -438,34 +438,34 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             class="radio-group"
           >
             <div
-              class="benefit-radio usa-radio"
+              class="bf-usa-radio usa-radio"
             >
               <input
-                class="benefit-radio__input usa-radio__input "
+                class="bf-usa-radio__input usa-radio__input "
                 id="applicant_care_for_child_0_0"
                 name="applicant_care_for_child_0"
                 type="radio"
                 value="Yes"
               />
               <label
-                class="benefit-radio__label usa-radio__label benefit-label usa-label"
+                class="bf-usa-radio__label usa-radio__label bf-usa-label usa-label"
                 for="applicant_care_for_child_0_0"
               >
                 Yes
               </label>
             </div>
             <div
-              class="benefit-radio usa-radio"
+              class="bf-usa-radio usa-radio"
             >
               <input
-                class="benefit-radio__input usa-radio__input "
+                class="bf-usa-radio__input usa-radio__input "
                 id="applicant_care_for_child_0_1"
                 name="applicant_care_for_child_0"
                 type="radio"
                 value="No"
               />
               <label
-                class="benefit-radio__label usa-radio__label benefit-label usa-label"
+                class="bf-usa-radio__label usa-radio__label bf-usa-label usa-label"
                 for="applicant_care_for_child_0_1"
               >
                 No
@@ -474,7 +474,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="benefit-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset "
         >
           <legend
             class="usa-legend legend"
@@ -486,34 +486,34 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             class="radio-group"
           >
             <div
-              class="benefit-radio usa-radio"
+              class="bf-usa-radio usa-radio"
             >
               <input
-                class="benefit-radio__input usa-radio__input "
+                class="bf-usa-radio__input usa-radio__input "
                 id="applicant_paid_funeral_expenses_0_0"
                 name="applicant_paid_funeral_expenses_0"
                 type="radio"
                 value="Yes"
               />
               <label
-                class="benefit-radio__label usa-radio__label benefit-label usa-label"
+                class="bf-usa-radio__label usa-radio__label bf-usa-label usa-label"
                 for="applicant_paid_funeral_expenses_0_0"
               >
                 Yes
               </label>
             </div>
             <div
-              class="benefit-radio usa-radio"
+              class="bf-usa-radio usa-radio"
             >
               <input
-                class="benefit-radio__input usa-radio__input "
+                class="bf-usa-radio__input usa-radio__input "
                 id="applicant_paid_funeral_expenses_0_1"
                 name="applicant_paid_funeral_expenses_0"
                 type="radio"
                 value="No"
               />
               <label
-                class="benefit-radio__label usa-radio__label benefit-label usa-label"
+                class="bf-usa-radio__label usa-radio__label bf-usa-label usa-label"
                 for="applicant_paid_funeral_expenses_0_1"
               >
                 No
@@ -526,13 +526,13 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         class="section-nav-btn-group"
       >
         <button
-          class="benefit-button usa-button benefit-button--outline usa-button--outline"
+          class="bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
           type="button"
         >
           Back
         </button>
         <button
-          class="benefit-button usa-button"
+          class="bf-usa-button usa-button"
           type="button"
         >
           Continue

@@ -3,14 +3,14 @@
 exports[`Accordion > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="benefit-accordion usa-accordion"
+    class="bf-usa-accordion usa-accordion"
   >
     <h4
-      class="benefit-accordion__heading usa-accordion__heading"
+      class="bf-usa-accordion__heading usa-accordion__heading"
     >
       <button
         aria-expanded="false"
-        class="benefit-accordion__button usa-accordion__button"
+        class="bf-usa-accordion__button usa-accordion__button"
         type="button"
       >
         <span
@@ -38,7 +38,7 @@ exports[`Accordion > renders a match to the previous snapshot 1`] = `
       </button>
     </h4>
     <div
-      class="benefit-accordion__content usa-accordion__content usa-prose"
+      class="bf-usa-accordion__content usa-accordion__content usa-prose"
       hidden=""
     >
       <div />

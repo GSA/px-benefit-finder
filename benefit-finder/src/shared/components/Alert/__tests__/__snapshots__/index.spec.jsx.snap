@@ -4,18 +4,18 @@ exports[`Alert > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
     aria-live="polite"
-    class="benefit-alert usa-alert usa-alert--info "
+    class="bf-usa-alert usa-alert usa-alert--info "
     role="alert"
     tabindex="0"
   >
     <div
-      class="benefit-alert__body usa-alert__body"
+      class="bf-usa-alert__body usa-alert__body"
     >
       <h4
-        class="benefit-alert__heading usa-alert__heading"
+        class="bf-usa-alert__heading usa-alert__heading"
       />
       <p
-        class="benefit-alert__text usa-alert__text"
+        class="bf-usa-alert__text usa-alert__text"
       />
     </div>
   </div>

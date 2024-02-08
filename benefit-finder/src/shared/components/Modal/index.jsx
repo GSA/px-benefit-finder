@@ -135,9 +135,9 @@ const Modal = ({
     navItemTwoFunction,
   }) => {
     return (
-      <ul className="modal benefit-button-group usa-button-group width-full">
+      <ul className="modal bf-usa-button-group usa-button-group width-full">
         <li
-          className="benefit-button-group__item usa-button-group__item width-full"
+          className="bf-usa-button-group__item usa-button-group__item width-full"
           key="nav-item-one"
         >
           <ObfuscatedLink
@@ -152,7 +152,7 @@ const Modal = ({
           </ObfuscatedLink>
         </li>
         <li
-          className="benefit-button-group__item usa-button-group__item width-full"
+          className="bf-usa-button-group__item usa-button-group__item width-full"
           key="nav-item-two"
         >
           <ObfuscatedLink
@@ -171,7 +171,7 @@ const Modal = ({
   }
 
   return (
-    <div id={id} className="benefit-modal-group">
+    <div id={id} className="bf-usa-modal-group">
       <Trigger
         triggerLabel={triggerLabel}
         onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}

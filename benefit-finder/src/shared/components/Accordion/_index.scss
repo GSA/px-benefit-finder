@@ -2,8 +2,8 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
-.benefit-accordion {
-  .benefit-accordion__button {
+.bf-usa-accordion {
+  .bf-usa-accordion__button {
     padding-bottom: space.$padding-bottom-md-plus;
     position: relative;
 
@@ -48,7 +48,7 @@
     }
   }
 
-  .benefit-accordion__content {
+  .bf-usa-accordion__content {
     border-bottom: 1px solid color.$pop-blue;
     border-left: 1px solid color.$pop-blue;
     border-right: 1px solid color.$pop-blue;

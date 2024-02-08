@@ -18,7 +18,7 @@ a.nav-item-one,
 a.nav-item-two {
   @include important-bold;
 
-  &.benefit-button {
+  &.bf-usa-button {
     @include important-bold;
 
     background-color: color.$pop-blue;
@@ -26,7 +26,7 @@ a.nav-item-two {
     width: $button-max-width;
   }
 
-  &.benefit-button:hover {
+  &.bf-usa-button:hover {
     background-color: color.$officer-navy;
     color: color.$white;
   }
@@ -42,7 +42,7 @@ a.nav-item-two {
   margin: space.$space-md-plus 0;
 }
 
-.modal.benefit-button-group.width-full {
+.modal.bf-usa-button-group.width-full {
   margin: 0 auto;
   text-align: center;
 }

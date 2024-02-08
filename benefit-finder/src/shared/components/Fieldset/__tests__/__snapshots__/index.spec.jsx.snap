@@ -3,7 +3,7 @@
 exports[`Fieldset > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <fieldset
-    class="benefit-fieldset usa-fieldset "
+    class="bf-usa-fieldset usa-fieldset "
   />
 </DocumentFragment>
 `;

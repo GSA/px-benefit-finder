@@ -3,7 +3,7 @@
 exports[`Label > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <label
-    class="benefit-label usa-label"
+    class="bf-usa-label usa-label"
   />
 </DocumentFragment>
 `;

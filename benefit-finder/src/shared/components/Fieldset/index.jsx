@@ -24,7 +24,7 @@ const Fieldset = ({
   className,
 }) => {
   const handleHidden = hidden !== undefined && hidden ? ['display-none'] : ''
-  const defaultClasses = ['benefit-fieldset usa-fieldset']
+  const defaultClasses = ['bf-usa-fieldset usa-fieldset']
   const utilityClasses = handleHidden
 
   /**

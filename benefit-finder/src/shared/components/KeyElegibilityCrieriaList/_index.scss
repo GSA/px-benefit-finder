@@ -29,7 +29,7 @@
       background-color: color.$sky;
     }
 
-    li.benefit-list {
+    li.bf-usa-list {
       @include p2;
     }
 
@@ -39,6 +39,6 @@
   }
 }
 
-.benefit-alert .usa-alert__text {
+.bf-usa-alert .usa-alert__text {
   @include p3;
 }

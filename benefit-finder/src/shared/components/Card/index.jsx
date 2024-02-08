@@ -28,20 +28,20 @@ const Card = ({ className, title, body, cta, href, noCarrot, carrotType }) => {
       })}
       key={`${title}`}
     >
-      <a className="benefit-card__container usa-card__container" href={href}>
-        <div className="benefit-card__header usa-card__header">
+      <a className="bf-usa-card__container usa-card__container" href={href}>
+        <div className="bf-usa-card__header usa-card__header">
           <Heading
-            className="benefit-card__heading usa-card__heading"
+            className="bf-usa-card__heading usa-card__heading"
             headingLevel={3}
           >
             {title}
           </Heading>
         </div>
         <div
-          className="benefit-card__body usa-card__body"
+          className="bf-usa-card__body usa-card__body"
           dangerouslySetInnerHTML={createMarkup(body)}
         />
-        <div className="benefit-card__cta usa-card__cta">{cta}</div>
+        <div className="bf-usa-card__cta usa-card__cta">{cta}</div>
         {handleCarrot}
       </a>
     </li>

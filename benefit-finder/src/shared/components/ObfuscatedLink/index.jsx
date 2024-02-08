@@ -28,8 +28,8 @@ const ObfuscatedLink = ({
 }) => {
   // set our link as external, will be decorated by uswds css
   const defaultClasses = ext
-    ? ['benefit-button', 'usa-button', 'usa-link--external', 'obfuscated-link']
-    : ['benefit-button', 'usa-button', 'obfuscated-link']
+    ? ['bf-usa-button', 'usa-button', 'usa-link--external', 'obfuscated-link']
+    : ['bf-usa-button', 'usa-button', 'obfuscated-link']
 
   const handleCarrot = noCarrot === true ? null : <Carrot color="white" />
 

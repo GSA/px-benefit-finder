@@ -32,22 +32,22 @@ function Button({
     switch (style) {
       case 'secondary':
         setDefaultClasses([
-          'benefit-button',
+          'bf-usa-button',
           'usa-button',
-          'benefit-button--outline',
+          'bf-usa-button--outline',
           'usa-button--outline',
         ])
         break
       case 'unstyled':
         setDefaultClasses([
-          'benefit-button',
+          'bf-usa-button',
           'usa-button',
-          'benefit-button--unstyled',
+          'bf-usa-button--unstyled',
           'usa-button--unstyled',
         ])
         break
       default:
-        setDefaultClasses(['benefit-button', 'usa-button'])
+        setDefaultClasses(['bf-usa-button', 'usa-button'])
     }
   }, [style, secondary, unstyled])
 

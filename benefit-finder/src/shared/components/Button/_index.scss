@@ -1,37 +1,37 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
 
-.benefit-button {
+.bf-usa-button {
   @include important-bold;
 
   background-color: color.$pop-blue;
   color: color.$white;
 }
 
-.benefit-button--unstyled {
+.bf-usa-button--unstyled {
   @include p;
 
   background-color: transparent;
   color: color.$pop-blue;
 }
 
-.benefit-button.benefit-button--unstyled:hover {
+.bf-usa-button.bf-usa-button--unstyled:hover {
   background-color: transparent;
   color: color.$pop-blue;
 }
 
-.benefit-button:hover {
+.bf-usa-button:hover {
   background-color: color.$marine;
   color: color.$white;
 }
 
-.benefit-button--outline {
+.bf-usa-button--outline {
   background-color: color.$white;
   color: color.$pop-blue;
   box-shadow: inset 0 0 0 2px color.$pop-blue;
 }
 
-.benefit-button--outline:hover {
+.bf-usa-button--outline:hover {
   background-color: color.$white;
   box-shadow: inset 0 0 0 2px color.$marine;
   color: color.$marine;

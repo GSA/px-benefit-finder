@@ -39,7 +39,7 @@ const KeyElegibilityCrieriaList = ({
               return (
                 <li
                   key={`${criteriaKey}-${index}`}
-                  className="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                  className="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                   data-testid={`${criteriaKey}`}
                 >
                   {label}

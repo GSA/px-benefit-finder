@@ -19,7 +19,7 @@ exports[`VerifySelectionsView > renders a match to the previous snapshot 1`] = `
           class="section"
         >
           <button
-            class="step-back-link benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
+            class="step-back-link bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
             type="button"
           />
           <div />
@@ -27,13 +27,13 @@ exports[`VerifySelectionsView > renders a match to the previous snapshot 1`] = `
             class="section-nav-btn-group"
           >
             <button
-              class="benefit-button usa-button benefit-button--outline usa-button--outline"
+              class="bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
               type="button"
             >
               Back
             </button>
             <button
-              class="benefit-button usa-button"
+              class="bf-usa-button usa-button"
               type="button"
             >
               Confirm

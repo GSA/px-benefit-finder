@@ -43,7 +43,7 @@ exports[`loads view 1`] = `
           class="result-view-details"
         >
           <button
-            class="step-back-link benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
+            class="step-back-link bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
             type="button"
           >
             Back
@@ -67,10 +67,10 @@ exports[`loads view 1`] = `
             class="result-view-benefits"
           >
             <div
-              class="benefit-accordion-group"
+              class="bf-usa-accordion-group"
             >
               <button
-                class="expand-all benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
+                class="expand-all bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
                 type="button"
               >
                 Open all +
@@ -95,7 +95,7 @@ exports[`loads view 1`] = `
               </div>
             </p>
             <button
-              class="benefit-button usa-button"
+              class="bf-usa-button usa-button"
               type="button"
             >
               See benefits you did not qualify for
@@ -117,13 +117,13 @@ exports[`loads view 1`] = `
               class="result-view-share-results-button-group"
             >
               <button
-                class="share-button benefit-button usa-button benefit-button--outline usa-button--outline"
+                class="share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
                 Share link
               </button>
               <button
-                class="email-button benefit-button usa-button benefit-button--outline usa-button--outline"
+                class="email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
                 Email results
@@ -180,7 +180,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           class="result-view-details"
         >
           <button
-            class="step-back-link benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
+            class="step-back-link bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
             type="button"
           >
             Back
@@ -204,29 +204,29 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             class="result-view-benefits"
           >
             <div
-              class="benefit-accordion-group"
+              class="bf-usa-accordion-group"
             >
               <button
-                class="expand-all benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
+                class="expand-all bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
                 type="button"
               >
                 Open all +
               </button>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial benefits"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="0-Burial benefits"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -258,26 +258,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="0-Burial benefits"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Department of Defense (DOD)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Burial and transport assistance for the deceased, and travel support for the spouse, children, and immediate family members of the service member.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -296,7 +296,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Applicant's relationship to the deceased is: spouse, child, parent, or other family member
@@ -346,22 +346,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -391,19 +391,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Death gratuity"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="1-Death gratuity"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -435,26 +435,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="1-Death gratuity"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Department of Defense (DOD)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Tax free payment of $100,000 to eligible survivors of members of the Armed Forces who died while on active duty or while serving in certain reserve statuses.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -473,7 +473,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -523,22 +523,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -568,19 +568,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial flag"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="2-Burial flag"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -612,26 +612,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="2-Burial flag"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         A United States flag for the coffin or urn in honor of the military service member.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -650,7 +650,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -695,22 +695,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -740,19 +740,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Annuity for certain military surviving spouses"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="3-Annuity for certain military surviving spouses"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -784,26 +784,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="3-Annuity for certain military surviving spouses"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Department of Defense (DOD)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Financial support for surviving spouses of members of the uniformed services.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -822,7 +822,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -872,22 +872,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://militarypay.defense.gov/Benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -917,19 +917,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial in VA national cemetery"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="4-Burial in VA national cemetery"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -961,19 +961,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="4-Burial in VA national cemetery"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
@@ -981,7 +981,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -1043,22 +1043,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/eligibility/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1088,19 +1088,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="5-Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1132,26 +1132,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="5-Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Health insurance for dependents and surviving spouses covering some health care services and supplies.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -1228,22 +1228,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1273,18 +1273,18 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="COVID-19 funeral assistance"
                 data-testid="benefit"
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="6-COVID-19 funeral assistance"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1316,26 +1316,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="6-COVID-19 funeral assistance"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By  Federal Emergency Management Agency (FEMA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Financial assistance for burial and funeral costs for someone who died of COVID-19. To be eligible, you were not reimbursed from an organization or agency.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -1354,31 +1354,31 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_died_of_COVID"
                         >
                           The deceased died due to COVID-19
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_death_location_is_US"
                         >
                           The deceased died in the U.S.
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died after May 20th, 2020
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
                           You paid for funeral or burial expenses and were not reimbursed
@@ -1387,22 +1387,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1432,19 +1432,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for child"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="7-Dependency and Indemnity Compensation (DIC) for child"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1476,19 +1476,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="7-Dependency and Indemnity Compensation (DIC) for child"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
@@ -1496,7 +1496,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -1573,22 +1573,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1618,19 +1618,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for parent"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="8-Dependency and Indemnity Compensation (DIC) for parent"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1662,19 +1662,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="8-Dependency and Indemnity Compensation (DIC) for parent"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
@@ -1682,7 +1682,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -1754,22 +1754,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1799,19 +1799,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for spouse"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="9-Dependency and Indemnity Compensation (DIC) for spouse"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -1843,26 +1843,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="9-Dependency and Indemnity Compensation (DIC) for spouse"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Tax-free financial assistance to surviving spouses or family members of service members or veterans.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -1881,13 +1881,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Marital status: unmarried or widowed
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Applicant's relationship to the deceased: spouse
@@ -1937,22 +1937,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1982,19 +1982,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Education benefits (GI Bill) for survivors"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="10-Education benefits (GI Bill) for survivors"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2026,26 +2026,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="10-Education benefits (GI Bill) for survivors"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         VA education benefits or job training for dependents and survivors of a veteran.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -2064,7 +2064,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -2119,22 +2119,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/education/survivor-dependent-benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2164,19 +2164,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Financial Assistance and Social Services (FASS) for deceased"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="11-Financial Assistance and Social Services (FASS) for deceased"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2208,26 +2208,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="11-Financial Assistance and Social Services (FASS) for deceased"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Department of Interior (DOI) - Indian Affairs
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Assistance with burial expenses of deceased indigent Indians who do not have resources for funeral expenses.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -2284,22 +2284,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2329,19 +2329,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Home loan program for survivors"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="12-Home loan program for survivors"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2373,19 +2373,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="12-Home loan program for survivors"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
@@ -2393,7 +2393,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -2412,13 +2412,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -2468,22 +2468,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2513,19 +2513,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Life insurance for survivors of veterans"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="13-Life insurance for survivors of veterans"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2557,26 +2557,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="13-Life insurance for survivors of veterans"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Payment from a veteran's or service member's life insurance policy.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -2595,7 +2595,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -2640,22 +2640,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2685,18 +2685,18 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Lump-sum death benefit"
                 data-testid="benefit"
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="14-Lump-sum death benefit"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2728,26 +2728,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="14-Lump-sum death benefit"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Social Security Administration (SSA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Financial assistance of $255 to surviving spouses of a deceased person who qualified for Social Security benefits.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -2766,25 +2766,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died within the last two years
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -2793,22 +2793,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2838,19 +2838,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Presidential Memorial Certificate"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="15-Presidential Memorial Certificate"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -2882,26 +2882,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="15-Presidential Memorial Certificate"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         An engraved Presidential Memorial Certificate (PMC) signed by the current president honoring the military service of a veteran or reservist.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -2920,7 +2920,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -2970,22 +2970,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3015,19 +3015,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Public safety officers' death benefits"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="16-Public safety officers' death benefits"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3059,19 +3059,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="16-Public safety officers' death benefits"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Department of Justice (DOJ)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
@@ -3079,7 +3079,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -3098,7 +3098,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -3125,22 +3125,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3170,19 +3170,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Public safety officers' Educational Assistance Program"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="17-Public safety officers' Educational Assistance Program"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3214,26 +3214,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="17-Public safety officers' Educational Assistance Program"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Department of Justice (DOJ)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Financial assistance for higher education to spouses and children of police, fire, and emergency public safety officers killed in the line of duty.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -3252,7 +3252,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -3279,22 +3279,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3324,19 +3324,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivor benefit plan"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="18-Survivor benefit plan"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3368,26 +3368,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="18-Survivor benefit plan"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Department of Defense (DOD)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Offers up to 55% of a service member's retired pay for survivors of active duty service members and some retired and reserve members.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -3406,7 +3406,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -3456,22 +3456,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3501,19 +3501,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for child"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="19-Survivors benefits for child"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3545,26 +3545,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="19-Survivors benefits for child"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Social Security Administration (SSA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Offers Social Security survivors benefits to a child, stepchild, grandchild, or adopted child of eligible workers.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -3583,13 +3583,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
@@ -3626,22 +3626,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3671,19 +3671,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for child with disabilities"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="20-Survivors benefits for child with disabilities"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3715,26 +3715,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="20-Survivors benefits for child with disabilities"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Social Security Administration (SSA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Social Security survivors benefits to a child, stepchild, grandchild, or adopted child with disabilities of eligible workers.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -3753,13 +3753,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
@@ -3819,22 +3819,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3864,18 +3864,18 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for mothers/fathers"
                 data-testid="benefit"
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="21-Survivors benefits for mothers/fathers"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -3907,26 +3907,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="21-Survivors benefits for mothers/fathers"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Social Security Administration (SSA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Social Security survivors benefits to the person providing care for the child of a deceased worker.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -3945,25 +3945,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is unmarried or widowed
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_care_for_child"
                         >
                           You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16
@@ -3972,22 +3972,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/forms/ssa-5.html"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4017,19 +4017,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for parents"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="22-Survivors benefits for parents"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4061,19 +4061,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="22-Survivors benefits for parents"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Social Security Administration (SSA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
@@ -4081,7 +4081,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -4100,19 +4100,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 62 years
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
@@ -4139,22 +4139,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4184,18 +4184,18 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for spouse"
                 data-testid="benefit"
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="23-Survivors benefits for spouse"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4227,26 +4227,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="23-Survivors benefits for spouse"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Social Security Administration (SSA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Social Security survivors benefits to surviving spouses and certain divorced spouses of eligible workers.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -4265,31 +4265,31 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 60 years
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed or divorced
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -4298,22 +4298,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4343,19 +4343,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for spouse with disabilities"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="24-Survivors benefits for spouse with disabilities"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4387,26 +4387,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="24-Survivors benefits for spouse with disabilities"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Social Security Administration (SSA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Social Security survivors benefits to surviving spouses and certain divorced spouses with disabilities of eligible workers.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -4425,31 +4425,31 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 50 years
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed or divorced
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -4481,22 +4481,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4526,19 +4526,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for child"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="25-Survivors pension for child"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4570,26 +4570,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="25-Survivors pension for child"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Monthly payments to qualified unmarried dependent children of deceased wartime veterans.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -4661,22 +4661,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4706,19 +4706,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for child with disabilities"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="26-Survivors pension for child with disabilities"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4750,26 +4750,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="26-Survivors pension for child with disabilities"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Monthly payments to qualified unmarried dependent children with disabilities of wartime veterans with certain income and net worth limits.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -4788,7 +4788,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are under 18 years
@@ -4848,22 +4848,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4893,19 +4893,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for spouse"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="27-Survivors pension for spouse"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -4937,26 +4937,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="27-Survivors pension for spouse"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         Monthly payments to surviving spouses of wartime veterans with certain income and net worth limits.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -4975,13 +4975,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is unmarried or widowed
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -5031,22 +5031,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5076,19 +5076,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans burial allowance"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="28-Veterans burial allowance"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -5120,19 +5120,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="28-Veterans burial allowance"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
@@ -5140,7 +5140,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -5159,19 +5159,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died within the last two years
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
                           You paid for funeral or burial expenses
@@ -5221,22 +5221,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5266,19 +5266,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans headstone and grave marker"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="29-Veterans headstone and grave marker"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -5310,26 +5310,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="29-Veterans headstone and grave marker"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         A headstone, grave or niche marker, or medallion to honor a veteran, service member, or eligible family member.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -5348,7 +5348,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -5398,22 +5398,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5443,19 +5443,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 aria-expanded="false"
-                class="benefit-accordion usa-accordion"
-                data-analytics="benefit-accordion"
+                class="bf-usa-accordion usa-accordion"
+                data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans medallion"
                 data-testid="benefit"
                 hidden=""
               >
                 <h4
-                  class="benefit-accordion__heading usa-accordion__heading"
+                  class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
                     aria-controls="30-Veterans medallion"
                     aria-expanded="false"
-                    class="benefit-accordion__button usa-accordion__button"
+                    class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
                   >
                     <span
@@ -5487,26 +5487,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   </button>
                 </h4>
                 <div
-                  class="benefit-accordion__content usa-accordion__content usa-prose"
+                  class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
                   id="30-Veterans medallion"
                 >
                   <div>
                     <h4
-                      class="benefit-detail-title font-family-sans"
+                      class="bf-usa-detail-title font-family-sans"
                       id=""
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
                     <div
-                      class="benefit-detail-summary"
+                      class="bf-usa-detail-summary"
                     >
                       <p>
                         A headstone medallion, grave marker, and Presidential Memorial Certificate for eligible veterans buried in a private cemetery.
                       </p>
                     </div>
                     <div
-                      class="benefit-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list key-eligibility-criteria-group"
                     >
                        
                       <h5
@@ -5525,7 +5525,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -5575,22 +5575,22 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <div
                       aria-live="polite"
-                      class="benefit-alert benefit-alert usa-alert usa-alert--info "
+                      class="bf-usa-alert bf-usa-alert usa-alert usa-alert--info "
                       role="alert"
                       tabindex="0"
                     >
                       <div
-                        class="benefit-alert__body usa-alert__body"
+                        class="bf-usa-alert__body usa-alert__body"
                       >
                         <div
-                          class="benefit-alert__text usa-alert__text"
+                          class="bf-usa-alert__text usa-alert__text"
                         >
                           Additional eligibility criteria may apply. Visit the link below for more information and to apply.
                         </div>
                       </div>
                     </div>
                     <a
-                      class="benefit-link benefit-button usa-button obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5638,7 +5638,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
             </p>
             <button
-              class="benefit-button usa-button"
+              class="bf-usa-button usa-button"
               type="button"
             >
               See benefits you did not qualify for
@@ -5660,13 +5660,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               class="result-view-share-results-button-group"
             >
               <button
-                class="share-button benefit-button usa-button benefit-button--outline usa-button--outline"
+                class="share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
                 Share link
               </button>
               <button
-                class="email-button benefit-button usa-button benefit-button--outline usa-button--outline"
+                class="email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
                 Email results

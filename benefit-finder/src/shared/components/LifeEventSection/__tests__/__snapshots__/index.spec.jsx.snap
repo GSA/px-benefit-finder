@@ -3,16 +3,16 @@
 exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <h1
-    class="section-heading font-family-sans"
+    class="bf-section-heading font-family-sans"
     id="skip-to-h1"
   >
     Complete Questions
   </h1>
   <div
-    class="section-wrapper"
+    class="bf-section-wrapper"
   >
     <div
-      class="section"
+      class="bf-section-info"
     >
       <div>
         <div
@@ -58,7 +58,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         </button>
       </div>
       <div
-        id="bf-usa-section"
+        id="bf-section"
       >
         <div
           aria-hidden="true"
@@ -97,11 +97,11 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-usa-fieldset usa-fieldset "
         >
           <legend
-            class="usa-legend legend"
+            class="bf-legend usa-legend"
           >
             Date of birth:
             <span
-              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required required"
+              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
             >
               (Required)
@@ -262,11 +262,11 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-usa-fieldset usa-fieldset "
         >
           <legend
-            class="usa-legend legend"
+            class="bf-legend usa-legend"
           >
             Applicant’s relationship to the deceased:
             <span
-              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required required"
+              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
             >
               (Required)
@@ -324,11 +324,11 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-usa-fieldset usa-fieldset "
         >
           <legend
-            class="usa-legend legend"
+            class="bf-legend usa-legend"
           >
             Marital Status
             <span
-              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required required"
+              class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
             >
               (Required)
@@ -381,7 +381,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-usa-fieldset usa-fieldset "
         >
           <legend
-            class="usa-legend legend"
+            class="bf-legend usa-legend"
           >
             Are you a U.S. citizen or eligible non-citizen?
           </legend>
@@ -429,7 +429,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-usa-fieldset usa-fieldset "
         >
           <legend
-            class="usa-legend legend"
+            class="bf-legend usa-legend"
           >
             Are you caring for a child of the deceased who is disabled or under the age of 16?
           </legend>
@@ -477,7 +477,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-usa-fieldset usa-fieldset "
         >
           <legend
-            class="usa-legend legend"
+            class="bf-legend usa-legend"
           >
             Did you pay for funeral or burial expenses?
           </legend>
@@ -523,7 +523,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         </fieldset>
       </div>
       <div
-        class="section-nav-btn-group"
+        class="bf-section-nav-btn-group"
       >
         <button
           class="bf-usa-button usa-button bf-usa-button--outline usa-button--outline"

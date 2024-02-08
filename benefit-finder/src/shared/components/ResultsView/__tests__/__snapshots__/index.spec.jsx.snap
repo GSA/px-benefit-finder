@@ -14,19 +14,19 @@ exports[`loads view 1`] = `
       data-testid="result-view"
     >
       <div
-        class="chevron"
+        class="bf-chevron"
       >
         <div
-          class="grid-container"
+          class="bf-grid-container grid-container"
         >
           <h1
-            class="chevron-heading font-family-sans"
+            class="bf-chevron-heading font-family-sans"
             id="skip-to-h1"
           >
             Your potential benefits
           </h1>
           <div
-            class="chevron-description"
+            class="bf-chevron-description"
           >
             <div>
               <p>
@@ -70,7 +70,7 @@ exports[`loads view 1`] = `
               class="bf-usa-accordion-group"
             >
               <button
-                class="expand-all bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                class="bf-expand-all bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
                 type="button"
               >
                 Open all +
@@ -123,7 +123,7 @@ exports[`loads view 1`] = `
                 Share link
               </button>
               <button
-                class="email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                class="bf-email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
                 Email results
@@ -151,19 +151,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
       data-testid="result-view"
     >
       <div
-        class="chevron"
+        class="bf-chevron"
       >
         <div
-          class="grid-container"
+          class="bf-grid-container grid-container"
         >
           <h1
-            class="chevron-heading font-family-sans"
+            class="bf-chevron-heading font-family-sans"
             id="skip-to-h1"
           >
             Your potential benefits
           </h1>
           <div
-            class="chevron-description"
+            class="bf-chevron-description"
           >
             <div>
               <p>
@@ -207,7 +207,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               class="bf-usa-accordion-group"
             >
               <button
-                class="expand-all bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                class="bf-expand-all bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
                 type="button"
               >
                 Open all +
@@ -230,13 +230,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Burial benefits
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -304,41 +304,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty member
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died on active duty
                         </li>
@@ -370,7 +370,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Defense (DOD)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -407,13 +407,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Death gratuity
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -481,41 +481,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member or member of the National Guard/Reserves
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty or Died while on inactive-duty service training
                         </li>
@@ -547,7 +547,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Defense (DOD)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -584,13 +584,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Burial flag
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -658,36 +658,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves
                         </li>
@@ -719,7 +719,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -756,13 +756,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Annuity for certain military surviving spouses
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -830,41 +830,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Deceased died before 1978
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: retired from the service
                         </li>
@@ -896,7 +896,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Defense (DOD)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -933,13 +933,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Burial in VA national cemetery
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -1001,41 +1001,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       />
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
@@ -1067,7 +1067,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -1104,13 +1104,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Civilian Health and Medical Program of the VA (CHAMPVA) for child
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -1171,56 +1171,56 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       />
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You are under 18 years
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your marital status is: unmarried 
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your relationship to the deceased is: child
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness
                         </li>
@@ -1252,7 +1252,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -1288,13 +1288,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       COVID-19 funeral assistance
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Likely Eligible
                     </span>
@@ -1411,7 +1411,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                        Federal Emergency Management Agency (FEMA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -1448,13 +1448,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Dependency and Indemnity Compensation (DIC) for child
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -1516,56 +1516,56 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       />
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You are under 18 years
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your marital status is: unmarried
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your relationship to the deceased is: child
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation
                         </li>
@@ -1597,7 +1597,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -1634,13 +1634,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Dependency and Indemnity Compensation (DIC) for parent
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -1702,51 +1702,51 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       />
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your relationship to the deceased is: parent
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You have limited income and resources
                         </li>
@@ -1778,7 +1778,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -1815,13 +1815,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Dependency and Indemnity Compensation (DIC) for spouse
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -1895,41 +1895,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation
                         </li>
@@ -1961,7 +1961,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -1998,13 +1998,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Education benefits (GI Bill) for survivors
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -2072,46 +2072,46 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: Active-duty service member or discharged under conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You have a high school diploma or GED certificate
                         </li>
@@ -2143,7 +2143,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -2180,13 +2180,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Financial Assistance and Social Services (FASS) for deceased
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -2247,36 +2247,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       />
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased was a member of a federally recognized American Indian Tribe or an Alaska Native.
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You have limited income and resources
                         </li>
@@ -2308,7 +2308,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Interior (DOI) - Indian Affairs
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -2345,13 +2345,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Home loan program for survivors
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -2426,41 +2426,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, Died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
@@ -2492,7 +2492,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -2529,13 +2529,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Life insurance for survivors of veterans
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -2603,36 +2603,36 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, retired from the service, or member of the National Guard/Reserves
                         </li>
@@ -2664,7 +2664,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -2700,13 +2700,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Lump-sum death benefit
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Likely Eligible
                     </span>
@@ -2817,7 +2817,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -2854,13 +2854,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Presidential Memorial Certificate
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -2928,41 +2928,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
@@ -2994,7 +2994,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -3031,13 +3031,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Public safety officers' death benefits
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -3106,18 +3106,18 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased was a public safety officer who died in the line of duty
                         </li>
@@ -3149,7 +3149,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Justice (DOJ)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -3186,13 +3186,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Public safety officers' Educational Assistance Program
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -3260,18 +3260,18 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased was a public safety officer who died in the line of duty
                         </li>
@@ -3303,7 +3303,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Justice (DOJ)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -3340,13 +3340,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivor benefit plan
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -3414,41 +3414,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member, retired from the service, or member of the National Guard/Reserves
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died while on active duty or died while on inactive-duty service training
                         </li>
@@ -3480,7 +3480,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Defense (DOD)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -3517,13 +3517,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors benefits for child
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -3597,28 +3597,28 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You are under 18 years
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your marital status is unmarried
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Applicant's relationship to the deceased is: child
                         </li>
@@ -3650,7 +3650,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -3687,13 +3687,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors benefits for child with disabilities
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -3767,51 +3767,51 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You are under 18 years
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your marital status is unmarried
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your relationship to the deceased is: child
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You have a disability or impairment
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You are unable to work for a year or more because of a disability or your disability is expected to result in death
                         </li>
@@ -3843,7 +3843,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -3879,13 +3879,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors benefits for mothers/fathers
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Likely Eligible
                     </span>
@@ -3996,7 +3996,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -4033,13 +4033,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors benefits for parents
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -4120,18 +4120,18 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your relationship to the deceased is: parent
                         </li>
@@ -4163,7 +4163,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -4199,13 +4199,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors benefits for spouse
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Likely Eligible
                     </span>
@@ -4322,7 +4322,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -4359,13 +4359,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors benefits for spouse with disabilities
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       More Information Needed
                     </span>
@@ -4457,23 +4457,23 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You have a disability or impairment
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You are unable to work for a year or more because of a disability or your disability is expected to result in death
                         </li>
@@ -4505,7 +4505,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -4542,13 +4542,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors pension for child
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -4609,51 +4609,51 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       />
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You served in the active military
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You are under 18 years
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your marital status is unmarried
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your relationship to the deceased is: child
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your service status is: discharged for conditions other than dishonorable
                         </li>
@@ -4685,7 +4685,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -4722,13 +4722,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors pension for child with disabilities
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -4796,51 +4796,51 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your marital status is unmarried
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           Your relationship to the deceased is: child
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: discharged for conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You have a disability or impairment
                         </li>
@@ -4872,7 +4872,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -4909,13 +4909,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Survivors pension for spouse
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -4989,41 +4989,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: discharged for conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           You have limited income and resources
                         </li>
@@ -5055,7 +5055,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -5092,13 +5092,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Veterans burial allowance
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -5179,41 +5179,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: discharged for conditions other than dishonorable
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           One of the following applies to the deceased: died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
@@ -5245,7 +5245,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -5282,13 +5282,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Veterans headstone and grave marker
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -5356,41 +5356,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The person is buried in a grave with a privately purchased headstone or an unmarked grave
                         </li>
@@ -5422,7 +5422,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -5459,13 +5459,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     type="button"
                   >
                     <span
-                      class="heading"
+                      class="bf-accordion-heading"
                     >
                       Veterans medallion
                     </span>
                     <br />
                     <span
-                      class="sub-heading"
+                      class="bf-accordion-sub-heading"
                     >
                       Not Eligible
                     </span>
@@ -5533,41 +5533,41 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         Unmet criteria
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The deceased served in the active military
                         </li>
                       </ul>
                     </div>
                     <div
-                      class="unmet-criteria-group"
+                      class="bf-unmet-criteria-group"
                     >
                       <div
-                        class="unmet-criteria-title"
+                        class="bf-unmet-criteria-title"
                       >
                         More Information Needed
                       </div>
                       <ul
-                        class="unmet-criteria-list"
+                        class="bf-unmet-criteria-list"
                       >
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or a member of the National Guard/Reserves
                         </li>
                         <li
-                          class="unmet-criteria-item"
+                          class="bf-unmet-criteria-item"
                         >
                           The person is buried in a grave with a privately purchased headstone or an unmarked grave
                         </li>
@@ -5599,7 +5599,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                       <svg
-                        class="carrot"
+                        class="bf-carrot"
                         fill="white"
                         height="24"
                         viewBox="0 0 24 24"
@@ -5666,7 +5666,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 Share link
               </button>
               <button
-                class="email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                class="bf-email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
                 Email results

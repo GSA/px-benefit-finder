@@ -10,7 +10,7 @@ import './_index.scss'
 function Form({ children }) {
   return (
     <form className="bf-usa-form">
-      <div className="bf-usa-contianer grid-container">{children}</div>
+      <div className="bf-grid-contianer grid-container">{children}</div>
     </form>
   )
 }

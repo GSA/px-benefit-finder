@@ -23,7 +23,7 @@ exports[`Card > renders a match to the previous snapshot 1`] = `
         class="bf-usa-card__cta usa-card__cta"
       />
       <svg
-        class="carrot"
+        class="bf-carrot"
         fill="#162E51"
         height="24"
         viewBox="0 0 24 24"

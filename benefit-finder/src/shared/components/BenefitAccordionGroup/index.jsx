@@ -58,7 +58,7 @@ const BenefitAccordionGroup = ({
     return (
       expandAll && (
         <Button
-          className="expand-all"
+          className="bf-expand-all"
           aria-label={handleExpandIcon}
           unstyled
           onClick={() => setExpandAll(!isExpandAll)}
@@ -77,15 +77,15 @@ const BenefitAccordionGroup = ({
    */
   const NotEligibleList = ({ items }) => {
     return (
-      <div className="unmet-criteria-group">
-        <div className="unmet-criteria-title">{unmetLabel}</div>
-        <ul className="unmet-criteria-list">
+      <div className="bf-unmet-criteria-group">
+        <div className="bf-unmet-criteria-title">{unmetLabel}</div>
+        <ul className="bf-unmet-criteria-list">
           {items.map((item, index) => {
             const { label } = item
             return (
               <li
                 key={`not-eligible-list-${index}`}
-                className="unmet-criteria-item"
+                className="bf-unmet-criteria-item"
               >
                 {label}
               </li>
@@ -104,13 +104,13 @@ const BenefitAccordionGroup = ({
    */
   const MoreInfoList = ({ items }) => {
     return (
-      <div className="unmet-criteria-group">
-        <div className="unmet-criteria-title">{eligibleStatusLabels[1]}</div>
-        <ul className="unmet-criteria-list">
+      <div className="bf-unmet-criteria-group">
+        <div className="bf-unmet-criteria-title">{eligibleStatusLabels[1]}</div>
+        <ul className="bf-unmet-criteria-list">
           {items.map((item, index) => {
             const { label } = item
             return (
-              <li key={`more-info-${index}`} className="unmet-criteria-item">
+              <li key={`more-info-${index}`} className="bf-unmet-criteria-item">
                 {label}
               </li>
             )

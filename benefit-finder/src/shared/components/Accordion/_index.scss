@@ -35,13 +35,13 @@
       }
     }
 
-    .heading {
+    .bf-accordion-heading {
       @include h6;
 
       letter-spacing: 0;
     }
 
-    .sub-heading {
+    .bf-accordion-sub-heading {
       @include p;
 
       letter-spacing: 0;

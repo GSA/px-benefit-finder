@@ -17,7 +17,7 @@ const RelativeBenefitList = ({ data, carrotType }) => {
 
           return (
             <Card
-              className="relative-bf-usa-card tablet:grid-col-12"
+              className="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12"
               title={title}
               cta={cta}
               href={link}

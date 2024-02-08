@@ -84,9 +84,9 @@ const Accordion = ({
           aria-controls={id}
           onClick={() => setOpen(!isOpen)}
         >
-          <span className="heading">{heading}</span>
+          <span className="bf-accordion-heading">{heading}</span>
           <br />
-          <span className="sub-heading">{subHeading}</span>
+          <span className="bf-accordion-sub-heading">{subHeading}</span>
           {handleIcon()}
         </button>
       </h4>

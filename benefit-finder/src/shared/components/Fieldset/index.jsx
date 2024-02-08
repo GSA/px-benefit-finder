@@ -57,7 +57,7 @@ const Fieldset = ({
       })}
       ref={alertRef}
     >
-      {hint && <div className="hint">{hint}</div>}
+      {hint && <div className="bf-hint">{hint}</div>}
       {legend && handleRequired}
       {children}
     </fieldset>

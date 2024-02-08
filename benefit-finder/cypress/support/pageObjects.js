@@ -46,7 +46,7 @@ class PageObjects {
   }
 
   dateAlert() {
-    return cy.get('.date-alert')
+    return cy.get('.bf-usa-date-alert')
   }
 
   applicantRelationshipToDeceased() {

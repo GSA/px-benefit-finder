@@ -6,7 +6,7 @@ exports[`Form > renders a match to the previous snapshot 1`] = `
     class="bf-usa-form"
   >
     <div
-      class="bf-usa-contianer grid-container"
+      class="bf-grid-contianer grid-container"
     />
   </form>
 </DocumentFragment>

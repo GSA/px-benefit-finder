@@ -26,10 +26,10 @@
       margin: 0 0 24px;
     }
 
-    .unmet-criteria-group {
+    .bf-unmet-criteria-group {
       margin: 0 0 24px;
 
-      .unmet-criteria-title {
+      .bf-unmet-criteria-title {
         @include p;
 
         width: 100%;
@@ -44,7 +44,7 @@
     }
   }
 
-  .expand-all {
+  .bf-expand-all {
     @include p;
 
     background-color: transparent;

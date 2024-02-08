@@ -24,7 +24,7 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
     >
       {invalid === true && (
         <Alert
-          className="date-alert"
+          className="bf-usa-date-alert"
           heading={ui.alertBanner.heading}
           description={alert}
           error

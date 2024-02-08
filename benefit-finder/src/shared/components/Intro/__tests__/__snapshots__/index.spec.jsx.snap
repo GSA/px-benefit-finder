@@ -3,22 +3,22 @@
 exports[`Intro > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="intro"
+    class="bf-intro"
   >
     <div
-      class="chevron"
+      class="bf-chevron"
     >
       <div
-        class="grid-container"
+        class="bf-grid-container grid-container"
       >
         <h1
-          class="chevron-heading font-family-sans"
+          class="bf-chevron-heading font-family-sans"
           id="skip-to-h1"
         >
           Benefit finder: death of a loved one
         </h1>
         <div
-          class="chevron-description"
+          class="bf-chevron-description"
         >
           <p>
             <strong>
@@ -33,7 +33,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
       </div>
     </div>
     <div
-      class="grid-container"
+      class="bf-grid-container grid-container"
     >
       <h2
         class="font-family-sans"
@@ -47,10 +47,10 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         Time to complete 2-5 minutes
       </div>
       <div
-        class="intro-process-group"
+        class="bf-intro-process-group"
       >
         <div
-          class="intro-process-list"
+          class="bf-intro-process-list"
         >
           <ol
             class="bf-usa-process-list usa-process-list"
@@ -85,17 +85,17 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
           </ol>
         </div>
         <div
-          class="line-sperator-wrapper--vertical"
+          class="bf-line-sperator-wrapper--vertical"
         >
           <div
-            class="line-sperator--vertical"
+            class="bf-line-sperator--vertical"
           />
         </div>
         <div
-          class="intro-process-notices"
+          class="bf-intro-process-notices"
         >
           <h2
-            class="intro-process-notices-heading font-family-sans"
+            class="bf-intro-process-notices-heading font-family-sans"
             id=""
           >
             Before you start:
@@ -194,14 +194,14 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         </div>
       </div>
       <div
-        class="line-sperator-wrapper"
+        class="bf-line-sperator-wrapper"
       >
         <div
-          class="line-sperator"
+          class="bf-line-sperator"
         />
       </div>
       <div
-        class="cta-wrapper"
+        class="bf-cta-wrapper"
       >
         <button
           class="bf-usa-button usa-button"

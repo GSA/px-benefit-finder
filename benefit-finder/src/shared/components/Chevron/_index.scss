@@ -3,11 +3,11 @@
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
 
-h1.chevron-heading {
+h1.bf-chevron-heading {
   @include h0;
 }
 
-.chevron {
+.bf-chevron {
   position: relative;
   background-color: color.$officer-navy;
   padding: space.$space-xl space.$space-lg 38px;
@@ -20,20 +20,20 @@ h1.chevron-heading {
   }
 }
 
-.chevron-description p {
+.bf-chevron-description p {
   @include p;
 
   line-height: 25.92px;
 }
 
-.chevron-description p strong {
+.bf-chevron-description p strong {
   @include important-x-bold;
 
   line-height: 25.92px;
 }
 
 // triangle down
-.chevron::before {
+.bf-chevron::before {
   content: '';
   position: absolute;
   top: 100%;
@@ -44,12 +44,12 @@ h1.chevron-heading {
 }
 
 @media (width >= $desktop) {
-  .chevron {
+  .bf-chevron {
     padding-bottom: space.$space-xl;
     margin-bottom: space.$space-xl;
   }
 
-  .chevron::before {
+  .bf-chevron::before {
     display: none;
   }
 }

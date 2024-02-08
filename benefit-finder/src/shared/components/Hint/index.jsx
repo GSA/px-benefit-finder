@@ -10,7 +10,7 @@ const Hint = ({ requiredLabel }) => {
   return (
     <span
       title="required"
-      className="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required required"
+      className="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
     >
       {`(${requiredLabel?.value || 'Required'})`}
     </span>

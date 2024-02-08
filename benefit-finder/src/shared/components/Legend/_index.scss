@@ -1,7 +1,7 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
-.legend {
+.bf-legend {
   @include h6;
 
   padding-bottom: space.$padding-bottom-md;

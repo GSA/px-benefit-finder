@@ -4,7 +4,7 @@ export default {
   component: Card,
   tags: ['autodocs'],
   args: {
-    className: 'relative-bf-usa-card',
+    className: 'bf-usa-card--relative-benefit',
     title: 'Header Content',
     cta: 'BodyContent',
     link: 'https://www.google.com',

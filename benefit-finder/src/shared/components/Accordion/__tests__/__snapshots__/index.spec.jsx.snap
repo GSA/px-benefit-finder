@@ -14,11 +14,11 @@ exports[`Accordion > renders a match to the previous snapshot 1`] = `
         type="button"
       >
         <span
-          class="heading"
+          class="bf-accordion-heading"
         />
         <br />
         <span
-          class="sub-heading"
+          class="bf-accordion-sub-heading"
         />
         <svg
           height="24"

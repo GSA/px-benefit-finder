@@ -63,7 +63,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         <div
           aria-hidden="true"
           aria-live="polite"
-          class="usa-alert usa-alert--error display-none"
+          class="benefit-alert usa-alert usa-alert--error display-none"
           role="alert"
           tabindex="0"
         >

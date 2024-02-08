@@ -25,8 +25,13 @@ const Alert = ({
   tabIndex,
 }) => {
   const defaultClasses = error
-    ? ['usa-alert', 'usa-alert--error', 'display-none']
-    : ['usa-alert', 'usa-alert--info', `${noBackground ? 'no-background' : ''}`]
+    ? ['benefit-alert', 'usa-alert', 'usa-alert--error', 'display-none']
+    : [
+        'benefit-alert',
+        'usa-alert',
+        'usa-alert--info',
+        `${noBackground ? 'no-background' : ''}`,
+      ]
 
   return (
     <div

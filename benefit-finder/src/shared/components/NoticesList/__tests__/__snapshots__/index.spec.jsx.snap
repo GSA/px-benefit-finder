@@ -13,7 +13,7 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
       >
         <div
           aria-live="polite"
-          class="usa-alert usa-alert--info no-background"
+          class="benefit-alert usa-alert usa-alert--info no-background"
           role="alert"
           tabindex="-1"
         >
@@ -43,7 +43,7 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
       >
         <div
           aria-live="polite"
-          class="usa-alert usa-alert--info no-background"
+          class="benefit-alert usa-alert usa-alert--info no-background"
           role="alert"
           tabindex="-1"
         >
@@ -67,7 +67,7 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
       >
         <div
           aria-live="polite"
-          class="usa-alert usa-alert--info no-background"
+          class="benefit-alert usa-alert usa-alert--info no-background"
           role="alert"
           tabindex="-1"
         >

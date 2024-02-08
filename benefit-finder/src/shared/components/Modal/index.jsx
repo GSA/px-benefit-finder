@@ -135,8 +135,11 @@ const Modal = ({
     navItemTwoFunction,
   }) => {
     return (
-      <ul className="modal usa-button-group width-full">
-        <li className="usa-button-group__item width-full" key="nav-item-one">
+      <ul className="modal benefit-button-group usa-button-group width-full">
+        <li
+          className="benefit-button-group__item usa-button-group__item width-full"
+          key="nav-item-one"
+        >
           <ObfuscatedLink
             id="navItemOneBtn"
             className="nav-item-one width-full"
@@ -148,7 +151,10 @@ const Modal = ({
             {navItemOneLabel}
           </ObfuscatedLink>
         </li>
-        <li className="usa-button-group__item width-full" key="nav-item-two">
+        <li
+          className="benefit-button-group__item width-full"
+          key="nav-item-two"
+        >
           <ObfuscatedLink
             id="navItemTwoBtn"
             className="nav-item-two width-full"

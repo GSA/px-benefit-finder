@@ -3,7 +3,7 @@
 exports[`ProcessList > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <ol
-    class="usa-process-list"
+    class="benefit-process-list usa-process-list"
   />
 </DocumentFragment>
 `;

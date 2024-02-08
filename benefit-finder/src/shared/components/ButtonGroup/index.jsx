@@ -10,11 +10,17 @@ import PropTypes from 'prop-types'
  */
 const ButtonGroup = ({ buttonOne, buttonTwo }) => {
   return (
-    <ul className="usa-button-group width-full">
-      <li className="usa-button-group__item width-full" key="buttonOne">
+    <ul className="benefit-button-group usa-button-group width-full">
+      <li
+        className="benefit-button-group__item usa-button-group__item width-full"
+        key="buttonOne"
+      >
         <Button {...buttonOne}>{buttonOne && buttonOne.children}</Button>
       </li>
-      <li className="usa-button-group__item width-full" key="buttonTwo">
+      <li
+        className="benefit-button-group__item usa-button-group__item width-full"
+        key="buttonTwo"
+      >
         <Button {...buttonTwo}>{buttonOne && buttonTwo.children}</Button>
       </li>
     </ul>

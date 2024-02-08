@@ -3,14 +3,14 @@
 exports[`Date > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="usa-memorable-date"
-    id="usa-memorable-date-undefined"
+    class="benefit-memorable-date usa-memorable-date"
+    id="benefit-memorable-date-undefined usa-memorable-date-undefined"
   >
     <div
-      class="usa-form-group usa-form-group--month usa-form-group--select"
+      class="benefit-form-group usa-form-group benefit-form-group--month usa-form-group--month benefit-form-group--select usa-form-group--select"
     >
       <label
-        class="usa-label"
+        class="benefit-label usa-label"
         for="date_of_birth_month-undefined"
       >
         Month
@@ -24,7 +24,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <select
         aria-describedby="month-description-undefined"
         aria-invalid="false"
-        class="usa-select "
+        class="benefit-select usa-select "
         id="date_of_birth_month-undefined"
         name="date_of_birth_month-undefined"
       >
@@ -97,10 +97,10 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       </select>
     </div>
     <div
-      class="usa-form-group usa-form-group--day"
+      class="benefit-form-group usa-form-group benefit-form-group--day usa-form-group--day"
     >
       <label
-        class="usa-label"
+        class="benefit-label usa-label"
         for="date_of_birth_day-undefined"
       >
         Day
@@ -114,7 +114,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <input
         aria-describedby="day-description-undefined"
         aria-invalid="false"
-        class="usa-input "
+        class="benefit-input usa-input "
         id="date_of_birth_day-undefined"
         inputmode="numeric"
         name="date_of_birth_day-undefined"
@@ -122,10 +122,10 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       />
     </div>
     <div
-      class="usa-form-group usa-form-group--year"
+      class="benefit-form-group usa-form-group benefit-form-group--year usa-form-group--year"
     >
       <label
-        class="usa-label"
+        class="benefit-label usa-label"
         for="date_of_birth_year-undefined"
       >
         Year
@@ -139,7 +139,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <input
         aria-describedby="year-description-undefined"
         aria-invalid="false"
-        class="usa-input "
+        class="benefit-input usa-input "
         id="date_of_birth_year-undefined"
         inputmode="numeric"
         name="date_of_birth_year-undefined"

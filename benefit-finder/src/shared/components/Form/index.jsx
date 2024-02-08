@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 function Form({ children }) {
   return (
     <form className="benefit-form">
-      <div className="grid-container">{children}</div>
+      <div className="benefit-contianer grid-container">{children}</div>
     </form>
   )
 }

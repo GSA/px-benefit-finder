@@ -31,13 +31,23 @@ function Button({
   useEffect(() => {
     switch (style) {
       case 'secondary':
-        setDefaultClasses(['usa-button', 'usa-button--outline'])
+        setDefaultClasses([
+          'benefit-button',
+          'usa-button',
+          'benefit-button--outline',
+          'usa-button--outline',
+        ])
         break
       case 'unstyled':
-        setDefaultClasses(['usa-button', 'usa-button--unstyled'])
+        setDefaultClasses([
+          'benefit-button',
+          'usa-button',
+          'benefit-button--unstyled',
+          'usa-button--unstyled',
+        ])
         break
       default:
-        setDefaultClasses(['usa-button'])
+        setDefaultClasses(['benefit-button', 'usa-button'])
     }
   }, [style, secondary, unstyled])
 

@@ -58,8 +58,10 @@ const StepIndicator = ({
     const statusClass = current === index ? '--current' : ''
     return (
       <li
-        className={`usa-step-indicator__segment usa-step-indicator__segment${statusClass} ${
-          completed === true ? 'usa-step-indicator__segment--complete' : ''
+        className={`benefit-step-indicator__segment usa-step-indicator__segment benefit-step-indicator__segment${statusClass} usa-step-indicator__segment${statusClass} ${
+          completed === true
+            ? 'benefit-step-indicator__segment--complete usa-step-indicator__segment--complete'
+            : ''
         }`}
         aria-current={current === index}
         onClick={() =>
@@ -71,7 +73,7 @@ const StepIndicator = ({
       >
         <span
           key={`step-indicator-label-${index}`}
-          className="usa-step-indicator__segment-label"
+          className="benefit-step-indicator__segment-label usa-step-indicator__segment-label"
         >
           {!noHeadings && heading}
           {current === index && completed !== true ? null : (
@@ -89,8 +91,12 @@ const StepIndicator = ({
   return (
     <div>
       {data && data.length > 0 && (
-        <div className="usa-step-indicator" aria-label="progress" tabIndex={0}>
-          <ol className="usa-step-indicator__segments">
+        <div
+          className="benefit-step-indicator usa-step-indicator"
+          aria-label="progress"
+          tabIndex={0}
+        >
+          <ol className="benefit-step-indicator__segments usa-step-indicator__segments">
             {data &&
               data.map((step, i) => {
                 const heading = step.section.heading

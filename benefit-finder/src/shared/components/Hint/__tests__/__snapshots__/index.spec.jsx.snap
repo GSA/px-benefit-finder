@@ -3,7 +3,7 @@
 exports[`Hint > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <span
-    class="usa-hint usa-hint--required required"
+    class="benefit-hint usa-hint usa-hint--required benefit-hint--required required"
     title="required"
   >
     (Required)

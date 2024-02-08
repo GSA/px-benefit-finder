@@ -43,7 +43,7 @@ exports[`loads view 1`] = `
           class="result-view-details"
         >
           <button
-            class="step-back-link usa-button usa-button--unstyled"
+            class="step-back-link benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
             type="button"
           >
             Back
@@ -70,7 +70,7 @@ exports[`loads view 1`] = `
               class="benefit-accordion-group"
             >
               <button
-                class="expand-all usa-button usa-button--unstyled"
+                class="expand-all benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
                 type="button"
               >
                 Open all +
@@ -95,7 +95,7 @@ exports[`loads view 1`] = `
               </div>
             </p>
             <button
-              class="usa-button"
+              class="benefit-button usa-button"
               type="button"
             >
               See benefits you did not qualify for
@@ -117,13 +117,13 @@ exports[`loads view 1`] = `
               class="result-view-share-results-button-group"
             >
               <button
-                class="share-button usa-button usa-button--outline"
+                class="share-button benefit-button usa-button benefit-button--outline usa-button--outline"
                 type="button"
               >
                 Share link
               </button>
               <button
-                class="email-button usa-button usa-button--outline"
+                class="email-button benefit-button usa-button benefit-button--outline usa-button--outline"
                 type="button"
               >
                 Email results
@@ -180,7 +180,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           class="result-view-details"
         >
           <button
-            class="step-back-link usa-button usa-button--unstyled"
+            class="step-back-link benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
             type="button"
           >
             Back
@@ -207,7 +207,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               class="benefit-accordion-group"
             >
               <button
-                class="expand-all usa-button usa-button--unstyled"
+                class="expand-all benefit-button usa-button benefit-button--unstyled usa-button--unstyled"
                 type="button"
               >
                 Open all +
@@ -296,7 +296,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Applicant's relationship to the deceased is: spouse, child, parent, or other family member
@@ -361,7 +361,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -473,7 +473,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -538,7 +538,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -650,7 +650,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -710,7 +710,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -822,7 +822,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -887,7 +887,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://militarypay.defense.gov/Benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1058,7 +1058,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/eligibility/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1243,7 +1243,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1354,31 +1354,31 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_died_of_COVID"
                         >
                           The deceased died due to COVID-19
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_death_location_is_US"
                         >
                           The deceased died in the U.S.
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died after May 20th, 2020
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
                           You paid for funeral or burial expenses and were not reimbursed
@@ -1402,7 +1402,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1588,7 +1588,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1769,7 +1769,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1881,13 +1881,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Marital status: unmarried or widowed
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Applicant's relationship to the deceased: spouse
@@ -1952,7 +1952,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2064,7 +2064,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -2134,7 +2134,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/education/survivor-dependent-benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2299,7 +2299,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2412,13 +2412,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -2483,7 +2483,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2595,7 +2595,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -2655,7 +2655,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2766,25 +2766,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died within the last two years
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -2808,7 +2808,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2920,7 +2920,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -2985,7 +2985,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3098,7 +3098,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -3140,7 +3140,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3252,7 +3252,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -3294,7 +3294,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3406,7 +3406,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -3471,7 +3471,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3583,13 +3583,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
@@ -3641,7 +3641,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3753,13 +3753,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
@@ -3834,7 +3834,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3945,25 +3945,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is unmarried or widowed
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_care_for_child"
                         >
                           You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16
@@ -3987,7 +3987,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/forms/ssa-5.html"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4100,19 +4100,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 62 years
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
@@ -4154,7 +4154,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4265,31 +4265,31 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 60 years
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed or divorced
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -4313,7 +4313,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4425,31 +4425,31 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 50 years
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed or divorced
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -4496,7 +4496,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4676,7 +4676,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4788,7 +4788,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are under 18 years
@@ -4863,7 +4863,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4975,13 +4975,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is unmarried or widowed
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -5046,7 +5046,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5159,19 +5159,19 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died within the last two years
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
                           You paid for funeral or burial expenses
@@ -5236,7 +5236,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5348,7 +5348,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -5413,7 +5413,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5525,7 +5525,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="key-eligibility-criteria-list"
                       >
                         <li
-                          class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="benefit-list usa-list usa-list--unstyled  benefit-list--unstyled key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -5590,7 +5590,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </div>
                     </div>
                     <a
-                      class="benefit-link usa-button obfuscated-link"
+                      class="benefit-link benefit-button usa-button obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5638,7 +5638,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
             </p>
             <button
-              class="usa-button"
+              class="benefit-button usa-button"
               type="button"
             >
               See benefits you did not qualify for
@@ -5660,13 +5660,13 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               class="result-view-share-results-button-group"
             >
               <button
-                class="share-button usa-button usa-button--outline"
+                class="share-button benefit-button usa-button benefit-button--outline usa-button--outline"
                 type="button"
               >
                 Share link
               </button>
               <button
-                class="email-button usa-button usa-button--outline"
+                class="email-button benefit-button usa-button benefit-button--outline usa-button--outline"
                 type="button"
               >
                 Email results

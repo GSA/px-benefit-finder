@@ -3,15 +3,17 @@ import './_index.scss'
 
 const ProcessList = ({ steps }) => {
   return (
-    <ol className="usa-process-list">
+    <ol className="benefit-process-list usa-process-list">
       {steps &&
         steps.map((step, index) => {
           return (
             <li
               key={`process-item-${index}`}
-              className="usa-process-list__item"
+              className="benefit-process-list__item usa-process-list__item"
             >
-              <h3 className="usa-process-list__heading">{step.title}</h3>
+              <h3 className="benefit-process-list__heading usa-process-list__heading">
+                {step.title}
+              </h3>
             </li>
           )
         })}

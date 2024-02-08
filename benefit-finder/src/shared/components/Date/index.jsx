@@ -18,7 +18,10 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
   // Note: when we break each input into functional components they trigger unwanted rerenders
 
   return (
-    <div id={`usa-memorable-date-${id}`} className="usa-memorable-date">
+    <div
+      id={`benefit-memorable-date-${id} usa-memorable-date-${id}`}
+      className="benefit-memorable-date usa-memorable-date"
+    >
       {invalid === true && (
         <Alert
           className="date-alert"
@@ -27,15 +30,18 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           error
         ></Alert>
       )}
-      <div className="usa-form-group usa-form-group--month usa-form-group--select">
-        <label className="usa-label" htmlFor={`date_of_birth_month-${id}`}>
+      <div className="benefit-form-group usa-form-group benefit-form-group--month usa-form-group--month benefit-form-group--select usa-form-group--select">
+        <label
+          className="benefit-label usa-label"
+          htmlFor={`date_of_birth_month-${id}`}
+        >
           {labelMonth}
         </label>
         <div id={`month-description-${id}`} className="usa-sr-only">
           Select a month from the list
         </div>
         <select
-          className={`usa-select ${
+          className={`benefit-select usa-select ${
             required === 'TRUE' ? 'required-field' : ''
           }`}
           id={`date_of_birth_month-${id}`}
@@ -56,15 +62,18 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           ))}
         </select>
       </div>
-      <div className="usa-form-group usa-form-group--day">
-        <label className="usa-label" htmlFor={`date_of_birth_day-${id}`}>
+      <div className="benefit-form-group usa-form-group benefit-form-group--day usa-form-group--day">
+        <label
+          className="benefit-label usa-label"
+          htmlFor={`date_of_birth_day-${id}`}
+        >
           {labelDay}
         </label>
         <div id={`day-description-${id}`} className="usa-sr-only">
           Enter two numerals for day
         </div>
         <input
-          className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
+          className={`benefit-input usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
           aria-describedby={`day-description-${id}`}
           id={`date_of_birth_day-${id}`}
           name={`date_of_birth_day-${id}`}
@@ -75,15 +84,18 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           aria-invalid={invalid === true}
         />
       </div>
-      <div className="usa-form-group usa-form-group--year">
-        <label className="usa-label" htmlFor={`date_of_birth_year-${id}`}>
+      <div className="benefit-form-group usa-form-group benefit-form-group--year usa-form-group--year">
+        <label
+          className="benefit-label usa-label"
+          htmlFor={`date_of_birth_year-${id}`}
+        >
           {labelYear}
         </label>
         <div id={`year-description-${id}`} className="usa-sr-only">
           Enter four numerals for year
         </div>
         <input
-          className={`usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
+          className={`benefit-input usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
           aria-describedby={`year-description-${id}`}
           id={`date_of_birth_year-${id}`}
           name={`date_of_birth_year-${id}`}

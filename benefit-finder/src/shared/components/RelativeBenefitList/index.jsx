@@ -10,7 +10,7 @@ import { Card } from '../index'
  */
 const RelativeBenefitList = ({ data, carrotType }) => {
   return (
-    <ul className="usa-card-group">
+    <ul className="benefit-card-group usa-card-group">
       {data &&
         data.map((item, i) => {
           const { title, link, cta, body } = item.lifeEvent

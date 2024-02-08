@@ -277,26 +277,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Applicant's relationship to the deceased is: spouse, child, parent, or other family member
@@ -454,26 +454,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -631,26 +631,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             3
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -803,26 +803,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -981,23 +981,23 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  0 of
             3
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -1151,23 +1151,23 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  0 of
             6
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -1335,50 +1335,50 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  5 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_died_of_COVID"
                         >
                           The deceased died due to COVID-19
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_death_location_is_US"
                         >
                           The deceased died in the U.S.
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died after May 20th, 2020
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
                           You paid for funeral or burial expenses and were not reimbursed
@@ -1496,23 +1496,23 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  0 of
             6
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -1682,23 +1682,23 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  0 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -1862,32 +1862,32 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  2 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Marital status: unmarried or widowed
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Applicant's relationship to the deceased: spouse
@@ -2045,26 +2045,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -2227,23 +2227,23 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  0 of
             2
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -2393,32 +2393,32 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  2 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -2576,26 +2576,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             3
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -2747,44 +2747,44 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  4 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died within the last two years
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -2901,26 +2901,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -3079,26 +3079,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             2
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -3233,26 +3233,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             2
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -3387,26 +3387,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse or child
@@ -3564,32 +3564,32 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  2 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
@@ -3734,32 +3734,32 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  2 of
             7
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a U.S. citizen or eligible non-citizen
@@ -3926,44 +3926,44 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  4 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is unmarried or widowed
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_care_for_child"
                         >
                           You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16
@@ -4081,38 +4081,38 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  3 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 62 years
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
@@ -4246,50 +4246,50 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  5 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 60 years
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed or divorced
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -4406,50 +4406,50 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  5 of
             7
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are over 50 years
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is widowed or divorced
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -4589,23 +4589,23 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  0 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -4769,26 +4769,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             6
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
                           You are under 18 years
@@ -4956,32 +4956,32 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  2 of
             5
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
                           Your marital status is unmarried or widowed
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse
@@ -5140,38 +5140,38 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  3 of
             6
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
                           The deceased died within the last two years
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
                           You paid for funeral or burial expenses
@@ -5329,26 +5329,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member
@@ -5506,26 +5506,26 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </p>
                     </div>
                     <div
-                      class="bf-usa-criteria-list key-eligibility-criteria-group"
+                      class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                     >
                        
                       <h5
-                        class="key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
                       >
                         Key eligibility criteria
                         <p
-                          class="key-eligibility-criteria-sub-heading"
+                          class="bf-key-eligibility-criteria-sub-heading"
                         >
                           Met  1 of
             4
                         </p>
                       </h5>
                       <ul
-                        class="key-eligibility-criteria-list"
+                        class="bf-key-eligibility-criteria-list"
                       >
                         <li
-                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled key-eligibility-criteria-list-item"
+                          class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
                           Your relationship to the deceased is: spouse, child, parent, or other family member

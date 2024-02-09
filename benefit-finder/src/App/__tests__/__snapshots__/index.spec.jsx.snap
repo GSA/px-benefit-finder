@@ -244,7 +244,7 @@ exports[`loads window query scenario 1 1`] = `
       data-testid="app"
     >
       <div
-        class="result-view"
+        class="bf-result-view"
         data-testid="result-view"
       >
         <div
@@ -271,10 +271,10 @@ exports[`loads window query scenario 1 1`] = `
           </div>
         </div>
         <div
-          class="grid-container"
+          class="bf-grid-container grid-container"
         >
           <div
-            class="result-view-details"
+            class="bf-result-view-details"
           >
             <button
               class="step-back-link bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
@@ -283,13 +283,13 @@ exports[`loads window query scenario 1 1`] = `
               Back
             </button>
             <h3
-              class="result-view-heading font-family-sans"
+              class="bf-result-view-heading font-family-sans"
               id=""
             >
               Results
             </h3>
             <div
-              class="result-view-description"
+              class="bf-result-view-description"
             >
               <div>
                 <strong>
@@ -298,7 +298,7 @@ exports[`loads window query scenario 1 1`] = `
               </div>
             </div>
             <div
-              class="result-view-benefits"
+              class="bf-result-view-benefits"
             >
               <div
                 class="bf-usa-accordion-group"
@@ -5411,10 +5411,10 @@ exports[`loads window query scenario 1 1`] = `
               </div>
             </div>
             <div
-              class="result-view-unmet"
+              class="bf-result-view-unmet"
             >
               <h3
-                class="result-view-unmet-heading font-family-sans"
+                class="bf-result-view-unmet-heading font-family-sans"
                 id=""
               >
                 Benefits you did not qualify for
@@ -5435,10 +5435,10 @@ exports[`loads window query scenario 1 1`] = `
               </button>
             </div>
             <div
-              class="result-view-relvant-benefits"
+              class="bf-result-view-relvant-benefits"
             >
               <h3
-                class="result-view-relvant-benefits-heading font-family-sans"
+                class="bf-result-view-relvant-benefits-heading font-family-sans"
                 id=""
               >
                 More benefits
@@ -5541,10 +5541,10 @@ exports[`loads window query scenario 1 1`] = `
               </ul>
             </div>
             <div
-              class="result-view-share-results"
+              class="bf-result-view-share-results"
             >
               <h3
-                class="result-view-share-results-heading font-family-sans"
+                class="bf-result-view-share-results-heading font-family-sans"
                 id=""
               >
                 Share results
@@ -5553,10 +5553,10 @@ exports[`loads window query scenario 1 1`] = `
                 Copy or email these results. Your answers will be visible. Only share with those you trust.
               </p>
               <div
-                class="result-view-share-results-button-group"
+                class="bf-result-view-share-results-button-group"
               >
                 <button
-                  class="share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                  class="bf-share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                   type="button"
                 >
                   Share link
@@ -5591,7 +5591,7 @@ exports[`loads window query scenario 2 1`] = `
       data-testid="app"
     >
       <div
-        class="result-view"
+        class="bf-result-view"
         data-testid="result-view"
       >
         <div
@@ -5618,10 +5618,10 @@ exports[`loads window query scenario 2 1`] = `
           </div>
         </div>
         <div
-          class="grid-container"
+          class="bf-grid-container grid-container"
         >
           <div
-            class="result-view-details"
+            class="bf-result-view-details"
           >
             <button
               class="step-back-link bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
@@ -5630,13 +5630,13 @@ exports[`loads window query scenario 2 1`] = `
               Back
             </button>
             <h3
-              class="result-view-heading font-family-sans"
+              class="bf-result-view-heading font-family-sans"
               id=""
             >
               Results
             </h3>
             <div
-              class="result-view-description"
+              class="bf-result-view-description"
             >
               <div>
                 <strong>
@@ -5645,7 +5645,7 @@ exports[`loads window query scenario 2 1`] = `
               </div>
             </div>
             <div
-              class="result-view-benefits"
+              class="bf-result-view-benefits"
             >
               <div
                 class="bf-usa-accordion-group"
@@ -11077,10 +11077,10 @@ exports[`loads window query scenario 2 1`] = `
               </div>
             </div>
             <div
-              class="result-view-unmet"
+              class="bf-result-view-unmet"
             >
               <h3
-                class="result-view-unmet-heading font-family-sans"
+                class="bf-result-view-unmet-heading font-family-sans"
                 id=""
               >
                 Benefits you did not qualify for
@@ -11101,10 +11101,10 @@ exports[`loads window query scenario 2 1`] = `
               </button>
             </div>
             <div
-              class="result-view-relvant-benefits"
+              class="bf-result-view-relvant-benefits"
             >
               <h3
-                class="result-view-relvant-benefits-heading font-family-sans"
+                class="bf-result-view-relvant-benefits-heading font-family-sans"
                 id=""
               >
                 More benefits
@@ -11207,10 +11207,10 @@ exports[`loads window query scenario 2 1`] = `
               </ul>
             </div>
             <div
-              class="result-view-share-results"
+              class="bf-result-view-share-results"
             >
               <h3
-                class="result-view-share-results-heading font-family-sans"
+                class="bf-result-view-share-results-heading font-family-sans"
                 id=""
               >
                 Share results
@@ -11219,10 +11219,10 @@ exports[`loads window query scenario 2 1`] = `
                 Copy or email these results. Your answers will be visible. Only share with those you trust.
               </p>
               <div
-                class="result-view-share-results-button-group"
+                class="bf-result-view-share-results-button-group"
               >
                 <button
-                  class="share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                  class="bf-share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                   type="button"
                 >
                   Share link

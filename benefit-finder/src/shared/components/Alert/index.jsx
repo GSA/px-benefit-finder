@@ -25,10 +25,17 @@ const Alert = ({
   tabIndex,
 }) => {
   const defaultClasses = error
-    ? ['bf-usa-alert', 'usa-alert', 'usa-alert--error', 'display-none']
+    ? [
+        'bf-usa-alert',
+        'usa-alert',
+        'bf-usa-alert--error',
+        'usa-alert--error',
+        'display-none',
+      ]
     : [
         'bf-usa-alert',
         'usa-alert',
+        'bf-usa-alert--info',
         'usa-alert--info',
         `${noBackground ? 'no-background' : ''}`,
       ]

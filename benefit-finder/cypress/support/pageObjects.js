@@ -70,7 +70,7 @@ class PageObjects {
   }
 
   benefitsAccordion() {
-    return cy.get('.main-content .usa-accordion__button')
+    return cy.get('.usa-accordion__button')
   }
 }
 

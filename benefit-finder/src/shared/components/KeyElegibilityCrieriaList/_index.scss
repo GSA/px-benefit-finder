@@ -28,6 +28,13 @@
         padding: space.$space-md space.$space-lg;
         border: 0.5px solid color.$pop-blue;
         background-color: color.$sky;
+        display: flex;
+        flex-wrap: nowrap;
+
+        .bf-checkmark--green {
+          height: 100%;
+          margin-right: space.$space-lg;
+        }
       }
 
       li.usa-list {

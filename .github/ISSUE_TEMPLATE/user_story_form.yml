@@ -40,7 +40,7 @@ body:
     id: persona
     attributes:
       label: User / Persona
-      description: 'A user story is viewed from the perspective of a user or persona, such "content editor" or "benefit seeker".'
+      description: 'A user story is viewed from the perspective of a user or persona, such "content editor" or "user approaching retirement".'
       placeholder: "(who) As a..."
     validations:
       required: true

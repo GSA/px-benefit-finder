@@ -70,7 +70,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
               <h3
                 class="usa-process-list__heading"
               >
-                Review Results
+                Review results
               </h3>
             </li>
             <li

@@ -60,7 +60,7 @@ const KeyElegibilityCrieriaList = ({
                   className="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                   data-testid={`${criteriaKey}`}
                 >
-                  <div>
+                  <div aria-hidden="true">
                     <GreenCheck />
                   </div>
                   {label}

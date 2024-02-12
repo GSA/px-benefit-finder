@@ -5743,7 +5743,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -5937,7 +5939,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -6131,7 +6135,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -6320,7 +6326,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -6869,7 +6877,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_died_of_COVID"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -6892,7 +6902,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_death_location_is_US"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -6915,7 +6927,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_date_of_death"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -6938,7 +6952,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -6961,7 +6977,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_paid_funeral_expenses"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -7481,7 +7499,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_marital_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -7504,7 +7524,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -7698,7 +7720,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -8063,7 +8087,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_marital_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -8086,7 +8112,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -8280,7 +8308,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -8469,7 +8499,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_paid_into_SS"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -8492,7 +8524,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -8515,7 +8549,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -8686,7 +8722,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -8881,7 +8919,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9052,7 +9092,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9223,7 +9265,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9417,7 +9461,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_paid_into_SS"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9440,7 +9486,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9621,7 +9669,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_paid_into_SS"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9644,7 +9694,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9847,7 +9899,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_paid_into_SS"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9870,7 +9924,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_marital_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9893,7 +9949,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -9916,7 +9974,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_care_for_child"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10070,7 +10130,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_paid_into_SS"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10093,7 +10155,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_date_of_birth"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10116,7 +10180,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10286,7 +10352,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_paid_into_SS"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10309,7 +10377,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_date_of_birth"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10332,7 +10402,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_marital_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10355,7 +10427,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10378,7 +10452,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10531,7 +10607,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="deceased_paid_into_SS"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10554,7 +10632,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_date_of_birth"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10577,7 +10657,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_marital_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10600,7 +10682,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_citizen_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10623,7 +10707,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -10979,7 +11065,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_date_of_birth"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -11183,7 +11271,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_marital_status"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -11206,7 +11296,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -11401,7 +11493,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -11424,7 +11518,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_paid_funeral_expenses"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -11623,7 +11719,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"
@@ -11817,7 +11915,9 @@ exports[`loads window query scenario 2 1`] = `
                             class="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
                             data-testid="applicant_relationship_to_the_deceased"
                           >
-                            <div>
+                            <div
+                              aria-hidden="true"
+                            >
                               <svg
                                 class="bf-checkmark--green"
                                 fill="none"

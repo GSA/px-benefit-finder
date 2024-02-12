@@ -35,7 +35,7 @@
     "stepBackLink": "Back"
   },
   "requiredLabel": {
-    "value": "Required"
+    "value": "required"
   },
   "alertBanner": {
     "heading": "Error status",

@@ -8,7 +8,7 @@ import './_index.scss'
  * @return {html} returns a semantic legend element
  */
 const Legend = ({ children }) => {
-  return <legend className="usa-legend legend">{children}</legend>
+  return <legend className="bf-legend usa-legend">{children}</legend>
 }
 
 Legend.propTypes = {

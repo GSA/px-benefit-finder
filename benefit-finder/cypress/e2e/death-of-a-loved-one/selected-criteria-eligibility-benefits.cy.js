@@ -75,7 +75,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     pageObjects.buttonGroup().contains('See results').click()
     pageObjects.accordion('Survivors benefits for child').click()
 
-    cy.get('.key-eligibility-criteria-list li')
+    cy.get('.bf-key-eligibility-criteria-list li')
       .filter(':visible')
       .should(
         'contain',

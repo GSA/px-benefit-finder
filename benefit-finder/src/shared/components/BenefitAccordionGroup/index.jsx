@@ -58,7 +58,7 @@ const BenefitAccordionGroup = ({
     return (
       expandAll && (
         <Button
-          className="expand-all"
+          className="bf-expand-all"
           aria-label={handleExpandIcon}
           unstyled
           onClick={() => setExpandAll(!isExpandAll)}
@@ -77,15 +77,15 @@ const BenefitAccordionGroup = ({
    */
   const NotEligibleList = ({ items }) => {
     return (
-      <div className="unmet-criteria-group">
-        <div className="unmet-criteria-title">{unmetLabel}</div>
-        <ul className="unmet-criteria-list">
+      <div className="bf-unmet-criteria-group">
+        <div className="bf-unmet-criteria-title">{unmetLabel}</div>
+        <ul className="bf-unmet-criteria-list">
           {items.map((item, index) => {
             const { label } = item
             return (
               <li
                 key={`not-eligible-list-${index}`}
-                className="unmet-criteria-item"
+                className="bf-unmet-criteria-item"
               >
                 {label}
               </li>
@@ -104,13 +104,13 @@ const BenefitAccordionGroup = ({
    */
   const MoreInfoList = ({ items }) => {
     return (
-      <div className="unmet-criteria-group">
-        <div className="unmet-criteria-title">{eligibleStatusLabels[1]}</div>
-        <ul className="unmet-criteria-list">
+      <div className="bf-unmet-criteria-group">
+        <div className="bf-unmet-criteria-title">{eligibleStatusLabels[1]}</div>
+        <ul className="bf-unmet-criteria-list">
           {items.map((item, index) => {
             const { label } = item
             return (
-              <li key={`more-info-${index}`} className="unmet-criteria-item">
+              <li key={`more-info-${index}`} className="bf-unmet-criteria-item">
                 {label}
               </li>
             )
@@ -121,7 +121,7 @@ const BenefitAccordionGroup = ({
   }
 
   return (
-    <div className="benefit-accordion-group">
+    <div className="bf-usa-accordion-group">
       <ExpandAll />
       {data &&
         data.map((item, index) => {
@@ -154,9 +154,9 @@ const BenefitAccordionGroup = ({
             eligibleBenefits.length === eligibility.length
               ? eligibleStatusLabels[0]
               : notEligibleBenefits.length === 0 &&
-                moreInformationNeeded.length > 0
-              ? eligibleStatusLabels[1]
-              : eligibleStatusLabels[2]
+                  moreInformationNeeded.length > 0
+                ? eligibleStatusLabels[1]
+                : eligibleStatusLabels[2]
 
           const handleHidden =
             notQualifiedView === false &&
@@ -175,20 +175,20 @@ const BenefitAccordionGroup = ({
               subHeading={eligibleStatus}
               aria-expanded={isExpandAll}
               isExpanded={isExpandAll}
-              data-analytics="benefit-accordion"
+              data-analytics="bf-usa-accordion"
               data-analytics-content={title}
               hidden={handleHidden}
               data-testid="benefit"
             >
-              <Heading className="benefit-detail-title" headingLevel={4}>
+              <Heading className="bf-usa-detail-title" headingLevel={4}>
                 {`${agencyPrefix} ${agency.title}`}
               </Heading>
               <div
-                className="benefit-detail-summary"
+                className="bf-usa-detail-summary"
                 dangerouslySetInnerHTML={createMarkup(summary)}
               />
               <KeyElegibilityCrieriaList
-                className="benefit-criteria-list"
+                className="bf-usa-criteria-list"
                 data={eligibleBenefits}
                 initialEligibilityLength={eligibility.length}
                 ui={benefitAccordion}
@@ -199,9 +199,9 @@ const BenefitAccordionGroup = ({
               {moreInformationNeeded.length > 0 && (
                 <MoreInfoList items={moreInformationNeeded} />
               )}
-              <Alert className="benefit-alert">{additionalDescription}</Alert>
+              <Alert className="bf-usa-alert">{additionalDescription}</Alert>
               <ObfuscatedLink
-                className="benefit-link"
+                className="bf-usa-link"
                 href={SourceLink}
                 target="_blank"
                 rel="noopener noreferrer"

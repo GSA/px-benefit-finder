@@ -4,91 +4,89 @@
 @use '../../styles/sizes/_index.scss' as *;
 @use '../../styles/mixins/_index.scss' as *;
 
-#benefit-finder {
-  .benefit-form,
-  .verify-selections-view {
-    background-color: color.$officer-navy;
-    margin: 0 space.$space-md;
-    padding-bottom: space.$padding-bottom-xl;
+.bf-usa-form,
+.bf-verify-selections-view {
+  background-color: color.$officer-navy;
+  margin: 0;
+  padding-bottom: space.$padding-bottom-xl;
+}
+
+.bf-section-wrapper {
+  background-color: color.$white;
+  border: 1px solid white;
+  border-radius: 8px;
+
+  button {
+    margin-bottom: space.$space-md;
   }
 
-  .section-wrapper {
+  button.bf-step-back-link {
+    color: color.$dark-medium-grey;
     background-color: color.$white;
-    border: 1px solid white;
-    border-radius: 8px;
-
-    button {
-      margin-bottom: space.$space-md;
-    }
-
-    button.step-back-link {
-      color: color.$dark-medium-grey !important;
-      background-color: color.$white !important;
-      width: auto !important;
-    }
+    width: auto;
   }
+}
 
-  .section {
-    margin: 50px 20px;
+.bf-section-info {
+  margin: 50px 20px;
+}
+
+.bf-section-nav-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  button,
+  .bf-usa-modal-group a {
+    width: $button-max-width;
+    margin-bottom: space.$space-md;
   }
+}
 
-  .section-nav-btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.bf-section-heading {
+  @include h3;
 
-    button,
-    .benefit-modal-group a {
-      width: $button-max-width;
-      margin-bottom: space.$space-md;
-    }
-  }
+  background-color: color.$officer-navy;
+  color: color.$white;
+  margin: 0;
+  padding: space.$space-xl space.$space-md;
+}
 
-  .section-heading {
+.bf-usa-fieldset {
+  padding-bottom: space.$padding-bottom-lg;
+}
+
+#bf-section {
+  padding-left: space.$space-md;
+  padding-right: space.$space-md;
+  padding-bottom: space.$padding-bottom-lg;
+  margin-bottom: space.$space-lg-plus;
+  border-bottom: 1px solid color.$base-light-grey;
+
+  h2.bf-usa-section-heading {
     @include h3;
+  }
+}
 
-    background-color: color.$officer-navy;
-    color: color.$white;
-    margin: 0;
-    padding: space.$space-xl space.$space-md;
+.bf-radio-group {
+  display: flex;
+
+  .bf-usa-radio__label {
+    margin-right: space.$space-lg;
+  }
+}
+
+@media (width >= $desktop) {
+  .bf-section-info {
+    margin: space.$space-xl;
   }
 
-  .usa-fieldset {
-    padding-bottom: space.$padding-bottom-lg;
+  #bf-section {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  #benefit-section {
-    padding-left: space.$space-md;
-    padding-right: space.$space-md;
-    padding-bottom: space.$padding-bottom-lg;
-    margin-bottom: space.$space-lg-plus;
-    border-bottom: 1px solid color.$base-light-grey;
-
-    h2.benefit-section-heading {
-      @include h3;
-    }
-  }
-
-  .radio-group {
-    display: flex;
-
-    .usa-radio__label {
-      margin-right: space.$space-lg;
-    }
-  }
-
-  @media (width >= $desktop) {
-    .section {
-      margin: space.$space-xl;
-    }
-
-    #benefit-section {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .radio-group {
-      display: inline;
-    }
+  .bf-radio-group {
+    display: inline;
   }
 }

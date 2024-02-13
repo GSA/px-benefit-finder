@@ -33,38 +33,38 @@ const Intro = ({ data, ui, setStep, step }) => {
 
   return (
     data && (
-      <div className="intro">
+      <div className="bf-intro">
         <Chevron heading={title} description={summary} />
-        <div className="grid-container">
+        <div className="bf-grid-container grid-container">
           <Heading headingLevel={2}>{heading}</Heading>
           <TimeIndicator
             description={timeIndicator}
             timeEstimate={timeEstimate}
           />
-          <div className="intro-process-group">
-            <div className="intro-process-list">
+          <div className="bf-intro-process-group">
+            <div className="bf-intro-process-list">
               <ProcessList steps={steps.list} description={steps.title} />
             </div>
-            <div className="line-sperator-wrapper--vertical">
-              <div className="line-sperator--vertical" />
+            <div className="bf-line-sperator-wrapper--vertical">
+              <div className="bf-line-sperator--vertical" />
             </div>
-            <div className="intro-process-notices">
+            <div className="bf-intro-process-notices">
               <Heading
-                className="intro-process-notices-heading"
+                className="bf-intro-process-notices-heading"
                 headingLevel={2}
               >
                 {notices.heading}
               </Heading>
               <NoticesList
-                className="intro-process-notices-list"
+                className="bf-intro-process-notices-list"
                 data={notices.list}
               />
             </div>
           </div>
-          <div className="line-sperator-wrapper">
-            <div className="line-sperator" />
+          <div className="bf-line-sperator-wrapper">
+            <div className="bf-line-sperator" />
           </div>
-          <div className="cta-wrapper">
+          <div className="bf-cta-wrapper">
             <Button onClick={() => handleStep()}>{button}</Button>
           </div>
         </div>

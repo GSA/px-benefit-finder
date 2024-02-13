@@ -3,7 +3,7 @@
 exports[`Legend > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <legend
-    class="usa-legend legend"
+    class="bf-legend usa-legend"
   />
 </DocumentFragment>
 `;

@@ -3,10 +3,10 @@
 exports[`TextInput > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <label
-    class="usa-label"
+    class="bf-usa-label usa-label"
   />
   <input
-    class="usa-input"
+    class="bf-usa-input usa-input"
     type="text"
   />
 </DocumentFragment>

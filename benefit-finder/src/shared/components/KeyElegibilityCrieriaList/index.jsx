@@ -18,7 +18,7 @@ const KeyElegibilityCrieriaList = ({
   ui,
 }) => {
   const { benefitSummary, benefitSummaryPrefix, benefitSummaryConjunction } = ui
-  const defaultClasses = ['key-eligibility-criteria-group']
+  const defaultClasses = ['bf-key-eligibility-criteria-group']
 
   const GreenCheck = () => (
     <svg
@@ -44,20 +44,20 @@ const KeyElegibilityCrieriaList = ({
         <>
           {' '}
           <Heading
-            className="key-eligibility-criteria-heading"
+            className="bf-key-eligibility-criteria-heading"
             headingLevel={5}
           >
             {`${benefitSummary}`}
-            <p className="key-eligibility-criteria-sub-heading">{`${benefitSummaryPrefix} ${data.length} ${benefitSummaryConjunction}
+            <p className="bf-key-eligibility-criteria-sub-heading">{`${benefitSummaryPrefix} ${data.length} ${benefitSummaryConjunction}
             ${initialEligibilityLength}`}</p>
           </Heading>
-          <ul className="key-eligibility-criteria-list">
+          <ul className="bf-key-eligibility-criteria-list">
             {data.map((item, index) => {
               const { criteriaKey, label } = item
               return (
                 <li
                   key={`${criteriaKey}-${index}`}
-                  className="usa-list usa-list--unstyled key-eligibility-criteria-list-item"
+                  className="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                   data-testid={`${criteriaKey}`}
                 >
                   <div aria-hidden="true">

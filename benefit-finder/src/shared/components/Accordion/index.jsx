@@ -75,24 +75,24 @@ const Accordion = ({
     !isOpen ? <Open alt="a plus icon" /> : <Close alt="a minus icon" />
 
   return (
-    <div className="benefit-accordion usa-accordion" {...props} hidden={hidden}>
-      <h4 className="usa-accordion__heading">
+    <div className="bf-usa-accordion usa-accordion" {...props} hidden={hidden}>
+      <h4 className="bf-usa-accordion__heading usa-accordion__heading">
         <button
           type="button"
-          className="usa-accordion__button"
+          className="bf-usa-accordion__button usa-accordion__button"
           aria-expanded={isOpen || false}
           aria-controls={id}
           onClick={() => setOpen(!isOpen)}
         >
-          <span className="heading">{heading}</span>
+          <span className="bf-accordion-heading">{heading}</span>
           <br />
-          <span className="sub-heading">{subHeading}</span>
+          <span className="bf-accordion-sub-heading">{subHeading}</span>
           {handleIcon()}
         </button>
       </h4>
       <div
         id={id}
-        className="usa-accordion__content usa-prose"
+        className="bf-usa-accordion__content usa-accordion__content usa-prose"
         hidden={isOpen || true}
       >
         <div>{children}</div>

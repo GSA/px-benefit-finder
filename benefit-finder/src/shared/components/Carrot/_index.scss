@@ -1,19 +1,17 @@
-#benefit-finder {
-  .carrot,
-  .carrot-two {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 20px;
-    margin: auto 0;
-    transform: rotate(-90deg);
+.bf-carrot,
+.bf-carrot-two {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto 0;
+  transform: rotate(-90deg);
 
-    &::after {
-      content: '\25B8';
-    }
+  &::after {
+    content: '\25B8';
   }
+}
 
-  .carrot-two {
-    transform: rotate(0deg);
-  }
+.bf-carrot-two {
+  transform: rotate(0deg);
 }

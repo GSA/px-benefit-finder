@@ -3,68 +3,65 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/breakpoints/_index.scss' as *;
 
-#benefit-finder {
-  .relative-benefit-card {
-    // .usa-card:last-child overide
-    margin-bottom: space.$space-md !important;
+.bf-usa-card--relative-benefit {
+  margin-bottom: space.$space-md;
 
-    .usa-card__container {
-      background-color: color.$sky;
-      border-radius: 4px;
-      color: color.$officer-navy;
-      height: auto;
-      margin: 0;
-    }
+  .bf-usa-card__container {
+    background-color: color.$sky;
+    border-radius: 4px;
+    color: color.$officer-navy;
+    height: auto;
+    margin: 0;
+  }
 
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    a:hover.usa-card__container {
-      background-color: color.$dark-sky;
-    }
+  a:hover.bf-usa-card__container {
+    background-color: color.$dark-sky;
+  }
 
-    a:active.usa-card__container {
-      border: 2px solid color.$pop-blue;
-    }
+  a:active.bf-usa-card__container {
+    border: 2px solid color.$pop-blue;
+  }
 
-    .usa-card__header {
-      padding-bottom: 0;
-    }
+  .bf-usa-card__header {
+    padding-bottom: 0;
+  }
 
-    h3.usa-card__heading {
-      @include h6;
-    }
+  h3.bf-usa-card__heading {
+    @include h6;
+  }
 
-    .usa-card__body {
-      @include p;
+  .bf-usa-card__body {
+    @include p;
 
-      display: none;
-    }
+    display: none;
+  }
 
-    .usa-card__cta {
-      padding: space.$padding-bottom-md-plus;
+  .bf-usa-card__cta {
+    padding: space.$padding-bottom-md-plus;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @media (width >= $desktop) {
+    .bf-usa-card__body {
+      display: block;
       padding-top: 0;
+      padding-bottom: space.$padding-bottom-md-plus;
       margin-top: 0;
       margin-bottom: 0;
+
+      p {
+        max-width: 90%;
+      }
     }
 
-    @media (width >= $desktop) {
-      .usa-card__body {
-        display: block;
-        padding-top: 0;
-        padding-bottom: space.$padding-bottom-md-plus;
-        margin-top: 0;
-        margin-bottom: 0;
-
-        p {
-          max-width: 90%;
-        }
-      }
-
-      .usa-card__cta {
-        display: none;
-      }
+    .bf-usa-card__cta {
+      display: none;
     }
   }
 }

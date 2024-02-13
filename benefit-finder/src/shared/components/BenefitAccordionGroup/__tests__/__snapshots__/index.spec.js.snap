@@ -2,6 +2,6 @@
 
 exports[`BenefitAccordionGroup renders a match to the previous shot 1`] = `
 <div
-  className="benefit-accordion-group"
+  className="bf-usa-accordion-group"
 />
 `;

@@ -10,14 +10,14 @@ import { Card } from '../index'
  */
 const RelativeBenefitList = ({ data, carrotType }) => {
   return (
-    <ul className="usa-card-group">
+    <ul className="bf-usa-card-group usa-card-group">
       {data &&
         data.map((item, i) => {
           const { title, link, cta, body } = item.lifeEvent
 
           return (
             <Card
-              className="relative-benefit-card tablet:grid-col-12"
+              className="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12"
               title={title}
               cta={cta}
               href={link}

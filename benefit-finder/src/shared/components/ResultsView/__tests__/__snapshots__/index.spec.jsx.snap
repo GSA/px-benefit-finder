@@ -299,6 +299,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Applicant's relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -476,6 +495,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -653,6 +691,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -825,6 +882,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -1357,30 +1433,125 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_died_of_COVID"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased died due to COVID-19
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_death_location_is_US"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased died in the U.S.
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased died after May 20th, 2020
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You paid for funeral or burial expenses and were not reimbursed
                         </li>
                       </ul>
@@ -1884,12 +2055,50 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Marital status: unmarried or widowed
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Applicant's relationship to the deceased: spouse
                         </li>
                       </ul>
@@ -2067,6 +2276,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse or child
                         </li>
                       </ul>
@@ -2415,12 +2643,50 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your marital status is widowed
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -2598,6 +2864,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -2769,24 +3054,100 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased died within the last two years
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse or child
                         </li>
                       </ul>
@@ -2923,6 +3284,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -3101,6 +3481,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -3255,6 +3654,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse or child
                         </li>
                       </ul>
@@ -3409,6 +3827,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse or child
                         </li>
                       </ul>
@@ -3586,12 +4023,50 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                       </ul>
@@ -3756,12 +4231,50 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are a U.S. citizen or eligible non-citizen
                         </li>
                       </ul>
@@ -3948,24 +4461,100 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your marital status is unmarried or widowed
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_care_for_child"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16
                         </li>
                       </ul>
@@ -4103,18 +4692,75 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are over 62 years
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are a US citizen or eligible non-citizen
                         </li>
                       </ul>
@@ -4268,30 +4914,125 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are over 60 years
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your marital status is widowed or divorced
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -4428,30 +5169,125 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_paid_into_SS"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased worked and paid Social Security taxes
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are over 50 years
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your marital status is widowed or divorced
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_citizen_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are a US citizen or eligible non-citizen
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -4791,6 +5627,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_date_of_birth"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You are under 18 years
                         </li>
                       </ul>
@@ -4978,12 +5833,50 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_marital_status"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your marital status is unmarried or widowed
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse
                         </li>
                       </ul>
@@ -5162,18 +6055,75 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="deceased_date_of_death"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           The deceased died within the last two years
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_paid_funeral_expenses"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           You paid for funeral or burial expenses
                         </li>
                       </ul>
@@ -5351,6 +6301,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>
@@ -5528,6 +6497,25 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
                           data-testid="applicant_relationship_to_the_deceased"
                         >
+                          <div
+                            aria-hidden="true"
+                          >
+                            <svg
+                              class="bf-checkmark--green"
+                              fill="none"
+                              height="20"
+                              viewBox="0 0 24 20"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M24 4.15417C23.9925 4.52794 23.8515 4.88618 23.6033 5.16208L12.2975 16.6522L10.1157 18.8696C9.84423 19.1219 9.49174 19.2651 9.12397 19.2727C8.7562 19.2651 8.40371 19.1219 8.13223 18.8696L5.95041 16.6522L0.396694 11.0079C0.148478 10.732 0.00748054 10.3738 0 10C0.00748054 9.62626 0.148478 9.26802 0.396694 8.99212L2.57851 6.77473C2.84999 6.52246 3.20248 6.37917 3.57025 6.37156C3.93802 6.37917 4.29051 6.52246 4.56198 6.77473L9.12397 11.4111L19.2397 1.13046C19.5111 0.878193 19.8636 0.734897 20.2314 0.727295C20.5992 0.734897 20.9517 0.878193 21.2231 1.13046L23.405 3.34785C23.8017 3.54943 24 3.75101 24 4.15417Z"
+                                fill="#009831"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           Your relationship to the deceased is: spouse, child, parent, or other family member
                         </li>
                       </ul>

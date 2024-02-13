@@ -1,0 +1,119 @@
+{
+    "scenario_1_covid": {
+        "en": {
+            "param": {
+                "applicant_date_of_birth_month": 4,
+                "applicant_date_of_birth_day": 5,
+                "applicant_date_of_birth_year": 1960,
+                "applicant_relationship_to_the_deceased": "Spouse",
+                "applicant_marital_status": "Widowed",
+                "applicant_citizen_status": "Yes",
+                "applicant_care_for_child": "Yes",
+                "applicant_paid_funeral_expenses": "Yes",
+                "deceased_date_of_death_month": 2,
+                "deceased_date_of_death_day": 3,
+                "deceased_date_of_death_year": 2022,
+                "deceased_death_location_is_US": "Yes",
+                "deceased_paid_into_SS": "Yes",
+                "deceased_public_safety_officer": "No",
+                "deceased_miner": "No",
+                "deceased_american_indian": "No",
+                "deceased_died_of_COVID": "Yes",
+                "deceased_served_in_active_military": "No"
+            },
+            "results": {
+                "eligible": {
+                    "length": 5,
+                    "eligible_benefits": [
+                        "Survivors benefits for spouse with disabilities",
+                        "COVID-19 funeral assistance",
+                        "Survivors benefits for mothers/fathers with a child",
+                        "Lump-sum death benefit",
+                        "Survivors benefits for spouse"
+                    ]
+                },
+                "total_benefits": 30
+            }
+        }
+    },
+    "scenario_2_veteran": {
+        "en": {
+            "param": {
+                "applicant_date_of_birth_month": 1,
+                "applicant_date_of_birth_day": 1,
+                "applicant_date_of_birth_year": 1980,
+                "applicant_relationship_to_the_deceased": "Parent",
+                "applicant_marital_status": "Married",
+                "applicant_citizen_status": "Yes",
+                "applicant_care_for_child": "No",
+                "applicant_paid_funeral_expenses": "Yes",
+                "deceased_date_of_death_month": 2,
+                "deceased_date_of_death_day": 2,
+                "deceased_date_of_death_year": 2022,
+                "deceased_death_location_is_US": "Yes",
+                "deceased_paid_into_SS": "Yes",
+                "deceased_public_safety_officer": "No",
+                "deceased_miner": "No",
+                "deceased_american_indian": "No",
+                "deceased_died_of_COVID": "No",
+                "deceased_served_in_active_military": "Yes",
+                "deceased_service_status": "Active-duty service member",
+                "deceased_military_death_circumstance": "Died while on active duty",
+                "deceased_grave_headstone": "Yes"
+            },
+            "results": {
+                "eligible": {
+                    "length": 10,
+                    "eligible_benefits": [
+                        "Presidential Memorial Certificate",
+                        "Veterans medallions",
+                        "Veterans headstone and grave marker",
+                        "Life insurance for survivors of veterans",
+                        "Dependency and Indemnity Compensation (DIC)",
+                        "Burial benefits",
+                        "Burial flag",
+                        "Burial in VA national cemetery",
+                        "Death gratuity"
+                    ]
+                },
+                "total_benefits": 30
+            }
+        }
+    },
+    "scenario_3_coal_miner": {
+        "en": {
+            "param": {
+                "applicant_date_of_birth_month": 3,
+                "applicant_date_of_birth_day": 3,
+                "applicant_date_of_birth_year": 1950,
+                "applicant_relationship_to_the_deceased": "Spouse",
+                "applicant_marital_status": "Widowed",
+                "applicant_citizen_status": "Yes",
+                "applicant_care_for_child": "Yes",
+                "applicant_paid_funeral_expenses": "Yes",
+                "deceased_date_of_death_month": 5,
+                "deceased_date_of_death_day": 5,
+                "deceased_date_of_death_year": 2023,
+                "deceased_death_location_is_US": "Yes",
+                "deceased_paid_into_SS": "Yes",
+                "deceased_public_safety_officer": "No",
+                "deceased_miner": "Yes",
+                "deceased_american_indian": "No",
+                "deceased_died_of_COVID": "No",
+                "deceased_served_in_active_military": "Yes",
+                "deceased_service_status": "Member of the National Guard/Reserves",
+                "deceased_military_death_circumstance": "Died as a results of a service-related disability/illness",
+                "deceased_grave_headstone": "No"
+            },
+            "results": {
+                "eligible": {
+                    "length": 9,
+                    "eligible_benefits": [
+                        "Coal Mine"
+                    ]
+                },
+                "total_benefits": 30
+            }
+        }
+    }
+}

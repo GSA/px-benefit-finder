@@ -3,6 +3,7 @@
 import { pageObjects } from '../../support/pageObjects'
 import * as utils from '../../support/utils'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
+import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
   it('Should render Survivor Benefits for Child benefit accordion correctly based on selected cretiria options', () => {
@@ -97,5 +98,88 @@ describe('Validate correct eligibility benefits display based on selected criter
         'contain',
         EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[4].label
       )
+  })
+
+  it('qa scenario 1 Covid EN - Verify correct benefit results for query values that includes covid in search parameter of URL', () => {
+    const benefitsCriteria = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
+    const applicant_date_of_birth = encodeURI(
+      `{"month":"${
+        benefitsCriteria.applicant_date_of_birth_month - 1
+      }","day":"${benefitsCriteria.applicant_date_of_birth_day}","year":"${
+        benefitsCriteria.applicant_date_of_birth_year
+      }"}`
+    )
+    const deceased_date_of_death = encodeURI(
+      `{"month":"${benefitsCriteria.deceased_date_of_death_month - 1}","day":"${
+        benefitsCriteria.deceased_date_of_death_day
+      }","year":"${benefitsCriteria.deceased_date_of_death_year}"}`
+    )
+    cy.visit(
+      `/iframe.html?args=&id=app--primary&viewMode=story&applicant_date_of_birth=${applicant_date_of_birth}&applicant_relationship_to_the_deceased=${benefitsCriteria.applicant_relationship_to_the_deceased}&applicant_marital_status=${benefitsCriteria.applicant_marital_status}&applicant_citizen_status=${benefitsCriteria.applicant_citizen_status}&applicant_care_for_child=${benefitsCriteria.applicant_care_for_child}&applicant_paid_funeral_expenses=${benefitsCriteria.applicant_paid_funeral_expenses}&deceased_date_of_death=${deceased_date_of_death}&deceased_death_location_is_US=${benefitsCriteria.deceased_death_location_is_US}&deceased_paid_into_SS=${benefitsCriteria.deceased_paid_into_SS}&deceased_public_safety_officer=${benefitsCriteria.deceased_public_safety_officer}&deceased_miner=${benefitsCriteria.deceased_miner}&deceased_american_indian=${benefitsCriteria.deceased_american_indian}&deceased_died_of_COVID=${benefitsCriteria.deceased_died_of_COVID}&deceased_served_in_active_military=${benefitsCriteria.deceased_served_in_active_military}&shared=true`
+    )
+    const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
+    pageObjects
+      .benefitsAccordion()
+      .filter(':visible')
+      .should('have.length', enResults.eligible.length)
+      .and('contain', 'Likely Eligible')
+      .and('contain', enResults.eligible.eligible_benefits[0])
+      .and('contain', enResults.eligible.eligible_benefits[1])
+      .and('contain', enResults.eligible.eligible_benefits[2])
+      .and('contain', enResults.eligible.eligible_benefits[3])
+      .and('contain', enResults.eligible.eligible_benefits[4])
+  })
+
+  it('QA scenario 2 Veteran EN - Verify correct benefit results for query values that includes veteran in search parameter of URL', () => {
+    const benefitsCriteria = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.param
+    const applicant_date_of_birth = encodeURI(
+      `{"month":"${
+        benefitsCriteria.applicant_date_of_birth_month - 1
+      }","day":"${benefitsCriteria.applicant_date_of_birth_day}","year":"${
+        benefitsCriteria.applicant_date_of_birth_year
+      }"}`
+    )
+    const deceased_date_of_death = encodeURI(
+      `{"month":"${benefitsCriteria.deceased_date_of_death_month - 1}","day":"${
+        benefitsCriteria.deceased_date_of_death_day
+      }","year":"${benefitsCriteria.deceased_date_of_death_year}"}`
+    )
+    cy.visit(
+      `/iframe.html?args=&id=app--primary&viewMode=story&applicant_date_of_birth=${applicant_date_of_birth}&applicant_relationship_to_the_deceased=${benefitsCriteria.applicant_relationship_to_the_deceased}&applicant_marital_status=${benefitsCriteria.applicant_marital_status}&applicant_citizen_status=${benefitsCriteria.applicant_citizen_status}&applicant_care_for_child=${benefitsCriteria.applicant_care_for_child}&applicant_paid_funeral_expenses=${benefitsCriteria.applicant_paid_funeral_expenses}&deceased_date_of_death=${deceased_date_of_death}&deceased_death_location_is_US=${benefitsCriteria.deceased_death_location_is_US}&deceased_paid_into_SS=${benefitsCriteria.deceased_paid_into_SS}&deceased_public_safety_officer=${benefitsCriteria.deceased_public_safety_officer}&deceased_miner=${benefitsCriteria.deceased_miner}&deceased_american_indian=${benefitsCriteria.deceased_american_indian}&deceased_died_of_COVID=${benefitsCriteria.deceased_died_of_COVID}&deceased_served_in_active_military=${benefitsCriteria.deceased_served_in_active_military}&deceased_service_status=${encodeURI(benefitsCriteria.deceased_service_status)}&deceased_military_death_circumstance=${encodeURI(benefitsCriteria.deceased_military_death_circumstance)}&deceased_grave_headstone=${benefitsCriteria.deceased_grave_headstone}&shared=true`
+    )
+    const enResults = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.results
+    pageObjects
+      .benefitsAccordion()
+      .filter(':visible')
+      .should('have.length', enResults.eligible.length)
+      .and('contain', 'Likely Eligible')
+      .and('contain', enResults.eligible.eligible_benefits[0])
+  })
+
+  it('QA scenario 3 Coal Miner EN - Verify correct benefit results for query values that includes Coal Miner in search parameter of URL', () => {
+    const benefitsCriteria =
+      BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.param
+    const applicant_date_of_birth = encodeURI(
+      `{"month":"${
+        benefitsCriteria.applicant_date_of_birth_month - 1
+      }","day":"${benefitsCriteria.applicant_date_of_birth_day}","year":"${
+        benefitsCriteria.applicant_date_of_birth_year
+      }"}`
+    )
+    const deceased_date_of_death = encodeURI(
+      `{"month":"${benefitsCriteria.deceased_date_of_death_month - 1}","day":"${
+        benefitsCriteria.deceased_date_of_death_day
+      }","year":"${benefitsCriteria.deceased_date_of_death_year}"}`
+    )
+    cy.visit(
+      `/iframe.html?args=&id=app--primary&viewMode=story&applicant_date_of_birth=${applicant_date_of_birth}&applicant_relationship_to_the_deceased=${benefitsCriteria.applicant_relationship_to_the_deceased}&applicant_marital_status=${benefitsCriteria.applicant_marital_status}&applicant_citizen_status=${benefitsCriteria.applicant_citizen_status}&applicant_care_for_child=${benefitsCriteria.applicant_care_for_child}&applicant_paid_funeral_expenses=${benefitsCriteria.applicant_paid_funeral_expenses}&deceased_date_of_death=${deceased_date_of_death}&deceased_death_location_is_US=${benefitsCriteria.deceased_death_location_is_US}&deceased_paid_into_SS=${benefitsCriteria.deceased_paid_into_SS}&deceased_public_safety_officer=${benefitsCriteria.deceased_public_safety_officer}&deceased_miner=${benefitsCriteria.deceased_miner}&deceased_american_indian=${benefitsCriteria.deceased_american_indian}&deceased_died_of_COVID=${benefitsCriteria.deceased_died_of_COVID}&deceased_served_in_active_military=${benefitsCriteria.deceased_served_in_active_military}&deceased_service_status=${encodeURI(benefitsCriteria.deceased_service_status)}&deceased_military_death_circumstance=${encodeURI(benefitsCriteria.deceased_military_death_circumstance)}&deceased_grave_headstone=${benefitsCriteria.deceased_grave_headstone}&shared=true`
+    )
+    const enResults = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.results
+    pageObjects
+      .benefitsAccordion()
+      .filter(':visible')
+      .should('have.length', enResults.eligible.length)
+      .and('contain', 'Likely Eligible')
+      .and('contain', enResults.eligible.eligible_benefits[0])
   })
 })

@@ -1,16 +1,14 @@
 @use '../../styles/colors/_index.scss' as color;
 
-#benefit-finder {
-  .obfuscated-link {
-    position: relative;
-    padding-right: 50px;
-    padding-left: 50px;
+.bf-obfuscated-link {
+  position: relative;
+  padding-right: 50px;
+  padding-left: 50px;
+  text-decoration: none;
+  color: color.$white !important;
+
+  &:visited {
     text-decoration: none;
     color: color.$white;
-
-    &:visited {
-      text-decoration: none;
-      color: color.$white;
-    }
   }
 }

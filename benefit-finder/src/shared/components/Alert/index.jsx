@@ -25,8 +25,20 @@ const Alert = ({
   tabIndex,
 }) => {
   const defaultClasses = error
-    ? ['usa-alert', 'usa-alert--error', 'display-none']
-    : ['usa-alert', 'usa-alert--info', `${noBackground ? 'no-background' : ''}`]
+    ? [
+        'bf-usa-alert',
+        'usa-alert',
+        'bf-usa-alert--error',
+        'usa-alert--error',
+        'display-none',
+      ]
+    : [
+        'bf-usa-alert',
+        'usa-alert',
+        'bf-usa-alert--info',
+        'usa-alert--info',
+        `${noBackground ? 'no-background' : ''}`,
+      ]
 
   return (
     <div
@@ -38,13 +50,15 @@ const Alert = ({
       aria-hidden={error}
     >
       {children ? (
-        <div className="usa-alert__body">
-          <div className="usa-alert__text">{children}</div>
+        <div className="bf-usa-alert__body usa-alert__body">
+          <div className="bf-usa-alert__text usa-alert__text">{children}</div>
         </div>
       ) : (
-        <div className="usa-alert__body">
-          <h4 className="usa-alert__heading">{heading}</h4>
-          <p className="usa-alert__text">{description}</p>
+        <div className="bf-usa-alert__body usa-alert__body">
+          <h4 className="bf-usa-alert__heading usa-alert__heading">
+            {heading}
+          </h4>
+          <p className="bf-usa-alert__text usa-alert__text">{description}</p>
         </div>
       )}
     </div>

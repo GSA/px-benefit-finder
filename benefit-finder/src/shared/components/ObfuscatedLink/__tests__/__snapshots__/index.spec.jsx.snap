@@ -3,10 +3,10 @@
 exports[`ObfuscatedLink > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <a
-    class="usa-button obfuscated-link"
+    class="bf-usa-button usa-button bf-obfuscated-link"
   >
     <svg
-      class="carrot"
+      class="bf-carrot"
       fill="white"
       height="24"
       viewBox="0 0 24 24"

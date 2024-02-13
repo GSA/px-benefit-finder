@@ -2,7 +2,7 @@
 
 exports[`Modal renders a match to the previous shot 1`] = `
 <div
-  className="benefit-modal-group"
+  className="bf-usa-modal-group"
 >
   <a
     aria-label="Continue"

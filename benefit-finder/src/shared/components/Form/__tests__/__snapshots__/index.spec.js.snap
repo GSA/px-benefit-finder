@@ -2,7 +2,7 @@
 
 exports[`Form renders a match to the previous shot 1`] = `
 <form
-  className="benefit-form"
+  className="bf-usa-form"
 >
   <div
     className="grid-container"

@@ -11,7 +11,7 @@ import './_index.scss'
  * @return {html} returns a semantic html label
  */
 const Label = ({ className, label, htmlFor }) => {
-  const defaultClasses = ['usa-label']
+  const defaultClasses = ['bf-usa-label usa-label']
   return (
     <label
       className={useHandleClassName({ className, defaultClasses })}

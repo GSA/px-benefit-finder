@@ -3,7 +3,7 @@
 exports[`Carrot > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <svg
-    class="carrot"
+    class="bf-carrot"
     height="24"
     viewBox="0 0 24 24"
     width="24"

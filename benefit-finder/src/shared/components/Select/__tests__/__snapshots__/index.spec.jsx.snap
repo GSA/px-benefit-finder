@@ -3,13 +3,13 @@
 exports[`Select > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <label
-    class="usa-label"
+    class="bf-usa-label usa-label"
   >
     Dropdown Label
   </label>
   <select
     aria-invalid="false"
-    class="usa-select "
+    class="bf-usa-select usa-select "
   >
     <option
       disabled=""

@@ -263,15 +263,15 @@ const LifeEventSection = ({
   return (
     data && (
       <>
-        <Heading className="section-heading" headingLevel={1}>
+        <Heading className="bf-section-heading" headingLevel={1}>
           {step === data.length
             ? `${sectionHeadings.final}`
             : step - 1 === 0
-            ? `${sectionHeadings.start}`
-            : `${sectionHeadings.continue}`}
+              ? `${sectionHeadings.start}`
+              : `${sectionHeadings.continue}`}
         </Heading>
-        <div className="section-wrapper">
-          <div className="section">
+        <div className="bf-section-wrapper">
+          <div className="bf-section-info">
             <StepIndicator
               current={step - 1}
               setCurrent={setStep}
@@ -281,14 +281,14 @@ const LifeEventSection = ({
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
-              <div id="benefit-section">
+              <div id="bf-section">
                 <Alert
                   alertFieldRef={alertFieldRef}
                   heading={ui.alertBanner.heading}
                   description={ui.alertBanner.description}
                   error
                 ></Alert>
-                <Heading className="benefit-section-heading" headingLevel={2}>
+                <Heading className="bf-usa-section-heading" headingLevel={2}>
                   {currentData.section.heading}
                 </Heading>
                 <div
@@ -518,7 +518,7 @@ const LifeEventSection = ({
                 })}
               </div>
             )}
-            <div className="section-nav-btn-group">
+            <div className="bf-section-nav-btn-group">
               <Button secondary onClick={() => handleBackUpdate(-1)}>
                 {buttonGroup[0].value}
               </Button>

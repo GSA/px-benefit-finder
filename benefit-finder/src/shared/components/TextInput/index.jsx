@@ -13,7 +13,9 @@ import PropTypes from 'prop-types'
  */
 
 const TextInput = ({ id, className, label, textarea }) => {
-  const defaultClasses = !textarea ? ['usa-input'] : ['usa-textarea']
+  const defaultClasses = !textarea
+    ? ['bf-usa-input usa-input']
+    : ['bf-usa-textarea usa-textarea']
 
   /**
    * a functional component to create a textarea element.

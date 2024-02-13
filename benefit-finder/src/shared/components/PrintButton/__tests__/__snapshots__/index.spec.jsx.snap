@@ -3,7 +3,7 @@
 exports[`PrintButton > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <button
-    class="print-button usa-button usa-button--outline"
+    class="print-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
     type="button"
   >
     Print

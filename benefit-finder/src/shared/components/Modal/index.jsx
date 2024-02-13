@@ -135,8 +135,11 @@ const Modal = ({
     navItemTwoFunction,
   }) => {
     return (
-      <ul className="modal usa-button-group width-full">
-        <li className="usa-button-group__item width-full" key="nav-item-one">
+      <ul className="modal bf-usa-button-group usa-button-group width-full">
+        <li
+          className="bf-usa-button-group__item usa-button-group__item width-full"
+          key="nav-item-one"
+        >
           <ObfuscatedLink
             id="navItemOneBtn"
             className="nav-item-one width-full"
@@ -148,7 +151,10 @@ const Modal = ({
             {navItemOneLabel}
           </ObfuscatedLink>
         </li>
-        <li className="usa-button-group__item width-full" key="nav-item-two">
+        <li
+          className="bf-usa-button-group__item usa-button-group__item width-full"
+          key="nav-item-two"
+        >
           <ObfuscatedLink
             id="navItemTwoBtn"
             className="nav-item-two width-full"
@@ -165,13 +171,14 @@ const Modal = ({
   }
 
   return (
-    <div id={id} className="benefit-modal-group">
+    <div id={id} className="bf-usa-modal-group">
       <Trigger
         triggerLabel={triggerLabel}
         onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}
         onClick={() => handleOpenModal()}
       ></Trigger>
       <NavModal
+        id="benefit-finder"
         isOpen={modalOpen}
         onRequestClose={() => handleCloseModal(triggerRef)}
         style={customStyles}
@@ -193,22 +200,6 @@ const Modal = ({
             navItemTwoFunction={navItemTwoFunction}
           />
         )}
-        {/* child example: <ul className="usa-button-group">
-          <li className="usa-button-group__item">
-            <button type="button" className="usa-button" data-close-modal>
-              Continue without saving
-            </button>
-          </li>
-          <li className="usa-button-group__item">
-            <button
-              type="button"
-              className="usa-button padding-105 text-center"
-              data-close-modal
-            >
-              Go back
-            </button>
-          </li>
-        </ul> */}
       </NavModal>
     </div>
   )

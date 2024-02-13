@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest shot v1, https://goo.gl/fbAQLP
 
-exports[`Carrot renders a match to the previous snapshot 1`] = `
+exports[`Carrot renders a match to the previous shot 1`] = `
 <svg
   className="carrot"
   height="24"

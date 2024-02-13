@@ -34,10 +34,10 @@ A short list of technologies used in this project.
 ### FrontEnd
 
 - [React](https://react.dev/) - Javascript library for web and native user interfaces
-- [Jest](https://jestjs.io/) - Javascript testing framework
+- [Vitest](https://vitest.dev/) - Javascript testing framework
 - [USWDS](https://designsystem.digital.gov/) - United States Web Design System
 - [SCSS](https://sass-lang.com/) - CSS Extension
-- [Webpack](https://webpack.js.org/) - Module bundler
+- [Vite](https://vitejs.dev/) - Module bundler
 - [Storybook](https://storybook.js.org/) - Front End workshop for UI development
 
 ### Automated Testing
@@ -181,18 +181,21 @@ aws s3 ls s3://${AWS_BUCKET}/
 
 # Infrastructure (provisioned by Terraform)
 
-
 ## Cloud.gov Infrastructure
 
 ### Environments/Spaces:
+
 #### Benefit-finder-dev : Sandbox environment for the tech team.
-      CMS App main page URL: 
 
-      https://benefit-finder-waf-dev.app.cloud.gov
+      CMS App main page URL:
+
+      https://bf-static-main.bxdev.net/
+
 #### Benefit-finder-main : The main/pre-release environment.
-      CMS App main page URL: 
 
-      https://benefit-finder-waf-main.app.cloud.gov
+      CMS App main page URL:
+
+      https://bf-static-dev.bxdev.net/
 
 ## How to use terraform to manage the infrastructure
 
@@ -211,7 +214,7 @@ cd infra/benefit-finder-infra
 3. Set bucket_name variable.
 
 ```
-export bucket_name="terraform-backend" 
+export bucket_name="terraform-backend"
 ```
 
 4. Execute the script to authenticate to use terraform backend
@@ -227,11 +230,13 @@ source scripts/cloudgov-aws-creds.sh
 ```
 terraform init
 ```
+
 7. Make sure you see terraform workspaces
 
 ```
 terraform workspace list
 ```
+
 ![terraform workspace list](image-2.png)
 
 8. Choose the workspace you need to work on
@@ -239,6 +244,7 @@ terraform workspace list
 ```
 terraform workspace select dev
 ```
+
 9. Plan
 
 ```
@@ -246,6 +252,7 @@ terraform plan
 ```
 
 # Release Process
+
 ### Versioning
 
 The versioning scheme adheres to Semantic Versioning (SemVer). Versions are of the form MAJOR.MINOR.PATCH:
@@ -262,12 +269,12 @@ The development process involves three main branches:
 
 3. Feature Branches: These are created for each new feature or bug fix. They can be deployed to the cloud.gov `benefit-finder-dev` environment by altering the branch name which the `build_and_deploy_dev` CircleCI workflow deploys on.
 
-
 ### Pull Request Workflow
 
 All changes are made through feature branches, and pull requests to `main` are submitted for code review. A minimum of one approving review is required before merging.
 
 There are following automated tests that get triggered on each PR and need to pass:
+
 1. PHP Code Sniffer
 2. CodeQL
 3. Cypress Tests
@@ -287,8 +294,6 @@ When `main` is deemed stable, a `pre-release draft` is created as below:
 7. After completing the 5th and 6th steps, click the "Run workflow" button to trigger the workflow manually.
 8. Once the workflow runs successfully, a `draft pre-release` is created, automated release notes are generated and a `benefit-finder-module-*.tar.gz` file is output under the `assets` section of the release.
 9. Edit the `draft pre-release`, evaluate the notes and publish it as the `release` or `pre-release`.
-
-
 
 # VDI Login Guide for the Benefit-finder Team Members
 

@@ -7,8 +7,6 @@
   |-.storybook
   |-cypress
   |-nginx
-  |-public
-    |-index.html
   |-src
     |-App
     |-shared
@@ -17,16 +15,19 @@
         |-ComponentName
           |-__tests__
             |-__snapshots__
-            |-index.spec.js
-          |-index.jsx
-          |-index.stories.jsx
-          |-_index.scss
+            index.spec.js
+            indexComponentName.spec.cy.js
+          _index.scss
+          index.jsx
+          index.stories.jsx
       |-hooks
       |-locales
       |-style-docs
       |-styles
       |-utils
-  |-index.jsx
+    |-index.jsx
+    |-setupTest.js
+  |-vite-config
   |-README.md
 ```
 
@@ -42,7 +43,7 @@
 | File or folder          | Description                                                |
 | ----------------------- | ---------------------------------------------------------- |
 | `src/index.jsx`         | Entry file.                                                |
-| `public/index.html`     | All scripts and styles injected here                       |
+| `index.html`            | All scripts and styles injected here                       |
 | `src/App`               | Main application routes, global / ancestor of all modules. |
 | `src/shared/api`        | dev utils for interacting with data                        |
 | `src/shared/components` | Components, constants, machines, hooks, styles, utils etc; |
@@ -50,6 +51,7 @@
 | `src/shared/style-docs` | mdx files for !stories documentation                       |
 | `src/shared/styles`     | scss partials                                              |
 | `src/shared/utils`      | custom Javascript utilities                                |
+| `vite-config.mjs`       | vite bundler config, imports from `vite-config` dir        |
 |                         | **_Any module is allowed to import from shared._**         |
 
 <br>
@@ -63,7 +65,9 @@
 | `.stories.jsx`  | Component Story Format files for storybook stories       |
 | `.mdx`          | Markdown files that accept ES imports for storybook docs |
 | `.md`           | Markdown files for project docs                          |
+| `.mjs`          | ES Module File                                           |
 | `.spec.js`      | Testing specification                                    |
+| `.spec.cy.js`   | Cypress testing specification                            |
 | `.spec.js.snap` | Testing snapshots                                        |
 | `.hbs`          | Handlebars (used in plop generated components)           |
 | `.scss`         | Syntactically awesome style sheets                       |
@@ -83,13 +87,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 npm install
 ```
 
+### Setup .env.local file
+
+1. Copy environment example file
+
+```shell
+cp .env.local.example .env.local
+```
+
+2. Replace env variable as needed
+
 ### Build and serve development environment.
 
-There are two build environments, one for our component workshop (Storybook) and another for our Application (CRACO)
+There are three local build environments, one for our component workshop (Storybook), another for our Application (Vite), and finally a test e2e test env (Cypress).
 
-#### CRACO APP
+#### Storybook
 
-Rather than ejecting the react scripts, we override them with tooling. (Learn more about [Craco](https://craco.js.org/docs/getting-started/).
+Run development workshop
+
+```shell
+npm run dev:storybook
+```
+
+#### Vite App
+
+Run development server from `vite.config.mjs`
 
 ```shell
 npm run dev
@@ -97,10 +119,10 @@ npm run dev
 
 #### Storybook
 
-Run development workshop.
+Run e2e development config
 
 ```shell
-npm run dev:storybook
+npm cy:dev:storybook
 ```
 
 ## Git Hooks
@@ -268,7 +290,7 @@ function Value = ({ children }) => (<div className="wrapper">{children}</div>)
 
 #### **5. Testing**
 
-We use [Jest](https://jestjs.io/) for Unit/DOM testing
+We use [Vitest](https://vitest.dev/) for Unit/DOM testing
 
 ```sh
 npm run test
@@ -284,10 +306,10 @@ We build each of our components with `spec`, `scss`, `stories` and `jsx` files
 |-ComponentName
   |-__tests__
     |-__snapshots__
-    |-index.spec.js
-  |-_index.scss
-  |-index.jsx
-  |-index.stories.jsx
+    index.spec.js
+  _index.scss
+  index.jsx
+  index.stories.jsx
 ```
 
 To generate a component with these files based on a name space,

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest shot v1, https://goo.gl/fbAQLP
 
-exports[`Intro renders a match to the previous snapshot 1`] = `
+exports[`Intro renders a match to the previous shot 1`] = `
 <div
   className="intro"
 >
@@ -39,7 +39,7 @@ exports[`Intro renders a match to the previous snapshot 1`] = `
       className="time-indicator"
     >
       Time to complete
-       
+
       2-5 minutes
     </div>
     <div

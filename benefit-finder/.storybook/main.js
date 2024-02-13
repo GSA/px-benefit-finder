@@ -1,6 +1,3 @@
-/** @type { import('@storybook/react-webpack5').StorybookConfig } */
-
-
 const config = {
   staticDirs: ['../themes'],
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx)'],
@@ -9,23 +6,14 @@ const config = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-jest',
-    {
-      name: '@storybook/addon-styling',
-      options: {
-        sass: {
-          implementation: require('sass'),
-        },
-      },
-    },
+    '@storybook/addon-mdx-gfm',
   ],
-  framework: {
-    name: '@storybook/react-webpack5',
-    options: {},
-  },
   docs: {
-    //👇 See the table below for the list of supported options
     autodocs: 'tag',
+  },
+  framework: '@storybook/react-vite',
+  core: {
+    builder: '@storybook/builder-vite',
   },
 }
 export default config

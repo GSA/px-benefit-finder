@@ -1,2 +1,5 @@
 build
+themes
+coverage
+node_modules
 storybook-static

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest shot v1, https://goo.gl/fbAQLP
 
-exports[`StepIndicator renders a match to the previous snapshot 1`] = `
+exports[`StepIndicator renders a match to the previous shot 1`] = `
 <div>
   <button
     className=""

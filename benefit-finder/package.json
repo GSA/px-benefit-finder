@@ -27,6 +27,7 @@
     "build:storybook": "npm run prebuild:storybook && storybook build",
     "cy:prebuild:storybook": "NODE_ENV=test npm run mv:uswds:usagov && npm run build",
     "cy:dev:storybook": "NODE_ENV=test npm run cy:prebuild:storybook && storybook dev -p 6006",
+    "cy:dev:components": "NODE_ENV=test npm run cy:prebuild:storybook && cypress open",
     "cy:build:storybook": "NODE_ENV=test npm run cy:prebuild:storybook && storybook build --test",
     "cy:run:component:chrome": "NODE_ENV=test npx cypress run --component --browser chrome",
     "cy:run:e2e:chrome": "NODE_ENV=test npx cypress run --browser chrome",

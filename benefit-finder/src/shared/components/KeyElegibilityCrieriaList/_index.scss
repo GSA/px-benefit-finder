@@ -22,16 +22,23 @@
     padding: 0;
     margin: 0;
 
-    .key-eligibility-criteria-list-item {
-      margin: 0;
-      padding: space.$space-md space.$space-lg;
-      border: 0.5px solid color.$pop-blue;
-      background-color: color.$sky;
-    }
+      .key-eligibility-criteria-list-item {
+        margin: 0;
+        padding: space.$space-md space.$space-lg;
+        border: 0.5px solid color.$pop-blue;
+        background-color: color.$sky;
+        display: flex;
+        flex-wrap: nowrap;
 
-    li.usa-list {
-      @include p2;
-    }
+        .bf-checkmark--green {
+          height: 100%;
+          margin-right: space.$space-lg;
+        }
+      }
+
+      li.usa-list {
+        @include p2;
+      }
 
     li.unmet-criteria-item {
       @include p;

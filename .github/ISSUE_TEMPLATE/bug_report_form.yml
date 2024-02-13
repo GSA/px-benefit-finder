@@ -38,6 +38,6 @@ body:
     id: replicate
     attributes:
       label: How to replicate
-      description: "Please tell us how we can replicate the problem. A step-by-step walk-through is most helpful."
+      description: "Please tell us how we can replicate the problem. A step-by-step walk-through and screencapture is most helpful."
     validations:
       required: true

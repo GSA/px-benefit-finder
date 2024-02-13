@@ -2,8 +2,8 @@
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
 
-.key-eligibility-criteria-group {
-  .key-eligibility-criteria-heading {
+.bf-key-eligibility-criteria-group {
+  .bf-key-eligibility-criteria-heading {
     @include important-bold;
 
     background-color: color.$marine;
@@ -14,15 +14,15 @@
     text-align: center;
   }
 
-  .key-eligibility-criteria-sub-heading {
+  .bf-key-eligibility-criteria-sub-heading {
     margin-bottom: 0;
   }
-
-  .key-eligibility-criteria-list {
+  
+  .bf-key-eligibility-criteria-list {
     padding: 0;
     margin: 0;
 
-      .key-eligibility-criteria-list-item {
+    .bf-key-eligibility-criteria-list-item {
         margin: 0;
         padding: space.$space-md space.$space-lg;
         border: 0.5px solid color.$pop-blue;
@@ -36,16 +36,16 @@
         }
       }
 
-      li.usa-list {
+      li.bf-usa-list {
         @include p2;
       }
 
-    li.unmet-criteria-item {
+    li.bf-unmet-criteria-item {
       @include p;
     }
   }
 }
 
-.benefit-alert .usa-alert__text {
+.bf-usa-alert .usa-alert__text {
   @include p3;
 }

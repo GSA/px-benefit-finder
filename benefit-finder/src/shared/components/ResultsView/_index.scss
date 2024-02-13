@@ -3,33 +3,33 @@
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
 
-.result-view-details {
+.bf-result-view-details {
   padding: space.$space-lg;
 
   button.step-back-link {
-    color: color.$dark-medium-grey !important;
-    background-color: color.$white !important;
-    width: auto !important;
+    color: color.$dark-medium-grey;
+    background-color: color.$white;
+    width: auto;
   }
 
-  .result-view-heading {
+  .bf-result-view-heading {
     @include h2;
   }
 
-  .result-view-description {
+  .bf-result-view-description {
     @include h6;
   }
 }
 
-.result-view-benefits,
-.result-view-unmet,
-.result-view-relvant-benefits,
-.result-view-share-results {
+.bf-result-view-benefits,
+.bf-result-view-unmet,
+.bf-result-view-relvant-benefits,
+.bf-result-view-share-results {
   padding: space.$space-md 0;
   border-bottom: 2px solid color.$base-light-grey;
 }
 
-.result-view-unmet {
+.bf-result-view-unmet {
   button {
     margin-bottom: space.$space-md;
     width: 100%;
@@ -40,36 +40,36 @@
   }
 }
 
-.result-view-unmet-heading {
+.bf-result-view-unmet-heading {
   @include h4;
 
   text-align: center;
 }
 
-.result-view-relvant-benefits-heading {
+.bf-result-view-relvant-benefits-heading {
   @include h4;
 
   text-align: center;
 }
 
-.result-view-share-results-heading {
+.bf-result-view-share-results-heading {
   @include h4;
 
   text-align: center;
 }
 
-.result-view-share-results {
+.bf-result-view-share-results {
   text-align: center;
 }
 
-.result-view-share-results-button-group {
+.bf-result-view-share-results-button-group {
   button {
     margin-bottom: space.$space-sm;
   }
 }
 
 @media (width >= $desktop) {
-  .result-view-details {
+  .bf-result-view-details {
     padding: space.$space-md-plus 164px;
   }
 }

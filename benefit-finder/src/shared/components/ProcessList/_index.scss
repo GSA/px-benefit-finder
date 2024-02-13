@@ -1,12 +1,12 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
 
-.usa-process-list {
+.bf-usa-process-list {
   margin-left: 70px;
   margin-right: 18px;
 }
 
-.usa-process-list__item {
+.bf-usa-process-list__item {
   min-height: 100px;
   border-left: 0.5rem solid color.$sky;
 
@@ -16,10 +16,10 @@
   }
 }
 
-.usa-process-list__item:last-child {
+.bf-usa-process-list__item:last-child {
   border-left: 0.5rem solid transparent;
 }
 
-h3.usa-process-list__heading {
+h3.bf-usa-process-list__heading {
   @include h5;
 }

@@ -2,21 +2,21 @@
 @use '../../styles/breakpoints/_index.scss' as *;
 @use '../../styles/mixins/_index.scss' as *;
 
-.date-alert {
+.bf-usa-date-alert {
   display: block;
   width: 100%;
 }
 
-.usa-form-group {
+.bf-usa-form-group {
   width: 100%;
 }
 
-.usa-memorable-date {
+.bf-usa-memorable-date {
   max-width: 320px;
   flex-wrap: wrap;
 }
 
-.usa-input {
+.bf-usa-input {
   border-radius: 3px;
 
   @include p;
@@ -25,24 +25,24 @@
     padding: 9.75px;
     height: initial;
     border-radius: 3px;
-    border-color: color.$alert-red !important;
+    border-color: color.$alert-red;
   }
 }
 
-.usa-form-group--month {
+.bf-usa-form-group--month {
   width: 242px;
 }
 
-.usa-form-group--day {
+.bf-usa-form-group--day {
   width: 64px;
 }
 
-.usa-form-group--year {
+.bf-usa-form-group--year {
   width: 95px;
 }
 
 @media (width >= $desktop) {
-  .usa-memorable-date {
+  .bf-usa-memorable-date {
     max-width: 100%;
   }
 }

@@ -1,13 +1,13 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
 
-.usa-hint--required {
+.bf-usa-hint--required {
   @include p;
 
-  color: color.$dark-medium-grey !important;
+  color: color.$dark-medium-grey;
 }
 
-.required {
+.bf-required {
   @include p;
 
   color: color.$dark-medium-grey;
@@ -15,6 +15,6 @@
   margin-left: 10px;
 }
 
-.usa-hint {
+.bf-usa-hint {
   @include p;
 }

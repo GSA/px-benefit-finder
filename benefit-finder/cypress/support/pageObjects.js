@@ -42,11 +42,11 @@ class PageObjects {
   }
 
   benefitSectionAlert() {
-    return cy.get('div#benefit-section > div[role="alert"]')
+    return cy.get('div#bf-section > div[role="alert"]')
   }
 
   dateAlert() {
-    return cy.get('.date-alert')
+    return cy.get('.bf-usa-date-alert')
   }
 
   applicantRelationshipToDeceased() {
@@ -58,7 +58,7 @@ class PageObjects {
   }
 
   benefitSectionFieldset() {
-    return cy.get('#benefit-section .usa-fieldset')
+    return cy.get('#bf-section .usa-fieldset')
   }
 
   buttonGroup() {

@@ -24,7 +24,7 @@ const Fieldset = ({
   className,
 }) => {
   const handleHidden = hidden !== undefined && hidden ? ['display-none'] : ''
-  const defaultClasses = ['usa-fieldset']
+  const defaultClasses = ['bf-usa-fieldset usa-fieldset']
   const utilityClasses = handleHidden
 
   /**
@@ -57,7 +57,7 @@ const Fieldset = ({
       })}
       ref={alertRef}
     >
-      {hint && <div className="hint">{hint}</div>}
+      {hint && <div className="bf-hint">{hint}</div>}
       {legend && handleRequired}
       {children}
     </fieldset>

@@ -37,9 +37,9 @@ const VerifySelectionsView = ({
    * @return {html} returns html div
    */
   const NoInputGiven = ({ item, index }) => (
-    <div className="verify-criteria-value">
+    <div className="bf-verify-criteria-value">
       <div
-        className="verify-criteria-legend"
+        className="bf-verify-criteria-legend"
         key={`criteria-${item.fieldset.criteriaKey}-${index}`}
       >
         {item.fieldset.legend}
@@ -58,8 +58,8 @@ const VerifySelectionsView = ({
    */
   const resultItem = ({ criteriaId, legend, selected }) => {
     return (
-      <div className="verify-criteria-value">
-        <div className="verify-criteria-legend" key={criteriaId}>
+      <div className="bf-verify-criteria-value">
+        <div className="bf-verify-criteria-legend" key={criteriaId}>
           {legend}
         </div>
         {typeof selected?.value === 'object'
@@ -110,15 +110,15 @@ const VerifySelectionsView = ({
   }, [])
 
   return (
-    <div className="verify-selections-view">
-      <div className="grid-container">
-        <Heading className="section-heading" headingLevel={1}>
+    <div className="bf-verify-selections-view">
+      <div className="bf-grid-container grid-container">
+        <Heading className="bf-section-heading" headingLevel={1}>
           {verifySelectionsView?.heading}
         </Heading>
-        <div className="section-wrapper">
-          <div className="section">
+        <div className="bf-section-wrapper">
+          <div className="bf-section-info">
             <Button
-              className="step-back-link"
+              className="bf-step-back-link"
               onClick={handleStepBack}
               unstyled
             >
@@ -131,11 +131,11 @@ const VerifySelectionsView = ({
                   // map all the criteria input legends and values
                   const { section } = item
                   return (
-                    <div className="verify-criteria-section" key={i}>
+                    <div className="bf-verify-criteria-section" key={i}>
                       <Heading
-                        className="verify-criteria-section-heading"
+                        className="bf-verify-criteria-section-heading"
                         headingLevel={2}
-                        key={`section-${i}`}
+                        key={`bf-section-${i}`}
                       >
                         {section.heading}
                       </Heading>
@@ -153,7 +153,7 @@ const VerifySelectionsView = ({
                   )
                 })}
             </div>
-            <div className="section-nav-btn-group">
+            <div className="bf-section-nav-btn-group">
               <Button secondary onClick={handleStepBack}>
                 {buttonGroup[0].value}
               </Button>

@@ -2,15 +2,15 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
-.benefit-accordion-group {
-  .benefit-accordion {
+.bf-usa-accordion-group {
+  .bf-usa-accordion {
     margin-bottom: space.$space-md-plus;
 
-    .usa-accordion__button {
+    .bf-usa-accordion__button {
       border-radius: 3px;
     }
 
-    .benefit-detail-title {
+    .bf-usa-detail-title {
       @include h6;
 
       padding: 0;
@@ -18,18 +18,18 @@
       text-align: left;
     }
 
-    .benefit-detail-summary,
-    .benefit-criteria-list,
-    .benefit-alert {
+    .bf-usa-detail-summary,
+    .bf-usa-criteria-list,
+    .bf-usa-alert {
       @include p;
 
       margin: 0 0 24px;
     }
 
-    .unmet-criteria-group {
+    .bf-unmet-criteria-group {
       margin: 0 0 24px;
 
-      .unmet-criteria-title {
+      .bf-unmet-criteria-title {
         @include p;
 
         width: 100%;
@@ -38,17 +38,17 @@
       }
     }
 
-    .benefit-link {
+    .bf-usa-link {
       width: 100%;
       margin-bottom: space.$space-lg;
     }
   }
 
-  .expand-all {
+  .bf-expand-all {
     @include p;
 
-    background-color: transparent !important;
-    color: color.$electric-blue !important;
+    background-color: transparent;
+    color: color.$electric-blue;
     margin-bottom: space.$space-lg;
   }
 }

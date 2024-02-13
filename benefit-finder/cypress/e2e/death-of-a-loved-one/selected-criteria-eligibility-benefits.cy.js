@@ -110,23 +110,23 @@ describe('Validate correct eligibility benefits display based on selected criter
       .filter(':visible')
       .should(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[0].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[0].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[1].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[1].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[2].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[2].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[3].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[3].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[4].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[4].label
       )
   })
 })

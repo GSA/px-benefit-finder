@@ -24,7 +24,7 @@ if [ -d "$USAGOV_PROJECT_THEME_LOCATION" ]; then
     echo "Removing directory."
     rm -rf "$STORYBOOK_THEMES_DIR" || exit 1
   fi
-  echo "Now moving usagov theme directory to storybook theme location."
+  echo "Now moving usagov theme directory to benefit-finder theme location."
   cp -r "$USAGOV_PROJECT_THEME_DIR" "$STORYBOOK_THEMES_DIR" || exit 1
 else
   echo "Missing git submodule theme"

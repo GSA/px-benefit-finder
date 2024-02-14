@@ -26,11 +26,11 @@ const Radio = ({
   name,
 }) => {
   const handleRequired = required === 'TRUE' ? ['required-field'] : ''
-  const defaultClasses = ['usa-radio__input']
+  const defaultClasses = ['bf-usa-radio__input usa-radio__input']
   const utilityClasses = handleRequired
   return (
     <>
-      <div className="usa-radio">
+      <div className="bf-usa-radio usa-radio">
         <input
           className={useHandleClassName({
             className,
@@ -44,7 +44,11 @@ const Radio = ({
           onChange={onChange}
           id={id}
         />
-        <Label className="usa-radio__label" htmlFor={id} label={label} />
+        <Label
+          className="bf-usa-radio__label usa-radio__label"
+          htmlFor={id}
+          label={label}
+        />
       </div>
     </>
   )

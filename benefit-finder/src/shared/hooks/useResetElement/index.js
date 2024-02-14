@@ -23,7 +23,7 @@ const useResetElement = () => {
     if (document.getElementById('index-reset') === null) {
       document.body.insertAdjacentHTML(
         'afterBegin',
-        '<span tabIndex="-1" id="index-reset" data-testid="index-reset" class="a11y-sr-only"/>'
+        '<span tabIndex="-1" id="index-reset" data-testid="index-reset" class="usa-sr-only"/>'
       )
     }
   }, [])

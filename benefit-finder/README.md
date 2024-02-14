@@ -236,7 +236,19 @@ Typecheck with [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.
 
 We take a utility first approach. We do not have full control over our styles since a custom version of USWDS already exist in the usa.gov project.
 
-To avoid conflict we will use utility-classes and overrides with sass files as needed.
+1. we establish uswds components with `usa-<class>` classes.
+2. this inherits global `uswds` `css` and `js`
+3. IF we need to overide, we clone the uswds class `usa-` and prepend `bf-`.
+
+```css
+.bf-usa-<class> .usa-<class>
+```
+
+4. custom classes do not include `usa-` but still include `bf-`
+
+```css
+.bf-<class>
+```
 
 We use [Sass](https://sass-lang.com/) and [Sass Modules](https://css-tricks.com/introducing-sass-modules/)
 

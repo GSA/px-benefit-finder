@@ -3,22 +3,22 @@
 exports[`Intro > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="intro"
+    class="bf-intro"
   >
     <div
-      class="chevron"
+      class="bf-chevron"
     >
       <div
-        class="grid-container"
+        class="bf-grid-container grid-container"
       >
         <h1
-          class="chevron-heading font-family-sans"
+          class="bf-chevron-heading font-family-sans"
           id="skip-to-h1"
         >
           Benefit finder: death of a loved one
         </h1>
         <div
-          class="chevron-description"
+          class="bf-chevron-description"
         >
           <p>
             <strong>
@@ -33,7 +33,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
       </div>
     </div>
     <div
-      class="grid-container"
+      class="bf-grid-container grid-container"
     >
       <h2
         class="font-family-sans"
@@ -47,37 +47,37 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         Time to complete 2-5 minutes
       </div>
       <div
-        class="intro-process-group"
+        class="bf-intro-process-group"
       >
         <div
-          class="intro-process-list"
+          class="bf-intro-process-list"
         >
           <ol
-            class="usa-process-list"
+            class="bf-usa-process-list usa-process-list"
           >
             <li
-              class="usa-process-list__item"
+              class="bf-usa-process-list__item usa-process-list__item"
             >
               <h3
-                class="usa-process-list__heading"
+                class="bf-usa-process-list__heading usa-process-list__heading"
               >
                 Answer questions
               </h3>
             </li>
             <li
-              class="usa-process-list__item"
+              class="bf-usa-process-list__item usa-process-list__item"
             >
               <h3
-                class="usa-process-list__heading"
+                class="bf-usa-process-list__heading usa-process-list__heading"
               >
                 Review Results
               </h3>
             </li>
             <li
-              class="usa-process-list__item"
+              class="bf-usa-process-list__item usa-process-list__item"
             >
               <h3
-                class="usa-process-list__heading"
+                class="bf-usa-process-list__heading usa-process-list__heading"
               >
                 Find out how to apply
               </h3>
@@ -85,17 +85,17 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
           </ol>
         </div>
         <div
-          class="line-sperator-wrapper--vertical"
+          class="bf-line-sperator-wrapper--vertical"
         >
           <div
-            class="line-sperator--vertical"
+            class="bf-line-sperator--vertical"
           />
         </div>
         <div
-          class="intro-process-notices"
+          class="bf-intro-process-notices"
         >
           <h2
-            class="intro-process-notices-heading font-family-sans"
+            class="bf-intro-process-notices-heading font-family-sans"
             id=""
           >
             Before you start:
@@ -111,15 +111,15 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
               >
                 <div
                   aria-live="polite"
-                  class="usa-alert usa-alert--info no-background"
+                  class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                   role="alert"
                   tabindex="-1"
                 >
                   <div
-                    class="usa-alert__body"
+                    class="bf-usa-alert__body usa-alert__body"
                   >
                     <div
-                      class="usa-alert__text"
+                      class="bf-usa-alert__text usa-alert__text"
                     >
                       <div
                         class="notice-item"
@@ -141,15 +141,15 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
               >
                 <div
                   aria-live="polite"
-                  class="usa-alert usa-alert--info no-background"
+                  class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                   role="alert"
                   tabindex="-1"
                 >
                   <div
-                    class="usa-alert__body"
+                    class="bf-usa-alert__body usa-alert__body"
                   >
                     <div
-                      class="usa-alert__text"
+                      class="bf-usa-alert__text usa-alert__text"
                     >
                       <div
                         class="notice-item"
@@ -165,15 +165,15 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
               >
                 <div
                   aria-live="polite"
-                  class="usa-alert usa-alert--info no-background"
+                  class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                   role="alert"
                   tabindex="-1"
                 >
                   <div
-                    class="usa-alert__body"
+                    class="bf-usa-alert__body usa-alert__body"
                   >
                     <div
-                      class="usa-alert__text"
+                      class="bf-usa-alert__text usa-alert__text"
                     >
                       <div
                         class="notice-item"
@@ -194,17 +194,17 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         </div>
       </div>
       <div
-        class="line-sperator-wrapper"
+        class="bf-line-sperator-wrapper"
       >
         <div
-          class="line-sperator"
+          class="bf-line-sperator"
         />
       </div>
       <div
-        class="cta-wrapper"
+        class="bf-cta-wrapper"
       >
         <button
-          class="usa-button"
+          class="bf-usa-button usa-button"
           type="button"
         >
           Start

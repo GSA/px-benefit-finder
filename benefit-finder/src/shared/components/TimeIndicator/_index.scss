@@ -2,12 +2,10 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
-#benefit-finder {
-  .time-indicator {
-    @include important-bold;
+.time-indicator {
+  @include important-bold;
 
-    color: color.$dark-medium-grey;
-    text-align: center;
-    margin-bottom: space.$space-lg;
-  }
+  color: color.$dark-medium-grey;
+  text-align: center;
+  margin-bottom: space.$space-lg;
 }

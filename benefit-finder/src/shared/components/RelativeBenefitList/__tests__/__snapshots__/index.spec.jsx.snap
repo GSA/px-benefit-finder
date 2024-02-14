@@ -3,7 +3,7 @@
 exports[`RelativeBenefitList > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <ul
-    class="usa-card-group"
+    class="bf-usa-card-group usa-card-group"
   />
 </DocumentFragment>
 `;

@@ -3,20 +3,20 @@
 exports[`Date > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="usa-memorable-date"
-    id="usa-memorable-date-undefined"
+    class="bf-usa-memorable-date usa-memorable-date"
+    id="bf-usa-memorable-date-undefined usa-memorable-date-undefined"
   >
     <div
-      class="usa-form-group usa-form-group--month usa-form-group--select"
+      class="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select"
     >
       <label
-        class="usa-label"
+        class="bf-usa-label usa-label"
         for="date_of_birth_month-undefined"
       >
         Month
       </label>
       <div
-        class="a11y-sr-only"
+        class="usa-sr-only"
         id="month-description-undefined"
       >
         Select a month from the list
@@ -24,7 +24,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <select
         aria-describedby="month-description-undefined"
         aria-invalid="false"
-        class="usa-select "
+        class="bf-usa-select usa-select "
         id="date_of_birth_month-undefined"
         name="date_of_birth_month-undefined"
       >
@@ -97,16 +97,16 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       </select>
     </div>
     <div
-      class="usa-form-group usa-form-group--day"
+      class="bf-usa-form-group usa-form-group bf-usa-form-group--day usa-form-group--day"
     >
       <label
-        class="usa-label"
+        class="bf-usa-label usa-label"
         for="date_of_birth_day-undefined"
       >
         Day
       </label>
       <div
-        class="a11y-sr-only"
+        class="usa-sr-only"
         id="day-description-undefined"
       >
         Enter two numerals for day
@@ -114,7 +114,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <input
         aria-describedby="day-description-undefined"
         aria-invalid="false"
-        class="usa-input "
+        class="bf-usa-input usa-input "
         id="date_of_birth_day-undefined"
         inputmode="numeric"
         name="date_of_birth_day-undefined"
@@ -122,16 +122,16 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       />
     </div>
     <div
-      class="usa-form-group usa-form-group--year"
+      class="bf-usa-form-group usa-form-group bf-usa-form-group--year usa-form-group--year"
     >
       <label
-        class="usa-label"
+        class="bf-usa-label usa-label"
         for="date_of_birth_year-undefined"
       >
         Year
       </label>
       <div
-        class="a11y-sr-only"
+        class="usa-sr-only"
         id="year-description-undefined"
       >
         Enter four numerals for year
@@ -139,7 +139,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <input
         aria-describedby="year-description-undefined"
         aria-invalid="false"
-        class="usa-input "
+        class="bf-usa-input usa-input "
         id="date_of_birth_year-undefined"
         inputmode="numeric"
         name="date_of_birth_year-undefined"

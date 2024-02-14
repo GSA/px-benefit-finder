@@ -3,15 +3,15 @@
 exports[`Radio > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="usa-radio"
+    class="bf-usa-radio usa-radio"
   >
     <input
-      class="usa-radio__input "
+      class="bf-usa-radio__input usa-radio__input "
       type="radio"
       value=""
     />
     <label
-      class="usa-radio__label usa-label"
+      class="bf-usa-radio__label usa-radio__label bf-usa-label usa-label"
     />
   </div>
 </DocumentFragment>

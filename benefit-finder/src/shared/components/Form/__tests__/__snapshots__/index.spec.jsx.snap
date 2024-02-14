@@ -3,10 +3,10 @@
 exports[`Form > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <form
-    class="benefit-form"
+    class="bf-usa-form"
   >
     <div
-      class="grid-container"
+      class="bf-grid-contianer grid-container"
     />
   </form>
 </DocumentFragment>

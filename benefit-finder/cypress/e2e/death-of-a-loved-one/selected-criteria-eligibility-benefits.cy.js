@@ -5,6 +5,21 @@ import * as utils from '../../support/utils'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
+
+// can be used by all the test that are visiting in storymode
+const uri = `/iframe.html?args=&id=app--primary&viewMode=story&`
+
+// encoder utility
+const encodeURIFromObject = (obj) => {
+  return Object.entries(obj)
+    .map(([key, value]) => `${encodeURIComponent(key)}=${
+      typeof value === 'object'
+        ? encodeURIComponent(JSON.stringify(value)) // handles date objects
+        : encodeURIComponent(value)
+      }`)
+    .join('&');
+}
+
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
   it('Should render Survivor Benefits for Child benefit accordion correctly based on selected cretiria options', () => {
     // 18 years ago minus one day - applicant under 18 years old
@@ -155,24 +170,13 @@ describe('Validate correct eligibility benefits display based on selected criter
   })
 
   it('QA scenario 3 Coal Miner EN - Verify correct benefit results for query values that includes Coal Miner in search parameter of URL', () => {
-    const benefitsCriteria =
-      BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.param
-    const applicant_date_of_birth = encodeURI(
-      `{"month":"${
-        benefitsCriteria.applicant_date_of_birth_month - 1
-      }","day":"${benefitsCriteria.applicant_date_of_birth_day}","year":"${
-        benefitsCriteria.applicant_date_of_birth_year
-      }"}`
-    )
-    const deceased_date_of_death = encodeURI(
-      `{"month":"${benefitsCriteria.deceased_date_of_death_month - 1}","day":"${
-        benefitsCriteria.deceased_date_of_death_day
-      }","year":"${benefitsCriteria.deceased_date_of_death_year}"}`
-    )
-    cy.visit(
-      `/iframe.html?args=&id=app--primary&viewMode=story&applicant_date_of_birth=${applicant_date_of_birth}&applicant_relationship_to_the_deceased=${benefitsCriteria.applicant_relationship_to_the_deceased}&applicant_marital_status=${benefitsCriteria.applicant_marital_status}&applicant_citizen_status=${benefitsCriteria.applicant_citizen_status}&applicant_care_for_child=${benefitsCriteria.applicant_care_for_child}&applicant_paid_funeral_expenses=${benefitsCriteria.applicant_paid_funeral_expenses}&deceased_date_of_death=${deceased_date_of_death}&deceased_death_location_is_US=${benefitsCriteria.deceased_death_location_is_US}&deceased_paid_into_SS=${benefitsCriteria.deceased_paid_into_SS}&deceased_public_safety_officer=${benefitsCriteria.deceased_public_safety_officer}&deceased_miner=${benefitsCriteria.deceased_miner}&deceased_american_indian=${benefitsCriteria.deceased_american_indian}&deceased_died_of_COVID=${benefitsCriteria.deceased_died_of_COVID}&deceased_served_in_active_military=${benefitsCriteria.deceased_served_in_active_military}&deceased_service_status=${encodeURI(benefitsCriteria.deceased_service_status)}&deceased_military_death_circumstance=${encodeURI(benefitsCriteria.deceased_military_death_circumstance)}&deceased_grave_headstone=${benefitsCriteria.deceased_grave_headstone}&shared=true`
-    )
+
+    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.param
     const enResults = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.results
+    const scenario = encodeURIFromObject(selectedData)
+
+    cy.visit(`${uri}${scenario}`)
+
     pageObjects
       .benefitsAccordion()
       .filter(':visible')

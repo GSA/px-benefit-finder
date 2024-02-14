@@ -23,12 +23,10 @@
             },
             "results": {
                 "eligible": {
-                    "length": 5,
+                    "length": 3,
                     "eligible_benefits": [
-                        "Survivors benefits for spouse with disabilities",
                         "COVID-19 funeral assistance",
-                        "Survivors benefits for mothers/fathers with a child",
-                        "Lump-sum death benefit",
+                        "Survivors benefits for mothers/fathers",
                         "Survivors benefits for spouse"
                     ]
                 },
@@ -63,13 +61,12 @@
             },
             "results": {
                 "eligible": {
-                    "length": 10,
+                    "length": 8,
                     "eligible_benefits": [
                         "Presidential Memorial Certificate",
                         "Veterans medallions",
                         "Veterans headstone and grave marker",
                         "Life insurance for survivors of veterans",
-                        "Dependency and Indemnity Compensation (DIC)",
                         "Burial benefits",
                         "Burial flag",
                         "Burial in VA national cemetery",

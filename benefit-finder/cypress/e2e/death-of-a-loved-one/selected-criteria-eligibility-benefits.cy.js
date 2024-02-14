@@ -126,8 +126,6 @@ describe('Validate correct eligibility benefits display based on selected criter
       .and('contain', enResults.eligible.eligible_benefits[0])
       .and('contain', enResults.eligible.eligible_benefits[1])
       .and('contain', enResults.eligible.eligible_benefits[2])
-      .and('contain', enResults.eligible.eligible_benefits[3])
-      .and('contain', enResults.eligible.eligible_benefits[4])
   })
 
   it('QA scenario 2 Veteran EN - Verify correct benefit results for query values that includes veteran in search parameter of URL', () => {

@@ -201,24 +201,24 @@ locals {
     services = {
 
       ## S3 storage for backups.
-      # backup = {
-      #   ## Applications to bind to this service.
-      #   applications = ["drupal"]
+      backup = {
+        ## Applications to bind to this service.
+        applications = []
 
-      #   ## Should a service key be generated for other applications to use?
-      #   service_key = true
+        ## Should a service key be generated for other applications to use?
+        service_key = true
 
-      #   ## The size of the instance to deploy.
-      #   service_plan = "basic"
+        ## The size of the instance to deploy.
+        service_plan = "basic"
 
-      #   ## The type of service to be deployed.
-      #   service_type = "s3"
+        ## The type of service to be deployed.
+        service_type = "s3"
 
-      #   ## Tags to add to the service.
-      #   tags = [
-      #     terraform.workspace
-      #   ]
-      # }
+        ## Tags to add to the service.
+        tags = [
+          terraform.workspace
+        ]
+      }
 
       ## MySQL RDS database.
       mysql = {
@@ -733,6 +733,7 @@ locals {
           waf = local.globals.apps.waf
         }
         services = {
+          backup  = local.globals.services.backup
           mysql   = local.globals.services.mysql
           secrets = local.globals.services.secrets
           static  = local.globals.services.static

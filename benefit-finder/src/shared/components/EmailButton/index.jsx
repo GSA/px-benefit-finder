@@ -28,7 +28,7 @@ const EmailButton = ({ ui, data }) => {
   }
 
   return (
-    <Button className="email-button" secondary onClick={handleClick}>
+    <Button className="bf-email-button" secondary onClick={handleClick}>
       {ui?.emailButton || 'Email'}
     </Button>
   )

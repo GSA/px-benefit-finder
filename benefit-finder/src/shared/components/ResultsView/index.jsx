@@ -60,7 +60,7 @@ const ResultsView = ({
 
   // compare the selected criteria array with benefits
   return (
-    <div className="result-view" data-testid="result-view">
+    <div className="bf-result-view" data-testid="result-view">
       <Chevron
         heading={
           notQualifiedView === false
@@ -73,8 +73,8 @@ const ResultsView = ({
             : notQualified.chevron.description
         }
       />
-      <div className="grid-container">
-        <div className="result-view-details">
+      <div className="bf-grid-container grid-container">
+        <div className="bf-result-view-details">
           {notQualifiedView === false ? (
             <StepBackLink
               onClick={() => resetElement.current.focus()}
@@ -84,18 +84,18 @@ const ResultsView = ({
             </StepBackLink>
           ) : (
             <Button
-              className="step-back-link"
+              className="bf-step-back-link"
               onClick={() => handleViewToggle()}
               unstyled
             >
               {stepBackLink}
             </Button>
           )}
-          <Heading className="result-view-heading" headingLevel={3}>
+          <Heading className="bf-result-view-heading" headingLevel={3}>
             {notQualifiedView ? notQualified.heading : qualified.heading}
           </Heading>
           <div
-            className="result-view-description"
+            className="bf-result-view-description"
             dangerouslySetInnerHTML={
               notQualifiedView
                 ? createMarkup(notQualified.description)
@@ -103,7 +103,7 @@ const ResultsView = ({
             }
           />
           {/* map all the benefits into cards */}
-          <div className="result-view-benefits">
+          <div className="bf-result-view-benefits">
             <BenefitAccordionGroup
               data={
                 stepDataArray &&
@@ -119,8 +119,11 @@ const ResultsView = ({
             />
           </div>
           {notQualifiedView === false && (
-            <div className="result-view-unmet">
-              <Heading className="result-view-unmet-heading" headingLevel={3}>
+            <div className="bf-result-view-unmet">
+              <Heading
+                className="bf-result-view-unmet-heading"
+                headingLevel={3}
+              >
                 {notEligibleResults?.heading}
               </Heading>
               <p
@@ -134,9 +137,9 @@ const ResultsView = ({
             </div>
           )}
           {relevantBenefits?.length > 0 && (
-            <div className="result-view-relvant-benefits">
+            <div className="bf-result-view-relvant-benefits">
               <Heading
-                className="result-view-relvant-benefits-heading"
+                className="bf-result-view-relvant-benefits-heading"
                 headingLevel={3}
               >
                 {resultsRelativeBenefits?.heading}
@@ -149,15 +152,15 @@ const ResultsView = ({
               )}
             </div>
           )}
-          <div className="result-view-share-results">
+          <div className="bf-result-view-share-results">
             <Heading
-              className="result-view-share-results-heading"
+              className="bf-result-view-share-results-heading"
               headingLevel={3}
             >
               {shareResults?.heading}
             </Heading>
             <p>{shareResults?.description}</p>
-            <div className="result-view-share-results-button-group">
+            <div className="bf-result-view-share-results-button-group">
               <ShareButton
                 ui={shareResults}
                 data={

@@ -9,7 +9,7 @@ import './_index.scss'
 const Carrot = ({ color, type }) => {
   const svg1 = (
     <svg
-      className="carrot"
+      className="bf-carrot"
       xmlns="http://www.w3.org/2000/svg"
       height="24"
       viewBox="0 0 24 24"
@@ -23,7 +23,7 @@ const Carrot = ({ color, type }) => {
 
   const svg2 = (
     <svg
-      className="carrot-two"
+      className="bf-carrot-two"
       width="13"
       height="22"
       viewBox="0 0 13 22"

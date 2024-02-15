@@ -3,21 +3,21 @@
 exports[`ButtonGroup > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <ul
-    class="usa-button-group width-full"
+    class="bf-usa-button-group usa-button-group width-full"
   >
     <li
-      class="usa-button-group__item width-full"
+      class="bf-usa-button-group__item usa-button-group__item width-full"
     >
       <button
-        class="usa-button"
+        class="bf-usa-button usa-button"
         type="button"
       />
     </li>
     <li
-      class="usa-button-group__item width-full"
+      class="bf-usa-button-group__item usa-button-group__item width-full"
     >
       <button
-        class="usa-button"
+        class="bf-usa-button usa-button"
         type="button"
       />
     </li>

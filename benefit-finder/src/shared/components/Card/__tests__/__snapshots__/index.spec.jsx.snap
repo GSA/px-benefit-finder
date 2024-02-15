@@ -6,24 +6,24 @@ exports[`Card > renders a match to the previous snapshot 1`] = `
     class="add-list-reset"
   >
     <a
-      class="usa-card__container"
+      class="bf-usa-card__container usa-card__container"
     >
       <div
-        class="usa-card__header"
+        class="bf-usa-card__header usa-card__header"
       >
         <h3
-          class="usa-card__heading font-family-sans"
+          class="bf-usa-card__heading usa-card__heading font-family-sans"
           id=""
         />
       </div>
       <div
-        class="usa-card__body"
+        class="bf-usa-card__body usa-card__body"
       />
       <div
-        class="usa-card__cta"
+        class="bf-usa-card__cta usa-card__cta"
       />
       <svg
-        class="carrot"
+        class="bf-carrot"
         fill="#162E51"
         height="24"
         viewBox="0 0 24 24"

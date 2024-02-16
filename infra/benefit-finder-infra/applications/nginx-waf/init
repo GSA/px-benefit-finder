@@ -52,7 +52,7 @@ mv -f /tmp/owasp-crs/rules/* ${modsecurity_path}/crs
 rm -rf /tmp/owasp-crs
 
 if [ -n "${MODSECURITY_UPDATE}" ]; then
-  modsecurity_version=$(echo "libmodsecurity3_3.0.9-1_amd64.deb" | cut -d '_' -f2 | cut -d '-' -f1)
+  modsecurity_version=$(echo "${MODSECURITY_UPDATE}" | cut -d '_' -f2 | cut -d '-' -f1)
   echo "Updating libmodsecurity..."
   current_path=$(pwd)
   

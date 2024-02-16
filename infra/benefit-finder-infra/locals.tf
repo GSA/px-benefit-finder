@@ -125,7 +125,7 @@ locals {
           )
 
           ## The OWASP CRS rules for modsecurity.
-          CRS_RULES = "coreruleset-3.3.4.tar.gz"
+          CRS_RULES = "coreruleset-4.0.0.tar.gz"
 
           ## IP address that are denied access from the static website.
           DENYED_IPS_STATIC = base64encode(jsonencode([]))

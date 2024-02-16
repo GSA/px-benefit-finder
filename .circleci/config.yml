@@ -124,7 +124,8 @@ jobs:
                 sleep 2
               fi
             done
-
+            cf add-network-policy benefit-finder-waf-${CIRCLE_BRANCH} benefit-finder-cms-${CIRCLE_BRANCH} -s benefit-finder-${CIRCLE_BRANCH} -o ${CF_ORG} --protocol tcp --port 61443
+            
   build_and_deploy_main:
     machine:
       image: ubuntu-2004:202107-02
@@ -249,6 +250,7 @@ jobs:
                 sleep 2
               fi
             done
+            cf add-network-policy benefit-finder-waf-${CIRCLE_BRANCH} benefit-finder-cms-${CIRCLE_BRANCH} -s benefit-finder-${CIRCLE_BRANCH} -o ${CF_ORG} --protocol tcp --port 61443
 
   component-library:
     machine:

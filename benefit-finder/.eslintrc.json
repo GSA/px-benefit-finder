@@ -23,7 +23,7 @@
     },
     "json/sort-package-json": false,
     "json/ignore-files": [
-      "**/package-lock.json"
+      "package-lock.json"
     ]
   },
   "rules": {

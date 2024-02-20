@@ -4,6 +4,9 @@
     "eslint . --fix",
     "vitest related --run"
   ],
+  "src/**/*.{json}": [
+    "eslint . --fix"
+  ],
   "src/**/*.scss": [
     "stylelint --fix"
   ]

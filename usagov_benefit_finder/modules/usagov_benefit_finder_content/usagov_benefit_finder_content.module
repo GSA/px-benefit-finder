@@ -88,6 +88,33 @@ function usagov_benefit_finder_content_node_bears_benefit_edit_form_validate(arr
       foreach ($acceptable_values as $value) {
         if (!empty($value) && !in_array($value, $criteria_values)) {
           $errors[] = t("Criteria \"$criteria_title\" acceptable value \"$value\" is not an option value.");
+          $errors[] = t("--- Acceptable values from \"$criteria_title\" are: " . implode(', ', $criteria_values));
+        }
+      }
+    }
+
+    if (in_array($criteria_type, ['Date'])) {
+      foreach ($acceptable_values as $value) {
+        if (!empty($value)) {
+          if (strpos($value, ' ') !== false) {
+            $errors[] = t("Criteria \"$criteria_title\" acceptable value \"$value\" cannot contain space.");
+            continue;
+          }
+          $pattern = '/^(=|>|<|>=|<=)(\d{2}-\d{2}-\d{4}|years)$/';
+          if (preg_match($pattern, $value, $matches) === 1) {
+            $secondPart = $matches[2];
+            if (preg_match('/^\d{2}-\d{2}-\d{4}$/', $secondPart, $matches) === 1) {
+              $dateTime = DateTime::createFromFormat('m-d-Y', $secondPart);
+              if (!($dateTime && $dateTime->format('m-d-Y') === $secondPart)) {
+                $errors[] = t("Criteria \"$criteria_title\" acceptable value \"$value\" date \"$secondPart\" is incorrect.");
+                $errors[] = t("--- Format: MM-DD-YYYY");
+              }
+            }
+          }
+          else {
+            $errors[] = t("Criteria \"$criteria_title\" acceptable value \"$value\" is not in correct format.");
+            $errors[] = t("--- First part: >|<|=|>=|<= Second part: MM-DD-YYYY | years");
+          }
         }
       }
     }

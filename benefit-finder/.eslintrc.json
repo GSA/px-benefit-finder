@@ -9,14 +9,35 @@
     "plugin:cypress/recommended",
     "prettier"
   ],
-  "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
-  "settings": { "react": { "version": "18.2" } },
+  "plugins": [
+    "@stylistic/js",
+    "json-format"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "18.2"
+    },
+    "json/sort-package-json": false,
+    "json/ignore-files": [
+      "**/package-lock.json"
+    ]
+  },
   "rules": {
     "react/prop-types": "off",
-    "eqeqeq": [2, "smart"],
+    "eqeqeq": [
+      2,
+      "smart"
+    ],
     "no-console": "warn",
     "camelcase": "off",
     "no-eval": "error",
-    "import/first": "error"
+    "import/first": "error",
+    "no-trailing-spaces": [
+      "error"
+    ]
   }
 }

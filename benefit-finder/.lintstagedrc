@@ -5,7 +5,7 @@
     "vitest related --run"
   ],
   "**/*.json": [
-    "eslint . --fix"
+    "prettier --write"
   ],
   "src/**/*.scss": [
     "stylelint --fix"

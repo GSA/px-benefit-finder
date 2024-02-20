@@ -100,7 +100,7 @@ function usagov_benefit_finder_content_node_bears_benefit_edit_form_validate(arr
             $errors[] = t("Criteria \"$criteria_title\" acceptable value \"$value\" cannot contain space.");
             continue;
           }
-          $pattern = '/^(=|>|<|>=|<=)(\d{2}-\d{2}-\d{4}|years)$/';
+          $pattern = '/^(=|>|<|>=|<=)(\d{2}-\d{2}-\d{4}|\d{1,2}years)$/';
           if (preg_match($pattern, $value, $matches) === 1) {
             $secondPart = $matches[2];
             if (preg_match('/^\d{2}-\d{2}-\d{4}$/', $secondPart, $matches) === 1) {
@@ -113,7 +113,7 @@ function usagov_benefit_finder_content_node_bears_benefit_edit_form_validate(arr
           }
           else {
             $errors[] = t("Criteria \"$criteria_title\" acceptable value \"$value\" is not in correct format.");
-            $errors[] = t("--- First part: >|<|=|>=|<= Second part: MM-DD-YYYY | years");
+            $errors[] = t("--- First part: >, <, =, >= or <= Second part: MM-DD-YYYY or (d or dd)years");
           }
         }
       }

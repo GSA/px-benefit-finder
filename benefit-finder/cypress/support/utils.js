@@ -11,7 +11,6 @@ export function getDateByOffset(offset) {
   return { month: month + ' - ' + monthName, day, year }
 }
 
-
 // encoder utility
 export const encodeURIFromObject = obj => {
   return Object.entries(obj)

@@ -1,7 +1,7 @@
 {
   "intro": {
     "heading": "Steps",
-    "timeIndicator": "Time to complete",
+    "timeIndicator": "Estimated time",
     "steps": {
       "list": [
         {
@@ -19,13 +19,13 @@
       "heading": "Before you start:",
       "list": [
         {
-          "notice": "<div>Your information<strong> is not</strong> shared, saved, or submitted.</div>"
+          "notice": "<div><strong>This is not an application.</strong> This tool will help you find possible benefits.</div>"
         },
         {
-          "notice": "Provide complete info to get more relevant results."
+          "notice": "Your answers <strong>are not</strong> saved or submitted."
         },
         {
-          "notice": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>"
+          "notice": "<div><strong>Answer more questions</strong> to get better results.</div>"
         }
       ]
     },
@@ -38,7 +38,7 @@
     "value": "required"
   },
   "alertBanner": {
-    "heading": "Error status",
+    "heading": "Error",
     "description": "Complete all required fields."
   },
   "buttonGroup": [
@@ -62,7 +62,7 @@
   },
   "verifySelectionsView": {
     "heading": "Review and confirm",
-    "noResultsLabel": "No input given",
+    "noResultsLabel": "Not answered",
     "buttonGroup": [
       {
         "value": "Back"
@@ -126,12 +126,12 @@
       "shareLinkContent": "Copied",
       "emailButton": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",
-      "description": "Copy or email these results. Your answers will be visible. Only share with whom you trust."
+      "description": "Copy or email these results. Your answers will be visible. Only share with those you trust."
     }
   },
   "shareResults": {
     "heading": "Share results",
-    "description": "Your information will be viewable. Only share with whom you trust.",
+    "description": "Your information will be viewable. Only share with those you trust.",
     "buttonGroup": [
       {
         "value": "Share link"
@@ -152,7 +152,7 @@
     "dateDefaultValue": "-Select-"
   },
   "date": {
-    "alert": "Date should follow the format 01 - January 22 1977",
+    "alert": "Date should follow the format January 19 2000",
     "labelDay": "Day",
     "labelMonth": "Month",
     "labelYear": "Year",

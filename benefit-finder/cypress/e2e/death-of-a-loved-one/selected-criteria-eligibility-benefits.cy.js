@@ -3,6 +3,7 @@
 import { pageObjects } from '../../support/pageObjects'
 import * as utils from '../../support/utils'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
+import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
   it('Should render Survivor Benefits for Child benefit accordion correctly based on selected cretiria options', () => {
@@ -97,5 +98,52 @@ describe('Validate correct eligibility benefits display based on selected criter
         'contain',
         EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[4].label
       )
+  })
+
+  it('qa scenario 1 Covid EN - Verify correct benefit results for query values that includes covid in search parameter of URL', () => {
+    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
+    const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
+    const scenario = utils.encodeURIFromObject(selectedData)
+
+    cy.visit(`${utils.storybookUri}${scenario}`)
+
+    pageObjects
+      .benefitsAccordion()
+      .filter(':visible')
+      .should('have.length', enResults.eligible.length)
+      .and('contain', 'Likely Eligible')
+      .and('contain', enResults.eligible.eligible_benefits[0])
+      .and('contain', enResults.eligible.eligible_benefits[1])
+      .and('contain', enResults.eligible.eligible_benefits[2])
+  })
+
+  it('QA scenario 2 Veteran EN - Verify correct benefit results for query values that includes veteran in search parameter of URL', () => {
+    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.param
+    const enResults = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.results
+    const scenario = utils.encodeURIFromObject(selectedData)
+
+    cy.visit(`${utils.storybookUri}${scenario}`)
+
+    pageObjects
+      .benefitsAccordion()
+      .filter(':visible')
+      .should('have.length', enResults.eligible.length)
+      .and('contain', 'Likely Eligible')
+      .and('contain', enResults.eligible.eligible_benefits[0])
+  })
+
+  it('QA scenario 3 Coal Miner EN - Verify correct benefit results for query values that includes Coal Miner in search parameter of URL', () => {
+    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.param
+    const enResults = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.results
+    const scenario = utils.encodeURIFromObject(selectedData)
+
+    cy.visit(`${utils.storybookUri}${scenario}`)
+
+    pageObjects
+      .benefitsAccordion()
+      .filter(':visible')
+      .should('have.length', enResults.eligible.length)
+      .and('contain', 'Likely Eligible')
+      .and('contain', enResults.eligible.eligible_benefits[0])
   })
 })

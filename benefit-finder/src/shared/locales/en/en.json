@@ -39,7 +39,7 @@
   },
   "alertBanner": {
     "heading": "Error status",
-    "description": "All fields marked required must be completed."
+    "description": "Complete all required fields."
   },
   "buttonGroup": [
     {
@@ -126,12 +126,12 @@
       "shareLinkContent": "Copied",
       "emailButton": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",
-      "description": "Copy or email these results. Your answers will be visible. Only share with those you trust."
+      "description": "Copy or email these results. Your answers will be visible. Only share with whom you trust."
     }
   },
   "shareResults": {
     "heading": "Share results",
-    "description": "Your information will be viewable. Only share with those you trust.",
+    "description": "Your information will be viewable. Only share with whom you trust.",
     "buttonGroup": [
       {
         "value": "Share link"
@@ -142,13 +142,13 @@
     ]
   },
   "sectionHeadings": {
-    "start": "Complete Questions",
-    "continue": "Questions Continued",
-    "final": "Final Questions"
+    "start": "Answer these questions",
+    "continue": "Questions continued",
+    "final": "Final questions"
   },
   "select": {
     "labelSelect": "Select",
-    "defaultValue": "Click to Select",
+    "defaultValue": "Click to select",
     "dateDefaultValue": "-Select-"
   },
   "date": {

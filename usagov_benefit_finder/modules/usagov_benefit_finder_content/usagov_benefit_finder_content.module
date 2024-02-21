@@ -88,6 +88,7 @@ function usagov_benefit_finder_content_node_bears_benefit_edit_form_validate(arr
       foreach ($acceptable_values as $value) {
         if (!empty($value) && !in_array($value, $criteria_values)) {
           $errors[] = t("Criteria \"$criteria_title\" acceptable value \"$value\" is not an option value.");
+          $errors[] = t("--- Acceptable values from \"$criteria_title\" are: " . implode(', ', $criteria_values));
         }
       }
     }

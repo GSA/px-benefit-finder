@@ -22,6 +22,7 @@ export default function wrapStyles(options) {
             try {
               writeFileSync(`./build/${fileName}`, wrappedCssContent)
             } catch (error) {
+              // eslint-disable-next-line no-console
               console.error(`Error writing file ${fileName}: ${error}`)
             }
           }

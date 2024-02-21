@@ -5,23 +5,6 @@ import * as utils from '../../support/utils'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
-// can be used by all the test that are visiting in storymode
-const uri = `/iframe.html?args=&id=app--primary&viewMode=story&`
-
-// encoder utility
-const encodeURIFromObject = obj => {
-  return Object.entries(obj)
-    .map(
-      ([key, value]) =>
-        `${encodeURIComponent(key)}=${
-          typeof value === 'object'
-            ? encodeURIComponent(JSON.stringify(value)) // handles date objects
-            : encodeURIComponent(value)
-        }`
-    )
-    .join('&')
-}
-
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
   it('Should render Survivor Benefits for Child benefit accordion correctly based on selected cretiria options', () => {
     // 18 years ago minus one day - applicant under 18 years old
@@ -120,9 +103,9 @@ describe('Validate correct eligibility benefits display based on selected criter
   it('qa scenario 1 Covid EN - Verify correct benefit results for query values that includes covid in search parameter of URL', () => {
     const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
     const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
-    const scenario = encodeURIFromObject(selectedData)
+    const scenario = utils.encodeURIFromObject(selectedData)
 
-    cy.visit(`${uri}${scenario}`)
+    cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
       .benefitsAccordion()
@@ -137,9 +120,9 @@ describe('Validate correct eligibility benefits display based on selected criter
   it('QA scenario 2 Veteran EN - Verify correct benefit results for query values that includes veteran in search parameter of URL', () => {
     const selectedData = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.param
     const enResults = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.results
-    const scenario = encodeURIFromObject(selectedData)
+    const scenario = utils.encodeURIFromObject(selectedData)
 
-    cy.visit(`${uri}${scenario}`)
+    cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
       .benefitsAccordion()
@@ -152,9 +135,9 @@ describe('Validate correct eligibility benefits display based on selected criter
   it('QA scenario 3 Coal Miner EN - Verify correct benefit results for query values that includes Coal Miner in search parameter of URL', () => {
     const selectedData = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.param
     const enResults = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.results
-    const scenario = encodeURIFromObject(selectedData)
+    const scenario = utils.encodeURIFromObject(selectedData)
 
-    cy.visit(`${uri}${scenario}`)
+    cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
       .benefitsAccordion()

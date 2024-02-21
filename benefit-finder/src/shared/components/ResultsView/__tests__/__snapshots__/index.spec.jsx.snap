@@ -111,7 +111,7 @@ exports[`loads view 1`] = `
               Share results
             </h3>
             <p>
-              Copy or email these results. Your answers will be visible. Only share with those you trust.
+              Copy or email these results. Your answers will be visible. Only share with whom you trust.
             </p>
             <div
               class="result-view-share-results-button-group"
@@ -5654,7 +5654,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               Share results
             </h3>
             <p>
-              Copy or email these results. Your answers will be visible. Only share with those you trust.
+              Copy or email these results. Your answers will be visible. Only share with whom you trust.
             </p>
             <div
               class="result-view-share-results-button-group"

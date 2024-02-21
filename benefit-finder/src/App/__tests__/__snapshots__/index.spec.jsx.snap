@@ -5550,7 +5550,7 @@ exports[`loads window query scenario 1 1`] = `
                 Share results
               </h3>
               <p>
-                Copy or email these results. Your answers will be visible. Only share with those you trust.
+                Copy or email these results. Your answers will be visible. Only share with whom you trust.
               </p>
               <div
                 class="result-view-share-results-button-group"
@@ -11216,7 +11216,7 @@ exports[`loads window query scenario 2 1`] = `
                 Share results
               </h3>
               <p>
-                Copy or email these results. Your answers will be visible. Only share with those you trust.
+                Copy or email these results. Your answers will be visible. Only share with whom you trust.
               </p>
               <div
                 class="result-view-share-results-button-group"

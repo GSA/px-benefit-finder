@@ -15,7 +15,7 @@ exports[`Select > renders a match to the previous snapshot 1`] = `
       disabled=""
       value=""
     >
-      Click to Select
+      Click to select
     </option>
     <option
       value=""

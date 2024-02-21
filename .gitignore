@@ -56,3 +56,5 @@ backups/*.sql.gz
 
 # VSCode
 .vs
+
+**.log

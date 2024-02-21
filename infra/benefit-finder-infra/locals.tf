@@ -52,6 +52,9 @@ locals {
               "allow 98.164.54.242/32;",
               "allow 75.176.62.86/32;",
               "allow 70.21.206.246/32;",
+              "allow 100.16.185.127/32;",
+              "allow 75.176.62.86/32;",
+              "allow 2603:6080:2840:284:80b4:2ae:80f8:9652;",
               ## GSA VPN pool
               "allow 50.81.160.164;",
               "allow 100.36.151.190;",
@@ -159,7 +162,7 @@ locals {
         }
 
         ## Maximum amount of memory the application can use.
-        memory = 64
+        memory = 128
 
         ## Addional network policies to add to the application.
         ## Format: name of the application and the port it is listening on.
@@ -781,6 +784,7 @@ locals {
           )
         }
         services = {
+          backup  = local.globals.services.backup
           mysql   = local.globals.services.mysql
           secrets = local.globals.services.secrets
           static  = local.globals.services.static

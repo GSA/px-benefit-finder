@@ -627,19 +627,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -651,17 +645,12 @@
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is unmarried or widowed",
-              "acceptableValues": [
-                "Unmarried",
-                "Widowed"
-              ]
+              "acceptableValues": ["Unmarried", "Widowed"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
+              "acceptableValues": ["Spouse"]
             }
           ]
         }
@@ -677,33 +666,23 @@
             "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
               "label": "The service status of the deceased is: active-duty member",
-              "acceptableValues": [
-                "Active-duty service member"
-              ]
+              "acceptableValues": ["Active-duty service member"]
             },
             {
               "criteriaKey": "deceased_military_death_circumstance",
               "label": "One of the following applies to the deceased: died on active duty",
-              "acceptableValues": [
-                "Died while on active duty"
-              ]
+              "acceptableValues": ["Died while on active duty"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
@@ -729,19 +708,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -786,48 +759,33 @@
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
               "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_date_of_birth",
               "label": "You are over 50 years",
-              "acceptableValues": [
-                ">=50years"
-              ]
+              "acceptableValues": [">=50years"]
             },
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is widowed or divorced",
-              "acceptableValues": [
-                "Widowed",
-                "Divorced"
-              ]
+              "acceptableValues": ["Widowed", "Divorced"]
             },
             {
               "criteriaKey": "applicant_citizen_status",
               "label": "You are a US citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
+              "acceptableValues": ["Spouse"]
             }
           ]
         }
@@ -843,26 +801,18 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died within the last two years",
-              "acceptableValues": [
-                "<2years"
-              ]
+              "acceptableValues": ["<2years"]
             },
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -893,9 +843,7 @@
             {
               "criteriaKey": "applicant_paid_funeral_expenses",
               "label": "You paid for funeral or burial expenses",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             }
           ]
         }
@@ -911,47 +859,33 @@
             "summary": "<p>Federal Emergency Management Agency (FEMA) offers support to people during natural disasters and national emergencies, including housing and funeral assistance.</p>\r\n",
             "lede": "<p>Federal Emergency Management Agency (FEMA) offers support to people during natural disasters and national emergencies, including housing and funeral assistance.</p>\r\n"
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_died_of_COVID",
               "label": "The deceased's death was COVID-19 related",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_death_location_is_US",
               "label": "The deceased died in the U.S.",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died after May 20th, 2020",
-              "acceptableValues": [
-                ">01-20-2020"
-              ]
+              "acceptableValues": [">01-20-2020"]
             },
             {
               "criteriaKey": "applicant_citizen_status",
               "label": "You are a U.S. citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_paid_funeral_expenses",
               "label": "You paid for funeral or burial expenses and were not reimbursed",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             }
           ]
         }
@@ -967,19 +901,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -993,9 +921,7 @@
             {
               "criteriaKey": "deceased_grave_headstone",
               "label": "The person is buried in a grave with a privately purchased headstone or an unmarked grave",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
@@ -1021,19 +947,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1055,11 +975,7 @@
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: child, parent, or spouse",
-              "acceptableValues": [
-                "Child",
-                "Parent",
-                "Spouse"
-              ]
+              "acceptableValues": ["Child", "Parent", "Spouse"]
             }
           ]
         }
@@ -1075,19 +991,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "You served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1099,23 +1009,17 @@
             {
               "criteriaKey": "applicant_date_of_birth",
               "label": "You are under 18 years",
-              "acceptableValues": [
-                "<18years"
-              ]
+              "acceptableValues": ["<18years"]
             },
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is unmarried",
-              "acceptableValues": [
-                "Unmarried"
-              ]
+              "acceptableValues": ["Unmarried"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: child",
-              "acceptableValues": [
-                "Child"
-              ]
+              "acceptableValues": ["Child"]
             }
           ]
         }
@@ -1131,40 +1035,28 @@
             "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_date_of_death",
               "label": "Deceased died before 1978",
-              "acceptableValues": [
-                "<01-01-1978"
-              ]
+              "acceptableValues": ["<01-01-1978"]
             },
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "You served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
               "label": "The service status of the deceased is: retired from the service",
-              "acceptableValues": [
-                "Retired from the service"
-              ]
+              "acceptableValues": ["Retired from the service"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
+              "acceptableValues": ["Spouse"]
             }
           ]
         }
@@ -1180,19 +1072,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1213,10 +1099,7 @@
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse or child",
-              "acceptableValues": [
-                "Spouse",
-                "Child"
-              ]
+              "acceptableValues": ["Spouse", "Child"]
             }
           ]
         }
@@ -1232,19 +1115,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1256,23 +1133,17 @@
             {
               "criteriaKey": "applicant_date_of_birth",
               "label": "You are under 18 years",
-              "acceptableValues": [
-                ">18years"
-              ]
+              "acceptableValues": [">18years"]
             },
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is unmarried",
-              "acceptableValues": [
-                "Unmarried"
-              ]
+              "acceptableValues": ["Unmarried"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: child",
-              "acceptableValues": [
-                "Child"
-              ]
+              "acceptableValues": ["Child"]
             }
           ]
         }
@@ -1288,16 +1159,12 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
+          "tags": ["Death of a loved one"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1332,16 +1199,12 @@
             "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
+          "tags": ["Death of a loved one"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1363,10 +1226,7 @@
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse or child",
-              "acceptableValues": [
-                "Spouse",
-                "Child"
-              ]
+              "acceptableValues": ["Spouse", "Child"]
             }
           ]
         }
@@ -1382,27 +1242,18 @@
             "summary": "<p>Offers financial and educational support to help families of fallen public safety officers.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_public_safety_officer",
               "label": "The deceased was a public safety officer who died in the line of duty",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse or child",
-              "acceptableValues": [
-                "Spouse",
-                "Child"
-              ]
+              "acceptableValues": ["Spouse", "Child"]
             }
           ]
         }
@@ -1418,38 +1269,27 @@
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
+          "tags": ["Death of a loved one"],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
               "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is unmarried or widowed",
-              "acceptableValues": [
-                "Unmarried",
-                "Widowed"
-              ]
+              "acceptableValues": ["Unmarried", "Widowed"]
             },
             {
               "criteriaKey": "applicant_citizen_status",
               "label": "You are a US citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_care_for_child",
               "label": "You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             }
           ]
         }
@@ -1465,19 +1305,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1491,9 +1325,7 @@
             {
               "criteriaKey": "deceased_grave_headstone",
               "label": "The person is buried in a grave with a privately purchased headstone or an unmarked grave",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
@@ -1519,16 +1351,12 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
+          "tags": ["Death of a loved one"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1563,41 +1391,28 @@
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
               "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_date_of_death",
               "label": "The deceased died within the last two years",
-              "acceptableValues": [
-                "<2years"
-              ]
+              "acceptableValues": ["<2years"]
             },
             {
               "criteriaKey": "applicant_citizen_status",
               "label": "You are a U.S. citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse or child",
-              "acceptableValues": [
-                "Spouse",
-                "Child"
-              ]
+              "acceptableValues": ["Spouse", "Child"]
             }
           ]
         }
@@ -1613,19 +1428,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1661,19 +1470,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1694,18 +1497,12 @@
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is: unmarried or widowed",
-              "acceptableValues": [
-                "Unmarried",
-                "Widowed"
-              ]
+              "acceptableValues": ["Unmarried", "Widowed"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: child or spouse",
-              "acceptableValues": [
-                "Child",
-                "Spouse"
-              ]
+              "acceptableValues": ["Child", "Spouse"]
             }
           ]
         }
@@ -1721,16 +1518,12 @@
             "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
+          "tags": ["Death of a loved one"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1772,44 +1565,32 @@
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
+          "tags": ["Death of a loved one"],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
               "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_date_of_birth",
               "label": "You are under 18 years",
-              "acceptableValues": [
-                "<18years"
-              ]
+              "acceptableValues": ["<18years"]
             },
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is unmarried",
-              "acceptableValues": [
-                "Unmarried"
-              ]
+              "acceptableValues": ["Unmarried"]
             },
             {
               "criteriaKey": "applicant_citizen_status",
               "label": "You are a U.S. citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Applicant's relationship to the deceased is: child",
-              "acceptableValues": [
-                "Child"
-              ]
+              "acceptableValues": ["Child"]
             }
           ]
         }
@@ -1825,19 +1606,13 @@
             "summary": "<p>The Bureau of Indian Affairs enhances the quality of life and protects and improves the trust assets of American Indians, Indian tribes, and Alaska Natives.</p>\r\n",
             "lede": "<p>The Bureau of Indian Affairs enhances the quality of life and protects and improves the trust assets of American Indians, Indian tribes, and Alaska Natives.</p>\r\n"
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_american_indian",
               "label": "The deceased was a member of a federally recognized American Indian Tribe or an Alaska Native.",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             }
           ]
         }
@@ -1853,26 +1628,18 @@
             "summary": "<p>Promotes and improves the welfare, working conditions, opportunities, benefits and rights of wage earners, job seekers, and retirees of the United States.</p>\r\n",
             "lede": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Promotes and improves the welfare, working conditions, opportunities, benefits and rights of wage earners, job seekers, and retirees of the United States.</p>\r\n"
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_miner",
               "label": "The deceased worked in the coal mines and their death was due to black lung disease (pneumoconiosis)",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
+              "acceptableValues": ["Spouse"]
             }
           ]
         }
@@ -1888,19 +1655,13 @@
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_served_in_active_military",
               "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "deceased_service_status",
@@ -1923,16 +1684,12 @@
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is widowed",
-              "acceptableValues": [
-                "Widowed"
-              ]
+              "acceptableValues": ["Widowed"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
+              "acceptableValues": ["Spouse"]
             }
           ]
         }
@@ -1948,45 +1705,32 @@
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
+          "tags": ["Death of a loved one"],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
               "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_date_of_birth",
               "label": "You are over 60 years",
-              "acceptableValues": [
-                ">=60years"
-              ]
+              "acceptableValues": [">=60years"]
             },
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is widowed or divorced",
-              "acceptableValues": [
-                "Widowed",
-                "Divorced"
-              ]
+              "acceptableValues": ["Widowed", "Divorced"]
             },
             {
               "criteriaKey": "applicant_citizen_status",
               "label": "You are a US citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
+              "acceptableValues": ["Spouse"]
             }
           ]
         }
@@ -2002,47 +1746,33 @@
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
               "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_date_of_birth",
               "label": "You are under 18 years",
-              "acceptableValues": [
-                "<18years"
-              ]
+              "acceptableValues": ["<18years"]
             },
             {
               "criteriaKey": "applicant_marital_status",
               "label": "Your marital status is unmarried",
-              "acceptableValues": [
-                "Unmarried"
-              ]
+              "acceptableValues": ["Unmarried"]
             },
             {
               "criteriaKey": "applicant_citizen_status",
               "label": "You are a U.S. citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: child",
-              "acceptableValues": [
-                "Child"
-              ]
+              "acceptableValues": ["Child"]
             }
           ]
         }
@@ -2058,37 +1788,27 @@
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
+          "tags": ["Death of a loved one"],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
               "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_date_of_birth",
               "label": "You are over 62 years",
-              "acceptableValues": [
-                ">=62years"
-              ]
+              "acceptableValues": [">=62years"]
             },
             {
               "criteriaKey": "applicant_citizen_status",
               "label": "You are a US citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: parent",
-              "acceptableValues": [
-                "Parent"
-              ]
+              "acceptableValues": ["Parent"]
             }
           ]
         }
@@ -2104,19 +1824,13 @@
             "summary": "<p>Offers financial and educational support to help families of fallen public safety officers.</p>\r\n",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
+          "tags": ["Death of a loved one"],
+          "lifeEvents": ["Death"],
           "eligibility": [
             {
               "criteriaKey": "deceased_public_safety_officer",
               "label": "The deceased was a public safety officer who died in the line of duty",
-              "acceptableValues": [
-                "Yes"
-              ]
+              "acceptableValues": ["Yes"]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",

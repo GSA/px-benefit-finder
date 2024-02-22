@@ -17,28 +17,28 @@
   .bf-key-eligibility-criteria-sub-heading {
     margin-bottom: 0;
   }
-  
+
   .bf-key-eligibility-criteria-list {
     padding: 0;
     margin: 0;
 
     .bf-key-eligibility-criteria-list-item {
-        margin: 0;
-        padding: space.$space-md space.$space-lg;
-        border: 0.5px solid color.$pop-blue;
-        background-color: color.$sky;
-        display: flex;
-        flex-wrap: nowrap;
+      margin: 0;
+      padding: space.$space-md space.$space-lg;
+      border: 0.5px solid color.$pop-blue;
+      background-color: color.$sky;
+      display: flex;
+      flex-wrap: nowrap;
 
-        .bf-checkmark--green {
-          height: 100%;
-          margin-right: space.$space-lg;
-        }
+      .bf-checkmark--green {
+        height: 100%;
+        margin-right: space.$space-lg;
       }
+    }
 
-      li.bf-usa-list {
-        @include p2;
-      }
+    li.bf-usa-list {
+      @include p2;
+    }
 
     li.bf-unmet-criteria-item {
       @include p;
@@ -46,6 +46,6 @@
   }
 }
 
-.bf-usa-alert .usa-alert__text {
+.bf-usa-alert .bf-usa-alert__text {
   @include p3;
 }

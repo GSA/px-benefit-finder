@@ -452,7 +452,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Department of Defense (DOD)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -614,7 +614,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Department of Defense (DOD)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -771,7 +771,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -933,7 +933,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Department of Defense (DOD)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -1091,7 +1091,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -1263,7 +1263,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -1430,7 +1430,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                          Federal Emergency Management Agency (FEMA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -1603,7 +1603,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -1771,7 +1771,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -1938,7 +1938,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -2105,7 +2105,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -2257,7 +2257,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Department of Interior (DOI) - Indian Affairs
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -2425,7 +2425,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -2582,7 +2582,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -2744,7 +2744,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -2906,7 +2906,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -3059,7 +3059,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Department of Justice (DOJ)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -3211,7 +3211,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Department of Justice (DOJ)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -3373,7 +3373,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Department of Defense (DOD)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -3540,7 +3540,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -3717,7 +3717,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -3879,7 +3879,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -4042,7 +4042,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -4209,7 +4209,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -4386,7 +4386,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -4553,7 +4553,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -4725,7 +4725,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -4892,7 +4892,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -5065,7 +5065,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -5227,7 +5227,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -5389,7 +5389,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -5476,7 +5476,7 @@ exports[`loads window query scenario 1 1`] = `
                       Call to action (retirement)
                     </div>
                     <svg
-                      class="bf-carrot-two"
+                      class="bf-carrot-big"
                       fill="none"
                       height="22"
                       viewBox="0 0 13 22"
@@ -5522,7 +5522,7 @@ exports[`loads window query scenario 1 1`] = `
                       Call to action (disability)
                     </div>
                     <svg
-                      class="bf-carrot-two"
+                      class="bf-carrot-big"
                       fill="none"
                       height="22"
                       viewBox="0 0 13 22"
@@ -5833,7 +5833,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Department of Defense (DOD)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -6029,7 +6029,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Department of Defense (DOD)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -6220,7 +6220,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -6416,7 +6416,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Department of Defense (DOD)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -6587,7 +6587,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -6772,7 +6772,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -7026,7 +7026,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                          Federal Emergency Management Agency (FEMA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -7212,7 +7212,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -7393,7 +7393,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -7614,7 +7614,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -7815,7 +7815,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -7980,7 +7980,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Department of Interior (DOI) - Indian Affairs
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -8202,7 +8202,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -8393,7 +8393,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -8616,7 +8616,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -8812,7 +8812,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -8986,7 +8986,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Department of Justice (DOJ)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -9159,7 +9159,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Department of Justice (DOJ)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -9355,7 +9355,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Department of Defense (DOD)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -9563,7 +9563,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -9794,7 +9794,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -10023,7 +10023,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -10247,7 +10247,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -10501,7 +10501,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -10779,7 +10779,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Social Security Administration (SSA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -10959,7 +10959,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -11165,7 +11165,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -11386,7 +11386,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -11613,7 +11613,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -11809,7 +11809,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -12005,7 +12005,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         Veterans Affairs Department (VA)
                         <svg
-                          class="bf-carrot"
+                          class="bf-carrot-small"
                           fill="white"
                           height="24"
                           viewBox="0 0 24 24"
@@ -12092,7 +12092,7 @@ exports[`loads window query scenario 2 1`] = `
                       Call to action (retirement)
                     </div>
                     <svg
-                      class="bf-carrot-two"
+                      class="bf-carrot-big"
                       fill="none"
                       height="22"
                       viewBox="0 0 13 22"
@@ -12138,7 +12138,7 @@ exports[`loads window query scenario 2 1`] = `
                       Call to action (disability)
                     </div>
                     <svg
-                      class="bf-carrot-two"
+                      class="bf-carrot-big"
                       fill="none"
                       height="22"
                       viewBox="0 0 13 22"

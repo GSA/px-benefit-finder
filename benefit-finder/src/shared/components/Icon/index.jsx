@@ -2,32 +2,23 @@ import PropTypes from 'prop-types'
 import * as Icons from './index_icons'
 import './_index.scss'
 
-const Icon = ({ type, color }) => {
-  // console.log()
-
-  let icon
-
+const Icon = ({ type, color, ...props }) => {
   switch (type) {
     case 'carrot-small':
-      icon = <Icons.CarrotSmall color={color} />
-      break
+      return <Icons.CarrotSmall color={color} {...props} />
     case 'carrot-big':
-      icon = <Icons.CarrotBig />
-      break
+      return <Icons.CarrotBig {...props} />
     case 'close':
-      icon = <Icons.Close />
-      break
+      return <Icons.Close {...props} />
     case 'green-check':
-      icon = <Icons.GreenCheck />
-      break
+      return <Icons.GreenCheck {...props} />
     case 'open':
-      icon = <Icons.Open />
-      break
+      return <Icons.Open {...props} />
+    case 'modal-close':
+      return <Icons.ModalClose {...props} />
     default:
-      icon = '-'
+      return null
   }
-
-  return icon
 }
 
 Icon.propTypes = {

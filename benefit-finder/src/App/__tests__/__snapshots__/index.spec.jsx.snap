@@ -120,7 +120,7 @@ exports[`loads intro 1`] = `
                   class="notices-list add-list-reset"
                 >
                   <li
-                    class="notice"
+                    class="bf-notice"
                   >
                     <div
                       aria-live="polite"
@@ -135,7 +135,7 @@ exports[`loads intro 1`] = `
                           class="bf-usa-alert__text usa-alert__text"
                         >
                           <div
-                            class="notice-item"
+                            class="bf-notice-item"
                           >
                             <div>
                               Your information
@@ -150,7 +150,7 @@ exports[`loads intro 1`] = `
                     </div>
                   </li>
                   <li
-                    class="notice"
+                    class="bf-notice"
                   >
                     <div
                       aria-live="polite"
@@ -165,7 +165,7 @@ exports[`loads intro 1`] = `
                           class="bf-usa-alert__text usa-alert__text"
                         >
                           <div
-                            class="notice-item"
+                            class="bf-notice-item"
                           >
                             Provide complete info to get more relevant results.
                           </div>
@@ -174,7 +174,7 @@ exports[`loads intro 1`] = `
                     </div>
                   </li>
                   <li
-                    class="notice"
+                    class="bf-notice"
                   >
                     <div
                       aria-live="polite"
@@ -189,7 +189,7 @@ exports[`loads intro 1`] = `
                           class="bf-usa-alert__text usa-alert__text"
                         >
                           <div
-                            class="notice-item"
+                            class="bf-notice-item"
                           >
                             <div>
                               <strong>

@@ -22,7 +22,6 @@ exports[`Card > renders a match to the previous snapshot 1`] = `
       <div
         class="bf-usa-card__cta usa-card__cta"
       />
-      -
     </a>
   </li>
 </DocumentFragment>

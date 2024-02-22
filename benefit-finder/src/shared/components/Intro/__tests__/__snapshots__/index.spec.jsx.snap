@@ -44,7 +44,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
       <div
         class="time-indicator"
       >
-        Time to complete 2-5 minutes
+        Estimated time 2-5 minutes
       </div>
       <div
         class="bf-intro-process-group"
@@ -70,7 +70,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
               <h3
                 class="bf-usa-process-list__heading usa-process-list__heading"
               >
-                Review Results
+                Review results
               </h3>
             </li>
             <li
@@ -125,11 +125,10 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                         class="notice-item"
                       >
                         <div>
-                          Your information
                           <strong>
-                             is not
+                            This is not an application.
                           </strong>
-                           shared, saved, or submitted.
+                           This tool will help you find possible benefits.
                         </div>
                       </div>
                     </div>
@@ -154,7 +153,11 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                       <div
                         class="notice-item"
                       >
-                        Provide complete info to get more relevant results.
+                        Your answers 
+                        <strong>
+                          are not
+                        </strong>
+                         saved or submitted.
                       </div>
                     </div>
                   </div>
@@ -180,9 +183,9 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                       >
                         <div>
                           <strong>
-                            This form is not an application.
+                            Answer more questions
                           </strong>
-                           You will need to apply for benefits with each agency.
+                           to get better results.
                         </div>
                       </div>
                     </div>

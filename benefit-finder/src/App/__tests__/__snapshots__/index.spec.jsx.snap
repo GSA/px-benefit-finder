@@ -55,7 +55,7 @@ exports[`loads intro 1`] = `
           <div
             class="time-indicator"
           >
-            Time to complete
+            Estimated time
              
             2-5 minutes
           </div>
@@ -83,7 +83,7 @@ exports[`loads intro 1`] = `
                   <h3
                     class="bf-usa-process-list__heading usa-process-list__heading"
                   >
-                    Review Results
+                    Review results
                   </h3>
                 </li>
                 <li
@@ -138,11 +138,10 @@ exports[`loads intro 1`] = `
                             class="notice-item"
                           >
                             <div>
-                              Your information
                               <strong>
-                                 is not
+                                This is not an application.
                               </strong>
-                               shared, saved, or submitted.
+                               This tool will help you find possible benefits.
                             </div>
                           </div>
                         </div>
@@ -167,7 +166,11 @@ exports[`loads intro 1`] = `
                           <div
                             class="notice-item"
                           >
-                            Provide complete info to get more relevant results.
+                            Your answers 
+                            <strong>
+                              are not
+                            </strong>
+                             saved or submitted.
                           </div>
                         </div>
                       </div>
@@ -193,9 +196,9 @@ exports[`loads intro 1`] = `
                           >
                             <div>
                               <strong>
-                                This form is not an application.
+                                Answer more questions
                               </strong>
-                               You will need to apply for benefits with each agency.
+                               to get better results.
                             </div>
                           </div>
                         </div>
@@ -335,7 +338,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -399,7 +402,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -497,7 +500,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -561,7 +564,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -659,7 +662,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -723,7 +726,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -816,7 +819,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -880,7 +883,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -978,7 +981,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -1043,7 +1046,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -1136,7 +1139,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -1200,7 +1203,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -1308,7 +1311,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -1372,7 +1375,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -1475,7 +1478,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -1540,7 +1543,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -1648,7 +1651,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -1713,7 +1716,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -1816,7 +1819,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -1880,7 +1883,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -1983,7 +1986,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -2047,7 +2050,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -2150,7 +2153,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -2214,7 +2217,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -2302,7 +2305,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -2367,7 +2370,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -2470,7 +2473,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -2534,7 +2537,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -2627,7 +2630,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -2691,7 +2694,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -2789,7 +2792,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -2853,7 +2856,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -2951,7 +2954,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -3016,7 +3019,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -3104,7 +3107,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -3168,7 +3171,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -3256,7 +3259,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -3320,7 +3323,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -3418,7 +3421,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -3482,7 +3485,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -3585,7 +3588,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -3649,7 +3652,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -3762,7 +3765,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -3826,7 +3829,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -3924,7 +3927,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -3989,7 +3992,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -4087,7 +4090,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -4151,7 +4154,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -4254,7 +4257,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -4318,7 +4321,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -4431,7 +4434,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -4495,7 +4498,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -4598,7 +4601,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -4662,7 +4665,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -4770,7 +4773,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -4834,7 +4837,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -4937,7 +4940,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -5002,7 +5005,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -5110,7 +5113,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -5174,7 +5177,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -5272,7 +5275,7 @@ exports[`loads window query scenario 1 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -5336,7 +5339,7 @@ exports[`loads window query scenario 1 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -5682,7 +5685,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -5790,7 +5793,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -5878,7 +5881,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -5986,7 +5989,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -6074,7 +6077,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -6182,7 +6185,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -6265,7 +6268,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -6378,7 +6381,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -6461,7 +6464,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -6544,7 +6547,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -6632,7 +6635,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -6729,7 +6732,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -6816,7 +6819,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Likely Eligible
+                        Likely eligible
                       </span>
                       <svg
                         height="24"
@@ -7071,7 +7074,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -7169,7 +7172,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -7257,7 +7260,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -7345,7 +7348,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -7438,7 +7441,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -7571,7 +7574,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -7659,7 +7662,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -7767,7 +7770,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -7860,7 +7863,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -7942,7 +7945,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -8025,7 +8028,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -8159,7 +8162,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -8247,7 +8250,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -8355,7 +8358,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -8438,7 +8441,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -8661,7 +8664,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -8769,7 +8772,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -8857,7 +8860,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -9031,7 +9034,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -9204,7 +9207,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -9312,7 +9315,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -9400,7 +9403,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -9608,7 +9611,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -9751,7 +9754,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -9838,7 +9841,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Likely Eligible
+                        Likely eligible
                       </span>
                       <svg
                         height="24"
@@ -10068,7 +10071,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -10291,7 +10294,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Likely Eligible
+                        Likely eligible
                       </span>
                       <svg
                         height="24"
@@ -10546,7 +10549,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        More Information Needed
+                        More information needed
                       </span>
                       <svg
                         height="24"
@@ -10736,7 +10739,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -10824,7 +10827,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -10921,7 +10924,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -11004,7 +11007,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -11122,7 +11125,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -11210,7 +11213,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -11343,7 +11346,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -11431,7 +11434,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -11570,7 +11573,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -11658,7 +11661,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -11766,7 +11769,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"
@@ -11854,7 +11857,7 @@ exports[`loads window query scenario 2 1`] = `
                       <span
                         class="bf-accordion-sub-heading"
                       >
-                        Not Eligible
+                        Not eligible
                       </span>
                       <svg
                         height="24"
@@ -11962,7 +11965,7 @@ exports[`loads window query scenario 2 1`] = `
                         <div
                           class="bf-unmet-criteria-title"
                         >
-                          More Information Needed
+                          More information needed
                         </div>
                         <ul
                           class="bf-unmet-criteria-list"

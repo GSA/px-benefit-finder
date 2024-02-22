@@ -1,7 +1,7 @@
 {
   "intro": {
     "heading": "Pasos",
-    "timeIndicator": "Tiempo para completar",
+    "timeIndicator": "Tiempo estimado",
     "steps": {
       "list": [
         {
@@ -19,13 +19,13 @@
       "heading": "Antes de empezar:",
       "list": [
         {
-          "notice": "<div>Su información <strong>no será</strong> compartida, guardada o presentada.</div>"
+          "notice": "<div><strong>Esto no es una aplicación.</strong> Este formulario le ayuda a encontrar beneficios.</div>"
         },
         {
-          "notice": "Ingrese la información completa para obtener resultados más relevantes."
+          "notice": "Sus respuestas <strong>no serán</strong> guardadas o presentadas."
         },
         {
-          "notice": "<div><strong>Este formulario no es una aplicación.</strong> Tiene que presentar una solicitud por cada beneficio.</div>"
+          "notice": "<div>Para mejores resultados <strong>responda todas las preguntas</strong>.</div>"
         }
       ]
     },
@@ -35,11 +35,11 @@
     "stepBackLink": "Volver"
   },
   "requiredLabel": {
-    "value": "Se requiere"
+    "value": "requerido"
   },
   "alertBanner": {
-    "heading": "Estado de error",
-    "description": "Todos los campos marcados como obligatorios deben ser completados."
+    "heading": "Error",
+    "description": "Responda los campos requeridos."
   },
   "buttonGroup": [
     {
@@ -62,7 +62,7 @@
   },
   "verifySelectionsView": {
     "heading": "Revisar y confirmar",
-    "noResultsLabel": "No se ha dado ninguna entrada",
+    "noResultsLabel": "No respondió",
     "buttonGroup": [
       {
         "value": "Volver"
@@ -79,7 +79,7 @@
         "description": "<div><p>Visite la página de cada agencia para verificar los requisitos y aplicar. Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</p></div>"
       },
       "heading": "Resultados",
-      "description": "<div><strong>Podría calificar para estos beneficios:<strong/></div>"
+      "description": "<div><strong>Podría ser elegible para estos beneficios:<strong/></div>"
     },
     "notQualified": {
       "chevron": {
@@ -142,8 +142,8 @@
     ]
   },
   "sectionHeadings": {
-    "start": "Preguntas completas",
-    "continue": "Preguntas Continuación",
+    "start": "Responda las preguntas",
+    "continue": "Preguntas continuadas",
     "final": "Preguntas finales"
   },
   "select": {
@@ -152,7 +152,7 @@
     "dateDefaultValue": "-Seleccionar-"
   },
   "date": {
-    "alert": "La fecha debe seguir el formato 01 - 22 de enero de 1977.",
+    "alert": "Use el formato enero 19 2000",
     "labelDay": "Día",
     "labelMonth": "Mes",
     "labelYear": "Año",

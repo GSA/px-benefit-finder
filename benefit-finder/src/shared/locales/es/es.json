@@ -25,7 +25,7 @@
           "notice": "Sus respuestas <strong>no serán</strong> guardadas o presentadas."
         },
         {
-          "notice": "<div><strong>Responda todas las preguntas</strong> para tener mejores resultados.</div>"
+          "notice": "<div>Para mejores resultados <strong>responda todas las preguntas</strong>.</div>"
         }
       ]
     },
@@ -142,7 +142,7 @@
     ]
   },
   "sectionHeadings": {
-    "start": "Responda estas preguntas",
+    "start": "Responda las preguntas",
     "continue": "Preguntas continuadas",
     "final": "Preguntas finales"
   },

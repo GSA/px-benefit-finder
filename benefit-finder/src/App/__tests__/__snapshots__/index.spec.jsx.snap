@@ -55,7 +55,7 @@ exports[`loads intro 1`] = `
           <div
             class="time-indicator"
           >
-            Time to complete
+            Estimated time
              
             2-5 minutes
           </div>
@@ -138,11 +138,10 @@ exports[`loads intro 1`] = `
                             class="notice-item"
                           >
                             <div>
-                              Your information
                               <strong>
-                                 is not
+                                This is not an application.
                               </strong>
-                               shared, saved, or submitted.
+                               This tool will help you find possible benefits.
                             </div>
                           </div>
                         </div>
@@ -167,7 +166,11 @@ exports[`loads intro 1`] = `
                           <div
                             class="notice-item"
                           >
-                            Provide complete info to get more relevant results.
+                            Your answers 
+                            <strong>
+                              are not
+                            </strong>
+                             saved or submitted.
                           </div>
                         </div>
                       </div>
@@ -193,9 +196,9 @@ exports[`loads intro 1`] = `
                           >
                             <div>
                               <strong>
-                                This form is not an application.
+                                Answer more questions
                               </strong>
-                               You will need to apply for benefits with each agency.
+                               to get better results.
                             </div>
                           </div>
                         </div>
@@ -5550,7 +5553,7 @@ exports[`loads window query scenario 1 1`] = `
                 Share results
               </h3>
               <p>
-                Copy or email these results. Your answers will be visible. Only share with whom you trust.
+                Copy or email these results. Your answers will be visible. Only share with those you trust.
               </p>
               <div
                 class="result-view-share-results-button-group"
@@ -11216,7 +11219,7 @@ exports[`loads window query scenario 2 1`] = `
                 Share results
               </h3>
               <p>
-                Copy or email these results. Your answers will be visible. Only share with whom you trust.
+                Copy or email these results. Your answers will be visible. Only share with those you trust.
               </p>
               <div
                 class="result-view-share-results-button-group"

@@ -73,7 +73,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             <h4
               class="usa-alert__heading"
             >
-              Error status
+              Error
             </h4>
             <p
               class="usa-alert__text"

@@ -27,11 +27,10 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
                 class="notice-item"
               >
                 <div>
-                  Your information
                   <strong>
-                     is not
+                    This is not an application.
                   </strong>
-                   shared, saved, or submitted.
+                   This tool will help you find possible benefits.
                 </div>
               </div>
             </div>
@@ -56,7 +55,11 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
               <div
                 class="notice-item"
               >
-                Provide complete info to get more relevant results.
+                Your answers 
+                <strong>
+                  are not
+                </strong>
+                 saved or submitted.
               </div>
             </div>
           </div>
@@ -82,9 +85,9 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
               >
                 <div>
                   <strong>
-                    This form is not an application.
+                    Answer more questions
                   </strong>
-                   You will need to apply for benefits with each agency.
+                   to get better results.
                 </div>
               </div>
             </div>

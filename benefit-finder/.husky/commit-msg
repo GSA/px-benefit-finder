@@ -11,4 +11,3 @@ then
 fi
 
 echo "$COMMITPREFIX"': '"$COMMIT_MESSAGE" > "$COMMIT_MESSAGE_FILE"
-

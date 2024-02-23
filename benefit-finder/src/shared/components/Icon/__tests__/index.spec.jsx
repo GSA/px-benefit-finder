@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
-import Carrot from '../index.jsx'
+import Icon from '../index.jsx'
 
-describe('Carrot', () => {
+describe('Icon', () => {
   it('renders a match to the previous snapshot', () => {
-    const { asFragment } = render(<Carrot />)
+    const { asFragment } = render(<Icon type="close" />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

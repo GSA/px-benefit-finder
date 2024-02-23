@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import accordion from '@uswds/uswds/js/usa-accordion'
+import { Icon } from '../index'
 import PropTypes from 'prop-types'
 import './_index.scss'
 
@@ -41,30 +42,6 @@ const Accordion = ({
     setOpen(isExpanded)
   }, [isExpanded])
 
-  const Close = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <path d="M0 0h24v24H0z" fill="none" />
-      <path d="M19 13H5v-2h14v2z" fill="#ffffff" />
-    </svg>
-  )
-
-  const Open = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <path d="M0 0h24v24H0z" fill="none" />
-      <path fill="#1a4480" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-    </svg>
-  )
-
   /**
    * a handler that returns the proper icon
    * @function
@@ -72,7 +49,11 @@ const Accordion = ({
    * @return {html} returns a semantic img element with proper svg
    */
   const handleIcon = () =>
-    !isOpen ? <Open alt="a plus icon" /> : <Close alt="a minus icon" />
+    !isOpen ? (
+      <Icon type="open" alt="a plus icon" />
+    ) : (
+      <Icon type="close" alt="a minus icon" />
+    )
 
   return (
     <div className="bf-usa-accordion usa-accordion" {...props} hidden={hidden}>

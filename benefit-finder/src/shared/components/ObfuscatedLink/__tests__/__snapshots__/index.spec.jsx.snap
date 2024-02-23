@@ -6,7 +6,7 @@ exports[`ObfuscatedLink > renders a match to the previous snapshot 1`] = `
     class="bf-usa-button usa-button bf-obfuscated-link"
   >
     <svg
-      class="bf-carrot"
+      class="bf-carrot-small"
       fill="white"
       height="24"
       viewBox="0 0 24 24"

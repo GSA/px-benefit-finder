@@ -5,7 +5,7 @@ import { Card } from '../index'
  * a functional component that renders a list of usa-card component(s)
  * @component
  * @param {array} data - passed benefits data
- * @param {number} carrotType - determines display type
+ * @param {string} carrotType - determines display type
  * @return {html} returns a semantic html unorderd list element
  */
 const RelativeBenefitList = ({ data, carrotType }) => {
@@ -33,7 +33,7 @@ const RelativeBenefitList = ({ data, carrotType }) => {
 
 RelativeBenefitList.propTypes = {
   data: PropTypes.array,
-  carrotType: PropTypes.number,
+  carrotType: PropTypes.string,
 }
 
 export default RelativeBenefitList

@@ -13,7 +13,7 @@ const RelativeBenefitList = ({ data, carrotType }) => {
     <ul className="bf-usa-card-group usa-card-group">
       {data &&
         data.map((item, i) => {
-          const { title, link, cta, body } = item.lifeEvent
+          const { title, link, cta, body, lifeEventId } = item.lifeEvent
 
           return (
             <Card
@@ -24,6 +24,7 @@ const RelativeBenefitList = ({ data, carrotType }) => {
               body={body}
               key={`${title}-${i}`}
               carrotType={carrotType}
+              icon={lifeEventId}
             />
           )
         })}

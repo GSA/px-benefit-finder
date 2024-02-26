@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
-import { ObfuscatedLink } from '../index'
+import { ObfuscatedLink, Icon } from '../index'
 
 import './_index.scss'
 
@@ -28,18 +28,6 @@ const customStyles = {
     maxWidth: '520px',
   },
 }
-
-const Close = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    height="24"
-    viewBox="0 0 24 24"
-    width="24"
-  >
-    <path d="M0 0h24v24H0z" fill="none" />
-    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-  </svg>
-)
 
 /**
  * a functional component that renders a trigger, that when clicked opens a dialog
@@ -189,7 +177,7 @@ const Modal = ({
           className="modal-button"
           onClick={() => handleCloseModal(triggerRef)}
         >
-          <Close alt="a close out icon" />
+          <Icon type="modal-close" color="black" alt="a close out icon" />
         </button>
         <div className="modal-heading">{modalHeading}</div>
         {children || (

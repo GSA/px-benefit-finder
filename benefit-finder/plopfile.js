@@ -19,7 +19,7 @@ module.exports = plop => {
       },
       {
         type: 'add',
-        path: 'src/shared/components/{{pascalCase name}}/__tests__/index.spec.js',
+        path: 'src/shared/components/{{pascalCase name}}/__tests__/index.spec.jsx',
         templateFile:
           'src/shared/components/.ComponentTemplate/Component.spec.jsx.hbs',
       },

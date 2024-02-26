@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Heading, Carrot } from '../index'
+import { Heading, Icon } from '../index'
 import { useHandleClassName } from '../../hooks'
 import { createMarkup } from '../../utils'
 import './_index.scss'
@@ -18,7 +18,7 @@ import './_index.scss'
 const Card = ({ className, title, body, cta, href, noCarrot, carrotType }) => {
   const defaultClasses = ['add-list-reset']
   const handleCarrot =
-    noCarrot === true ? null : <Carrot color="#162E51" type={carrotType} />
+    noCarrot === true ? null : <Icon type={carrotType} color="#162E51" />
 
   return (
     <li

@@ -147,7 +147,7 @@ const ResultsView = ({
               {relevantBenefits && (
                 <RelativeBenefitList
                   data={relevantBenefits}
-                  carrotType={2}
+                  carrotType="carrot-big"
                 ></RelativeBenefitList>
               )}
             </div>

@@ -1,9 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Carrot > renders a match to the previous snapshot 1`] = `
+exports[`Icon > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <svg
-    class="bf-carrot"
     height="24"
     viewBox="0 0 24 24"
     width="24"
@@ -14,7 +13,8 @@ exports[`Carrot > renders a match to the previous snapshot 1`] = `
       fill="none"
     />
     <path
-      d="M7 10l5 5 5-5z"
+      d="M19 13H5v-2h14v2z"
+      fill="#ffffff"
     />
   </svg>
 </DocumentFragment>

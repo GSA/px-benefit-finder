@@ -3,7 +3,7 @@
 exports[`Card > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <li
-    class="add-list-reset"
+    class=" add-list-reset"
   >
     <a
       class="bf-usa-card__container usa-card__container"
@@ -21,6 +21,9 @@ exports[`Card > renders a match to the previous snapshot 1`] = `
       />
       <div
         class="bf-usa-card__cta usa-card__cta"
+      />
+      <i
+        aria-hidden="true"
       />
     </a>
   </li>

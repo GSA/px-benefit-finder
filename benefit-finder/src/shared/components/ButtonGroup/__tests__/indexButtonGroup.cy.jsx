@@ -1,4 +1,3 @@
-/* eslint-disable jest/valid-expect */
 import { composeStories } from '@storybook/react'
 import * as stories from '../index.stories'
 const { Primary } = composeStories(stories)

@@ -342,7 +342,7 @@ const LifeEventSection = ({
                                     )
                                   }
                                   invalid={
-                                    hasError.length &&
+                                    hasError.length > 0 &&
                                     hasError
                                       .map(item => item.id.includes(fieldSetId))
                                       .includes(true)
@@ -385,7 +385,7 @@ const LifeEventSection = ({
                                 className="radio-group"
                                 key={fieldSetId}
                                 aria-invalid={
-                                  hasError.length &&
+                                  hasError.length > 0 &&
                                   hasError
                                     .map(item => item.id.includes(fieldSetId))
                                     .includes(true)

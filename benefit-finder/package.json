@@ -11,7 +11,7 @@
     "start": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "test": "vitest watch",
+    "test": "NODE_ENV=test vitest watch",
     "test:no-watch": "vitest run",
     "test:coverage": "vitest run --coverage",
     "format": "prettier --write '**/*.{js,jsx,json}'",
@@ -35,6 +35,7 @@
     "cy:run:pipeline": "NODE_ENV=test concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\"   \"http-server ./storybook-static --port 6006 --silent\"   \"wait-on tcp:6006 && npm run cy:run\" -Y"
   },
   "devDependencies": {
+    "@axe-core/react": "^4.8.5",
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@storybook/addon-a11y": "^7.6.10",

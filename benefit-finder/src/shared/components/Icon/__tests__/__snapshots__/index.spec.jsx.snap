@@ -18,7 +18,7 @@ exports[`Icon > renders a match to the previous snapshot 1`] = `
       />
       <path
         d="M19 13H5v-2h14v2z"
-        fill="#ffffff"
+        fill="#fff"
       />
     </svg>
   </i>

@@ -3,10 +3,6 @@ name: Database restore
 on:
   workflow_dispatch:
     inputs:
-      # restore_environment:
-      #   description: 'The environment to run the database restore on.'
-      #   required: true
-      #   default: 'dev'
       database_file_override:
         description: 'Path on S3 bucket to a specific database file to restore.'
         required: false
@@ -34,7 +30,6 @@ jobs:
           CF_ORG: '${{ secrets.CF_ORG }}'
           project: '${{ secrets.project }}'
         run: |
-          #export ENVIRONMENT=${{ github.event.inputs.restore_environment }}
           export ENVIRONMENT='${{ github.ref_name }}'
           export S3_FILE_PATH=${{ github.event.inputs.database_file_override }}
           source ./scripts/pipeline/cloud-gov-login.sh

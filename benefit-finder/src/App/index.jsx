@@ -1,4 +1,5 @@
 import { useState, createContext, useEffect } from 'react'
+import { version } from '../../package.json'
 import { useResetElement } from '../shared/hooks'
 import * as apiCalls from '../shared/api/apiCalls'
 import {
@@ -101,6 +102,7 @@ function App({ testAppContent, testQuery }) {
             step !== 0 && viewResults !== true ? 'form' : ''
           }`}
           data-testid="app"
+          data-version={version}
         >
           {step === 0 ? (
             <Intro

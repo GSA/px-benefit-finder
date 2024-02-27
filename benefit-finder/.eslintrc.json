@@ -15,10 +15,16 @@
     "sourceType": "module"
   },
   "settings": {
-    "react": {
-      "version": "18.2"
-    }
+    "react": { "version": "18.2" }
   },
+  "overrides": [
+    {
+      "files": ["**/*.cy.jsx"],
+      "rules": {
+        "jest/valid-expect": "off"
+      }
+    }
+  ],
   "rules": {
     "react/prop-types": "off",
     "eqeqeq": [2, "smart"],

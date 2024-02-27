@@ -1,16 +1,16 @@
 #!/bin/bash
 
-#set -e
+set -e
 
-backup_bucket="benefit-finder-backup-${BACKUP_ENV}"
-space="benefit-finder-${BACKUP_ENV}"
+backup_bucket="${project}-backup-${ENVIRONMENT}"
+space="${project}-${ENVIRONMENT}"
 
 echo "Getting backup bucket credentials..."
 {
   cf target -s "${space}"
 
   export service="${backup_bucket}"
-  export service_key="${service}-key"
+  export service_key="${service}-pipeline-key"
   cf delete-service-key "${service}" "${service_key}" -f
   cf create-service-key "${service}" "${service_key}"
   sleep 2
@@ -23,13 +23,21 @@ echo "Getting backup bucket credentials..."
 
 } >/dev/null 2>&1
 
-echo "Uploading backup..."
+echo "Downloading backup..."
 {
 
-  aws s3 cp ${TIMESTAMP}.sql.gz s3://${bucket}/$(date +%Y)/$(date +%m)/$(date +%d)/ --no-verify-ssl 2>/dev/null
-  aws s3 cp ${TIMESTAMP}.sql.gz s3://${bucket}/latest.sql.gz --no-verify-ssl 2>/dev/null
+  rm -f *.sql
+  
+  DATABASE_FILE="database_restore.sql.gz"
+
+  [ -n "${S3_FILE_PATH}" ] && DATABASE_FILE="${S3_FILE_PATH}"
+
+  aws s3 cp "s3://${bucket}/${DATABASE_FILE}" database_restore.sql.gz  --no-verify-ssl 2>/dev/null
+
+  ## Delete database_restore.tar.gz after it's downloaded.
+  ## [ -z ${S3_FILE_PATH} ] && aws s3 rm s3://${bucket}/database_restore.sql.gz --no-verify-ssl 2>/dev/null
   cf delete-service-key "${service}" "${service_key}" -f
 
 } >/dev/null 2>&1
 
-echo "File uploaded: backup_${BACKUP_ENV}_${TIMESTAMP}.sql.gz"
+echo "File downloaded: ${DATABASE_FILE}"

@@ -1,14 +1,19 @@
-name: Database backup (dev)
+name: Database restore
 
 on:
-  push:
-    branches: 
-      - dev
-  schedule:
-    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      # restore_environment:
+      #   description: 'The environment to run the database restore on.'
+      #   required: true
+      #   default: 'dev'
+      database_file_override:
+        description: 'Path on S3 bucket to a specific database file to restore.'
+        required: false
+
 
 jobs:
-  backup-database-dev:
+  restore-database:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,7 +26,7 @@ jobs:
         run: ./scripts/pipeline/deb-mysql-client-install.sh
       - name: Install Cloudfoundry CLI
         run: ./scripts/pipeline/deb-cf-install.sh
-      - name: Backup dev database
+      - name: Restore database
         shell: bash
         env:
           CF_USER: '${{ secrets.CF_USER }}'
@@ -29,8 +34,9 @@ jobs:
           CF_ORG: '${{ secrets.CF_ORG }}'
           project: '${{ secrets.project }}'
         run: |
-          export TIMESTAMP=$(date --utc +%FT%TZ)
+          #export ENVIRONMENT=${{ github.event.inputs.restore_environment }}
           export ENVIRONMENT='${{ github.ref_name }}'
+          export S3_FILE_PATH=${{ github.event.inputs.database_file_override }}
           source ./scripts/pipeline/cloud-gov-login.sh
-          source ./scripts/pipeline/database-backup.sh
-          source ./scripts/pipeline/s3-backup-upload.sh
+          source ./scripts/pipeline/s3-backup-download.sh
+          source ./scripts/pipeline/database-restore.sh

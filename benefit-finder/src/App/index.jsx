@@ -1,6 +1,7 @@
 import { useState, createContext, useEffect } from 'react'
 import { useResetElement } from '../shared/hooks'
 import * as apiCalls from '../shared/api/apiCalls'
+import { axeTester } from '../shared/utils'
 import {
   Intro,
   LifeEventSection,
@@ -91,6 +92,12 @@ function App({ testAppContent, testQuery }) {
       stepDataArray && setStep(stepDataArray.length)
     }
   }, [windowQuery, hasQueryParams, stepDataArray])
+
+  // run axe tester in dev
+  if (process.env.NODE_ENV === 'development') {
+    // errors will display in the developer tools console
+    content && axeTester()
+  }
 
   return (
     content && (

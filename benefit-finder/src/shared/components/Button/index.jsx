@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react'
 import { useHandleClassName } from '../../hooks'
+import { Icon } from '../index'
+import Colors from '../../styles/colors/_index.js'
 import PropTypes from 'prop-types'
 import './_index.scss'
-
 /**
  * a functional component that renders a reactive button
  * @component
  * @param {React.ReactNode} children - inherited children
  * @param {string} className - inherited class(es)
+ * @param {function} onClick - an inherited function, triggered on a click event
  * @param {boolean} secondary - alternative display styles
  * @param {boolean} disabled - disabled state
  * @param {boolean} unstyled - appear as a link
- * @param {function} onClick - an inherited function, triggered on a click event
+ * @param {string} type - 'button', 'reset', 'download'
+ * @param {string} icon - indicates which icon to include
  * @return {html} returns a semantic html button element
  */
 
@@ -23,10 +26,27 @@ function Button({
   disabled,
   unstyled,
   type,
+  icon,
 }) {
   const [defaultClasses, setDefaultClasses] = useState(null)
   const style =
     secondary === true ? 'secondary' : unstyled === true ? 'unstyled' : null
+  /**
+   * a state hook that contains that handles the synthetic hover value
+   * @return {boolean} current state of mouseOver/mouseLeave
+   */
+  const [isHovered, setIsHovered] = useState(false)
+  /**
+   * a state hook that contains that handles the fill of our svg icons
+   * @return {string} current hex value
+   */
+  const [hoverColor, setHoverColor] = useState()
+
+  useEffect(() => {
+    ;(isHovered && secondary) || (isHovered && unstyled)
+      ? setHoverColor(Colors.marine)
+      : setHoverColor(Colors.popBlue)
+  }, [isHovered])
 
   useEffect(() => {
     switch (style) {
@@ -61,7 +81,10 @@ function Button({
         className,
         defaultClasses,
       })}
+      onMouseOver={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
+      {icon && <Icon type={icon} color={hoverColor} />}
       {children}
     </button>
   )
@@ -70,11 +93,12 @@ function Button({
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  disabled: PropTypes.bool,
-  secondary: PropTypes.bool,
-  unstyled: PropTypes.bool,
   onClick: PropTypes.func,
+  secondary: PropTypes.bool,
+  disabled: PropTypes.bool,
+  unstyled: PropTypes.bool,
   type: PropTypes.oneOf(['button', 'reset', 'download']),
+  icon: PropTypes.string,
 }
 
 export default Button

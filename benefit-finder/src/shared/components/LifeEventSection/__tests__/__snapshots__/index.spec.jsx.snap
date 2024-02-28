@@ -33,6 +33,11 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 class="bf-usa-step-indicator__segment-label usa-step-indicator__segment-label"
               >
                 About the applicant
+                <span
+                  class="usa-sr-only"
+                >
+                   not-completed
+                </span>
               </span>
             </li>
             <li
@@ -46,7 +51,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 <span
                   class="usa-sr-only"
                 >
-                  not-completed
+                   not-completed
                 </span>
               </span>
             </li>

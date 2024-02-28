@@ -26,9 +26,6 @@ const Icon = ({ type, color, ...props }) => {
     case 'email':
       icon = <Icons.Email color={color} />
       break
-    case 'email':
-      icon = <Icons.Email color={color} />
-      break
     case 'disability':
       icon = <Icons.Disability color={color} />
       break
@@ -46,9 +43,6 @@ const Icon = ({ type, color, ...props }) => {
       break
     case 'retirement':
       icon = <Icons.Retirement color={color} />
-      break
-    case 'share':
-      icon = <Icons.Share color={color} />
       break
     case 'share':
       icon = <Icons.Share color={color} />

@@ -30,7 +30,6 @@ jobs:
           project: '${{ secrets.project }}'
         run: |
           export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
-          #export ENVIRONMENT=${{ github.ref_name }}
           export ENVIRONMENT=dev
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/database-backup.sh

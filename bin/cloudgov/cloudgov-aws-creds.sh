@@ -5,7 +5,7 @@ current_path=$(pwd)
 ## Get current username with no special characters.
 user=$(whoami | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')
 
-[ -z "${bucket_name}" ] && echo "No bucket name!" && help && exit 1
+[ -z "${bucket_name}" ] && echo "No bucket name!" && exit 1
 
 echo "Getting bucket credentials..."
 {

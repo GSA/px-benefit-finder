@@ -32,7 +32,7 @@ const StepIndicator = ({
   const CompletedSR = ({ completed }) => {
     return (
       <span className="usa-sr-only">
-        {completed ? ' completed' : ' not-completed'}
+        {completed ? ' completed' : ' not completed'}
       </span>
     )
   }

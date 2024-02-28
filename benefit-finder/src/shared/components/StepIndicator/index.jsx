@@ -29,10 +29,10 @@ const StepIndicator = ({
    * @param {boolean} noHeadings - determinate to render headings or not
    * @return {html} returns markup for a usa step indicator
    */
-  const CompletedSR = ({ current, index }) => {
+  const CompletedSR = ({ completed }) => {
     return (
       <span className="usa-sr-only">
-        {current < index ? 'not-completed' : 'completed'}
+        {completed ? ' completed' : ' not-completed'}
       </span>
     )
   }
@@ -76,13 +76,10 @@ const StepIndicator = ({
           className="bf-usa-step-indicator__segment-label usa-step-indicator__segment-label"
         >
           {!noHeadings && heading}
-          {current === index && completed !== true ? null : (
-            <CompletedSR
-              key={`step-indicator-sr-${index}`}
-              current={current}
-              index={index}
-            />
-          )}
+          <CompletedSR
+            key={`step-indicator-sr-${index}`}
+            completed={completed}
+          />
         </span>
       </li>
     )

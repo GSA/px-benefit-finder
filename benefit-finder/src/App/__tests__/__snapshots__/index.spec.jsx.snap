@@ -130,6 +130,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <div
+                      aria-hidden="true"
                       aria-live="polite"
                       class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                       role="alert"
@@ -159,6 +160,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <div
+                      aria-hidden="true"
                       aria-live="polite"
                       class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                       role="alert"
@@ -187,6 +189,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <div
+                      aria-hidden="true"
                       aria-live="polite"
                       class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                       role="alert"
@@ -452,6 +455,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -628,6 +632,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -799,6 +804,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -975,6 +981,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1147,6 +1154,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1333,6 +1341,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1514,6 +1523,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1701,6 +1711,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1883,6 +1894,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2064,6 +2076,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2245,6 +2258,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2411,6 +2425,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2593,6 +2608,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2764,6 +2780,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2940,6 +2957,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3116,6 +3134,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3283,6 +3302,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3449,6 +3469,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3625,6 +3646,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3806,6 +3828,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3997,6 +4020,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4173,6 +4197,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4350,6 +4375,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4531,6 +4557,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4722,6 +4749,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4903,6 +4931,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5089,6 +5118,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5270,6 +5300,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5457,6 +5488,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5633,6 +5665,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5809,6 +5842,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -6384,6 +6418,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -6598,6 +6633,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -6807,6 +6843,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7021,6 +7058,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7206,6 +7244,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7405,6 +7444,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7693,6 +7733,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7893,6 +7934,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8088,6 +8130,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8331,6 +8374,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8550,6 +8594,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8729,6 +8774,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8973,6 +9019,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -9182,6 +9229,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -9431,6 +9479,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -9645,6 +9694,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -9837,6 +9887,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10028,6 +10079,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10242,6 +10294,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10472,6 +10525,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10725,6 +10779,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10984,6 +11039,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -11234,6 +11290,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -11522,6 +11579,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -11834,6 +11892,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12028,6 +12087,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12252,6 +12312,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12495,6 +12556,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12744,6 +12806,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12958,6 +13021,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -13172,6 +13236,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"

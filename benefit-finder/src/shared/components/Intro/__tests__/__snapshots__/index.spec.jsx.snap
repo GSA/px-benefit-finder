@@ -116,6 +116,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <div
+                  aria-hidden="true"
                   aria-live="polite"
                   class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                   role="alert"
@@ -145,6 +146,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <div
+                  aria-hidden="true"
                   aria-live="polite"
                   class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                   role="alert"
@@ -173,6 +175,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <div
+                  aria-hidden="true"
                   aria-live="polite"
                   class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                   role="alert"

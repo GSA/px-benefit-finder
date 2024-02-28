@@ -9,8 +9,10 @@ exports[`Chevron > renders a match to the previous snapshot 1`] = `
       class="bf-grid-container grid-container"
     >
       <h1
+        aria-level="1"
         class="bf-chevron-heading font-family-sans"
         id="skip-to-h1"
+        role="heading"
       />
       <div
         class="bf-chevron-description"

@@ -20,8 +20,10 @@ exports[`loads view 1`] = `
           class="bf-grid-container grid-container"
         >
           <h1
+            aria-level="1"
             class="bf-chevron-heading font-family-sans"
             id="skip-to-h1"
+            role="heading"
           >
             Your potential benefits
           </h1>
@@ -48,12 +50,14 @@ exports[`loads view 1`] = `
           >
             Back
           </button>
-          <h3
+          <h2
+            aria-level="2"
             class="bf-result-view-heading font-family-sans"
             id=""
+            role="heading"
           >
             Results
-          </h3>
+          </h2>
           <div
             class="bf-result-view-description"
           >
@@ -81,8 +85,10 @@ exports[`loads view 1`] = `
             class="bf-result-view-unmet"
           >
             <h3
+              aria-level="3"
               class="bf-result-view-unmet-heading font-family-sans"
               id=""
+              role="heading"
             >
               Benefits you did not qualify for
             </h3>
@@ -105,8 +111,10 @@ exports[`loads view 1`] = `
             class="bf-result-view-share-results"
           >
             <h3
+              aria-level="3"
               class="bf-result-view-share-results-heading font-family-sans"
               id=""
+              role="heading"
             >
               Share results
             </h3>
@@ -193,8 +201,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           class="bf-grid-container grid-container"
         >
           <h1
+            aria-level="1"
             class="bf-chevron-heading font-family-sans"
             id="skip-to-h1"
+            role="heading"
           >
             Your potential benefits
           </h1>
@@ -221,12 +231,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           >
             Back
           </button>
-          <h3
+          <h2
+            aria-level="2"
             class="bf-result-view-heading font-family-sans"
             id=""
+            role="heading"
           >
             Results
-          </h3>
+          </h2>
           <div
             class="bf-result-view-description"
           >
@@ -306,8 +318,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Department of Defense (DOD)
                     </h4>
@@ -323,8 +337,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -516,8 +532,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Department of Defense (DOD)
                     </h4>
@@ -533,8 +551,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -726,8 +746,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -743,8 +765,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -931,8 +955,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Department of Defense (DOD)
                     </h4>
@@ -948,8 +974,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -1141,8 +1169,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -1159,8 +1189,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -1322,8 +1354,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -1339,8 +1373,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -1516,8 +1552,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By  Federal Emergency Management Agency (FEMA)
                     </h4>
@@ -1533,8 +1571,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -1801,8 +1841,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -1819,8 +1861,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -1997,8 +2041,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -2015,8 +2061,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -2188,8 +2236,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -2205,8 +2255,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -2427,8 +2479,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -2444,8 +2498,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -2642,8 +2698,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Department of Interior (DOI) - Indian Affairs
                     </h4>
@@ -2659,8 +2717,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -2817,8 +2877,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -2835,8 +2897,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -3057,8 +3121,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -3074,8 +3140,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -3261,8 +3329,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Social Security Administration (SSA)
                     </h4>
@@ -3278,8 +3348,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -3517,8 +3589,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -3534,8 +3608,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -3727,8 +3803,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Department of Justice (DOJ)
                     </h4>
@@ -3745,8 +3823,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -3915,8 +3995,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Department of Justice (DOJ)
                     </h4>
@@ -3932,8 +4014,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -4102,8 +4186,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Department of Defense (DOD)
                     </h4>
@@ -4119,8 +4205,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -4312,8 +4400,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Social Security Administration (SSA)
                     </h4>
@@ -4329,8 +4419,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -4538,8 +4630,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Social Security Administration (SSA)
                     </h4>
@@ -4555,8 +4649,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -4786,8 +4882,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Social Security Administration (SSA)
                     </h4>
@@ -4803,8 +4901,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -5042,8 +5142,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Social Security Administration (SSA)
                     </h4>
@@ -5060,8 +5162,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -5287,8 +5391,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Social Security Administration (SSA)
                     </h4>
@@ -5304,8 +5410,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -5572,8 +5680,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Social Security Administration (SSA)
                     </h4>
@@ -5589,8 +5699,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -5880,8 +5992,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -5897,8 +6011,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -6070,8 +6186,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -6087,8 +6205,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -6290,8 +6410,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -6307,8 +6429,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -6529,8 +6653,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -6547,8 +6673,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -6798,8 +6926,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -6815,8 +6945,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -7008,8 +7140,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 >
                   <div>
                     <h4
+                      aria-level="4"
                       class="bf-usa-detail-title font-family-sans"
                       id=""
+                      role="heading"
                     >
                       By Veterans Affairs Department (VA)
                     </h4>
@@ -7025,8 +7159,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     >
                        
                       <h5
+                        aria-level="5"
                         class="bf-key-eligibility-criteria-heading font-family-sans"
                         id=""
+                        role="heading"
                       >
                         Key eligibility criteria
                         <p
@@ -7166,8 +7302,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             class="bf-result-view-unmet"
           >
             <h3
+              aria-level="3"
               class="bf-result-view-unmet-heading font-family-sans"
               id=""
+              role="heading"
             >
               Benefits you did not qualify for
             </h3>
@@ -7190,8 +7328,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             class="bf-result-view-share-results"
           >
             <h3
+              aria-level="3"
               class="bf-result-view-share-results-heading font-family-sans"
               id=""
+              role="heading"
             >
               Share results
             </h3>

@@ -40,7 +40,7 @@ const VerifySelectionsView = ({
     <div className="bf-verify-criteria-value">
       <div
         className="bf-verify-criteria-legend"
-        key={`criteria-${item.fieldset.criteriaKey}-${index}`}
+        key={`bf-criteria-${item.fieldset.criteriaKey}-${index}`}
       >
         {item.fieldset.legend}
       </div>
@@ -58,10 +58,8 @@ const VerifySelectionsView = ({
    */
   const resultItem = ({ criteriaId, legend, selected }) => {
     return (
-      <div className="bf-verify-criteria-value">
-        <div className="bf-verify-criteria-legend" key={criteriaId}>
-          {legend}
-        </div>
+      <div className="bf-verify-criteria-value" key={criteriaId}>
+        <div className="bf-verify-criteria-legend">{legend}</div>
         {typeof selected?.value === 'object'
           ? `${parseDate(selected.value).toLocaleDateString(
               local,
@@ -131,11 +129,13 @@ const VerifySelectionsView = ({
                   // map all the criteria input legends and values
                   const { section } = item
                   return (
-                    <div className="bf-verify-criteria-section" key={i}>
+                    <div
+                      className="bf-verify-criteria-section"
+                      key={`bf-section-${section.heading}`}
+                    >
                       <Heading
                         className="bf-verify-criteria-section-heading"
                         headingLevel={2}
-                        key={`bf-section-${i}`}
                       >
                         {section.heading}
                       </Heading>
@@ -143,9 +143,17 @@ const VerifySelectionsView = ({
                         {section.fieldsets.map((item, i) => {
                           // if no value then return generic message
                           return apiCalls.GET.SelectedValue(item) ? (
-                            <Items item={item} index={i} />
+                            <Items
+                              item={item}
+                              index={i}
+                              key={`bf-criteria-item-${i}`}
+                            />
                           ) : (
-                            <NoInputGiven item={item} index={i} />
+                            <NoInputGiven
+                              item={item}
+                              index={i}
+                              key={`bf-criteria-item-${i}`}
+                            />
                           )
                         })}
                       </div>

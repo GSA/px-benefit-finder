@@ -12,8 +12,10 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         class="bf-grid-container grid-container"
       >
         <h1
+          aria-level="1"
           class="bf-chevron-heading font-family-sans"
           id="skip-to-h1"
+          role="heading"
         >
           Benefit finder: death of a loved one
         </h1>
@@ -36,8 +38,10 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
       class="bf-grid-container grid-container"
     >
       <h2
+        aria-level="2"
         class="font-family-sans"
         id=""
+        role="heading"
       >
         Steps
       </h2>
@@ -95,8 +99,10 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
           class="bf-intro-process-notices"
         >
           <h2
+            aria-level="2"
             class="bf-intro-process-notices-heading font-family-sans"
             id=""
+            role="heading"
           >
             Before you start:
           </h2>

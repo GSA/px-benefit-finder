@@ -8,7 +8,6 @@ exports[`Select > renders a match to the previous snapshot 1`] = `
     Dropdown Label
   </label>
   <select
-    aria-invalid="false"
     class="bf-usa-select usa-select "
   >
     <option

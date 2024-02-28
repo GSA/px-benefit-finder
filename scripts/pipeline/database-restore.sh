@@ -62,7 +62,9 @@ echo "Cleaning up old connections..."
 rm -rf restore.txt ~/.mysql backup_${ENVIRONMENT}.sql
 
 while read command; do
-  if [[ ! "${read}" =~ "^#" ]] && [[-n "${read}" ]]; then
+
+  ## Don't send comments or empty lines.
+  if [[ ! "${read}" =~ "^#" ]] && [[ -n "${read}" ]]; then
     $(pwd $(dirname $0))/scripts/cloud-gov-remote-command.sh "${project}-cms-${ENVIRONMENT}" "${command}"
   fi
 done < $(pwd $(dirname $0))/scripts/drush-post-deploy.sh

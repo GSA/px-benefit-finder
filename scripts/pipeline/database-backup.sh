@@ -78,6 +78,7 @@ echo "Backing up structure for '${ENVIRONMENT}' database..."
     --port=${port} \
     --protocol=TCP \
     --no-data \
+    --skip-extended-insert \
     ${dbname} > backup_${ENVIRONMENT}.sql
 } >/dev/null 2>&1
 
@@ -91,6 +92,7 @@ echo "Backing up data for '${ENVIRONMENT}' database..."
     --protocol=TCP \
     --no-create-info \
     --skip-triggers \
+    --skip-extended-insert \
     ${ignored_tables_string} \
     ${dbname} >> backup_${ENVIRONMENT}.sql
 

@@ -110,7 +110,8 @@
       "benefitSummaryConjunction": "de",
       "unmetLabel": "No cumplió con",
       "additionalDescription": "Puede haber requisitos adicionales. Visite el enlace abajo para más información y para aplicar.",
-      "visitLabel": "Visita"
+      "visitLabel": "Visita",
+      "sourceIsEnglish": "(en inglés)"
     },
     "notEligibleResults": {
       "heading": "Beneficios a los que no calificó",

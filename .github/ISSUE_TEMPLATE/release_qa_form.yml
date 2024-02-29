@@ -1,5 +1,5 @@
 ---
-name: Task
+name: Release QA
 description: Use this form to create a new release QA task(s)
 labels: ["QA"]
 body:

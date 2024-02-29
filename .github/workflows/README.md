@@ -9,3 +9,4 @@
 7. snyk-security: This workflow does snyk scanning.
 8. test-frontend: This workflow runs the front end tests.
 9. dependabot: This workflow checks for dependencies and opens PRs to the latest versions.
+10. test

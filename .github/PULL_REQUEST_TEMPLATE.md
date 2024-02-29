@@ -1,6 +1,3 @@
----
-title: '[ISSUE] <title>'
----
 ## PR Summary
 
 <!--- Include a summary of the change, relevant motivation, and context. -->

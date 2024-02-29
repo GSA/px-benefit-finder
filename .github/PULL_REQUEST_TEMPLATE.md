@@ -1,10 +1,14 @@
+---
+title: '[ISSUE] <title>'
+---
 ## PR Summary
 
 <!--- Include a summary of the change, relevant motivation, and context. -->
 
 ## Related Github Issue
 
-- fixes #(issue)
+<!--- Include "Fixes: #(issue) only if this work does not go upstream to the parent site". -->
+- #(issue)
 
 ## Detailed Testing steps
 

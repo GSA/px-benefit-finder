@@ -4,8 +4,7 @@
 
 ## Related Github Issue
 
-<!--- Include "Fixes: #(issue) only if this work does not go upstream to the parent site". -->
-- #(issue)
+- Fixes #(issue)
 
 ## Detailed Testing steps
 

@@ -1,5 +1,5 @@
 import { useHandleClassName } from '../../hooks'
-import { Carrot } from '../index'
+import { Icon } from '../index'
 import PropTypes from 'prop-types'
 import './_index.scss'
 
@@ -37,7 +37,8 @@ const ObfuscatedLink = ({
       ]
     : ['bf-usa-button', 'usa-button', 'bf-obfuscated-link']
 
-  const handleCarrot = noCarrot === true ? null : <Carrot color="white" />
+  const handleCarrot =
+    noCarrot === true ? null : <Icon type="carrot-small" color="white" />
 
   return (
     <a

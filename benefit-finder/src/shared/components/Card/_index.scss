@@ -26,6 +26,23 @@
     border: 2px solid color.$pop-blue;
   }
 
+  &.bf-card-icon {
+    .bf-relative-icon svg {
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: space.$space-md;
+      width: 70px;
+      height: 70px;
+      padding: space.$space-sm-plus;
+    }
+
+    .bf-usa-card__container {
+      padding: 0 space.$space-lg-plus 0 space.$space-xl-plus;
+    }
+  }
+
   .bf-usa-card__header {
     padding-bottom: 0;
   }

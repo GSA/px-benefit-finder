@@ -61,7 +61,7 @@ function Select({
         onChange={onChange}
         value={selected || ''}
         required={required === 'TRUE'}
-        aria-invalid={invalid === true}
+        aria-invalid={invalid}
       >
         <option value="" key="default" disabled>
           {defaultValue}

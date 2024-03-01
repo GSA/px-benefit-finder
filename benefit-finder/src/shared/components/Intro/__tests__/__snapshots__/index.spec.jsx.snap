@@ -12,8 +12,10 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         class="bf-grid-container grid-container"
       >
         <h1
+          aria-level="1"
           class="bf-chevron-heading font-family-sans"
           id="skip-to-h1"
+          role="heading"
         >
           Benefit finder: death of a loved one
         </h1>
@@ -36,15 +38,17 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
       class="bf-grid-container grid-container"
     >
       <h2
+        aria-level="2"
         class="font-family-sans"
         id=""
+        role="heading"
       >
         Steps
       </h2>
       <div
         class="time-indicator"
       >
-        Time to complete 2-5 minutes
+        Estimated time 2-5 minutes
       </div>
       <div
         class="bf-intro-process-group"
@@ -70,7 +74,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
               <h3
                 class="bf-usa-process-list__heading usa-process-list__heading"
               >
-                Review Results
+                Review results
               </h3>
             </li>
             <li
@@ -95,8 +99,10 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
           class="bf-intro-process-notices"
         >
           <h2
+            aria-level="2"
             class="bf-intro-process-notices-heading font-family-sans"
             id=""
+            role="heading"
           >
             Before you start:
           </h2>
@@ -107,7 +113,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
               class="notices-list add-list-reset"
             >
               <li
-                class="notice"
+                class="bf-notice"
               >
                 <div
                   aria-live="polite"
@@ -122,14 +128,13 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                       class="bf-usa-alert__text usa-alert__text"
                     >
                       <div
-                        class="notice-item"
+                        class="bf-notice-item"
                       >
                         <div>
-                          Your information
                           <strong>
-                             is not
+                            This is not an application.
                           </strong>
-                           shared, saved, or submitted.
+                           This tool will help you find possible benefits.
                         </div>
                       </div>
                     </div>
@@ -137,7 +142,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 </div>
               </li>
               <li
-                class="notice"
+                class="bf-notice"
               >
                 <div
                   aria-live="polite"
@@ -152,16 +157,20 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                       class="bf-usa-alert__text usa-alert__text"
                     >
                       <div
-                        class="notice-item"
+                        class="bf-notice-item"
                       >
-                        Provide complete info to get more relevant results.
+                        Your answers 
+                        <strong>
+                          are not
+                        </strong>
+                         saved or submitted.
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li
-                class="notice"
+                class="bf-notice"
               >
                 <div
                   aria-live="polite"
@@ -176,13 +185,13 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                       class="bf-usa-alert__text usa-alert__text"
                     >
                       <div
-                        class="notice-item"
+                        class="bf-notice-item"
                       >
                         <div>
                           <strong>
-                            This form is not an application.
+                            Answer more questions
                           </strong>
-                           You will need to apply for benefits with each agency.
+                           to get better results.
                         </div>
                       </div>
                     </div>

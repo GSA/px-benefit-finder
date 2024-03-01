@@ -20,21 +20,27 @@ exports[`Accordion > renders a match to the previous snapshot 1`] = `
         <span
           class="bf-accordion-sub-heading"
         />
-        <svg
-          height="24"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          alt="a plus icon"
+          aria-hidden="true"
         >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-          />
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-            fill="#1a4480"
-          />
-        </svg>
+          <svg
+            class="bf-open"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+              fill="#1a4480"
+            />
+          </svg>
+        </i>
       </button>
     </h4>
     <div

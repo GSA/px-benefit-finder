@@ -9,6 +9,7 @@ const content = `{
       "relevantBenefits": [
         {
           "lifeEvent": {
+            "lifeEventId": "retirement",
             "title": "Benefit finder: retirement",
             "body": "<p>Find out what financial, health care, and other benefits may be available as you enter this next phase of your life.</p>",
             "link": "/benefit-finder/life_event/retirement",
@@ -17,6 +18,7 @@ const content = `{
         },
         {
           "lifeEvent": {
+            "lifeEventId": "disability",
             "title": "Benefit finder: disability",
             "body": "<p>Whether you are newly disabled or have a lifelong challenge, assistance may be available, including financial help.</p>",
             "link": "/benefit-finder/life_event/disability",

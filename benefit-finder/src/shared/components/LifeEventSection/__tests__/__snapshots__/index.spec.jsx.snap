@@ -3,10 +3,12 @@
 exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <h1
+    aria-level="1"
     class="bf-section-heading font-family-sans"
     id="skip-to-h1"
+    role="heading"
   >
-    Complete Questions
+    Answer these questions
   </h1>
   <div
     class="bf-section-wrapper"
@@ -73,18 +75,20 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             <h4
               class="bf-usa-alert__heading usa-alert__heading"
             >
-              Error status
+              Error
             </h4>
             <p
               class="bf-usa-alert__text usa-alert__text"
             >
-              All fields marked required must be completed.
+              Complete all required fields.
             </p>
           </div>
         </div>
         <h2
+          aria-level="2"
           class="bf-usa-section-heading font-family-sans"
           id=""
+          role="heading"
         >
           About the applicant
         </h2>
@@ -104,7 +108,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
             >
-              (Required)
+              (required)
             </span>
           </legend>
           <div>
@@ -269,7 +273,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
             >
-              (Required)
+              (required)
             </span>
           </legend>
           <div>
@@ -290,7 +294,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 disabled=""
                 value=""
               >
-                Click to Select
+                Click to select
               </option>
               <option
                 value="Spouse"
@@ -331,7 +335,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
             >
-              (Required)
+              (required)
             </span>
           </legend>
           <div>
@@ -352,7 +356,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 disabled=""
                 value=""
               >
-                Click to Select
+                Click to select
               </option>
               <option
                 value="Married"
@@ -386,7 +390,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Are you a U.S. citizen or eligible non-citizen?
           </legend>
           <div
-            aria-invalid="0"
+            aria-invalid="false"
             class="radio-group"
           >
             <div
@@ -434,7 +438,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Are you caring for a child of the deceased who is disabled or under the age of 16?
           </legend>
           <div
-            aria-invalid="0"
+            aria-invalid="false"
             class="radio-group"
           >
             <div
@@ -482,7 +486,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Did you pay for funeral or burial expenses?
           </legend>
           <div
-            aria-invalid="0"
+            aria-invalid="false"
             class="radio-group"
           >
             <div

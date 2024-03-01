@@ -91,7 +91,7 @@ const ResultsView = ({
               {stepBackLink}
             </Button>
           )}
-          <Heading className="bf-result-view-heading" headingLevel={3}>
+          <Heading className="bf-result-view-heading" headingLevel={2}>
             {notQualifiedView ? notQualified.heading : qualified.heading}
           </Heading>
           <div
@@ -147,7 +147,7 @@ const ResultsView = ({
               {relevantBenefits && (
                 <RelativeBenefitList
                   data={relevantBenefits}
-                  carrotType={2}
+                  carrotType="carrot-big"
                 ></RelativeBenefitList>
               )}
             </div>

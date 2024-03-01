@@ -21,6 +21,7 @@ const Alert = ({
   heading,
   description,
   error,
+  hasError,
   noBackground,
   tabIndex,
 }) => {
@@ -46,8 +47,8 @@ const Alert = ({
       role="alert"
       ref={alertFieldRef}
       tabIndex={tabIndex || 0}
-      aria-live="polite"
-      aria-hidden={error}
+      aria-live={hasError === true ? 'assertive' : 'polite'}
+      aria-hidden={!hasError}
     >
       {children ? (
         <div className="bf-usa-alert__body usa-alert__body">

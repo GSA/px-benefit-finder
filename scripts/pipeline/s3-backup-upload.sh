@@ -10,7 +10,7 @@ echo "Getting backup bucket credentials..."
   cf target -s "${space}"
 
   export service="${backup_bucket}"
-  export service_key="${service}-pipeline-key"
+  export service_key="${service}-pipeline-upload-${ENVIRONMENT}-key"
   cf delete-service-key "${service}" "${service_key}" -f
   cf create-service-key "${service}" "${service_key}"
   sleep 2

@@ -43,6 +43,23 @@ echo "Restoring database to '${ENVIRONMENT}'..."
   chmod 400 ~/.mysql/mysql.cnf
 } >/dev/null 2>&1
 
+  ## Drop (delete) current database.
+  mysql 
+  --defaults-extra-file=~/.mysql/mysql.cnf \
+  --host=${host} \
+  --port=${port} \
+  --protocol=TCP \
+  --execute="DROP DATABASE IF EXISTS ${dbname};"
+  
+  ## Create a new empty database.
+  mysql 
+  --defaults-extra-file=~/.mysql/mysql.cnf \
+  --host=${host} \
+  --port=${port} \
+  --protocol=TCP \
+  --execute="CREATE DATABASE IF NOT EXISTS ${dbname};"
+
+  ## Import data from the backup.
   mysql \
   --defaults-extra-file=~/.mysql/mysql.cnf \
   --host=${host} \
@@ -62,9 +79,8 @@ echo "Cleaning up old connections..."
 rm -rf restore.txt ~/.mysql backup_${ENVIRONMENT}.sql
 
 while read command; do
-
-  ## Don't send comments or empty lines.
-  if [[ ! "${read}" =~ "^#" ]] && [[ -n "${read}" ]]; then
-    $(pwd $(dirname $0))/scripts/cloud-gov-remote-command.sh "${project}-cms-${ENVIRONMENT}" "${command}"
+  ## Don't send comments, empty lines, or echos.
+  if [[ ! "${command}" =~ "^#" ]] && [[ -n "${command}" ]] && [[ ! "${command}" =~ "^echo"  ]]; then
+    source ./scripts/pipeline/cloud-gov-remote-command.sh "${project}-cms-${ENVIRONMENT}" "${command}"
   fi
-done < $(pwd $(dirname $0))/scripts/drush-post-deploy.sh
+done < ./scripts/drush-post-deploy.sh

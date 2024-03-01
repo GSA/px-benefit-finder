@@ -35,3 +35,4 @@ jobs:
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/s3-backup-download.sh
           source ./scripts/pipeline/database-restore.sh
+          source ./scripts/pipeline/s3-backup-post-restore.sh

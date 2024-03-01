@@ -4,7 +4,7 @@
 
 ## Related Github Issue
 
-- fixes #(issue)
+- Fixes #(issue)
 
 ## Detailed Testing steps
 

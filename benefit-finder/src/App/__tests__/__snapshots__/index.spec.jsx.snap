@@ -130,6 +130,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <div
+                      aria-hidden="true"
                       aria-live="polite"
                       class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                       role="alert"
@@ -159,6 +160,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <div
+                      aria-hidden="true"
                       aria-live="polite"
                       class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                       role="alert"
@@ -187,6 +189,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <div
+                      aria-hidden="true"
                       aria-live="polite"
                       class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
                       role="alert"
@@ -452,6 +455,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -476,6 +480,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Department of Defense (DOD)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -628,6 +633,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -652,6 +658,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Department of Defense (DOD)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -799,6 +806,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -823,6 +831,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -975,6 +984,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -999,6 +1009,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Department of Defense (DOD)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -1147,6 +1158,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1171,6 +1183,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -1333,6 +1346,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1357,6 +1371,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -1514,6 +1529,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1538,6 +1554,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                          Federal Emergency Management Agency (FEMA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -1701,6 +1718,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1725,6 +1743,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -1883,6 +1902,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -1907,6 +1927,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -2064,6 +2085,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2088,6 +2110,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -2245,6 +2268,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2269,6 +2293,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -2411,6 +2436,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2435,6 +2461,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Department of Interior (DOI) - Indian Affairs
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -2593,6 +2620,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2617,6 +2645,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -2764,6 +2793,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2788,6 +2818,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -2940,6 +2971,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -2964,6 +2996,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -3116,6 +3149,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3140,6 +3174,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -3283,6 +3318,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3307,6 +3343,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Department of Justice (DOJ)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -3449,6 +3486,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3473,6 +3511,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Department of Justice (DOJ)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -3625,6 +3664,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3649,6 +3689,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Department of Defense (DOD)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -3806,6 +3847,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -3830,6 +3872,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -3997,6 +4040,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4021,6 +4065,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -4173,6 +4218,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4197,6 +4243,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -4350,6 +4397,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4374,6 +4422,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -4531,6 +4580,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4555,6 +4605,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -4722,6 +4773,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4746,6 +4798,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -4903,6 +4956,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -4927,6 +4981,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -5089,6 +5144,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5113,6 +5169,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -5270,6 +5327,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5294,6 +5352,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -5457,6 +5516,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5481,6 +5541,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -5633,6 +5694,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5657,6 +5719,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -5809,6 +5872,7 @@ exports[`loads window query scenario 1 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -5833,6 +5897,7 @@ exports[`loads window query scenario 1 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -6384,6 +6449,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -6408,6 +6474,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Department of Defense (DOD)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -6598,6 +6665,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -6622,6 +6690,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Department of Defense (DOD)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -6807,6 +6876,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -6831,6 +6901,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -7021,6 +7092,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7045,6 +7117,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Department of Defense (DOD)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -7206,6 +7279,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7230,6 +7304,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -7405,6 +7480,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7429,6 +7505,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -7693,6 +7770,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7717,6 +7795,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                          Federal Emergency Management Agency (FEMA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -7893,6 +7972,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -7917,6 +7997,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -8088,6 +8169,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8112,6 +8194,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -8331,6 +8414,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8355,6 +8439,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -8550,6 +8635,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8574,6 +8660,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -8729,6 +8816,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8753,6 +8841,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Department of Interior (DOI) - Indian Affairs
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -8973,6 +9062,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -8997,6 +9087,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -9182,6 +9273,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -9206,6 +9298,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -9431,6 +9524,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -9455,6 +9549,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -9645,6 +9740,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -9669,6 +9765,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -9837,6 +9934,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -9861,6 +9959,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Department of Justice (DOJ)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -10028,6 +10127,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10052,6 +10152,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Department of Justice (DOJ)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -10242,6 +10343,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10266,6 +10368,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Department of Defense (DOD)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -10472,6 +10575,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10496,6 +10600,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -10725,6 +10830,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -10749,6 +10855,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -10984,6 +11091,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -11008,6 +11116,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -11234,6 +11343,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -11258,6 +11368,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -11522,6 +11633,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -11546,6 +11658,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -11834,6 +11947,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -11858,6 +11972,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Social Security Administration (SSA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -12028,6 +12143,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12052,6 +12168,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -12252,6 +12369,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12276,6 +12394,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -12495,6 +12614,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12519,6 +12639,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -12744,6 +12865,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12768,6 +12890,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -12958,6 +13081,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -12982,6 +13106,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >
@@ -13172,6 +13297,7 @@ exports[`loads window query scenario 2 1`] = `
                         </ul>
                       </div>
                       <div
+                        aria-hidden="true"
                         aria-live="polite"
                         class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
@@ -13196,6 +13322,7 @@ exports[`loads window query scenario 2 1`] = `
                         Visit
                          
                         Veterans Affairs Department (VA)
+                         
                         <i
                           aria-hidden="true"
                         >

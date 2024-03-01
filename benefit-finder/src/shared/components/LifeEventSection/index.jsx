@@ -287,6 +287,7 @@ const LifeEventSection = ({
                   heading={ui.alertBanner.heading}
                   description={ui.alertBanner.description}
                   error
+                  hasError={hasError.length > 0}
                 ></Alert>
                 <Heading className="bf-usa-section-heading" headingLevel={2}>
                   {currentData.section.heading}

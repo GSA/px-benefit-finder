@@ -10,7 +10,7 @@ describe('Validate user can navigate each path of mobile menu and breadcrumb dis
   context('Validate English menus and breadcrumb', () => {
     it('Should navigate to Benefit Finder page', () => {
       pageObjects.menuButton().click()
-      pageObjects.mobileMenu().contains('Death of a loved one').click()
+      pageObjects.mobileMenu().contains('Benefit finder').click()
       pageObjects
         .breadCrumbList()
         .should('contain', 'Home')

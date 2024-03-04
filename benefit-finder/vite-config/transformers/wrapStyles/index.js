@@ -1,7 +1,8 @@
 import { writeFileSync } from 'fs'
 
 export default function wrapStyles(options) {
-  const { id } = options
+  const { id, customGroup } = options
+  let trimmedCSS
 
   return {
     name: 'wrap-css',
@@ -13,10 +14,31 @@ export default function wrapStyles(options) {
             const cssContent = bundle[fileName].source
 
             // Remove charset
-            const trimmedCSS = cssContent.replace(/^@charset "UTF-8";/, '')
+            trimmedCSS = cssContent.replace(/^@charset "UTF-8";/, '')
+            // Capture modal ID selectors
+            // because our modal appends to the DOM outside of our #ID,
+            // we need to ensure it doesn't get wrapped during the build
+            // regex patterns
+            const customGroupIDPattern = `(${customGroup})`
+            const customGroupPattern = `${customGroupIDPattern}.*?(})`
+            const customGroupRegExp = new RegExp(customGroupPattern, 'g')
+            const customGroupIDRegExp = new RegExp(customGroupIDPattern, 'g')
+            // find matches for selectors
+            const customGroupMatch = trimmedCSS.match(customGroupRegExp)
+            // remove matches from bundle
+            trimmedCSS = trimmedCSS.replace(customGroupMatch.join(''), '')
+
+            // trim custom group styles so we can wrap later
+            const customGroupStyles =
+              customGroupMatch &&
+              customGroupMatch
+                .map(selector => {
+                  return selector.replace(customGroupIDRegExp, '')
+                })
+                .join('')
 
             // Wrap the CSS content with the provided ID and charset
-            const wrappedCssContent = `@charset "UTF-8"; #${id} { ${trimmedCSS} }`
+            const wrappedCssContent = `@charset "UTF-8"; #${id} {${trimmedCSS}} ${customGroup} {${customGroupStyles}}`
 
             // Write the wrapped CSS content back to the file
             try {

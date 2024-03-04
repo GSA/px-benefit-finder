@@ -14,6 +14,7 @@ const RelativeBenefitList = ({ data, carrotType }) => {
       {data &&
         data.map((item, i) => {
           const { title, link, cta, body, lifeEventId } = item.lifeEvent
+          const trimedLifeEventId = lifeEventId.replace('es_', '')
 
           return (
             <Card
@@ -24,7 +25,7 @@ const RelativeBenefitList = ({ data, carrotType }) => {
               body={body}
               key={`${title}-${i}`}
               carrotType={carrotType}
-              icon={lifeEventId}
+              icon={trimedLifeEventId}
             />
           )
         })}

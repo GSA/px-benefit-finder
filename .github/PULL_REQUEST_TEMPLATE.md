@@ -8,8 +8,8 @@
 
 ## Detailed Testing steps
 
-<!--- Link to testing steps in the issue or list them here -->
-
-- [ ] Testing step 1
-- [ ] Testing step 2
+<!--- If there are steps for local setup list them here -->
+- [ ] Setup step 1
 - [ ] etc...
+
+<!--- If there are steps for user testing list them here -->

@@ -64,6 +64,7 @@ export default defineConfig({
         plugins: [
           transformers.wrapStyles({
             id: 'benefit-finder',
+            customGroup: '#benefit-finder-modal',
           }),
         ],
       },

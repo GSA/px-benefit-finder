@@ -44,7 +44,7 @@ echo "Restoring database to '${ENVIRONMENT}'..."
 } >/dev/null 2>&1
 
   ## Drop (delete) current database.
-  mysql 
+  mysql \
   --defaults-extra-file=~/.mysql/mysql.cnf \
   --host=${host} \
   --port=${port} \
@@ -52,7 +52,7 @@ echo "Restoring database to '${ENVIRONMENT}'..."
   --execute="DROP DATABASE IF EXISTS ${dbname};"
   
   ## Create a new empty database.
-  mysql 
+  mysql \
   --defaults-extra-file=~/.mysql/mysql.cnf \
   --host=${host} \
   --port=${port} \

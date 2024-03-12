@@ -4,7 +4,7 @@ import { pageObjects } from '../../support/pageObjects'
 
 describe('Validate user can navigate each path of mobile menu and breadcrumb displays correctly', () => {
   beforeEach(() => {
-    cy.visit(Cypress.env('prodBaseUrl') + '/benefit-finder')
+    cy.visit('/benefit-finder')
   })
 
   context('Validate English menus and breadcrumb', () => {

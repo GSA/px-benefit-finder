@@ -4,7 +4,7 @@ import { pageObjects } from '../../support/pageObjects'
 
 describe('Validate benefit-finder card on benefits page', () => {
   it('Should navigate to Benefit finder when clicking on Benefit finder card', () => {
-    cy.visit(Cypress.env('prodBaseUrl') + '/benefits')
+    cy.visit('/benefits')
     pageObjects.cardGroup().contains('Benefit finder').click()
     pageObjects
       .breadCrumbList()

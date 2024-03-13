@@ -32,7 +32,6 @@ jobs:
           config-file: cypress.prod.config.js
           component: true
           working-directory: benefit-finder
-          build: "npm run cy:build:storybook"
           start: "npm run cy:run:prod:e2e"
 
       - uses: actions/upload-artifact@v3

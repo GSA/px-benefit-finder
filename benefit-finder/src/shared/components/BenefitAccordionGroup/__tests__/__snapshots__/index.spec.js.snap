@@ -1,7 +1,0 @@
-// Jest shot v1, https://goo.gl/fbAQLP
-
-exports[`BenefitAccordionGroup renders a match to the previous shot 1`] = `
-<div
-  className="bf-usa-accordion-group"
-/>
-`;

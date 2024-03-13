@@ -1,4 +1,4 @@
-name: Database nightly backup (main)
+name: Database backup (main)
 
 on:
   push:
@@ -14,22 +14,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install basic dependancies
-        run: ./bin/cloudgov/deb-basic.deps.sh
+        run: ./scripts/pipeline/deb-basic.deps.sh
       - name: Install AWSCLI
-        run: ./bin/cloudgov/awscli-install.sh
+        run: ./scripts/pipeline/awscli-install.sh
       - name: Install MySQL Client
-        run: ./bin/cloudgov/deb-mysql-client-install.sh
+        run: ./scripts/pipeline/deb-mysql-client-install.sh
       - name: Install Cloudfoundry CLI
-        run: ./bin/cloudgov/deb-cf-install.sh
+        run: ./scripts/pipeline/deb-cf-install.sh
       - name: Backup main database
         shell: bash
         env:
           CF_USER: '${{ secrets.CF_USER }}'
           CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
           CF_ORG: '${{ secrets.CF_ORG }}'
+          project: '${{ secrets.project }}'
         run: |
-          export TIMESTAMP=$(date --utc +%FT%TZ)
-          export BACKUP_ENV=main
-          source ./bin/cloudgov/cloud-gov-login.sh
-          source ./bin/cloudgov/downsync-backup.sh
-          source ./bin/cloudgov/upload-backup.sh
+          export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
+          export ENVIRONMENT=main
+          source ./scripts/pipeline/cloud-gov-login.sh
+          source ./scripts/pipeline/database-backup.sh
+          source ./scripts/pipeline/s3-backup-upload.sh

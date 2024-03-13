@@ -30,11 +30,15 @@ const copyConfig = test
     }
 
 const poscssConfig = {
-  plugins: process.env.NODE_ENV === 'production' ? [] : [
-    transformers.prependID({
-      id: 'benefit-finder'
-    }),
-  ]
+  plugins:
+    process.env.NODE_ENV === 'production'
+      ? []
+      : [
+          transformers.prependID({
+            id: 'benefit-finder',
+            ignoreID: '#benefit-finder-modal',
+          }),
+        ],
 }
 
 const server = test ? testServer : devServer
@@ -42,11 +46,7 @@ const server = test ? testServer : devServer
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [
-    react(),
-    eslint(),
-    copy(copyConfig),
-  ],
+  plugins: [react(), eslint(), copy(copyConfig)],
   css: {
     postcss: poscssConfig,
   },
@@ -55,7 +55,7 @@ export default defineConfig({
   build: {
     emptyOutDir: true,
     outDir: 'build',
-    sourcemap: true,
+    chunkSizeWarningLimit: '1000',
     rollupOptions: {
       output: {
         manualChunks: {},
@@ -63,10 +63,11 @@ export default defineConfig({
         assetFileNames: `assets/benefit-finder.min.[ext]`,
         plugins: [
           transformers.wrapStyles({
-          id: 'benefit-finder'
-        })        
-      ],
-      }
+            id: 'benefit-finder',
+            customGroup: '#benefit-finder-modal',
+          }),
+        ],
+      },
     },
   },
 })

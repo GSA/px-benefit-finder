@@ -162,7 +162,7 @@ locals {
         }
 
         ## Maximum amount of memory the application can use.
-        memory = 128
+        memory = 96
 
         ## Addional network policies to add to the application.
         ## Format: name of the application and the port it is listening on.

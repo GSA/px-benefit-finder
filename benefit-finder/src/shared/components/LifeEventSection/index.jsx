@@ -287,6 +287,7 @@ const LifeEventSection = ({
                   heading={ui.alertBanner.heading}
                   description={ui.alertBanner.description}
                   error
+                  hasError={hasError.length > 0}
                 ></Alert>
                 <Heading className="bf-usa-section-heading" headingLevel={2}>
                   {currentData.section.heading}
@@ -342,7 +343,7 @@ const LifeEventSection = ({
                                     )
                                   }
                                   invalid={
-                                    hasError.length &&
+                                    hasError.length > 0 &&
                                     hasError
                                       .map(item => item.id.includes(fieldSetId))
                                       .includes(true)
@@ -385,7 +386,7 @@ const LifeEventSection = ({
                                 className="radio-group"
                                 key={fieldSetId}
                                 aria-invalid={
-                                  hasError.length &&
+                                  hasError.length > 0 &&
                                   hasError
                                     .map(item => item.id.includes(fieldSetId))
                                     .includes(true)

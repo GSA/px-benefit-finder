@@ -21,6 +21,8 @@ const Heading = ({ children, className, headingLevel, ...props }) => {
       className={useHandleClassName({ className, defaultClasses })}
       id={headingLevel === 1 ? 'skip-to-h1' : ''}
       {...props}
+      aria-level={headingLevel}
+      role="heading"
     >
       {children}
     </Tag>

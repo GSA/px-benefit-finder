@@ -33,6 +33,7 @@ const BenefitAccordionGroup = ({
     visitLabel,
     unmetLabel,
     additionalDescription,
+    sourceIsEnglish,
   } = benefitAccordion
   const { closedState, openState } = benefitAccordionGroup
   /**
@@ -125,8 +126,14 @@ const BenefitAccordionGroup = ({
       <ExpandAll />
       {data &&
         data.map((item, index) => {
-          const { agency, eligibility, SourceLink, summary, title } =
-            item[entryKey]
+          const {
+            agency,
+            eligibility,
+            SourceLink,
+            summary,
+            title,
+            SourceIsEnglish,
+          } = item[entryKey]
           // filter to get benefit criteria matches
           const eligibleBenefits = eligibility.filter(
             item => item.isEligible === true
@@ -206,7 +213,10 @@ const BenefitAccordionGroup = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {visitLabel} {agency.title}
+                {visitLabel} {agency.title}{' '}
+                {sourceIsEnglish && SourceIsEnglish === 'TRUE'
+                  ? sourceIsEnglish
+                  : ''}
               </ObfuscatedLink>
             </Accordion>
           )

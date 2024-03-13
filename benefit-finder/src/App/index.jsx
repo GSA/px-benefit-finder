@@ -1,6 +1,8 @@
 import { useState, createContext, useEffect } from 'react'
+import { version } from '../../package.json'
 import { useResetElement } from '../shared/hooks'
 import * as apiCalls from '../shared/api/apiCalls'
+import { axeTester } from '../shared/utils'
 import {
   Intro,
   LifeEventSection,
@@ -92,6 +94,12 @@ function App({ testAppContent, testQuery }) {
     }
   }, [windowQuery, hasQueryParams, stepDataArray])
 
+  // run axe tester in dev
+  if (process.env.NODE_ENV === 'development') {
+    // errors will display in the developer tools console
+    content && axeTester()
+  }
+
   return (
     content && (
       <LanguageContext.Provider value={t}>
@@ -101,6 +109,7 @@ function App({ testAppContent, testQuery }) {
             step !== 0 && viewResults !== true ? 'form' : ''
           }`}
           data-testid="app"
+          data-version={version}
         >
           {step === 0 ? (
             <Intro

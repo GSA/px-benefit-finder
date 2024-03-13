@@ -1,0 +1,59 @@
+---
+name: Release QA
+description: Use this form to create a new release QA task(s)
+labels: ["QA"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Introduction
+
+  - type: markdown
+    attributes:
+      value: >
+        Release QA tasks are associated with and/or make reference to
+        work that is "Ready for Deployment".
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Required fields
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options:
+        - a11y
+        - design
+        - data
+        - ux
+        - product owner
+        - development
+        - other
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related Issue(s)
+      description: "What issues are related to this QA effort"
+      value: >
+        New issues that arise from this task should be created using the [Bug Report form](https://github.com/GSA/px-benefit-finder/issues/new?assignees=&labels=bug&projects=&template=bug_report_form.yml).
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Optional fields
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Include any additional context if needed"
+    validations:
+      required: false

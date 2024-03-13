@@ -1,0 +1,38 @@
+name: Database restore
+
+on:
+  workflow_dispatch:
+    inputs:
+      database_file_override:
+        description: 'Path on S3 bucket to a specific database file to restore.'
+        required: false
+
+
+jobs:
+  restore-database:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install basic dependancies
+        run: ./scripts/pipeline/deb-basic.deps.sh
+      - name: Install AWSCLI
+        run: ./scripts/pipeline/awscli-install.sh
+      - name: Install MySQL Client
+        run: ./scripts/pipeline/deb-mysql-client-install.sh
+      - name: Install Cloudfoundry CLI
+        run: ./scripts/pipeline/deb-cf-install.sh
+      - name: Restore database
+        shell: bash
+        env:
+          CF_USER: '${{ secrets.CF_USER }}'
+          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
+          CF_ORG: '${{ secrets.CF_ORG }}'
+          project: '${{ secrets.project }}'
+        run: |
+          export ENVIRONMENT='${{ github.ref_name }}'
+          export S3_FILE_PATH=${{ github.event.inputs.database_file_override }}
+          source ./scripts/pipeline/cloud-gov-login.sh
+          source ./scripts/pipeline/s3-backup-download.sh
+          source ./scripts/pipeline/database-restore.sh
+          source ./scripts/pipeline/s3-backup-post-restore.sh

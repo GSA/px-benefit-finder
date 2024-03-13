@@ -12,8 +12,10 @@ exports[`Card > renders a match to the previous snapshot 1`] = `
         class="bf-usa-card__header usa-card__header"
       >
         <h3
+          aria-level="3"
           class="bf-usa-card__heading usa-card__heading font-family-sans"
           id=""
+          role="heading"
         />
       </div>
       <div

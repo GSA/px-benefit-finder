@@ -18,28 +18,34 @@ const Icon = ({ type, color, ...props }) => {
       icon = <Icons.CarrotSmall color={color} />
       break
     case 'carrot-big':
-      icon = <Icons.CarrotBig />
+      icon = <Icons.CarrotBig color={color} />
       break
     case 'death':
-      icon = <Icons.Death />
+      icon = <Icons.Death color={color} />
+      break
+    case 'email':
+      icon = <Icons.Email color={color} />
       break
     case 'disability':
-      icon = <Icons.Disability />
+      icon = <Icons.Disability color={color} />
       break
     case 'close':
-      icon = <Icons.Close />
+      icon = <Icons.Close color={color} />
       break
     case 'green-check':
-      icon = <Icons.GreenCheck />
+      icon = <Icons.GreenCheck color={color} />
       break
     case 'open':
-      icon = <Icons.Open />
+      icon = <Icons.Open color={color} />
       break
     case 'modal-close':
-      icon = <Icons.ModalClose />
+      icon = <Icons.ModalClose color={color} />
       break
     case 'retirement':
-      icon = <Icons.Retirement />
+      icon = <Icons.Retirement color={color} />
+      break
+    case 'share':
+      icon = <Icons.Share color={color} />
       break
     default:
       icon = null

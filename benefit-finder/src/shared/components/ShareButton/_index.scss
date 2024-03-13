@@ -2,4 +2,14 @@
 
 .bf-share-button.bf-usa-button {
   width: $button-max-width;
+
+  i {
+    position: relative;
+    top: 3px;
+    right: 10px;
+
+    svg {
+      height: 18px;
+    }
+  }
 }

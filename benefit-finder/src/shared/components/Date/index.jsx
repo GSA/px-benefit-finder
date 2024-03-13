@@ -28,6 +28,7 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           heading={ui.alertBanner.heading}
           description={alert}
           error
+          hasError={invalid}
         ></Alert>
       )}
       <div className="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select">

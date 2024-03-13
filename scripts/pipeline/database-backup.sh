@@ -1,14 +1,12 @@
 #!/bin/bash
 
-#BACKUP_ENV=$1
-
 kill_pids() {
   app=$1
   ids=$(ps aux | grep ${app} | grep -v grep | awk '{print $2}')
   for id in ${ids}; do
-    kill -9 ${id} >/dev/null 2>&1
+    kill -9 ${id} >> kill.txt
   done
-}
+} >/dev/null 2>&1
 
 ## Wait for the tunnel to finish connecting.
 wait_for_tunnel() {
@@ -21,16 +19,12 @@ wait_for_tunnel() {
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
-# if [ ${BACKUP_ENV} = "prod" ]; then
-#   cf enable-ssh vote-drupal-${BACKUP_ENV}
-#   cf restart --strategy rolling vote-drupal-${BACKUP_ENV}
-# fi
-cf connect-to-service --no-client benefit-finder-cms-${BACKUP_ENV} benefit-finder-mysql-${BACKUP_ENV} > backup.txt &
+cf connect-to-service --no-client ${project}-cms-${ENVIRONMENT} ${project}-mysql-${ENVIRONMENT} > backup.txt &
 
 wait_for_tunnel
 
 ## Create variables and credential file for MySQL login.
-echo "Backing up '${BACKUP_ENV}' database..."
+echo "Configuring backup '${ENVIRONMENT}' database..."
 {
   host=$(cat backup.txt | grep -i host | awk '{print $2}')
   port=$(cat backup.txt | grep -i port | awk '{print $2}')
@@ -73,7 +67,10 @@ echo "Backing up '${BACKUP_ENV}' database..."
   do
     ignored_tables_string+=" --ignore-table=${dbname}.${table}"
   done
+} >/dev/null 2>&1
   
+echo "Backing up structure for '${ENVIRONMENT}' database..."
+{
   ## Dump structure
   mysqldump \
     --defaults-extra-file=~/.mysql/mysqldump.cnf \
@@ -81,8 +78,12 @@ echo "Backing up '${BACKUP_ENV}' database..."
     --port=${port} \
     --protocol=TCP \
     --no-data \
-    ${dbname} > backup_${BACKUP_ENV}.sql
+    --skip-extended-insert \
+    ${dbname} > backup_${ENVIRONMENT}.sql
+} >/dev/null 2>&1
 
+echo "Backing up data for '${ENVIRONMENT}' database..."
+{
   ## Dump content
   mysqldump \
     --defaults-extra-file=~/.mysql/mysqldump.cnf \
@@ -91,16 +92,21 @@ echo "Backing up '${BACKUP_ENV}' database..."
     --protocol=TCP \
     --no-create-info \
     --skip-triggers \
+    --skip-extended-insert \
     ${ignored_tables_string} \
-    ${dbname} >> backup_${BACKUP_ENV}.sql
+    ${dbname} >> backup_${ENVIRONMENT}.sql
 
   ## Patch out any MySQL 'SET' commands that require admin.
-  sed -i 's/^SET /-- &/' backup_${BACKUP_ENV}.sql
-
-  mv backup_${BACKUP_ENV}.sql ${TIMESTAMP}.sql
-  gzip ${TIMESTAMP}.sql
+  sed -i 's/^SET /-- &/' backup_${ENVIRONMENT}.sql
 
 } >/dev/null 2>&1
+
+echo "Compressing '${ENVIRONMENT}' database..."
+{
+  mv backup_${ENVIRONMENT}.sql ${TIMESTAMP}.sql
+  gzip ${TIMESTAMP}.sql
+} >/dev/null 2>&1
+
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
@@ -109,7 +115,4 @@ echo "Cleaning up old connections..."
 } >/dev/null 2>&1
 
 ## Clean up.
-# if [ ${BACKUP_ENV} = "prod" ]; then
-#   cf disable-ssh vote-drupal-${BACKUP_ENV}
-# fi
 rm -rf backup.txt ~/.mysql

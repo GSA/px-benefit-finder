@@ -30,7 +30,12 @@ const ShareButton = ({ ui, data }) => {
   }
 
   return (
-    <Button className="bf-share-button" secondary onClick={handleClick}>
+    <Button
+      className="bf-share-button"
+      secondary
+      onClick={handleClick}
+      icon="share"
+    >
       {ui?.shareButton || 'Share'}
     </Button>
   )

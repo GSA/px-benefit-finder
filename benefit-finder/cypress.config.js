@@ -4,8 +4,6 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'http://localhost:6006',
     env: {
-      authUsername: '$CYPRESS_username',
-      authPassword: '$CYPRESS_password',
       prodBaseUrl: 'https://www.usa.gov',
     },
     setupNodeEvents(on, config) {

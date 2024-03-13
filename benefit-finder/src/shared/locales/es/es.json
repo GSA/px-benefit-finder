@@ -79,7 +79,7 @@
         "description": "<div><p>Visite la página de cada agencia para verificar los requisitos y aplicar. Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</p></div>"
       },
       "heading": "Resultados",
-      "description": "<div><strong>Podría ser elegible para estos beneficios:<strong/></div>"
+      "description": "<strong>Podría ser elegible para estos beneficios:<strong/>"
     },
     "notQualified": {
       "chevron": {
@@ -87,7 +87,7 @@
         "description": "Según sus respuestas usted no es elegible para estos beneficios."
       },
       "heading": "Resultados",
-      "description": "<div><strong>Según sus respuestas no es elegible para estos beneficios.<strong/> Podría calificar si tiene información adicional o si su situación cambia.</div>"
+      "description": "<strong>Según sus respuestas no es elegible para estos beneficios.<strong/> Podría calificar si tiene información adicional o si su situación cambia."
     },
     "stepBackLink": "Volver",
     "eligibleResults": {

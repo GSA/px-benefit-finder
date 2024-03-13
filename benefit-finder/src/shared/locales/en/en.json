@@ -79,7 +79,7 @@
         "description": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>"
       },
       "heading": "Results",
-      "description": "<div><strong>You may be eligible for these benefits:</strong></div>"
+      "description": "<strong>You may be eligible for these benefits:</strong>"
     },
     "notQualified": {
       "chevron": {
@@ -87,7 +87,7 @@
         "description": "According to your answers you are not eligible for these benefits."
       },
       "heading": "Results",
-      "description": "<div><strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes.</div>"
+      "description": "<strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes."
     },
     "stepBackLink": "Back",
     "eligibleResults": {

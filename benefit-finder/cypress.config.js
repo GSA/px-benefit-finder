@@ -6,9 +6,6 @@ module.exports = defineConfig({
     env: {
       prodBaseUrl: 'https://www.usa.gov',
     },
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
   },
 
   component: {

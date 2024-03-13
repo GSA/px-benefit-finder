@@ -30,7 +30,6 @@ jobs:
         with:
           browser: 'chrome'
           config-file: cypress.prod.config.js
-          component: true
           working-directory: benefit-finder
           start: "npm run cy:run:prod:e2e"
 

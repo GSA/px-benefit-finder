@@ -306,15 +306,16 @@ exports[`loads window query scenario 1 1`] = `
             >
               Results
             </h2>
-            <div
-              class="bf-result-view-description"
+            <h3
+              aria-level="3"
+              class="bf-result-view-description font-family-sans"
+              id=""
+              role="heading"
             >
-              <div>
-                <strong>
-                  You may be eligible for these benefits:
-                </strong>
-              </div>
-            </div>
+              <strong>
+                You may be eligible for these benefits:
+              </strong>
+            </h3>
             <div
               class="bf-result-view-benefits"
             >
@@ -6262,15 +6263,16 @@ exports[`loads window query scenario 2 1`] = `
             >
               Results
             </h2>
-            <div
-              class="bf-result-view-description"
+            <h3
+              aria-level="3"
+              class="bf-result-view-description font-family-sans"
+              id=""
+              role="heading"
             >
-              <div>
-                <strong>
-                  You may be eligible for these benefits:
-                </strong>
-              </div>
-            </div>
+              <strong>
+                You may be eligible for these benefits:
+              </strong>
+            </h3>
             <div
               class="bf-result-view-benefits"
             >

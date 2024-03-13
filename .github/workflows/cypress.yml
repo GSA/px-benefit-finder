@@ -33,6 +33,7 @@ jobs:
       - name: Cypress Run
         uses: cypress-io/github-action@v6
         with:
+          browser: 'chrome'
           config-file: cypress.config.js
           component: true
           working-directory: benefit-finder

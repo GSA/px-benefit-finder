@@ -28,10 +28,9 @@
       },
       "results": {
         "eligible": {
-          "length": 4,
+          "length": 3,
           "eligible_benefits": [
             "COVID-19 funeral assistance",
-            "Lump-sum death benefit",
             "Survivors benefits for mothers/fathers",
             "Survivors benefits for spouse"
           ]

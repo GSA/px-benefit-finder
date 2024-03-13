@@ -2,6 +2,7 @@ name: Run Cypress e2e Prod Nightly Tests
 
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: '0 0 * * *'
 

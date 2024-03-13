@@ -10,12 +10,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     // 18 years ago minus one day - applicant under 18 years old
     // 1 day = 365.2425 (accounts for leap year)
     const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
-    cy.visit('/iframe.html?args=&id=app--primary&viewMode=story', {
-      auth: {
-        username: Cypress.env('authUsername'),
-        password: Cypress.env('authPassword'),
-      },
-    })
+    cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
 
     pageObjects.button().contains('Start').click()
     cy.enterDateOfBirth(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)

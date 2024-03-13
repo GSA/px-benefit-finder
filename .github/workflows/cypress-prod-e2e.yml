@@ -1,8 +1,9 @@
-name: Run Cypress Tests
+name: Run Cypress e2e Prod Nightly Tests
 
 on:
   workflow_dispatch:
-  pull_request:
+  schedule:
+    - cron: '0 0 * * *'
 
 permissions: read-all
 
@@ -23,22 +24,13 @@ jobs:
         with:
           node-version-file: "./benefit-finder/package.json"
 
-      - name: Install Submodule
-        run: |
-          cd ..
-          git submodule init
-          git submodule update
-          cd benefit-finder
-
       - name: Cypress Run
         uses: cypress-io/github-action@v6
         with:
           browser: 'chrome'
-          config-file: cypress.config.js
-          component: true
+          config-file: cypress.prod.config.js
           working-directory: benefit-finder
-          build: "npm run cy:build:storybook"
-          start: "npm run cy:run:pipeline"
+          start: "npm run cy:run:prod:e2e"
 
       - uses: actions/upload-artifact@v3
         if: failure ()

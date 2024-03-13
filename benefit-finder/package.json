@@ -29,9 +29,10 @@
     "cy:dev:storybook": "NODE_ENV=test npm run cy:prebuild:storybook && storybook dev -p 6006",
     "cy:dev:components": "NODE_ENV=test npm run cy:prebuild:storybook && cypress open",
     "cy:build:storybook": "NODE_ENV=test npm run cy:prebuild:storybook && storybook build --test",
-    "cy:run:component:chrome": "NODE_ENV=test npx cypress run --component --browser chrome",
-    "cy:run:e2e:chrome": "NODE_ENV=test npx cypress run --browser chrome",
-    "cy:run": "NODE_ENV=test npm run cy:run:component:chrome && npm run cy:run:e2e:chrome",
+    "cy:run:component": "NODE_ENV=test npx cypress run --component --browser chrome",
+    "cy:run:e2e": "NODE_ENV=test npx cypress run --browser chrome",
+    "cy:run": "NODE_ENV=test npm run cy:run:component && npm run cy:run:e2e",
+    "cy:run:prod:e2e": "NODE_ENV=test npx cypress run --config-file cypress.prod.config.js --browser chrome",
     "cy:run:pipeline": "NODE_ENV=test concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\"   \"http-server ./storybook-static --port 6006 --silent\"   \"wait-on tcp:6006 && npm run cy:run\" -Y"
   },
   "devDependencies": {

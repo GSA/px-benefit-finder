@@ -5,6 +5,10 @@ class PageObjects {
     return cy.get('.usa-button')
   }
 
+  stepIndicator() {
+    return cy.get('.bf-usa-step-indicator')
+  }
+
   applicantDateOfBirthMonth() {
     return cy.get('#date_of_birth_month-applicant_date_of_birth_0')
   }

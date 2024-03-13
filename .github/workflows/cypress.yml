@@ -33,10 +33,10 @@ jobs:
       - name: Cypress Run
         uses: cypress-io/github-action@v6
         with:
+          config-file: cypress.config.js
           component: true
           working-directory: benefit-finder
           build: "npm run cy:build:storybook"
-          spec: benefit-finder/cypress/e2e/storybook
           start: "npm run cy:run:pipeline"
 
       - uses: actions/upload-artifact@v3

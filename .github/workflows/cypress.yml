@@ -30,21 +30,13 @@ jobs:
           git submodule update
           cd benefit-finder
 
-      - name: Cypress Run e2e tests
+      - name: Cypress Run Tests
         uses: cypress-io/github-action@v6
         with:
           browser: 'chrome'
           config-file: cypress.config.js
           working-directory: benefit-finder
           build: "npm run cy:build:storybook"
-          start: "npm run cy:run:pipeline"
-
-      - name: Run Component Testing
-        uses: cypress-io/github-action@v6
-        with:
-          # we have already installed everything
-          install: false
-          component: true
           start: "npm run cy:run:pipeline"
 
       - uses: actions/upload-artifact@v3

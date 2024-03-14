@@ -6,7 +6,7 @@ class PageObjects {
   }
 
   stepIndicator() {
-    return cy.get('.bf-usa-step-indicator')
+    return cy.get('.usa-step-indicator')
   }
 
   applicantDateOfBirthMonth() {

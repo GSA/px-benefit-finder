@@ -6,29 +6,13 @@ import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mo
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import 'cypress-plugin-tab'
 
-const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
-
-const dataInputs = ({ dob, relation, status }) => {
-  // input date of birth
-  dob &&
-    cy.enterDateOfBirth(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
-  // input relation to deceaseed
-  relation &&
-    pageObjects
-      .applicantRelationshipToDeceased()
-      .select(
-        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
-          .section.fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
-      )
-  // input relation to deceaseed
-  status &&
-    pageObjects
-      .applicantMaritalStatus()
-      .select(
-        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
-          .section.fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
-      )
-}
+const dob = utils.getDateByOffset(-(18 * 365.2425 - 1))
+const relation =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
+const status =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
 
 const alertHiddenState = {
   'aria-hidden': 'true', // expects a hidden error notice to have "aria-hidden=true"
@@ -92,14 +76,14 @@ describe('Validate correct error messages display for negative scenarios', () =>
     cy.focused().should('have.class', 'bf-usa-date-alert')
 
     // expect when a user has resolved all errors the top level error notices is not visible or accessible
-    dataInputs({ dob: true, relation: true, status: true })
+    utils.dataInputs({ dob, relation, status })
 
     // expect the error notice to be hidden if errors are present
     pageObjects.benefitSectionAlert().should('have.class', 'display-none')
     pageObjects.dateAlert().should('not.exist')
   })
 
-  it.only('Should not allow moving forward by clicking continue when error banner is present', () => {
+  it('Should not allow moving forward by clicking continue when error banner is present', () => {
     // expect when a user tabs from the focus error they can tab any other error notices in the form
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     cy.focused().should('have.class', 'usa-alert--error').tab()
@@ -113,7 +97,7 @@ describe('Validate correct error messages display for negative scenarios', () =>
     }
 
     // expect when a user has resolved all errors the top level error notices is not visible or accessible
-    dataInputs({ relation: true })
+    utils.dataInputs({ relation })
 
     // expect the error notice to be visible if errors are present
     pageObjects.benefitSectionAlert().should('not.have.class', 'display-none')
@@ -128,14 +112,14 @@ describe('Validate correct error messages display for negative scenarios', () =>
     }
   })
 
-  it.only('Should not allow moving forward by clicking step nav when error banner is present', () => {
+  it('Should not allow moving forward by clicking step nav when error banner is present', () => {
     // expect when a user tabs from the focus error they can tab any other error notices in the form
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     cy.focused().should('have.class', 'usa-alert--error').tab()
     cy.focused().should('have.class', 'bf-usa-date-alert')
 
     // expect when a user has resolved all errors the top level error notices is not visible or accessible
-    dataInputs({ dob: true, relation: true })
+    utils.dataInputs({ dob, relation })
 
     // expect the error notice to be visible and focused if errors are present
     pageObjects.benefitSectionAlert().should('not.have.class', 'display-none')

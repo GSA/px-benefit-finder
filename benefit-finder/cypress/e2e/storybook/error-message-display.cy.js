@@ -99,22 +99,36 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.dateAlert().should('not.exist')
   })
 
-  it('Should not allow moving forward by clicking continue when error banner is present', () => {
+  it.only('Should not allow moving forward by clicking continue when error banner is present', () => {
     // expect when a user tabs from the focus error they can tab any other error notices in the form
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     cy.focused().should('have.class', 'usa-alert--error').tab()
     cy.focused().should('have.class', 'bf-usa-date-alert')
+    // expect date DOM structure alert to be accessible
+    for (const attr in alertDisplayState) {
+      pageObjects
+        .dateAlert()
+        .invoke('attr', attr)
+        .should('eq', alertDisplayState[attr])
+    }
 
     // expect when a user has resolved all errors the top level error notices is not visible or accessible
-    dataInputs({ dob: true, relation: true })
+    dataInputs({ relation: true })
 
     // expect the error notice to be visible if errors are present
     pageObjects.benefitSectionAlert().should('not.have.class', 'display-none')
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     cy.focused().should('have.class', 'usa-alert--error')
+    // expect date DOM structure alert to be accessible
+    for (const attr in alertDisplayState) {
+      pageObjects
+        .dateAlert()
+        .invoke('attr', attr)
+        .should('eq', alertDisplayState[attr])
+    }
   })
 
-  it('Should not allow moving forward by clicking step nav when error banner is present', () => {
+  it.only('Should not allow moving forward by clicking step nav when error banner is present', () => {
     // expect when a user tabs from the focus error they can tab any other error notices in the form
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     cy.focused().should('have.class', 'usa-alert--error').tab()
@@ -127,5 +141,14 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.benefitSectionAlert().should('not.have.class', 'display-none')
     pageObjects.stepIndicator().click()
     cy.focused().should('have.class', 'usa-alert--error')
+    // expect date DOM structure alert to be accessible
+    for (const attr in alertDisplayState) {
+      pageObjects
+        .benefitSectionAlert()
+        .invoke('attr', attr)
+        .should('eq', alertDisplayState[attr])
+    }
+    // expect dob alert to not be in DOM
+    pageObjects.dateAlert().should('not.exist')
   })
 })

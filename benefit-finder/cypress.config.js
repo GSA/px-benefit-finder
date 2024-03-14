@@ -5,7 +5,6 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'http://localhost:6006',
     excludeSpecPattern: 'cypress/e2e/usagov-public-site/*.cy.js',
-    defaultCommandTimeout: 8000,
     setupNodeEvents(on, config) {
       on('task', {
         log(message) {

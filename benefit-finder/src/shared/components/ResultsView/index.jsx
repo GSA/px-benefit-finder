@@ -94,8 +94,9 @@ const ResultsView = ({
           <Heading className="bf-result-view-heading" headingLevel={2}>
             {notQualifiedView ? notQualified.heading : qualified.heading}
           </Heading>
-          <div
+          <Heading
             className="bf-result-view-description"
+            headingLevel={3}
             dangerouslySetInnerHTML={
               notQualifiedView
                 ? createMarkup(notQualified.description)

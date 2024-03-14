@@ -8,9 +8,11 @@ import '../build/assets/benefit-finder.min.css'
 export default {
   decorators: [
     Story => (
-      <div id="benefit-finder">
-        <Story />
-      </div>
+      <main>
+        <div id="benefit-finder">
+          <Story />
+        </div>
+      </main>
     ),
   ],
   parameters: {

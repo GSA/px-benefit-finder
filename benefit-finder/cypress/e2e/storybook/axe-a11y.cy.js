@@ -67,7 +67,7 @@ describe(`Validate code passes axe scanning`, () => {
   // create an error
   it('Has no detectable a11y violations on error state', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click() // wait for button to load
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     runA11y({ skipFailOnError: true }) // remove skip after https://github.com/GSA/px-benefit-finder/issues/1072 is resolved
   })
 
@@ -108,7 +108,7 @@ describe(`Validate code passes axe scanning`, () => {
 
   it('Has no detectable a11y violations on see benefits', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status }) // wait for button to load
+    utils.dataInputs({ dob, relation, status })
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     utils.dataInputs({ dod })
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
@@ -121,7 +121,7 @@ describe(`Validate code passes axe scanning`, () => {
 
   it('Has no detectable a11y violations on see benefits you did not qualify for', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status }) // wait for button to load
+    utils.dataInputs({ dob, relation, status })
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     utils.dataInputs({ dod })
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()

@@ -56,3 +56,76 @@ For example,
 /bears/api/life-event/retirement
 
 /bears/api/life-event/disability
+
+## Local Functional Testing Environment
+
+#### Set up local development site
+
+Set up local development site following USAGov README.md.
+
+#### Change to local development site directory
+
+```
+cd usagov-2021
+```
+
+#### Install Testing Software
+
+```
+bin/composer require --dev drupal/core-dev
+bin/composer require --dev phpunit/phpunit
+bin/composer require --dev behat/mink
+bin/composer require --dev behat/mink-browserkit-driver
+bin/composer require --dev behat/mink-selenium2-driver
+bin/composer require --dev weitzman/drupal-test-traits
+bin/composer dump-autoload
+```
+
+#### Uninstall USAGov Login Customizations module
+
+```
+bin/drush pm:uninstall usagov_login
+```
+
+#### Copy phpunit.xml to local development site
+
+```
+cp tests/phpunit.xml usagov-2021/phpunit.xml
+```
+
+#### Start SSH session
+
+```
+bin/ssh
+```
+
+#### The system is ready for functional testing
+
+For example, use following command to test Benefit Finder API
+```
+/var/www # ./vendor/bin/phpunit \
+web/modules/custom/usagov_benefit_finder/tests/src/Functional/BenefitFinderTest.php \
+--group usagov_benefit_finder \
+--filter testApi
+```
+
+The test displays result.
+```
+PHPUnit 9.6.17 by Sebastian Bergmann and contributors.
+
+.                                                                   1 / 1 (100%)
+
+Time: 00:02.558, Memory: 30.00 MB
+
+OK (1 test, 7 assertions)
+
+HTML output was generated
+http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-1-dtt.html
+http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-2-dtt.html
+http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-3-dtt.html
+http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-4-dtt.html
+http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-5-dtt.html
+http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-6-dtt.html
+http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-7-dtt.html
+
+```

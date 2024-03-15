@@ -36,7 +36,6 @@
     "cy:run:pipeline": "NODE_ENV=test concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\"   \"http-server ./storybook-static --port 6006 --silent\"   \"wait-on tcp:6006 && npm run cy:run\" -Y"
   },
   "devDependencies": {
-    "@axe-core/react": "^4.8.5",
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@storybook/addon-a11y": "^7.6.10",
@@ -58,6 +57,7 @@
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "cypress": "^13.6.4",
+    "cypress-axe": "^1.5.0",
     "cypress-plugin-tab": "^1.0.5",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^8.10.0",

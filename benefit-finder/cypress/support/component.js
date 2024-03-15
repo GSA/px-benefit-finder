@@ -13,6 +13,7 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 import './commands'
+import 'cypress-axe'
 
 import * as sbPreview from '../../.storybook/preview'
 import { setProjectAnnotations } from '@storybook/react'

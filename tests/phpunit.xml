@@ -3,7 +3,6 @@
          bootstrap="vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php">
     <php>
         <env name="DTT_BASE_URL" value="http://localhost"/>
-        <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/tmp"/>
         <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/>
     </php>
     <testsuites>

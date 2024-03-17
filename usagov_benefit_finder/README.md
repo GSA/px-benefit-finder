@@ -57,11 +57,13 @@ For example,
 
 /bears/api/life-event/disability
 
-## Local Functional Testing Environment
+## Local Functional Testing
 
 #### Set up local development site
 
-Set up local development site following USAGov README.md.
+Make sure that local development site setup and run at http://localhost
+
+The functional testing uses the existing database of local development site.
 
 #### Change to local development site directory
 
@@ -93,20 +95,32 @@ bin/drush pm:uninstall usagov_login
 cp tests/phpunit.xml usagov-2021/phpunit.xml
 ```
 
-#### Start SSH session
-
-```
-bin/ssh
-```
-
 #### The system is ready for functional testing
 
-For example, use following command to test Benefit Finder API
+#### The following is a functional testing example.
+
+Start SSH session
+```
+bin/ssh
+cd /var/www
+```
+
+Use following command to test Benefit Finder API
 ```
 /var/www # ./vendor/bin/phpunit \
 web/modules/custom/usagov_benefit_finder/tests/src/Functional/BenefitFinderTest.php \
 --group usagov_benefit_finder \
 --filter testApi
+```
+
+Use following command if you want HTML output
+```
+/var/www # BROWSERTEST_OUTPUT_DIRECTORY=/tmp \
+./vendor/bin/phpunit \
+web/modules/custom/usagov_benefit_finder/tests/src/Functional/BenefitFinderTest.php \
+--group usagov_benefit_finder \
+--filter testApi \
+--printer="\Drupal\Tests\Listeners\HtmlOutputPrinter"
 ```
 
 The test displays result.

@@ -92,6 +92,18 @@ class PageObjects {
   cardGroup() {
     return cy.get('.usa-card-group li')
   }
+
+  selectField() {
+    return cy.get('main .bf-usa-select')
+  }
+
+  inputField() {
+    return cy.get('main .usa-input')
+  }
+
+  radioGroup() {
+    return cy.get('main .radio-group')
+  }
 }
 
 export const pageObjects = new PageObjects()

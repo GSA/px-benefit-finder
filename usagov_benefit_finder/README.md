@@ -93,22 +93,12 @@ bin/ssh
 cd /var/www
 ```
 
-Use following command to test Benefit Finder API
+Use following command to test Benefit Finder system
 ```
 /var/www # ./vendor/bin/phpunit \
 web/modules/custom/usagov_benefit_finder/tests/src/Functional/BenefitFinderTest.php \
 --group usagov_benefit_finder \
---filter testApi
-```
-
-Use following command if you want HTML output
-```
-/var/www # BROWSERTEST_OUTPUT_DIRECTORY=/tmp \
-./vendor/bin/phpunit \
-web/modules/custom/usagov_benefit_finder/tests/src/Functional/BenefitFinderTest.php \
---group usagov_benefit_finder \
---filter testApi \
---printer="\Drupal\Tests\Listeners\HtmlOutputPrinter"
+--filter testAll
 ```
 
 The test displays result.
@@ -119,15 +109,5 @@ PHPUnit 9.6.17 by Sebastian Bergmann and contributors.
 
 Time: 00:02.558, Memory: 30.00 MB
 
-OK (1 test, 7 assertions)
-
-HTML output was generated
-http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-1-dtt.html
-http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-2-dtt.html
-http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-3-dtt.html
-http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-4-dtt.html
-http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-5-dtt.html
-http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-6-dtt.html
-http://localhost/sites/simpletest/browser_output/Drupal_Tests_usagov_benefit_finder_Functional_BenefitFinderTest-7-dtt.html
-
+OK (1 test, 9 assertions)
 ```

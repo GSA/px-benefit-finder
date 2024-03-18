@@ -104,6 +104,14 @@ class PageObjects {
   radioGroup() {
     return cy.get('main .radio-group')
   }
+
+  expandAll() {
+    return cy.get('.bf-expand-all')
+  }
+
+  keyEligibilityCriteriaListIcon() {
+    return cy.get('.usa-accordion .bf-usa-list svg')
+  }
 }
 
 export const pageObjects = new PageObjects()

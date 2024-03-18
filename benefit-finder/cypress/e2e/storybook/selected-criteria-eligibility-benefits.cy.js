@@ -141,4 +141,14 @@ describe('Validate correct eligibility benefits display based on selected criter
       .and('contain', 'Likely eligible')
       .and('contain', enResults.eligible.eligible_benefits[0])
   })
+
+  it('Should display green check icons on eligible benefits', () => {
+    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.param
+    const scenario = utils.encodeURIFromObject(selectedData)
+    cy.visit(`${utils.storybookUri}${scenario}`)
+    pageObjects.expandAll().click()
+    pageObjects
+      .keyEligibilityCriteriaListIcon()
+      .should('have.class', 'bf-checkmark--green')
+  })
 })

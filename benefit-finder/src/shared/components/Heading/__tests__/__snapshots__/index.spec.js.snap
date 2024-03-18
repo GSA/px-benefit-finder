@@ -1,8 +1,0 @@
-// Jest shot v1, https://goo.gl/fbAQLP
-
-exports[`Heading renders a match to the previous shot 1`] = `
-<h1
-  className=""
-  id="skip-to-h1"
-/>
-`;

@@ -1,7 +1,0 @@
-// Jest shot v1, https://goo.gl/fbAQLP
-
-exports[`ProcessList renders a match to the previous shot 1`] = `
-<ol
-  className="usa-process-list"
-/>
-`;

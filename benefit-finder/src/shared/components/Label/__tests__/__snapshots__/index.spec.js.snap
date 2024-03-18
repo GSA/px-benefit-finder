@@ -1,7 +1,0 @@
-// Jest shot v1, https://goo.gl/fbAQLP
-
-exports[`Label renders a match to the previous shot 1`] = `
-<label
-  className=""
-/>
-`;

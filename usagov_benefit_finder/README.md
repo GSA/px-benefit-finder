@@ -65,34 +65,22 @@ Make sure that local development site setup and run at http://localhost
 
 The functional testing uses the existing database of local development site.
 
+#### Set up testing environment (Install testing software and set PHPUnit configuration)
+
+```
+$ bash setup-benefit-finder-test
+```
+
 #### Change to local development site directory
 
 ```
 cd usagov-2021
 ```
 
-#### Install Testing Software
-
-```
-bin/composer require --dev drupal/core-dev
-bin/composer require --dev phpunit/phpunit
-bin/composer require --dev behat/mink
-bin/composer require --dev behat/mink-browserkit-driver
-bin/composer require --dev behat/mink-selenium2-driver
-bin/composer require --dev weitzman/drupal-test-traits
-bin/composer dump-autoload
-```
-
 #### Uninstall USAGov Login Customizations module
 
 ```
 bin/drush pm:uninstall usagov_login
-```
-
-#### Copy phpunit.xml to local development site
-
-```
-cp tests/phpunit.xml usagov-2021/phpunit.xml
 ```
 
 #### The system is ready for functional testing

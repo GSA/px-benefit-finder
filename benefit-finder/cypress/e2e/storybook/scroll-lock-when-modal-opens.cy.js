@@ -22,36 +22,66 @@ describe('Validate scrolling when modal is open', () => {
     utils.dataInputs({ dob, relation, status })
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     utils.dataInputs({ dod })
+
+    // open modal
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    // cy.get('#benefit-finder').trigger('wheel', {
-    //   deltaY: -66.666666,
-    //   wheelDelta: 120,
-    //   wheelDeltaX: 0,
-    //   wheelDeltaY: 120,
-    //   bubbles: true,
-    // })
-    cy.get('#benefit-finder').should('be.hidden')
-    // cy.get('#benefit-finder').trigger('wheel', {
-    //   deltaY: 66.666666,
-    //   wheelDelta: 120,
-    //   wheelDeltaX: 0,
-    //   wheelDeltaY: 120,
-    //   bubbles: true,
-    // })
-    // cy.window().then($el =>
-    //   expect($el.document.body.style.overflow).to.eq('hidden')
-    // )
 
-    // cy.get('.ReactModal__Overlay').scrollTo('bottom', err => {
-    //   console.log(err)
-    // })
-    // cy.get('.ReactModal__Overlay').shouldNotBeActionable({ p: 'bottom' }, done)
+    // close when clicked off modal
+    cy.get('.ReactModal__Overlay').click('topRight')
 
-    // cy.once("fail", (err) => {
-    //   expect(err.message).to.include("`cy.click()` failed because this element");
-    //   expect(err.message).to.include("is being covered by another element");
-    //   done();
-    // });
-    // cy.scrollTo('bottom')
+    // confirm type works for body
+    cy.get('body').type(
+      '{upArrow}{upArrow}{downArrow}{downArrow}{leftArrow}{rightArrow}{leftArrow}{rightArrow}ba'
+    ) // these types run successfully but do not trigger movement in the window
+
+    // open modal
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+
+    // confirm type works for modal
+    cy.get('#benefit-finder-modal').type(
+      '{upArrow}{upArrow}{downArrow}{downArrow}{leftArrow}{rightArrow}{leftArrow}{rightArrow}ba'
+    )
+
+    let scrollYPosition
+
+    cy.window().then($w => {
+      scrollYPosition = $w.scrollY
+    })
+
+    cy.window().then($w => {
+      expect($w.scrollY).to.be.at.most(scrollYPosition)
+    })
+
+    cy.get('#benefit-finder-modal').type('{downArrow}') // modal has an tabIndex
+
+    // confirm that no changes are made
+    cy.window().then($w => {
+      expect($w.scrollY).to.be.at.most(scrollYPosition)
+    })
+
+    cy.get('#benefit-finder-modal').type('{upArrow}')
+
+    // confirm that no changes are made
+    cy.window().then($w => {
+      expect($w.scrollY).to.be.at.most(scrollYPosition)
+    })
+
+    // close modal to confirm that type on modal works
+    cy.get('#benefit-finder-modal').type('{esc}')
+
+    // scroll to bottom
+    cy.scrollTo('bottom')
+
+    // confirm we are at bottom
+    cy.window().then($w => {
+      expect($w.scrollY).to.be.greaterThan(scrollYPosition)
+    })
+
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+
+    // confirm we are back at the top
+    cy.window().then($w => {
+      expect($w.scrollY).to.be.at.most(scrollYPosition)
+    })
   })
 })

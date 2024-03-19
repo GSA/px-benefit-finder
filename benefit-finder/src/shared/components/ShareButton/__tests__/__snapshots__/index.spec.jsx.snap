@@ -8,6 +8,7 @@ exports[`Share > renders a match to the previous snapshot 1`] = `
   >
     <i
       aria-hidden="true"
+      data-testid="icon-share"
     >
       <svg
         fill="none"

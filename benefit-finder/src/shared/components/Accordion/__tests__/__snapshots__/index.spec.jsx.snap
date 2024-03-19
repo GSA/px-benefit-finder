@@ -23,6 +23,7 @@ exports[`Accordion > renders a match to the previous snapshot 1`] = `
         <i
           alt="a plus icon"
           aria-hidden="true"
+          data-testid="icon-open"
         >
           <svg
             class="bf-open"

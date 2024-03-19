@@ -7,6 +7,7 @@ exports[`ObfuscatedLink > renders a match to the previous snapshot 1`] = `
   >
     <i
       aria-hidden="true"
+      data-testid="icon-carrot-small"
     >
       <svg
         class="bf-carrot-small"

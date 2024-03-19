@@ -4,6 +4,171 @@ exports[`RelativeBenefitList > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <ul
     class="bf-usa-card-group usa-card-group"
-  />
+  >
+    <li
+      class="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12 bf-card-icon add-list-reset"
+      data-testid="retirement"
+    >
+      <a
+        class="bf-usa-card__container usa-card__container"
+        href="/benefit-finder/life_event/retirement"
+      >
+        <i
+          aria-hidden="true"
+          class="bf-relative-icon"
+          data-testid="icon-retirement"
+        >
+          <svg
+            class="bf-retirement"
+            fill="none"
+            height="58"
+            viewBox="0 0 57 58"
+            width="57"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.6584 45.7497V45.7997H25.7084H31.2917H31.3417V45.7497V40.1663V40.1163H31.2917H25.7084H25.6584V40.1663V45.7497ZM17.2834 23.4163V23.4663H17.3334H22.9167H22.9667V23.4163C22.9667 20.3731 25.4568 17.883 28.5 17.883C31.5433 17.883 34.0334 20.3731 34.0334 23.4163C34.0334 24.7972 33.5164 25.789 32.7378 26.6432C32.1456 27.293 31.4046 27.861 30.6231 28.4601C30.3733 28.6516 30.1194 28.8462 29.8648 29.0477C28.8165 29.8776 27.764 30.8199 26.9742 32.1253C26.1839 33.4315 25.6584 35.0982 25.6584 37.3747V37.4247H25.7084H31.2917H31.3417V37.3747C31.3417 34.3398 33.3104 32.6192 35.3516 30.8352C35.4051 30.7885 35.4586 30.7417 35.5121 30.6949C37.6053 28.8634 39.7167 26.9306 39.7167 23.4163C39.7167 17.2191 34.6972 12.1997 28.5 12.1997C22.3028 12.1997 17.2834 17.2191 17.2834 23.4163ZM28.5 1.03301C13.0624 1.03301 0.533374 13.5621 0.533374 28.9997C0.533374 44.4373 13.0624 56.9663 28.5 56.9663C43.9377 56.9663 56.4667 44.4373 56.4667 28.9997C56.4667 13.5621 43.9377 1.03301 28.5 1.03301ZM28.5 51.283C16.2164 51.283 6.21671 41.2833 6.21671 28.9997C6.21671 16.716 16.2164 6.71634 28.5 6.71634C40.7837 6.71634 50.7834 16.716 50.7834 28.9997C50.7834 41.2833 40.7837 51.283 28.5 51.283Z"
+              fill="#162e51"
+              stroke="#162e51"
+              stroke-width="0.1"
+            />
+          </svg>
+        </i>
+        <div
+          class="bf-usa-card__header usa-card__header"
+        >
+          <h3
+            aria-level="3"
+            class="bf-usa-card__heading usa-card__heading font-family-sans"
+            id=""
+            role="heading"
+          >
+            Benefit finder: retirement
+          </h3>
+        </div>
+        <div
+          class="bf-usa-card__body usa-card__body"
+        >
+          <p>
+            Find out what financial, health care, and other benefits may be available as you enter this next phase of your life.
+          </p>
+        </div>
+        <div
+          class="bf-usa-card__cta usa-card__cta"
+        >
+          Call to action (retirement)
+        </div>
+        <i
+          aria-hidden="true"
+          data-testid="icon-carrot-big"
+        >
+          <svg
+            class="bf-carrot-big"
+            fill="none"
+            height="22"
+            viewBox="0 0 13 22"
+            width="13"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3.18079 1.18074C2.79027 0.790216 2.1571 0.790215 1.76658 1.18074L0.706337 2.24098C0.316114 2.6312 0.315768 3.26377 0.705565 3.65442L7.33029 10.2936C7.71979 10.684 7.71979 11.3159 7.33029 11.7063L0.705566 18.3455C0.315768 18.7361 0.316113 19.3687 0.706336 19.7589L1.76658 20.8192C2.1571 21.2097 2.79027 21.2097 3.18079 20.8192L12.2929 11.7071C12.6834 11.3165 12.6834 10.6834 12.2929 10.2928L3.18079 1.18074Z"
+              fill="#162E51"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
+      </a>
+    </li>
+    <li
+      class="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12 bf-card-icon add-list-reset"
+      data-testid="disability"
+    >
+      <a
+        class="bf-usa-card__container usa-card__container"
+        href="/benefit-finder/life_event/disability"
+      >
+        <i
+          aria-hidden="true"
+          class="bf-relative-icon"
+          data-testid="icon-disability"
+        >
+          <svg
+            fill="none"
+            height="44"
+            viewBox="0 0 34 44"
+            width="34"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              height="44"
+              id="mask0_3578_3079"
+              maskUnits="userSpaceOnUse"
+              width="34"
+              x="0"
+              y="0"
+            >
+              <path
+                d="M11.25 21.5001V26.0001C7.5375 26.0001 4.5 29.0376 4.5 32.7501C4.5 36.4626 7.5375 39.5001 11.25 39.5001C14.9625 39.5001 18 36.4626 18 32.7501H22.5C22.5 38.9601 17.46 44.0001 11.25 44.0001C5.04 44.0001 0 38.9601 0 32.7501C0 26.5401 5.04 21.5001 11.25 21.5001ZM24.66 10.2501C27.99 10.2501 30.195 13.6251 28.8225 16.6176L25.065 24.8751H29.25C31.725 24.8751 33.75 26.9001 33.75 29.3751V41.7501H29.25V30.5001H18.045C14.76 30.5001 12.5325 26.9676 13.8825 23.9751L18 14.7501H13.0275L11.565 18.1926L7.245 17.0001L8.7525 12.9501C9.495 11.3076 11.1375 10.2501 12.96 10.2501H24.66ZM29.25 0.215088C31.7353 0.215088 33.75 2.22981 33.75 4.71509C33.75 7.20037 31.7353 9.21509 29.25 9.21509C26.7647 9.21509 24.75 7.20037 24.75 4.71509C24.75 2.22981 26.7647 0.215088 29.25 0.215088Z"
+                fill="white"
+              />
+            </mask>
+            <g
+              mask="url(#mask0_3578_3079)"
+            >
+              <path
+                d="M11.25 21.5001V26.0001C7.5375 26.0001 4.5 29.0376 4.5 32.7501C4.5 36.4626 7.5375 39.5001 11.25 39.5001C14.9625 39.5001 18 36.4626 18 32.7501H22.5C22.5 38.9601 17.46 44.0001 11.25 44.0001C5.04 44.0001 0 38.9601 0 32.7501C0 26.5401 5.04 21.5001 11.25 21.5001ZM24.66 10.2501C27.99 10.2501 30.195 13.6251 28.8225 16.6176L25.065 24.8751H29.25C31.725 24.8751 33.75 26.9001 33.75 29.3751V41.7501H29.25V30.5001H18.045C14.76 30.5001 12.5325 26.9676 13.8825 23.9751L18 14.7501H13.0275L11.565 18.1926L7.245 17.0001L8.7525 12.9501C9.495 11.3076 11.1375 10.2501 12.96 10.2501H24.66ZM29.25 0.215088C31.7353 0.215088 33.75 2.22981 33.75 4.71509C33.75 7.20037 31.7353 9.21509 29.25 9.21509C26.7647 9.21509 24.75 7.20037 24.75 4.71509C24.75 2.22981 26.7647 0.215088 29.25 0.215088Z"
+                fill="#162e51"
+              />
+            </g>
+          </svg>
+        </i>
+        <div
+          class="bf-usa-card__header usa-card__header"
+        >
+          <h3
+            aria-level="3"
+            class="bf-usa-card__heading usa-card__heading font-family-sans"
+            id=""
+            role="heading"
+          >
+            Benefit finder: disability
+          </h3>
+        </div>
+        <div
+          class="bf-usa-card__body usa-card__body"
+        >
+          <p>
+            Whether you are newly disabled or have a lifelong challenge, assistance may be available, including financial help.
+          </p>
+        </div>
+        <div
+          class="bf-usa-card__cta usa-card__cta"
+        >
+          Call to action (disability)
+        </div>
+        <i
+          aria-hidden="true"
+          data-testid="icon-carrot-big"
+        >
+          <svg
+            class="bf-carrot-big"
+            fill="none"
+            height="22"
+            viewBox="0 0 13 22"
+            width="13"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3.18079 1.18074C2.79027 0.790216 2.1571 0.790215 1.76658 1.18074L0.706337 2.24098C0.316114 2.6312 0.315768 3.26377 0.705565 3.65442L7.33029 10.2936C7.71979 10.684 7.71979 11.3159 7.33029 11.7063L0.705566 18.3455C0.315768 18.7361 0.316113 19.3687 0.706336 19.7589L1.76658 20.8192C2.1571 21.2097 2.79027 21.2097 3.18079 20.8192L12.2929 11.7071C12.6834 11.3165 12.6834 10.6834 12.2929 10.2928L3.18079 1.18074Z"
+              fill="#162E51"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
+      </a>
+    </li>
+  </ul>
 </DocumentFragment>
 `;

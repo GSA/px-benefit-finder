@@ -26,6 +26,7 @@ const RelativeBenefitList = ({ data, carrotType }) => {
               key={`${title}-${i}`}
               carrotType={carrotType}
               icon={trimedLifeEventId}
+              data-testid={trimedLifeEventId}
             />
           )
         })}

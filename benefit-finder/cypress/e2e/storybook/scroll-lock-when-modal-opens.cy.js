@@ -23,6 +23,35 @@ describe('Validate scrolling when modal is open', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     utils.dataInputs({ dod })
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    cy.scrollTo('bottom')
+    // cy.get('#benefit-finder').trigger('wheel', {
+    //   deltaY: -66.666666,
+    //   wheelDelta: 120,
+    //   wheelDeltaX: 0,
+    //   wheelDeltaY: 120,
+    //   bubbles: true,
+    // })
+    cy.get('#benefit-finder').should('be.hidden')
+    // cy.get('#benefit-finder').trigger('wheel', {
+    //   deltaY: 66.666666,
+    //   wheelDelta: 120,
+    //   wheelDeltaX: 0,
+    //   wheelDeltaY: 120,
+    //   bubbles: true,
+    // })
+    // cy.window().then($el =>
+    //   expect($el.document.body.style.overflow).to.eq('hidden')
+    // )
+
+    // cy.get('.ReactModal__Overlay').scrollTo('bottom', err => {
+    //   console.log(err)
+    // })
+    // cy.get('.ReactModal__Overlay').shouldNotBeActionable({ p: 'bottom' }, done)
+
+    // cy.once("fail", (err) => {
+    //   expect(err.message).to.include("`cy.click()` failed because this element");
+    //   expect(err.message).to.include("is being covered by another element");
+    //   done();
+    // });
+    // cy.scrollTo('bottom')
   })
 })

@@ -43,3 +43,28 @@ Cypress.Commands.add('enterDateOfFuneral', (month, day, year) => {
   pageObjects.applicantDateOfFuneralDay().type(day)
   pageObjects.applicantDateOfFuneralYear().type(year)
 })
+
+Cypress.Commands.add(
+  'shouldNotBeActionable',
+  { prevSubject: 'element' },
+  (subject, { p }, done) => {
+    console.log(p)
+    cy.once('fail', err => {
+      expect(err.message).to.include(
+        '`cy.scrollTo()` failed because this element is not scrollable'
+      )
+      // expect(err.message).to.include('is being covered by another element')
+      done()
+    })
+
+    cy.wrap(subject)
+      .scrollTo(p)
+      .then(() =>
+        done(
+          new Error(
+            'Expected element NOT to be clickable, but click() succeeded'
+          )
+        )
+      )
+  }
+)

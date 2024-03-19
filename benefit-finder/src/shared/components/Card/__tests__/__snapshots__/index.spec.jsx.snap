@@ -26,6 +26,7 @@ exports[`Card > renders a match to the previous snapshot 1`] = `
       />
       <i
         aria-hidden="true"
+        data-testid="icon-undefined"
       />
     </a>
   </li>

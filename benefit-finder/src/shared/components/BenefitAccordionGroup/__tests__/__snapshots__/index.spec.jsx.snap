@@ -35,6 +35,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
           <i
             alt="a plus icon"
             aria-hidden="true"
+            data-testid="icon-open"
           >
             <svg
               class="bf-open"
@@ -157,6 +158,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
             Visit Department of Defense (DOD) 
             <i
               aria-hidden="true"
+              data-testid="icon-carrot-small"
             >
               <svg
                 class="bf-carrot-small"

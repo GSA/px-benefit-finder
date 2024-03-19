@@ -26,6 +26,7 @@ const Card = ({
   noCarrot,
   carrotType,
   icon,
+  ...props
 }) => {
   const defaultClasses = icon !== undefined ? ['bf-card-icon'] : ''
   const utilityClasses = ['add-list-reset']
@@ -44,6 +45,7 @@ const Card = ({
         utilityClasses,
       })}
       key={`${title}`}
+      {...props}
     >
       <a className="bf-usa-card__container usa-card__container" href={href}>
         {handleIcon}

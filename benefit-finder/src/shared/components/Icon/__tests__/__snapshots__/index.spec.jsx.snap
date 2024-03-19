@@ -4,6 +4,7 @@ exports[`Icon > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <i
     aria-hidden="true"
+    data-testid="icon-close"
   >
     <svg
       class="bf-close"

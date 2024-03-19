@@ -51,7 +51,7 @@ const Icon = ({ type, color, ...props }) => {
       icon = null
   }
   return (
-    <i {...props} aria-hidden="true">
+    <i {...props} aria-hidden="true" data-testid={`icon-${type}`}>
       {icon}
     </i>
   )

@@ -40,9 +40,7 @@ jobs:
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
           [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-          cd benefit-finder
           nvm install 20 # --reinstall-packages-from=node
-          cd ..
           bash ./mv-benefit-finder-app.sh
 
       - name: Setup CF CLI

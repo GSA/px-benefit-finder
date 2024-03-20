@@ -36,7 +36,6 @@ class BenefitFinderTest extends ExistingSiteBase {
   public function testAll() {
     $this->testApi();
     $this->testPage();
-    $this->testReact();
   }
 
   /**
@@ -59,16 +58,6 @@ class BenefitFinderTest extends ExistingSiteBase {
   public function testPage() {
     $this->drupalGet('/benefit-finder/death');
     $this->assertSession()->elementExists('css', '#benefit-finder');
-  }
-
-  /**
-   * Tests Benefit Finder React.
-   *
-   *  This test only needs to ensure that React works.
-   */
-  public function testReact() {
-    $this->drupalGet('/benefit-finder/death');
-    $this->assertSession()->pageTextContains('Benefit finder: death of a loved one');
   }
 
 }

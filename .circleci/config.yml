@@ -108,10 +108,9 @@ jobs:
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
             cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            cf stop benefit-finder-cms-${CIRCLE_BRANCH}
+            cf stop benefit-finder-cms-${CIRCLE_BRANCH} || echo "No app found!"
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
             while : ; do
@@ -232,10 +231,9 @@ jobs:
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
             cf target -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
-            cf services
             cd px-benefit-finder/usagov-2021
             echo "$CR_PAT" | docker login ghcr.io --username "$GH_USERNAME" --password-stdin
-            cf stop benefit-finder-cms-${CIRCLE_BRANCH}
+            cf stop benefit-finder-cms-${CIRCLE_BRANCH} || echo "No app found!"
             CF_DOCKER_PASSWORD=$( echo $CR_PAT) cf push benefit-finder-cms-${CIRCLE_BRANCH}  --docker-image "$DOCKERREPO:$IMAGE_TAG" --docker-username "$CF_USER"
             docker logout
             while : ; do

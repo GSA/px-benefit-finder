@@ -124,16 +124,16 @@ jobs:
           git tag $TAG_NAME
           git push origin $TAG_NAME
 
-      - name: Close release issues
-        run: |
-          # Get the list of open issues in the current release/milestone
-          issues=$(gh issue list --state open  --milestone "${{ github.event.inputs.tag_name }}")
-          echo $issues
+      # - name: Close release issues
+      #   run: |
+      #     # Get the list of open issues in the current release/milestone
+      #     issues=$(gh issue list --state open  --milestone "${{ github.event.inputs.tag_name }}")
+      #     echo $issues
 
-          # Iterate over each issue and move it to the "Done" column
-          for issue in $issues; do
-            gh issue $issue close --reason completed
-          done
+      #     # Iterate over each issue and move it to the "Done" column
+      #     for issue in $issues; do
+      #       gh issue $issue close --reason completed
+      #     done
 
       - name: Creating pre-release
         env:

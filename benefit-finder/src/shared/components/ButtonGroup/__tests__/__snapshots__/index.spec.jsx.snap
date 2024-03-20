@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ButtonGroup > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="bf-usa-button-group usa-button-group width-full"
+  >
+    <li
+      class="bf-usa-button-group__item usa-button-group__item width-full"
+    >
+      <button
+        class="bf-usa-button usa-button"
+        type="button"
+      />
+    </li>
+    <li
+      class="bf-usa-button-group__item usa-button-group__item width-full"
+    >
+      <button
+        class="bf-usa-button usa-button"
+        type="button"
+      />
+    </li>
+  </ul>
+</DocumentFragment>
+`;

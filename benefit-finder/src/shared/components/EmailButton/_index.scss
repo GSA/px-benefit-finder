@@ -1,5 +1,15 @@
 @use '../../styles/sizes/_index.scss' as *;
 
-.email-button.usa-button {
+.bf-email-button.bf-usa-button {
   width: $button-max-width;
+
+  i {
+    position: relative;
+    top: 3px;
+    right: 10px;
+
+    svg {
+      height: 18px;
+    }
+  }
 }

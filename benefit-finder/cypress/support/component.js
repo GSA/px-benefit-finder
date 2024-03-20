@@ -12,14 +12,14 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-
-// Import commands.js using ES2015 syntax:
 import './commands'
+import 'cypress-axe'
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
-
+import * as sbPreview from '../../.storybook/preview'
+import { setProjectAnnotations } from '@storybook/react'
 import { mount } from 'cypress/react18'
+
+setProjectAnnotations(sbPreview) // set decorators from storybook
 
 Cypress.Commands.add('mount', mount)
 

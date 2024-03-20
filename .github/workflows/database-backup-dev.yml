@@ -1,0 +1,36 @@
+name: Database backup (dev)
+
+on:
+  push:
+    branches: 
+      - dev
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  backup-database-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install basic dependancies
+        run: ./scripts/pipeline/deb-basic.deps.sh
+      - name: Install AWSCLI
+        run: ./scripts/pipeline/awscli-install.sh
+      - name: Install MySQL Client
+        run: ./scripts/pipeline/deb-mysql-client-install.sh
+      - name: Install Cloudfoundry CLI
+        run: ./scripts/pipeline/deb-cf-install.sh
+      - name: Backup dev database
+        shell: bash
+        env:
+          CF_USER: '${{ secrets.CF_USER }}'
+          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
+          CF_ORG: '${{ secrets.CF_ORG }}'
+          project: '${{ secrets.project }}'
+        run: |
+          export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
+          export ENVIRONMENT=dev
+          source ./scripts/pipeline/cloud-gov-login.sh
+          source ./scripts/pipeline/database-backup.sh
+          source ./scripts/pipeline/s3-backup-upload.sh

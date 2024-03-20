@@ -2,45 +2,50 @@
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
 
-#benefit-finder {
-  .key-eligibility-criteria-group {
-    .key-eligibility-criteria-heading {
-      @include important-bold;
+.bf-key-eligibility-criteria-group {
+  .bf-key-eligibility-criteria-heading {
+    @include important-bold;
 
-      background-color: color.$marine;
-      border-radius: 4px 4px 0 0;
+    background-color: color.$marine;
+    border-radius: 4px 4px 0 0;
+    padding: space.$space-md space.$space-lg;
+    margin: 0;
+    color: color.$white;
+    text-align: center;
+  }
+
+  .bf-key-eligibility-criteria-sub-heading {
+    margin-bottom: 0;
+  }
+
+  .bf-key-eligibility-criteria-list {
+    padding: 0;
+    margin: 0;
+
+    .bf-key-eligibility-criteria-list-item {
+      margin: 0;
       padding: space.$space-md space.$space-lg;
-      margin: 0;
-      color: color.$white;
-      text-align: center;
+      border: 0.5px solid color.$pop-blue;
+      background-color: color.$sky;
+      display: flex;
+      flex-wrap: nowrap;
+
+      .bf-checkmark--green {
+        height: 100%;
+        margin-right: space.$space-lg;
+      }
     }
 
-    .key-eligibility-criteria-sub-heading {
-      margin-bottom: 0;
+    li.bf-usa-list {
+      @include p2;
     }
 
-    .key-eligibility-criteria-list {
-      padding: 0;
-      margin: 0;
-
-      .key-eligibility-criteria-list-item {
-        margin: 0;
-        padding: space.$space-md space.$space-lg;
-        border: 0.5px solid color.$pop-blue;
-        background-color: color.$sky;
-      }
-
-      li.usa-list {
-        @include p2;
-      }
-
-      li.unmet-criteria-item {
-        @include p;
-      }
+    li.bf-unmet-criteria-item {
+      @include p;
     }
   }
+}
 
-  .benefit-alert .usa-alert__text {
-    @include p3;
-  }
+.bf-usa-alert .bf-usa-alert__text {
+  @include p3;
 }

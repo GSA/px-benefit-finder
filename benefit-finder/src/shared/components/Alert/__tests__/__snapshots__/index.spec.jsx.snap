@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Alert > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-hidden="true"
+    aria-live="polite"
+    class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
+    role="alert"
+    tabindex="0"
+  >
+    <div
+      class="bf-usa-alert__body usa-alert__body"
+    >
+      <h4
+        class="bf-usa-alert__heading usa-alert__heading"
+      />
+      <p
+        class="bf-usa-alert__text usa-alert__text"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -5,6 +5,10 @@ class PageObjects {
     return cy.get('.usa-button')
   }
 
+  stepIndicator() {
+    return cy.get('.usa-step-indicator')
+  }
+
   applicantDateOfBirthMonth() {
     return cy.get('#date_of_birth_month-applicant_date_of_birth_0')
   }
@@ -42,11 +46,11 @@ class PageObjects {
   }
 
   benefitSectionAlert() {
-    return cy.get('div#benefit-section > div[role="alert"]')
+    return cy.get('div#bf-section > div[role="alert"]')
   }
 
   dateAlert() {
-    return cy.get('.date-alert')
+    return cy.get('.bf-usa-date-alert')
   }
 
   applicantRelationshipToDeceased() {
@@ -58,7 +62,7 @@ class PageObjects {
   }
 
   benefitSectionFieldset() {
-    return cy.get('#benefit-section .usa-fieldset')
+    return cy.get('#bf-section .usa-fieldset')
   }
 
   buttonGroup() {
@@ -67,6 +71,46 @@ class PageObjects {
 
   accordion(heading) {
     return cy.get(`[data-analytics-content="${heading}"]`)
+  }
+
+  benefitsAccordion() {
+    return cy.get('.usa-accordion__button')
+  }
+
+  menuButton() {
+    return cy.get('.usa-menu-btn')
+  }
+
+  mobileMenu() {
+    return cy.get('.usagov-mobile-menu')
+  }
+
+  breadCrumbList() {
+    return cy.get('.usa-breadcrumb__list')
+  }
+
+  cardGroup() {
+    return cy.get('.usa-card-group li')
+  }
+
+  selectField() {
+    return cy.get('main .bf-usa-select')
+  }
+
+  inputField() {
+    return cy.get('main .usa-input')
+  }
+
+  radioGroup() {
+    return cy.get('main .radio-group')
+  }
+
+  expandAll() {
+    return cy.get('.bf-expand-all')
+  }
+
+  keyEligibilityCriteriaListIcon() {
+    return cy.get('.usa-accordion .bf-usa-list svg')
   }
 }
 

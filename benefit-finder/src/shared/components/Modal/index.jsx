@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
-import { ObfuscatedLink } from '../index'
+import { ObfuscatedLink, Icon } from '../index'
+import { scrollLock } from '../../utils'
 
 import './_index.scss'
 
@@ -28,18 +29,6 @@ const customStyles = {
     maxWidth: '520px',
   },
 }
-
-const Close = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    height="24"
-    viewBox="0 0 24 24"
-    width="24"
-  >
-    <path d="M0 0h24v24H0z" fill="none" />
-    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-  </svg>
-)
 
 /**
  * a functional component that renders a trigger, that when clicked opens a dialog
@@ -68,8 +57,13 @@ const Modal = ({
   // state
   const triggerRef = useRef(null)
 
+  /**
+   * a function that triggers the modal to an open state
+   * @function
+   */
   const handleOpenModal = () => {
     if (handleCheckRequriedFields() === true) {
+      scrollLock.enableScroll()
       setModalOpen(true)
     }
   }
@@ -84,15 +78,26 @@ const Modal = ({
     triggerRef && triggerRef.current.focus()
     // clear the hash
     window.location.hash = ''
+    scrollLock.disableScroll()
     setModalOpen(false)
+    return true
   }
 
   const handleKeyValidation = e => e.which === 32 || e.which === 13
 
   // effects
   useEffect(() => {
+    const cleanUp = () => {
+      const root = document.getElementById('benefit-finder')
+
+      root &&
+        root.hasAttribute('aria-hidden') &&
+        root.removeAttribute('aria-hidden')
+    }
+
     // set our application root id here
     NavModal.setAppElement('#benefit-finder')
+    return cleanUp()
   }, [])
 
   /**
@@ -134,26 +139,38 @@ const Modal = ({
     navItemTwoLabel,
     navItemTwoFunction,
   }) => {
+    const handleClick = navFunction => {
+      handleCloseModal(triggerRef) && navFunction()
+    }
+    const handleKeyDown = (e, navFunction) => {
+      handleKeyValidation(e) && handleCloseModal(triggerRef) && navFunction()
+    }
     return (
-      <ul className="modal usa-button-group width-full">
-        <li className="usa-button-group__item width-full" key="nav-item-one">
+      <ul className="bf-modal bf-usa-button-group usa-button-group width-full">
+        <li
+          className="bf-usa-button-group__item usa-button-group__item width-full"
+          key="bf-nav-item-one"
+        >
           <ObfuscatedLink
-            id="navItemOneBtn"
-            className="nav-item-one width-full"
-            onClick={() => navItemOneFunction()}
-            onKeyDown={e => handleKeyValidation(e) && navItemOneFunction()}
+            id="bf-navItemOneBtn"
+            className="bf-nav-item-one width-full"
+            onClick={() => handleClick(navItemOneFunction)}
+            onKeyDown={e => handleKeyDown(e, navItemOneFunction)}
             noCarrot
             tabIndex="0"
           >
             {navItemOneLabel}
           </ObfuscatedLink>
         </li>
-        <li className="usa-button-group__item width-full" key="nav-item-two">
+        <li
+          className="bf-usa-button-group__item usa-button-group__item width-full"
+          key="nav-item-two"
+        >
           <ObfuscatedLink
-            id="navItemTwoBtn"
-            className="nav-item-two width-full"
-            onClick={() => navItemTwoFunction()}
-            onKeyDown={e => handleKeyValidation(e) && navItemTwoFunction()}
+            id="bf-navItemTwoBtn"
+            className="bf-nav-item-two width-full"
+            onClick={() => handleClick(navItemTwoFunction)}
+            onKeyDown={e => handleKeyDown(e, navItemTwoFunction)}
             noCarrot
             tabIndex="0"
           >
@@ -165,26 +182,30 @@ const Modal = ({
   }
 
   return (
-    <div id={id} className="benefit-modal-group">
+    <div id={id} className="bf-usa-modal-group">
       <Trigger
         triggerLabel={triggerLabel}
         onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}
         onClick={() => handleOpenModal()}
       ></Trigger>
       <NavModal
+        id="benefit-finder-modal"
         isOpen={modalOpen}
         onRequestClose={() => handleCloseModal(triggerRef)}
         style={customStyles}
+        aria={{
+          label: modalHeading,
+        }}
       >
         <button
           type="button"
           aria-label="Close"
-          className="modal-button"
+          className="bf-modal-button"
           onClick={() => handleCloseModal(triggerRef)}
         >
-          <Close alt="a close out icon" />
+          <Icon type="modal-close" color="black" alt="a close out icon" />
         </button>
-        <div className="modal-heading">{modalHeading}</div>
+        <div className="bf-modal-heading">{modalHeading}</div>
         {children || (
           <GroupNavigation
             navItemOneLabel={navItemOneLabel}
@@ -193,22 +214,6 @@ const Modal = ({
             navItemTwoFunction={navItemTwoFunction}
           />
         )}
-        {/* child example: <ul className="usa-button-group">
-          <li className="usa-button-group__item">
-            <button type="button" className="usa-button" data-close-modal>
-              Continue without saving
-            </button>
-          </li>
-          <li className="usa-button-group__item">
-            <button
-              type="button"
-              className="usa-button padding-105 text-center"
-              data-close-modal
-            >
-              Go back
-            </button>
-          </li>
-        </ul> */}
       </NavModal>
     </div>
   )

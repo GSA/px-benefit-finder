@@ -6,6 +6,10 @@ on:
 
 permissions: read-all
 
+defaults:
+  run:
+    working-directory: ./benefit-finder
+
 jobs:
   install:
     name: cypress-run
@@ -14,11 +18,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Cypress run
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          cd ..
+          git submodule init
+          git submodule update
+          cd benefit-finder
+
+      - name: Cypress Run Tests
         uses: cypress-io/github-action@v6
         with:
-          component: true
+          browser: 'chrome'
+          config-file: cypress.config.js
           working-directory: benefit-finder
+          build: "npm run cy:build:storybook"
+          start: "npm run cy:run:pipeline"
 
       - uses: actions/upload-artifact@v3
         if: failure ()

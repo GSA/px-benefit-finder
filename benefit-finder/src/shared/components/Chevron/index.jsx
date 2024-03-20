@@ -12,13 +12,13 @@ import './_index.scss'
  */
 const Chevron = ({ heading, description }) => {
   return (
-    <div className="chevron">
-      <div className="grid-container">
-        <Heading className="chevron-heading" headingLevel={1}>
+    <div className="bf-chevron">
+      <div className="bf-grid-container grid-container">
+        <Heading className="bf-chevron-heading" headingLevel={1}>
           {heading}
         </Heading>
         <div
-          className="chevron-description"
+          className="bf-chevron-description"
           dangerouslySetInnerHTML={createMarkup(description)}
         />
       </div>

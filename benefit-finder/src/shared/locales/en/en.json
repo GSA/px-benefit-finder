@@ -1,14 +1,14 @@
 {
   "intro": {
     "heading": "Steps",
-    "timeIndicator": "Time to complete",
+    "timeIndicator": "Estimated time",
     "steps": {
       "list": [
         {
           "title": "Answer questions"
         },
         {
-          "title": "Review Results"
+          "title": "Review results"
         },
         {
           "title": "Find out how to apply"
@@ -19,13 +19,13 @@
       "heading": "Before you start:",
       "list": [
         {
-          "notice": "<div>Your information<strong> is not</strong> shared, saved, or submitted.</div>"
+          "notice": "<div><strong>This is not an application.</strong> This tool will help you find possible benefits.</div>"
         },
         {
-          "notice": "Provide complete info to get more relevant results."
+          "notice": "Your answers <strong>are not</strong> saved or submitted."
         },
         {
-          "notice": "<div><strong>This form is not an application.</strong> You will need to apply for benefits with each agency.</div>"
+          "notice": "<div><strong>Answer more questions</strong> to get better results.</div>"
         }
       ]
     },
@@ -35,11 +35,11 @@
     "stepBackLink": "Back"
   },
   "requiredLabel": {
-    "value": "Required"
+    "value": "required"
   },
   "alertBanner": {
-    "heading": "Error status",
-    "description": "All fields marked required must be completed."
+    "heading": "Error",
+    "description": "Complete all required fields."
   },
   "buttonGroup": [
     {
@@ -61,8 +61,8 @@
     ]
   },
   "verifySelectionsView": {
-    "heading": "Review and Confirm",
-    "noResultsLabel": "No input given",
+    "heading": "Review and confirm",
+    "noResultsLabel": "Not answered",
     "buttonGroup": [
       {
         "value": "Back"
@@ -79,7 +79,7 @@
         "description": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>"
       },
       "heading": "Results",
-      "description": "<div><strong>You may be eligible for these benefits:</strong></div>"
+      "description": "<strong>You may be eligible for these benefits:</strong>"
     },
     "notQualified": {
       "chevron": {
@@ -87,7 +87,7 @@
         "description": "According to your answers you are not eligible for these benefits."
       },
       "heading": "Results",
-      "description": "<div><strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes.</div>"
+      "description": "<strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes."
     },
     "stepBackLink": "Back",
     "eligibleResults": {
@@ -100,9 +100,9 @@
     },
     "benefitAccordion": {
       "eligibleStatusLabels": [
-        "Likely Eligible",
-        "More Information Needed",
-        "Not Eligible"
+        "Likely eligible",
+        "More information needed",
+        "Not eligible"
       ],
       "agencyPrefix": "By",
       "benefitSummary": "Key eligibility criteria",
@@ -142,17 +142,17 @@
     ]
   },
   "sectionHeadings": {
-    "start": "Complete Questions",
-    "continue": "Questions Continued",
-    "final": "Final Questions"
+    "start": "Answer these questions",
+    "continue": "Questions continued",
+    "final": "Final questions"
   },
   "select": {
     "labelSelect": "Select",
-    "defaultValue": "Click to Select",
+    "defaultValue": "Click to select",
     "dateDefaultValue": "-Select-"
   },
   "date": {
-    "alert": "Date should follow the format 01 - January 22 1977",
+    "alert": "Date should follow the format January 19 2000",
     "labelDay": "Day",
     "labelMonth": "Month",
     "labelYear": "Year",

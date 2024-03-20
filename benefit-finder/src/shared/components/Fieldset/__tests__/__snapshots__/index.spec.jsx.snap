@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Fieldset > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="bf-usa-fieldset usa-fieldset "
+  />
+</DocumentFragment>
+`;

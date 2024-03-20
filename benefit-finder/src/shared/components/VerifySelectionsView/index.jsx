@@ -37,10 +37,10 @@ const VerifySelectionsView = ({
    * @return {html} returns html div
    */
   const NoInputGiven = ({ item, index }) => (
-    <div className="verify-criteria-value">
+    <div className="bf-verify-criteria-value">
       <div
-        className="verify-criteria-legend"
-        key={`criteria-${item.fieldset.criteriaKey}-${index}`}
+        className="bf-verify-criteria-legend"
+        key={`bf-criteria-${item.fieldset.criteriaKey}-${index}`}
       >
         {item.fieldset.legend}
       </div>
@@ -58,10 +58,8 @@ const VerifySelectionsView = ({
    */
   const resultItem = ({ criteriaId, legend, selected }) => {
     return (
-      <div className="verify-criteria-value">
-        <div className="verify-criteria-legend" key={criteriaId}>
-          {legend}
-        </div>
+      <div className="bf-verify-criteria-value" key={criteriaId}>
+        <div className="bf-verify-criteria-legend">{legend}</div>
         {typeof selected?.value === 'object'
           ? `${parseDate(selected.value).toLocaleDateString(
               local,
@@ -110,15 +108,15 @@ const VerifySelectionsView = ({
   }, [])
 
   return (
-    <div className="verify-selections-view">
-      <div className="grid-container">
-        <Heading className="section-heading" headingLevel={1}>
+    <div className="bf-verify-selections-view">
+      <div className="bf-grid-container grid-container">
+        <Heading className="bf-section-heading" headingLevel={1}>
           {verifySelectionsView?.heading}
         </Heading>
-        <div className="section-wrapper">
-          <div className="section">
+        <div className="bf-section-wrapper">
+          <div className="bf-section-info">
             <Button
-              className="step-back-link"
+              className="bf-step-back-link"
               onClick={handleStepBack}
               unstyled
             >
@@ -131,11 +129,13 @@ const VerifySelectionsView = ({
                   // map all the criteria input legends and values
                   const { section } = item
                   return (
-                    <div className="verify-criteria-section" key={i}>
+                    <div
+                      className="bf-verify-criteria-section"
+                      key={`bf-section-${section.heading}`}
+                    >
                       <Heading
-                        className="verify-criteria-section-heading"
+                        className="bf-verify-criteria-section-heading"
                         headingLevel={2}
-                        key={`section-${i}`}
                       >
                         {section.heading}
                       </Heading>
@@ -143,9 +143,17 @@ const VerifySelectionsView = ({
                         {section.fieldsets.map((item, i) => {
                           // if no value then return generic message
                           return apiCalls.GET.SelectedValue(item) ? (
-                            <Items item={item} index={i} />
+                            <Items
+                              item={item}
+                              index={i}
+                              key={`bf-criteria-item-${i}`}
+                            />
                           ) : (
-                            <NoInputGiven item={item} index={i} />
+                            <NoInputGiven
+                              item={item}
+                              index={i}
+                              key={`bf-criteria-item-${i}`}
+                            />
                           )
                         })}
                       </div>
@@ -153,7 +161,7 @@ const VerifySelectionsView = ({
                   )
                 })}
             </div>
-            <div className="section-nav-btn-group">
+            <div className="bf-section-nav-btn-group">
               <Button secondary onClick={handleStepBack}>
                 {buttonGroup[0].value}
               </Button>

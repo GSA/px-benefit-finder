@@ -22,10 +22,10 @@ const NoticesList = ({ data }) => {
       data &&
       data.data.map((item, i) => {
         return (
-          <li className="notice" key={`notice-${i}`}>
+          <li className="bf-notice" key={`notice-${i}`}>
             <Alert noBackground tabIndex={-1}>
               <div
-                className="notice-item"
+                className="bf-notice-item"
                 dangerouslySetInnerHTML={createMarkup(item.notice)}
               ></div>
             </Alert>

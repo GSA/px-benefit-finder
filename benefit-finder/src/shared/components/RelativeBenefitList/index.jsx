@@ -5,25 +5,28 @@ import { Card } from '../index'
  * a functional component that renders a list of usa-card component(s)
  * @component
  * @param {array} data - passed benefits data
- * @param {number} carrotType - determines display type
+ * @param {string} carrotType - determines display type
  * @return {html} returns a semantic html unorderd list element
  */
 const RelativeBenefitList = ({ data, carrotType }) => {
   return (
-    <ul className="usa-card-group">
+    <ul className="bf-usa-card-group usa-card-group">
       {data &&
         data.map((item, i) => {
-          const { title, link, cta, body } = item.lifeEvent
+          const { title, link, cta, body, lifeEventId } = item.lifeEvent
+          const trimedLifeEventId = lifeEventId.replace('es_', '')
 
           return (
             <Card
-              className="relative-benefit-card tablet:grid-col-12"
+              className="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12"
               title={title}
               cta={cta}
               href={link}
               body={body}
               key={`${title}-${i}`}
               carrotType={carrotType}
+              icon={trimedLifeEventId}
+              data-testid={trimedLifeEventId}
             />
           )
         })}
@@ -33,7 +36,7 @@ const RelativeBenefitList = ({ data, carrotType }) => {
 
 RelativeBenefitList.propTypes = {
   data: PropTypes.array,
-  carrotType: PropTypes.number,
+  carrotType: PropTypes.string,
 }
 
 export default RelativeBenefitList

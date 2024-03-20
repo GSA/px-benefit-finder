@@ -3,63 +3,61 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/breakpoints/_index.scss' as *;
 
-#benefit-finder {
-  .notices-list {
-    margin-bottom: space.$space-xl;
+.bf-notices-list {
+  margin-bottom: space.$space-xl;
+}
+
+.bf-notice {
+  margin-bottom: space.$space-md-plus;
+}
+
+.bf-notice-item {
+  @include important-bold;
+}
+
+.bf-line-sperator-wrapper {
+  display: block;
+  padding-top: space.$space-lg;
+  padding-bottom: space.$padding-bottom-lg;
+  margin: space.$space-lg;
+}
+
+.bf-line-sperator {
+  display: block;
+  border-top: 2px solid color.$base-light-grey;
+  width: 100%;
+  height: 100%;
+}
+
+.bf-line-sperator-wrapper--vertical {
+  display: none;
+}
+
+.bf-line-sperator--vertical {
+  display: none;
+}
+
+@media (width >= $desktop) {
+  .bf-intro .bf-line-sperator-wrapper {
+    display: none;
   }
 
-  .notice {
-    margin-bottom: space.$space-md-plus;
+  .bf-intro .bf-line-sperator {
+    display: none;
   }
 
-  .notice-item {
-    @include important-bold;
-  }
-
-  .line-sperator-wrapper {
+  .bf-line-sperator-wrapper--vertical {
     display: block;
     padding-top: space.$space-lg;
     padding-bottom: space.$padding-bottom-lg;
-    margin: space.$space-lg;
+    margin: 0;
+    margin-right: space.$space-lg;
   }
 
-  .line-sperator {
+  .bf-line-sperator--vertical {
     display: block;
-    border-top: 2px solid color.$base-light-grey;
+    border-left: 2px solid color.$base-light-grey;
     width: 100%;
-    height: 100%;
-  }
-
-  .line-sperator-wrapper--vertical {
-    display: none;
-  }
-
-  .line-sperator--vertical {
-    display: none;
-  }
-
-  @media (width >= $desktop) {
-    .intro .line-sperator-wrapper {
-      display: none;
-    }
-
-    .intro .line-sperator {
-      display: none;
-    }
-
-    .line-sperator-wrapper--vertical {
-      display: block;
-      padding-top: space.$space-lg;
-      padding-bottom: space.$padding-bottom-lg;
-      margin: 0;
-      margin-right: space.$space-lg;
-    }
-
-    .line-sperator--vertical {
-      display: block;
-      border-left: 2px solid color.$base-light-grey;
-      width: 100%;
-      height: 80%;
-    }
+    height: 80%;
   }
 }

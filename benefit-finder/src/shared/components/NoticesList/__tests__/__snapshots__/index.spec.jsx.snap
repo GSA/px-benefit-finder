@@ -1,0 +1,103 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NoticesList > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="notices"
+  >
+    <ul
+      class="notices-list add-list-reset"
+    >
+      <li
+        class="bf-notice"
+      >
+        <div
+          aria-hidden="true"
+          aria-live="polite"
+          class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
+          role="alert"
+          tabindex="-1"
+        >
+          <div
+            class="bf-usa-alert__body usa-alert__body"
+          >
+            <div
+              class="bf-usa-alert__text usa-alert__text"
+            >
+              <div
+                class="bf-notice-item"
+              >
+                <div>
+                  <strong>
+                    This is not an application.
+                  </strong>
+                   This tool will help you find possible benefits.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="bf-notice"
+      >
+        <div
+          aria-hidden="true"
+          aria-live="polite"
+          class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
+          role="alert"
+          tabindex="-1"
+        >
+          <div
+            class="bf-usa-alert__body usa-alert__body"
+          >
+            <div
+              class="bf-usa-alert__text usa-alert__text"
+            >
+              <div
+                class="bf-notice-item"
+              >
+                Your answers 
+                <strong>
+                  are not
+                </strong>
+                 saved or submitted.
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="bf-notice"
+      >
+        <div
+          aria-hidden="true"
+          aria-live="polite"
+          class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info no-background"
+          role="alert"
+          tabindex="-1"
+        >
+          <div
+            class="bf-usa-alert__body usa-alert__body"
+          >
+            <div
+              class="bf-usa-alert__text usa-alert__text"
+            >
+              <div
+                class="bf-notice-item"
+              >
+                <div>
+                  <strong>
+                    Answer more questions
+                  </strong>
+                   to get better results.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

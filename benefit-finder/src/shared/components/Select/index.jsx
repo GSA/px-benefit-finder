@@ -29,7 +29,7 @@ function Select({
 }) {
   const { labelSelect, defaultValue } = ui
   const handleRequired = required === 'TRUE' ? ['required-field'] : ''
-  const defaultClasses = ['usa-select']
+  const defaultClasses = ['bf-usa-select usa-select']
   const utilityClasses = handleRequired
   /**
    * a functional component to create a list of options for a select element.
@@ -61,7 +61,7 @@ function Select({
         onChange={onChange}
         value={selected || ''}
         required={required === 'TRUE'}
-        aria-invalid={invalid === true}
+        aria-invalid={invalid}
       >
         <option value="" key="default" disabled>
           {defaultValue}

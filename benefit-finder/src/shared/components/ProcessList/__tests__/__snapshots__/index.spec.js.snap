@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ProcessList renders a match to the previous snapshot 1`] = `
-<ol
-  className="usa-process-list"
-/>
-`;

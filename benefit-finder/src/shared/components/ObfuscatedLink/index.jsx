@@ -1,5 +1,5 @@
 import { useHandleClassName } from '../../hooks'
-import { Carrot } from '../index'
+import { Icon } from '../index'
 import PropTypes from 'prop-types'
 import './_index.scss'
 
@@ -28,10 +28,17 @@ const ObfuscatedLink = ({
 }) => {
   // set our link as external, will be decorated by uswds css
   const defaultClasses = ext
-    ? ['usa-button', 'usa-link--external', 'obfuscated-link']
-    : ['usa-button', 'obfuscated-link']
+    ? [
+        'bf-usa-button',
+        'usa-button',
+        'bf-usa-link--external',
+        'usa-link--external',
+        'bf-obfuscated-link',
+      ]
+    : ['bf-usa-button', 'usa-button', 'bf-obfuscated-link']
 
-  const handleCarrot = noCarrot === true ? null : <Carrot color="white" />
+  const handleCarrot =
+    noCarrot === true ? null : <Icon type="carrot-small" color="white" />
 
   return (
     <a

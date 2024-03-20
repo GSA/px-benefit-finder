@@ -52,6 +52,9 @@ locals {
               "allow 98.164.54.242/32;",
               "allow 75.176.62.86/32;",
               "allow 70.21.206.246/32;",
+              "allow 100.16.185.127/32;",
+              "allow 75.176.62.86/32;",
+              "allow 2603:6080:2840:284:80b4:2ae:80f8:9652;",
               ## GSA VPN pool
               "allow 50.81.160.164;",
               "allow 100.36.151.190;",
@@ -125,7 +128,7 @@ locals {
           )
 
           ## The OWASP CRS rules for modsecurity.
-          CRS_RULES = "coreruleset-3.3.4.tar.gz"
+          CRS_RULES = "coreruleset-4.0.0.tar.gz"
 
           ## IP address that are denied access from the static website.
           DENYED_IPS_STATIC = base64encode(jsonencode([]))
@@ -159,7 +162,7 @@ locals {
         }
 
         ## Maximum amount of memory the application can use.
-        memory = 64
+        memory = 96
 
         ## Addional network policies to add to the application.
         ## Format: name of the application and the port it is listening on.
@@ -201,24 +204,24 @@ locals {
     services = {
 
       ## S3 storage for backups.
-      # backup = {
-      #   ## Applications to bind to this service.
-      #   applications = ["drupal"]
+      backup = {
+        ## Applications to bind to this service.
+        applications = []
 
-      #   ## Should a service key be generated for other applications to use?
-      #   service_key = true
+        ## Should a service key be generated for other applications to use?
+        service_key = true
 
-      #   ## The size of the instance to deploy.
-      #   service_plan = "basic"
+        ## The size of the instance to deploy.
+        service_plan = "basic"
 
-      #   ## The type of service to be deployed.
-      #   service_type = "s3"
+        ## The type of service to be deployed.
+        service_type = "s3"
 
-      #   ## Tags to add to the service.
-      #   tags = [
-      #     terraform.workspace
-      #   ]
-      # }
+        ## Tags to add to the service.
+        tags = [
+          terraform.workspace
+        ]
+      }
 
       ## MySQL RDS database.
       mysql = {
@@ -733,6 +736,7 @@ locals {
           waf = local.globals.apps.waf
         }
         services = {
+          backup  = local.globals.services.backup
           mysql   = local.globals.services.mysql
           secrets = local.globals.services.secrets
           static  = local.globals.services.static
@@ -780,6 +784,7 @@ locals {
           )
         }
         services = {
+          backup  = local.globals.services.backup
           mysql   = local.globals.services.mysql
           secrets = local.globals.services.secrets
           static  = local.globals.services.static

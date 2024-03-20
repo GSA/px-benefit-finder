@@ -1,0 +1,9 @@
+.docblock-icongallery svg {
+  width: 24px;
+  height: 24px;
+}
+
+.docblock-icongallery .bf-carrot-small,
+.docblock-icongallery .bf-carrot-big {
+  position: unset;
+}

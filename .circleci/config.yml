@@ -49,9 +49,6 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            echo -e "\nif [ "${CF_INSTANCE_INDEX:-''}" == "0" ] && [ -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]; then"
-            echo -e "\t./scripts/entrypoint.sh" >> scripts/bootstrap.sh
-            echo "fi"
 
       - run:
           name: Building, tagging, pushing the Docker Image
@@ -82,6 +79,7 @@ jobs:
             sed -i "s#^    - secrets#    - benefit-finder-secrets-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - storage#    - benefit-finder-storage-${CIRCLE_BRANCH}#" manifest.yml
             sed -i "s#^    - dbstorage#    - benefit-finder-static-${CIRCLE_BRANCH}#" manifest.yml
+            sed -i '16i\  command: ./scripts/entrypoint.sh' manifest.yml
             cat manifest.yml
 
       - run:
@@ -174,9 +172,6 @@ jobs:
             sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
             sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
-            echo -e "\nif [ "${CF_INSTANCE_INDEX:-''}" == "0" ] && [ -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]; then"
-            echo -e "\t./scripts/entrypoint.sh" >> scripts/bootstrap.sh
-            echo "fi"
 
       - run:
           name: Building, tagging, pushing the Docker Image

@@ -28,6 +28,7 @@ jobs:
             nvm install 20 # --reinstall-packages-from=node
             bash ./mv-benefit-finder-app.sh
             pwd
+            ls
             ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css 
             ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js
             echo ".................."

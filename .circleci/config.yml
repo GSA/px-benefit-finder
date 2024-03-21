@@ -169,6 +169,7 @@ jobs:
             cat manifest.yml
             echo "---------------------------------------------"
             nvm install 20 # --reinstall-packages-from=node
+            npm ci
             npm run build
             cd ..
             bash mv-uswds-usagov-theme.sh

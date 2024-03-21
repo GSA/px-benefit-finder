@@ -22,7 +22,15 @@ jobs:
           name: Moving the benefit-finder app into usagov-2021 module
           command: |
             cd px-benefit-finder
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+            nvm install 20 # --reinstall-packages-from=node
             bash ./mv-benefit-finder-app.sh
+            pwd
+            ls
+            ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css 
+            ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
@@ -164,8 +172,8 @@ jobs:
             ls -l
             cat manifest.yml
             echo "---------------------------------------------"
-            nvm install node --reinstall-packages-from=node
-            npm i @craco/craco
+            nvm install 20 # --reinstall-packages-from=node
+            npm ci
             npm run build
             cd ..
             bash mv-uswds-usagov-theme.sh
@@ -200,8 +208,7 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-            nvm install v18.3.0
-            nvm alias default 18.3.0
+            nvm install 20 # --reinstall-packages-from=node
             echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
             echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
             echo "Install Gulp on node "$(node --version)

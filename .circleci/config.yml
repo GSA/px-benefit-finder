@@ -27,8 +27,9 @@ jobs:
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
             nvm install 20 # --reinstall-packages-from=node
             bash ./mv-benefit-finder-app.sh
-            ls usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css 
-            ls usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js
+            pwd
+            ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css 
+            ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*

@@ -16,7 +16,7 @@ jobs:
             git submodule init
             git submodule update
             cd usagov-2021
-            git checkout prod
+            git checkout dev
 
       - run:
           name: Moving the benefit-finder app into usagov-2021 module

@@ -28,25 +28,25 @@ test('it should not be in the tab index', async () => {
   const textarea = screen.getByTestId('textarea')
 
   // Simulate tabbing through the elements
-  userEvent.tab()
+  await userEvent.tab()
   expect(skipLink).toHaveFocus()
 
-  userEvent.tab()
+  await userEvent.tab()
   expect(button).toHaveFocus()
 
-  userEvent.tab()
+  await userEvent.tab()
   expect(input).toHaveFocus()
 
-  userEvent.tab()
+  await userEvent.tab()
   expect(select).toHaveFocus()
 
-  userEvent.tab()
+  await userEvent.tab()
   expect(textarea).toHaveFocus()
 
-  userEvent.tab()
+  await userEvent.tab()
   expect(bodyElement).toHaveFocus()
 
-  userEvent.tab()
+  await userEvent.tab()
   expect(skipLink).toHaveFocus()
 })
 
@@ -59,7 +59,7 @@ test('it focus on a click event', async () => {
   const onClickButton = screen.getByTestId('negative-tab-index')
 
   // Simulate click event through the elements
-  userEvent.click(onClickButton)
+  await userEvent.click(onClickButton)
   expect(resetComponent).toHaveFocus()
 })
 
@@ -73,9 +73,9 @@ test('it should focus on skip element after reset element', async () => {
   const skipLink = screen.getByTestId('skip-link')
 
   // Simulate click event through the elements
-  userEvent.click(onClickButton)
+  await userEvent.click(onClickButton)
   expect(resetComponent).toHaveFocus()
 
-  userEvent.tab()
+  await userEvent.tab()
   expect(skipLink).toHaveFocus()
 })

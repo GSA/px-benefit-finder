@@ -1,7 +1,6 @@
-// pull in our uswds dependencies
+// pull in usagov uswds dependencies
 import React from 'react'
-import '../node_modules/@uswds/uswds/dist/js/uswds'
-import '../node_modules/@uswds/uswds/dist/css/uswds.css'
+import '../themes/custom/usagov/scripts/uswds.min.js'
 import '../themes/custom/usagov/css/styles.css'
 import '../build/assets/benefit-finder.min.css'
 

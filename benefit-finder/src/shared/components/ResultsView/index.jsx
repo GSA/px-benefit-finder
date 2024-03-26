@@ -42,11 +42,42 @@ const ResultsView = ({
   } = ui
 
   const [notEligibleView, setnotEligibleView] = useState(false)
+  const [eligibilityCount, setEligibilityCount] = useState({
+    eligible: 0,
+    notEligible,
+    moreInfo: 0,
+  })
+
   const resetElement = useResetElement()
 
   useEffect(() => {
     resetElement.current?.focus()
   }, [resetElement])
+
+  // some data-analytics numbers
+  // how many questions were values provided for
+  const criteriaValues =
+    stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray).length
+  // how many total questions were in the form
+  const benefitsLength =
+    stepDataArray &&
+    apiCalls.GET.ElegibilityByCriteria(
+      apiCalls.GET.SelectedValueAll(stepDataArray),
+      data
+    ).length
+
+  // filter results by eligiblity status/label
+  const handleEligibilityLength = text => {
+    const matches = []
+    const benefits = document.querySelectorAll('.bf-accordion-sub-heading')
+    // match eligibility with label values
+    for (const div of benefits) {
+      if (div.textContent.includes(text)) {
+        matches.push(div)
+      }
+    }
+    return matches.length
+  }
 
   const handleViewToggle = () => {
     setnotEligibleView(!notEligibleView)
@@ -56,6 +87,17 @@ const ResultsView = ({
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    setEligibilityCount({
+      eligible: handleEligibilityLength(
+        ui.benefitAccordion.eligibleStatusLabels[0]
+      ),
+      notEligible: handleEligibilityLength(
+        ui.benefitAccordion.eligibleStatusLabels[2]
+      ),
+      moreInfo: handleEligibilityLength(
+        ui.benefitAccordion.eligibleStatusLabels[1]
+      ),
+    })
   }, [])
 
   // compare the selected criteria array with benefits
@@ -67,6 +109,11 @@ const ResultsView = ({
       data-analytics-content={
         notEligibleView === true ? 'bf-not-eligible-view' : 'bf-eligible-view'
       }
+      data-analytics-content-criteria-values={criteriaValues}
+      data-analytics-content-benefits={benefitsLength}
+      data-analytics-content-eligible={eligibilityCount.eligible}
+      data-analytics-content-not-eligible={eligibilityCount.notEligible}
+      data-analytics-content-more-info={eligibilityCount.moreInfo}
     >
       <Chevron
         heading={

@@ -11,7 +11,9 @@ exports[`loads view 1`] = `
   <div>
     <div
       class="bf-result-view"
-      data-testid="result-view"
+      data-analytics="bf-result-view"
+      data-analytics-content="bf-eligible-view"
+      data-testid="bf-result-view"
     >
       <div
         class="bf-chevron"
@@ -195,7 +197,9 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
   <div>
     <div
       class="bf-result-view"
-      data-testid="result-view"
+      data-analytics="bf-result-view"
+      data-analytics-content="bf-eligible-view"
+      data-testid="bf-result-view"
     >
       <div
         class="bf-chevron"

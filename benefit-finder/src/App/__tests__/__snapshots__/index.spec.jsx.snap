@@ -259,7 +259,9 @@ exports[`loads window query scenario 1 1`] = `
     >
       <div
         class="bf-result-view"
-        data-testid="result-view"
+        data-analytics="bf-result-view"
+        data-analytics-content="bf-eligible-view"
+        data-testid="bf-result-view"
       >
         <div
           class="bf-chevron"
@@ -7805,7 +7807,9 @@ exports[`loads window query scenario 2 1`] = `
     >
       <div
         class="bf-result-view"
-        data-testid="result-view"
+        data-analytics="bf-result-view"
+        data-analytics-content="bf-eligible-view"
+        data-testid="bf-result-view"
       >
         <div
           class="bf-chevron"

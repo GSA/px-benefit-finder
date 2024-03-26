@@ -58,7 +58,7 @@ beforeAll(() => {
 // render view without data
 test('loads view', async () => {
   const view = render(<ResultsView ui={en.resultsView} />)
-  await screen.findByTestId('result-view')
+  await screen.findByTestId('bf-result-view')
   expect(view.baseElement).toMatchSnapshot()
 })
 

@@ -34,48 +34,102 @@ const ResultsView = ({
 }) => {
   const {
     stepBackLink,
-    notQualified,
-    qualified,
+    notEligible,
+    eligible,
     notEligibleResults,
     resultsRelativeBenefits,
     shareResults,
   } = ui
 
-  const [notQualifiedView, setNotQualifiedView] = useState(false)
+  const [notEligibleView, setnotEligibleView] = useState(false)
+  const [eligibilityCount, setEligibilityCount] = useState({
+    eligible: 0,
+    notEligible,
+    moreInfo: 0,
+  })
+
   const resetElement = useResetElement()
 
   useEffect(() => {
     resetElement.current?.focus()
   }, [resetElement])
 
+  // some data-analytics numbers
+  // how many questions were values provided for
+  const criteriaValues =
+    stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray).length
+  // how many total questions were in the form
+  const benefitsLength =
+    stepDataArray &&
+    apiCalls.GET.ElegibilityByCriteria(
+      apiCalls.GET.SelectedValueAll(stepDataArray),
+      data
+    ).length
+
+  // filter results by eligiblity status/label
+  const handleEligibilityLength = text => {
+    const matches = []
+    const benefits = document.querySelectorAll('.bf-accordion-sub-heading')
+    // match eligibility with label values
+    for (const div of benefits) {
+      if (div.textContent.includes(text)) {
+        matches.push(div)
+      }
+    }
+    return matches.length
+  }
+
   const handleViewToggle = () => {
-    setNotQualifiedView(!notQualifiedView)
+    setnotEligibleView(!notEligibleView)
     window.scrollTo(0, 0)
     resetElement.current.focus()
   }
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    setEligibilityCount({
+      eligible: handleEligibilityLength(
+        ui.benefitAccordion.eligibleStatusLabels[0]
+      ),
+      notEligible: handleEligibilityLength(
+        ui.benefitAccordion.eligibleStatusLabels[2]
+      ),
+      moreInfo: handleEligibilityLength(
+        ui.benefitAccordion.eligibleStatusLabels[1]
+      ),
+    })
   }, [])
 
   // compare the selected criteria array with benefits
   return (
-    <div className="bf-result-view" data-testid="result-view">
+    <div
+      className="bf-result-view"
+      data-testid="bf-result-view"
+      data-analytics="bf-result-view"
+      data-analytics-content={
+        notEligibleView === true ? 'bf-not-eligible-view' : 'bf-eligible-view'
+      }
+      data-analytics-content-criteria-values={criteriaValues}
+      data-analytics-content-benefits={benefitsLength}
+      data-analytics-content-eligible={eligibilityCount.eligible}
+      data-analytics-content-not-eligible={eligibilityCount.notEligible}
+      data-analytics-content-more-info={eligibilityCount.moreInfo}
+    >
       <Chevron
         heading={
-          notQualifiedView === false
-            ? qualified.chevron.heading
-            : notQualified.chevron.heading
+          notEligibleView === false
+            ? eligible.chevron.heading
+            : notEligible.chevron.heading
         }
         description={
-          notQualifiedView === false
-            ? qualified.chevron.description
-            : notQualified.chevron.description
+          notEligibleView === false
+            ? eligible.chevron.description
+            : notEligible.chevron.description
         }
       />
       <div className="bf-grid-container grid-container">
         <div className="bf-result-view-details">
-          {notQualifiedView === false ? (
+          {notEligibleView === false ? (
             <StepBackLink
               onClick={() => resetElement.current.focus()}
               setCurrent={handleStepBack}
@@ -92,15 +146,15 @@ const ResultsView = ({
             </Button>
           )}
           <Heading className="bf-result-view-heading" headingLevel={2}>
-            {notQualifiedView ? notQualified.heading : qualified.heading}
+            {notEligibleView ? notEligible.heading : eligible.heading}
           </Heading>
           <Heading
             className="bf-result-view-description"
             headingLevel={3}
             dangerouslySetInnerHTML={
-              notQualifiedView
-                ? createMarkup(notQualified.description)
-                : createMarkup(qualified.description)
+              notEligibleView
+                ? createMarkup(notEligible.description)
+                : createMarkup(eligible.description)
             }
           />
           {/* map all the benefits into cards */}
@@ -114,12 +168,12 @@ const ResultsView = ({
                 )
               }
               entryKey={'benefit'}
-              notQualifiedView={notQualifiedView}
+              notEligibleView={notEligibleView}
               expandAll
               ui={ui}
             />
           </div>
-          {notQualifiedView === false && (
+          {notEligibleView === false && (
             <div className="bf-result-view-unmet">
               <Heading
                 className="bf-result-view-unmet-heading"

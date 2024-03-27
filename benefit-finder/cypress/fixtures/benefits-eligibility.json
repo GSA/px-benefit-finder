@@ -123,5 +123,80 @@
         "total_benefits": 30
       }
     }
+  },
+  "death-of-a-loved-one": {
+    "en": {
+      "param": {
+        "applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "applicant_relationship_to_the_deceased": "Child",
+        "applicant_marital_status": "Unmarried",
+        "deceased_date_of_death": {
+          "month": 1,
+          "day": 1,
+          "year": 2024
+        }
+      }
+    },
+    "es": {
+      "param": {
+        "es_applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "es_applicant_relationship_to_the_deceased": "Hija/o",
+        "es_applicant_marital_status": "No casada/o"
+      },
+      "es_deceased_date_of_death": {
+        "month": 1,
+        "day": 1,
+        "year": 2024
+      }
+    }
+  },
+  "retirement": {
+    "en": {
+      "param": {
+        "applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        }
+      }
+    },
+    "es": {
+      "param": {
+        "es_applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        }
+      }
+    }
+  },
+  "disability": {
+    "en": {
+      "param": {
+        "applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "applicant_marital_status": "Unmarried"
+      }
+    },
+    "es": {
+      "param": {
+        "es_applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        }
+      }
+    }
   }
 }

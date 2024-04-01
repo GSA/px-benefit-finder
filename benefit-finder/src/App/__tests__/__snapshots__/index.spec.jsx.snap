@@ -7731,6 +7731,7 @@ exports[`loads window query scenario 1 1`] = `
               >
                 <button
                   class="bf-share-button "
+                  data-testid="bf-share-button"
                   type="button"
                 >
                   <i
@@ -15278,6 +15279,7 @@ exports[`loads window query scenario 2 1`] = `
               >
                 <button
                   class="bf-share-button "
+                  data-testid="bf-share-button"
                   type="button"
                 >
                   <i

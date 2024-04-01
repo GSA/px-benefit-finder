@@ -1,5 +1,5 @@
 // import react-testing methods
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import App from '../index'
 import content from '../../shared/api/mock-data/current.js'
 const { data } = JSON.parse(content)
@@ -37,9 +37,11 @@ for (const scenario of scenarios.death) {
     const view = render(<App testAppContent={data} testQuery={windowQuery} />)
     await screen.findByTestId('app')
     await screen.findAllByTestId('benefit')
-    await waitFor(() => {
-      expect(screen.getByText('Share results')).toBeInTheDocument()
-    })
+    await screen.findAllByTestId('bf-share-button')
+    // console.log(view)
+    // await waitFor(() => {
+    //   expect(screen.getByText('Share results')).toBeInTheDocument()
+    // })
     expect(view.baseElement).toMatchSnapshot()
   })
 }

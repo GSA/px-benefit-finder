@@ -1,0 +1,39 @@
+name: Run Cypress e2e Prod Nightly Tests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions: read-all
+
+defaults:
+  run:
+    working-directory: ./benefit-finder
+
+jobs:
+  install:
+    name: cypress-run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Cypress Run
+        uses: cypress-io/github-action@v6
+        with:
+          browser: 'chrome'
+          config-file: cypress.prod.links.config.js
+          working-directory: benefit-finder
+          start: "npm run cy:run:prod:links:e2e"
+
+      - uses: actions/upload-artifact@v3
+        if: failure ()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots

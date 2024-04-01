@@ -38,10 +38,6 @@ for (const scenario of scenarios.death) {
     await screen.findByTestId('app')
     await screen.findAllByTestId('benefit')
     await screen.findAllByTestId('bf-share-button')
-    // console.log(view)
-    // await waitFor(() => {
-    //   expect(screen.getByText('Share results')).toBeInTheDocument()
-    // })
     expect(view.baseElement).toMatchSnapshot()
   })
 }

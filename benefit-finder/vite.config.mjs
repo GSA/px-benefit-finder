@@ -50,6 +50,7 @@ export default defineConfig({
   server: { ...server },
   test: testConfig,
   build: {
+    target: 'es2015',
     emptyOutDir: true,
     outDir: 'build',
     chunkSizeWarningLimit: '1000',

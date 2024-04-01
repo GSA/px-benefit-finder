@@ -138,7 +138,8 @@
           "month": 1,
           "day": 1,
           "year": 2024
-        }
+        },
+        "shared": "true"
       }
     },
     "es": {
@@ -149,13 +150,15 @@
           "year": 1971
         },
         "es_applicant_relationship_to_the_deceased": "Hija/o",
-        "es_applicant_marital_status": "No casada/o"
+        "es_applicant_marital_status": "No casada/o",
+        "shared": "true"
       },
       "es_deceased_date_of_death": {
         "month": 1,
         "day": 1,
         "year": 2024
-      }
+      },
+      "shared": "true"
     }
   },
   "retirement": {
@@ -165,7 +168,8 @@
           "month": 1,
           "day": 1,
           "year": 1971
-        }
+        },
+        "shared": "true"
       }
     },
     "es": {
@@ -174,7 +178,8 @@
           "month": 1,
           "day": 1,
           "year": 1971
-        }
+        },
+        "shared": "true"
       }
     }
   },
@@ -186,8 +191,10 @@
           "day": 1,
           "year": 1971
         },
-        "applicant_marital_status": "Unmarried"
+        "applicant_marital_status": "Unmarried",
+        "shared": "true"
       }
+     
     },
     "es": {
       "param": {
@@ -195,7 +202,8 @@
           "month": 1,
           "day": 1,
           "year": 1971
-        }
+        },
+        "shared": "true"
       }
     }
   }

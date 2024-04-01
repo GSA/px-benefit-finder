@@ -259,7 +259,14 @@ exports[`loads window query scenario 1 1`] = `
     >
       <div
         class="bf-result-view"
-        data-testid="result-view"
+        data-analytics="bf-result-view"
+        data-analytics-content="bf-eligible-view"
+        data-analytics-content-benefits="31"
+        data-analytics-content-criteria-values="14"
+        data-analytics-content-eligible="3"
+        data-analytics-content-more-info="1"
+        data-analytics-content-not-eligible="27"
+        data-testid="bf-result-view"
       >
         <div
           class="bf-chevron"
@@ -323,7 +330,7 @@ exports[`loads window query scenario 1 1`] = `
                 class="bf-usa-accordion-group"
               >
                 <button
-                  class="bf-expand-all "
+                  class=""
                   type="button"
                 >
                   Open all +
@@ -7805,7 +7812,14 @@ exports[`loads window query scenario 2 1`] = `
     >
       <div
         class="bf-result-view"
-        data-testid="result-view"
+        data-analytics="bf-result-view"
+        data-analytics-content="bf-eligible-view"
+        data-analytics-content-benefits="31"
+        data-analytics-content-criteria-values="14"
+        data-analytics-content-eligible="3"
+        data-analytics-content-more-info="1"
+        data-analytics-content-not-eligible="27"
+        data-testid="bf-result-view"
       >
         <div
           class="bf-chevron"
@@ -7869,7 +7883,7 @@ exports[`loads window query scenario 2 1`] = `
                 class="bf-usa-accordion-group"
               >
                 <button
-                  class="bf-expand-all "
+                  class=""
                   type="button"
                 >
                   Open all +

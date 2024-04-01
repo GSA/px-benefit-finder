@@ -73,7 +73,7 @@
     ]
   },
   "resultsView": {
-    "qualified": {
+    "eligible": {
       "chevron": {
         "heading": "Sus beneficios potenciales",
         "description": "<div><p>Visite la página de cada agencia para verificar los requisitos y aplicar. Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</p></div>"
@@ -81,7 +81,7 @@
       "heading": "Resultados",
       "description": "<strong>Podría ser elegible para estos beneficios:<strong/>"
     },
-    "notQualified": {
+    "notEligible": {
       "chevron": {
         "heading": "Beneficios a los que no calificó",
         "description": "Según sus respuestas usted no es elegible para estos beneficios."

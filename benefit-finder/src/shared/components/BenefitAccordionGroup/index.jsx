@@ -23,7 +23,7 @@ const BenefitAccordionGroup = ({
   data,
   entryKey,
   expandAll,
-  notQualifiedView,
+  notEligibleView,
   ui,
 }) => {
   const { benefitAccordion, benefitAccordionGroup } = ui
@@ -166,11 +166,11 @@ const BenefitAccordionGroup = ({
                 : eligibleStatusLabels[2]
 
           const handleHidden =
-            notQualifiedView === false &&
+            notEligibleView === false &&
             eligibleStatus !== eligibleStatusLabels[0]
               ? true
               : !!(
-                  notQualifiedView === true &&
+                  notEligibleView === true &&
                   eligibleStatus === eligibleStatusLabels[0]
                 )
 

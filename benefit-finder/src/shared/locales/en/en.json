@@ -73,7 +73,7 @@
     ]
   },
   "resultsView": {
-    "qualified": {
+    "eligible": {
       "chevron": {
         "heading": "Your potential benefits",
         "description": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>"
@@ -81,7 +81,7 @@
       "heading": "Results",
       "description": "<strong>You may be eligible for these benefits:</strong>"
     },
-    "notQualified": {
+    "notEligible": {
       "chevron": {
         "heading": "Benefits you did not qualify for",
         "description": "According to your answers you are not eligible for these benefits."

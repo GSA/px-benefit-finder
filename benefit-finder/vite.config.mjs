@@ -30,15 +30,12 @@ const copyConfig = test
     }
 
 const poscssConfig = {
-  plugins:
-    process.env.NODE_ENV === 'production'
-      ? []
-      : [
-          transformers.prependID({
-            id: 'benefit-finder',
-            ignoreID: '#benefit-finder-modal',
-          }),
-        ],
+  plugins: [
+    transformers.prependID({
+      id: 'benefit-finder',
+      ignoreID: '#benefit-finder-modal',
+    }),
+  ],
 }
 
 const server = test ? testServer : devServer
@@ -61,12 +58,6 @@ export default defineConfig({
         manualChunks: {},
         entryFileNames: `assets/benefit-finder.min.js`,
         assetFileNames: `assets/benefit-finder.min.[ext]`,
-        plugins: [
-          transformers.wrapStyles({
-            id: 'benefit-finder',
-            customGroup: '#benefit-finder-modal',
-          }),
-        ],
       },
     },
   },

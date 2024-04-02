@@ -132,7 +132,7 @@ jobs:
 
   component-library:
     machine:
-      image: ubuntu-2004:202107-02
+      image: default
 
     steps:
       - run:

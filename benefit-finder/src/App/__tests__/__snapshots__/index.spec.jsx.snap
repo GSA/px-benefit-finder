@@ -61,7 +61,7 @@ exports[`loads intro 1`] = `
             class="time-indicator"
           >
             Estimated time
-
+             
             2-5 minutes
           </div>
           <div
@@ -175,7 +175,7 @@ exports[`loads intro 1`] = `
                           <div
                             class="bf-notice-item"
                           >
-                            Your answers
+                            Your answers 
                             <strong>
                               are not
                             </strong>
@@ -411,7 +411,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -526,9 +526,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Defense (DOD)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -630,7 +630,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -745,9 +745,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Defense (DOD)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -849,7 +849,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -959,9 +959,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -1063,7 +1063,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -1178,9 +1178,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Defense (DOD)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -1283,7 +1283,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -1367,9 +1367,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -1471,7 +1471,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -1514,7 +1514,7 @@ exports[`loads window query scenario 1 1`] = `
                           <li
                             class="bf-unmet-criteria-item"
                           >
-                            Your marital status is: unmarried
+                            Your marital status is: unmarried 
                           </li>
                           <li
                             class="bf-unmet-criteria-item"
@@ -1570,9 +1570,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -1673,7 +1673,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -1867,9 +1867,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                          Federal Emergency Management Agency (FEMA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -1972,7 +1972,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -2071,9 +2071,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -2176,7 +2176,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -2270,9 +2270,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -2374,7 +2374,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -2519,9 +2519,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -2623,7 +2623,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -2743,9 +2743,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -2847,7 +2847,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -2926,9 +2926,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Interior (DOI) - Indian Affairs
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -3031,7 +3031,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -3176,9 +3176,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -3280,7 +3280,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -3390,9 +3390,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -3494,7 +3494,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -3646,9 +3646,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -3750,7 +3750,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -3865,9 +3865,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -3970,7 +3970,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -4062,9 +4062,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Justice (DOJ)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -4166,7 +4166,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -4258,9 +4258,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Justice (DOJ)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -4362,7 +4362,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -4477,9 +4477,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Defense (DOD)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -4581,7 +4581,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -4713,9 +4713,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -4817,7 +4817,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -4972,9 +4972,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -5075,7 +5075,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -5239,9 +5239,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -5344,7 +5344,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -5496,9 +5496,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -5599,7 +5599,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -5793,9 +5793,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -5897,7 +5897,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -6114,9 +6114,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -6218,7 +6218,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -6312,9 +6312,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -6416,7 +6416,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -6541,9 +6541,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -6645,7 +6645,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -6790,9 +6790,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -6895,7 +6895,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -7045,9 +7045,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -7149,7 +7149,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -7264,9 +7264,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -7368,7 +7368,7 @@ exports[`loads window query scenario 1 1`] = `
                       <div
                         class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
                           class="bf-key-eligibility-criteria-heading font-family-sans"
@@ -7483,9 +7483,9 @@ exports[`loads window query scenario 1 1`] = `
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -7526,7 +7526,7 @@ exports[`loads window query scenario 1 1`] = `
               </h3>
               <p>
                 <div>
-                  Based on your answers you are not eligible for these benefits.
+                  Based on your answers you are not eligible for these benefits. 
                   <strong>
                     You may become eligible if you enter additional information or your situation changes.
                   </strong>
@@ -7817,9 +7817,9 @@ exports[`loads window query scenario 2 1`] = `
         data-analytics-content="bf-eligible-view"
         data-analytics-content-benefits="31"
         data-analytics-content-criteria-values="14"
-        data-analytics-content-eligible="0"
-        data-analytics-content-more-info="0"
-        data-analytics-content-not-eligible="[object Object]"
+        data-analytics-content-eligible="3"
+        data-analytics-content-more-info="1"
+        data-analytics-content-not-eligible="27"
         data-testid="bf-result-view"
       >
         <div
@@ -7830,7 +7830,7 @@ exports[`loads window query scenario 2 1`] = `
           >
             <h1
               aria-level="1"
-              class=""
+              class="bf-chevron-heading font-family-sans"
               id="skip-to-h1"
               role="heading"
             >
@@ -7854,14 +7854,14 @@ exports[`loads window query scenario 2 1`] = `
             class="bf-result-view-details"
           >
             <button
-              class=""
+              class="step-back-link "
               type="button"
             >
               Back
             </button>
             <h2
               aria-level="2"
-              class=""
+              class="bf-result-view-heading font-family-sans"
               id=""
               role="heading"
             >
@@ -7869,7 +7869,7 @@ exports[`loads window query scenario 2 1`] = `
             </h2>
             <h3
               aria-level="3"
-              class=""
+              class="bf-result-view-description font-family-sans"
               id=""
               role="heading"
             >
@@ -7949,7 +7949,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -7963,12 +7963,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -8059,7 +8059,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -8074,15 +8074,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Defense (DOD)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -8168,7 +8168,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -8182,12 +8182,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -8278,7 +8278,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -8293,15 +8293,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Defense (DOD)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -8387,7 +8387,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -8401,12 +8401,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -8492,7 +8492,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -8507,15 +8507,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -8601,7 +8601,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -8615,12 +8615,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -8711,7 +8711,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -8726,15 +8726,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://militarypay.defense.gov/Benefits/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Defense (DOD)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -8820,7 +8820,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -8835,12 +8835,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -8900,7 +8900,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -8915,15 +8915,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/eligibility/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -9009,7 +9009,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -9023,12 +9023,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -9068,7 +9068,7 @@ exports[`loads window query scenario 2 1`] = `
                           <li
                             class="bf-unmet-criteria-item"
                           >
-                            Your marital status is: unmarried
+                            Your marital status is: unmarried 
                           </li>
                           <li
                             class="bf-unmet-criteria-item"
@@ -9103,7 +9103,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -9118,15 +9118,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -9211,7 +9211,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -9225,12 +9225,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -9400,7 +9400,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -9415,15 +9415,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                          Federal Emergency Management Agency (FEMA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -9509,7 +9509,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -9524,12 +9524,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -9604,7 +9604,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -9619,15 +9619,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -9713,7 +9713,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -9728,12 +9728,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -9803,7 +9803,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -9818,15 +9818,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -9912,7 +9912,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -9926,12 +9926,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -10052,7 +10052,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -10067,15 +10067,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -10161,7 +10161,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -10175,12 +10175,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -10276,7 +10276,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -10291,15 +10291,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/education/survivor-dependent-benefits/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -10385,7 +10385,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -10399,12 +10399,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -10472,7 +10472,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -10487,15 +10487,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Interior (DOI) - Indian Affairs
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -10581,7 +10581,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -10596,12 +10596,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -10722,7 +10722,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -10737,15 +10737,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -10831,7 +10831,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -10845,12 +10845,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -10936,7 +10936,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -10951,15 +10951,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -11044,7 +11044,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -11058,12 +11058,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -11203,7 +11203,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -11218,15 +11218,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -11312,7 +11312,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -11326,12 +11326,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -11422,7 +11422,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -11437,15 +11437,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -11531,7 +11531,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -11546,12 +11546,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -11619,7 +11619,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -11634,15 +11634,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://bja.ojp.gov/program/psob/benefits"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Justice (DOJ)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -11728,7 +11728,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -11742,12 +11742,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -11815,7 +11815,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -11830,15 +11830,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Justice (DOJ)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -11924,7 +11924,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -11938,12 +11938,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -12034,7 +12034,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -12049,15 +12049,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://bja.ojp.gov/program/psob/benefits"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Department of Defense (DOD)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -12143,7 +12143,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -12157,12 +12157,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -12270,7 +12270,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -12285,15 +12285,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -12379,7 +12379,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -12393,12 +12393,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -12529,7 +12529,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -12544,15 +12544,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -12637,7 +12637,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -12651,12 +12651,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -12796,7 +12796,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -12811,15 +12811,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/forms/ssa-5.html"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -12905,7 +12905,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -12920,12 +12920,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -13028,7 +13028,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -13043,15 +13043,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -13137,7 +13137,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -13151,12 +13151,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -13314,7 +13314,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -13329,15 +13329,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -13423,7 +13423,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -13437,12 +13437,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -13623,7 +13623,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -13638,15 +13638,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Social Security Administration (SSA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -13732,7 +13732,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -13746,12 +13746,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -13821,7 +13821,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -13836,15 +13836,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -13930,7 +13930,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -13944,12 +13944,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -14050,7 +14050,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -14065,15 +14065,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -14159,7 +14159,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -14173,12 +14173,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -14299,7 +14299,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -14314,15 +14314,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/pension/survivors-pension/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -14408,7 +14408,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -14423,12 +14423,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -14579,7 +14579,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -14594,15 +14594,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -14688,7 +14688,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -14702,12 +14702,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -14798,7 +14798,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -14813,15 +14813,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -14907,7 +14907,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class=""
+                        class="bf-usa-detail-title font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -14921,12 +14921,12 @@ exports[`loads window query scenario 2 1`] = `
                         </p>
                       </div>
                       <div
-                        class=""
+                        class="bf-usa-criteria-list bf-key-eligibility-criteria-group"
                       >
-
+                         
                         <h5
                           aria-level="5"
-                          class=""
+                          class="bf-key-eligibility-criteria-heading font-family-sans"
                           id=""
                           role="heading"
                         >
@@ -15017,7 +15017,7 @@ exports[`loads window query scenario 2 1`] = `
                       <div
                         aria-hidden="true"
                         aria-live="polite"
-                        class=""
+                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                         role="alert"
                         tabindex="0"
                       >
@@ -15032,15 +15032,15 @@ exports[`loads window query scenario 2 1`] = `
                         </div>
                       </div>
                       <a
-                        class=""
+                        class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
                         Visit
-
+                         
                         Veterans Affairs Department (VA)
-
+                         
                         <i
                           aria-hidden="true"
                           data-testid="icon-carrot-small"
@@ -15073,7 +15073,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class=""
+                class="bf-result-view-unmet-heading font-family-sans"
                 id=""
                 role="heading"
               >
@@ -15081,7 +15081,7 @@ exports[`loads window query scenario 2 1`] = `
               </h3>
               <p>
                 <div>
-                  Based on your answers you are not eligible for these benefits.
+                  Based on your answers you are not eligible for these benefits. 
                   <strong>
                     You may become eligible if you enter additional information or your situation changes.
                   </strong>
@@ -15099,7 +15099,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class=""
+                class="bf-result-view-relvant-benefits-heading font-family-sans"
                 id=""
                 role="heading"
               >
@@ -15109,7 +15109,7 @@ exports[`loads window query scenario 2 1`] = `
                 class="bf-usa-card-group usa-card-group"
               >
                 <li
-                  class=""
+                  class="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12 bf-card-icon add-list-reset"
                   data-testid="retirement"
                 >
                   <a
@@ -15142,7 +15142,7 @@ exports[`loads window query scenario 2 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class=""
+                        class="bf-usa-card__heading usa-card__heading font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -15184,7 +15184,7 @@ exports[`loads window query scenario 2 1`] = `
                   </a>
                 </li>
                 <li
-                  class=""
+                  class="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12 bf-card-icon add-list-reset"
                   data-testid="disability"
                 >
                   <a
@@ -15231,7 +15231,7 @@ exports[`loads window query scenario 2 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class=""
+                        class="bf-usa-card__heading usa-card__heading font-family-sans"
                         id=""
                         role="heading"
                       >
@@ -15279,7 +15279,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class=""
+                class="bf-result-view-share-results-heading font-family-sans"
                 id=""
                 role="heading"
               >
@@ -15310,7 +15310,7 @@ exports[`loads window query scenario 2 1`] = `
                       <path
                         clip-rule="evenodd"
                         d="M15 14.1203C14.24 14.1203 13.56 14.4203 13.04 14.8903L5.91 10.7403C5.96 10.5103 6 10.2803 6 10.0403C6 9.80028 5.96 9.57028 5.91 9.34028L12.96 5.23028C13.5 5.73028 14.21 6.04028 15 6.04028C16.66 6.04028 18 4.70028 18 3.04028C18 1.38028 16.66 0.0402832 15 0.0402832C13.34 0.0402832 12 1.38028 12 3.04028C12 3.28028 12.04 3.51028 12.09 3.74028L5.04 7.85028C4.5 7.35028 3.79 7.04028 3 7.04028C1.34 7.04028 0 8.38028 0 10.0403C0 11.7003 1.34 13.0403 3 13.0403C3.79 13.0403 4.5 12.7303 5.04 12.2303L12.16 16.3903C12.11 16.6003 12.08 16.8203 12.08 17.0403C12.08 18.6503 13.39 19.9603 15 19.9603C16.61 19.9603 17.92 18.6503 17.92 17.0403C17.92 15.4303 16.61 14.1203 15 14.1203Z"
-                        fill="#005EA2"
+                        fill="#005ea2"
                         fill-rule="evenodd"
                       />
                     </svg>
@@ -15318,7 +15318,7 @@ exports[`loads window query scenario 2 1`] = `
                   Share link
                 </button>
                 <button
-                  class=""
+                  class="bf-email-button "
                   type="button"
                 >
                   <i

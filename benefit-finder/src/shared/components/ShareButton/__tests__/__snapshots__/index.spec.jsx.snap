@@ -4,6 +4,7 @@ exports[`Share > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <button
     class="bf-share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+    data-testid="bf-share-button"
     type="button"
   >
     <i

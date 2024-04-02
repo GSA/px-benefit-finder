@@ -37,6 +37,7 @@ for (const scenario of scenarios.death) {
     const view = render(<App testAppContent={data} testQuery={windowQuery} />)
     await screen.findByTestId('app')
     await screen.findAllByTestId('benefit')
+    await screen.findAllByTestId('bf-share-button')
     expect(view.baseElement).toMatchSnapshot()
   })
 }

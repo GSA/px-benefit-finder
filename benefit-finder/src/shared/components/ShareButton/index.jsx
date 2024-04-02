@@ -35,6 +35,7 @@ const ShareButton = ({ ui, data }) => {
       secondary
       onClick={handleClick}
       icon="share"
+      data-testid="bf-share-button"
     >
       {ui?.shareButton || 'Share'}
     </Button>

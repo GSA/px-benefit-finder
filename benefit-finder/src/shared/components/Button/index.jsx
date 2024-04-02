@@ -27,6 +27,7 @@ function Button({
   unstyled,
   type,
   icon,
+  ...props
 }) {
   const [defaultClasses, setDefaultClasses] = useState(null)
   const style =
@@ -83,6 +84,7 @@ function Button({
       })}
       onMouseOver={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      data-testid={props['data-testid']}
     >
       {icon && <Icon type={icon} color={hoverColor} />}
       {children}

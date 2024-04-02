@@ -128,7 +128,7 @@ jobs:
               fi
             done
             cf add-network-policy benefit-finder-waf-${CIRCLE_BRANCH} benefit-finder-cms-${CIRCLE_BRANCH} -s benefit-finder-${CIRCLE_BRANCH} -o ${CF_ORG} --protocol tcp --port 61443
-            cf map-route benefit-finder-cms-${CIRCLE_BRANCH} apps.internal --hostname benefit-finder-cms-${CIRCLE_BRANCH} http1
+            cf map-route benefit-finder-cms-${CIRCLE_BRANCH} apps.internal --hostname benefit-finder-cms-${CIRCLE_BRANCH}
 
   component-library:
     machine:

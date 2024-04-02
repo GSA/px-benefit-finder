@@ -12,7 +12,6 @@
  * @return {boolean} true or false based on the conditional
  */
 export const DateEligibility = ({ selectedValue, conditional }) => {
-  // console.log({ selectedValue, conditional })
   // date values
   // "<01-01-1978"
   // "<2years (the deceased died within the last two years)"
@@ -27,14 +26,21 @@ export const DateEligibility = ({ selectedValue, conditional }) => {
   const operators = /['>', '>=', '<', '<=', '=']/g
   const operator = text.match(operators)
   const integer = text.match(/\d+/)[0]
+  const regExOperator = new RegExp(`[${operator}]`, 'g')
+
+  // !!we have to replace the dashes ("-") in the date because Safari can only parse ("/") in new Date evaluation!!
+
+  // after we fix safari we remove the operator values to give us only the date
+  const trimmedText = text.replace(/-/g, '/').replace(regExOperator, '')
 
   // calculate back
   // get current date
   // subtract integer
   // if a date comes back in date format
+
   const pattern = /-/
   const conditionalDate = pattern.test(text)
-    ? new window.Date(text)
+    ? new window.Date(trimmedText)
     : new window.Date(
         new Date().getFullYear() - integer,
         new Date().getMonth(),

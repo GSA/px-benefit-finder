@@ -12,7 +12,6 @@
  * @return {boolean} true or false based on the conditional
  */
 export const DateEligibility = ({ selectedValue, conditional }) => {
-  // console.log({ selectedValue, conditional })
   // date values
   // "<01-01-1978"
   // "<2years (the deceased died within the last two years)"
@@ -66,8 +65,6 @@ export const DateEligibility = ({ selectedValue, conditional }) => {
       0
     )
   )
-
-  console.log(conditionalDate, selectedDate)
 
   const isDateEligible = (operator, conditionalDate, selectedDate) => {
     // ['>', '>=', '<', '<=', '=']
@@ -314,7 +311,6 @@ export const ElegibilityByCriteria = (selectedCriteria, data) => {
             let eligibility
 
             if (typeof selected.values.value === 'object') {
-              console.log(selected.values.value)
               eligibility = criteriaEligibility.acceptableValues.find(value =>
                 UTILS.DateEligibility({
                   selectedValue: selected.values.value,

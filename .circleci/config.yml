@@ -29,7 +29,7 @@ jobs:
             bash ./mv-benefit-finder-app.sh
             pwd
             ls
-            ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css 
+            ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css
             ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
@@ -96,12 +96,12 @@ jobs:
               wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
               echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
               sudo apt-get update
-              sudo apt-get install -y cf8-cli
+              sudo apt-get install -y cf8-cli --fix-missing
             else
               wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
               echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
               apt-get update
-              apt-get install -y cf8-cli
+              apt-get install -y cf8-cli --fix-missing
             fi
             cf -v
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"

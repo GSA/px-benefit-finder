@@ -2,7 +2,7 @@ version: 2.1
 
 # This workflow deploys the app to the cloud.gov environments.
 jobs:
-  build_and_deploy_dev:
+  build_and_deploy:
     machine:
       image: default
 
@@ -16,13 +16,21 @@ jobs:
             git submodule init
             git submodule update
             cd usagov-2021
-            git checkout prod
+            git checkout dev
 
       - run:
           name: Moving the benefit-finder app into usagov-2021 module
           command: |
             cd px-benefit-finder
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+            nvm install 20 # --reinstall-packages-from=node
             bash ./mv-benefit-finder-app.sh
+            pwd
+            ls
+            ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/css
+            ls ./usagov_benefit_finder/modules/usagov_benefit_finder_app/usagov_benefit_finder_page/js
             echo ".................."
             echo "moving the benefit-finder-app module into the usagov-2021 directory"
             rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
@@ -65,7 +73,6 @@ jobs:
           name: Injecting container name to the manifest.yml
           command: |
             echo "......"
-            export CIRCLE_BRANCH="dev"
             echo $CIRCLE_BRANCH
             echo "......"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
@@ -85,7 +92,6 @@ jobs:
       - run:
           name: Setup CF CLI
           command: |
-            export CIRCLE_BRANCH="dev"
             if [ "$(whoami)" != "root" ]; then
               wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
               echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
@@ -103,7 +109,6 @@ jobs:
       - run:
           name: Deploy the app to cloud.gov
           command: |
-            export CIRCLE_BRANCH="dev"
             export IMAGE_TAG=$( echo $CIRCLE_WORKFLOW_ID | cut -b -8 )
             export DOCKERREPO="ghcr.io/gsa/px-benefit-finder/benefit-finder-cms"
             cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-${CIRCLE_BRANCH}"
@@ -167,8 +172,8 @@ jobs:
             ls -l
             cat manifest.yml
             echo "---------------------------------------------"
-            nvm install node --reinstall-packages-from=node
-            npm i @craco/craco
+            nvm install 20 # --reinstall-packages-from=node
+            npm ci
             npm run build
             cd ..
             bash mv-uswds-usagov-theme.sh
@@ -203,8 +208,7 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-            nvm install v18.3.0
-            nvm alias default 18.3.0
+            nvm install 20 # --reinstall-packages-from=node
             echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
             echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
             echo "Install Gulp on node "$(node --version)
@@ -301,30 +305,26 @@ workflows:
   # This workflow only gets triggered when there is a push to `main` and `dev` branches.
   cms_build_and_deploy_workflow:
     jobs:
-      - build_and_deploy_dev:
+      - build_and_deploy:
           filters:
             branches:
               only:
                 - dev
-      - static-site-generation-dev:
-          requires:
-            - build_and_deploy_dev
-          filters:
-            branches:
-              only:
-                - dev
-      - build_and_deploy_main:
-          filters:
-            branches:
-              only:
                 - main
-      - static-site-generation-main:
-          requires:
-            - build_and_deploy_main
-          filters:
-            branches:
-              only:
-                - main
+      # - static-site-generation-dev:
+      #     requires:
+      #       - build_and_deploy_dev
+      #     filters:
+      #       branches:
+      #         only:
+      #           - dev
+      # - static-site-generation-main:
+      #     requires:
+      #       - build_and_deploy_main
+      #     filters:
+      #       branches:
+      #         only:
+      #           - main
 
   create-component-library-workflow:
     jobs:
@@ -338,13 +338,13 @@ workflows:
     jobs:
       - lint
 
-  static-site-generation-cron:
-    triggers:
-      - schedule:
-          cron: "0 3 * * *"
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
-      - static-site-generation-main
+  # static-site-generation-cron:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 3 * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - main
+  #   jobs:
+  #     - static-site-generation-main

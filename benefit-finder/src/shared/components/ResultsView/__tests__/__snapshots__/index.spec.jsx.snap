@@ -7346,6 +7346,7 @@ exports[`loads view 1`] = `
             >
               <button
                 class="bf-share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                data-testid="bf-share-button"
                 type="button"
               >
                 <i
@@ -14749,6 +14750,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             >
               <button
                 class="bf-share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                data-testid="bf-share-button"
                 type="button"
               >
                 <i

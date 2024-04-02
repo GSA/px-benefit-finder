@@ -12,7 +12,7 @@ exports[`loads intro 1`] = `
     <div
       class="benefit-finder "
       data-testid="app"
-      data-version="0.3.0.beta.1"
+      data-version="0.2.1.beta.1"
     >
       <div
         class="bf-intro"
@@ -255,7 +255,7 @@ exports[`loads window query scenario 1 1`] = `
     <div
       class="benefit-finder "
       data-testid="app"
-      data-version="0.3.0.beta.1"
+      data-version="0.2.1.beta.1"
     >
       <div
         class="bf-result-view"
@@ -7738,6 +7738,7 @@ exports[`loads window query scenario 1 1`] = `
               >
                 <button
                   class="bf-share-button "
+                  data-testid="bf-share-button"
                   type="button"
                 >
                   <i
@@ -7808,7 +7809,7 @@ exports[`loads window query scenario 2 1`] = `
     <div
       class="benefit-finder "
       data-testid="app"
-      data-version="0.3.0.beta.1"
+      data-version="0.2.1.beta.1"
     >
       <div
         class="bf-result-view"
@@ -15292,6 +15293,7 @@ exports[`loads window query scenario 2 1`] = `
               >
                 <button
                   class="bf-share-button "
+                  data-testid="bf-share-button"
                   type="button"
                 >
                   <i

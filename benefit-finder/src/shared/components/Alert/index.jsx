@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { Heading } from '../index'
 import { useHandleClassName } from '../../hooks'
 import './_index.scss'
 
@@ -56,9 +57,12 @@ const Alert = ({
         </div>
       ) : (
         <div className="bf-usa-alert__body usa-alert__body">
-          <h4 className="bf-usa-alert__heading usa-alert__heading">
+          <Heading
+            headingLevel={2}
+            className="bf-usa-alert__heading usa-alert__heading"
+          >
             {heading}
-          </h4>
+          </Heading>
           <p className="bf-usa-alert__text usa-alert__text">{description}</p>
         </div>
       )}

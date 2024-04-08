@@ -24,7 +24,6 @@ const Alert = ({
   hasError,
   noBackground,
   tabIndex,
-  ariaHidden,
 }) => {
   const defaultClasses = error
     ? [
@@ -32,7 +31,7 @@ const Alert = ({
         'usa-alert',
         'bf-usa-alert--error',
         'usa-alert--error',
-        'display-none',
+        `${hasError === false ? 'display-none' : ''}`,
       ]
     : [
         'bf-usa-alert',
@@ -49,7 +48,7 @@ const Alert = ({
       ref={alertFieldRef}
       tabIndex={tabIndex || 0}
       aria-live={hasError === true ? 'assertive' : 'polite'}
-      aria-hidden={ariaHidden || !hasError}
+      aria-hidden={hasError === undefined ? false : !hasError}
     >
       {children ? (
         <div className="bf-usa-alert__body usa-alert__body">

@@ -13,7 +13,7 @@ export const Primary = {}
 export const HasError = {
   args: {
     ...Primary.args,
-    error: true,
+    type: 'error',
     hasError: true,
   },
 }

@@ -10,7 +10,10 @@ import './_index.scss'
  * @param {any} alertFieldRef - inherited ref hook
  * @param {string} heading - inherited heading
  * @param {string} description - inherited description
- * @param {bool} error - variant
+ * @param {bool} type - string
+ * @param {bool}  hasError - checks for current error state of parent value
+ * @param {bool} noBackground - style variant
+ * @param {number} tabIndex - index value of tab order
  * @return {html} returns a wrapped paragraph styled as usa-alert
  */
 
@@ -20,26 +23,27 @@ const Alert = ({
   alertFieldRef,
   heading,
   description,
-  error,
+  type,
   hasError,
   noBackground,
   tabIndex,
 }) => {
-  const defaultClasses = error
-    ? [
-        'bf-usa-alert',
-        'usa-alert',
-        'bf-usa-alert--error',
-        'usa-alert--error',
-        `${hasError === false ? 'display-none' : ''}`,
-      ]
-    : [
-        'bf-usa-alert',
-        'usa-alert',
-        'bf-usa-alert--info',
-        'usa-alert--info',
-        `${noBackground ? 'no-background' : ''}`,
-      ]
+  const defaultClasses =
+    type === 'error'
+      ? [
+          'bf-usa-alert',
+          'usa-alert',
+          'bf-usa-alert--error',
+          'usa-alert--error',
+          `${hasError === false ? 'display-none' : ''}`,
+        ]
+      : [
+          'bf-usa-alert',
+          'usa-alert',
+          'bf-usa-alert--info',
+          'usa-alert--info',
+          `${noBackground ? 'no-background' : ''}`,
+        ]
 
   return (
     <div
@@ -72,7 +76,10 @@ Alert.propTypes = {
   alertFieldRef: PropTypes.any,
   heading: PropTypes.string,
   description: PropTypes.string,
-  error: PropTypes.bool,
+  type: PropTypes.string,
+  hasError: PropTypes.bool,
+  noBackground: PropTypes.bool,
+  tabIndex: PropTypes.number,
 }
 
 export default Alert

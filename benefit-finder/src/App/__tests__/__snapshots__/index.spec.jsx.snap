@@ -88,7 +88,7 @@ exports[`loads intro 1`] = `
                   <h3
                     class="bf-usa-process-list__heading usa-process-list__heading"
                   >
-                    Review results
+                    Get your list of benefits
                   </h3>
                 </li>
                 <li
@@ -97,7 +97,7 @@ exports[`loads intro 1`] = `
                   <h3
                     class="bf-usa-process-list__heading usa-process-list__heading"
                   >
-                    Find out how to apply
+                    Visit agency websites to apply
                   </h3>
                 </li>
               </ol>
@@ -149,7 +149,6 @@ exports[`loads intro 1`] = `
                               <strong>
                                 This is not an application.
                               </strong>
-                               This tool will help you find possible benefits.
                             </div>
                           </div>
                         </div>
@@ -175,11 +174,10 @@ exports[`loads intro 1`] = `
                           <div
                             class="bf-notice-item"
                           >
-                            Your answers 
                             <strong>
-                              are not
+                              You'll need to apply
                             </strong>
-                             saved or submitted.
+                             for benefits with each agency.
                           </div>
                         </div>
                       </div>
@@ -206,9 +204,9 @@ exports[`loads intro 1`] = `
                           >
                             <div>
                               <strong>
-                                Answer more questions
+                                We don't share, save, or submit
                               </strong>
-                               to get better results.
+                               your information.
                             </div>
                           </div>
                         </div>

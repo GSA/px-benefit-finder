@@ -219,7 +219,6 @@ const LifeEventSection = ({
     )
     updateAlertArray(hasError, event)
   }
-  // console.log(hasError)
 
   /**
    * a function that handles the current selected value of our radio
@@ -463,7 +462,7 @@ const LifeEventSection = ({
                                   ui={ui}
                                   id={fieldSetId}
                                   invalid={
-                                    hasError.length &&
+                                    hasError.length > 0 &&
                                     hasError
                                       .map(item => item.id.includes(fieldSetId))
                                       .includes(true)

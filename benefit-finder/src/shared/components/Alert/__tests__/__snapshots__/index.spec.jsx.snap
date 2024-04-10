@@ -12,8 +12,11 @@ exports[`Alert > renders a match to the previous snapshot 1`] = `
     <div
       class="bf-usa-alert__body usa-alert__body"
     >
-      <h4
-        class="bf-usa-alert__heading usa-alert__heading"
+      <h2
+        aria-level="2"
+        class="bf-usa-alert__heading usa-alert__heading font-family-sans"
+        id=""
+        role="heading"
       />
       <p
         class="bf-usa-alert__text usa-alert__text"

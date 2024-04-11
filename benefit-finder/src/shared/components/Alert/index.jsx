@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { Heading } from '../index'
 import { useHandleClassName } from '../../hooks'
 import './_index.scss'
 
@@ -10,7 +11,10 @@ import './_index.scss'
  * @param {any} alertFieldRef - inherited ref hook
  * @param {string} heading - inherited heading
  * @param {string} description - inherited description
- * @param {bool} error - variant
+ * @param {bool} type - string
+ * @param {bool}  hasError - checks for current error state of parent value
+ * @param {bool} noBackground - style variant
+ * @param {number} tabIndex - index value of tab order
  * @return {html} returns a wrapped paragraph styled as usa-alert
  */
 
@@ -20,26 +24,27 @@ const Alert = ({
   alertFieldRef,
   heading,
   description,
-  error,
+  type,
   hasError,
   noBackground,
   tabIndex,
 }) => {
-  const defaultClasses = error
-    ? [
-        'bf-usa-alert',
-        'usa-alert',
-        'bf-usa-alert--error',
-        'usa-alert--error',
-        'display-none',
-      ]
-    : [
-        'bf-usa-alert',
-        'usa-alert',
-        'bf-usa-alert--info',
-        'usa-alert--info',
-        `${noBackground ? 'no-background' : ''}`,
-      ]
+  const defaultClasses =
+    type === 'error'
+      ? [
+          'bf-usa-alert',
+          'usa-alert',
+          'bf-usa-alert--error',
+          'usa-alert--error',
+          `${hasError === false ? 'display-none' : ''}`,
+        ]
+      : [
+          'bf-usa-alert',
+          'usa-alert',
+          'bf-usa-alert--info',
+          'usa-alert--info',
+          `${noBackground ? 'no-background' : ''}`,
+        ]
 
   return (
     <div
@@ -48,7 +53,7 @@ const Alert = ({
       ref={alertFieldRef}
       tabIndex={tabIndex || 0}
       aria-live={hasError === true ? 'assertive' : 'polite'}
-      aria-hidden={!hasError}
+      aria-hidden={hasError === undefined ? false : !hasError}
     >
       {children ? (
         <div className="bf-usa-alert__body usa-alert__body">
@@ -56,9 +61,12 @@ const Alert = ({
         </div>
       ) : (
         <div className="bf-usa-alert__body usa-alert__body">
-          <h4 className="bf-usa-alert__heading usa-alert__heading">
+          <Heading
+            headingLevel={2}
+            className="bf-usa-alert__heading usa-alert__heading"
+          >
             {heading}
-          </h4>
+          </Heading>
           <p className="bf-usa-alert__text usa-alert__text">{description}</p>
         </div>
       )}
@@ -72,7 +80,10 @@ Alert.propTypes = {
   alertFieldRef: PropTypes.any,
   heading: PropTypes.string,
   description: PropTypes.string,
-  error: PropTypes.bool,
+  type: PropTypes.string,
+  hasError: PropTypes.bool,
+  noBackground: PropTypes.bool,
+  tabIndex: PropTypes.number,
 }
 
 export default Alert

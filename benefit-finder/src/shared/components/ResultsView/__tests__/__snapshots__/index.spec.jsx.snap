@@ -254,7 +254,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -472,7 +472,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -685,7 +685,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -903,7 +903,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1091,7 +1091,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1293,7 +1293,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1589,7 +1589,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1792,7 +1792,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1990,7 +1990,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2238,7 +2238,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2461,7 +2461,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2643,7 +2643,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2892,7 +2892,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3105,7 +3105,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3371,7 +3371,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3589,7 +3589,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3785,7 +3785,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3980,7 +3980,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -4198,7 +4198,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -4433,7 +4433,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -4691,7 +4691,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -4957,7 +4957,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -5213,7 +5213,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -5509,7 +5509,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -5829,7 +5829,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6026,7 +6026,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6254,7 +6254,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6502,7 +6502,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6781,7 +6781,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6999,7 +6999,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -7217,7 +7217,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -7627,7 +7627,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -7845,7 +7845,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8058,7 +8058,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8276,7 +8276,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8464,7 +8464,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8666,7 +8666,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8962,7 +8962,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9165,7 +9165,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9363,7 +9363,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9611,7 +9611,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9834,7 +9834,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10016,7 +10016,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10265,7 +10265,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10478,7 +10478,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10744,7 +10744,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10962,7 +10962,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11158,7 +11158,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11353,7 +11353,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11571,7 +11571,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11806,7 +11806,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -12064,7 +12064,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -12330,7 +12330,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -12586,7 +12586,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -12882,7 +12882,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -13202,7 +13202,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -13399,7 +13399,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -13627,7 +13627,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -13875,7 +13875,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -14154,7 +14154,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -14372,7 +14372,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -14590,7 +14590,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"

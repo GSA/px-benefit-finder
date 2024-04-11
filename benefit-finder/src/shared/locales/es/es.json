@@ -8,10 +8,10 @@
           "title": "Responda unas preguntas"
         },
         {
-          "title": "Revise sus resultados"
+          "title": "Obtenga su lista de posibles beneficios"
         },
         {
-          "title": "Conozca cómo presentar una solicitud"
+          "title": "Aplique en los sitios web de cada agencia"
         }
       ]
     },
@@ -19,13 +19,13 @@
       "heading": "Antes de empezar:",
       "list": [
         {
-          "notice": "<div><strong>Esto no es una aplicación.</strong> Este formulario le ayuda a encontrar beneficios.</div>"
+          "notice": "<div><strong>Esto no es una aplicación.</strong></div>"
         },
         {
           "notice": "Sus respuestas <strong>no serán</strong> guardadas o presentadas."
         },
         {
-          "notice": "<div>Para mejores resultados <strong>responda todas las preguntas</strong>.</div>"
+          "notice": "<div>Responda todas las preguntas<strong> para mejores resultados</strong>.</div>"
         }
       ]
     },

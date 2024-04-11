@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
-import { ObfuscatedLink, Icon } from '../index'
+import { ObfuscatedLink, Icon, Heading } from '../index'
 import { scrollLock } from '../../utils'
 
 import './_index.scss'
@@ -205,7 +205,9 @@ const Modal = ({
         >
           <Icon type="modal-close" color="black" alt="a close out icon" />
         </button>
-        <div className="bf-modal-heading">{modalHeading}</div>
+        <Heading headingLevel={1} className="bf-modal-heading">
+          {modalHeading}
+        </Heading>
         {children || (
           <GroupNavigation
             navItemOneLabel={navItemOneLabel}

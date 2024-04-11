@@ -8,7 +8,13 @@
 }
 
 .bf-notice {
+  display: flex;
   margin-bottom: space.$space-md-plus;
+
+  .bf-info {
+    margin-top: space.$space-xs;
+    margin-right: space.$space-sm-plus;
+  }
 }
 
 .bf-notice-item {

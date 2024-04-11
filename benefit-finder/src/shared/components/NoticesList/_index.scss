@@ -3,13 +3,18 @@
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/breakpoints/_index.scss' as *;
 
+// .bf-notices {
+//   height: 100%;
+// }
+
 .bf-notices-list {
+  margin-top: space.$space-md-plus;
   margin-bottom: space.$space-xl;
 }
 
 .bf-notice {
   display: flex;
-  margin-bottom: space.$space-md-plus;
+  padding-bottom: space.$padding-bottom-lg;
 
   .bf-info {
     margin-top: space.$space-xs;

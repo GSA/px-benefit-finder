@@ -35,8 +35,8 @@ const NoticesList = ({ data }) => {
   }
 
   return (
-    <div className="notices">
-      <ul className="notices-list add-list-reset">
+    <div className="bf-notices">
+      <ul className="bf-notices-list add-list-reset">
         <Notices data={data} />
       </ul>
     </div>

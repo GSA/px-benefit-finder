@@ -20,20 +20,23 @@ const Icon = ({ type, color, ...props }) => {
     case 'carrot-big':
       icon = <Icons.CarrotBig color={color} />
       break
+    case 'close':
+      icon = <Icons.Close color={color} />
+      break
     case 'death':
       icon = <Icons.Death color={color} />
-      break
-    case 'email':
-      icon = <Icons.Email color={color} />
       break
     case 'disability':
       icon = <Icons.Disability color={color} />
       break
-    case 'close':
-      icon = <Icons.Close color={color} />
+    case 'email':
+      icon = <Icons.Email color={color} />
       break
     case 'green-check':
       icon = <Icons.GreenCheck color={color} />
+      break
+    case 'info':
+      icon = <Icons.Info />
       break
     case 'open':
       icon = <Icons.Open color={color} />

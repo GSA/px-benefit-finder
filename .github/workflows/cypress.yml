@@ -38,10 +38,12 @@ jobs:
 
       - name: Install WebKit browser dependencies
         if: ${{ (matrix.containers == 'webkit') }}
-        uses: cypress-io/github-action@v5
-        with:
-          build: npx playwright install-deps webkit
-          runTests: false
+        run: |
+          cd benefit-finder
+          uses: cypress-io/github-action@v5
+          with:
+            build: npx playwright install-deps webkit
+            runTests: false
 
       - name: Cypress Run Tests
         uses: cypress-io/github-action@v6

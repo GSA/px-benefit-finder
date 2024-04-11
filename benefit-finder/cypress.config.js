@@ -2,6 +2,10 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  retries: {
+    runMode: 2,
+    openMode: 0,
+  },
   e2e: {
     baseUrl: 'http://localhost:6006',
     excludeSpecPattern: 'cypress/e2e/usagov-public-site/*.cy.js',

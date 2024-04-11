@@ -168,6 +168,6 @@ function _usagov_benefit_finder_content_check_agency_usage(array &$form) {
       . "<ul>$description</ul>"
       . '</div>';
     $form['description']['#markup'] = $description;
-    $form['actions']['submit']['#access'] = false;
+    $form['actions']['submit']['#access'] = FALSE;
   }
 }

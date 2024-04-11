@@ -5,6 +5,7 @@
  * Module contains functions related to usagov_benefit_finder_content.
  */
 
+use Drupal\Core\Database\Database;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
 
@@ -114,7 +115,7 @@ function usagov_benefit_finder_content_node_bears_benefit_edit_form_validate(arr
           else {
             $errors[] = t("Criteria \"$criteria_title\" acceptable value \"$value\" is incorrect.");
             $errors[] = t("---The prefix must include only one of the following comparison operators: '>', '<', '=', '>=', or '<='.
-            
+
 --- The suffix must be formatted as either 'MM-DD-YYYY' or '(d or dd)years'.");
           }
         }
@@ -126,5 +127,47 @@ function usagov_benefit_finder_content_node_bears_benefit_edit_form_validate(arr
     foreach ($errors as $error) {
       $form_state->setErrorByName((string) ++$error_count, $error);
     }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function usagov_benefit_finder_content_form_node_bears_agency_delete_form_alter(array &$form, FormStateInterface $form_state) {
+  _usagov_benefit_finder_content_check_agency_usage($form);
+}
+
+/**
+ * It checks agency usage in benefits.
+ * If still used, it lists the benefits and disables the agency delete button.
+ *
+ * @param array $form
+ *   Form array.
+ */
+function _usagov_benefit_finder_content_check_agency_usage(array &$form) {
+  $description = '';
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $nid = $node->id();
+
+  $connection = Database::getConnection();
+  $query = $connection->select('node_field_data', 't1');
+  $query->join('node__field_b_agency', 't2', 't1.nid = t2.entity_id');
+  $query->fields('t1', ['title', 'nid']);
+  $query->condition('t2.field_b_agency_target_id', $nid);
+  $query->orderBy('title');
+  $result = $query->execute();
+
+  foreach ($result as $row) {
+    $description .= "<li>$row->title ($row->nid)</li>";
+  }
+
+  if (!empty($description)) {
+    $description = '<div class="entity-skip">'
+      . '<span>This agency cannot be deleted as it is still used in following benefits:</span>'
+      . "<ul>$description</ul>"
+      . '</div>';
+    $form['description']['#markup'] = $description;
+    $form['actions']['submit']['#access'] = false;
   }
 }

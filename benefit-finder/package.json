@@ -19,7 +19,7 @@
     "lint:scss:fix": "stylelint 'src/**/*.scss' --fix",
     "lint:js": "eslint . --ext .js,.jsx,.json",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "postinstall": "cd .. && husky install benefit-finder/.husky",
+    "postinstall": "cd .. && husky benefit-finder/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
     "prebuild:storybook": "npm run mv:uswds:usagov && npm run build",

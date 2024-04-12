@@ -1,6 +1,7 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/breakpoints/_index.scss' as *;
 
 .bf-notices-list {
   margin-top: space.$space-md-plus;

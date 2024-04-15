@@ -14,6 +14,8 @@ jobs:
   install:
     name: cypress-run
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./benefit-finder
 
     strategy:
       fail-fast: false
@@ -38,10 +40,8 @@ jobs:
 
       - name: Install WebKit browser dependencies
         if: ${{ (matrix.containers == 'webkit') }}
-        uses: cypress-io/github-action@v5
-        with:
-          build: npx playwright install-deps webkit
-          runTests: false
+        run: |
+          npx playwright install-deps webkit
 
       - name: Cypress Run Tests
         uses: cypress-io/github-action@v6

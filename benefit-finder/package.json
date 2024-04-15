@@ -38,11 +38,7 @@
     "cy:run:edge:e2e": "NODE_ENV=test npx cypress run --browser edge",
     "cy:run:firefox:e2e": "NODE_ENV=test npx cypress run --browser firefox",
     "cy:run:webkit-safari:e2e": "NODE_ENV=test npx cypress run --browser webkit",
-    "cy:run:cross-browser:e2e": "NODE_ENV=test npm run cy:run:e2e && npm run cy:run:edge:e2e && cy:run:firefox:e2e"
-
-
-
-
+    "cy:run:cross-browser:e2e": "NODE_ENV=test npm run cy:run:e2e && npm run cy:run:edge:e2e && npm run cy:run:firefox:e2e && npm run cy:run:webkit-safari:e2e"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -83,6 +79,7 @@
     "husky": "^9.0.11",
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.2",
+    "playwright-webkit": "^1.43.1",
     "plop": "^4.0.1",
     "postcss": "^8.4.35",
     "prettier": "^3.2.4",

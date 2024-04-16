@@ -268,7 +268,7 @@ function _usagov_benefit_finder_content_check_criteria_usage_in_life_event_form(
     $result = $query->execute();
 
     foreach ($result as $row) {
-      $return[] = [ 'nid' => $row->nid, 'title' => $row->title ];
+      $return[] = ['nid' => $row->nid, 'title' => $row->title];
     }
   }
 
@@ -295,7 +295,7 @@ function _usagov_benefit_finder_content_check_criteria_usage_in_benefit(int $nid
   $result = $query->execute();
 
   foreach ($result as $row) {
-    $return[] = [ 'nid' => $row->nid, 'title' => $row->title ];
+    $return[] = ['nid' => $row->nid, 'title' => $row->title];
   }
 
   return $return;

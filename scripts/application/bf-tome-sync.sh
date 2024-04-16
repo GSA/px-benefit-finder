@@ -18,7 +18,7 @@ if [ -z "$TOMELOGFILE" ]; then
 fi;
 
 # make sure there is a static site to sync
-STATIC_COUNT=$(ls /var/www/html/ | wc -l)
+STATIC_COUNT=$(find /var/www -maxdepth 1 | wc -l)
 if [ "$STATIC_COUNT" = "0" ]; then
   MSG="NO SITE TO SYNC"
   echo $MSG

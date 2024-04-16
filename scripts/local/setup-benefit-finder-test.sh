@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# get current directory
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+## Set the root directory in the pipeline
+ROOT_DIR=$(git rev-parse --show-toplevel)
 
 # BENEFIT_FINDER_TESTS
 BENEFIT_FINDER_TESTS="tests"
-readonly BENEFIT_FINDER_TESTS_LOCATION="${SCRIPT_DIR}/${BENEFIT_FINDER_TESTS}"
+readonly BENEFIT_FINDER_TESTS_LOCATION="${ROOT_DIR}/${BENEFIT_FINDER_TESTS}"
 
 # USAGOV-2021 project
-readonly USAGOV_PROJECT_LOCATION="${SCRIPT_DIR}/usagov-2021"
+readonly USAGOV_PROJECT_LOCATION="${ROOT_DIR}/usagov-2021"
 
 # Copy PHPUnit configuration file
-cp -r ${BENEFIT_FINDER_TESTS_LOCATION}/phpunit.xml ${USAGOV_PROJECT_LOCATION}/phpunit.xml
+cp -r "${BENEFIT_FINDER_TESTS_LOCATION}/phpunit.xml" "${USAGOV_PROJECT_LOCATION}/phpunit.xml"
 
-cd ${USAGOV_PROJECT_LOCATION}
+cd "${USAGOV_PROJECT_LOCATION}" || exit 1
 
 # Install testing software
 bin/composer require --dev drupal/core-dev

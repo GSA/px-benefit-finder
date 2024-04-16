@@ -8,24 +8,35 @@ environment="benefit-finder-dev"
 
 # source ${home}/.bashrc
 
-mkdir -p ${html_path}
+mkdir -p "${html_path}"
 
 export PYTHONWARNINGS="ignore:Unverified HTTPS request"
 
-export application_uri=$(echo $VCAP_APPLICATION | jq -r '.application_uris[]')
+application_uri=$(echo "${VCAP_APPLICATION}" | jq -r '.application_uris[]')
+export application_uri
 
-export AWS_ACCESS_KEY_ID=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.access_key_id')
-export AWS_SECRET_ACCESS_KEY=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.secret_access_key')
-export AWS_DEFAULT_REGION=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
+AWS_ACCESS_KEY_ID=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.access_key_id')
+export AWS_ACCESS_KEY_ID
 
-export bucket_name=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).name')
-export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
-export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
+AWS_SECRET_ACCESS_KEY=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.secret_access_key')
+export AWS_SECRET_ACCESS_KEY
+
+AWS_DEFAULT_REGION=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
+export AWS_DEFAULT_REGION
+
+bucket_name=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).name')
+export bucket_name
+
+bucket=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
+export bucket
+
+bucket_endpoint=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
+export bucket_endpoint
 
 # export ssg_endpoint="http://benefit-finder-cms-dev.app.cloud.gov"
 # [ "${environment}" = "prod" ] && export ssg_endpoint="https://ssg.vote.gov"
 
-cd ${app_path}
+cd "${app_path}" || exit 1
 echo "Running 'drush cron' in '${environment}'..."
 # /var/www/vendor/bin/drush --uri=${ssg_endpoint} cron
 /var/www/vendor/bin/drush cron
@@ -56,13 +67,13 @@ echo "'drush tome:static' task completed!"
 # cp -rfp ${app_path}/web/themes/custom/votegov/json ${html_path}/themes/custom/votegov/
 # echo "Adding Vote.gov custom theme assets - completed!"
 
-cd ${html_path}
+cd "${html_path}" || exit 1
 echo "Copying static files to '${bucket_name}'..."
 cp -r /var/www/web/themes/custom/usagov/fonts  ${html_path}/themes/custom/usagov 
 cp -r /var/www/web/themes/custom/usagov/images ${html_path}/themes/custom/usagov 
 cp -r /var/www/web/themes/custom/usagov/assets ${html_path}/themes/custom/usagov 
-aws s3 sync . s3://${bucket} --delete --no-verify-ssl # 2>/dev/null
-aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl # 2>/dev/null
+aws s3 sync . "s3://${bucket}" --delete --no-verify-ssl # 2>/dev/null
+aws s3 website "s3://${bucket}" --index-document index.html --error-document /404/index.html  --no-verify-ssl # 2>/dev/null
 echo "Copy to '${bucket_name}' completed!"
 
 # export objects=($(aws s3 ls s3://${bucket} --recursive --no-verify-ssl 2>/dev/null | awk '{print $(NF)}' | sed -z -e 's/\n/ /g'))

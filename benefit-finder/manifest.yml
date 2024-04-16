@@ -5,10 +5,10 @@ default_config: &defaults
   disk_quota: 1G
   timeout: 180
   routes:
-    - route: benefit-finder-storybook-${CIRCLE_BRANCH}.app.cloud.gov
+    - route: benefit-finder-storybook-${BRANCH}.app.cloud.gov
       protocol: http1
 applications:
-- name: benefit-finder-storybook-${CIRCLE_BRANCH}
+- name: benefit-finder-storybook-${BRANCH}
   <<: *defaults
   memory: 64M
   stack: cflinuxfs4

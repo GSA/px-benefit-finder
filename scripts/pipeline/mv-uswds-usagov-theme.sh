@@ -1,15 +1,15 @@
 #!/bin/bash
 # this file moves the usa git submodule uswds custom theme into our application directory so storybook can access it
 
-# get current directory
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+## Set the root directory in the pipeline
+ROOT_DIR=$(git rev-parse --show-toplevel)
 
 # benefit-finder app location
-readonly BENEFIT_FINDER_PROJECT_LOCATION="${SCRIPT_DIR}/benefit-finder"
+readonly BENEFIT_FINDER_PROJECT_LOCATION="${ROOT_DIR}/benefit-finder"
 readonly STORYBOOK_THEMES_DIR="${BENEFIT_FINDER_PROJECT_LOCATION}/themes"
 
 # USAGOV-2021 project
-readonly USAGOV_PROJECT_LOCATION="${SCRIPT_DIR}/usagov-2021/"
+readonly USAGOV_PROJECT_LOCATION="${ROOT_DIR}/usagov-2021/"
 readonly USAGOV_PROJECT_THEME_LOCATION="${USAGOV_PROJECT_LOCATION}web/themes/custom/usagov"
 readonly USAGOV_PROJECT_THEME_DIR="${USAGOV_PROJECT_LOCATION}web/themes"
 

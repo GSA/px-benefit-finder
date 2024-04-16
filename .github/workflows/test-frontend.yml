@@ -5,6 +5,8 @@ name: Test Frontend
 on:
   workflow_dispatch:
   push:
+    paths:
+      - benefit-finder/*
 
 permissions: read-all
 

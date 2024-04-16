@@ -1,0 +1,190 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: 
+      - dev
+      - main
+
+jobs:
+  php-lint:
+    name: PHP Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set env.BRANCH
+        run: |
+          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+      - name: Install PHP
+        run: bash ./scripts/pipeline/deb-php-install.sh
+      # - name: Install Node.js
+      #   run: |
+      #     bash ./scripts/pipeline/deb-nodejs-install.sh
+      - name: Init submodule
+        run: |
+          git submodule init
+          git submodule update
+          cd usagov-2021
+          git checkout prod
+          cd ..
+      - name: Install Linters and Sniffers
+        run: |
+          npm install --prefix ./benefit-finder
+          composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer false
+          composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint squizlabs/php_codesniffer=*
+          COMPOSER_DIR=$(composer -n config --global home)
+          $COMPOSER_DIR/vendor/bin/phpcs --config-set installed_paths $COMPOSER_DIR/vendor/drupal/coder/coder_sniffer,$COMPOSER_DIR/vendor/sirbrillig/phpcs-variable-analysis,$COMPOSER_DIR/vendor/slevomat/coding-standard
+          mkdir -p /tmp/results
+          touch /tmp/results/php-lint.log
+          touch /tmp/results/php-cs.log
+          touch /tmp/results/theme-lint.log
+      - name: PHP Lint
+        run: |
+          COMPOSER_DIR=$(composer -n config --global home)
+          $COMPOSER_DIR/vendor/bin/parallel-lint -e php,module,inc,install,test,profile,theme ./benefit-finder ./benefit-finder # | tee /tmp/results/php-lint.log
+      - name: PHP CodeSniff (Ignore warnings)
+        run: |
+          COMPOSER_DIR=$(composer -n config --global home)
+          $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder # | tee /tmp/results/php-cs.log
+  backup-database:
+    needs: php-lint
+    uses: ./.github/workflows/database-backup.yml
+    secrets: inherit
+  component-library:
+    needs: backup-database
+    name: Build and deploy component library
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set env.BRANCH
+        run: |
+          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+      - name: Install basic dependancies
+        run: |
+          ./scripts/pipeline/deb-basic-deps.sh
+      - name: Install Cloudfoundry CLI
+        run: ./scripts/pipeline/deb-cf-install.sh
+      - name: Init submodule
+        run: |
+          git submodule init
+          git submodule update
+          cd usagov-2021
+          git checkout prod
+          cd ..
+      - name: Deploy Storybook
+        env:
+          CF_USER: '${{ secrets.CF_USER }}'
+          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
+          CF_ORG: '${{ secrets.CF_ORG }}'
+          PROJECT: '${{ secrets.PROJECT }}'
+        run: |
+          source ./scripts/pipeline/cloud-gov-login.sh
+          cd benefit-finder
+          mv manifest.yml manifest.yml.tpl
+          envsubst < manifest.yml.tpl > manifest.yml
+          npm run build
+          bash ../scripts/pipeline/mv-uswds-usagov-theme.sh
+          npm run build:storybook
+          mv manifest.yml storybook-static/
+          mv Staticfile storybook-static/
+          mv nginx storybook-static/
+          cd storybook-static
+          echo "${{ secrets.STORYBOOK_USERNAME }}:${{ secrets.STORYBOOK_PASSWORD }}" > Staticfile.auth
+          cf push benefit-finder-storybook-${BRANCH}
+  build-and-deploy:
+    needs: backup-database
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set env.BRANCH
+        run: |
+          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+      - name: Install basic dependancies
+        run: ./scripts/pipeline/deb-basic-deps.sh
+      - name: Install Cloudfoundry CLI
+        run: ./scripts/pipeline/deb-cf-install.sh
+      - name: Init submodule
+        run: |
+          git submodule init
+          git submodule update
+          cd usagov-2021
+          git checkout prod
+      - name: Merge files into module
+        run: |
+          bash ./scripts/pipeline/mv-benefit-finder-app.sh
+          rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
+          mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
+          mv ./scripts/application/* usagov-2021/scripts/
+      - name: Configure application
+        run: |
+          cd usagov-2021
+          sed -i "s/memory_limit       = 1G/memory_limit       = 500M/g" .docker/src-cms/etc/php81/php.ini
+          mv .docker/Dockerfile-cms .
+          sed -i 's/80/8080/g' Dockerfile-cms
+          sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
+          sed -i 's/\["s3"\]\[\]?/s3\[\]/g' scripts/tome-run.sh scripts/tome-sync.sh
+          sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
+          sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
+          sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
+          sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php
+          sed -i "s/\$service\['name'\] === 'secrets'/stristr(\$service\['name'\], 'secrets')/"  web/sites/default/settings.php
+      - name: Docker login
+        uses: docker/login-action@v3.1.0
+        with:
+          registry: ghcr.io
+          username: ${{ secrets.CR_USERNAME }}
+          password: ${{ secrets.CR_PAT }}
+      - name: Docker tag
+        id: meta
+        uses: docker/metadata-action@v5.5.1
+        with:
+          images: ghcr.io/${{ vars.CR_REPOSITORY }}
+          tags: |
+            type=sha,enable=true,priority=100,prefix=,suffix=,format=short
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5.3.0
+        with:
+          context: ./usagov-2021
+          file: ./usagov-2021/Dockerfile-cms
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }} 
+      - name: Configure manifest.yml
+        env:
+          PROJECT: '${{ secrets.PROJECT }}'
+        run: |
+          cd usagov-2021
+          sed -i "s#^    image: .*cms-latest*#    image: ghcr.io/${{ vars.CR_REPOSITORY }}:${{ steps.meta.outputs.tags }}#" manifest.yml
+          sed -i "s#^    - secauthsecrets##" manifest.yml
+          sed -i "s#- name: cms#- name: ${PROJECT}-cms-${BRANCH}#" manifest.yml
+          sed -i "s#^  memory: 1.5G#  memory: 1G#" manifest.yml
+          sed -i "s#^    - database#    - ${PROJECT}-mysql-${BRANCH}#" manifest.yml
+          sed -i "s#^    - secrets#    - ${PROJECT}-secrets-${BRANCH}#" manifest.yml
+          sed -i "s#^    - storage#    - ${PROJECT}-storage-${BRANCH}#" manifest.yml
+          sed -i "s#^    - dbstorage#    - ${PROJECT}-static-${BRANCH}#" manifest.yml
+          sed -i '16i\  command: /var/www/scripts/entrypoint.sh' manifest.yml
+      - name: Deploy application
+        env:
+          CF_USER: '${{ secrets.CF_USER }}'
+          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
+          CF_ORG: '${{ secrets.CF_ORG }}'
+          CR_PAT: '${{ secrets.CR_PAT }}'
+          CR_USERNAME: '${{ secrets.CR_USERNAME }}'
+          PROJECT: '${{ secrets.PROJECT }}'
+        run: |
+          source ./scripts/pipeline/cloud-gov-login.sh
+          cd usagov-2021
+          CF_DOCKER_PASSWORD=${CR_PAT} cf push ${PROJECT}-cms-${BRANCH} --docker-image "${{ steps.meta.outputs.tags }}" --docker-username "${CF_USER}" && docker logout
+          ../scripts/pipeline/cloud-gov-wait-for-application.sh ${PROJECT}-cms-${BRANCH}
+          cf add-network-policy ${PROJECT}-waf-${BRANCH} ${PROJECT}-cms-${BRANCH} -s ${PROJECT}-${BRANCH} -o ${CF_ORG} --protocol tcp --port 61443
+          cf map-route benefit-finder-cms-${BRANCH} apps.internal --hostname benefit-finder-cms-${BRANCH} --app-protocol http1
+          cd ..
+          source ./scripts/pipeline/cloud-gov-post-deploy.sh

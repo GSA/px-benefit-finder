@@ -6,7 +6,7 @@
     "node": "20.x.x"
   },
   "scripts": {
-    "mv:uswds:usagov": "bash ../mv-uswds-usagov-theme.sh",
+    "mv:uswds:usagov": "bash ../scripts/pipeline/mv-uswds-usagov-theme.sh",
     "prestart": "npm run mv:uswds:usagov",
     "start": "vite --host",
     "build": "vite build",

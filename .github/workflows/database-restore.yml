@@ -31,7 +31,7 @@ jobs:
           CF_USER: '${{ secrets.CF_USER }}'
           CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
           CF_ORG: '${{ secrets.CF_ORG }}'
-          project: '${{ secrets.project }}'
+          PROJECT: '${{ secrets.PROJECT }}'
         run: |
           export S3_FILE_PATH=${{ github.event.inputs.database_file_override }}
           source ./scripts/pipeline/cloud-gov-login.sh

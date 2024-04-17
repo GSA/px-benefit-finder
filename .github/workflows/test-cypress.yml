@@ -26,6 +26,7 @@ jobs:
       - name: Install dependencies
         uses: cypress-io/github-action@v4
         with:
+          working-directory: ./benefit-finder
           # install WebKit browser dependencies
           build: npx playwright install-deps webkit
           runTests: false
@@ -33,6 +34,7 @@ jobs:
       - name: Cypress run (WebKit)
         uses: cypress-io/github-action@v4
         with:
+          working-directory: ./benefit-finder
           # we have already installed everything
           install: false
           # check the spec types

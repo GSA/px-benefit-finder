@@ -24,7 +24,7 @@ jobs:
       fail-fast: false
       matrix:
         containers: [chrome, firefox, edge, webkit]
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,8 +42,11 @@ jobs:
           cd benefit-finder
 
       - name: Install WebKit browser dependencies
+        uses: cypress-io/github-action@v6
         if: ${{ (matrix.containers == 'webkit') }}
-        run: npx playwright install-deps webkit
+        with:
+          build: npx playwright install-deps webkit
+          runTests: false
 
       - name: Cypress Run Tests
         uses: cypress-io/github-action@v6

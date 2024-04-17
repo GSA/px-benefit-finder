@@ -19,12 +19,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       # Install NPM dependencies, cache them correctly
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
       # and run all Cypress tests
       # https://github.com/cypress-io/github-action
       - name: Install dependencies
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v6
         with:
           working-directory: ./benefit-finder
           # install WebKit browser dependencies
@@ -32,7 +36,7 @@ jobs:
           runTests: false
 
       - name: Cypress run (WebKit)
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v6
         with:
           working-directory: ./benefit-finder
           # we have already installed everything

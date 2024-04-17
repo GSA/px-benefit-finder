@@ -14,8 +14,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set env.BRANCH
+        run: |
+          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
       - name: Install basic dependancies
-        run: ./scripts/pipeline/deb-basic.deps.sh
+        run: ./scripts/pipeline/deb-basic-deps.sh
       - name: Install AWSCLI
         run: ./scripts/pipeline/awscli-install.sh
       - name: Install MySQL Client
@@ -28,11 +31,11 @@ jobs:
           CF_USER: '${{ secrets.CF_USER }}'
           CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
           CF_ORG: '${{ secrets.CF_ORG }}'
-          project: '${{ secrets.project }}'
+          PROJECT: '${{ secrets.PROJECT }}'
         run: |
-          export ENVIRONMENT='${{ github.ref_name }}'
           export S3_FILE_PATH=${{ github.event.inputs.database_file_override }}
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/s3-backup-download.sh
           source ./scripts/pipeline/database-restore.sh
+          source ./scripts/pipeline/cloud-gov-post-deploy.sh
           source ./scripts/pipeline/s3-backup-post-restore.sh

@@ -36,32 +36,17 @@ jobs:
           git push --force-with-lease
 
       - name: Building benefit-finder module
-        run: |
-          export NVM_DIR="$HOME/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-          nvm install 20 # --reinstall-packages-from=node
-          bash ./mv-benefit-finder-app.sh
-
-      - name: Setup CF CLI
-        env:
-          CF_USER: "${{ secrets.CF_USER }}"
-          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
-          CF_ORG: "${{ secrets.CF_ORG }}"
-        run: |
-          if [ "$(whoami)" != "root" ]; then
-            wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            sudo apt-get update
-            sudo apt-get install -y cf8-cli
-          else
-            wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            apt-get update
-            apt-get install -y cf8-cli
-          fi
-          cf -v
-          cf login -a https://api.fr.cloud.gov -u "$CF_USER" -p "$CF_PASSWORD" -o "$CF_ORG"  -s "benefit-finder-dev"
+        run: bash ./scripts/pipeline/mv-benefit-finder-app.sh
+        
+      # - name: Install Cloudfoundry CLI
+      #   run: ./scripts/pipeline/deb-cf-install.sh
+      # - name: Cloud.gov Login
+      #   env:
+      #     CF_USER: "${{ secrets.CF_USER }}"
+      #     CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+      #     CF_ORG: "${{ secrets.CF_ORG }}"
+      #     PROJECT: "${{ secrets.PROJECT }}"
+      #   run: source ./scripts/pipeline/cloud-gov-login.sh
 
       # - name: Building & Deploying Storybook App to Dev Env
       #   env:
@@ -83,7 +68,7 @@ jobs:
       #     nvm install node # --reinstall-packages-from=node
       #     npm i @craco/craco
       #     npm run build
-      #     bash ../mv-uswds-usagov-theme.sh
+      #     bash ../scripts/pipeline/mv-uswds-usagov-theme.sh
       #     npm run build:storybook
       #     mv manifest.yml storybook-static/
       #     mv Staticfile storybook-static/

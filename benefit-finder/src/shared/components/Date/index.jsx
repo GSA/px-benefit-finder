@@ -27,7 +27,7 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           className="bf-usa-date-alert"
           heading={ui.alertBanner.heading}
           description={alert}
-          error
+          type="error"
           hasError={invalid}
         ></Alert>
       )}

@@ -9,3 +9,11 @@ export default {
 }
 
 export const Primary = {}
+
+export const HasError = {
+  args: {
+    ...Primary.args,
+    type: 'error',
+    hasError: true,
+  },
+}

@@ -88,7 +88,6 @@ exports[`loads view 1`] = `
                 Open all +
               </button>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial benefits"
@@ -99,7 +98,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="0-Burial benefits"
+                    aria-controls="Burial benefits"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -142,7 +141,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="0-Burial benefits"
+                  id="Burial benefits"
                 >
                   <div>
                     <h4
@@ -255,7 +254,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -307,7 +306,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Death gratuity"
@@ -318,7 +316,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="1-Death gratuity"
+                    aria-controls="Death gratuity"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -361,7 +359,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="1-Death gratuity"
+                  id="Death gratuity"
                 >
                   <div>
                     <h4
@@ -474,7 +472,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -526,7 +524,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial flag"
@@ -537,7 +534,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="2-Burial flag"
+                    aria-controls="Burial flag"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -580,7 +577,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="2-Burial flag"
+                  id="Burial flag"
                 >
                   <div>
                     <h4
@@ -688,7 +685,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -740,7 +737,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Annuity for certain military surviving spouses"
@@ -751,7 +747,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="3-Annuity for certain military surviving spouses"
+                    aria-controls="Annuity for certain military surviving spouses"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -794,7 +790,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="3-Annuity for certain military surviving spouses"
+                  id="Annuity for certain military surviving spouses"
                 >
                   <div>
                     <h4
@@ -907,7 +903,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -959,7 +955,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial in VA national cemetery"
@@ -970,7 +965,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="4-Burial in VA national cemetery"
+                    aria-controls="Burial in VA national cemetery"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -1013,7 +1008,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="4-Burial in VA national cemetery"
+                  id="Burial in VA national cemetery"
                 >
                   <div>
                     <h4
@@ -1096,7 +1091,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1148,7 +1143,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
@@ -1159,7 +1153,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="5-Civilian Health and Medical Program of the VA (CHAMPVA) for child"
+                    aria-controls="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -1202,7 +1196,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="5-Civilian Health and Medical Program of the VA (CHAMPVA) for child"
+                  id="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                 >
                   <div>
                     <h4
@@ -1299,7 +1293,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1351,7 +1345,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="COVID-19 funeral assistance"
@@ -1361,7 +1354,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="6-COVID-19 funeral assistance"
+                    aria-controls="COVID-19 funeral assistance"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -1404,7 +1397,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="6-COVID-19 funeral assistance"
+                  id="COVID-19 funeral assistance"
                 >
                   <div>
                     <h4
@@ -1596,7 +1589,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1648,7 +1641,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for child"
@@ -1659,7 +1651,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="7-Dependency and Indemnity Compensation (DIC) for child"
+                    aria-controls="Dependency and Indemnity Compensation (DIC) for child"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -1702,7 +1694,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="7-Dependency and Indemnity Compensation (DIC) for child"
+                  id="Dependency and Indemnity Compensation (DIC) for child"
                 >
                   <div>
                     <h4
@@ -1800,7 +1792,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -1852,7 +1844,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for parent"
@@ -1863,7 +1854,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="8-Dependency and Indemnity Compensation (DIC) for parent"
+                    aria-controls="Dependency and Indemnity Compensation (DIC) for parent"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -1906,7 +1897,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="8-Dependency and Indemnity Compensation (DIC) for parent"
+                  id="Dependency and Indemnity Compensation (DIC) for parent"
                 >
                   <div>
                     <h4
@@ -1999,7 +1990,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2051,7 +2042,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for spouse"
@@ -2062,7 +2052,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="9-Dependency and Indemnity Compensation (DIC) for spouse"
+                    aria-controls="Dependency and Indemnity Compensation (DIC) for spouse"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -2105,7 +2095,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="9-Dependency and Indemnity Compensation (DIC) for spouse"
+                  id="Dependency and Indemnity Compensation (DIC) for spouse"
                 >
                   <div>
                     <h4
@@ -2248,7 +2238,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2300,7 +2290,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Education benefits (GI Bill) for survivors"
@@ -2311,7 +2300,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="10-Education benefits (GI Bill) for survivors"
+                    aria-controls="Education benefits (GI Bill) for survivors"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -2354,7 +2343,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="10-Education benefits (GI Bill) for survivors"
+                  id="Education benefits (GI Bill) for survivors"
                 >
                   <div>
                     <h4
@@ -2472,7 +2461,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2524,7 +2513,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Financial Assistance and Social Services (FASS) for deceased"
@@ -2535,7 +2523,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="11-Financial Assistance and Social Services (FASS) for deceased"
+                    aria-controls="Financial Assistance and Social Services (FASS) for deceased"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -2578,7 +2566,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="11-Financial Assistance and Social Services (FASS) for deceased"
+                  id="Financial Assistance and Social Services (FASS) for deceased"
                 >
                   <div>
                     <h4
@@ -2655,7 +2643,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2707,7 +2695,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Home loan program for survivors"
@@ -2718,7 +2705,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="12-Home loan program for survivors"
+                    aria-controls="Home loan program for survivors"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -2761,7 +2748,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="12-Home loan program for survivors"
+                  id="Home loan program for survivors"
                 >
                   <div>
                     <h4
@@ -2905,7 +2892,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -2957,7 +2944,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Life insurance for survivors of veterans"
@@ -2968,7 +2954,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="13-Life insurance for survivors of veterans"
+                    aria-controls="Life insurance for survivors of veterans"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -3011,7 +2997,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="13-Life insurance for survivors of veterans"
+                  id="Life insurance for survivors of veterans"
                 >
                   <div>
                     <h4
@@ -3119,7 +3105,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3171,7 +3157,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Lump-sum death benefit"
@@ -3181,7 +3166,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="14-Lump-sum death benefit"
+                    aria-controls="Lump-sum death benefit"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -3224,7 +3209,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="14-Lump-sum death benefit"
+                  id="Lump-sum death benefit"
                 >
                   <div>
                     <h4
@@ -3386,7 +3371,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3438,7 +3423,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Presidential Memorial Certificate"
@@ -3449,7 +3433,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="15-Presidential Memorial Certificate"
+                    aria-controls="Presidential Memorial Certificate"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -3492,7 +3476,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="15-Presidential Memorial Certificate"
+                  id="Presidential Memorial Certificate"
                 >
                   <div>
                     <h4
@@ -3605,7 +3589,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3657,7 +3641,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Public safety officers' death benefits"
@@ -3668,7 +3651,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="16-Public safety officers' death benefits"
+                    aria-controls="Public safety officers' death benefits"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -3711,7 +3694,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="16-Public safety officers' death benefits"
+                  id="Public safety officers' death benefits"
                 >
                   <div>
                     <h4
@@ -3802,7 +3785,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -3854,7 +3837,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Public safety officers' Educational Assistance Program"
@@ -3865,7 +3847,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="17-Public safety officers' Educational Assistance Program"
+                    aria-controls="Public safety officers' Educational Assistance Program"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -3908,7 +3890,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="17-Public safety officers' Educational Assistance Program"
+                  id="Public safety officers' Educational Assistance Program"
                 >
                   <div>
                     <h4
@@ -3998,7 +3980,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -4050,7 +4032,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivor benefit plan"
@@ -4061,7 +4042,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="18-Survivor benefit plan"
+                    aria-controls="Survivor benefit plan"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -4104,7 +4085,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="18-Survivor benefit plan"
+                  id="Survivor benefit plan"
                 >
                   <div>
                     <h4
@@ -4217,7 +4198,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -4269,7 +4250,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for child"
@@ -4280,7 +4260,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="19-Survivors benefits for child"
+                    aria-controls="Survivors benefits for child"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -4323,7 +4303,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="19-Survivors benefits for child"
+                  id="Survivors benefits for child"
                 >
                   <div>
                     <h4
@@ -4453,7 +4433,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -4505,7 +4485,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for child with disabilities"
@@ -4516,7 +4495,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="20-Survivors benefits for child with disabilities"
+                    aria-controls="Survivors benefits for child with disabilities"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -4559,7 +4538,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="20-Survivors benefits for child with disabilities"
+                  id="Survivors benefits for child with disabilities"
                 >
                   <div>
                     <h4
@@ -4712,7 +4691,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -4764,7 +4743,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for mothers/fathers"
@@ -4774,7 +4752,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="21-Survivors benefits for mothers/fathers"
+                    aria-controls="Survivors benefits for mothers/fathers"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -4817,7 +4795,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="21-Survivors benefits for mothers/fathers"
+                  id="Survivors benefits for mothers/fathers"
                 >
                   <div>
                     <h4
@@ -4979,7 +4957,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -5031,7 +5009,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for parents"
@@ -5042,7 +5019,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="22-Survivors benefits for parents"
+                    aria-controls="Survivors benefits for parents"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -5085,7 +5062,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="22-Survivors benefits for parents"
+                  id="Survivors benefits for parents"
                 >
                   <div>
                     <h4
@@ -5236,7 +5213,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -5288,7 +5265,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for spouse"
@@ -5298,7 +5274,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="23-Survivors benefits for spouse"
+                    aria-controls="Survivors benefits for spouse"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -5341,7 +5317,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="23-Survivors benefits for spouse"
+                  id="Survivors benefits for spouse"
                 >
                   <div>
                     <h4
@@ -5533,7 +5509,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -5585,7 +5561,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for spouse with disabilities"
@@ -5596,7 +5571,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="24-Survivors benefits for spouse with disabilities"
+                    aria-controls="Survivors benefits for spouse with disabilities"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -5639,7 +5614,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="24-Survivors benefits for spouse with disabilities"
+                  id="Survivors benefits for spouse with disabilities"
                 >
                   <div>
                     <h4
@@ -5854,7 +5829,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -5906,7 +5881,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for child"
@@ -5917,7 +5891,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="25-Survivors pension for child"
+                    aria-controls="Survivors pension for child"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -5960,7 +5934,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="25-Survivors pension for child"
+                  id="Survivors pension for child"
                 >
                   <div>
                     <h4
@@ -6052,7 +6026,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6104,7 +6078,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for child with disabilities"
@@ -6115,7 +6088,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="26-Survivors pension for child with disabilities"
+                    aria-controls="Survivors pension for child with disabilities"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -6158,7 +6131,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="26-Survivors pension for child with disabilities"
+                  id="Survivors pension for child with disabilities"
                 >
                   <div>
                     <h4
@@ -6281,7 +6254,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6333,7 +6306,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for spouse"
@@ -6344,7 +6316,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="27-Survivors pension for spouse"
+                    aria-controls="Survivors pension for spouse"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -6387,7 +6359,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="27-Survivors pension for spouse"
+                  id="Survivors pension for spouse"
                 >
                   <div>
                     <h4
@@ -6530,7 +6502,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6582,7 +6554,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans burial allowance"
@@ -6593,7 +6564,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="28-Veterans burial allowance"
+                    aria-controls="Veterans burial allowance"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -6636,7 +6607,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="28-Veterans burial allowance"
+                  id="Veterans burial allowance"
                 >
                   <div>
                     <h4
@@ -6810,7 +6781,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -6862,7 +6833,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans headstone and grave marker"
@@ -6873,7 +6843,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="29-Veterans headstone and grave marker"
+                    aria-controls="Veterans headstone and grave marker"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -6916,7 +6886,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="29-Veterans headstone and grave marker"
+                  id="Veterans headstone and grave marker"
                 >
                   <div>
                     <h4
@@ -7029,7 +6999,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -7081,7 +7051,6 @@ exports[`loads view 1`] = `
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans medallion"
@@ -7092,7 +7061,7 @@ exports[`loads view 1`] = `
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="30-Veterans medallion"
+                    aria-controls="Veterans medallion"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -7135,7 +7104,7 @@ exports[`loads view 1`] = `
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="30-Veterans medallion"
+                  id="Veterans medallion"
                 >
                   <div>
                     <h4
@@ -7248,7 +7217,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -7492,7 +7461,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 Open all +
               </button>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial benefits"
@@ -7503,7 +7471,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="0-Burial benefits"
+                    aria-controls="Burial benefits"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -7546,7 +7514,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="0-Burial benefits"
+                  id="Burial benefits"
                 >
                   <div>
                     <h4
@@ -7659,7 +7627,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -7711,7 +7679,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Death gratuity"
@@ -7722,7 +7689,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="1-Death gratuity"
+                    aria-controls="Death gratuity"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -7765,7 +7732,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="1-Death gratuity"
+                  id="Death gratuity"
                 >
                   <div>
                     <h4
@@ -7878,7 +7845,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -7930,7 +7897,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial flag"
@@ -7941,7 +7907,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="2-Burial flag"
+                    aria-controls="Burial flag"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -7984,7 +7950,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="2-Burial flag"
+                  id="Burial flag"
                 >
                   <div>
                     <h4
@@ -8092,7 +8058,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8144,7 +8110,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Annuity for certain military surviving spouses"
@@ -8155,7 +8120,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="3-Annuity for certain military surviving spouses"
+                    aria-controls="Annuity for certain military surviving spouses"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -8198,7 +8163,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="3-Annuity for certain military surviving spouses"
+                  id="Annuity for certain military surviving spouses"
                 >
                   <div>
                     <h4
@@ -8311,7 +8276,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8363,7 +8328,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Burial in VA national cemetery"
@@ -8374,7 +8338,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="4-Burial in VA national cemetery"
+                    aria-controls="Burial in VA national cemetery"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -8417,7 +8381,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="4-Burial in VA national cemetery"
+                  id="Burial in VA national cemetery"
                 >
                   <div>
                     <h4
@@ -8500,7 +8464,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8552,7 +8516,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
@@ -8563,7 +8526,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="5-Civilian Health and Medical Program of the VA (CHAMPVA) for child"
+                    aria-controls="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -8606,7 +8569,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="5-Civilian Health and Medical Program of the VA (CHAMPVA) for child"
+                  id="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
                 >
                   <div>
                     <h4
@@ -8703,7 +8666,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -8755,7 +8718,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="COVID-19 funeral assistance"
@@ -8765,7 +8727,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="6-COVID-19 funeral assistance"
+                    aria-controls="COVID-19 funeral assistance"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -8808,7 +8770,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="6-COVID-19 funeral assistance"
+                  id="COVID-19 funeral assistance"
                 >
                   <div>
                     <h4
@@ -9000,7 +8962,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9052,7 +9014,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for child"
@@ -9063,7 +9024,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="7-Dependency and Indemnity Compensation (DIC) for child"
+                    aria-controls="Dependency and Indemnity Compensation (DIC) for child"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -9106,7 +9067,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="7-Dependency and Indemnity Compensation (DIC) for child"
+                  id="Dependency and Indemnity Compensation (DIC) for child"
                 >
                   <div>
                     <h4
@@ -9204,7 +9165,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9256,7 +9217,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for parent"
@@ -9267,7 +9227,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="8-Dependency and Indemnity Compensation (DIC) for parent"
+                    aria-controls="Dependency and Indemnity Compensation (DIC) for parent"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -9310,7 +9270,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="8-Dependency and Indemnity Compensation (DIC) for parent"
+                  id="Dependency and Indemnity Compensation (DIC) for parent"
                 >
                   <div>
                     <h4
@@ -9403,7 +9363,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9455,7 +9415,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Dependency and Indemnity Compensation (DIC) for spouse"
@@ -9466,7 +9425,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="9-Dependency and Indemnity Compensation (DIC) for spouse"
+                    aria-controls="Dependency and Indemnity Compensation (DIC) for spouse"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -9509,7 +9468,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="9-Dependency and Indemnity Compensation (DIC) for spouse"
+                  id="Dependency and Indemnity Compensation (DIC) for spouse"
                 >
                   <div>
                     <h4
@@ -9652,7 +9611,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9704,7 +9663,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Education benefits (GI Bill) for survivors"
@@ -9715,7 +9673,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="10-Education benefits (GI Bill) for survivors"
+                    aria-controls="Education benefits (GI Bill) for survivors"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -9758,7 +9716,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="10-Education benefits (GI Bill) for survivors"
+                  id="Education benefits (GI Bill) for survivors"
                 >
                   <div>
                     <h4
@@ -9876,7 +9834,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -9928,7 +9886,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Financial Assistance and Social Services (FASS) for deceased"
@@ -9939,7 +9896,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="11-Financial Assistance and Social Services (FASS) for deceased"
+                    aria-controls="Financial Assistance and Social Services (FASS) for deceased"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -9982,7 +9939,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="11-Financial Assistance and Social Services (FASS) for deceased"
+                  id="Financial Assistance and Social Services (FASS) for deceased"
                 >
                   <div>
                     <h4
@@ -10059,7 +10016,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10111,7 +10068,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Home loan program for survivors"
@@ -10122,7 +10078,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="12-Home loan program for survivors"
+                    aria-controls="Home loan program for survivors"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -10165,7 +10121,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="12-Home loan program for survivors"
+                  id="Home loan program for survivors"
                 >
                   <div>
                     <h4
@@ -10309,7 +10265,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10361,7 +10317,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Life insurance for survivors of veterans"
@@ -10372,7 +10327,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="13-Life insurance for survivors of veterans"
+                    aria-controls="Life insurance for survivors of veterans"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -10415,7 +10370,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="13-Life insurance for survivors of veterans"
+                  id="Life insurance for survivors of veterans"
                 >
                   <div>
                     <h4
@@ -10523,7 +10478,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10575,7 +10530,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Lump-sum death benefit"
@@ -10585,7 +10539,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="14-Lump-sum death benefit"
+                    aria-controls="Lump-sum death benefit"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -10628,7 +10582,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="14-Lump-sum death benefit"
+                  id="Lump-sum death benefit"
                 >
                   <div>
                     <h4
@@ -10790,7 +10744,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -10842,7 +10796,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Presidential Memorial Certificate"
@@ -10853,7 +10806,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="15-Presidential Memorial Certificate"
+                    aria-controls="Presidential Memorial Certificate"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -10896,7 +10849,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="15-Presidential Memorial Certificate"
+                  id="Presidential Memorial Certificate"
                 >
                   <div>
                     <h4
@@ -11009,7 +10962,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11061,7 +11014,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Public safety officers' death benefits"
@@ -11072,7 +11024,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="16-Public safety officers' death benefits"
+                    aria-controls="Public safety officers' death benefits"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -11115,7 +11067,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="16-Public safety officers' death benefits"
+                  id="Public safety officers' death benefits"
                 >
                   <div>
                     <h4
@@ -11206,7 +11158,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11258,7 +11210,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Public safety officers' Educational Assistance Program"
@@ -11269,7 +11220,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="17-Public safety officers' Educational Assistance Program"
+                    aria-controls="Public safety officers' Educational Assistance Program"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -11312,7 +11263,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="17-Public safety officers' Educational Assistance Program"
+                  id="Public safety officers' Educational Assistance Program"
                 >
                   <div>
                     <h4
@@ -11402,7 +11353,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11454,7 +11405,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivor benefit plan"
@@ -11465,7 +11415,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="18-Survivor benefit plan"
+                    aria-controls="Survivor benefit plan"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -11508,7 +11458,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="18-Survivor benefit plan"
+                  id="Survivor benefit plan"
                 >
                   <div>
                     <h4
@@ -11621,7 +11571,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11673,7 +11623,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for child"
@@ -11684,7 +11633,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="19-Survivors benefits for child"
+                    aria-controls="Survivors benefits for child"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -11727,7 +11676,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="19-Survivors benefits for child"
+                  id="Survivors benefits for child"
                 >
                   <div>
                     <h4
@@ -11857,7 +11806,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -11909,7 +11858,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for child with disabilities"
@@ -11920,7 +11868,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="20-Survivors benefits for child with disabilities"
+                    aria-controls="Survivors benefits for child with disabilities"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -11963,7 +11911,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="20-Survivors benefits for child with disabilities"
+                  id="Survivors benefits for child with disabilities"
                 >
                   <div>
                     <h4
@@ -12116,7 +12064,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -12168,7 +12116,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for mothers/fathers"
@@ -12178,7 +12125,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="21-Survivors benefits for mothers/fathers"
+                    aria-controls="Survivors benefits for mothers/fathers"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -12221,7 +12168,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="21-Survivors benefits for mothers/fathers"
+                  id="Survivors benefits for mothers/fathers"
                 >
                   <div>
                     <h4
@@ -12383,7 +12330,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -12435,7 +12382,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for parents"
@@ -12446,7 +12392,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="22-Survivors benefits for parents"
+                    aria-controls="Survivors benefits for parents"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -12489,7 +12435,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="22-Survivors benefits for parents"
+                  id="Survivors benefits for parents"
                 >
                   <div>
                     <h4
@@ -12640,7 +12586,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -12692,7 +12638,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for spouse"
@@ -12702,7 +12647,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="23-Survivors benefits for spouse"
+                    aria-controls="Survivors benefits for spouse"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -12745,7 +12690,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="23-Survivors benefits for spouse"
+                  id="Survivors benefits for spouse"
                 >
                   <div>
                     <h4
@@ -12937,7 +12882,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -12989,7 +12934,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors benefits for spouse with disabilities"
@@ -13000,7 +12944,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="24-Survivors benefits for spouse with disabilities"
+                    aria-controls="Survivors benefits for spouse with disabilities"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -13043,7 +12987,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="24-Survivors benefits for spouse with disabilities"
+                  id="Survivors benefits for spouse with disabilities"
                 >
                   <div>
                     <h4
@@ -13258,7 +13202,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -13310,7 +13254,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for child"
@@ -13321,7 +13264,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="25-Survivors pension for child"
+                    aria-controls="Survivors pension for child"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -13364,7 +13307,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="25-Survivors pension for child"
+                  id="Survivors pension for child"
                 >
                   <div>
                     <h4
@@ -13456,7 +13399,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -13508,7 +13451,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for child with disabilities"
@@ -13519,7 +13461,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="26-Survivors pension for child with disabilities"
+                    aria-controls="Survivors pension for child with disabilities"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -13562,7 +13504,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="26-Survivors pension for child with disabilities"
+                  id="Survivors pension for child with disabilities"
                 >
                   <div>
                     <h4
@@ -13685,7 +13627,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -13737,7 +13679,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Survivors pension for spouse"
@@ -13748,7 +13689,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="27-Survivors pension for spouse"
+                    aria-controls="Survivors pension for spouse"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -13791,7 +13732,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="27-Survivors pension for spouse"
+                  id="Survivors pension for spouse"
                 >
                   <div>
                     <h4
@@ -13934,7 +13875,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -13986,7 +13927,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans burial allowance"
@@ -13997,7 +13937,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="28-Veterans burial allowance"
+                    aria-controls="Veterans burial allowance"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -14040,7 +13980,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="28-Veterans burial allowance"
+                  id="Veterans burial allowance"
                 >
                   <div>
                     <h4
@@ -14214,7 +14154,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -14266,7 +14206,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans headstone and grave marker"
@@ -14277,7 +14216,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="29-Veterans headstone and grave marker"
+                    aria-controls="Veterans headstone and grave marker"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -14320,7 +14259,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="29-Veterans headstone and grave marker"
+                  id="Veterans headstone and grave marker"
                 >
                   <div>
                     <h4
@@ -14433,7 +14372,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"
@@ -14485,7 +14424,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 </div>
               </div>
               <div
-                aria-expanded="false"
                 class="bf-usa-accordion usa-accordion"
                 data-analytics="bf-usa-accordion"
                 data-analytics-content="Veterans medallion"
@@ -14496,7 +14434,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   class="bf-usa-accordion__heading usa-accordion__heading"
                 >
                   <button
-                    aria-controls="30-Veterans medallion"
+                    aria-controls="Veterans medallion"
                     aria-expanded="false"
                     class="bf-usa-accordion__button usa-accordion__button"
                     type="button"
@@ -14539,7 +14477,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <div
                   class="bf-usa-accordion__content usa-accordion__content usa-prose"
                   hidden=""
-                  id="30-Veterans medallion"
+                  id="Veterans medallion"
                 >
                   <div>
                     <h4
@@ -14652,7 +14590,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <div
-                      aria-hidden="true"
+                      aria-hidden="false"
                       aria-live="polite"
                       class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
                       role="alert"

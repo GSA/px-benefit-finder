@@ -177,10 +177,9 @@ const BenefitAccordionGroup = ({
           return (
             <Accordion
               key={`${index}-${title}`}
-              id={`${index}-${title}`}
+              id={`${title}`}
               heading={title}
               subHeading={eligibleStatus}
-              aria-expanded={isExpandAll}
               isExpanded={isExpandAll}
               data-analytics="bf-usa-accordion"
               data-analytics-content={title}

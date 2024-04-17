@@ -2,8 +2,10 @@
 
 set -e
 
-service="${project}-backup-${ENVIRONMENT}"
-service_keys=($(cf service-keys ${service} | sed 1,3d | awk '{print $1}'))
+service="${PROJECT}-backup-${ENVIRONMENT}"
+
+raw_keys=$(cf service-keys "${service}" | sed 1,3d | awk '{print $1}')
+service_keys=("${raw_keys}")
 
 echo "Cleaning up service keys..."
 {

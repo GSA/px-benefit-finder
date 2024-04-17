@@ -40,13 +40,12 @@ jobs:
           cd ..
           git submodule init
           git submodule update
-          cd benefit-finder
 
       - name: Install WebKit browser dependencies
         uses: cypress-io/github-action@v6
         if: ${{ (matrix.containers == 'webkit') }}
         with:
-          build: cd benefit-finder && npx playwright install-deps webkit
+          build: "cd benefit-finder && npx playwright install-deps webkit"
           runTests: false
 
       - name: Cypress Run Tests

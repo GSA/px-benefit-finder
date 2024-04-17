@@ -15,6 +15,35 @@ defaults:
 
 jobs:
 
+  tests-chrome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install NPM dependencies, cache them correctly
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          cd ..
+          git submodule init
+          git submodule update
+          cd benefit-finder
+      # and run all Cypress tests
+      # https://github.com/cypress-io/github-action
+      - name: Cypress run (Chrome)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          # check the spec types
+          build: "npm run cy:build:storybook"
+          # start the application before running Cypress
+          start: "npm run cy:run:pipeline"
+          browser: chrome
+
   tests-webkit:
     runs-on: ubuntu-latest
     steps:

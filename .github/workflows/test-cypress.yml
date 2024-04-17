@@ -45,8 +45,8 @@ jobs:
         if: ${{ (matrix.containers == 'webkit') }}
         with:
           working-directory: benefit-finder
-          build: "npm ci && npm run cy:build:storybook"
-          start: "npx playwright install-deps && npm run cy:run:pipeline"
+          build: "npm ci && npm run cy:build:storybook && npx playwright install-deps"
+          start: "npm run cy:run:pipeline"
           browser: webkit
 
       - name: Cypress Run Tests

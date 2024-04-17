@@ -511,23 +511,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
@@ -729,23 +712,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
@@ -941,23 +907,6 @@ exports[`loads window query scenario 1 1`] = `
                             The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -1160,23 +1109,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://militarypay.defense.gov/Benefits/"
@@ -1347,23 +1279,6 @@ exports[`loads window query scenario 1 1`] = `
                             One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -1549,23 +1464,6 @@ exports[`loads window query scenario 1 1`] = `
                             One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -1846,23 +1744,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
@@ -2049,23 +1930,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
@@ -2246,23 +2110,6 @@ exports[`loads window query scenario 1 1`] = `
                             You have limited income and resources
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -2495,23 +2342,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
@@ -2718,23 +2548,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/education/survivor-dependent-benefits/"
@@ -2899,23 +2712,6 @@ exports[`loads window query scenario 1 1`] = `
                             You have limited income and resources
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -3149,23 +2945,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
@@ -3361,23 +3140,6 @@ exports[`loads window query scenario 1 1`] = `
                             The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, retired from the service, or member of the National Guard/Reserves
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -3617,23 +3379,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
@@ -3835,23 +3580,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
@@ -4031,23 +3759,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://bja.ojp.gov/program/psob/benefits"
@@ -4225,23 +3936,6 @@ exports[`loads window query scenario 1 1`] = `
                             The deceased was a public safety officer who died in the line of duty
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -4443,23 +4137,6 @@ exports[`loads window query scenario 1 1`] = `
                             One of the following applies to the deceased: died while on active duty or died while on inactive-duty service training
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -4678,23 +4355,6 @@ exports[`loads window query scenario 1 1`] = `
                             Applicant's relationship to the deceased is: child
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -4936,23 +4596,6 @@ exports[`loads window query scenario 1 1`] = `
                             You are unable to work for a year or more because of a disability or your disability is expected to result in death
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -5203,23 +4846,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/forms/ssa-5.html"
@@ -5458,23 +5084,6 @@ exports[`loads window query scenario 1 1`] = `
                             Your relationship to the deceased is: parent
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -5754,23 +5363,6 @@ exports[`loads window query scenario 1 1`] = `
                             Your relationship to the deceased is: spouse
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -6075,23 +5667,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
@@ -6271,23 +5846,6 @@ exports[`loads window query scenario 1 1`] = `
                             Your service status is: discharged for conditions other than dishonorable
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -6499,23 +6057,6 @@ exports[`loads window query scenario 1 1`] = `
                             You have a disability or impairment
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -6747,23 +6288,6 @@ exports[`loads window query scenario 1 1`] = `
                             You have limited income and resources
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -7002,23 +6526,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
@@ -7220,23 +6727,6 @@ exports[`loads window query scenario 1 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
@@ -7437,23 +6927,6 @@ exports[`loads window query scenario 1 1`] = `
                             The person is buried in a grave with a privately purchased headstone or an unmarked grave
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -8034,23 +7507,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
@@ -8252,23 +7708,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
@@ -8464,23 +7903,6 @@ exports[`loads window query scenario 2 1`] = `
                             The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -8683,23 +8105,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://militarypay.defense.gov/Benefits/"
@@ -8870,23 +8275,6 @@ exports[`loads window query scenario 2 1`] = `
                             One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -9072,23 +8460,6 @@ exports[`loads window query scenario 2 1`] = `
                             One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -9369,23 +8740,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
@@ -9572,23 +8926,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
@@ -9769,23 +9106,6 @@ exports[`loads window query scenario 2 1`] = `
                             You have limited income and resources
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -10018,23 +9338,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/disability/dependency-indemnity-compensation/"
@@ -10241,23 +9544,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/education/survivor-dependent-benefits/"
@@ -10435,23 +9721,6 @@ exports[`loads window query scenario 2 1`] = `
                             You have limited income and resources
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -10685,23 +9954,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
@@ -10897,23 +10149,6 @@ exports[`loads window query scenario 2 1`] = `
                             The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, retired from the service, or member of the National Guard/Reserves
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -11164,23 +10399,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
@@ -11382,23 +10600,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
@@ -11578,23 +10779,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://bja.ojp.gov/program/psob/benefits"
@@ -11772,23 +10956,6 @@ exports[`loads window query scenario 2 1`] = `
                             The deceased was a public safety officer who died in the line of duty
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -11990,23 +11157,6 @@ exports[`loads window query scenario 2 1`] = `
                             One of the following applies to the deceased: died while on active duty or died while on inactive-duty service training
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -12225,23 +11375,6 @@ exports[`loads window query scenario 2 1`] = `
                             Applicant's relationship to the deceased is: child
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -12483,23 +11616,6 @@ exports[`loads window query scenario 2 1`] = `
                             You are unable to work for a year or more because of a disability or your disability is expected to result in death
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -12750,23 +11866,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/forms/ssa-5.html"
@@ -12980,23 +12079,6 @@ exports[`loads window query scenario 2 1`] = `
                             Your relationship to the deceased is: parent
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -13265,23 +12347,6 @@ exports[`loads window query scenario 2 1`] = `
                             You are over 60 years
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -13574,23 +12639,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
@@ -13770,23 +12818,6 @@ exports[`loads window query scenario 2 1`] = `
                             Your service status is: discharged for conditions other than dishonorable
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -13998,23 +13029,6 @@ exports[`loads window query scenario 2 1`] = `
                             You have a disability or impairment
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -14246,23 +13260,6 @@ exports[`loads window query scenario 2 1`] = `
                             You have limited income and resources
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
@@ -14526,23 +13523,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
@@ -14744,23 +13724,6 @@ exports[`loads window query scenario 2 1`] = `
                           </li>
                         </ul>
                       </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
-                      </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
                         href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
@@ -14961,23 +13924,6 @@ exports[`loads window query scenario 2 1`] = `
                             The person is buried in a grave with a privately purchased headstone or an unmarked grave
                           </li>
                         </ul>
-                      </div>
-                      <div
-                        aria-hidden="false"
-                        aria-live="polite"
-                        class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-                        role="alert"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bf-usa-alert__body usa-alert__body"
-                        >
-                          <div
-                            class="bf-usa-alert__text usa-alert__text"
-                          >
-                            Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-                          </div>
-                        </div>
                       </div>
                       <a
                         class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"

@@ -131,23 +131,6 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
               </li>
             </ul>
           </div>
-          <div
-            aria-hidden="false"
-            aria-live="polite"
-            class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-            role="alert"
-            tabindex="0"
-          >
-            <div
-              class="bf-usa-alert__body usa-alert__body"
-            >
-              <div
-                class="bf-usa-alert__text usa-alert__text"
-              >
-                Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-              </div>
-            </div>
-          </div>
           <a
             class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
             href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"

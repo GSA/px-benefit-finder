@@ -4,11 +4,18 @@
 @use '../../styles/breakpoints/_index.scss' as *;
 
 .bf-notices-list {
+  margin-top: space.$space-md-plus;
   margin-bottom: space.$space-xl;
 }
 
 .bf-notice {
-  margin-bottom: space.$space-md-plus;
+  display: flex;
+  padding-bottom: space.$padding-bottom-lg;
+
+  .bf-info {
+    margin-top: space.$space-xs;
+    margin-right: space.$space-sm-plus;
+  }
 }
 
 .bf-notice-item {

@@ -14,4 +14,4 @@ echo "Installing CloudFoundry repository..."
     apt-get install -y cf8-cli
   fi
   cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
-} >/dev/null 2>&1
+} &> /dev/null

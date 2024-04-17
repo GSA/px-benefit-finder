@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install basic dependancies
-        run: ./scripts/pipeline/deb-basic.deps.sh
+        run: ./scripts/pipeline/deb-basic-deps.sh
       - name: Install Cloudfoundry CLI
         run: ./scripts/pipeline/deb-cf-install.sh
       - name: Cleanup keys (dev)
@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install basic dependancies
-        run: ./scripts/pipeline/deb-basic.deps.sh
+        run: ./scripts/pipeline/deb-basic-deps.sh
       - name: Install Cloudfoundry CLI
         run: ./scripts/pipeline/deb-cf-install.sh
       - name: Cleanup keys (main)

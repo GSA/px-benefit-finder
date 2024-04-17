@@ -5,7 +5,13 @@ current_path=$(pwd)
 ## Get current username with no special characters.
 user=$(whoami | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')
 
-[ -z "${bucket_name}" ] && echo "No bucket name!" && exit 1
+if [ -z "${bucket_name}" ]; then
+  echo -e "Error: No bucket name is set!\n"
+  echo -e "Export the bucket name, found with 'cf services | grep s3', then run the script again."
+  echo -e "This is the name of the bucket in cloud.gov, not the AWS bucket name.\n"
+  echo -e "Example usage:\n\texport bucket_name=project-bucket-name-environment\n\t$0"
+  exit 1
+fi
 
 echo "Getting bucket credentials..."
 {

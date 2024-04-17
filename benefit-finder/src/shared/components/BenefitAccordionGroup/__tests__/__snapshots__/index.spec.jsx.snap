@@ -15,7 +15,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
         class="bf-usa-accordion__heading usa-accordion__heading"
       >
         <button
-          aria-controls="Burial benefits"
+          aria-controls="burial-benefits"
           aria-expanded="false"
           class="bf-usa-accordion__button usa-accordion__button"
           type="button"
@@ -58,7 +58,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
       <div
         class="bf-usa-accordion__content usa-accordion__content usa-prose"
         hidden=""
-        id="Burial benefits"
+        id="burial-benefits"
       >
         <div>
           <h4

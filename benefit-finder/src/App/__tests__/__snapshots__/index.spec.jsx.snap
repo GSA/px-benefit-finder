@@ -334,6 +334,48 @@ exports[`loads window query scenario 1 1`] = `
               </strong>
             </h3>
             <div
+              aria-labelledby="bf-summary-box-key-information summary-box-key-information"
+              class="bf-usa-summary-box usa-summary-box"
+              role="region"
+            >
+              <div
+                class="bf-usa-summary-box__body usa-summary-box__body"
+              >
+                <h4
+                  aria-level="4"
+                  class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+                  id="bf-summary-box-key-information"
+                  role="heading"
+                >
+                  Important
+                </h4>
+                <div
+                  class="bf-usa-summary-box__text usa-summary-box__text"
+                >
+                  <ul
+                    class="bf-usa-list usa-list"
+                  >
+                    <li>
+                      For full eligibility and requirements visit each agency providing the benefit.
+                    </li>
+                    <li>
+                      Modifying your responses and completing more questions may open your eligibility to other benefits.
+                    </li>
+                    <li>
+                      To re-start the form
+                       
+                      <a
+                        class="bf-usa-summary-box__link usa-summary-box__link"
+                        href="#"
+                      >
+                        click here
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
               class="bf-result-view-benefits"
             >
               <div
@@ -356,7 +398,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Burial benefits"
+                      aria-controls="burial-benefits"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -399,7 +441,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Burial benefits"
+                    id="burial-benefits"
                   >
                     <div>
                       <h4
@@ -557,7 +599,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Death gratuity"
+                      aria-controls="death-gratuity"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -600,7 +642,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Death gratuity"
+                    id="death-gratuity"
                   >
                     <div>
                       <h4
@@ -758,7 +800,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Burial flag"
+                      aria-controls="burial-flag"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -801,7 +843,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Burial flag"
+                    id="burial-flag"
                   >
                     <div>
                       <h4
@@ -954,7 +996,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Annuity for certain military surviving spouses"
+                      aria-controls="annuity-for-certain-military-surviving-spouses"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -997,7 +1039,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Annuity for certain military surviving spouses"
+                    id="annuity-for-certain-military-surviving-spouses"
                   >
                     <div>
                       <h4
@@ -1155,7 +1197,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Burial in VA national cemetery"
+                      aria-controls="burial-in-va-national-cemetery"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -1198,7 +1240,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Burial in VA national cemetery"
+                    id="burial-in-va-national-cemetery"
                   >
                     <div>
                       <h4
@@ -1326,7 +1368,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
+                      aria-controls="civilian-health-and-medical-program-of-the-va-(champva)-for-child"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -1369,7 +1411,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
+                    id="civilian-health-and-medical-program-of-the-va-(champva)-for-child"
                   >
                     <div>
                       <h4
@@ -1510,7 +1552,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="COVID-19 funeral assistance"
+                      aria-controls="covid-19-funeral-assistance"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -1553,7 +1595,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="COVID-19 funeral assistance"
+                    id="covid-19-funeral-assistance"
                   >
                     <div>
                       <h4
@@ -1790,7 +1832,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Dependency and Indemnity Compensation (DIC) for child"
+                      aria-controls="dependency-and-indemnity-compensation-(dic)-for-child"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -1833,7 +1875,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Dependency and Indemnity Compensation (DIC) for child"
+                    id="dependency-and-indemnity-compensation-(dic)-for-child"
                   >
                     <div>
                       <h4
@@ -1976,7 +2018,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Dependency and Indemnity Compensation (DIC) for parent"
+                      aria-controls="dependency-and-indemnity-compensation-(dic)-for-parent"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -2019,7 +2061,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Dependency and Indemnity Compensation (DIC) for parent"
+                    id="dependency-and-indemnity-compensation-(dic)-for-parent"
                   >
                     <div>
                       <h4
@@ -2157,7 +2199,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Dependency and Indemnity Compensation (DIC) for spouse"
+                      aria-controls="dependency-and-indemnity-compensation-(dic)-for-spouse"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -2200,7 +2242,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Dependency and Indemnity Compensation (DIC) for spouse"
+                    id="dependency-and-indemnity-compensation-(dic)-for-spouse"
                   >
                     <div>
                       <h4
@@ -2388,7 +2430,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Education benefits (GI Bill) for survivors"
+                      aria-controls="education-benefits-(gi-bill)-for-survivors"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -2431,7 +2473,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Education benefits (GI Bill) for survivors"
+                    id="education-benefits-(gi-bill)-for-survivors"
                   >
                     <div>
                       <h4
@@ -2594,7 +2636,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Financial Assistance and Social Services (FASS) for deceased"
+                      aria-controls="financial-assistance-and-social-services-(fass)-for-deceased"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -2637,7 +2679,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Financial Assistance and Social Services (FASS) for deceased"
+                    id="financial-assistance-and-social-services-(fass)-for-deceased"
                   >
                     <div>
                       <h4
@@ -2759,7 +2801,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Home loan program for survivors"
+                      aria-controls="home-loan-program-for-survivors"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -2802,7 +2844,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Home loan program for survivors"
+                    id="home-loan-program-for-survivors"
                   >
                     <div>
                       <h4
@@ -2991,7 +3033,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Life insurance for survivors of veterans"
+                      aria-controls="life-insurance-for-survivors-of-veterans"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -3034,7 +3076,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Life insurance for survivors of veterans"
+                    id="life-insurance-for-survivors-of-veterans"
                   >
                     <div>
                       <h4
@@ -3187,7 +3229,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Lump-sum death benefit"
+                      aria-controls="lump-sum-death-benefit"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -3230,7 +3272,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Lump-sum death benefit"
+                    id="lump-sum-death-benefit"
                   >
                     <div>
                       <h4
@@ -3425,7 +3467,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Presidential Memorial Certificate"
+                      aria-controls="presidential-memorial-certificate"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -3468,7 +3510,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Presidential Memorial Certificate"
+                    id="presidential-memorial-certificate"
                   >
                     <div>
                       <h4
@@ -3626,7 +3668,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Public safety officers' death benefits"
+                      aria-controls="public-safety-officers'-death-benefits"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -3669,7 +3711,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Public safety officers' death benefits"
+                    id="public-safety-officers'-death-benefits"
                   >
                     <div>
                       <h4
@@ -3805,7 +3847,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Public safety officers' Educational Assistance Program"
+                      aria-controls="public-safety-officers'-educational-assistance-program"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -3848,7 +3890,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Public safety officers' Educational Assistance Program"
+                    id="public-safety-officers'-educational-assistance-program"
                   >
                     <div>
                       <h4
@@ -3983,7 +4025,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivor benefit plan"
+                      aria-controls="survivor-benefit-plan"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -4026,7 +4068,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivor benefit plan"
+                    id="survivor-benefit-plan"
                   >
                     <div>
                       <h4
@@ -4184,7 +4226,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for child"
+                      aria-controls="survivors-benefits-for-child"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -4227,7 +4269,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for child"
+                    id="survivors-benefits-for-child"
                   >
                     <div>
                       <h4
@@ -4402,7 +4444,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for child with disabilities"
+                      aria-controls="survivors-benefits-for-child-with-disabilities"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -4445,7 +4487,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for child with disabilities"
+                    id="survivors-benefits-for-child-with-disabilities"
                   >
                     <div>
                       <h4
@@ -4642,7 +4684,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for mothers/fathers"
+                      aria-controls="survivors-benefits-for-mothers/fathers"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -4685,7 +4727,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for mothers/fathers"
+                    id="survivors-benefits-for-mothers/fathers"
                   >
                     <div>
                       <h4
@@ -4892,7 +4934,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for parents"
+                      aria-controls="survivors-benefits-for-parents"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -4935,7 +4977,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for parents"
+                    id="survivors-benefits-for-parents"
                   >
                     <div>
                       <h4
@@ -5130,7 +5172,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for spouse"
+                      aria-controls="survivors-benefits-for-spouse"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -5173,7 +5215,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for spouse"
+                    id="survivors-benefits-for-spouse"
                   >
                     <div>
                       <h4
@@ -5410,7 +5452,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for spouse with disabilities"
+                      aria-controls="survivors-benefits-for-spouse-with-disabilities"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -5453,7 +5495,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for spouse with disabilities"
+                    id="survivors-benefits-for-spouse-with-disabilities"
                   >
                     <div>
                       <h4
@@ -5713,7 +5755,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors pension for child"
+                      aria-controls="survivors-pension-for-child"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -5756,7 +5798,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors pension for child"
+                    id="survivors-pension-for-child"
                   >
                     <div>
                       <h4
@@ -5893,7 +5935,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors pension for child with disabilities"
+                      aria-controls="survivors-pension-for-child-with-disabilities"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -5936,7 +5978,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors pension for child with disabilities"
+                    id="survivors-pension-for-child-with-disabilities"
                   >
                     <div>
                       <h4
@@ -6104,7 +6146,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors pension for spouse"
+                      aria-controls="survivors-pension-for-spouse"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -6147,7 +6189,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors pension for spouse"
+                    id="survivors-pension-for-spouse"
                   >
                     <div>
                       <h4
@@ -6335,7 +6377,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Veterans burial allowance"
+                      aria-controls="veterans-burial-allowance"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -6378,7 +6420,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Veterans burial allowance"
+                    id="veterans-burial-allowance"
                   >
                     <div>
                       <h4
@@ -6572,7 +6614,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Veterans headstone and grave marker"
+                      aria-controls="veterans-headstone-and-grave-marker"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -6615,7 +6657,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Veterans headstone and grave marker"
+                    id="veterans-headstone-and-grave-marker"
                   >
                     <div>
                       <h4
@@ -6773,7 +6815,7 @@ exports[`loads window query scenario 1 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Veterans medallion"
+                      aria-controls="veterans-medallion"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -6816,7 +6858,7 @@ exports[`loads window query scenario 1 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Veterans medallion"
+                    id="veterans-medallion"
                   >
                     <div>
                       <h4
@@ -7330,6 +7372,48 @@ exports[`loads window query scenario 2 1`] = `
               </strong>
             </h3>
             <div
+              aria-labelledby="bf-summary-box-key-information summary-box-key-information"
+              class="bf-usa-summary-box usa-summary-box"
+              role="region"
+            >
+              <div
+                class="bf-usa-summary-box__body usa-summary-box__body"
+              >
+                <h4
+                  aria-level="4"
+                  class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+                  id="bf-summary-box-key-information"
+                  role="heading"
+                >
+                  Important
+                </h4>
+                <div
+                  class="bf-usa-summary-box__text usa-summary-box__text"
+                >
+                  <ul
+                    class="bf-usa-list usa-list"
+                  >
+                    <li>
+                      For full eligibility and requirements visit each agency providing the benefit.
+                    </li>
+                    <li>
+                      Modifying your responses and completing more questions may open your eligibility to other benefits.
+                    </li>
+                    <li>
+                      To re-start the form
+                       
+                      <a
+                        class="bf-usa-summary-box__link usa-summary-box__link"
+                        href="#"
+                      >
+                        click here
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
               class="bf-result-view-benefits"
             >
               <div
@@ -7352,7 +7436,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Burial benefits"
+                      aria-controls="burial-benefits"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -7395,7 +7479,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Burial benefits"
+                    id="burial-benefits"
                   >
                     <div>
                       <h4
@@ -7553,7 +7637,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Death gratuity"
+                      aria-controls="death-gratuity"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -7596,7 +7680,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Death gratuity"
+                    id="death-gratuity"
                   >
                     <div>
                       <h4
@@ -7754,7 +7838,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Burial flag"
+                      aria-controls="burial-flag"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -7797,7 +7881,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Burial flag"
+                    id="burial-flag"
                   >
                     <div>
                       <h4
@@ -7950,7 +8034,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Annuity for certain military surviving spouses"
+                      aria-controls="annuity-for-certain-military-surviving-spouses"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -7993,7 +8077,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Annuity for certain military surviving spouses"
+                    id="annuity-for-certain-military-surviving-spouses"
                   >
                     <div>
                       <h4
@@ -8151,7 +8235,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Burial in VA national cemetery"
+                      aria-controls="burial-in-va-national-cemetery"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -8194,7 +8278,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Burial in VA national cemetery"
+                    id="burial-in-va-national-cemetery"
                   >
                     <div>
                       <h4
@@ -8322,7 +8406,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
+                      aria-controls="civilian-health-and-medical-program-of-the-va-(champva)-for-child"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -8365,7 +8449,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Civilian Health and Medical Program of the VA (CHAMPVA) for child"
+                    id="civilian-health-and-medical-program-of-the-va-(champva)-for-child"
                   >
                     <div>
                       <h4
@@ -8506,7 +8590,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="COVID-19 funeral assistance"
+                      aria-controls="covid-19-funeral-assistance"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -8549,7 +8633,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="COVID-19 funeral assistance"
+                    id="covid-19-funeral-assistance"
                   >
                     <div>
                       <h4
@@ -8786,7 +8870,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Dependency and Indemnity Compensation (DIC) for child"
+                      aria-controls="dependency-and-indemnity-compensation-(dic)-for-child"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -8829,7 +8913,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Dependency and Indemnity Compensation (DIC) for child"
+                    id="dependency-and-indemnity-compensation-(dic)-for-child"
                   >
                     <div>
                       <h4
@@ -8972,7 +9056,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Dependency and Indemnity Compensation (DIC) for parent"
+                      aria-controls="dependency-and-indemnity-compensation-(dic)-for-parent"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -9015,7 +9099,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Dependency and Indemnity Compensation (DIC) for parent"
+                    id="dependency-and-indemnity-compensation-(dic)-for-parent"
                   >
                     <div>
                       <h4
@@ -9153,7 +9237,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Dependency and Indemnity Compensation (DIC) for spouse"
+                      aria-controls="dependency-and-indemnity-compensation-(dic)-for-spouse"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -9196,7 +9280,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Dependency and Indemnity Compensation (DIC) for spouse"
+                    id="dependency-and-indemnity-compensation-(dic)-for-spouse"
                   >
                     <div>
                       <h4
@@ -9384,7 +9468,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Education benefits (GI Bill) for survivors"
+                      aria-controls="education-benefits-(gi-bill)-for-survivors"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -9427,7 +9511,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Education benefits (GI Bill) for survivors"
+                    id="education-benefits-(gi-bill)-for-survivors"
                   >
                     <div>
                       <h4
@@ -9590,7 +9674,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Financial Assistance and Social Services (FASS) for deceased"
+                      aria-controls="financial-assistance-and-social-services-(fass)-for-deceased"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -9633,7 +9717,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Financial Assistance and Social Services (FASS) for deceased"
+                    id="financial-assistance-and-social-services-(fass)-for-deceased"
                   >
                     <div>
                       <h4
@@ -9768,7 +9852,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Home loan program for survivors"
+                      aria-controls="home-loan-program-for-survivors"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -9811,7 +9895,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Home loan program for survivors"
+                    id="home-loan-program-for-survivors"
                   >
                     <div>
                       <h4
@@ -10000,7 +10084,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Life insurance for survivors of veterans"
+                      aria-controls="life-insurance-for-survivors-of-veterans"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -10043,7 +10127,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Life insurance for survivors of veterans"
+                    id="life-insurance-for-survivors-of-veterans"
                   >
                     <div>
                       <h4
@@ -10195,7 +10279,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Lump-sum death benefit"
+                      aria-controls="lump-sum-death-benefit"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -10238,7 +10322,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Lump-sum death benefit"
+                    id="lump-sum-death-benefit"
                   >
                     <div>
                       <h4
@@ -10445,7 +10529,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Presidential Memorial Certificate"
+                      aria-controls="presidential-memorial-certificate"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -10488,7 +10572,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Presidential Memorial Certificate"
+                    id="presidential-memorial-certificate"
                   >
                     <div>
                       <h4
@@ -10646,7 +10730,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Public safety officers' death benefits"
+                      aria-controls="public-safety-officers'-death-benefits"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -10689,7 +10773,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Public safety officers' death benefits"
+                    id="public-safety-officers'-death-benefits"
                   >
                     <div>
                       <h4
@@ -10825,7 +10909,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Public safety officers' Educational Assistance Program"
+                      aria-controls="public-safety-officers'-educational-assistance-program"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -10868,7 +10952,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Public safety officers' Educational Assistance Program"
+                    id="public-safety-officers'-educational-assistance-program"
                   >
                     <div>
                       <h4
@@ -11003,7 +11087,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivor benefit plan"
+                      aria-controls="survivor-benefit-plan"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -11046,7 +11130,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivor benefit plan"
+                    id="survivor-benefit-plan"
                   >
                     <div>
                       <h4
@@ -11204,7 +11288,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for child"
+                      aria-controls="survivors-benefits-for-child"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -11247,7 +11331,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for child"
+                    id="survivors-benefits-for-child"
                   >
                     <div>
                       <h4
@@ -11422,7 +11506,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for child with disabilities"
+                      aria-controls="survivors-benefits-for-child-with-disabilities"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -11465,7 +11549,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for child with disabilities"
+                    id="survivors-benefits-for-child-with-disabilities"
                   >
                     <div>
                       <h4
@@ -11662,7 +11746,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for mothers/fathers"
+                      aria-controls="survivors-benefits-for-mothers/fathers"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -11705,7 +11789,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for mothers/fathers"
+                    id="survivors-benefits-for-mothers/fathers"
                   >
                     <div>
                       <h4
@@ -11912,7 +11996,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for parents"
+                      aria-controls="survivors-benefits-for-parents"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -11955,7 +12039,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for parents"
+                    id="survivors-benefits-for-parents"
                   >
                     <div>
                       <h4
@@ -12126,7 +12210,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for spouse"
+                      aria-controls="survivors-benefits-for-spouse"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -12169,7 +12253,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for spouse"
+                    id="survivors-benefits-for-spouse"
                   >
                     <div>
                       <h4
@@ -12394,7 +12478,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors benefits for spouse with disabilities"
+                      aria-controls="survivors-benefits-for-spouse-with-disabilities"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -12437,7 +12521,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors benefits for spouse with disabilities"
+                    id="survivors-benefits-for-spouse-with-disabilities"
                   >
                     <div>
                       <h4
@@ -12685,7 +12769,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors pension for child"
+                      aria-controls="survivors-pension-for-child"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -12728,7 +12812,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors pension for child"
+                    id="survivors-pension-for-child"
                   >
                     <div>
                       <h4
@@ -12865,7 +12949,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors pension for child with disabilities"
+                      aria-controls="survivors-pension-for-child-with-disabilities"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -12908,7 +12992,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors pension for child with disabilities"
+                    id="survivors-pension-for-child-with-disabilities"
                   >
                     <div>
                       <h4
@@ -13076,7 +13160,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Survivors pension for spouse"
+                      aria-controls="survivors-pension-for-spouse"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -13119,7 +13203,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Survivors pension for spouse"
+                    id="survivors-pension-for-spouse"
                   >
                     <div>
                       <h4
@@ -13307,7 +13391,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Veterans burial allowance"
+                      aria-controls="veterans-burial-allowance"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -13350,7 +13434,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Veterans burial allowance"
+                    id="veterans-burial-allowance"
                   >
                     <div>
                       <h4
@@ -13569,7 +13653,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Veterans headstone and grave marker"
+                      aria-controls="veterans-headstone-and-grave-marker"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -13612,7 +13696,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Veterans headstone and grave marker"
+                    id="veterans-headstone-and-grave-marker"
                   >
                     <div>
                       <h4
@@ -13770,7 +13854,7 @@ exports[`loads window query scenario 2 1`] = `
                     class="bf-usa-accordion__heading usa-accordion__heading"
                   >
                     <button
-                      aria-controls="Veterans medallion"
+                      aria-controls="veterans-medallion"
                       aria-expanded="false"
                       class="bf-usa-accordion__button usa-accordion__button"
                       type="button"
@@ -13813,7 +13897,7 @@ exports[`loads window query scenario 2 1`] = `
                   <div
                     class="bf-usa-accordion__content usa-accordion__content usa-prose"
                     hidden=""
-                    id="Veterans medallion"
+                    id="veterans-medallion"
                   >
                     <div>
                       <h4

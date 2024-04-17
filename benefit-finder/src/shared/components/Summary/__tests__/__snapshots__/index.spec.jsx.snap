@@ -3,7 +3,7 @@
 exports[`Summary > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
-    aria-labelledby="bf-summary-box-key-information summary-box-key-information"
+    aria-labelledby="bf-summary-box-key-information"
     class="bf-usa-summary-box usa-summary-box"
     role="region"
   >

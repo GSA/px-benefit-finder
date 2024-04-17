@@ -12,7 +12,7 @@ const Summary = ({ heading, listItems, cta }) => {
     <div
       className="bf-usa-summary-box usa-summary-box"
       role="region"
-      aria-labelledby="bf-summary-box-key-information summary-box-key-information"
+      aria-labelledby="bf-summary-box-key-information"
     >
       <div className="bf-usa-summary-box__body usa-summary-box__body">
         <Heading

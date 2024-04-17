@@ -36,21 +36,22 @@ jobs:
 
       - name: Install Submodule
         run: |
-          npm ci
           cd ..
           git submodule init
           git submodule update
 
-      - name: Install WebKit browser dependencies
+      - name: Install WebKit browser and Run Tests
         uses: cypress-io/github-action@v6
         if: ${{ (matrix.containers == 'webkit') }}
         with:
           working-directory: benefit-finder
-          build: "npx playwright install-deps webkit"
-          runTests: false
+          build: "npm run cy:build:storybook && npx playwright install-deps webkit"
+          start: "npm run cy:run:pipeline"
+          browser: webkit
 
       - name: Cypress Run Tests
         uses: cypress-io/github-action@v6
+        if: ${{ (matrix.containers != 'webkit') }}
         with:
           browser: ${{ matrix.containers }}
           config-file: cypress.config.js

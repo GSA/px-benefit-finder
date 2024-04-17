@@ -11,6 +11,7 @@ import {
   Chevron,
   ShareButton,
   RelativeBenefitList,
+  Summary,
 } from '../index'
 import { createMarkup } from '../../utils'
 import './_index.scss'
@@ -39,6 +40,7 @@ const ResultsView = ({
     notEligibleResults,
     resultsRelativeBenefits,
     shareResults,
+    summaryBox,
   } = ui
 
   const [notEligibleView, setnotEligibleView] = useState(false)
@@ -156,6 +158,11 @@ const ResultsView = ({
                 ? createMarkup(notEligible.description)
                 : createMarkup(eligible.description)
             }
+          />
+          <Summary
+            heading={summaryBox.heading}
+            listItems={summaryBox.list}
+            cta={summaryBox.cta}
           />
           {/* map all the benefits into cards */}
           <div className="bf-result-view-benefits">

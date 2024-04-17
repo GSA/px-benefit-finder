@@ -88,3 +88,9 @@
   font-weight: 200;
   line-height: 18.8px;
 }
+
+@mixin list-items {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+}

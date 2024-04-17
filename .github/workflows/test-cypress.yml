@@ -6,7 +6,6 @@ on:
     paths:
       - benefit-finder/*
 
-
 permissions: read-all
 
 defaults:
@@ -15,7 +14,7 @@ defaults:
 
 jobs:
   install:
-    name: cypress-run-prod-links
+    name: cypress-run
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,7 +35,7 @@ jobs:
       - name: Cypress Run Tests
         uses: cypress-io/github-action@v6
         with:
-          browser: 'chrome'
+          browser: "chrome"
           config-file: cypress.config.js
           working-directory: benefit-finder
           build: "npm run cy:build:storybook"

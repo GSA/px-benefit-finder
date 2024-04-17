@@ -40,9 +40,7 @@ jobs:
 
       - name: Install WebKit browser dependencies
         if: ${{ (matrix.containers == 'webkit') }}
-        run: |
-          npx playwright install-deps webkit
-          npm install
+        run: npx playwright install-deps webkit
 
       - name: Cypress Run Tests
         uses: cypress-io/github-action@v6

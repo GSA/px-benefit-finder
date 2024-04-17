@@ -14,53 +14,29 @@ defaults:
     working-directory: ./benefit-finder
 
 jobs:
-  install:
-    name: cypress-run
+
+  tests-webkit:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./benefit-finder
-
-    strategy:
-      fail-fast: false
-      matrix:
-        containers: [chrome, firefox, edge, webkit]
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install Node
-        uses: actions/setup-node@v4
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      # https://github.com/cypress-io/github-action
+      - name: Install dependencies
+        uses: cypress-io/github-action@v4
         with:
-          node-version-file: "./benefit-finder/package.json"
+          # install WebKit browser dependencies
+          build: npx playwright install-deps webkit
+          runTests: false
 
-      - name: Install Submodule
-        run: |
-          cd ..
-          git submodule init
-          git submodule update
-
-      - name: Install WebKit browser and Run Tests
-        uses: cypress-io/github-action@v6
-        if: ${{ (matrix.containers == 'webkit') }}
+      - name: Cypress run (WebKit)
+        uses: cypress-io/github-action@v4
         with:
-          working-directory: benefit-finder
-          build: "npm run cy:build:storybook && npx playwright install-deps webkit"
-          start: "npm run cy:run:pipeline"
-          browser: webkit
-
-      - name: Cypress Run Tests
-        uses: cypress-io/github-action@v6
-        if: ${{ (matrix.containers != 'webkit') }}
-        with:
-          browser: ${{ matrix.containers }}
-          config-file: cypress.config.js
-          working-directory: benefit-finder
+          # we have already installed everything
+          install: false
+          # check the spec types
           build: "npm run cy:build:storybook"
-          start: "npm run cy:run:pipeline"
-
-      - uses: actions/upload-artifact@v3
-        if: failure ()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+          # start the application before running Cypress
+          start: "NODE_ENV=test concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\"   \"http-server ./storybook-static --port 6006 --silent\"   \"wait-on tcp:6006\" -Y"
+          browser: webkit

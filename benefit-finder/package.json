@@ -34,7 +34,7 @@
     "cy:run": "NODE_ENV=test npm run cy:run:component && npm run cy:run:e2e",
     "cy:run:prod:e2e": "NODE_ENV=test npx cypress run --config-file cypress.prod.config.js --browser chrome",
     "cy:run:prod:links:e2e": "NODE_ENV=test npx cypress run --config-file cypress.prod.links.config.js --browser chrome",
-    "cy:run:pipeline": "NODE_ENV=test concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\"   \"http-server ./storybook-static --port 6006 --silent\"   \"wait-on tcp:6006\" -Y",
+    "cy:run:pipeline": "NODE_ENV=test concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\"   \"http-server ./storybook-static --port 6006 --silent\" -Y",
     "cy:run:edge:e2e": "NODE_ENV=test npx cypress run --browser edge",
     "cy:run:firefox:e2e": "NODE_ENV=test npx cypress run --browser firefox",
     "cy:run:webkit-safari:e2e": "NODE_ENV=test npx cypress run --browser webkit",

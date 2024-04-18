@@ -6,7 +6,6 @@ on:
     paths:
       - benefit-finder/*
 
-
 permissions: read-all
 
 defaults:
@@ -20,7 +19,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -31,25 +29,68 @@ jobs:
           cd ..
           git submodule init
           git submodule update
-          cd benefit-finder
-      # and run all Cypress tests
-      # https://github.com/cypress-io/github-action
+
       - name: Cypress run (Chrome)
         uses: cypress-io/github-action@v6
         with:
           working-directory: ./benefit-finder
-          # check the spec types
           build: "npm run cy:build:storybook"
-          # start the application before running Cypress
           start: "npm run cy:run:pipeline"
           browser: chrome
+
+  tests-firefox:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          cd ..
+          git submodule init
+          git submodule update
+
+      - name: Cypress run (Firefox)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          build: "npm run cy:build:storybook"
+          start: "npm run cy:run:pipeline"
+          browser: firefox
+
+  tests-edge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          cd ..
+          git submodule init
+          git submodule update
+
+      - name: Cypress run (edge)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          build: "npm run cy:build:storybook"
+          start: "npm run cy:run:pipeline"
+          browser: edge
 
   tests-webkit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -60,14 +101,11 @@ jobs:
           cd ..
           git submodule init
           git submodule update
-          cd benefit-finder
-      # and run all Cypress tests
-      # https://github.com/cypress-io/github-action
+
       - name: Install dependencies
         uses: cypress-io/github-action@v6
         with:
           working-directory: ./benefit-finder
-          # install WebKit browser dependencies
           build: npx playwright install-deps webkit
           runTests: false
 
@@ -75,10 +113,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           working-directory: ./benefit-finder
-          # we have already installed everything
           install: false
-          # check the spec types
           build: "npm run cy:build:storybook"
-          # start the application before running Cypress
           start: "npm run cy:run:pipeline"
           browser: webkit

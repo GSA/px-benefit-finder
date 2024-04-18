@@ -73,6 +73,21 @@
     ]
   },
   "resultsView": {
+    "summaryBox": {
+      "heading": "NEEDS TRANSLATION Important",
+      "list": [
+        {
+          "item": "For full eligibility and requirements visit each agency providing the benefit."
+        },
+        {
+          "item": "Modifying your responses and completing more questions may open your eligibility to other benefits."
+        }
+      ],
+      "cta": {
+        "text": "To re-start the form",
+        "link": "click here"
+      }
+    },
     "eligible": {
       "chevron": {
         "heading": "Sus beneficios potenciales",
@@ -109,7 +124,6 @@
       "benefitSummaryPrefix": "Cumple ",
       "benefitSummaryConjunction": "de",
       "unmetLabel": "No cumplió con",
-      "additionalDescription": "Puede haber requisitos adicionales. Visite el enlace abajo para más información y para aplicar.",
       "visitLabel": "Visita",
       "sourceIsEnglish": "(en inglés)"
     },

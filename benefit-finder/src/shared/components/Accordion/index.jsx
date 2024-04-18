@@ -55,6 +55,10 @@ const Accordion = ({
       <Icon type="close" alt="a minus icon" />
     )
 
+  const handleAriaControl = id => {
+    return id.replace(/ +/g, '-').toLowerCase()
+  }
+
   return (
     <div className="bf-usa-accordion usa-accordion" {...props} hidden={hidden}>
       <h4 className="bf-usa-accordion__heading usa-accordion__heading">
@@ -62,7 +66,7 @@ const Accordion = ({
           type="button"
           className="bf-usa-accordion__button usa-accordion__button"
           aria-expanded={isOpen || false}
-          aria-controls={id}
+          aria-controls={id && handleAriaControl(id)}
           onClick={() => setOpen(!isOpen)}
         >
           <span className="bf-accordion-heading">{heading}</span>
@@ -72,7 +76,7 @@ const Accordion = ({
         </button>
       </h4>
       <div
-        id={id}
+        id={id && handleAriaControl(id)}
         className="bf-usa-accordion__content usa-accordion__content usa-prose"
         hidden={isOpen || true}
       >

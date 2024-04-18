@@ -1,0 +1,7 @@
+@use '../../styles/mixins/_index.scss' as *;
+
+.bf-usa-list {
+  li {
+    @include list-items
+  }
+}

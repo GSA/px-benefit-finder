@@ -145,3 +145,4 @@ jobs:
           component: true
           browser: chrome
           env: NODE_ENV=test
+          build: "npm run cy:prebuild:storybook"

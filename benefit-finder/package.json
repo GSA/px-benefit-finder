@@ -38,7 +38,7 @@
     "cy:run:edge:e2e": "NODE_ENV=test npx cypress run --browser edge",
     "cy:run:firefox:e2e": "NODE_ENV=test npx cypress run --browser firefox",
     "cy:run:webkit-safari:e2e": "NODE_ENV=test npx cypress run --browser webkit",
-    "cy:run:cross-browser:e2e": "NODE_ENV=test npm run cy:run:e2e && npm run cy:run:edge:e2e && cy:run:firefox:e2e"
+    "cy:run:cross-browser:e2e": "NODE_ENV=test npm run cy:run:e2e && npm run cy:run:edge:e2e && npm run cy:run:firefox:e2e && cy:run:webkit-safari:e2e"
   },
   "dependencies": {
     "react": "^18.2.0",

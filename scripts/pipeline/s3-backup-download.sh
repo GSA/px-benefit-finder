@@ -2,15 +2,15 @@
 
 set -e
 
-backup_bucket="${PROJECT}-backup-${ENVIRONMENT}"
-space="${PROJECT}-${ENVIRONMENT}"
+backup_bucket="${PROJECT}-backup-${BRANCH}"
+space="${PROJECT}-${BRANCH}"
 
 echo "Getting backup bucket credentials..."
 {
   cf target -s "${space}"
 
   service="${backup_bucket}"
-  service_key="${service}-pipeline-download-${ENVIRONMENT}-key"
+  service_key="${service}-pipeline-download-${BRANCH}-key"
   cf delete-service-key "${service}" "${service_key}" -f
   cf create-service-key "${service}" "${service_key}"
   sleep 2

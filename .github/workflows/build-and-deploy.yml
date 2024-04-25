@@ -92,8 +92,7 @@ jobs:
           cd benefit-finder
           mv manifest.yml manifest.yml.tpl
           envsubst < manifest.yml.tpl > manifest.yml
-          npm run build
-          bash ../scripts/pipeline/mv-uswds-usagov-theme.sh
+          npm ci
           npm run build:storybook
           mv manifest.yml storybook-static/
           mv Staticfile storybook-static/
@@ -169,11 +168,14 @@ jobs:
         env:
           PROJECT: '${{ secrets.PROJECT }}'
         run: |
+          declare MEMORY
+          [ "${BRANCH}" = "dev" ] && MEMORY=${{ vars.CMS_MEMORY_DEV }}
+          [ "${BRANCH}" = "main" ] && MEMORY=${{ vars.CMS_MEMORY_MAIN }}
           cd usagov-2021
           sed -i "s#^    image: .*cms-latest*#    image: ghcr.io/${{ vars.CR_REPOSITORY }}:${{ steps.meta.outputs.tags }}#" manifest.yml
           sed -i "s#^    - secauthsecrets##" manifest.yml
           sed -i "s#- name: cms#- name: ${PROJECT}-cms-${BRANCH}#" manifest.yml
-          sed -i "s#^  memory: 1.5G#  memory: 1G#" manifest.yml
+          sed -i "s#^  memory: 1.5G#  memory: ${MEMORY}#" manifest.yml
           sed -i "s#^    - database#    - ${PROJECT}-mysql-${BRANCH}#" manifest.yml
           sed -i "s#^    - secrets#    - ${PROJECT}-secrets-${BRANCH}#" manifest.yml
           sed -i "s#^    - storage#    - ${PROJECT}-storage-${BRANCH}#" manifest.yml

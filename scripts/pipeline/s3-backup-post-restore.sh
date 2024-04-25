@@ -2,8 +2,8 @@
 
 set -e
 
-backup_bucket="${PROJECT}-backup-${ENVIRONMENT}"
-space="${PROJECT}-${ENVIRONMENT}"
+backup_bucket="${PROJECT}-backup-${BRANCH}"
+space="${PROJECT}-${BRANCH}"
 
 if [ -z "${S3_FILE_PATH}" ]; then
   echo "Getting backup bucket credentials..."
@@ -11,7 +11,7 @@ if [ -z "${S3_FILE_PATH}" ]; then
     cf target -s "${space}"
 
     service="${backup_bucket}"
-    service_key="${service}-pipeline-post-restore-${ENVIRONMENT}-key"
+    service_key="${service}-pipeline-post-restore-${BRANCH}-key"
     cf delete-service-key "${service}" "${service_key}" -f
     cf create-service-key "${service}" "${service_key}"
     sleep 2

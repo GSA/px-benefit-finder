@@ -90,7 +90,8 @@ describe(`Validate code passes axe scanning`, () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     utils.dataInputs({ dod })
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    runA11y()
+    cy.injectAxe()
+    cy.checkA11y('#benefit-finder-modal')
   })
 
   it('Has no detectable a11y violations on modal close review selections', () => {

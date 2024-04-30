@@ -27,6 +27,9 @@
         "shared": "true"
       },
       "results": {
+        "moreInformationNeeded": {
+          "length": 1
+        },
         "eligible": {
           "length": 3,
           "eligible_benefits": [
@@ -194,7 +197,6 @@
         "applicant_marital_status": "Unmarried",
         "shared": "true"
       }
-     
     },
     "es": {
       "param": {

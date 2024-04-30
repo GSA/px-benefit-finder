@@ -4,6 +4,8 @@ import { pageObjects } from '../../support/pageObjects'
 import * as utils from '../../support/utils'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
+import content from '../../../../benefit-finder/src/shared/api/mock-data/current.js'
+const { data } = JSON.parse(content)
 
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
   it('Should render Survivor Benefits for Child benefit accordion correctly based on selected cretiria options', () => {
@@ -99,6 +101,9 @@ describe('Validate correct eligibility benefits display based on selected criter
     const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
     const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
     const scenario = utils.encodeURIFromObject(selectedData)
+    delete selectedData.shared // We don't want to include the "shared" param
+    const selectDataLength = Object.keys(selectedData).length
+    const benefitsCount = data.benefits.length
 
     cy.visit(`${utils.storybookUri}${scenario}`)
 
@@ -110,6 +115,44 @@ describe('Validate correct eligibility benefits display based on selected criter
       .and('contain', enResults.eligible.eligible_benefits[0])
       .and('contain', enResults.eligible.eligible_benefits[1])
       .and('contain', enResults.eligible.eligible_benefits[2])
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics')
+      .should('eq', 'bf-result-view')
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content')
+      .should('eq', 'bf-eligible-view')
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-criteria-values')
+      .should('eq', `${selectDataLength}`)
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-benefits')
+      .should('eq', `${benefitsCount}`)
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-eligible')
+      .should('eq', `${enResults.eligible.length}`)
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-more-info')
+      .should('eq', `${enResults.moreInformationNeeded.length}`)
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-not-eligible')
+      .should(
+        'eq',
+        `${benefitsCount - enResults.eligible.length - enResults.moreInformationNeeded.length}`
+      )
   })
 
   it('QA scenario 2 Veteran EN - Verify correct benefit results for query values that includes veteran in search parameter of URL', () => {

@@ -110,6 +110,41 @@ describe('Validate correct eligibility benefits display based on selected criter
       .and('contain', enResults.eligible.eligible_benefits[0])
       .and('contain', enResults.eligible.eligible_benefits[1])
       .and('contain', enResults.eligible.eligible_benefits[2])
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics')
+      .should('eq', 'bf-result-view')
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content')
+      .should('eq', 'bf-eligible-view')
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-criteria-values')
+      .should('eq', '14')
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-benefits')
+      .should('eq', '31')
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-eligible')
+      .should('eq', `${enResults.eligible.length}`)
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-not-eligible')
+      .should('eq', '27')
+
+    pageObjects
+      .benefitResultsView()
+      .invoke('attr', 'data-analytics-content-more-info')
+      .should('eq', '1')
   })
 
   it('QA scenario 2 Veteran EN - Verify correct benefit results for query values that includes veteran in search parameter of URL', () => {

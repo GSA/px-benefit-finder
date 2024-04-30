@@ -104,7 +104,6 @@ describe('Validate correct eligibility benefits display based on selected criter
     delete selectedData.shared // We don't want to include the "shared" param
     const selectDataLength = Object.keys(selectedData).length
     const benefitsCount = data.benefits.length
-    // console.log(EN_DOLO_MOCK_DATA.data.benefits)
 
     cy.visit(`${utils.storybookUri}${scenario}`)
 

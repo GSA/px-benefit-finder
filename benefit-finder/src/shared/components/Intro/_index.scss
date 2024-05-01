@@ -20,6 +20,26 @@
     width: $button-max-width;
   }
 
+  .bf-intro-process-notices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: space.$space-md;
+  }
+
+  .bf-intro-process-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .bf-usa-process-list {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   @media (width >= $desktop) {
     .bf-intro-process-list {
       min-width: 50%;

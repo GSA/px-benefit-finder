@@ -192,6 +192,7 @@ jobs:
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           cd usagov-2021
+          cf delete ${PROJECT}-cms-${BRANCH} -f
           CF_DOCKER_PASSWORD=${CR_PAT} cf push ${PROJECT}-cms-${BRANCH} --docker-image "${{ steps.meta.outputs.tags }}" --docker-username "${CF_USER}" && docker logout
           ../scripts/pipeline/cloud-gov-wait-for-application.sh ${PROJECT}-cms-${BRANCH}
           cf add-network-policy ${PROJECT}-waf-${BRANCH} ${PROJECT}-cms-${BRANCH} -s ${PROJECT}-${BRANCH} -o ${CF_ORG} --protocol tcp --port 61443

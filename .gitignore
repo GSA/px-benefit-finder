@@ -53,5 +53,3 @@ backups/*.sql.gz
 *.Identifier
 *.gz
 **.log
-
-.vscode

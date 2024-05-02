@@ -1,4 +1,4 @@
-import { render, screen, act } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { vi } from 'vitest'
 import { handleBeforeUnload } from '../index' // Import your hook
@@ -61,12 +61,8 @@ test('Handles beforeunload event when hasData is changed with state', async () =
 
   const input = await screen.findByTestId('unload-input-html')
   expect(input).toBeInTheDocument()
-  const updateInput = () => userEvent.type(input, 'test')
 
-  act(() => {
-    updateInput()
-  })
-
+  await userEvent.type(input, 'test')
   expect(input).toHaveValue('test')
 
   const returnValue = 'this value should get reverted to an empty string'

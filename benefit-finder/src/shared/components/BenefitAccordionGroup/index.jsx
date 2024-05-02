@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { createMarkup } from '../../utils'
 import {
   Accordion,
-  Alert,
   Button,
   Heading,
   KeyElegibilityCrieriaList,
@@ -23,7 +22,7 @@ const BenefitAccordionGroup = ({
   data,
   entryKey,
   expandAll,
-  notQualifiedView,
+  notEligibleView,
   ui,
 }) => {
   const { benefitAccordion, benefitAccordionGroup } = ui
@@ -32,7 +31,6 @@ const BenefitAccordionGroup = ({
     agencyPrefix,
     visitLabel,
     unmetLabel,
-    additionalDescription,
     sourceIsEnglish,
   } = benefitAccordion
   const { closedState, openState } = benefitAccordionGroup
@@ -166,21 +164,20 @@ const BenefitAccordionGroup = ({
                 : eligibleStatusLabels[2]
 
           const handleHidden =
-            notQualifiedView === false &&
+            notEligibleView === false &&
             eligibleStatus !== eligibleStatusLabels[0]
               ? true
               : !!(
-                  notQualifiedView === true &&
+                  notEligibleView === true &&
                   eligibleStatus === eligibleStatusLabels[0]
                 )
 
           return (
             <Accordion
               key={`${index}-${title}`}
-              id={`${index}-${title}`}
+              id={`${title}`}
               heading={title}
               subHeading={eligibleStatus}
-              aria-expanded={isExpandAll}
               isExpanded={isExpandAll}
               data-analytics="bf-usa-accordion"
               data-analytics-content={title}
@@ -206,7 +203,6 @@ const BenefitAccordionGroup = ({
               {moreInformationNeeded.length > 0 && (
                 <MoreInfoList items={moreInformationNeeded} />
               )}
-              <Alert className="bf-usa-alert">{additionalDescription}</Alert>
               <ObfuscatedLink
                 className="bf-usa-link"
                 href={SourceLink}

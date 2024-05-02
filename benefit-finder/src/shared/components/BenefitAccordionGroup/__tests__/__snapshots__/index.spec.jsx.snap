@@ -6,7 +6,6 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
     class="bf-usa-accordion-group"
   >
     <div
-      aria-expanded="false"
       class="bf-usa-accordion usa-accordion"
       data-analytics="bf-usa-accordion"
       data-analytics-content="Burial benefits"
@@ -16,7 +15,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
         class="bf-usa-accordion__heading usa-accordion__heading"
       >
         <button
-          aria-controls="0-Burial benefits"
+          aria-controls="burial-benefits"
           aria-expanded="false"
           class="bf-usa-accordion__button usa-accordion__button"
           type="button"
@@ -59,7 +58,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
       <div
         class="bf-usa-accordion__content usa-accordion__content usa-prose"
         hidden=""
-        id="0-Burial benefits"
+        id="burial-benefits"
       >
         <div>
           <h4
@@ -131,23 +130,6 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
                 Applicant's relationship to the deceased is: spouse, child, parent, or other family member
               </li>
             </ul>
-          </div>
-          <div
-            aria-hidden="true"
-            aria-live="polite"
-            class="bf-usa-alert bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
-            role="alert"
-            tabindex="0"
-          >
-            <div
-              class="bf-usa-alert__body usa-alert__body"
-            >
-              <div
-                class="bf-usa-alert__text usa-alert__text"
-              >
-                Additional eligibility criteria may apply. Visit the link below for more information and to apply.
-              </div>
-            </div>
           </div>
           <a
             class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"

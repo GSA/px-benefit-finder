@@ -8,10 +8,10 @@
           "title": "Answer questions"
         },
         {
-          "title": "Review results"
+          "title": "Get your list of benefits"
         },
         {
-          "title": "Find out how to apply"
+          "title": "Visit agency websites to apply"
         }
       ]
     },
@@ -19,13 +19,13 @@
       "heading": "Before you start:",
       "list": [
         {
-          "notice": "<div><strong>This is not an application.</strong> This tool will help you find possible benefits.</div>"
+          "notice": "<div><strong>This is not an application.</strong></div>"
         },
         {
-          "notice": "Your answers <strong>are not</strong> saved or submitted."
+          "notice": "<strong>You'll need to apply</strong> for benefits with each agency."
         },
         {
-          "notice": "<div><strong>Answer more questions</strong> to get better results.</div>"
+          "notice": "<div><strong>We don't share, save, or submit</strong> your information.</div>"
         }
       ]
     },
@@ -73,7 +73,22 @@
     ]
   },
   "resultsView": {
-    "qualified": {
+    "summaryBox": {
+      "heading": "Important",
+      "list": [
+        {
+          "item": "For full eligibility and requirements visit each agency providing the benefit."
+        },
+        {
+          "item": "Modifying your responses and completing more questions may open your eligibility to other benefits."
+        }
+      ],
+      "cta": {
+        "text": "To re-start the form",
+        "link": "click here"
+      }
+    },
+    "eligible": {
       "chevron": {
         "heading": "Your potential benefits",
         "description": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>"
@@ -81,7 +96,7 @@
       "heading": "Results",
       "description": "<strong>You may be eligible for these benefits:</strong>"
     },
-    "notQualified": {
+    "notEligible": {
       "chevron": {
         "heading": "Benefits you did not qualify for",
         "description": "According to your answers you are not eligible for these benefits."
@@ -109,7 +124,6 @@
       "benefitSummaryPrefix": "Met ",
       "benefitSummaryConjunction": "of",
       "unmetLabel": "Unmet criteria",
-      "additionalDescription": "Additional eligibility criteria may apply. Visit the link below for more information and to apply.",
       "visitLabel": "Visit"
     },
     "notEligibleResults": {

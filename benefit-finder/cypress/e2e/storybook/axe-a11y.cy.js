@@ -35,15 +35,14 @@ const status =
     .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
 
 describe(`Validate code passes axe scanning`, () => {
-  const runA11y = (skipFailOnError = null) => {
+  const runA11y = () => {
     cy.checkA11y(
       null,
       {
         retries: 3,
         interval: 100,
       },
-      terminalLog,
-      skipFailOnError
+      terminalLog
     )
   }
 
@@ -68,7 +67,7 @@ describe(`Validate code passes axe scanning`, () => {
   it('Has no detectable a11y violations on error state', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    runA11y({ skipFailOnError: true }) // remove skip after https://github.com/GSA/px-benefit-finder/issues/1072 is resolved
+    runA11y()
   })
 
   it('Has no detectable a11y violations on error state resolved', () => {
@@ -90,7 +89,8 @@ describe(`Validate code passes axe scanning`, () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     utils.dataInputs({ dod })
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    runA11y()
+    cy.injectAxe()
+    cy.checkA11y('#benefit-finder-modal')
   })
 
   it('Has no detectable a11y violations on modal close review selections', () => {
@@ -133,6 +133,6 @@ describe(`Validate code passes axe scanning`, () => {
       .button()
       .contains(EN_LOCALE_DATA.resultsView.notEligibleResults.cta)
       .click()
-    runA11y({ skipFailOnError: true }) // remove skip after https://github.com/GSA/px-benefit-finder/issues/1073 is resolved
+    runA11y()
   })
 })

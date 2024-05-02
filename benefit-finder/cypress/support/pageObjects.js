@@ -112,6 +112,10 @@ class PageObjects {
   keyEligibilityCriteriaListIcon() {
     return cy.get('.usa-accordion .bf-usa-list svg')
   }
+
+  benefitResultsView() {
+    return cy.get('.bf-result-view')
+  }
 }
 
 export const pageObjects = new PageObjects()

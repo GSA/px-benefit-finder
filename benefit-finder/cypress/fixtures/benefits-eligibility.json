@@ -27,6 +27,9 @@
         "shared": "true"
       },
       "results": {
+        "moreInformationNeeded": {
+          "length": 1
+        },
         "eligible": {
           "length": 3,
           "eligible_benefits": [
@@ -121,6 +124,88 @@
           "eligible_benefits": ["Burial flag"]
         },
         "total_benefits": 30
+      }
+    }
+  },
+  "death-of-a-loved-one": {
+    "en": {
+      "param": {
+        "applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "applicant_relationship_to_the_deceased": "Child",
+        "applicant_marital_status": "Unmarried",
+        "deceased_date_of_death": {
+          "month": 1,
+          "day": 1,
+          "year": 2024
+        },
+        "shared": "true"
+      }
+    },
+    "es": {
+      "param": {
+        "es_applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "es_applicant_relationship_to_the_deceased": "Hija/o",
+        "es_applicant_marital_status": "No casada/o",
+        "shared": "true"
+      },
+      "es_deceased_date_of_death": {
+        "month": 1,
+        "day": 1,
+        "year": 2024
+      },
+      "shared": "true"
+    }
+  },
+  "retirement": {
+    "en": {
+      "param": {
+        "applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "shared": "true"
+      }
+    },
+    "es": {
+      "param": {
+        "es_applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "shared": "true"
+      }
+    }
+  },
+  "disability": {
+    "en": {
+      "param": {
+        "applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "applicant_marital_status": "Unmarried",
+        "shared": "true"
+      }
+    },
+    "es": {
+      "param": {
+        "es_applicant_date_of_birth": {
+          "month": 1,
+          "day": 1,
+          "year": 1971
+        },
+        "shared": "true"
       }
     }
   }

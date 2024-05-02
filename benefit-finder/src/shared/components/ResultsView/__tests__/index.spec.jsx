@@ -57,8 +57,14 @@ beforeAll(() => {
 
 // render view without data
 test('loads view', async () => {
-  const view = render(<ResultsView ui={en.resultsView} />)
-  await screen.findByTestId('result-view')
+  const view = render(
+    <ResultsView
+      ui={en.resultsView}
+      stepDataArray={stepDataArray}
+      data={benfitsArray}
+    />
+  )
+  await screen.findByTestId('bf-result-view')
   expect(view.baseElement).toMatchSnapshot()
 })
 

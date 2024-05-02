@@ -8,7 +8,7 @@ import './_index.scss'
  * @param {string} type - string kabob value of component name
  * @param {string} color - hex or value
  * @param {any} props - inherited props
- * @return {html} returns a semantic <i> element with <svg> inside
+ * @return {html} returns a semantic inline element with svg inside
  */
 const Icon = ({ type, color, ...props }) => {
   let icon
@@ -20,20 +20,23 @@ const Icon = ({ type, color, ...props }) => {
     case 'carrot-big':
       icon = <Icons.CarrotBig color={color} />
       break
+    case 'close':
+      icon = <Icons.Close color={color} />
+      break
     case 'death':
       icon = <Icons.Death color={color} />
-      break
-    case 'email':
-      icon = <Icons.Email color={color} />
       break
     case 'disability':
       icon = <Icons.Disability color={color} />
       break
-    case 'close':
-      icon = <Icons.Close color={color} />
+    case 'email':
+      icon = <Icons.Email color={color} />
       break
     case 'green-check':
       icon = <Icons.GreenCheck color={color} />
+      break
+    case 'info':
+      icon = <Icons.Info color={color} />
       break
     case 'open':
       icon = <Icons.Open color={color} />

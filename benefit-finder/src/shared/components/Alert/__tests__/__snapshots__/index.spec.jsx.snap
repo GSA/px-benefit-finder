@@ -1,9 +1,35 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Alert > renders a match to the previous snapshot 1`] = `
+exports[`Alert > renders a match to the previous snapshot when it has an error 1`] = `
 <DocumentFragment>
   <div
-    aria-hidden="true"
+    aria-hidden="false"
+    aria-live="assertive"
+    class="bf-usa-alert usa-alert bf-usa-alert--error usa-alert--error "
+    role="alert"
+    tabindex="0"
+  >
+    <div
+      class="bf-usa-alert__body usa-alert__body"
+    >
+      <h2
+        aria-level="2"
+        class="bf-usa-alert__heading usa-alert__heading font-family-sans"
+        id=""
+        role="heading"
+      />
+      <p
+        class="bf-usa-alert__text usa-alert__text"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert > renders a match to the previous snapshot, default 1`] = `
+<DocumentFragment>
+  <div
+    aria-hidden="false"
     aria-live="polite"
     class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
     role="alert"
@@ -12,8 +38,37 @@ exports[`Alert > renders a match to the previous snapshot 1`] = `
     <div
       class="bf-usa-alert__body usa-alert__body"
     >
-      <h4
-        class="bf-usa-alert__heading usa-alert__heading"
+      <h2
+        aria-level="2"
+        class="bf-usa-alert__heading usa-alert__heading font-family-sans"
+        id=""
+        role="heading"
+      />
+      <p
+        class="bf-usa-alert__text usa-alert__text"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert > renders a match to the previous snapshot, error type with no error 1`] = `
+<DocumentFragment>
+  <div
+    aria-hidden="true"
+    aria-live="polite"
+    class="bf-usa-alert usa-alert bf-usa-alert--error usa-alert--error display-none"
+    role="alert"
+    tabindex="0"
+  >
+    <div
+      class="bf-usa-alert__body usa-alert__body"
+    >
+      <h2
+        aria-level="2"
+        class="bf-usa-alert__heading usa-alert__heading font-family-sans"
+        id=""
+        role="heading"
       />
       <p
         class="bf-usa-alert__text usa-alert__text"

@@ -74,18 +74,18 @@
   },
   "resultsView": {
     "summaryBox": {
-      "heading": "NEEDS TRANSLATION Important",
+      "heading": "Importante",
       "list": [
         {
-          "item": "For full eligibility and requirements visit each agency providing the benefit."
+          "item": "Para confirmar su eligibilidad necesita visitar el enlace de cada agencia."
         },
         {
-          "item": "Modifying your responses and completing more questions may open your eligibility to other benefits."
+          "item": "Si modifica sus repuestas o responde más preguntas podría ser elegible para más beneficios."
         }
       ],
       "cta": {
-        "text": "To re-start the form",
-        "link": "click here"
+        "text": "Para comenzar el formulario de nuevo",
+        "link": "seleccione aquí"
       }
     },
     "eligible": {

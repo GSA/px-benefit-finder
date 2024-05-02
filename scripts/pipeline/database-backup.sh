@@ -10,10 +10,13 @@ kill_pids() {
 
 ## Wait for the tunnel to finish connecting.
 wait_for_tunnel() {
+  count=0
   while : ; do
     [ -n "$(grep 'Press Control-C to stop.' backup.txt)" ] && break
     echo "Waiting for tunnel..."
+    [ "${count}" = "60" ] && echo "Connection time out, exiting..." && exit 1
     sleep 1
+    count=$((${count} + 1))
   done
 }
 

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { createMarkup } from '../../utils'
 import {
   Accordion,
-  Alert,
   Button,
   Heading,
   KeyElegibilityCrieriaList,
@@ -32,7 +31,6 @@ const BenefitAccordionGroup = ({
     agencyPrefix,
     visitLabel,
     unmetLabel,
-    additionalDescription,
     sourceIsEnglish,
   } = benefitAccordion
   const { closedState, openState } = benefitAccordionGroup
@@ -205,7 +203,6 @@ const BenefitAccordionGroup = ({
               {moreInformationNeeded.length > 0 && (
                 <MoreInfoList items={moreInformationNeeded} />
               )}
-              <Alert className="bf-usa-alert">{additionalDescription}</Alert>
               <ObfuscatedLink
                 className="bf-usa-link"
                 href={SourceLink}

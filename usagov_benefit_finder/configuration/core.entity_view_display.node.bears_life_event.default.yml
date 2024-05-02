@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.bears_life_event.field_json_data_file_path
     - field.field.node.bears_life_event.field_language_toggle
     - field.field.node.bears_life_event.field_meta_description
+    - field.field.node.bears_life_event.field_page_intro
+    - field.field.node.bears_life_event.field_short_description
     - field.field.node.bears_life_event.field_summary
     - node.type.bears_life_event
   module:
@@ -88,6 +90,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_page_intro:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_short_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_summary:
     type: basic_string

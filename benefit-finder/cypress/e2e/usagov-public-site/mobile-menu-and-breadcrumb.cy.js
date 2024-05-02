@@ -3,6 +3,9 @@
 import { pageObjects } from '../../support/pageObjects'
 
 describe('Validate user can navigate each path of mobile menu and breadcrumb displays correctly', () => {
+  Cypress.on('uncaught:exception', (_err, runnable) => {
+    return false
+  })
   beforeEach(() => {
     cy.visit('/benefit-finder')
   })

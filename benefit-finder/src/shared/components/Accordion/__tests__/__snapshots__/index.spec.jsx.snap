@@ -9,17 +9,22 @@ exports[`Accordion > renders a match to the previous snapshot 1`] = `
       class="bf-usa-accordion__heading usa-accordion__heading"
     >
       <button
+        aria-controls="first-amendment"
         aria-expanded="false"
         class="bf-usa-accordion__button usa-accordion__button"
         type="button"
       >
         <span
           class="bf-accordion-heading"
-        />
+        >
+          First Amendment
+        </span>
         <br />
         <span
           class="bf-accordion-sub-heading"
-        />
+        >
+          Likely Eligible
+        </span>
         <i
           alt="a plus icon"
           aria-hidden="true"
@@ -47,8 +52,11 @@ exports[`Accordion > renders a match to the previous snapshot 1`] = `
     <div
       class="bf-usa-accordion__content usa-accordion__content usa-prose"
       hidden=""
+      id="first-amendment"
     >
-      <div />
+      <div>
+        Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.
+      </div>
     </div>
   </div>
 </DocumentFragment>

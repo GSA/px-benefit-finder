@@ -482,6 +482,11 @@ const LifeEventSection = ({
                   const checkParentValue = item => {
                     const selectedParentValue = apiCalls.GET.SelectedValue(item)
 
+                    /**
+                     * a value that checks the selected parent validator to expose child inputs in the form
+                     * @return {boolean} returns true or false
+                     */
+
                     const hidden =
                       selectedParentValue?.value !==
                       item.fieldset.inputs[0].inputCriteria
@@ -497,13 +502,26 @@ const LifeEventSection = ({
                       children: item.fieldset.children.map(
                         (child, i) =>
                           child.fieldsets.length &&
-                          child.fieldsets.map((childItem, childItemIndex) =>
-                            Input({
+                          child.fieldsets.map((childItem, childItemIndex) => {
+                            // if a parent determines the children inputs are hidden, we expect that the seleted values in child items are de-selected
+                            const selectedValue =
+                              childItem && apiCalls.GET.SelectedValue(childItem)
+
+                            const isHidden = checkParentValue(item)
+
+                            if (
+                              isHidden === true &&
+                              selectedValue !== undefined
+                            ) {
+                              delete selectedValue.selected
+                            }
+
+                            return Input({
                               item: childItem,
                               index: childItemIndex,
-                              hidden: checkParentValue(item),
+                              hidden: isHidden,
                             })
-                          )
+                          })
                       ),
                     })
                   }

@@ -19,7 +19,7 @@ then
     git submodule init
     git submodule update
     cd "${BENEFIT_FINDER_MODULE_LOCATION}"
-    git checkout dev
+    git checkout prod
 else
     echo "usa.gov project directory exists, updating submodule"
     git pull --recurse-submodules

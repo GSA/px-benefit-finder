@@ -1,0 +1,150 @@
+{
+  "data": {
+    "node": {
+      "items": {
+        "nodes": [
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOqWco",
+            "content": {
+              "title": "Design update, notices list",
+              "number": 1252
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOqpyk",
+            "content": {
+              "title": "Add meta descriptions to LE pages",
+              "number": 1253
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOtWGI",
+            "content": {
+              "title": "Definition and usage of page intro, short description, and meta description",
+              "number": 1275
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOreEM",
+            "content": {
+              "title": "Include VSCODE config files in project",
+              "number": 1254
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOrmWc",
+            "content": {
+              "title": "public access, dev environments",
+              "number": 1123
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOrmhs",
+            "content": {
+              "title": "Prototype | state machine implementation",
+              "number": 1260
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOrmrU",
+            "content": {
+              "title": "Finalize Scope for QA Automation to be completed",
+              "number": 1261
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOrukk",
+            "content": {
+              "title": "Benefits.Gov Research Plan Prototyping - SPANISH",
+              "number": 1268
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOr0dE",
+            "content": {
+              "title": "Informational List on main page: adding alt-text on icons and removing alert components",
+              "number": 1269
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOr1pg",
+            "content": {
+              "title": "Modal Buttons",
+              "number": 1270
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOr274",
+            "content": {
+              "title": "Content a11y: Vague and unclear labels for links and buttons. Device-neutral language on drop-down fields.",
+              "number": 1272
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOsFH4",
+            "content": {
+              "title": "Summary Box & Accordions Edits | USAGov Design Feedback",
+              "number": 1274
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOtoWc",
+            "content": {
+              "title": "Translate Summary Component",
+              "number": 1277
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOvW4c",
+            "content": {
+              "title": "WAF/Proxy auto update",
+              "number": 1279
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOvcuQ",
+            "content": {
+              "title": "Release v0.3.0.beta.1 communication plan",
+              "number": 1280
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOynJA",
+            "content": {
+              "title": "Discovery | Review Keyword Search LEs / Performance.gov",
+              "number": 1285
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOyrNc",
+            "content": {
+              "title": "Discovery | Research LEs (Desk Research) ",
+              "number": 1286
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgOy-8o",
+            "content": {
+              "title": "Update to NGINX v1.25.4 (dev)",
+              "number": 1287
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgO0CgE",
+            "content": {
+              "title": "Update local mv script for project build",
+              "number": 1288
+            }
+          },
+          {
+            "id": "PVTI_lADOAAnP_s4ANWLKzgO0dZk",
+            "content": {
+              "title": "Discovery | LE Total Benefits",
+              "number": 1289
+            }
+          }
+        ]
+      }
+    }
+  }
+}

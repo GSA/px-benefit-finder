@@ -1,0 +1,157 @@
+name: Update Dev WAF
+
+on:
+  schedule:
+    - cron: '0 5 * * 4'
+
+jobs:
+  checkVersion:
+    name: Check versions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set env.BRANCH
+        run: echo "BRANCH=dev" >> $GITHUB_ENV
+      - name: Install basic dependancies
+        run: ./scripts/pipeline/deb-basic-deps.sh
+      - name: Install Cloudfoundry CLI
+        run: ./scripts/pipeline/deb-cf-install.sh
+      - name: Cloud.gov login
+        env:
+          CF_USER: '${{ secrets.CF_USER }}'
+          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
+          CF_ORG: '${{ secrets.CF_ORG }}'
+          PROJECT: '${{ secrets.PROJECT }}'
+        run: |
+          source ./scripts/pipeline/cloud-gov-login.sh
+      - name: Check version
+        id: version
+        env:
+          PROJECT: '${{ secrets.PROJECT }}'
+        run: |
+          ubuntu_version=${{ vars.UBUNTU_VERSION }}
+          modsecurity_nginx_version=${{ vars.MODSECURITY_NGINX_VERSION }}
+          source ./scripts/pipeline/cloud-gov-waf-version.sh
+    outputs:
+      current_nginx_version: ${{ steps.version.outputs.current_nginx_version }}
+      nginx_version: ${{ steps.version.outputs.nginx_version }}
+      cloudgov_wf_version: ${{ steps.version.outputs.cloudgov_wf_version }}
+      cloudgov_bp_version: ${{ steps.version.outputs.cloudgov_bp_version }}
+      update: ${{ steps.version.outputs.update }}
+  updateWAF:
+    name: Update WAF
+    runs-on: ubuntu-latest
+    needs: checkVersion
+    if: needs.checkVersion.outputs.update == 'true'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set env.BRANCH
+        run: echo "BRANCH=dev" >> $GITHUB_ENV
+      - name: Install basic dependancies
+        run: |
+          ./scripts/pipeline/deb-basic-deps.sh
+      - name: Install Cloudfoundry CLI
+        run: ./scripts/pipeline/deb-cf-install.sh
+      - name: Cloud.gov login
+        id: cglogin
+        env:
+          CF_USER: '${{ secrets.CF_USER }}'
+          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
+          CF_ORG: '${{ secrets.CF_ORG }}'
+          PROJECT: '${{ secrets.PROJECT }}'
+        run: |
+          source ./scripts/pipeline/cloud-gov-login.sh
+      - name: Build nginx WAF Plugin
+        env:
+          ubuntu_version: '${{ vars.UBUNTU_VERSION }}'
+          modsecurity_nginx_version: '${{ vars.MODSECURITY_NGINX_VERSION }}'
+          nginx_version: ${{ needs.checkVersion.outputs.nginx_version }}
+        run: |
+          CWD=$(pwd)
+          cd "${CWD}/infra/applications/nginx-waf/.docker" || exit 1
+          make
+          cd "${CWD}" || exit 1
+      - name: Configure Terraform Provider
+        env:
+          bucket_name: ${{ secrets.BUCKET_NAME_TERRAFORM }}
+          CF_USER: '${{ secrets.CF_USER }}'
+          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
+          CF_ORG: '${{ secrets.CF_ORG }}'
+          PROJECT: '${{ secrets.PROJECT }}'
+        run: |
+          CWD=$(pwd)
+          cf target -s "${PROJECT}-dev" >/dev/null 2>&1
+          source ./scripts/local/cloud-gov-s3-creds.sh
+          cd "${CWD}/infra" || exit 1
+          echo "cloudgov_password=\"${{ secrets.CF_PASSWORD }}\"" >> terraform.tfvars
+          echo "cloudgov_username=\"${{ secrets.CF_USER }}\"" >> terraform.tfvars
+          envsubst < provider.tf.tmpl > provider.tf
+          cd "${CWD}" || exit 1
+      - uses: hashicorp/setup-terraform@v3
+      - name: Terraform Init
+        env:
+          GITHUB_TOKEN: ${{ secrets.CR_PAT }}
+        id: init
+        run: terraform init
+        working-directory: 'infra'
+      - name: Terraform Validate
+        id: validate
+        run: TF_WORKSPACE=${BRANCH} terraform validate -no-color
+      - name: Terraform Plan
+        env:
+          GITHUB_TOKEN: ${{ secrets.CR_PAT }}
+        id: plan
+        run: TF_WORKSPACE=${BRANCH} terraform plan -no-color
+        working-directory: 'infra'
+      - name: Terraform Apply
+        id: apply
+        env:
+          GITHUB_TOKEN: ${{ secrets.CR_PAT }}
+        run: TF_WORKSPACE=${BRANCH} terraform apply -auto-approve
+        working-directory: 'infra'
+      - name: Create Issue For Review
+        id: issue
+        uses: dacbd/create-issue-action@main
+        with:
+          token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          assignees: ${{ vars.TECH_LEAD }}
+          title: "Update to NGINX v${{ needs.checkVersion.outputs.nginx_version }} (dev)"
+          body: |
+            ## Automated update of NGINX WAF
+          
+            This is an automated build and deploy of the NGINX WAF application in dev.
+
+            Build pack: ${{ needs.checkVersion.outputs.cloudgov_wf_version }} => ${{ needs.checkVersion.outputs.cloudgov_bp_version }}
+            NGINX: ${{ needs.checkVersion.outputs.current_nginx_version }} => ${{ needs.checkVersion.outputs.nginx_version }}
+
+            #### Terraform Initialization &#x2699;`${{ steps.init.outcome }}`
+            #### Terraform Validation &#x1F916;`${{ steps.validate.outcome }}`
+            
+            <details><summary>Validation Output</summary>
+
+            ```
+            ${{ steps.validate.outputs.stdout }}
+            ```
+
+            </details>
+
+            #### Terraform Plan &#x1F4C5;`${{ steps.plan.outcome }}`
+
+            <details><summary>Show Plan</summary>
+
+            ```
+            ${{ steps.plan.outputs.stdout }}
+            ```
+
+            </details>
+
+            #### Terraform Apply &#x1f680;`${{ steps.apply.outcome }}`
+      - name: Update Project Status
+        env:
+          GH_PROJECT_NUMBER: ${{ secrets.GH_PROJECT_NUMBER }}
+          GH_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
+        run: source ./scripts/pipeline/github-update-issue-status.sh
+        

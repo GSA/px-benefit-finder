@@ -1,11 +1,12 @@
 ARG modsecurity_nginx_version="1.0.3"
-ARG nginx_version="1.25.3"
+ARG nginx_version="1.25.4"
 ARG ubuntu_version="jammy"
 
 FROM docker.io/ubuntu:${ubuntu_version}
 
 ARG modsecurity_nginx_version
 ARG nginx_version
+ARG ubuntu_version
 
 RUN sed -i 's/^# deb-src./deb-src /' /etc/apt/sources.list
 

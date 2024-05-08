@@ -1,4 +1,4 @@
-name: Database backup
+name: Database Backup (main)
 
 on:
   workflow_call:
@@ -12,7 +12,7 @@ on:
       PROJECT:
         required: true
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 1 * * *'
 
 jobs:
   backup-database:
@@ -22,8 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set env.BRANCH
-        run: |
-          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+        run: echo "BRANCH=main" >> $GITHUB_ENV
       - name: Install basic dependancies
         run: ./scripts/pipeline/deb-basic-deps.sh
       - name: Install AWSCLI
@@ -32,7 +31,7 @@ jobs:
         run: ./scripts/pipeline/deb-mysql-client-install.sh
       - name: Install Cloudfoundry CLI
         run: ./scripts/pipeline/deb-cf-install.sh
-      - name: Backup dev database
+      - name: Backup Database (main)
         shell: bash
         env:
           CF_USER: '${{ secrets.CF_USER }}'

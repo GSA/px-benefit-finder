@@ -2,7 +2,7 @@ name: Clean up service keys
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '30 4 * * *'
 
 jobs:
   cleanup-service-keys-dev:
@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set env.BRANCH
+        run: echo "BRANCH=dev" >> $GITHUB_ENV
       - name: Install basic dependancies
         run: ./scripts/pipeline/deb-basic-deps.sh
       - name: Install Cloudfoundry CLI
@@ -22,7 +24,6 @@ jobs:
           CF_ORG: '${{ secrets.CF_ORG }}'
           project: '${{ secrets.project }}'
         run: |
-          export ENVIRONMENT=dev
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/cloud-gov-cleanup-service-keys.sh
   cleanup-service-keys-main:
@@ -30,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set env.BRANCH
+        run: echo "BRANCH=main" >> $GITHUB_ENV
       - name: Install basic dependancies
         run: ./scripts/pipeline/deb-basic-deps.sh
       - name: Install Cloudfoundry CLI
@@ -42,6 +45,5 @@ jobs:
           CF_ORG: '${{ secrets.CF_ORG }}'
           project: '${{ secrets.project }}'
         run: |
-          export ENVIRONMENT=main
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/cloud-gov-cleanup-service-keys.sh

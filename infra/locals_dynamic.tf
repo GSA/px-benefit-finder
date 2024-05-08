@@ -49,7 +49,7 @@ locals {
           local.external_applications[terraform.workspace].drupal.port,
           local.env.defaults.port
         )
-        newrelic_key = var.newrelic_key
+        #newrelic_key = var.newrelic_key
         # proxy_uri = format(
         #   "https://%s:%s@%s.%s:%s",
         #   var.proxy_username,
@@ -80,7 +80,7 @@ locals {
       #backend_aws_bucket_region = var.backend_aws_bucket_region
       #backup_aws_bucket_name    = var.backup_aws_bucket_name
       #backup_aws_bucket_region  = var.backup_aws_bucket_region
-      circleci_token    = var.circleci_token
+      //circleci_token    = var.circleci_token
       cloudgov_password = var.cloudgov_password
       cloudgov_username = var.cloudgov_username
       cf_org            = local.env.organization

@@ -25,11 +25,11 @@ for param in "$@"; do
 done
 
 
-# # build benefit finder app
-# bash "${SCRIPTS_LOCATION}/mv-benefit-finder-app.sh"
+# build benefit finder app
+bash "${SCRIPTS_LOCATION}/mv-benefit-finder-app.sh"
 
-# # move benefit finder app into module and move it to usagov-2021 custom modules
-# bash "${SCRIPTS_LOCATION}/mv-usagov_benefit_finder.sh"
+# move benefit finder app into module and move it to usagov-2021 custom modules
+bash "${SCRIPTS_LOCATION}/mv-usagov_benefit_finder.sh"
 
 cd "${USAGOV_PROJECT_LOCATION}"
 git fetch origin prod:prod

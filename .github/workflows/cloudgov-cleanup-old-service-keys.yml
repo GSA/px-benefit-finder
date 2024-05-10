@@ -22,7 +22,7 @@ jobs:
           CF_USER: '${{ secrets.CF_USER }}'
           CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
           CF_ORG: '${{ secrets.CF_ORG }}'
-          project: '${{ secrets.project }}'
+          PROJECT: '${{ secrets.project }}'
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/cloud-gov-cleanup-service-keys.sh
@@ -43,7 +43,7 @@ jobs:
           CF_USER: '${{ secrets.CF_USER }}'
           CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
           CF_ORG: '${{ secrets.CF_ORG }}'
-          project: '${{ secrets.project }}'
+          PROJECT: '${{ secrets.project }}'
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/cloud-gov-cleanup-service-keys.sh

@@ -63,6 +63,7 @@ jobs:
       secrets: inherit
   component-library:
     needs: [backup-database-dev, backup-database-main]
+    if: always() && contains(needs.*.result, 'success') && !contains(needs.*.result, 'failure')
     name: Build and deploy component library
     runs-on: ubuntu-latest
     steps:
@@ -108,6 +109,7 @@ jobs:
           cf push benefit-finder-storybook-${BRANCH}
   build-and-deploy:
     needs: [backup-database-dev, backup-database-main]
+    if: always() && contains(needs.*.result, 'success') && !contains(needs.*.result, 'failure')
     name: Build and deploy
     runs-on: ubuntu-latest
     steps:

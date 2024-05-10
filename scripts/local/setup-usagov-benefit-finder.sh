@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Set the root directory
-readonly ROOT_DIR=$(git rev-parse --show-toplevel)
+ROOT_DIR=$(git rev-parse --show-toplevel)
 
 # usagov-2021 project
-readonly USAGOV_PROJECT_LOCATION="${ROOT_DIR}/usagov-2021"
-readonly SCRIPTS_LOCATION="${ROOT_DIR}/scripts/pipeline"
+USAGOV_PROJECT_LOCATION="${ROOT_DIR}/usagov-2021"
+SCRIPTS_LOCATION="${ROOT_DIR}/scripts/pipeline"
 
 
 # make specific to usagov
@@ -47,18 +47,18 @@ then
     bin/db-update
     bin/drupal-update
     docker compose up -d
+
+    # build benefit finder app
+    bash "${SCRIPTS_LOCATION}/mv-benefit-finder-app.sh"
+
+    # move benefit finder app into module and move it to usagov-2021 custom modules
+    bash "${SCRIPTS_LOCATION}/mv-usagov_benefit_finder.sh"
+
+    # post build import
+    bin/drush cim --partial --source=modules/custom/usagov_benefit_finder/configuration -y
+    bin/drush cr
+    bin/drush state:set system.maintenance_mode 0 -y
 else
     echo "ERROR: missing database"
 fi
-
-# build benefit finder app
-bash "${SCRIPTS_LOCATION}/mv-benefit-finder-app.sh"
-
-# move benefit finder app into module and move it to usagov-2021 custom modules
-bash "${SCRIPTS_LOCATION}/mv-usagov_benefit_finder.sh"
-
-# post build import
-bin/drush cim --partial --source=modules/custom/usagov_benefit_finder/configuration -y
-bin/drush cr
-bin/drush state:set system.maintenance_mode 0 -y
 

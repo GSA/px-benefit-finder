@@ -20,7 +20,6 @@
         "deceased_death_location_is_US": "Yes",
         "deceased_paid_into_SS": "Yes",
         "deceased_public_safety_officer": "No",
-        "deceased_miner": "No",
         "deceased_american_indian": "No",
         "deceased_died_of_COVID": "Yes",
         "deceased_served_in_active_military": "No",
@@ -31,10 +30,11 @@
           "length": 1
         },
         "eligible": {
-          "length": 3,
+          "length": 4,
           "eligible_benefits": [
             "COVID-19 funeral assistance",
             "Survivors benefits for mothers/fathers",
+            "Survivors benefits for spouse with disabilities",
             "Survivors benefits for spouse"
           ]
         },
@@ -72,12 +72,13 @@
       },
       "results": {
         "eligible": {
-          "length": 8,
+          "length": 9,
           "eligible_benefits": [
             "Presidential Memorial Certificate",
             "Veterans medallions",
             "Veterans headstone and grave marker",
             "Life insurance for survivors of veterans",
+            "Dependency and Indemnity Compensation (DIC)",
             "Burial benefits",
             "Burial flag",
             "Burial in VA national cemetery",
@@ -120,7 +121,7 @@
       },
       "results": {
         "eligible": {
-          "length": 7,
+          "length": 9,
           "eligible_benefits": ["Burial flag"]
         },
         "total_benefits": 30

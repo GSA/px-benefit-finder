@@ -1,0 +1,168 @@
+{
+  // current parameters
+  "params": {
+    "applicant_date_of_birth": {
+      "month": 4,
+      "day": 5,
+      "year": 1960
+    },
+    "applicant_relationship_to_the_deceased": "Spouse",
+    "applicant_marital_status": "Widowed",
+    "applicant_citizen_status": "Yes",
+    "applicant_care_for_child": "Yes",
+    "applicant_paid_funeral_expenses": "Yes",
+    "deceased_date_of_death": {
+      "month": 2,
+      "day": 3,
+      "year": 2022
+    },
+    "deceased_death_location_is_US": "Yes",
+    "deceased_paid_into_SS": "Yes",
+    "deceased_public_safety_officer": "No",
+    "deceased_miner": "No",
+    "deceased_american_indian": "No",
+    "deceased_died_of_COVID": "Yes",
+    "deceased_served_in_active_military": "No",
+    "shared": "true"
+  },
+  // integrated ontological object for an applicant parameter
+  "applicant": {
+    "metaData": {
+      "dateOfBirth": {
+        "month": 4,
+        "day": 5,
+        "year": 1960
+      }
+    },
+    "isApplicant": true,
+    "isOver18": true,
+    "isSpouse": true,
+    "isChild": false,
+    "isParent": false,
+    "isFamilyMember": true,
+    "isRepresentative": false,
+    "isMarried": false,
+    "isUnmarried": false,
+    "isWidowed": true,
+    "isDivorced": false,
+    "isCitizen": true,
+    "isCaringForChild": true,
+    "hasChild": true,
+    "hasChildUnderAge": true,
+    "didPayExpenses": true,
+    "deceased": {
+      "metaData": {
+        "dateOfDeath": {
+          "month": 2,
+          "day": 3,
+          "year": 2022
+        }
+      },
+      "didDieInUS": true,
+      "didWork": true,
+      "didPaySocialSecurityTaxes": true,
+      "didWorkAsPublicSafetyOfficer": true,
+      "didDieInLineOfDuty": true,
+      "didWorkInCoalMines": false,
+      "didDieFromBlackLungDisease": false,
+      "isAmericanIndian": false,
+      "isAlaskanNative": false,
+      "didDieFromCovid": true,
+      "didServeUSMilitary": false,
+      "wasActiveDutyServiceMember": false,
+      "wasDishonorableDischarge": false,
+      "didRetireFromService": false,
+      "wasNationalGuard": false,
+      "wasReserves": false,
+      "didDieWhileOnActiveDuty": false,
+      "didDieWhileInActive": false,
+      "didDieWhileInTraining": false,
+      "didDieFromServiceRelatedIllness": false,
+      "didDieFromServiceRelatedDisability": false,
+      "didDieWhileReceivingVACare": false,
+      "wasEligibleForVACompensation": false,
+      "wasReceivingVACompensation": false,
+      "wasBuriedInUnmarkedGrave": false,
+      "wasBuriedWithPrivatelyPurchasedHeadstone": false
+    }
+  },
+  // current benefit with criteria and acceptable values
+  "benefit": {
+    "title": "Survivors pension for spouse",
+    "summary": "<p>Monthly payments to surviving spouses of wartime veterans with certain income and net worth limits.</p>\r\n",
+    "SourceLink": "https://www.va.gov/pension/survivors-pension/",
+    "SourceIsEnglish": "TRUE",
+    "agency": {
+      "title": "Veterans Affairs Department (VA)",
+      "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
+      "lede": ""
+    },
+    "tags": ["Death of a loved one"],
+    "lifeEvents": ["Death"],
+    "eligibility": [
+      {
+        "criteriaKey": "deceased_served_in_active_military",
+        "label": "The deceased served in the active military",
+        "acceptableValues": ["yes"]
+      },
+      {
+        "criteriaKey": "deceased_service_status",
+        "label": "The service status of the deceased is: discharged under conditions other than dishonorable",
+        "acceptableValues": [
+          "Discharged under conditions other than dishonorable"
+        ]
+      },
+      {
+        "criteriaKey": "applicant_marital_status",
+        "label": "Your marital status is unmarried or widowed",
+        "acceptableValues": ["Unmarried", "Widowed"]
+      },
+      {
+        "criteriaKey": "applicant_relationship_to_the_deceased",
+        "label": "Your relationship to the deceased is: spouse",
+        "acceptableValues": ["Spouse"]
+      }
+    ]
+  },
+  // Updated benefit with criteria and ontological based acceptable values
+  "benefit(Ontological)": {
+    "title": "Survivors pension for spouse",
+    "summary": "<p>Monthly payments to surviving spouses of wartime veterans with certain income and net worth limits.</p>\r\n",
+    "SourceLink": "https://www.va.gov/pension/survivors-pension/",
+    "SourceIsEnglish": "TRUE",
+    "agency": {
+      "title": "Veterans Affairs Department (VA)",
+      "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>\r\n",
+      "lede": ""
+    },
+    "tags": ["Death of a loved one"],
+    "lifeEvents": ["Death"],
+    "eligibility": [
+      {
+        "criteriaKey": "deceased_served_in_active_military",
+        "label": "The deceased served in the active military",
+        "acceptableValues": ["didServeUSMilitary"]
+      },
+      {
+        "criteriaKey": "deceased_service_status",
+        "label": "The service status of the deceased is: discharged under conditions other than dishonorable",
+        "acceptableValues": [
+          "wasActiveDutyServiceMember",
+          "didRetireFromService",
+          "wasNationalGuard",
+          "wasReserves"
+        ]
+      },
+      {
+        "criteriaKey": "applicant_marital_status",
+        "label": "Your marital status is unmarried or widowed",
+        "acceptableValues": ["isUnmarried", "isWidowed"]
+      },
+      {
+        "criteriaKey": "applicant_relationship_to_the_deceased",
+        "label": "Your relationship to the deceased is: spouse",
+        "acceptableValues": ["isSpouse"]
+      }
+    ]
+  }
+}

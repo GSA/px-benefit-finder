@@ -14,10 +14,10 @@ exports[`loads view 1`] = `
       data-analytics="bf-result-view"
       data-analytics-content="bf-eligible-view"
       data-analytics-content-benefits="30"
-      data-analytics-content-criteria-values="14"
+      data-analytics-content-criteria-values="13"
       data-analytics-content-eligible="5"
-      data-analytics-content-more-info="0"
-      data-analytics-content-not-eligible="25"
+      data-analytics-content-more-info="1"
+      data-analytics-content-not-eligible="24"
       data-testid="bf-result-view"
     >
       <div
@@ -433,7 +433,7 @@ exports[`loads view 1`] = `
                     <span
                       class="bf-accordion-sub-heading"
                     >
-                      Not eligible
+                      More information needed
                     </span>
                     <i
                       alt="a plus icon"
@@ -539,7 +539,7 @@ exports[`loads view 1`] = `
                       <div
                         class="bf-unmet-criteria-title"
                       >
-                        Unmet criteria
+                        More information needed
                       </div>
                       <ul
                         class="bf-unmet-criteria-list"
@@ -6644,10 +6644,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
       data-analytics="bf-result-view"
       data-analytics-content="bf-eligible-view"
       data-analytics-content-benefits="30"
-      data-analytics-content-criteria-values="14"
+      data-analytics-content-criteria-values="13"
       data-analytics-content-eligible="5"
-      data-analytics-content-more-info="0"
-      data-analytics-content-not-eligible="25"
+      data-analytics-content-more-info="1"
+      data-analytics-content-not-eligible="24"
       data-testid="bf-result-view"
     >
       <div
@@ -7063,7 +7063,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     <span
                       class="bf-accordion-sub-heading"
                     >
-                      Not eligible
+                      More information needed
                     </span>
                     <i
                       alt="a plus icon"
@@ -7169,7 +7169,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       <div
                         class="bf-unmet-criteria-title"
                       >
-                        Unmet criteria
+                        More information needed
                       </div>
                       <ul
                         class="bf-unmet-criteria-list"

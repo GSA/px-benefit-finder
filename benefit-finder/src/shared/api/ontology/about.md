@@ -6,6 +6,12 @@ An ontology is a vocabulary used to describe some domain. This includes describi
 
 The [Web Ontology Language (OWL)](https://www.w3.org/OWL/) is a W3C endorsed format that can be used to define an ontology. It can define relatively rich semantics including relations between classes of entities (for example hasCitizenship), cardinality (for example "exactly one"), equality, properties, characteristics of properties (for example all), and enumerated classes.
 
+Resources
+
+- [Example Ontology OWL File](./applicant.owl)
+
+![Example Ontological Map](./example_ontology.png)
+
 ## Taxonomies
 
 At a more simplistic level, OWL can also describe taxonomies. A taxonomy is a system of hierarchical types that can be used to describe entities. The types are expressed in a class and subclass system.
@@ -13,6 +19,8 @@ At a more simplistic level, OWL can also describe taxonomies. A taxonomy is a sy
 So for example, a basic taxonomy might consist of a class called "Applicant" which might have subclasses "Deceased". This hierarchy means that a "Deceased" is a type of "Applicant".
 
 ## Why use ontologies in benefit eligibility systems
+
+Resource: https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html
 
 Ontologies play a crucial role in benefit eligibility systems by providing a standardized framework for representing and organizing complex information. Here are some key considerations of using ontologies in benefit eligibility systems:
 
@@ -25,3 +33,14 @@ Ontologies play a crucial role in benefit eligibility systems by providing a sta
 - **Reduced Complexity:** simplifies the benefit eligibility process by breaking down complex rules and regulations into a clear and understandable framework, reducing complexity and confusion.
 - **Improved Compliance:** helps ensure compliance with regulations and laws by providing a standardized framework for data representation and processing, reducing the risk of errors and non-compliance.
 - **Enhanced User Experience:** improves the user experience by providing a clear and intuitive interface for stakeholders to interact with the benefit eligibility system, reducing frustration and increasing satisfaction.
+
+## System Integration
+
+Resource: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371316/
+![Example Ontology Integration Design](./example_ontology_integration.png)
+
+## Integrated Scenario
+
+To better understand the impact we consider what ontology taxonomy to entities would look like as consumed by our benefit finder application. This includes the parameter key value pairs for an applicant and the benefits criteria.
+
+[Example Scenario Covid JSON Comparison](./scenario_1_covid_ontological.json)

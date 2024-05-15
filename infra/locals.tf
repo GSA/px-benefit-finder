@@ -47,83 +47,84 @@ locals {
           ## IP addresses allowed to connected to the CMS.
           ALLOWED_IPS_CMS = base64encode(
             jsonencode([
-              ## Benefit-Finder Dev
-              "allow 72.76.74.75/32;",
-              "allow 98.164.54.242/32;",
-              "allow 75.176.62.86/32;",
-              "allow 70.21.206.246/32;",
-              "allow 100.16.185.127/32;",
-              "allow 75.176.62.86/32;",
-              "allow 2603:6080:2840:284:80b4:2ae:80f8:9652;",
-              ## GSA VPN pool
-              "allow 50.81.160.164;",
-              "allow 100.36.151.190;",
-              "allow 52.222.122.97/32;",
-              "allow 52.222.123.172/32;",
-              "allow 159.142.0.0/16;",
+              "allow 0.0.0.0/0;"
+              # ## Benefit-Finder Dev
+              # "allow 72.76.74.75/32;",
+              # "allow 98.164.54.242/32;",
+              # "allow 75.176.62.86/32;",
+              # "allow 70.21.206.246/32;",
+              # "allow 100.16.185.127/32;",
+              # "allow 75.176.62.86/32;",
+              # "allow 2603:6080:2840:284:80b4:2ae:80f8:9652;",
+              # ## GSA VPN pool
+              # "allow 50.81.160.164;",
+              # "allow 100.36.151.190;",
+              # "allow 52.222.122.97/32;",
+              # "allow 52.222.123.172/32;",
+              # "allow 159.142.0.0/16;",
 
-              # SiteImprove:
-              "allow 13.58.165.213;",
-              "allow 18.116.191.222;",
-              "allow 18.116.197.208;",
-              "allow 18.189.206.159;",
-              "allow 18.190.68.80;",
-              "allow 18.216.137.252;",
-              "allow 18.223.191.8;",
-              "allow 3.13.121.241;",
-              "allow 3.133.38.181;",
-              "allow 3.135.49.180;",
-              "allow 3.136.111.218;",
-              "allow 3.138.54.100;",
-              "allow 18.219.35.44;",
-              "allow 18.157.140.51;",
-              "allow 18.159.218.224;",
-              "allow 18.196.205.2;",
-              "allow 18.198.120.55;",
-              "allow 3.124.26.114;",
-              "allow 3.125.99.135;",
-              "allow 3.64.159.177;",
-              "allow 3.66.247.32;",
-              "allow 3.68.122.244;",
-              "allow 52.57.167.198;",
-              "allow 35.158.180.204;",
-              "allow 18.192.147.131;",
-              "allow 52.58.146.230;",
-              "allow 185.229.145.22;",
-              "allow 3.129.126.175;",
+              # # SiteImprove:
+              # "allow 13.58.165.213;",
+              # "allow 18.116.191.222;",
+              # "allow 18.116.197.208;",
+              # "allow 18.189.206.159;",
+              # "allow 18.190.68.80;",
+              # "allow 18.216.137.252;",
+              # "allow 18.223.191.8;",
+              # "allow 3.13.121.241;",
+              # "allow 3.133.38.181;",
+              # "allow 3.135.49.180;",
+              # "allow 3.136.111.218;",
+              # "allow 3.138.54.100;",
+              # "allow 18.219.35.44;",
+              # "allow 18.157.140.51;",
+              # "allow 18.159.218.224;",
+              # "allow 18.196.205.2;",
+              # "allow 18.198.120.55;",
+              # "allow 3.124.26.114;",
+              # "allow 3.125.99.135;",
+              # "allow 3.64.159.177;",
+              # "allow 3.66.247.32;",
+              # "allow 3.68.122.244;",
+              # "allow 52.57.167.198;",
+              # "allow 35.158.180.204;",
+              # "allow 18.192.147.131;",
+              # "allow 52.58.146.230;",
+              # "allow 185.229.145.22;",
+              # "allow 3.129.126.175;",
 
-              # Salesforce GovCloud:
-              "allow 96.43.153.8;",
-              "allow 96.43.152.8;",
-              "allow 52.61.131.34;",
-              "allow 52.61.135.34;",
+              # # Salesforce GovCloud:
+              # "allow 96.43.153.8;",
+              # "allow 96.43.152.8;",
+              # "allow 52.61.131.34;",
+              # "allow 52.61.135.34;",
 
-              # US-East IPs from Salesforce Public Cloud:"
-              "allow 3.225.240.254/32;",
-              "allow 18.204.28.162/32;",
-              "allow 18.214.12.209/32;",
-              "allow 34.202.86.120/32;",
-              "allow 34.204.111.166/32;",
-              "allow 52.44.156.44/32;",
+              # # US-East IPs from Salesforce Public Cloud:"
+              # "allow 3.225.240.254/32;",
+              # "allow 18.204.28.162/32;",
+              # "allow 18.214.12.209/32;",
+              # "allow 34.202.86.120/32;",
+              # "allow 34.204.111.166/32;",
+              # "allow 52.44.156.44/32;",
 
-              # US-West IPs from Salesforce Public Cloud:
-              "allow 44.233.69.21/32;",
-              "allow 44.237.79.66/32;",
-              "allow 52.36.20.11/32;",
-              "allow 35.80.213.208/32;",
-              "allow 35.161.141.162/32;",
-              "allow 44.234.249.148/32;",
+              # # US-West IPs from Salesforce Public Cloud:
+              # "allow 44.233.69.21/32;",
+              # "allow 44.237.79.66/32;",
+              # "allow 52.36.20.11/32;",
+              # "allow 35.80.213.208/32;",
+              # "allow 35.161.141.162/32;",
+              # "allow 44.234.249.148/32;",
 
-              # Connections from Salesforce in the US:"
-              "allow 3.225.151.145;",
-              "allow 3.225.240.254/32;",
-              "allow 18.204.28.162/32;",
-              "allow 18.211.105.61;",
-              "allow 34.197.58.108;",
-              "allow 34.204.111.166/32;",
-              "allow 52.3.16.30;",
-              "allow 52.22.251.194;",
-              "allow 52.70.135.185;",
+              # # Connections from Salesforce in the US:"
+              # "allow 3.225.151.145;",
+              # "allow 3.225.240.254/32;",
+              # "allow 18.204.28.162/32;",
+              # "allow 18.211.105.61;",
+              # "allow 34.197.58.108;",
+              # "allow 34.204.111.166/32;",
+              # "allow 52.3.16.30;",
+              # "allow 52.22.251.194;",
+              # "allow 52.70.135.185;",
             ])
           )
 
@@ -143,7 +144,7 @@ locals {
           MODSECURITY_UPDATE = "libmodsecurity3_3.0.9-1_amd64.deb"
 
           ## Domains that shouldn't be passed to the egress proxy server (i.e. apps.internal).
-          no_proxy = var.no_proxy
+          #no_proxy = var.no_proxy
         }
 
         ## Timeout for health checks, in seconds.

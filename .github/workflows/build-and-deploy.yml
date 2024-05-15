@@ -51,12 +51,19 @@ jobs:
         run: |
           COMPOSER_DIR=$(composer -n config --global home)
           $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder # | tee /tmp/results/php-cs.log
-  backup-database:
+  backup-database-dev:
     needs: php-lint
-    uses: ./.github/workflows/database-backup.yml
+    uses: ./.github/workflows/database-backup-dev.yml
+    if: github.ref == 'refs/heads/dev'
     secrets: inherit
+  backup-database-main:
+      needs: php-lint
+      uses: ./.github/workflows/database-backup-main.yml
+      if: github.ref == 'refs/heads/main'
+      secrets: inherit
   component-library:
-    needs: backup-database
+    needs: [backup-database-dev, backup-database-main]
+    if: always() && contains(needs.*.result, 'success') && !contains(needs.*.result, 'failure')
     name: Build and deploy component library
     runs-on: ubuntu-latest
     steps:
@@ -101,7 +108,8 @@ jobs:
           echo "${{ secrets.STORYBOOK_USERNAME }}:${{ secrets.STORYBOOK_PASSWORD }}" > Staticfile.auth
           cf push benefit-finder-storybook-${BRANCH}
   build-and-deploy:
-    needs: backup-database
+    needs: [backup-database-dev, backup-database-main]
+    if: always() && contains(needs.*.result, 'success') && !contains(needs.*.result, 'failure')
     name: Build and deploy
     runs-on: ubuntu-latest
     steps:

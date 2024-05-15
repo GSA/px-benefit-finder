@@ -1,0 +1,25 @@
+terraform {
+  required_providers {
+    cloudfoundry = {
+      source  = "cloudfoundry-community/cloudfoundry"
+      version = "~> 0.5"
+    }
+  }
+  required_version = "1.8.2"
+}
+
+terraform {
+  backend "s3" {
+    bucket = "$AWS_BUCKET"
+    key = "terraform"
+    region = "$AWS_DEFAULT_REGION"
+    access_key = "$AWS_ACCESS_KEY_ID"
+    secret_key = "$AWS_SECRET_ACCESS_KEY"
+  }
+}
+
+provider "cloudfoundry" {
+  api_url   = local.env.api_url
+  user      = var.cloudgov_username
+  password  = var.cloudgov_password
+}

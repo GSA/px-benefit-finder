@@ -1,8 +1,8 @@
-variable "circleci_token" {
-  description = "CircleCI token."
-  type        = string
-  sensitive   = true
-}
+# variable "circleci_token" {
+#   description = "CircleCI token."
+#   type        = string
+#   sensitive   = true
+# }
 
 variable "cloudgov_username" {
   description = "The username for the cloudfoundry account."
@@ -22,29 +22,29 @@ variable "mtls_port" {
   default     = 61443
 }
 
-variable "newrelic_key" {
-  description = "The API key for New Relic."
-  type        = string
-  sensitive   = true
-}
+# variable "newrelic_key" {
+#   description = "The API key for New Relic."
+#   type        = string
+#   sensitive   = true
+# }
 
-variable "no_proxy" {
-  description = "URIs that shouldn't be using the proxy to communicate."
-  type        = string
-  default     = "apps.internal,localhost,127.0.0.1"
-}
+# variable "no_proxy" {
+#   description = "URIs that shouldn't be using the proxy to communicate."
+#   type        = string
+#   default     = "apps.internal,localhost,127.0.0.1"
+# }
 
-variable "proxy_password" {
-  description = "The proxy password."
-  type        = string
-  sensitive   = true
-}
+# variable "proxy_password" {
+#   description = "The proxy password."
+#   type        = string
+#   sensitive   = true
+# }
 
-variable "proxy_username" {
-  description = "The proxy username."
-  type        = string
-  sensitive   = true
-}
+# variable "proxy_username" {
+#   description = "The proxy username."
+#   type        = string
+#   sensitive   = true
+# }
 
 # variable "sso_x509_cert" {
 #   description = "x509 cert used for Secure Auth SSO."

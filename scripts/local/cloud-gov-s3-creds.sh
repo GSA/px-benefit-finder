@@ -1,7 +1,5 @@
 #!/bin/bash
 
-current_path=$(pwd)
-
 ## Get current username with no special characters.
 user=$(whoami | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')
 
@@ -15,17 +13,13 @@ fi
 
 echo "Getting bucket credentials..."
 {
-  current_space=$(cf target | grep space | awk '{print $2}')
-
-  cf target -s "${deploy_space}"
-  
   service_key="${bucket_name}-${user}-key"
-  
+
   ## Delete any old keys.
   cf delete-service-key "${bucket_name}" "${service_key}" -f
-
-  s3_credentials=$(cf service-key "${bucket_name}" "${service_key}" | tail -n +2)
 } >/dev/null 2>&1
+
+[ "${1}" = "-d" ] && echo "AWS bucket key deleted." && return
 
 echo "Creating key..."
 {
@@ -39,5 +33,4 @@ echo "Creating key..."
   export AWS_BUCKET=${aws_bucket_name}
   export AWS_DEFAULT_REGION=${aws_bucket_region}
   export AWS_SECRET_ACCESS_KEY=${aws_secret_key}
-  cf target -s "${current_space}"
 } >/dev/null 2>&1

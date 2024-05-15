@@ -15,6 +15,7 @@ for param in "$@"; do
         echo "Parameter found: ${param}"
         echo "destroying all usagov-2021 containers"
         docker stop "$(docker ps -aq)"
+        docker system prune --all
         docker rm -f "$(docker ps -aq)"
         docker volume rm -f "$(docker volume ls | grep 'usagov')"
         docker rmi -f "gsatts/usagov-2021:cms-latest"
@@ -46,20 +47,25 @@ then
     mkdir -p ./s3/local/cms/public/benefit-finder/api/life-event
     curl -o ./s3/local/cms/public/benefit-finder/api/life-event/death.json https://www.usa.gov/s3/files/benefit-finder/api/life-event/death.json
     curl -o ./s3/local/cms/public/benefit-finder/api/life-event/es_death.json https://www.usa.gov/s3/files/benefit-finder/api/life-event/es_death.json
-
-    docker compose up -d
-    bin/db-update
-
+    cd "${ROOT_DIR}" || exit 1
     # build benefit finder app
     bash "${SCRIPTS_LOCATION}/mv-benefit-finder-app.sh"
 
     # move benefit finder app into module and move it to usagov-2021 custom modules
     bash "${SCRIPTS_LOCATION}/mv-usagov_benefit_finder.sh"
 
+    cd "${USAGOV_PROJECT_LOCATION}" || exit 1
+
+    docker-compose up -d
+    bin/db-update
+    bin/drupal-update
+
     # post build import
     bin/drush cim --partial --source=modules/custom/usagov_benefit_finder/configuration -y
     bin/drush cr
     bin/drush state:set system.maintenance_mode 0 -y
+
+    bin/drush uli
 else
     echo "ERROR: missing database"
 fi

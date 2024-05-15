@@ -6,8 +6,6 @@ on:
       database_file_override:
         description: 'Path on S3 bucket to a specific database file to restore.'
         required: false
-
-
 jobs:
   restore-database:
     runs-on: ubuntu-latest

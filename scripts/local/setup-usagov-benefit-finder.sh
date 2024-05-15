@@ -15,27 +15,30 @@ for param in "$@"; do
         echo "Parameter found: ${param}"
         echo "destroying all usagov-2021 containers"
         docker stop "$(docker ps -aq)"
-        docker rmi "$(docker images | grep 'usagov-2021')"
-    fi
-done
-
-cd "${USAGOV_PROJECT_LOCATION}" || exit 1
-git fetch origin prod:prod
-git checkout prod
-
-for param in "$@"; do
-# stop and checkout if --dev flag is passed
-    if [ "$param" = "--dev" ]; then
-        echo "Parameter found: ${param}"
-        echo "checking out dev branch"
-        git fetch origin dev:dev
-        git checkout dev
+        docker rm -f "$(docker ps -aq)"
+        docker volume rm -f "$(docker volume ls | grep 'usagov')"
+        docker rmi -f "gsatts/usagov-2021:cms-latest"
+        docker rmi -f "$(docker images | grep 'usagov-2021')"
     fi
 done
 
 # check for database
 if test -f "${USAGOV_PROJECT_LOCATION}/usagov.sql"
 then
+    cd "${USAGOV_PROJECT_LOCATION}" || exit 1
+
+    git fetch origin prod:prod
+    git checkout prod
+
+    for param in "$@"; do
+    # stop and checkout if --dev flag is passed
+        if [ "$param" = "--dev" ]; then
+            echo "Parameter found: ${param}"
+            echo "checking out dev branch"
+            git fetch origin dev:dev
+            git checkout dev
+        fi
+    done
     # set up usagov project
     bin/init
 
@@ -44,9 +47,8 @@ then
     curl -o ./s3/local/cms/public/benefit-finder/api/life-event/death.json https://www.usa.gov/s3/files/benefit-finder/api/life-event/death.json
     curl -o ./s3/local/cms/public/benefit-finder/api/life-event/es_death.json https://www.usa.gov/s3/files/benefit-finder/api/life-event/es_death.json
 
-    bin/db-update
-    bin/drupal-update
     docker compose up -d
+    bin/db-update
 
     # build benefit finder app
     bash "${SCRIPTS_LOCATION}/mv-benefit-finder-app.sh"

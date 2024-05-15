@@ -34,7 +34,7 @@ echo "Getting backup bucket credentials..."
 } &> /dev/null
 
 echo "Downloading backup..."
-#{
+{
 
   rm -f "*.sql"
   
@@ -49,6 +49,6 @@ echo "Downloading backup..."
   
   cf delete-service-key "${service}" "${service_key}" -f
 
-#} &> /dev/null
+} &> /dev/null
 
 echo "File downloaded: ${DATABASE_FILE}"

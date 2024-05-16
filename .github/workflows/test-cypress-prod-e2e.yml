@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+        
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -27,10 +27,10 @@ jobs:
       - name: Cypress Run
         uses: cypress-io/github-action@v6
         with:
-          browser: 'chrome'
+          browser: chrome
+          env: NODE_ENV=test
           config-file: cypress.prod.config.js
           working-directory: benefit-finder
-          start: "npm run cy:run:prod:e2e"
 
       - uses: actions/upload-artifact@v3
         if: failure ()

@@ -5,24 +5,24 @@ const content = `{
       "timeEstimate": "2-5 minutes",
       "titlePrefix": "",
       "title": "Benefit finder: death of a loved one",
-      "summary": "<p><strong>Losing a loved one is hard.</strong> Finding help shouldn’t be.</p><p>Screen the federal benefits you may be eligible for.</p>",
+      "summary": "<p><strong>We are sorry for your loss.&nbsp;</strong>Losing a loved one is hard. Finding help shouldn’t be.&nbsp;</p><p><strong>Answer a few questions and get a list of your potential benefits.</strong></p>",
       "relevantBenefits": [
         {
           "lifeEvent": {
-            "lifeEventId": "retirement",
             "title": "Benefit finder: retirement",
-            "body": "<p>Find out what financial, health care, and other benefits may be available as you enter this next phase of your life.</p>",
-            "link": "/benefit-finder/life_event/retirement",
-            "cta": "Call to action (retirement)"
+            "body": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}--><strong>Find retirement benefits</strong> including financial and health assistance.</p>",
+            "link": "/benefit-finder/retirement",
+            "cta": "Find retirement benefits including financial and health assistance.",
+            "lifeEventId": "retirement"
           }
         },
         {
           "lifeEvent": {
-            "lifeEventId": "disability",
             "title": "Benefit finder: disability",
-            "body": "<p>Whether you are newly disabled or have a lifelong challenge, assistance may be available, including financial help.</p>",
-            "link": "/benefit-finder/life_event/disability",
-            "cta": "Call to action (disability)"
+            "body": "<p><strong>Find disability benefits</strong> to help with bills, education, jobs, and more.</p>",
+            "link": "/benefit-finder/disability",
+            "cta": "Find disability benefits to help with bills, education, jobs, and more.",
+            "lifeEventId": "disability"
           }
         }
       ],
@@ -30,14 +30,14 @@ const content = `{
         {
           "section": {
             "heading": "About the applicant",
-            "description": "<p>About the person looking for benefits</p>",
+            "description": "<p><strong>About you:</strong> the applicant looking for benefits</p>",
             "fieldsets": [
               {
                 "fieldset": {
                   "criteriaKey": "applicant_date_of_birth",
-                  "legend": "Date of birth:",
+                  "legend": "Date of birth",
                   "required": "TRUE",
-                  "hint": "",
+                  "hint": "For example: January 19 2000",
                   "inputs": [
                     {
                       "inputCriteria": {
@@ -62,7 +62,7 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "applicant_relationship_to_the_deceased",
-                  "legend": "Applicant’s relationship to the deceased:",
+                  "legend": "Relationship to the deceased",
                   "required": "TRUE",
                   "hint": "",
                   "inputs": [
@@ -105,7 +105,7 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "applicant_marital_status",
-                  "legend": "Marital Status",
+                  "legend": "Marital status",
                   "required": "TRUE",
                   "hint": "",
                   "inputs": [
@@ -175,7 +175,7 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "applicant_care_for_child",
-                  "legend": "Are you caring for a child of the deceased who is disabled or under the age of 16?",
+                  "legend": "Are you caring for the deceased's child who is under age 16 or has a disability?",
                   "required": "FALSE",
                   "hint": "",
                   "inputs": [
@@ -240,14 +240,14 @@ const content = `{
         {
           "section": {
             "heading": "About the deceased",
-            "description": "<p>About the person who died</p>",
+            "description": "",
             "fieldsets": [
               {
                 "fieldset": {
                   "criteriaKey": "deceased_date_of_death",
                   "legend": "Date of death",
                   "required": "TRUE",
-                  "hint": "",
+                  "hint": "Date on the death certificate. For example: January 25 2024",
                   "inputs": [
                     {
                       "inputCriteria": {
@@ -272,9 +272,9 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "deceased_death_location_is_US",
-                  "legend": "Did the person die in the U.S.?",
+                  "legend": "Did the death happen in the U.S.?",
                   "required": "FALSE",
-                  "hint": "",
+                  "hint": "Including the U.S. and its territories",
                   "inputs": [
                     {
                       "inputCriteria": {
@@ -303,7 +303,7 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "deceased_paid_into_SS",
-                  "legend": "Did the deceased ever work and pay Social Security taxes on their earnings?",
+                  "legend": "Did the deceased ever work and pay U.S. Social Security taxes?",
                   "required": "FALSE",
                   "hint": "",
                   "inputs": [
@@ -365,7 +365,7 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "deceased_miner",
-                  "legend": "Did the person work in the coal mines and their death was due to black lung disease (pneumoconiosis)?",
+                  "legend": "Did the deceased work in coal mines and die because of black lung disease?",
                   "required": "FALSE",
                   "hint": "",
                   "inputs": [
@@ -396,9 +396,9 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "deceased_american_indian",
-                  "legend": "Was the deceased a member of a federally recognized American Indian Tribe or Alaska Native?",
+                  "legend": "Was the deceased an American Indian or Alaskan Native?",
                   "required": "FALSE",
-                  "hint": "",
+                  "hint": "A member of a federally recognized American Indian Tribe or Alaska Native.",
                   "inputs": [
                     {
                       "inputCriteria": {
@@ -427,7 +427,7 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "deceased_died_of_COVID",
-                  "legend": "Was the person’s death COVID-19 related?",
+                  "legend": "Was the death COVID-19 related?",
                   "required": "FALSE",
                   "hint": "",
                   "inputs": [
@@ -458,7 +458,7 @@ const content = `{
               {
                 "fieldset": {
                   "criteriaKey": "deceased_served_in_active_military",
-                  "legend": "Did the deceased serve in the active military, naval, or air service?",
+                  "legend": "Did the deceased actively serve in the U.S. military?",
                   "required": "FALSE",
                   "hint": "",
                   "inputs": [
@@ -489,7 +489,7 @@ const content = `{
                         {
                           "fieldset": {
                             "criteriaKey": "deceased_service_status",
-                            "legend": "What was the service status of the deceased?",
+                            "legend": "What was the military service status of the deceased?",
                             "required": "FALSE",
                             "hint": "",
                             "inputs": [
@@ -532,7 +532,7 @@ const content = `{
                         {
                           "fieldset": {
                             "criteriaKey": "deceased_military_death_circumstance",
-                            "legend": "Which option best applies to the deceased?",
+                            "legend": "Which option best applies to the death of the deceased?",
                             "required": "FALSE",
                             "hint": "",
                             "inputs": [
@@ -579,7 +579,7 @@ const content = `{
                         {
                           "fieldset": {
                             "criteriaKey": "deceased_grave_headstone",
-                            "legend": "Is the person buried in a grave with a privately purchased headstone or an unmarked grave?",
+                            "legend": "Is the deceased buried in an unmarked grave or with a privately purchased headstone?",
                             "required": "FALSE",
                             "hint": "",
                             "inputs": [
@@ -620,6 +620,565 @@ const content = `{
     "benefits": [
       {
         "benefit": {
+          "title": "COVID-19 funeral assistance",
+          "summary": "<p>Financial assistance for burial and funeral costs for someone who died of COVID-19. To be eligible, you have not been reimbursed from an organization or agency.</p>",
+          "SourceLink": "https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance",
+          "SourceIsEnglish": "FALSE",
+          "agency": {
+            "title": " Federal Emergency Management Agency (FEMA)",
+            "summary": "<p>Federal Emergency Management Agency (FEMA) offers support to people during natural disasters and national emergencies, including housing and funeral assistance.</p>",
+            "lede": "<p>Federal Emergency Management Agency (FEMA) offers support to people during natural disasters and national emergencies, including housing and funeral assistance.</p>"
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_died_of_COVID",
+              "label": "The deceased's death was COVID-19 related",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_death_location_is_US",
+              "label": "The deceased died in the U.S.",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_date_of_death",
+              "label": "The deceased died after May 20th, 2020",
+              "acceptableValues": [
+                ">=05-20-2020"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_citizen_status",
+              "label": "You are a U.S. citizen or eligible non-citizen",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_paid_funeral_expenses",
+              "label": "You paid for funeral or burial expenses and were not reimbursed",
+              "acceptableValues": [
+                "Yes"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Coal mine workers' compensation (black lung benefits) for surviving spouse",
+          "summary": "<p>Compensation to surviving spouses of coal minerstotally disabled by or whose deaths are attributable to pneumoconiosis.</p>",
+          "SourceLink": "https://www.dol.gov/agencies/owcp/dcmwc/filing_guide_survivor",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Department of Labor (DOL)",
+            "summary": "<p>Promotes and improves the welfare, working conditions, opportunities, benefits and rights of wage earners, job seekers, and retirees of the United States.</p>",
+            "lede": "<p>Promotes and improves the welfare, working conditions, opportunities, benefits and rights of wage earners, job seekers, and retirees of the United States.</p>"
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_miner",
+              "label": "The deceased worked in the coal mines and their death was due to black lung disease (pneumoconiosis)",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse",
+              "acceptableValues": [
+                "Spouse"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Presidential Memorial Certificate",
+          "summary": "<p>An engraved Presidential Memorial Certificate (PMC) signed by the current president honoring the military service of a veteran or reservist.</p>",
+          "SourceLink": "https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Discharged under conditions other than dishonorable",
+                "Member of the National Guard/Reserves"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_military_death_circumstance",
+              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation",
+              "acceptableValues": [
+                "Died while on active duty",
+                "Died as a result of a service-related disability/illness",
+                "Died while receiving/traveling to VA care",
+                "Died while receiving/eligible for VA compensation"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "acceptableValues": [
+                "Spouse",
+                "Child",
+                "Parent",
+                "Other family member"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Veterans burial allowance",
+          "summary": "<p>Assistance with burial, funeral, and transportation costs of a deceased veteran.</p>",
+          "SourceLink": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_date_of_death",
+              "label": "The deceased died within the last two years",
+              "acceptableValues": [
+                "<2years"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: discharged under conditions other than dishonorable",
+              "acceptableValues": [
+                "Discharged under conditions other than dishonorable"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_military_death_circumstance",
+              "label": "One of the following applies to the deceased: died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation",
+              "acceptableValues": [
+                "Died as a result of a service-related disability/illness",
+                "Died while receiving/traveling to VA care",
+                "Died while receiving/eligible for VA compensation"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "acceptableValues": [
+                "Spouse",
+                "Child",
+                "Parent",
+                "Other family member"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_paid_funeral_expenses",
+              "label": "You paid for funeral or burial expenses",
+              "acceptableValues": [
+                "Yes"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Survivors pension for spouse",
+          "summary": "<p>Monthly payments to surviving spouses of wartime veterans with certain income and net worth limits.</p>",
+          "SourceLink": "https://www.va.gov/pension/survivors-pension/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: discharged under conditions other than dishonorable",
+              "acceptableValues": [
+                "Discharged under conditions other than dishonorable"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_marital_status",
+              "label": "Your marital status is unmarried or widowed",
+              "acceptableValues": [
+                "Unmarried",
+                "Widowed"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse",
+              "acceptableValues": [
+                "Spouse"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Survivors pension for child with disabilities",
+          "summary": "<p>Monthly payments to qualified unmarried dependent children with disabilities of wartime veterans with certain income and net worth limits.</p>",
+          "SourceLink": "https://www.va.gov/pension/survivors-pension/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: discharged under conditions other than dishonorable",
+              "acceptableValues": [
+                "Discharged under conditions other than dishonorable"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_date_of_birth",
+              "label": "You are under 18 years",
+              "acceptableValues": [
+                ">18years"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_marital_status",
+              "label": "Your marital status is unmarried",
+              "acceptableValues": [
+                "Unmarried"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: child",
+              "acceptableValues": [
+                "Child"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Veterans medallions",
+          "summary": "<p>A headstone medallion, grave marker, and Presidential Memorial Certificate for eligible veterans buried in a private cemetery.</p>",
+          "SourceLink": "https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or a member of the National Guard/Reserves",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Discharged under conditions other than dishonorable",
+                "Member of the National Guard/Reserves"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_grave_headstone",
+              "label": "The person is buried in a grave with a privately purchased headstone or an unmarked grave",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "acceptableValues": [
+                "Spouse",
+                "Child",
+                "Parent",
+                "Other family member"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Veterans headstone and grave marker",
+          "summary": "<p>A headstone, grave or niche marker, or medallion to honor a veteran, service member, or eligible family member.</p>",
+          "SourceLink": "https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Discharged under conditions other than dishonorable",
+                "Member of the National Guard/Reserves"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_grave_headstone",
+              "label": "The person is buried in a grave with a privately purchased headstone or an unmarked grave",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "acceptableValues": [
+                "Spouse",
+                "Child",
+                "Parent",
+                "Other family member"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Life insurance for survivors of veterans",
+          "summary": "<p>Payment from a veteran's or service member's life insurance policy.</p>",
+          "SourceLink": "https://www.benefits.va.gov/INSURANCE/sglivgli.asp",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, retired from the service, or member of the National Guard/Reserves",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Discharged under conditions other than dishonorable",
+                "Retired from the service",
+                "Member of the National Guard/Reserves"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "acceptableValues": [
+                "Spouse",
+                "Child",
+                "Parent",
+                "Other family member"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Dependency and Indemnity Compensation (DIC)",
+          "summary": "<p>Tax-free financial assistance to eligible dependents, spouses, or parents of service members and veterans.</p>",
+          "SourceLink": "https://www.va.gov/disability/dependency-indemnity-compensation/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Discharged under conditions other than dishonorable"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_military_death_circumstance",
+              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation",
+              "acceptableValues": [
+                "Died while on active duty",
+                "Died as a result of a service-related disability/illness",
+                "Died while receiving/eligible for VA compensation"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: child, parent, or spouse",
+              "acceptableValues": [
+                "Child",
+                "Parent",
+                "Spouse"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Civilian Health and Medical Program of the VA (CHAMPVA)",
+          "summary": "<p>Health insurance for dependents and surviving spouses covering some health care services and supplies.</p>",
+          "SourceLink": "https://www.va.gov/health-care/family-caregiver-benefits/champva/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Discharged under conditions other than dishonorable"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_military_death_circumstance",
+              "label": "One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness",
+              "acceptableValues": [
+                "Died while on active duty",
+                "Died as a result of a service-related disability/illness"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_marital_status",
+              "label": "Your marital status is: unmarried or widowed",
+              "acceptableValues": [
+                "Unmarried",
+                "Widowed"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: child or spouse",
+              "acceptableValues": [
+                "Child",
+                "Spouse"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
           "title": "Burial benefits",
           "summary": "<p>Burial and transport assistance for the deceased, and travel support for the spouse, children, and immediate family members of the service member.</p>",
           "SourceLink": "https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/",
@@ -629,11 +1188,8 @@ const content = `{
             "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
           "lifeEvents": [
-            "Death"
+            "Benefit finder: death of a loved one"
           ],
           "eligibility": [
             {
@@ -672,50 +1228,46 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Death gratuity",
-          "summary": "<p>Tax free payment of $100,000 to eligible survivors of members of the Armed Forces who died while on active duty or while serving in certain reserve statuses.</p>",
-          "SourceLink": "https://militarypay.defense.gov/Benefits/Death-Gratuity/",
-          "SourceIsEnglish": "TRUE",
+          "title": "Lump-sum death benefit",
+          "summary": "<p>Financial assistance of $255 to surviving spouses of a deceased person who qualified for Social Security benefits.</p>",
+          "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h7",
+          "SourceIsEnglish": "FALSE",
           "agency": {
-            "title": "Department of Defense (DOD)",
-            "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>",
+            "title": "Social Security Administration (SSA)",
+            "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
           ],
           "eligibility": [
             {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
+              "criteriaKey": "deceased_paid_into_SS",
+              "label": "The deceased worked and paid Social Security taxes",
               "acceptableValues": [
                 "Yes"
               ]
             },
             {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member or member of the National Guard/Reserves",
+              "criteriaKey": "deceased_date_of_death",
+              "label": "The deceased died within the last two years",
               "acceptableValues": [
-                "Active-duty service member",
-                "Member of the National Guard/Reserves"
+                "<2years"
               ]
             },
             {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died while on active duty or Died while on inactive-duty service training",
+              "criteriaKey": "applicant_citizen_status",
+              "label": "You are a U.S. citizen or eligible non-citizen",
               "acceptableValues": [
-                "Died while on active duty",
-                "Died while on inactive-duty service training"
+                "Yes"
               ]
             },
             {
               "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "label": "Your relationship to the deceased is: spouse or child",
               "acceptableValues": [
                 "Spouse",
-                "Child",
-                "Parent",
-                "Other family member"
+                "Child"
               ]
             }
           ]
@@ -723,43 +1275,68 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Burial flag",
-          "summary": "<p>A United States flag for the coffin or urn in honor of the military service member.</p>",
-          "SourceLink": "https://www.va.gov/burials-memorials/memorial-items/burial-flags/",
-          "SourceIsEnglish": "TRUE",
+          "title": "Financial Assistance and Social Services (FASS) for deceased",
+          "summary": "<p>Assistance with burial expenses of deceased American Indians who do not have resources for funeral expenses or with certain income and net worth limits.</p>",
+          "SourceLink": "https://www.bia.gov/bia/ois/dhs/financial-assistance",
+          "SourceIsEnglish": "FALSE",
           "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
+            "title": "Department of Interior (DOI) - Indian Affairs",
+            "summary": "<p>The Bureau of Indian Affairs enhances the quality of life and protects and improves the trust assets of American Indians, Indian tribes, and Alaska Natives.</p>",
+            "lede": "<p>The Bureau of Indian Affairs enhances the quality of life and protects and improves the trust assets of American Indians, Indian tribes, and Alaska Natives.</p>"
           },
-          "tags": [
-            "Death of a loved one"
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
           ],
           "eligibility": [
             {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
+              "criteriaKey": "deceased_american_indian",
+              "label": "The deceased was a member of a federally recognized American Indian Tribe or an Alaska Native.",
+              "acceptableValues": [
+                "Yes"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Survivors benefits for mothers/fathers with a child",
+          "summary": "<p>Social Security survivors benefits to the person providing care for the child of a deceased worker.</p>",
+          "SourceLink": "https://www.ssa.gov/forms/ssa-5.html",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Social Security Administration (SSA)",
+            "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
+            "lede": ""
+          },
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_paid_into_SS",
+              "label": "The deceased worked and paid Social Security taxes",
               "acceptableValues": [
                 "Yes"
               ]
             },
             {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
+              "criteriaKey": "applicant_marital_status",
+              "label": "Your marital status is unmarried or widowed",
               "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable",
-                "Member of the National Guard/Reserves"
+                "Unmarried",
+                "Widowed"
               ]
             },
             {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "criteriaKey": "applicant_citizen_status",
+              "label": "You are a US citizen or eligible non-citizen",
               "acceptableValues": [
-                "Spouse",
-                "Child",
-                "Parent",
-                "Other family member"
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_care_for_child",
+              "label": "You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16",
+              "acceptableValues": [
+                "Yes"
               ]
             }
           ]
@@ -776,11 +1353,8 @@ const content = `{
             "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
           "lifeEvents": [
-            "Death"
+            "Benefit finder: death of a loved one"
           ],
           "eligibility": [
             {
@@ -816,349 +1390,8 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Burial in VA national cemetery",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Burial in VA national cemeteries for eligible veterans, service members, and some family members.</p>",
-          "SourceLink": "https://www.va.gov/burials-memorials/eligibility/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable",
-                "Member of the National Guard/Reserves"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation",
-              "acceptableValues": [
-                "Died while on active duty",
-                "Died as a result of a service-related disability/illness",
-                "Died while receiving/traveling to VA care",
-                "Died while receiving/eligible for VA compensation"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Civilian Health and Medical Program of the VA (CHAMPVA) for child",
-          "summary": "<p>Health insurance for dependents and surviving spouses covering some health care services and supplies.</p>",
-          "SourceLink": "https://www.va.gov/health-care/family-caregiver-benefits/champva/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness",
-              "acceptableValues": [
-                "Died while on active duty",
-                "Died as a result of a service-related disability/illness"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_date_of_birth",
-              "label": "You are under 18 years",
-              "acceptableValues": [
-                "<18years"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_marital_status",
-              "label": "Your marital status is: unmarried ",
-              "acceptableValues": [
-                "Unmarried"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: child",
-              "acceptableValues": [
-                "Child"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "COVID-19 funeral assistance",
-          "summary": "<p>Financial assistance for burial and funeral costs for someone who died of COVID-19. To be eligible, you were not reimbursed from an organization or agency.</p>",
-          "SourceLink": "https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance",
-          "SourceIsEnglish": "FALSE",
-          "agency": {
-            "title": " Federal Emergency Management Agency (FEMA)",
-            "summary": "<p>Federal Emergency Management Agency (FEMA) offers support to people during natural disasters and national emergencies, including housing and funeral assistance.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_died_of_COVID",
-              "label": "The deceased died due to COVID-19",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_death_location_is_US",
-              "label": "The deceased died in the U.S.",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_date_of_death",
-              "label": "The deceased died after May 20th, 2020",
-              "acceptableValues": [
-                ">01-20-2020"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_citizen_status",
-              "label": "You are a U.S. citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_paid_funeral_expenses",
-              "label": "You paid for funeral or burial expenses and were not reimbursed",
-              "acceptableValues": [
-                "Yes"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Dependency and Indemnity Compensation (DIC) for child",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Tax-free financial assistance to surviving children or family members of service members and veterans.</p>",
-          "SourceLink": "https://www.va.gov/disability/dependency-indemnity-compensation/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation",
-              "acceptableValues": [
-                "Died while on active duty",
-                "Died as a result of a service-related disability/illness",
-                "Died while receiving/eligible for VA compensation"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_date_of_birth",
-              "label": "You are under 18 years",
-              "acceptableValues": [
-                "<18years"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_marital_status",
-              "label": "Your marital status is: unmarried",
-              "acceptableValues": [
-                "Unmarried"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: child",
-              "acceptableValues": [
-                "Child"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Dependency and Indemnity Compensation (DIC) for parent",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Tax-free financial assistance to surviving parents or family members of service members and veterans.</p>",
-          "SourceLink": "https://www.va.gov/disability/dependency-indemnity-compensation/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation",
-              "acceptableValues": [
-                "Died while on active duty",
-                "Died as a result of a service-related disability/illness",
-                "Died while receiving/eligible for VA compensation"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_income",
-              "label": "You have limited income and resources",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: parent",
-              "acceptableValues": [
-                "Parent"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Dependency and Indemnity Compensation (DIC) for spouse",
-          "summary": "<p>Tax-free financial assistance to surviving spouses or family members of service members or veterans.</p>",
-          "SourceLink": "https://www.va.gov/disability/dependency-indemnity-compensation/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member or discharged under conditions other than dishonorable",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation",
-              "acceptableValues": [
-                "Died while on active duty",
-                "Died as a result of a service-related disability/illness",
-                "Died while receiving/eligible for VA compensation"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_marital_status",
-              "label": "Marital status: unmarried or widowed",
-              "acceptableValues": [
-                "Unmarried",
-                "Widowed"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Applicant's relationship to the deceased: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
           "title": "Education benefits (GI Bill) for survivors",
-          "summary": "<p>VA education benefits or job training for dependents and survivors of a veteran.</p>",
+          "summary": "<p>VA education benefits or job training for dependents and survivors of a veteran. You must have a high school or GED diploma to be eligible.</p>",
           "SourceLink": "https://www.va.gov/education/survivor-dependent-benefits/",
           "SourceIsEnglish": "FALSE",
           "agency": {
@@ -1166,8 +1399,8 @@ const content = `{
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
           ],
           "eligibility": [
             {
@@ -1194,8 +1427,141 @@ const content = `{
               ]
             },
             {
-              "criteriaKey": "applicant_high-school_diploma",
-              "label": "You have a high school diploma or GED certificate",
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse or child",
+              "acceptableValues": [
+                "Spouse",
+                "Child"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Survivors benefits for child with disabilities",
+          "summary": "<p>Social Security survivors benefits to a child, stepchild, grandchild, or adopted child with disabilities of eligible workers. You only need one application to apply for all SSA benefits.</p>",
+          "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h4",
+          "SourceIsEnglish": "FALSE",
+          "agency": {
+            "title": "Social Security Administration (SSA)",
+            "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_paid_into_SS",
+              "label": "The deceased worked and paid Social Security taxes",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_date_of_birth",
+              "label": "You are under 18 years",
+              "acceptableValues": [
+                "<18years"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_marital_status",
+              "label": "Your marital status is unmarried",
+              "acceptableValues": [
+                "Unmarried"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_citizen_status",
+              "label": "You are a U.S. citizen or eligible non-citizen",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: child",
+              "acceptableValues": [
+                "Child"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Survivors benefits for spouse with disabilities",
+          "summary": "<p>Benefits for surviving spouses and certain divorced spouses with disabilities. Eligible survivors must have a disability that prevents them from working for more than a year. You only need one application to apply for all SSA benefits.</p>",
+          "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h2",
+          "SourceIsEnglish": "FALSE",
+          "agency": {
+            "title": "Social Security Administration (SSA)",
+            "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_paid_into_SS",
+              "label": "The deceased worked and paid Social Security taxes",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_date_of_birth",
+              "label": "You are over 50 years",
+              "acceptableValues": [
+                ">=50years"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_marital_status",
+              "label": "Your marital status is widowed or divorced",
+              "acceptableValues": [
+                "Widowed",
+                "Divorced"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_citizen_status",
+              "label": "You are a US citizen or eligible non-citizen",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse",
+              "acceptableValues": [
+                "Spouse"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Public safety officers' Educational Assistance Program",
+          "summary": "<p>Financial assistance for higher education to spouses and children of police, fire, and emergency public safety officers killed in the line of duty.</p>",
+          "SourceLink": "https://psob.bja.ojp.gov/PSOB_Education2018.pdf",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Department of Justice (DOJ)",
+            "summary": "<p>Offers financial and educational support to help families of fallen public safety officers.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
+          ],
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_public_safety_officer",
+              "label": "The deceased was a public safety officer who died in the line of duty",
               "acceptableValues": [
                 "Yes"
               ]
@@ -1213,34 +1579,75 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Financial Assistance and Social Services (FASS) for deceased",
-          "summary": "<p>Assistance with burial expenses of deceased indigent Indians who do not have resources for funeral expenses.</p>",
-          "SourceLink": "https://www.bia.gov/bia/ois/dhs/financial-assistance",
-          "SourceIsEnglish": "FALSE",
+          "title": "Public safety officers' death benefits",
+          "summary": "<p>A one-time benefit for survivors of law enforcement officers, firefighters, and other first responders whose deaths were related to an injury sustained during the line of duty.</p>",
+          "SourceLink": "https://bja.ojp.gov/program/psob/benefits",
+          "SourceIsEnglish": "TRUE",
           "agency": {
-            "title": "Department of Interior (DOI) - Indian Affairs",
-            "summary": "<p>The Bureau of Indian Affairs enhances the quality of life and protects and improves the trust assets of American Indians, Indian tribes, and Alaska Natives.</p>",
-            "lede": "<p>The Bureau of Indian Affairs enhances the quality of life and protects and improves the trust assets of American Indians, Indian tribes, and Alaska Natives.</p>"
+            "title": "Department of Justice (DOJ)",
+            "summary": "<p>Offers financial and educational support to help families of fallen public safety officers.</p>",
+            "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
           "lifeEvents": [
-            "Death"
+            "Benefit finder: death of a loved one"
           ],
           "eligibility": [
             {
-              "criteriaKey": "deceased_american_indian",
-              "label": "The deceased was a member of a federally recognized American Indian Tribe or an Alaska Native.",
+              "criteriaKey": "deceased_public_safety_officer",
+              "label": "The deceased was a public safety officer who died in the line of duty",
               "acceptableValues": [
                 "Yes"
               ]
             },
             {
-              "criteriaKey": "applicant_income",
-              "label": "You have limited income and resources",
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "acceptableValues": [
+                "Spouse",
+                "Child",
+                "Parent",
+                "Other family member"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Burial flag",
+          "summary": "<p>A United States flag for the coffin or urn in honor of the military service member.</p>",
+          "SourceLink": "https://www.va.gov/burials-memorials/memorial-items/burial-flags/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
               "acceptableValues": [
                 "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Discharged under conditions other than dishonorable",
+                "Member of the National Guard/Reserves"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "acceptableValues": [
+                "Spouse",
+                "Child",
+                "Parent",
+                "Other family member"
               ]
             }
           ]
@@ -1249,7 +1656,7 @@ const content = `{
       {
         "benefit": {
           "title": "Home loan program for survivors",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->A VA-backed home loan to surviving spouses of veterans.</p>",
+          "summary": "<p>A VA-backed home loan to surviving spouses of veterans.</p>",
           "SourceLink": "https://www.va.gov/housing-assistance/home-loans/surviving-spouse/",
           "SourceIsEnglish": "TRUE",
           "agency": {
@@ -1257,11 +1664,8 @@ const content = `{
             "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
           "lifeEvents": [
-            "Death"
+            "Benefit finder: death of a loved one"
           ],
           "eligibility": [
             {
@@ -1308,279 +1712,6 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Life insurance for survivors of veterans",
-          "summary": "<p>Payment from a veteran's or service member's life insurance policy.</p>",
-          "SourceLink": "https://www.benefits.va.gov/INSURANCE/sglivgli.asp",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, retired from the service, or member of the National Guard/Reserves",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable",
-                "Retired from the service",
-                "Member of the National Guard/Reserves"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
-              "acceptableValues": [
-                "Spouse",
-                "Child",
-                "Parent",
-                "Other family member"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Lump-sum death benefit",
-          "summary": "<p>Financial assistance of $255 to surviving spouses of a deceased person who qualified for Social Security benefits.</p>",
-          "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h7",
-          "SourceIsEnglish": "FALSE",
-          "agency": {
-            "title": "Social Security Administration (SSA)",
-            "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_paid_into_SS",
-              "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_date_of_death",
-              "label": "The deceased died within the last two years",
-              "acceptableValues": [
-                "<2years"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_citizen_status",
-              "label": "You are a U.S. citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse or child",
-              "acceptableValues": [
-                "Spouse",
-                "Child"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Presidential Memorial Certificate",
-          "summary": "<p>An engraved Presidential Memorial Certificate (PMC) signed by the current president honoring the military service of a veteran or reservist.</p>",
-          "SourceLink": "https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable",
-                "Member of the National Guard/Reserves"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation",
-              "acceptableValues": [
-                "Died while on active duty",
-                "Died as a result of a service-related disability/illness",
-                "Died while receiving/traveling to VA care",
-                "Died while receiving/eligible for VA compensation"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
-              "acceptableValues": [
-                "Spouse",
-                "Child",
-                "Parent",
-                "Other family member"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Public safety officers' death benefits",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->A one-time benefit for survivors of law enforcement officers, firefighters, and other first responders whose deaths were related to an injury sustained during the line of duty.</p>",
-          "SourceLink": "https://bja.ojp.gov/program/psob/benefits",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Department of Justice (DOJ)",
-            "summary": "<p>Offers financial and educational support to help families of fallen public safety officers.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_public_safety_officer",
-              "label": "The deceased was a public safety officer who died in the line of duty",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
-              "acceptableValues": [
-                "Spouse",
-                "Child",
-                "Parent",
-                "Other family member"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Public safety officers' Educational Assistance Program",
-          "summary": "<p>Financial assistance for higher education to spouses and children of police, fire, and emergency public safety officers killed in the line of duty.</p>",
-          "SourceLink": "https://psob.bja.ojp.gov/PSOB_Education2018.pdf",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Department of Justice (DOJ)",
-            "summary": "<p>Offers financial and educational support to help families of fallen public safety officers.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_public_safety_officer",
-              "label": "The deceased was a public safety officer who died in the line of duty",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse or child",
-              "acceptableValues": [
-                "Spouse",
-                "Child"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Survivor benefit plan",
-          "summary": "<p>Offers up to 55% of a service member's retired pay for survivors of active duty service members and some retired and reserve members.</p>",
-          "SourceLink": "https://bja.ojp.gov/program/psob/benefits",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Department of Defense (DOD)",
-            "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member, retired from the service, or member of the National Guard/Reserves",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Retired from the service",
-                "Member of the National Guard/Reserves"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died while on active duty or died while on inactive-duty service training",
-              "acceptableValues": [
-                "Died while on active duty",
-                "Died while on inactive-duty service training"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse or child",
-              "acceptableValues": [
-                "Spouse",
-                "Child"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
           "title": "Survivors benefits for child",
           "summary": "<p>Offers Social Security survivors benefits to a child, stepchild, grandchild, or adopted child of eligible workers.</p>",
           "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h4",
@@ -1590,9 +1721,6 @@ const content = `{
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
@@ -1634,24 +1762,167 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Survivors benefits for child with disabilities",
-          "summary": "<p>Social Security survivors benefits to a child, stepchild, grandchild, or adopted child with disabilities of eligible workers.</p>",
-          "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h4",
-          "SourceIsEnglish": "FALSE",
+          "title": "Survivor benefit plan",
+          "summary": "<p>Offers up to 55% of a service member's retired pay for survivors of active duty service members and some retired and reserve members.</p>",
+          "SourceLink": "https://bja.ojp.gov/program/psob/benefits",
+          "SourceIsEnglish": "TRUE",
           "agency": {
-            "title": "Social Security Administration (SSA)",
-            "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
+            "title": "Department of Defense (DOD)",
+            "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member, retired from the service, or member of the National Guard/Reserves",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Retired from the service",
+                "Member of the National Guard/Reserves"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_military_death_circumstance",
+              "label": "One of the following applies to the deceased: died while on active duty or died while on inactive-duty service training",
+              "acceptableValues": [
+                "Died while on active duty",
+                "Died while on inactive-duty service training"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse or child",
+              "acceptableValues": [
+                "Spouse",
+                "Child"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Burial in VA national cemetery",
+          "summary": "<p>Burial in VA national cemeteries for eligible veterans, service members, and some family members.</p>",
+          "SourceLink": "https://www.va.gov/burials-memorials/eligibility/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Discharged under conditions other than dishonorable",
+                "Member of the National Guard/Reserves"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_military_death_circumstance",
+              "label": "One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation",
+              "acceptableValues": [
+                "Died while on active duty",
+                "Died as a result of a service-related disability/illness",
+                "Died while receiving/traveling to VA care",
+                "Died while receiving/eligible for VA compensation"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Death gratuity",
+          "summary": "<p>Tax free payment of $100,000 to eligible survivors of members of the Armed Forces who died while on active duty or while serving in certain reserve statuses.</p>",
+          "SourceLink": "https://militarypay.defense.gov/Benefits/Death-Gratuity/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Department of Defense (DOD)",
+            "summary": "<p>Provides support for qualified spouses, children, and other family members of deceased service members.</p>",
+            "lede": ""
+          },
+          "eligibility": [
+            {
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "The deceased served in the active military",
+              "acceptableValues": [
+                "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "The service status of the deceased is: active-duty service member or member of the National Guard/Reserves",
+              "acceptableValues": [
+                "Active-duty service member",
+                "Member of the National Guard/Reserves"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_military_death_circumstance",
+              "label": "One of the following applies to the deceased: died while on active duty or Died while on inactive-duty service training",
+              "acceptableValues": [
+                "Died while on active duty",
+                "Died while on inactive-duty service training"
+              ]
+            },
+            {
+              "criteriaKey": "applicant_relationship_to_the_deceased",
+              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
+              "acceptableValues": [
+                "Spouse",
+                "Child",
+                "Parent",
+                "Other family member"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "benefit": {
+          "title": "Survivors pension for child",
+          "summary": "<p>Monthly payments to qualified unmarried dependent children of deceased wartime veterans.</p>",
+          "SourceLink": "https://www.va.gov/pension/survivors-pension/",
+          "SourceIsEnglish": "TRUE",
+          "agency": {
+            "title": "Veterans Affairs Department (VA)",
+            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
+            "lede": ""
+          },
+          "lifeEvents": [
+            "Benefit finder: death of a loved one"
           ],
           "eligibility": [
             {
-              "criteriaKey": "deceased_paid_into_SS",
-              "label": "The deceased worked and paid Social Security taxes",
+              "criteriaKey": "deceased_served_in_active_military",
+              "label": "You served in the active military",
               "acceptableValues": [
                 "Yes"
+              ]
+            },
+            {
+              "criteriaKey": "deceased_service_status",
+              "label": "Your service status is: discharged under conditions other than dishonorable",
+              "acceptableValues": [
+                "Discharged under conditions other than dishonorable"
               ]
             },
             {
@@ -1669,27 +1940,6 @@ const content = `{
               ]
             },
             {
-              "criteriaKey": "applicant_citizen_status",
-              "label": "You are a U.S. citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_disability",
-              "label": "You have a disability or impairment",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_ability_to_work",
-              "label": "You are unable to work for a year or more because of a disability or your disability is expected to result in death",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
               "criteriaKey": "applicant_relationship_to_the_deceased",
               "label": "Your relationship to the deceased is: child",
               "acceptableValues": [
@@ -1701,55 +1951,8 @@ const content = `{
       },
       {
         "benefit": {
-          "title": "Survivors benefits for mothers/fathers",
-          "summary": "<p>Social Security survivors benefits to the person providing care for the child of a deceased worker.</p>",
-          "SourceLink": "https://www.ssa.gov/forms/ssa-5.html",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Social Security Administration (SSA)",
-            "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_paid_into_SS",
-              "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_marital_status",
-              "label": "Your marital status is unmarried or widowed",
-              "acceptableValues": [
-                "Unmarried",
-                "Widowed"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_citizen_status",
-              "label": "You are a US citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_care_for_child",
-              "label": "You are caring for a child of someone who is retired, has a disability, or has died, and the child is disabled or under the age of 16",
-              "acceptableValues": [
-                "Yes"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
           "title": "Survivors benefits for parents",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Social Security survivors benefits to parents of eligible workers.</p>",
+          "summary": "<p>Social Security survivors benefits to parents of eligible workers.</p>",
           "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h5",
           "SourceIsEnglish": "FALSE",
           "agency": {
@@ -1757,9 +1960,6 @@ const content = `{
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
@@ -1803,9 +2003,6 @@ const content = `{
             "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
             "lede": ""
           },
-          "tags": [
-            "Death of a loved one"
-          ],
           "eligibility": [
             {
               "criteriaKey": "deceased_paid_into_SS",
@@ -1841,414 +2038,6 @@ const content = `{
               "label": "Your relationship to the deceased is: spouse",
               "acceptableValues": [
                 "Spouse"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Survivors benefits for spouse with disabilities",
-          "summary": "<p>Social Security survivors benefits to surviving spouses and certain divorced spouses with disabilities of eligible workers.</p>",
-          "SourceLink": "https://www.ssa.gov/benefits/survivors/ifyou.html#h2",
-          "SourceIsEnglish": "FALSE",
-          "agency": {
-            "title": "Social Security Administration (SSA)",
-            "summary": "<p>Administers Social Security, as well as disability insurance, and other benefits.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_paid_into_SS",
-              "label": "The deceased worked and paid Social Security taxes",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_date_of_birth",
-              "label": "You are over 50 years",
-              "acceptableValues": [
-                ">=50years"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_marital_status",
-              "label": "Your marital status is widowed or divorced",
-              "acceptableValues": [
-                "Widowed",
-                "Divorced"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_citizen_status",
-              "label": "You are a US citizen or eligible non-citizen",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_disability",
-              "label": "You have a disability or impairment",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_ability_to_work",
-              "label": "You are unable to work for a year or more because of a disability or your disability is expected to result in death",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Survivors pension for child",
-          "summary": "<p>Monthly payments to qualified unmarried dependent children of deceased wartime veterans.</p>",
-          "SourceLink": "https://www.va.gov/pension/survivors-pension/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "You served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "Your service status is: discharged for conditions other than dishonorable",
-              "acceptableValues": [
-                "Discharged for conditions other than dishonorable"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_date_of_birth",
-              "label": "You are under 18 years",
-              "acceptableValues": [
-                "<18years"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_marital_status",
-              "label": "Your marital status is unmarried",
-              "acceptableValues": [
-                "Unmarried"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: child",
-              "acceptableValues": [
-                "Child"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Survivors pension for child with disabilities",
-          "summary": "<p>Monthly payments to qualified unmarried dependent children with disabilities of wartime veterans with certain income and net worth limits.</p>",
-          "SourceLink": "https://www.va.gov/pension/survivors-pension/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: discharged for conditions other than dishonorable",
-              "acceptableValues": [
-                "Discharged for conditions other than dishonorable"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_date_of_birth",
-              "label": "You are under 18 years",
-              "acceptableValues": [
-                ">18years"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_marital_status",
-              "label": "Your marital status is unmarried",
-              "acceptableValues": [
-                "Unmarried"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_disability",
-              "label": "You have a disability or impairment",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: child",
-              "acceptableValues": [
-                "Child"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Survivors pension for spouse",
-          "summary": "<p>Monthly payments to surviving spouses of wartime veterans with certain income and net worth limits.</p>",
-          "SourceLink": "https://www.va.gov/pension/survivors-pension/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: discharged for conditions other than dishonorable",
-              "acceptableValues": [
-                "Discharged for conditions other than dishonorable"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_marital_status",
-              "label": "Your marital status is unmarried or widowed",
-              "acceptableValues": [
-                "Unmarried",
-                "Widowed"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_income",
-              "label": "You have limited income and resources",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse",
-              "acceptableValues": [
-                "Spouse"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Veterans burial allowance",
-          "summary": "<p><!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->Assistance with burial, funeral, and transportation costs of a deceased veteran.</p>",
-          "SourceLink": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "lifeEvents": [
-            "Death"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_date_of_death",
-              "label": "The deceased died within the last two years",
-              "acceptableValues": [
-                "<2years"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: discharged for conditions other than dishonorable",
-              "acceptableValues": [
-                "Discharged for conditions other than dishonorable"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_military_death_circumstance",
-              "label": "One of the following applies to the deceased: died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation",
-              "acceptableValues": [
-                "Died as a result of a service-related disability/illness",
-                "Died while receiving/traveling to VA care",
-                "Died while receiving/eligible for VA compensation"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
-              "acceptableValues": [
-                "Spouse",
-                "Child",
-                "Parent",
-                "Other family member"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_paid_funeral_expenses",
-              "label": "You paid for funeral or burial expenses",
-              "acceptableValues": [
-                "Yes"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Veterans headstone and grave marker",
-          "summary": "<p>A headstone, grave or niche marker, or medallion to honor a veteran, service member, or eligible family member.</p>",
-          "SourceLink": "https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable",
-                "Member of the National Guard/Reserves"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_grave_headstone",
-              "label": "The person is buried in a grave with a privately purchased headstone or an unmarked grave",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
-              "acceptableValues": [
-                "Spouse",
-                "Child",
-                "Parent",
-                "Other family member"
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "benefit": {
-          "title": "Veterans medallion",
-          "summary": "<p>A headstone medallion, grave marker, and Presidential Memorial Certificate for eligible veterans buried in a private cemetery.</p>",
-          "SourceLink": "https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/",
-          "SourceIsEnglish": "TRUE",
-          "agency": {
-            "title": "Veterans Affairs Department (VA)",
-            "summary": "<p>Provides a wide range of benefits in support of veterans, service members, and their families.</p>",
-            "lede": ""
-          },
-          "tags": [
-            "Death of a loved one"
-          ],
-          "eligibility": [
-            {
-              "criteriaKey": "deceased_served_in_active_military",
-              "label": "The deceased served in the active military",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_service_status",
-              "label": "The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or a member of the National Guard/Reserves",
-              "acceptableValues": [
-                "Active-duty service member",
-                "Discharged under conditions other than dishonorable",
-                "Member of the National Guard/Reserves"
-              ]
-            },
-            {
-              "criteriaKey": "deceased_grave_headstone",
-              "label": "The person is buried in a grave with a privately purchased headstone or an unmarked grave",
-              "acceptableValues": [
-                "Yes"
-              ]
-            },
-            {
-              "criteriaKey": "applicant_relationship_to_the_deceased",
-              "label": "Your relationship to the deceased is: spouse, child, parent, or other family member",
-              "acceptableValues": [
-                "Spouse",
-                "Child",
-                "Parent",
-                "Other family member"
               ]
             }
           ]

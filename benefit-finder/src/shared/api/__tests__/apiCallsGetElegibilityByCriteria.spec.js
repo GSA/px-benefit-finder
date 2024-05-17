@@ -107,7 +107,7 @@ test('correctly returns eligibility state based on selected values', async () =>
     benefits
   )
 
-  const eligibleBenefits = eligibility[0].benefit.eligibility.filter(
+  const eligibleBenefits = eligibility[1].benefit.eligibility.filter(
     item => item.isEligible === true
   )
 
@@ -115,7 +115,7 @@ test('correctly returns eligibility state based on selected values', async () =>
   expect(eligibleBenefits[0].acceptableValues).toContain(selectedValue)
   expect(eligibleBenefits[0]).toHaveProperty('isEligible', true)
 
-  const notEligibleBenefits = eligibility[5].benefit.eligibility.filter(
+  const notEligibleBenefits = eligibility[17].benefit.eligibility.filter(
     item => item.isEligible === false
   )
 

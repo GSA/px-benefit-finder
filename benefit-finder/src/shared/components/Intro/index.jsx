@@ -58,6 +58,7 @@ const Intro = ({ data, ui, setStep, step }) => {
               <NoticesList
                 className="bf-intro-process-notices-list"
                 data={notices.list}
+                iconAlt={notices.iconAlt}
               />
             </div>
           </div>

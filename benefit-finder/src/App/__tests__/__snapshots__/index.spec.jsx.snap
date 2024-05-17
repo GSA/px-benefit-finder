@@ -132,7 +132,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <i
-                      aria-hidden="true"
+                      alt="Important"
                       data-testid="icon-info"
                     >
                       <svg
@@ -165,7 +165,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <i
-                      aria-hidden="true"
+                      alt="Important"
                       data-testid="icon-info"
                     >
                       <svg
@@ -197,7 +197,7 @@ exports[`loads intro 1`] = `
                     class="bf-notice"
                   >
                     <i
-                      aria-hidden="true"
+                      alt="Important"
                       data-testid="icon-info"
                     >
                       <svg
@@ -416,7 +416,6 @@ exports[`loads window query scenario 1 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -696,7 +695,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -874,7 +872,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -1075,7 +1072,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -1311,7 +1307,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -1537,7 +1532,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -1743,7 +1737,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -1944,7 +1937,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -2145,7 +2137,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -2341,7 +2332,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -2542,7 +2532,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -2773,7 +2762,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -2974,7 +2962,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -3212,7 +3199,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -3358,7 +3344,6 @@ exports[`loads window query scenario 1 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -3608,7 +3593,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -3809,7 +3793,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -4010,7 +3993,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -4227,7 +4209,6 @@ exports[`loads window query scenario 1 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -4507,7 +4488,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -4685,7 +4665,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -4863,7 +4842,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -5059,7 +5037,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -5290,7 +5267,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -5508,7 +5484,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -5709,7 +5684,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -5879,7 +5853,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -6080,7 +6053,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -6260,7 +6232,6 @@ exports[`loads window query scenario 1 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -6497,7 +6468,6 @@ exports[`loads window query scenario 1 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -7203,7 +7173,6 @@ exports[`loads window query scenario 2 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -7482,7 +7451,6 @@ exports[`loads window query scenario 2 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -7672,7 +7640,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -7873,7 +7840,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -8134,7 +8100,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -8360,7 +8325,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -8566,7 +8530,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -8767,7 +8730,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -8968,7 +8930,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -9164,7 +9125,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -9365,7 +9325,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -9596,7 +9555,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -9796,7 +9754,6 @@ exports[`loads window query scenario 2 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -10045,7 +10002,6 @@ exports[`loads window query scenario 2 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -10204,7 +10160,6 @@ exports[`loads window query scenario 2 1`] = `
                         Likely eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -10454,7 +10409,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -10655,7 +10609,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -10856,7 +10809,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -11074,7 +11026,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -11342,7 +11293,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -11520,7 +11470,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -11698,7 +11647,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -11894,7 +11842,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -12125,7 +12072,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -12343,7 +12289,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -12544,7 +12489,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -12714,7 +12658,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -12915,7 +12858,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -13095,7 +13037,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >
@@ -13308,7 +13249,6 @@ exports[`loads window query scenario 2 1`] = `
                         Not eligible
                       </span>
                       <i
-                        alt="a plus icon"
                         aria-hidden="true"
                         data-testid="icon-open"
                       >

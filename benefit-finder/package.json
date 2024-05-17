@@ -41,8 +41,8 @@
     "cy:run:cross-browser:e2e": "NODE_ENV=test npm run cy:run:e2e && npm run cy:run:edge:e2e && npm run cy:run:firefox:e2e && cy:run:webkit-safari:e2e"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
     "react-modal": "^3.16.1"
   },
   "devDependencies": {

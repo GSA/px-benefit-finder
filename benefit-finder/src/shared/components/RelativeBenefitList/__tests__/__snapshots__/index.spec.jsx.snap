@@ -11,7 +11,7 @@ exports[`RelativeBenefitList > renders a match to the previous snapshot 1`] = `
     >
       <a
         class="bf-usa-card__container usa-card__container"
-        href="/benefit-finder/life_event/retirement"
+        href="/benefit-finder/retirement"
       >
         <i
           aria-hidden="true"
@@ -50,13 +50,17 @@ exports[`RelativeBenefitList > renders a match to the previous snapshot 1`] = `
           class="bf-usa-card__body usa-card__body"
         >
           <p>
-            Find out what financial, health care, and other benefits may be available as you enter this next phase of your life.
+            <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
+            <strong>
+              Find retirement benefits
+            </strong>
+             including financial and health assistance.
           </p>
         </div>
         <div
           class="bf-usa-card__cta usa-card__cta"
         >
-          Call to action (retirement)
+          Find retirement benefits including financial and health assistance.
         </div>
         <i
           aria-hidden="true"
@@ -86,7 +90,7 @@ exports[`RelativeBenefitList > renders a match to the previous snapshot 1`] = `
     >
       <a
         class="bf-usa-card__container usa-card__container"
-        href="/benefit-finder/life_event/disability"
+        href="/benefit-finder/disability"
       >
         <i
           aria-hidden="true"
@@ -139,13 +143,16 @@ exports[`RelativeBenefitList > renders a match to the previous snapshot 1`] = `
           class="bf-usa-card__body usa-card__body"
         >
           <p>
-            Whether you are newly disabled or have a lifelong challenge, assistance may be available, including financial help.
+            <strong>
+              Find disability benefits
+            </strong>
+             to help with bills, education, jobs, and more.
           </p>
         </div>
         <div
           class="bf-usa-card__cta usa-card__cta"
         >
-          Call to action (disability)
+          Find disability benefits to help with bills, education, jobs, and more.
         </div>
         <i
           aria-hidden="true"

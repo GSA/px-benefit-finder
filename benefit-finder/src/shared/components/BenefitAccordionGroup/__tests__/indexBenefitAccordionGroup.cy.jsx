@@ -5,19 +5,19 @@ const { Primary, ExpandAll, SourceIsEnglish } = composeStories(stories)
 describe('BenefitAccordionGroup component tests', () => {
   it('Validate opening individual accordion only expands the clicked accordion and clicking it again closes it', () => {
     cy.mount(<Primary />)
-    cy.get('.usa-accordion__button').contains('Burial flag').click()
-    cy.get('.usa-accordion__button')
-      .contains('Burial flag')
-      .parent()
+    cy.get('.bf-usa-accordion__button.usa-accordion__button').eq(0).click()
+    cy.get('.bf-usa-accordion__button.usa-accordion__button')
+      .eq(0)
       .should('have.attr', 'aria-expanded', 'true')
-    cy.get('.usa-accordion__button')
-      .contains('Death gratuity')
-      .parent()
+    cy.get('.bf-usa-accordion__button.usa-accordion__button')
+      .eq(1)
       .should('have.attr', 'aria-expanded', 'false')
-    cy.get('.usa-accordion__button').contains('Burial flag').click()
-    cy.get('.usa-accordion__button').each(accordion => {
-      cy.wrap(accordion).should('have.attr', 'aria-expanded', 'false')
-    })
+    cy.get('.bf-usa-accordion__button.usa-accordion__button').eq(0).click()
+    cy.get('.bf-usa-accordion__button.usa-accordion__button').each(
+      accordion => {
+        cy.wrap(accordion).should('have.attr', 'aria-expanded', 'false')
+      }
+    )
   })
 
   it('Validate clicking Expand all opens all accordions', () => {

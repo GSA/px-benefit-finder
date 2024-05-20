@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { dateInputValidation, createMarkup } from '../../utils'
+import { dateInputValidation, createMarkup, dataLayerPush } from '../../utils'
 import { useHandleUnload, useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import {
@@ -258,6 +258,12 @@ const LifeEventSection = ({
     window.scrollTo(0, 0)
     getRequiredFields()
   }, [])
+
+  window.dataLayer &&
+    dataLayerPush({
+      pageView: 'bf-form',
+      viewTitle: currentData.section.heading,
+    })
 
   return (
     data && (

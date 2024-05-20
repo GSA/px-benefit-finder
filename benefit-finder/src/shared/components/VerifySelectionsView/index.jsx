@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { parseDate } from '../../utils'
+import { parseDate, dataLayerPush } from '../../utils'
 import * as apiCalls from '../../api/apiCalls'
 import { Heading, Button } from '../index'
 
@@ -106,6 +106,12 @@ const VerifySelectionsView = ({
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  window.dataLayer &&
+    dataLayerPush({
+      pageView: 'bf-verify-selections',
+      viewTitle: verifySelectionsView?.heading,
+    })
 
   return (
     <div className="bf-verify-selections-view">

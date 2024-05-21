@@ -1,3 +1,4 @@
+import { dataLayerPush } from '../../utils'
 import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import {
@@ -30,6 +31,8 @@ const Intro = ({ data, ui, setStep, step }) => {
     setStep(step + 1)
     resetElement.current.focus()
   }
+
+  window.dataLayer && dataLayerPush({ pageView: 'bf-intro', viewTitle: title })
 
   return (
     data && (

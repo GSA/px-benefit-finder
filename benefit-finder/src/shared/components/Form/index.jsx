@@ -1,3 +1,4 @@
+import { dataLayerPush } from '../../utils'
 import PropTypes from 'prop-types'
 
 import './_index.scss'
@@ -8,6 +9,7 @@ import './_index.scss'
  * @return {html} returns a semantic html form element, with all its children
  */
 function Form({ children }) {
+  window.dataLayer && dataLayerPush({ pageView: 'bf-form' })
   return (
     <form className="bf-usa-form">
       <div className="bf-grid-contianer grid-container">{children}</div>

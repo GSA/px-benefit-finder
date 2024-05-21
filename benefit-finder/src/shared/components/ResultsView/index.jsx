@@ -13,7 +13,7 @@ import {
   RelativeBenefitList,
   Summary,
 } from '../index'
-import { createMarkup } from '../../utils'
+import { createMarkup, dataLayerPush } from '../../utils'
 import './_index.scss'
 
 /**
@@ -101,6 +101,22 @@ const ResultsView = ({
       ),
     })
   }, [])
+
+  window.dataLayer &&
+    dataLayerPush({
+      pageView: 'bf-result-view',
+      viewTitle:
+        notEligibleView === false
+          ? eligible.chevron.heading
+          : notEligible.chevron.heading,
+      viewState:
+        notEligibleView === true ? 'bf-not-eligible-view' : 'bf-eligible-view',
+      criteriaValues,
+      benefits: benefitsLength,
+      eligible: eligibilityCount.eligible,
+      notEligible: eligibilityCount.notEligible,
+      moreInfo: eligibilityCount.moreInfo,
+    })
 
   // compare the selected criteria array with benefits
   return (

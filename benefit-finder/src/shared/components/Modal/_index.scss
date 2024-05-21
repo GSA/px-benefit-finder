@@ -15,8 +15,8 @@
     cursor: pointer;
   }
 
-  a.bf-nav-item-one,
-  a.bf-nav-item-two {
+  .bf-nav-item-one,
+  .bf-nav-item-two {
     @include important-bold;
 
     &.bf-usa-button {

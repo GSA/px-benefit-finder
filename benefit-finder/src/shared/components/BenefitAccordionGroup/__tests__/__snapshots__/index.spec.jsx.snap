@@ -32,7 +32,6 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
             More information needed
           </span>
           <i
-            alt="a plus icon"
             aria-hidden="true"
             data-testid="icon-open"
           >

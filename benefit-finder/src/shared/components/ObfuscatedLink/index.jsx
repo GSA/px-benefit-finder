@@ -38,7 +38,9 @@ const ObfuscatedLink = ({
     : ['bf-usa-button', 'usa-button', 'bf-obfuscated-link']
 
   const handleCarrot =
-    noCarrot === true ? null : <Icon type="carrot-small" color="white" />
+    noCarrot === true ? null : (
+      <Icon type="carrot-small" color="white" aria-hidden="true" />
+    )
 
   return (
     <a

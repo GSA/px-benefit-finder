@@ -17,6 +17,7 @@
     },
     "notices": {
       "heading": "Antes de empezar:",
+      "iconAlt": "Importante",
       "list": [
         {
           "notice": "<div><strong>Esto no es una aplicación.</strong></div>"

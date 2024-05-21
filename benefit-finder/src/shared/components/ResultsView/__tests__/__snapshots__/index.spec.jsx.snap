@@ -156,7 +156,6 @@ exports[`loads view 1`] = `
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -436,7 +435,6 @@ exports[`loads view 1`] = `
                       More information needed
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -614,7 +612,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -815,7 +812,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -1076,7 +1072,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -1302,7 +1297,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -1508,7 +1502,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -1709,7 +1702,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -1910,7 +1902,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -2106,7 +2097,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -2307,7 +2297,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -2538,7 +2527,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -2738,7 +2726,6 @@ exports[`loads view 1`] = `
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -2988,7 +2975,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -3134,7 +3120,6 @@ exports[`loads view 1`] = `
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -3384,7 +3369,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -3585,7 +3569,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -3786,7 +3769,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -4003,7 +3985,6 @@ exports[`loads view 1`] = `
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -4283,7 +4264,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -4461,7 +4441,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -4639,7 +4618,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -4835,7 +4813,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -5066,7 +5043,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -5284,7 +5260,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -5485,7 +5460,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -5655,7 +5629,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -5856,7 +5829,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -6036,7 +6008,6 @@ exports[`loads view 1`] = `
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -6273,7 +6244,6 @@ exports[`loads view 1`] = `
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -6786,7 +6756,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -7066,7 +7035,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       More information needed
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -7244,7 +7212,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -7445,7 +7412,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -7706,7 +7672,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -7932,7 +7897,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -8138,7 +8102,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -8339,7 +8302,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -8540,7 +8502,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -8736,7 +8697,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -8937,7 +8897,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -9168,7 +9127,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -9368,7 +9326,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -9618,7 +9575,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -9764,7 +9720,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -10014,7 +9969,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -10215,7 +10169,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -10416,7 +10369,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -10633,7 +10585,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -10913,7 +10864,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -11091,7 +11041,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -11269,7 +11218,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -11465,7 +11413,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -11696,7 +11643,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -11914,7 +11860,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -12115,7 +12060,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -12285,7 +12229,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -12486,7 +12429,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -12666,7 +12608,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Not eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >
@@ -12903,7 +12844,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       Likely eligible
                     </span>
                     <i
-                      alt="a plus icon"
                       aria-hidden="true"
                       data-testid="icon-open"
                     >

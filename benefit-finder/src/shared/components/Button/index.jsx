@@ -86,7 +86,7 @@ function Button({
       onMouseLeave={() => setIsHovered(false)}
       data-testid={props['data-testid']}
     >
-      {icon && <Icon type={icon} color={hoverColor} />}
+      {icon && <Icon type={icon} color={hoverColor} aria-hidden="true" />}
       {children}
     </button>
   )

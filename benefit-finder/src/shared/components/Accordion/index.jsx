@@ -50,9 +50,9 @@ const Accordion = ({
    */
   const handleIcon = () =>
     !isOpen ? (
-      <Icon type="open" alt="a plus icon" />
+      <Icon type="open" aria-hidden="true" />
     ) : (
-      <Icon type="close" alt="a minus icon" />
+      <Icon type="close" aria-hidden="true" />
     )
 
   const handleAriaControl = id => {

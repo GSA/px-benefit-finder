@@ -203,7 +203,7 @@ const Modal = ({
           className="bf-modal-button"
           onClick={() => handleCloseModal(triggerRef)}
         >
-          <Icon type="modal-close" color="black" alt="a close out icon" />
+          <Icon type="modal-close" color="black" aria-hidden="true" />
         </button>
         <Heading headingLevel={1} className="bf-modal-heading">
           {modalHeading}

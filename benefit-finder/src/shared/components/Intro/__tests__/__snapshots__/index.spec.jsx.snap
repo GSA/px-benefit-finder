@@ -118,7 +118,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  alt="Important"
                   data-testid="icon-info"
                 >
                   <svg
@@ -151,7 +151,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  alt="Important"
                   data-testid="icon-info"
                 >
                   <svg
@@ -183,7 +183,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  alt="Important"
                   data-testid="icon-info"
                 >
                   <svg

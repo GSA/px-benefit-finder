@@ -31,10 +31,12 @@ const Card = ({
   const defaultClasses = icon !== undefined ? ['bf-card-icon'] : ''
   const utilityClasses = ['add-list-reset']
   const handleCarrot =
-    noCarrot === true ? null : <Icon type={carrotType} color="#162E51" />
+    noCarrot === true ? null : (
+      <Icon type={carrotType} color="#162E51" aria-hidden="true" />
+    )
   const handleIcon =
     icon === undefined ? null : (
-      <Icon type={icon} className="bf-relative-icon" />
+      <Icon type={icon} className="bf-relative-icon" aria-hidden="true" />
     )
 
   return (

@@ -13,19 +13,13 @@ const dataLayerPush = newData => {
   // merge values into default obj
   const newObj = { ...defaultDataLayerObj, ...newData }
 
-  // merge values into window object
-  const newDataObj = { ...window.dataLayer[0], ...newObj }
-
   // remove null values
-  for (const key in newDataObj) {
-    if (newDataObj[key] === null) {
-      delete newDataObj[key]
+  for (const key in newObj) {
+    if (newObj[key] === null) {
+      delete newObj[key]
     }
   }
-
-  window.dataLayer.push(() => this.reset())
-  window.dataLayer.push(newDataObj)
-  window.dataLayer.push({ event: 'page_change', bfData: newDataObj })
+  window.dataLayer.push({ event: 'bf_page_change', bfData: newObj })
 }
 
 export default dataLayerPush

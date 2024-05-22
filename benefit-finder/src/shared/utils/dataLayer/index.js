@@ -25,6 +25,7 @@ const dataLayerPush = newData => {
 
   window.dataLayer.push(() => this.reset())
   window.dataLayer.push(newDataObj)
+  window.dataLayer.push({ event: 'page_change', bfData: newDataObj })
 }
 
 export default dataLayerPush

@@ -6,6 +6,7 @@ const defaultDataLayerObj = {
   eligible: null,
   notEligible: null,
   moreInfo: null,
+  criteriaValues: null,
 }
 
 const dataLayerPush = newData => {
@@ -22,8 +23,8 @@ const dataLayerPush = newData => {
     }
   }
 
-  // replaace window object
-  window.dataLayer[0] = newDataObj
+  window.dataLayer.push(() => this.reset())
+  window.dataLayer.push(newDataObj)
 }
 
 export default dataLayerPush

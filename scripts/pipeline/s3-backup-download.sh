@@ -6,7 +6,7 @@ backup_bucket="${PROJECT}-backup-${BRANCH}"
 space="${PROJECT}-${BRANCH}"
 
 echo "Getting backup bucket credentials..."
-{
+# {
   cf target -s "${space}"
 
   service="${backup_bucket}"
@@ -31,10 +31,10 @@ echo "Getting backup bucket credentials..."
   AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
   export AWS_SECRET_ACCESS_KEY
 
-} &> /dev/null
+# } &> /dev/null
 
 echo "Downloading backup..."
-{
+# {
 
   rm -f "*.sql"
   
@@ -42,13 +42,13 @@ echo "Downloading backup..."
 
   [ -n "${S3_FILE_PATH}" ] && DATABASE_FILE="${S3_FILE_PATH}"
 
-  aws s3 cp "s3://${bucket}/${DATABASE_FILE}" database_restore.sql.gz  --no-verify-ssl 2>/dev/null
+  aws s3 cp "s3://${bucket}/${DATABASE_FILE}" database_restore.sql.gz  --no-verify-ssl # 2>/dev/null
 
   ## Delete database_restore.tar.gz after it's downloaded.
-  [ -z "${S3_FILE_PATH}" ] && aws s3 rm "s3://${bucket}/database_restore.sql.gz" --no-verify-ssl 2>/dev/null
+  [ -z "${S3_FILE_PATH}" ] && aws s3 rm "s3://${bucket}/database_restore.sql.gz" --no-verify-ssl # 2>/dev/null
   
   cf delete-service-key "${service}" "${service_key}" -f
 
-} &> /dev/null
+# } &> /dev/null
 
 echo "File downloaded: ${DATABASE_FILE}"

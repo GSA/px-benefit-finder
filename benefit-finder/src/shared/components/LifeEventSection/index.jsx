@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { dateInputValidation, createMarkup, dataLayerPush } from '../../utils'
+import { dateInputValidation, createMarkup } from '../../utils'
 import { useHandleUnload, useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import {
@@ -259,11 +259,30 @@ const LifeEventSection = ({
     getRequiredFields()
   }, [])
 
-  window.dataLayer &&
-    dataLayerPush({
-      pageView: 'bf-form',
-      viewTitle: currentData.section.heading,
-    })
+  // handle dataLayer
+  useEffect(() => {
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: 'bf_page_change',
+        bfData: {
+          pageView: 'bf-form',
+          viewTitle: currentData.section.heading,
+        },
+      })
+  }, [])
+
+  useEffect(() => {
+    modalOpen === true &&
+      window.dataLayer &&
+      window.dataLayer.push({
+        event: 'bf_modal_open',
+        bfData: {
+          pageView: 'bf-form',
+          viewTitle: currentData.section.heading,
+          modalOpen,
+        },
+      })
+  }, [])
 
   return (
     data && (

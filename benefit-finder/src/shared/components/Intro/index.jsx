@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import {
@@ -31,6 +32,15 @@ const Intro = ({ data, ui, setStep, step }) => {
     resetElement.current.focus()
   }
 
+  // handle dataLayer
+  useEffect(() => {
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: 'bf_page_change',
+        bfData: { pageView: 'bf-intro', viewTitle: title },
+      })
+  }, [])
+
   return (
     data && (
       <div className="bf-intro">
@@ -58,6 +68,7 @@ const Intro = ({ data, ui, setStep, step }) => {
               <NoticesList
                 className="bf-intro-process-notices-list"
                 data={notices.list}
+                iconAlt={notices.iconAlt}
               />
             </div>
           </div>

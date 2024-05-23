@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
-import { ObfuscatedLink, Icon, Heading } from '../index'
+import { Button, ObfuscatedLink, Icon, Heading } from '../index'
 import { scrollLock } from '../../utils'
 
 import './_index.scss'
@@ -151,7 +151,7 @@ const Modal = ({
           className="bf-usa-button-group__item usa-button-group__item width-full"
           key="bf-nav-item-one"
         >
-          <ObfuscatedLink
+          <Button
             id="bf-navItemOneBtn"
             className="bf-nav-item-one width-full"
             onClick={() => handleClick(navItemOneFunction)}
@@ -160,13 +160,13 @@ const Modal = ({
             tabIndex="0"
           >
             {navItemOneLabel}
-          </ObfuscatedLink>
+          </Button>
         </li>
         <li
           className="bf-usa-button-group__item usa-button-group__item width-full"
           key="nav-item-two"
         >
-          <ObfuscatedLink
+          <Button
             id="bf-navItemTwoBtn"
             className="bf-nav-item-two width-full"
             onClick={() => handleClick(navItemTwoFunction)}
@@ -175,7 +175,7 @@ const Modal = ({
             tabIndex="0"
           >
             {navItemTwoLabel}
-          </ObfuscatedLink>
+          </Button>
         </li>
       </ul>
     )
@@ -203,7 +203,7 @@ const Modal = ({
           className="bf-modal-button"
           onClick={() => handleCloseModal(triggerRef)}
         >
-          <Icon type="modal-close" color="black" alt="a close out icon" />
+          <Icon type="modal-close" color="black" aria-hidden="true" />
         </button>
         <Heading headingLevel={1} className="bf-modal-heading">
           {modalHeading}

@@ -102,16 +102,24 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         </h2>
         <div>
           <p>
-            About the person looking for benefits
+            <strong>
+              About you:
+            </strong>
+             the applicant looking for benefits
           </p>
         </div>
         <fieldset
           class="bf-usa-fieldset usa-fieldset "
         >
+          <div
+            class="bf-hint"
+          >
+            For example: January 19 2000
+          </div>
           <legend
             class="bf-legend usa-legend"
           >
-            Date of birth:
+            Date of birth
             <span
               class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
@@ -276,7 +284,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <legend
             class="bf-legend usa-legend"
           >
-            Applicant’s relationship to the deceased:
+            Relationship to the deceased
             <span
               class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
@@ -338,7 +346,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <legend
             class="bf-legend usa-legend"
           >
-            Marital Status
+            Marital status
             <span
               class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
               title="required"
@@ -443,7 +451,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <legend
             class="bf-legend usa-legend"
           >
-            Are you caring for a child of the deceased who is disabled or under the age of 16?
+            Are you caring for the deceased's child who is under age 16 or has a disability?
           </legend>
           <div
             aria-invalid="false"

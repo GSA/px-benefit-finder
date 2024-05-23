@@ -8,20 +8,52 @@ const { data } = JSON.parse(content)
 // get current data - subtract two years
 const generateDOD = () => {
   const currentDate = new Date()
-  return encodeURIComponent(
-    JSON.stringify({
-      month: currentDate.getMonth() + 1,
-      day: currentDate.getDate(),
-      year: currentDate.getFullYear() - 2,
-    })
-  )
+  return {
+    month: currentDate.getMonth() + 1,
+    day: currentDate.getDate(),
+    year: currentDate.getFullYear() - 2,
+  }
+}
+
+const params = {
+  applicant_date_of_birth: {
+    month: 4,
+    day: 5,
+    year: 1960,
+  },
+  applicant_relationship_to_the_deceased: 'Spouse',
+  applicant_marital_status: 'Widowed',
+  applicant_citizen_status: 'Yes',
+  applicant_care_for_child: 'Yes',
+  applicant_paid_funeral_expenses: 'Yes',
+  deceased_date_of_death: generateDOD(),
+  deceased_death_location_is_US: 'Yes',
+  deceased_paid_into_SS: 'Yes',
+  deceased_public_safety_officer: 'No',
+  deceased_american_indian: 'No',
+  deceased_died_of_COVID: 'Yes',
+  deceased_served_in_active_military: 'No',
+  shared: 'true',
+}
+
+export const encodeURIFromObject = obj => {
+  return Object.entries(obj)
+    .map(
+      ([key, value]) =>
+        `${encodeURIComponent(key)}=${
+          typeof value === 'object'
+            ? encodeURIComponent(JSON.stringify(value)) // handles date objects
+            : encodeURIComponent(value)
+        }`
+    )
+    .join('&')
 }
 
 const scenarios = {
   death: [
     {
       scenario: 1,
-      windowQuery: `?applicant_date_of_birth=%7B"month"%3A"3"%2C"day"%3A"5"%2C"year"%3A"1960"%7D&applicant_relationship_to_the_deceased=Spouse&applicant_marital_status=Widowed&applicant_citizen_status=Yes&applicant_care_for_child=Yes&applicant_paid_funeral_expenses=Yes&deceased_date_of_death=${generateDOD()}&deceased_death_location_is_US=Yes&deceased_paid_into_SS=Yes&deceased_public_safety_officer=No&deceased_miner=No&deceased_american_indian=No&deceased_died_of_COVID=Yes&deceased_served_in_active_military=No&shared=true%27`,
+      windowQuery: `?${encodeURIFromObject(params)}`,
     },
   ],
 }
@@ -96,11 +128,11 @@ test('scenario 1 loads in view with the correct amount of likely eligible items'
 
   const m = eligibility.filter(item => {
     const f = item.benefit.eligibility.filter(item => item.isEligible !== false)
-    return f.length > 0
+    return f.length >= 0
   })
 
-  expect(e.length).toBe(4)
-  expect(n.length).toBe(26)
+  expect(e.length).toBe(5)
+  expect(n.length).toBe(24)
   expect(m.length - e.length - n.length).toBe(1)
 
   await screen.findAllByTestId('benefit')

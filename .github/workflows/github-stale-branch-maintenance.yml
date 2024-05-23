@@ -55,5 +55,5 @@ jobs:
           git fetch --all
           git checkout ${branch}
           git branch --show-current
-          gh pr create --base "main" --head ${branch} --title  "[Stale Branch] - Please review this stale branch: ${branch}" --assignee ${{ env.Tech_Lead }} --reviewer ${{ env.Tech_Lead }} --body "Hi @${{ env.Tech_Lead }} This PR is ready for your review! This branch has been stale. Thank you!"
+          gh pr create --base "main" --head ${branch} --title  "[Stale Branch] - Please review this stale branch: ${branch}" --assignee ${{ env.Tech_Lead }} --reviewer ${{ env.Tech_Lead }} --body "Hi @${{ env.Tech_Lead }} This PR is ready for your review! This branch has been stale. Thank you! IF the branch is still needed, 1). Update branch and 2.) Close PR. Otherwise, IF the branch is not needed delete branch."
         done

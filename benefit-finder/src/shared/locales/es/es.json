@@ -17,6 +17,7 @@
     },
     "notices": {
       "heading": "Antes de empezar:",
+      "iconAlt": "Importante",
       "list": [
         {
           "notice": "<div><strong>Esto no es una aplicación.</strong></div>"
@@ -124,7 +125,7 @@
       "benefitSummaryPrefix": "Cumple ",
       "benefitSummaryConjunction": "de",
       "unmetLabel": "No cumplió con",
-      "visitLabel": "Visita",
+      "visitLabel": "Visite",
       "sourceIsEnglish": "(en inglés)"
     },
     "notEligibleResults": {

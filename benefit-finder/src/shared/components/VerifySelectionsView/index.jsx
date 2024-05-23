@@ -107,6 +107,18 @@ const VerifySelectionsView = ({
     window.scrollTo(0, 0)
   }, [])
 
+  // handle dataLayer
+  useEffect(() => {
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: 'bf_page_change',
+        bfData: {
+          pageView: 'bf-verify-selections',
+          viewTitle: verifySelectionsView?.heading,
+        },
+      })
+  }, [])
+
   return (
     <div className="bf-verify-selections-view">
       <div className="bf-grid-container grid-container">

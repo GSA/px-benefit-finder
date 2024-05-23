@@ -43,7 +43,7 @@ const KeyElegibilityCrieriaList = ({
                   data-testid={`${criteriaKey}`}
                 >
                   <div aria-hidden="true">
-                    <Icon type="green-check" />
+                    <Icon type="green-check" aria-hidden="true" />
                   </div>
                   {label}
                 </li>

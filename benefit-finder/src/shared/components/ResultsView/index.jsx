@@ -93,14 +93,39 @@ const ResultsView = ({
       eligible: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[0]
       ),
-      notEligible: handleEligibilityLength(
-        ui.benefitAccordion.eligibleStatusLabels[2]
-      ),
       moreInfo: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[1]
       ),
+      notEligible: handleEligibilityLength(
+        ui.benefitAccordion.eligibleStatusLabels[2]
+      ),
     })
   }, [])
+
+  // handle dataLayer
+  useEffect(() => {
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: 'bf_page_change',
+        bfData: {
+          pageView: 'bf-result-view',
+          viewTitle:
+            notEligibleView === false
+              ? eligible.chevron.heading
+              : notEligible.chevron.heading,
+          viewState:
+            notEligibleView === true
+              ? 'bf-not-eligible-view'
+              : 'bf-eligible-view',
+        },
+      })
+  }, [notEligibleView])
+
+  useEffect(() => {
+    eligibilityCount.notEligible >= 0 &&
+      window.dataLayer &&
+      window.dataLayer.push({ event: 'bf_count', bfData: eligibilityCount })
+  }, [eligibilityCount])
 
   // compare the selected criteria array with benefits
   return (

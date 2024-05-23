@@ -8,14 +8,14 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
     <div
       class="bf-usa-accordion usa-accordion"
       data-analytics="bf-usa-accordion"
-      data-analytics-content="Burial benefits"
+      data-analytics-content="COVID-19 funeral assistance"
       data-testid="benefit"
     >
       <h4
         class="bf-usa-accordion__heading usa-accordion__heading"
       >
         <button
-          aria-controls="burial-benefits"
+          aria-controls="covid-19-funeral-assistance"
           aria-expanded="false"
           class="bf-usa-accordion__button usa-accordion__button"
           type="button"
@@ -23,7 +23,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
           <span
             class="bf-accordion-heading"
           >
-            Burial benefits
+            COVID-19 funeral assistance
           </span>
           <br />
           <span
@@ -32,7 +32,6 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
             More information needed
           </span>
           <i
-            alt="a plus icon"
             aria-hidden="true"
             data-testid="icon-open"
           >
@@ -58,7 +57,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
       <div
         class="bf-usa-accordion__content usa-accordion__content usa-prose"
         hidden=""
-        id="burial-benefits"
+        id="covid-19-funeral-assistance"
       >
         <div>
           <h4
@@ -67,13 +66,13 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
             id=""
             role="heading"
           >
-            By Department of Defense (DOD)
+            By  Federal Emergency Management Agency (FEMA)
           </h4>
           <div
             class="bf-usa-detail-summary"
           >
             <p>
-              Burial and transport assistance for the deceased, and travel support for the spouse, children, and immediate family members of the service member.
+              Financial assistance for burial and funeral costs for someone who died of COVID-19. To be eligible, you have not been reimbursed from an organization or agency.
             </p>
           </div>
           <div
@@ -91,7 +90,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
                 class="bf-key-eligibility-criteria-sub-heading"
               >
                 Met  0 of
-            4
+            5
               </p>
             </h5>
             <ul
@@ -112,32 +111,37 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
               <li
                 class="bf-unmet-criteria-item"
               >
-                The deceased served in the active military
+                The deceased's death was COVID-19 related
               </li>
               <li
                 class="bf-unmet-criteria-item"
               >
-                The service status of the deceased is: active-duty member
+                The deceased died in the U.S.
               </li>
               <li
                 class="bf-unmet-criteria-item"
               >
-                One of the following applies to the deceased: died on active duty
+                The deceased died after May 20th, 2020
               </li>
               <li
                 class="bf-unmet-criteria-item"
               >
-                Applicant's relationship to the deceased is: spouse, child, parent, or other family member
+                You are a U.S. citizen or eligible non-citizen
+              </li>
+              <li
+                class="bf-unmet-criteria-item"
+              >
+                You paid for funeral or burial expenses and were not reimbursed
               </li>
             </ul>
           </div>
           <a
             class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
-            href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
+            href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
             rel="noopener noreferrer"
             target="_blank"
           >
-            Visit Department of Defense (DOD) 
+            Visit  Federal Emergency Management Agency (FEMA) 
             <i
               aria-hidden="true"
               data-testid="icon-carrot-small"

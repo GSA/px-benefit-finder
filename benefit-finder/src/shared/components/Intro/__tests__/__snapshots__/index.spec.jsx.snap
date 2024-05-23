@@ -24,12 +24,14 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         >
           <p>
             <strong>
-              Losing a loved one is hard.
+              We are sorry for your loss. 
             </strong>
-             Finding help shouldn’t be.
+            Losing a loved one is hard. Finding help shouldn’t be. 
           </p>
           <p>
-            Screen the federal benefits you may be eligible for.
+            <strong>
+              Answer a few questions and get a list of your potential benefits.
+            </strong>
           </p>
         </div>
       </div>
@@ -116,7 +118,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  alt="Important"
                   data-testid="icon-info"
                 >
                   <svg
@@ -149,7 +151,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  alt="Important"
                   data-testid="icon-info"
                 >
                   <svg
@@ -181,7 +183,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  alt="Important"
                   data-testid="icon-info"
                 >
                   <svg

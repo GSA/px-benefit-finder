@@ -259,6 +259,31 @@ const LifeEventSection = ({
     getRequiredFields()
   }, [])
 
+  // handle dataLayer
+  useEffect(() => {
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: 'bf_page_change',
+        bfData: {
+          pageView: 'bf-form',
+          viewTitle: currentData.section.heading,
+        },
+      })
+  }, [])
+
+  useEffect(() => {
+    modalOpen === true &&
+      window.dataLayer &&
+      window.dataLayer.push({
+        event: 'bf_modal_open',
+        bfData: {
+          pageView: 'bf-form',
+          viewTitle: currentData.section.heading,
+          modalOpen,
+        },
+      })
+  }, [])
+
   return (
     data && (
       <>

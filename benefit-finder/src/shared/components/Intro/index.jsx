@@ -1,4 +1,4 @@
-import { dataLayerPush } from '../../utils'
+import { useEffect } from 'react'
 import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import {
@@ -32,7 +32,14 @@ const Intro = ({ data, ui, setStep, step }) => {
     resetElement.current.focus()
   }
 
-  window.dataLayer && dataLayerPush({ pageView: 'bf-intro', viewTitle: title })
+  // handle dataLayer
+  useEffect(() => {
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: 'bf_page_change',
+        bfData: { pageView: 'bf-intro', viewTitle: title },
+      })
+  }, [])
 
   return (
     data && (

@@ -25,7 +25,7 @@ const Radio = ({
   className,
   name,
 }) => {
-  const handleRequired = required === 'TRUE' ? ['required-field'] : ''
+  const handleRequired = required === true ? ['required-field'] : ''
   const defaultClasses = ['bf-usa-radio__input usa-radio__input']
   const utilityClasses = handleRequired
   return (

@@ -244,7 +244,7 @@ const LifeEventSection = ({
   const handleDateRequired = (values, item) => {
     return Object.keys(values?.value).length === 3 &&
       values?.value?.year?.length === 4
-      ? 'FALSE'
+      ? false
       : item.fieldset.required
   }
 

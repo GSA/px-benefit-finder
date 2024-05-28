@@ -22,7 +22,7 @@ describe('BenefitAccordionGroup', () => {
   })
 
   it('renders (en inglés) when flagged as TRUE', () => {
-    b.benefit.SourceIsEnglish = 'TRUE' // ensure true
+    b.benefit.SourceIsEnglish = true // ensure true
     render(
       <BenefitAccordionGroup
         ui={es.resultsView}
@@ -35,7 +35,7 @@ describe('BenefitAccordionGroup', () => {
   })
 
   it('does not render (en inglés) when flagged as FALSE', () => {
-    b.benefit.SourceIsEnglish = 'FALSE' // ensure false
+    b.benefit.SourceIsEnglish = false // ensure false
     render(
       <BenefitAccordionGroup
         ui={es.resultsView}

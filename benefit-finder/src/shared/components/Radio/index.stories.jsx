@@ -23,6 +23,7 @@ export const Error = {
     ...Primary.args,
     required: true,
     checked: true,
+    invalid: true,
     className: 'bf-usa-input--error usa-input--error',
   },
 }

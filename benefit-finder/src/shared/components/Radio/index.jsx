@@ -55,9 +55,13 @@ const Radio = ({
 }
 
 Radio.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.string,
-  defaultChecked: PropTypes.bool,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
+  className: PropTypes.string,
+  name: PropTypes.string,
 }
 
 export default Radio

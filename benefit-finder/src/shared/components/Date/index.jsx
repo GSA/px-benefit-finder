@@ -6,8 +6,12 @@ import './_index.scss'
  * a parse our date object
  * @component
  * @param {func} onChange - inherited change handler
- * @param {boolean} required - inherited boolean value to manage required state
  * @param {object} value - inherited state values
+ * @param {boolean} required - inherited boolean value to manage required state
+  * @param {object} ui - inherited ui object values
+ * @param {string} id - inherited string value for id specificity
+ * @param {boolean} invalid - inherited boolean value to manage error state
+
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
 const Date = ({ onChange, value, required, ui, id, invalid }) => {
@@ -113,8 +117,11 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
 
 Date.propTypes = {
   onChange: PropTypes.func,
-  required: PropTypes.bool,
   value: PropTypes.object,
+  required: PropTypes.bool,
+  ui: PropTypes.object,
+  id: PropTypes.string,
+  invalid: PropTypes.bool,
 }
 
 export default Date

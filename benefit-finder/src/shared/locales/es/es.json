@@ -78,15 +78,15 @@
       "heading": "Importante",
       "list": [
         {
-          "item": "Para confirmar su eligibilidad necesita visitar el enlace de cada agencia."
+          "item": "Visite el sitio web de cada agencia para confirmar su elegibilidad y requisitos."
         },
         {
-          "item": "Si modifica sus repuestas o responde más preguntas podría ser elegible para más beneficios."
+          "item": "Sus resultados podrían cambiar si responde más preguntas o modifica sus respuestas."
         }
       ],
       "cta": {
-        "text": "Para comenzar el formulario de nuevo",
-        "link": "seleccione aquí"
+        "text": "",
+        "link": "Borrar mis respuestas y empezar el formulario de nuevo."
       }
     },
     "eligible": {

@@ -78,8 +78,10 @@ Select.propTypes = {
   options: PropTypes.array,
   selected: PropTypes.string,
   onChange: PropTypes.func,
+  required: PropTypes.bool,
   ui: PropTypes.object,
   className: PropTypes.string,
+  invalid: PropTypes.bool,
 }
 
 export default Select

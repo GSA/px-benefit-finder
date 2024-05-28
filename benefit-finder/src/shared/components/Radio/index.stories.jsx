@@ -17,3 +17,12 @@ export const DefaultChecked = {
     checked: true,
   },
 }
+
+export const Error = {
+  args: {
+    ...Primary.args,
+    required: true,
+    checked: true,
+    className: 'bf-usa-input--error usa-input--error',
+  },
+}

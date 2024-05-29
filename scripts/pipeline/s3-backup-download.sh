@@ -31,7 +31,7 @@ echo "Getting backup bucket credentials..."
   AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
   export AWS_SECRET_ACCESS_KEY
 
- } &> /dev/null
+ # } &> /dev/null
 
 echo "Downloading backup..."
  {
@@ -49,6 +49,6 @@ echo "Downloading backup..."
   
   cf delete-service-key "${service}" "${service_key}" -f
 
- } &> /dev/null
+ # } &> /dev/null
 
 echo "File downloaded: ${DATABASE_FILE}"

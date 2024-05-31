@@ -8,7 +8,7 @@ export default {
     children: <TextInput label="Text input label" />,
     legend: 'Legend',
     hint: 'Hint',
-    required: 'FALSE',
+    required: false,
   },
 }
 
@@ -16,6 +16,6 @@ export const Primary = {}
 export const Required = {
   args: {
     ...Primary.args,
-    required: 'TRUE',
+    required: true,
   },
 }

@@ -6,8 +6,12 @@ import './_index.scss'
  * a parse our date object
  * @component
  * @param {func} onChange - inherited change handler
- * @param {string} required - inherited string value to manage required state
  * @param {object} value - inherited state values
+ * @param {boolean} required - inherited boolean value to manage required state
+  * @param {object} ui - inherited ui object values
+ * @param {string} id - inherited string value for id specificity
+ * @param {boolean} invalid - inherited boolean value to manage error state
+
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
 const Date = ({ onChange, value, required, ui, id, invalid }) => {
@@ -43,12 +47,12 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
         </div>
         <select
           className={`bf-usa-select usa-select ${
-            required === 'TRUE' ? 'required-field' : ''
+            required === true ? 'required-field' : ''
           }`}
           id={`date_of_birth_month-${id}`}
           name={`date_of_birth_month-${id}`}
           aria-describedby={`month-description-${id}`}
-          required={required === 'TRUE'}
+          required={required === true}
           value={(value && value.month) || ''}
           onChange={onChange}
           aria-invalid={invalid === true}
@@ -74,14 +78,14 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           Enter two numerals for day
         </div>
         <input
-          className={`bf-usa-input usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
+          className={`bf-usa-input usa-input ${required === true ? 'required-field' : ''}`}
           aria-describedby={`day-description-${id}`}
           id={`date_of_birth_day-${id}`}
           name={`date_of_birth_day-${id}`}
           inputMode="numeric"
           value={(value && value.day) || ''}
           onChange={onChange}
-          required={required === 'TRUE'}
+          required={required === true}
           aria-invalid={invalid === true}
         />
       </div>
@@ -96,14 +100,14 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           Enter four numerals for year
         </div>
         <input
-          className={`bf-usa-input usa-input ${required === 'TRUE' ? 'required-field' : ''}`}
+          className={`bf-usa-input usa-input ${required === true ? 'required-field' : ''}`}
           aria-describedby={`year-description-${id}`}
           id={`date_of_birth_year-${id}`}
           name={`date_of_birth_year-${id}`}
           inputMode="numeric"
           value={(value && value.year) || ''}
           onChange={onChange}
-          required={required === 'TRUE'}
+          required={required === true}
           aria-invalid={invalid === true}
         />
       </div>
@@ -113,8 +117,11 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
 
 Date.propTypes = {
   onChange: PropTypes.func,
-  required: PropTypes.string,
   value: PropTypes.object,
+  required: PropTypes.bool,
+  ui: PropTypes.object,
+  id: PropTypes.string,
+  invalid: PropTypes.bool,
 }
 
 export default Date

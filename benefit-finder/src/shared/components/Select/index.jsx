@@ -28,7 +28,7 @@ function Select({
   invalid,
 }) {
   const { labelSelect, defaultValue } = ui
-  const handleRequired = required === 'TRUE' ? ['required-field'] : ''
+  const handleRequired = required === true ? ['required-field'] : ''
   const defaultClasses = ['bf-usa-select usa-select']
   const utilityClasses = handleRequired
   /**
@@ -60,7 +60,7 @@ function Select({
         id={htmlFor}
         onChange={onChange}
         value={selected || ''}
-        required={required === 'TRUE'}
+        required={required === true}
         aria-invalid={invalid}
       >
         <option value="" key="default" disabled>
@@ -78,8 +78,10 @@ Select.propTypes = {
   options: PropTypes.array,
   selected: PropTypes.string,
   onChange: PropTypes.func,
+  required: PropTypes.bool,
   ui: PropTypes.object,
   className: PropTypes.string,
+  invalid: PropTypes.bool,
 }
 
 export default Select

@@ -34,14 +34,19 @@ if [ -z "${S3_FILE_PATH}" ]; then
   
   } >/dev/null 2>&1
 
+
+
   echo "Cleaning up old backup from S3..."
-  {
-    ## Delete database_restore.tar.gz after it's downloaded.
-    aws s3 rm "s3://${bucket}/database_restore.sql.gz" --no-verify-ssl 2>/dev/null
+{
+  ## Delete database_restore.tar.gz after it's downloaded.
+  if aws s3 rm "s3://${bucket}/database_restore.sql.gz" --no-verify-ssl; then
+    echo "File deleted successfully."
+  else
+    echo "File not found or could not be deleted. Continuing script execution."
+  fi
 
-    cf delete-service-key "${service}" "${service_key}" -f
-
-  } >/dev/null 2>&1
+  cf delete-service-key "${service}" "${service_key}" -f
+} 
 fi
 
 echo "Restore complete!"

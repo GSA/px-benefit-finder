@@ -210,7 +210,7 @@ const BenefitAccordionGroup = ({
                 rel="noopener noreferrer"
               >
                 {visitLabel} {agency.title}{' '}
-                {sourceIsEnglish && SourceIsEnglish === 'TRUE'
+                {sourceIsEnglish && SourceIsEnglish === true
                   ? sourceIsEnglish
                   : ''}
               </ObfuscatedLink>

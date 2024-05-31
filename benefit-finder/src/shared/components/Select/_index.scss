@@ -13,5 +13,9 @@
     height: auto;
     border-radius: 3px;
     border-color: color.$alert-red;
+
+    &:focus {
+      outline-offset: 2px;
+    }
   }
 }

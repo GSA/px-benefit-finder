@@ -78,15 +78,15 @@
       "heading": "Important",
       "list": [
         {
-          "item": "For full eligibility and requirements visit each agency providing the benefit."
+          "item": "Visit each agency’s website to find full eligibility requirements."
         },
         {
-          "item": "Modifying your responses and completing more questions may open your eligibility to other benefits."
+          "item": "Your results may change if you answer more questions or modify your answers."
         }
       ],
       "cta": {
-        "text": "To re-start the form",
-        "link": "click here"
+        "text": "",
+        "link": "Clear my answers and restart the form."
       }
     },
     "eligible": {

@@ -10,8 +10,8 @@ const entryKey = Object.keys(b[0])
 const { resultsView } = en
 
 const SourceIsEnglishBenefits = b.slice(5, 7)
-SourceIsEnglishBenefits[0].benefit.SourceIsEnglish = 'TRUE' // ensure true
-SourceIsEnglishBenefits[1].benefit.SourceIsEnglish = 'FALSE' // ensure false
+SourceIsEnglishBenefits[0].benefit.SourceIsEnglish = true // ensure true
+SourceIsEnglishBenefits[1].benefit.SourceIsEnglish = false // ensure false
 
 export default {
   component: BenefitAccordionGroup,

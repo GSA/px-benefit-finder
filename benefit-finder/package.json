@@ -41,6 +41,7 @@
     "cy:run:cross-browser:e2e": "NODE_ENV=test npm run cy:run:e2e && npm run cy:run:edge:e2e && npm run cy:run:firefox:e2e && cy:run:webkit-safari:e2e"
   },
   "dependencies": {
+    "@uswds/uswds": "^3.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-modal": "^3.16.1"
@@ -61,7 +62,6 @@
     "@testing-library/jest-dom": "^6.3.0",
     "@testing-library/react": "^14.2.2",
     "@testing-library/user-event": "^14.5.2",
-    "@uswds/uswds": "3.0.1",
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/coverage-v8": "^1.2.2",
     "concurrently": "^8.2.2",

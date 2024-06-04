@@ -18,12 +18,16 @@ then
     # init submodule
     git submodule init
     git submodule update
-    cd "${BENEFIT_FINDER_MODULE_LOCATION}"
+    cd "${USAGOV_PROJECT_LOCATION}" || exit 1
     git fetch origin prod:prod
     git checkout prod
 else
     echo "usa.gov project directory exists, updating submodule"
     git pull --recurse-submodules
+    cd "${USAGOV_PROJECT_LOCATION}" || exit 1
+    pwd
+    git fetch origin prod:prod
+    git checkout prod
 fi
 
 # check if module directory exist

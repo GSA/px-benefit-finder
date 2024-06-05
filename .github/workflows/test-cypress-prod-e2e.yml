@@ -40,9 +40,9 @@ jobs:
           token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           assignees: ${{ vars.TECH_LEAD }}, ${{ vars.CONTENT_LEAD }}
           title: |
-            [${{ github.workflow }}] failed during [${{ github.event_name }}]
+            [${{ github.workflow }}] failed
           body: |
-            ## Automated issue of Nightly e2e failure
+            ## Automated issue of Prod Links Tests
 
             ## Failure Report:
 

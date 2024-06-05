@@ -1,5 +1,3 @@
-/// <reference types="cypress"/>
-
 import * as utils from '../../support/utils'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 

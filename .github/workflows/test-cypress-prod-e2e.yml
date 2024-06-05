@@ -35,6 +35,7 @@ jobs:
 
       - name: create github issue
         uses: dacbd/create-issue-action@main
+        if: failure()
         with:
           token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           assignees: ${{ vars.TECH_LEAD }}

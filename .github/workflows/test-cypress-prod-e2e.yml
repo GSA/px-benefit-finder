@@ -37,7 +37,7 @@ jobs:
         uses: dacbd/create-issue-action@main
         with:
           token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          assignees: ${{ vars.TECH_LEAD }}, ${{ vars.CONTENT_LEAD }}
+          assignees: ${{ vars.TECH_LEAD }}
           title: "Nightly e2e Test(s) Fail"
           body: |
             ## Automated issue of Nightly e2e failure

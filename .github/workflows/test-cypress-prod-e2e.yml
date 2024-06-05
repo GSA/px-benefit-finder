@@ -1,4 +1,4 @@
-name: Run Cypress e2e Prod Nightly Tests
+name: Run Cypress e2e Prod Links Tests
 
 on:
   workflow_dispatch:
@@ -39,12 +39,14 @@ jobs:
         with:
           token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           assignees: ${{ vars.TECH_LEAD }}
-          title: "Nightly e2e Test(s) Fail"
+          title: |
+            [${{ github.workflow }}] failed during [${{ github.event_name }}]
           body: |
             ## Automated issue of Nightly e2e failure
 
-            <details><summary>Show Errors</summary>
+            ## Failure Report:
 
-            `${{ steps.e2e.outcome }}`
+            > [!IMPORTANT]
+            > Details on failed run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-            </details>
+            - Workflow Path: `${{ github.workflow_ref }}`

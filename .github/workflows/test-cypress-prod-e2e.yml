@@ -38,7 +38,7 @@ jobs:
         if: failure()
         with:
           token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          assignees: ${{ vars.TECH_LEAD }}
+          assignees: ${{ vars.TECH_LEAD }}, ${{ vars.CONTENT_LEAD }}
           title: |
             [${{ github.workflow }}] failed during [${{ github.event_name }}]
           body: |
@@ -48,5 +48,3 @@ jobs:
 
             > [!IMPORTANT]
             > Details on failed run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-
-            - Workflow Path: `${{ github.workflow_ref }}`

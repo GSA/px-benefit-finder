@@ -5,7 +5,6 @@ on:
     branches:
       - dev
       - main
-      - 1393-stop-tome
 
 jobs:
   php-lint:

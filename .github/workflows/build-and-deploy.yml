@@ -77,7 +77,8 @@ jobs:
           node-version-file: "./benefit-finder/package.json"
       - name: Set env.BRANCH
         run: |
-          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+          # echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+          echo "BRANCH=dev" >> $GITHUB_ENV
       - name: Install basic dependancies
         run: |
           ./scripts/pipeline/deb-basic-deps.sh
@@ -123,7 +124,8 @@ jobs:
           node-version-file: "./benefit-finder/package.json"
       - name: Set env.BRANCH
         run: |
-          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+          # echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+          echo "BRANCH=dev" >> $GITHUB_ENV
       - name: Install basic dependancies
         run: ./scripts/pipeline/deb-basic-deps.sh
       - name: Install Cloudfoundry CLI

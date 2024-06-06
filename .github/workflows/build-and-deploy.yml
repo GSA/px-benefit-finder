@@ -2,7 +2,7 @@ name: Build and deploy
 
 on:
   push:
-    branches: 
+    branches:
       - dev
       - main
 
@@ -57,10 +57,10 @@ jobs:
     if: github.ref == 'refs/heads/dev'
     secrets: inherit
   backup-database-main:
-      needs: php-lint
-      uses: ./.github/workflows/database-backup-main.yml
-      if: github.ref == 'refs/heads/main'
-      secrets: inherit
+    needs: php-lint
+    uses: ./.github/workflows/database-backup-main.yml
+    if: github.ref == 'refs/heads/main'
+    secrets: inherit
   component-library:
     needs: [backup-database-dev, backup-database-main]
     if: always() && contains(needs.*.result, 'success') && !contains(needs.*.result, 'failure')
@@ -90,10 +90,10 @@ jobs:
           cd ..
       - name: Deploy Storybook
         env:
-          CF_USER: '${{ secrets.CF_USER }}'
-          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
-          CF_ORG: '${{ secrets.CF_ORG }}'
-          PROJECT: '${{ secrets.PROJECT }}'
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           cd benefit-finder
@@ -146,6 +146,7 @@ jobs:
           sed -i 's/80/8080/g' Dockerfile-cms
           sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
           sed -i 's/\["s3"\]\[\]?/s3\[\]/g' scripts/tome-run.sh scripts/tome-sync.sh
+          sed -i "s|/var/www/scripts/tome-run.sh \$URI \$@||" .docker/src-cms/etc/periodic/1min/generate-static-site
           sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
           sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
           sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
@@ -171,10 +172,10 @@ jobs:
           file: ./usagov-2021/Dockerfile-cms
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }} 
+          labels: ${{ steps.meta.outputs.labels }}
       - name: Configure manifest.yml
         env:
-          PROJECT: '${{ secrets.PROJECT }}'
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
           declare MEMORY
           [ "${BRANCH}" = "dev" ] && MEMORY=${{ vars.CMS_MEMORY_DEV }}
@@ -191,12 +192,12 @@ jobs:
           sed -i '16i\  command: /var/www/scripts/entrypoint.sh' manifest.yml
       - name: Deploy application
         env:
-          CF_USER: '${{ secrets.CF_USER }}'
-          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
-          CF_ORG: '${{ secrets.CF_ORG }}'
-          CR_PAT: '${{ secrets.CR_PAT }}'
-          CR_USERNAME: '${{ secrets.CR_USERNAME }}'
-          PROJECT: '${{ secrets.PROJECT }}'
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          CR_PAT: "${{ secrets.CR_PAT }}"
+          CR_USERNAME: "${{ secrets.CR_USERNAME }}"
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           cd usagov-2021

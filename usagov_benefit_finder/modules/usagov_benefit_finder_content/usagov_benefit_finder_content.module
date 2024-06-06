@@ -337,7 +337,7 @@ function _usagov_benefit_finder_content_node_bears_criteria_edit_form_validate(a
   $result = _usagov_benefit_finder_content_check_criteria_has_child($nid);
   if (!empty($result)) {
     foreach ($result as $row) {
-      $errors[] = t("Can not uncheck Has Child. Have child in Life event form: $row[title] ($row[nid])");
+      $errors[] = t("Can not uncheck "Has Child" field. There are related child values in the Life event form: $row[title] ($row[nid])");
     }
   }
 

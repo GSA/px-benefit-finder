@@ -23,7 +23,7 @@ const NoticesList = ({ data, iconAlt }) => {
       data.data.map((item, i) => {
         return (
           <li className="bf-notice" key={`notice-${i}`}>
-            <Icon type="info" alt={iconAlt} />
+            <Icon type="info" aria-label={iconAlt} role="img" />
             <div
               className="bf-notice-item"
               dangerouslySetInnerHTML={createMarkup(item.notice)}

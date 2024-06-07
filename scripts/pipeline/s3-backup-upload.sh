@@ -19,13 +19,13 @@ echo "Getting backup bucket credentials..."
   AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
 
   export AWS_ACCESS_KEY_ID
-  
+
   bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
   export bucket
 
   AWS_BUCKET="${bucket}"
   export AWS_BUCKET
-  
+
   AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
   export AWS_DEFAULT_REGION
 
@@ -49,7 +49,7 @@ echo "Checking AWS credentials..."
     fi
   done
   echo "Credentials Verified, Proceeding with Upload"
- } 
+ }
 
 echo "Uploading backup..."
  {

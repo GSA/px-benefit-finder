@@ -6,7 +6,7 @@ backup_bucket="${PROJECT}-backup-${BRANCH}"
 space="${PROJECT}-${BRANCH}"
 
 echo "Getting backup bucket credentials..."
-{
+# {
   cf target -s "${space}"
 
   service="${backup_bucket}"
@@ -31,15 +31,15 @@ echo "Getting backup bucket credentials..."
   AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
   export AWS_SECRET_ACCESS_KEY
 
-} &> /dev/null
+# } &> /dev/null
 
 echo "Uploading backup..."
-{
+# {
 
-  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl 2>/dev/null
-  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/latest.sql.gz" --no-verify-ssl 2>/dev/null
+  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl # 2>/dev/null
+  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/latest.sql.gz" --no-verify-ssl # 2>/dev/null
   cf delete-service-key "${service}" "${service_key}" -f
 
-} &> /dev/null
+# } &> /dev/null
 
 echo "File uploaded: $(date +%Y)/$(date +%m)/$(date +%d)/${TIMESTAMP}.sql.gz"

@@ -1,8 +1,13 @@
 name: Clean up service keys
 
+# on:
+#   schedule:
+#     - cron: "30 4 * * *"
+#
 on:
-  schedule:
-    - cron: "30 4 * * *"
+  push:
+    branches:
+      - 1407-service-clean-fix
 
 jobs:
   cleanup-service-keys-dev:

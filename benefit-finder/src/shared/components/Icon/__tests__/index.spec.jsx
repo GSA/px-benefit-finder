@@ -6,4 +6,11 @@ describe('Icon', () => {
     const { asFragment } = render(<Icon type="close" aria-hidden="true" />)
     expect(asFragment()).toMatchSnapshot()
   })
+
+  it('provides a label and graphic role when provided in attributes', () => {
+    const { asFragment } = render(
+      <Icon type="info" aria-label="important" role="img" />
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

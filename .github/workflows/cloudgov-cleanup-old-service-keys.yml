@@ -47,4 +47,3 @@ jobs:
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/cloud-gov-cleanup-service-keys.sh
-

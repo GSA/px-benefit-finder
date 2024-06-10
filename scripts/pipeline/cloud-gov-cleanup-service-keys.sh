@@ -11,6 +11,6 @@ echo "Cleaning up service keys..."
 {
   for key in "${service_keys[@]}"; do
     echo "Deleting service key '${key}'..."
-    cf delete-service-key "${service}" "${key}" -f #>/dev/null 2>&1
+    cf delete-service-key "${service}" "${key}" -f >/dev/null 2>&1
   done
-} #>/dev/null 2>&1
+} >/dev/null 2>&1

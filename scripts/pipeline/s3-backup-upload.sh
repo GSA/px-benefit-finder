@@ -13,7 +13,7 @@ echo "Getting backup bucket credentials..."
   service_key="${service}-pipeline-upload-${BRANCH}-key"
   cf delete-service-key "${service}" "${service_key}" -f
   cf create-service-key "${service}" "${service_key}"
-  sleep 2
+  sleep 20
   s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
 
   AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')

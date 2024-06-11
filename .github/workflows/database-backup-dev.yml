@@ -1,19 +1,18 @@
 name: Database Backup (dev)
 
-# on:
-#   workflow_call:
-#     secrets:
-#       CF_USER:
-#         required: true
-#       CF_PASSWORD:
-#         required: true
-#       CF_ORG:
-#         required: true
-#       PROJECT:
-#         required: true
-#   schedule:
-#     - cron: '0 0 * * *'
 on:
+  workflow_call:
+    secrets:
+      CF_USER:
+        required: true
+      CF_PASSWORD:
+        required: true
+      CF_ORG:
+        required: true
+      PROJECT:
+        required: true
+  # schedule:
+  # - cron: '0 0 * * *'
   push:
     branches:
       - 1381-db-backup-issues
@@ -47,4 +46,3 @@ jobs:
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/database-backup.sh
           source ./scripts/pipeline/s3-backup-upload.sh
-

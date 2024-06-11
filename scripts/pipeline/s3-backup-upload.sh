@@ -51,23 +51,6 @@ echo "Checking AWS credentials..."
   echo "Credentials Verified, Proceeding with Upload"
  } 
 
-
-echo "Checking AWS credentials..."
-# {
-  start_time=$(date +%s)
-  while ! aws sts get-caller-identity > /dev/null 2>&1; do
-    echo "AWS credentials not valid yet, retrying in 15 seconds..."
-    sleep 15
-    current_time=$(date +%s)
-    elapsed_time=$(( current_time - start_time ))
-    if [ $elapsed_time -ge 300 ]; then
-      echo "Error: AWS credentials could not be validated within 5 minutes."
-      exit 1
-    fi
-  done
-  echo "Credentials Verified, Proceeding with Upload"
-# } &> /dev/null
-
 echo "Uploading backup..."
  {
 

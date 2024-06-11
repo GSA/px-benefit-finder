@@ -1,9 +1,9 @@
-name: Run Cypress e2e Prod Nightly Tests
+name: Production Links Test
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 1'
 
 permissions: read-all
 
@@ -18,13 +18,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
           node-version-file: "./benefit-finder/package.json"
 
       - name: Cypress Run
+        id: e2e
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
@@ -32,8 +33,18 @@ jobs:
           config-file: cypress.prod.config.js
           working-directory: benefit-finder
 
-      - uses: actions/upload-artifact@v3
-        if: failure ()
+      - name: create github issue
+        uses: dacbd/create-issue-action@main
+        if: failure()
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+          token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          assignees: ${{ vars.TECH_LEAD }}, ${{ vars.CONTENT_LEAD }}
+          title: |
+            [${{ github.workflow }}] failed
+          body: |
+            ## Automated issue of produciton links test
+
+            ## Failure Report:
+
+            > [!IMPORTANT]
+            > Details on failed run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}

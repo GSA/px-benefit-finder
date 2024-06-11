@@ -11,8 +11,16 @@ on:
         required: true
       PROJECT:
         required: true
+<<<<<<< HEAD
   schedule:
     - cron: "0 0 * * *"
+=======
+  # schedule:
+  # - cron: '0 0 * * *'
+  push:
+    branches:
+      - 1381-db-backup-issues
+>>>>>>> e2048b7f (Dev Backup echo access key id 2)
 
 jobs:
   backup-database:
@@ -42,4 +50,8 @@ jobs:
           export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/database-backup.sh
+<<<<<<< HEAD
           source ./scripts/pipeline/s3-backup-upload.sh
+=======
+          source ./scripts/pipeline/s3-backup-upload.sh
+>>>>>>> e2048b7f (Dev Backup echo access key id 2)

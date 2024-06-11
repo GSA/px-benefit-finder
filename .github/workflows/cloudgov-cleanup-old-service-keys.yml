@@ -2,7 +2,7 @@ name: Clean up service keys
 
 on:
   schedule:
-    - cron: '30 4 * * *'
+    - cron: "30 4 * * *"
 
 jobs:
   cleanup-service-keys-dev:
@@ -19,10 +19,10 @@ jobs:
       - name: Cleanup keys (dev)
         shell: bash
         env:
-          CF_USER: '${{ secrets.CF_USER }}'
-          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
-          CF_ORG: '${{ secrets.CF_ORG }}'
-          PROJECT: '${{ secrets.project }}'
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/cloud-gov-cleanup-service-keys.sh
@@ -40,10 +40,10 @@ jobs:
       - name: Cleanup keys (main)
         shell: bash
         env:
-          CF_USER: '${{ secrets.CF_USER }}'
-          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
-          CF_ORG: '${{ secrets.CF_ORG }}'
-          PROJECT: '${{ secrets.project }}'
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           source ./scripts/pipeline/cloud-gov-cleanup-service-keys.sh

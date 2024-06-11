@@ -17,6 +17,7 @@ echo "Getting backup bucket credentials..."
   s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
 
   AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
+  echo "AWS_ACCESS_KEY_ID IS: ${AWS_ACCESS_KEY_ID}"
   export AWS_ACCESS_KEY_ID
   
   bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')

@@ -15,8 +15,7 @@ on:
   # - cron: '0 0 * * *'
   push:
     branches:
-      - 1381-db-backup-issues
-#
+      - 1391-db-backup-issues
 jobs:
   backup-database:
     runs-on: ubuntu-latest

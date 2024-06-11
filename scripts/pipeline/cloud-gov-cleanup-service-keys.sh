@@ -2,7 +2,7 @@
 
 set -e
 
-service="${PROJECT}-backup-${ENVIRONMENT}"
+service="${PROJECT}-backup-${BRANCH}"
 
 raw_keys=$(cf service-keys "${service}" | sed 1,3d | awk '{print $1}')
 service_keys=("${raw_keys}")

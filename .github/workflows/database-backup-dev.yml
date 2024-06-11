@@ -11,11 +11,9 @@ on:
         required: true
       PROJECT:
         required: true
-  # schedule:
-  # - cron: '0 0 * * *'
-  push:
-    branches:
-      - 1391-db-backup-issues
+  schedule:
+    - cron: "0 0 * * *"
+
 jobs:
   backup-database:
     runs-on: ubuntu-latest

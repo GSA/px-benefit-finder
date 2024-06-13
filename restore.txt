@@ -1,0 +1,12 @@
+Finding the service instance details...
+Setting up SSH tunnel...
+SSH tunnel created.
+Skipping call to client CLI. Connection information:
+
+Host: localhost
+Port: 44265
+Username: u1pqgr5amf7bbsm3
+Password: o95jv0wxlkynbk5qx7fxbmc6o
+Name: cgawsbrokerprodoly1e52tnaanm56
+
+Leave this terminal open while you want to use the SSH tunnel. Press Control-C to stop.

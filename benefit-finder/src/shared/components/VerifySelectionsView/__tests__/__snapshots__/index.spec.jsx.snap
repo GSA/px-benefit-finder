@@ -29,13 +29,13 @@ exports[`VerifySelectionsView > renders a match to the previous snapshot 1`] = `
             class="bf-section-nav-btn-group"
           >
             <button
-              class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
+              class="bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
               type="button"
             >
               Back
             </button>
             <button
-              class="bf-usa-button usa-button"
+              class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
               type="button"
             >
               Confirm

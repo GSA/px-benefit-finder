@@ -245,7 +245,7 @@ exports[`loads intro 1`] = `
             class="bf-cta-wrapper"
           >
             <button
-              class="bf-usa-button usa-button"
+              class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
               type="button"
             >
               Start

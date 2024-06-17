@@ -138,7 +138,7 @@
     },
     "shareResults": {
       "heading": "Imprima y comparta",
-      "shareButton": "Compartir resultados",
+      "shareTrigger": "Compartir resultados",
       "emailTrigger": "Enviar resultados",
       "shareLinkContent": "Copiado",
       "emailSubject": "Resultados del buscador de beneficios de USAGov",

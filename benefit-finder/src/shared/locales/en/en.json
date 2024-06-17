@@ -137,7 +137,7 @@
     },
     "shareResults": {
       "heading": "Share results",
-      "shareButton": "Share link",
+      "shareTrigger": "Share link",
       "shareLinkContent": "Copied",
       "emailTrigger": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",

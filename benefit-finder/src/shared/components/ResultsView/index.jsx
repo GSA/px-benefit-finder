@@ -218,7 +218,7 @@ const ResultsView = ({
                   notEligibleResults?.description
                 )}
               />
-              <Button onClick={handleViewToggle}>
+              <Button secondary onClick={handleViewToggle}>
                 {notEligibleResults?.cta}
               </Button>
             </div>

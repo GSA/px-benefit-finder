@@ -208,6 +208,7 @@ const BenefitAccordionGroup = ({
                 href={SourceLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                noCarrot
               >
                 {visitLabel} {agency.title}{' '}
                 {sourceIsEnglish && SourceIsEnglish === true

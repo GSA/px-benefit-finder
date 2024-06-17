@@ -3,7 +3,7 @@ import { useHandleClassName } from '../../hooks'
 import { Icon } from '../index'
 import Colors from '../../styles/colors/_index.js'
 import PropTypes from 'prop-types'
-import './_index.scss'
+
 /**
  * a functional component that renders a reactive button
  * @component
@@ -55,8 +55,8 @@ function Button({
         setDefaultClasses([
           'bf-usa-button',
           'usa-button',
-          'bf-usa-button--outline',
-          'usa-button--outline',
+          'bf-usa-button--secondary',
+          'usa-button--secondary',
         ])
         break
       case 'unstyled':

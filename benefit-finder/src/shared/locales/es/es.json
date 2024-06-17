@@ -139,7 +139,7 @@
     "shareResults": {
       "heading": "Imprima y comparta",
       "shareButton": "Compartir resultados",
-      "emailButton": "Enviar resultados",
+      "emailTrigger": "Enviar resultados",
       "shareLinkContent": "Copiado",
       "emailSubject": "Resultados del buscador de beneficios de USAGov",
       "description": "Copie o envíe sus resultados por correo. Sus respuestas serán visibles. Solo comparta con quienes confíe."

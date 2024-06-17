@@ -27,7 +27,7 @@ const EmailTrigger = ({ ui, data }) => {
 
   return (
     <a className="bf-email-trigger" onClick={handleClick}>
-      {ui?.EmailTrigger || 'Email'}
+      {ui?.emailTrigger || 'Email'}
     </a>
   )
 }

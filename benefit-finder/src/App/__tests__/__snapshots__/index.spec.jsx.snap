@@ -6979,31 +6979,11 @@ exports[`loads window query scenario 1 1`] = `
                   </i>
                   Share link
                 </button>
-                <button
-                  class="bf-email-button "
-                  type="button"
+                <a
+                  class="bf-email-trigger"
                 >
-                  <i
-                    aria-hidden="true"
-                    data-testid="icon-email"
-                  >
-                    <svg
-                      fill="none"
-                      height="16"
-                      viewBox="0 0 20 16"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M18 0.000244141H2C0.9 0.000244141 0.00999999 0.900244 0.00999999 2.00024L0 14.0002C0 15.1002 0.9 16.0002 2 16.0002H18C19.1 16.0002 20 15.1002 20 14.0002V2.00024C20 0.900244 19.1 0.000244141 18 0.000244141ZM18 14.0002H2V4.00024L10 9.00024L18 4.00024V14.0002ZM10 7.00024L2 2.00024H18L10 7.00024Z"
-                        fill="#005ea2"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </i>
                   Email results
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -13747,31 +13727,11 @@ exports[`loads window query scenario 2 1`] = `
                   </i>
                   Share link
                 </button>
-                <button
-                  class="bf-email-button "
-                  type="button"
+                <a
+                  class="bf-email-trigger"
                 >
-                  <i
-                    aria-hidden="true"
-                    data-testid="icon-email"
-                  >
-                    <svg
-                      fill="none"
-                      height="16"
-                      viewBox="0 0 20 16"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M18 0.000244141H2C0.9 0.000244141 0.00999999 0.900244 0.00999999 2.00024L0 14.0002C0 15.1002 0.9 16.0002 2 16.0002H18C19.1 16.0002 20 15.1002 20 14.0002V2.00024C20 0.900244 19.1 0.000244141 18 0.000244141ZM18 14.0002H2V4.00024L10 9.00024L18 4.00024V14.0002ZM10 7.00024L2 2.00024H18L10 7.00024Z"
-                        fill="#005ea2"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </i>
                   Email results
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -20,16 +20,17 @@ const EmailTrigger = ({ ui, data }) => {
   /**
    * a handler that triggers an email with context from the users window location href
    */
-  const handleClick = () => {
+  const handleClick = e => {
+    e.preventDefault()
     setShareLink(buildURIParameter(window.location.href, data))
     window.location = `mailto:?subject=${ui?.emailSubject}&body=${emailBody}`
   }
 
   return (
     <a
-      href="javascript:void(0)"
+      href=""
       className="bf-email-trigger bf-usa-link usa-link"
-      onClick={handleClick}
+      onClick={e => handleClick(e)}
     >
       {ui?.emailTrigger || 'Email'}
     </a>

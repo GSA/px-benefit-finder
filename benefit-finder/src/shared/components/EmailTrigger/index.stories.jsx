@@ -1,7 +1,7 @@
-import EmailButton from './index.jsx'
+import EmailTrigger from './index.jsx'
 
 export default {
-  component: EmailButton,
+  component: EmailTrigger,
   tags: ['autodocs'],
 }
 

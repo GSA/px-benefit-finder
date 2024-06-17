@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import { buildURIParameter } from '../../utils'
-import './_index.scss'
 
 /**
  * a functional component that renders a button with mailto email context
  * @component
  * @return {html} returns a semantic html button element with a custom function onClick event
  */
-const EmailButton = ({ ui, data }) => {
+const EmailTrigger = ({ ui, data }) => {
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href
@@ -28,9 +27,9 @@ const EmailButton = ({ ui, data }) => {
 
   return (
     <a className="bf-email-trigger" onClick={handleClick}>
-      {ui?.emailButton || 'Email'}
+      {ui?.EmailTrigger || 'Email'}
     </a>
   )
 }
 
-export default EmailButton
+export default EmailTrigger

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import {
   BenefitAccordionGroup,
   Button,
-  EmailButton,
+  EmailTrigger,
   Heading,
   StepBackLink,
   Chevron,
@@ -254,7 +254,7 @@ const ResultsView = ({
                   stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
                 }
               />
-              <EmailButton
+              <EmailTrigger
                 ui={shareResults}
                 data={
                   stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)

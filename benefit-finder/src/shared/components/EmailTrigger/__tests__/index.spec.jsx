@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
-import EmailButton from '../index.jsx'
+import EmailTrigger from '../index.jsx'
 
 describe('Email', () => {
   it('renders a match to the previous snapshot', () => {
-    const { asFragment } = render(<EmailButton />)
+    const { asFragment } = render(<EmailTrigger />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

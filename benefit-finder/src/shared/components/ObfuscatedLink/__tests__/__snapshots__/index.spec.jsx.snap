@@ -3,7 +3,7 @@
 exports[`ObfuscatedLink > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <a
-    class="bf-usa-button usa-button bf-obfuscated-link"
+    class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
   >
     <i
       aria-hidden="true"
@@ -11,7 +11,7 @@ exports[`ObfuscatedLink > renders a match to the previous snapshot 1`] = `
     >
       <svg
         class="bf-carrot-small"
-        fill="white"
+        fill="black"
         height="24"
         viewBox="0 0 24 24"
         width="24"

@@ -372,7 +372,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -381,27 +381,6 @@ exports[`loads view 1`] = `
                        
                        Federal Emergency Management Agency (FEMA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -549,7 +528,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.dol.gov/agencies/owcp/dcmwc/filing_guide_survivor"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -558,27 +537,6 @@ exports[`loads view 1`] = `
                        
                       Department of Labor (DOL)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -749,7 +707,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -758,27 +716,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -1009,7 +946,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1018,27 +955,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -1234,7 +1150,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1243,27 +1159,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -1439,7 +1334,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1448,27 +1343,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -1639,7 +1513,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1648,27 +1522,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -1839,7 +1692,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1848,27 +1701,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -2034,7 +1866,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2043,27 +1875,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -2234,7 +2045,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2243,27 +2054,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -2464,7 +2254,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2473,27 +2263,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -2664,7 +2433,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2673,27 +2442,6 @@ exports[`loads view 1`] = `
                        
                       Department of Defense (DOD)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -2912,7 +2660,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2921,27 +2669,6 @@ exports[`loads view 1`] = `
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -3058,7 +2785,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3067,27 +2794,6 @@ exports[`loads view 1`] = `
                        
                       Department of Interior (DOI) - Indian Affairs
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -3306,7 +3012,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/forms/ssa-5.html"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3315,27 +3021,6 @@ exports[`loads view 1`] = `
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -3506,7 +3191,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://militarypay.defense.gov/Benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3515,27 +3200,6 @@ exports[`loads view 1`] = `
                        
                       Department of Defense (DOD)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -3706,7 +3370,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/education/survivor-dependent-benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3715,27 +3379,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -3923,7 +3566,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3932,27 +3575,6 @@ exports[`loads view 1`] = `
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -4201,7 +3823,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4210,27 +3832,6 @@ exports[`loads view 1`] = `
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -4378,7 +3979,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4387,27 +3988,6 @@ exports[`loads view 1`] = `
                        
                       Department of Justice (DOJ)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -4555,7 +4135,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4564,27 +4144,6 @@ exports[`loads view 1`] = `
                        
                       Department of Justice (DOJ)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -4750,7 +4309,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4759,27 +4318,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -4980,7 +4518,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4989,27 +4527,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -5197,7 +4714,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5206,27 +4723,6 @@ exports[`loads view 1`] = `
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -5397,7 +4893,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5406,27 +4902,6 @@ exports[`loads view 1`] = `
                        
                       Department of Defense (DOD)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -5566,7 +5041,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/eligibility/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5575,27 +5050,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -5766,7 +5220,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5775,27 +5229,6 @@ exports[`loads view 1`] = `
                        
                       Department of Defense (DOD)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -5945,7 +5378,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5954,27 +5387,6 @@ exports[`loads view 1`] = `
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -6182,7 +5594,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6191,27 +5603,6 @@ exports[`loads view 1`] = `
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -6460,7 +5851,7 @@ exports[`loads view 1`] = `
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6469,27 +5860,6 @@ exports[`loads view 1`] = `
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -6937,7 +6307,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6946,27 +6316,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                        Federal Emergency Management Agency (FEMA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -7114,7 +6463,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.dol.gov/agencies/owcp/dcmwc/filing_guide_survivor"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7123,27 +6472,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Labor (DOL)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -7314,7 +6642,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7323,27 +6651,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -7574,7 +6881,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7583,27 +6890,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -7799,7 +7085,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7808,27 +7094,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -8004,7 +7269,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8013,27 +7278,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -8204,7 +7448,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8213,27 +7457,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -8404,7 +7627,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8413,27 +7636,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -8599,7 +7801,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8608,27 +7810,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -8799,7 +7980,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8808,27 +7989,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -9029,7 +8189,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9038,27 +8198,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -9229,7 +8368,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9238,27 +8377,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Defense (DOD)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -9477,7 +8595,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9486,27 +8604,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -9623,7 +8720,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9632,27 +8729,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Interior (DOI) - Indian Affairs
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -9871,7 +8947,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/forms/ssa-5.html"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9880,27 +8956,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -10071,7 +9126,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://militarypay.defense.gov/Benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10080,27 +9135,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Defense (DOD)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -10271,7 +9305,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/education/survivor-dependent-benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10280,27 +9314,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -10488,7 +9501,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10497,27 +9510,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -10766,7 +9758,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10775,27 +9767,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -10943,7 +9914,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10952,27 +9923,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Justice (DOJ)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -11120,7 +10070,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11129,27 +10079,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Justice (DOJ)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -11315,7 +10244,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11324,27 +10253,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -11545,7 +10453,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11554,27 +10462,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -11762,7 +10649,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11771,27 +10658,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -11962,7 +10828,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11971,27 +10837,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Defense (DOD)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -12131,7 +10976,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/burials-memorials/eligibility/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12140,27 +10985,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -12331,7 +11155,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12340,27 +11164,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Department of Defense (DOD)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -12510,7 +11313,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12519,27 +11322,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Veterans Affairs Department (VA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -12747,7 +11529,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12756,27 +11538,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>
@@ -13025,7 +11786,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </ul>
                     </div>
                     <a
-                      class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -13034,27 +11795,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       Social Security Administration (SSA)
                        
-                      <i
-                        aria-hidden="true"
-                        data-testid="icon-carrot-small"
-                      >
-                        <svg
-                          class="bf-carrot-small"
-                          fill="white"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 0h24v24H0z"
-                            fill="none"
-                          />
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </i>
                     </a>
                   </div>
                 </div>

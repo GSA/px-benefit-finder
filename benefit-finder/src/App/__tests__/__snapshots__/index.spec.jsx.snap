@@ -6982,7 +6982,7 @@ exports[`loads window query scenario 1 1`] = `
                 <a
                   class="bf-email-trigger"
                 >
-                  Email
+                  Email results
                 </a>
               </div>
             </div>
@@ -13730,7 +13730,7 @@ exports[`loads window query scenario 2 1`] = `
                 <a
                   class="bf-email-trigger"
                 >
-                  Email
+                  Email results
                 </a>
               </div>
             </div>

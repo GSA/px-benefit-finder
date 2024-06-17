@@ -6568,7 +6568,7 @@ exports[`loads view 1`] = `
               <a
                 class="bf-email-trigger"
               >
-                Email
+                Email results
               </a>
             </div>
           </div>
@@ -13147,7 +13147,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               <a
                 class="bf-email-trigger"
               >
-                Email
+                Email results
               </a>
             </div>
           </div>

@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { buildURIParameter } from '../../utils'
 
 /**
- * a functional component that renders a button with mailto email context
+ * a functional component that renders a anchor with mailto email context
  * @component
- * @return {html} returns a semantic html button element with a custom function onClick event
+ * @return {html} returns a semantic html anchor element with a custom function onClick event
  */
 const EmailTrigger = ({ ui, data }) => {
   /**

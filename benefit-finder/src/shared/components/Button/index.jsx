@@ -3,6 +3,7 @@ import { useHandleClassName } from '../../hooks'
 import { Icon } from '../index'
 import Colors from '../../styles/colors/_index.js'
 import PropTypes from 'prop-types'
+import './_index.scss'
 
 /**
  * a functional component that renders a reactive button
@@ -23,6 +24,7 @@ function Button({
   className,
   onClick,
   secondary,
+  outline,
   disabled,
   unstyled,
   type,
@@ -31,7 +33,13 @@ function Button({
 }) {
   const [defaultClasses, setDefaultClasses] = useState(null)
   const style =
-    secondary === true ? 'secondary' : unstyled === true ? 'unstyled' : null
+    secondary === true
+      ? 'secondary'
+      : outline === true
+        ? 'outline'
+        : unstyled === true
+          ? 'unstyled'
+          : null
   /**
    * a state hook that contains that handles the synthetic hover value
    * @return {boolean} current state of mouseOver/mouseLeave
@@ -57,6 +65,14 @@ function Button({
           'usa-button',
           'bf-usa-button--secondary',
           'usa-button--secondary',
+        ])
+        break
+      case 'outline':
+        setDefaultClasses([
+          'bf-usa-button',
+          'usa-button',
+          'bf-usa-button--outline',
+          'usa-button--outline',
         ])
         break
       case 'unstyled':

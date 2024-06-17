@@ -6566,7 +6566,8 @@ exports[`loads view 1`] = `
                 Share link
               </button>
               <a
-                class="bf-email-trigger"
+                class="bf-email-trigger bf-usa-link usa-link"
+                href="javascript:void(0)"
               >
                 Email results
               </a>
@@ -13145,7 +13146,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 Share link
               </button>
               <a
-                class="bf-email-trigger"
+                class="bf-email-trigger bf-usa-link usa-link"
+                href="javascript:void(0)"
               >
                 Email results
               </a>

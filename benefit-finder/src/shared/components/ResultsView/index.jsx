@@ -9,7 +9,7 @@ import {
   Heading,
   StepBackLink,
   Chevron,
-  ShareButton,
+  ShareTrigger,
   RelativeBenefitList,
   Summary,
 } from '../index'
@@ -247,20 +247,26 @@ const ResultsView = ({
               {shareResults?.heading}
             </Heading>
             <p>{shareResults?.description}</p>
-            <div className="bf-result-view-share-results-button-group">
-              <ShareButton
-                ui={shareResults}
-                data={
-                  stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
-                }
-              />
-              <EmailTrigger
-                ui={shareResults}
-                data={
-                  stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
-                }
-              />
-            </div>
+            <ul className="bf-result-view-share-results-button-group">
+              <li>
+                <ShareTrigger
+                  ui={shareResults}
+                  data={
+                    stepDataArray &&
+                    apiCalls.GET.SelectedValueAll(stepDataArray)
+                  }
+                />
+              </li>
+              <li>
+                <EmailTrigger
+                  ui={shareResults}
+                  data={
+                    stepDataArray &&
+                    apiCalls.GET.SelectedValueAll(stepDataArray)
+                  }
+                />
+              </li>
+            </ul>
           </div>
         </div>
       </div>

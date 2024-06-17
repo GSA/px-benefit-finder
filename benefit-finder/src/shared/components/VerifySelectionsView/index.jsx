@@ -174,10 +174,10 @@ const VerifySelectionsView = ({
                 })}
             </div>
             <div className="bf-section-nav-btn-group">
-              <Button secondary onClick={handleStepBack}>
+              <Button outline onClick={handleStepBack}>
                 {buttonGroup[0].value}
               </Button>
-              <Button onClick={handleStepForward}>
+              <Button secondary onClick={handleStepForward}>
                 {buttonGroup[1].value}
               </Button>
             </div>

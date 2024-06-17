@@ -26,7 +26,11 @@ const EmailTrigger = ({ ui, data }) => {
   }
 
   return (
-    <a className="bf-email-trigger" onClick={handleClick}>
+    <a
+      href="javascript:void(0)"
+      className="bf-email-trigger bf-usa-link usa-link"
+      onClick={handleClick}
+    >
       {ui?.emailTrigger || 'Email'}
     </a>
   )

@@ -6540,7 +6540,7 @@ exports[`loads view 1`] = `
               class="bf-result-view-share-results-button-group"
             >
               <button
-                class="bf-share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                class="bf-share-button bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
                 data-testid="bf-share-button"
                 type="button"
               >
@@ -6566,7 +6566,7 @@ exports[`loads view 1`] = `
                 Share link
               </button>
               <button
-                class="bf-email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                class="bf-email-button bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
                 type="button"
               >
                 <i
@@ -13139,7 +13139,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               class="bf-result-view-share-results-button-group"
             >
               <button
-                class="bf-share-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                class="bf-share-button bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
                 data-testid="bf-share-button"
                 type="button"
               >
@@ -13165,7 +13165,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 Share link
               </button>
               <button
-                class="bf-email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                class="bf-email-button bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
                 type="button"
               >
                 <i

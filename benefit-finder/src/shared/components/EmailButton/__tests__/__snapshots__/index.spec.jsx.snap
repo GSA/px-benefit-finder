@@ -3,7 +3,7 @@
 exports[`Email > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <button
-    class="bf-email-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+    class="bf-email-button bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
     type="button"
   >
     <i

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Button } from '../index'
 import { buildURIParameter } from '../../utils'
 import './_index.scss'
 
@@ -28,14 +27,9 @@ const EmailButton = ({ ui, data }) => {
   }
 
   return (
-    <Button
-      className="bf-email-button"
-      secondary
-      onClick={handleClick}
-      icon="email"
-    >
+    <a className="bf-email-trigger" onClick={handleClick}>
       {ui?.emailButton || 'Email'}
-    </Button>
+    </a>
   )
 }
 

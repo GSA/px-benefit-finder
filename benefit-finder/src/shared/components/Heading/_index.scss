@@ -9,7 +9,7 @@ h2 {
 }
 
 h3 {
-  @include h3($font-family: 'sans');
+  @include h3;
 }
 
 h4 {
@@ -17,7 +17,7 @@ h4 {
 }
 
 h5 {
-  @include h5($font-family: 'sans');
+  @include h5;
 }
 
 h6 {

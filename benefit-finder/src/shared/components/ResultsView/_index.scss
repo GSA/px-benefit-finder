@@ -27,6 +27,17 @@
 .bf-result-view-share-results {
   padding: space.$space-md 0;
   border-bottom: 2px solid color.$base-light-grey;
+  text-align: left;
+
+  p {
+    @include p1($font-family: 'sans');
+  }
+
+  .bf-result-view-unmet-heading,
+  .bf-result-view-relvant-benefits-heading,
+  .bf-result-view-share-results-heading {
+    @include h3;
+  }
 }
 
 .bf-result-view-unmet {
@@ -42,19 +53,7 @@
   }
 }
 
-.bf-result-view-unmet-heading,
-.bf-result-view-relvant-benefits-heading,
-.bf-result-view-share-results-heading {
-  @include h3;
-}
-
-.bf-result-view-share-results {
-  p {
-    @include p2($font-family: 'sans');
-  }
-}
-
-.bf-result-view-share-results-button-group {
+.bf-result-view-share-results-trigger-group {
   button {
     margin-bottom: space.$space-sm;
   }

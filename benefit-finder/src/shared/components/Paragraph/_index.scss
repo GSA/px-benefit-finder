@@ -3,7 +3,7 @@
 
 p,
 p.regular {
-  @include p1;
+  @include p1($font-family: 'sans');
 }
 
 p.bold {

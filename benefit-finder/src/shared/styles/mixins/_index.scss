@@ -15,7 +15,7 @@
   @include font-family($font-family);
 
   font-size: 39px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 45.79px;
 }
 
@@ -23,7 +23,7 @@
   @include font-family($font-family);
 
   font-size: 36px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 45.79px;
 }
 
@@ -31,14 +31,14 @@
   @include font-family($font-family);
 
   font-size: 32px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 37.57px;
 }
 
 @mixin h3($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 24.65px;
 }
@@ -46,15 +46,15 @@
 @mixin h4($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: 21px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 700;
   line-height: 34.44px;
 }
 
 @mixin h5($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 34.44px;
 }
@@ -62,8 +62,8 @@
 @mixin h6($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 34.44px;
 }
 
@@ -80,13 +80,13 @@
 
   font-size: 16px;
   font-weight: 700;
-  line-height: 134.09%;
+  line-height: 18.8px;
 }
 
 @mixin p1($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 18.8px;
 }
@@ -94,7 +94,7 @@
 @mixin p2($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 21.37px;
 }

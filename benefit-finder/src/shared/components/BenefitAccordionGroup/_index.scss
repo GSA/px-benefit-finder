@@ -11,7 +11,7 @@
     }
 
     .bf-usa-detail-title {
-      @include h5-sans;
+      @include h5($font-family: 'sans');
 
       padding: 0;
       margin: 0 0 24px;

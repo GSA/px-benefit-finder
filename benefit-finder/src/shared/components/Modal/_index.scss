@@ -5,7 +5,7 @@
 
 #benefit-finder-modal {
   .bf-modal-button {
-    @include important-bold-sans;
+    @include important-bold($font-family: 'sans');
 
     background-color: transparent;
     border: 0;
@@ -17,10 +17,10 @@
 
   .bf-nav-item-one,
   .bf-nav-item-two {
-    @include important-bold-sans;
+    @include important-bold($font-family: 'sans');
 
     &.bf-usa-button {
-      @include important-bold-sans;
+      @include important-bold($font-family: 'sans');
 
       background-color: color.$pop-blue;
       color: color.$white;
@@ -34,7 +34,7 @@
   }
 
   .bf-modal-heading {
-    @include important-bold-sans;
+    @include important-bold($font-family: 'sans');
 
     font-weight: 600;
     color: color.$pure-black;

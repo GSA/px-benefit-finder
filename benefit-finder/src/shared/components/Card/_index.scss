@@ -48,7 +48,7 @@
   }
 
   h3.bf-usa-card__heading {
-    @include h5-sans;
+    @include h5($font-family: 'sans');
   }
 
   .bf-usa-card__body {
@@ -72,7 +72,7 @@
       margin-bottom: 0;
 
       p {
-        @include p2-sans;
+        @include p2($font-family: 'sans');
 
         max-width: 90%;
       }

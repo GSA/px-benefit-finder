@@ -3,7 +3,7 @@
 @use '../../styles/space/_index.scss' as space;
 
 .time-indicator {
-  @include important-bold-sans;
+  @include important-bold($font-family: 'sans');
 
   color: color.$dark-medium-grey;
   text-align: center;

@@ -2,7 +2,7 @@
 @use '../../styles/mixins/_index.scss' as *;
 
 .bf-usa-button {
-  @include important-bold-sans;
+  @include important-bold($font-family: 'sans');
 
   background-color: color.$pop-blue;
   color: color.$white;

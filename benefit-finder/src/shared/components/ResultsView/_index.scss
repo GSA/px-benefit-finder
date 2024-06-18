@@ -36,30 +36,22 @@
   }
 
   p {
+    @include p2($font-family: 'sans');
+
     padding-bottom: space.$padding-bottom-md;
   }
 }
 
-.bf-result-view-unmet-heading {
-  @include h6;
-
-  text-align: center;
-}
-
-.bf-result-view-relvant-benefits-heading {
-  @include h6;
-
-  text-align: center;
-}
-
+.bf-result-view-unmet-heading,
+.bf-result-view-relvant-benefits-heading,
 .bf-result-view-share-results-heading {
-  @include h4;
-
-  text-align: center;
+  @include h3;
 }
 
 .bf-result-view-share-results {
-  text-align: center;
+  p {
+    @include p2($font-family: 'sans');
+  }
 }
 
 .bf-result-view-share-results-button-group {

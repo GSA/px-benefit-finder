@@ -3,7 +3,7 @@
 @use '../../styles/space/_index.scss' as space;
 
 .bf-verify-criteria-value {
-  @include h5-sans;
+  @include important-x-bold($font-family: 'sans');
 
   margin-bottom: space.$space-lg;
   border-bottom: 1px solid color.$base-light-grey;
@@ -11,13 +11,13 @@
 }
 
 .bf-verify-criteria-legend {
-  @include p2-sans;
+  @include p2($font-family: 'sans');
 
   padding-bottom: space.$padding-bottom-sm;
 }
 
 .bf-verify-criteria-section-heading {
-  @include h6;
+  @include h5;
 
   border-bottom: 2px solid color.$marine;
   padding-bottom: space.$padding-bottom-lg;

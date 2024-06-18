@@ -7,7 +7,7 @@ p.regular {
 }
 
 p.bold {
-  @include important-bold-sans;
+  @include important-bold($font-family: 'sans');
 }
 
 p.extrabold {
@@ -15,11 +15,11 @@ p.extrabold {
 }
 
 p.light {
-  @include p3-sans;
+  @include p3($font-family: 'sans');
 }
 
 p.thin {
-  @include p3-sans;
+  @include p3($font-family: 'sans');
 
   font-weight: 100;
 }

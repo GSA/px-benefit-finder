@@ -7,9 +7,9 @@
 }
 
 h2.bf-usa-alert__heading {
-  @include h5-sans;
+  @include h5($font-family: 'sans');
 }
 
 .bf-usa-alert__text {
-  @include p2-sans;
+  @include p2($font-family: 'sans');
 }

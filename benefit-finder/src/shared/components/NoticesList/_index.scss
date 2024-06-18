@@ -19,7 +19,7 @@
 }
 
 .bf-notice-item {
-  @include important-bold-sans;
+  @include important-bold($font-family: 'sans');
 }
 
 .bf-line-sperator-wrapper {

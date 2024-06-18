@@ -2,7 +2,7 @@
 @use '../../styles/space/_index.scss' as space;
 
 .bf-legend {
-  @include h6;
+  @include h5;
 
   padding-bottom: space.$padding-bottom-md;
   max-width: fit-content;

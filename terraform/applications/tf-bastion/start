@@ -1,0 +1,35 @@
+#!/bin/bash
+
+home="/home/vcap"
+#app_path="${home}/app"
+
+rm /home/vcap/deps/0/bin/tofu
+wget -q "https://github.com/opentofu/opentofu/releases/download/v${OPENTOFU_VERSION}/tofu_${OPENTOFU_VERSION}_amd64.deb"
+dpkg-deb -R "tofu_${OPENTOFU_VERSION}_amd64.deb" ${home}/deps/0/apt/
+ln -s "${home}/deps/0/apt/usr/bin/tofu" "${home}/deps/0/bin/tofu"
+rm -f "tofu_${OPENTOFU_VERSION}_amd64.deb"
+
+PG_CONN_STR=$(echo "${VCAP_SERVICES}" | jq '."aws-rds"[].credentials.uri')
+PGDATABASE=$(echo "${VCAP_SERVICES}" | jq '."aws-rds"[].credentials.db_name')
+PGHOST=$(echo "${VCAP_SERVICES}" | jq '."aws-rds"[].credentials.host')
+PGPASSWORD=$(echo "${VCAP_SERVICES}" | jq '."aws-rds"[].credentials.password')
+PGPORT=$(echo "${VCAP_SERVICES}" | jq '."aws-rds"[].credentials.port')
+PGUSER=$(echo "${VCAP_SERVICES}" | jq '."aws-rds"[].credentials.username')
+
+echo "export PATH=${PATH}:${home}/deps/0/bin" > "${home}/exports.sh"
+echo "alias terraform=tofu" >> "${home}/exports.sh"
+echo "alias tf=tofu" >> "${home}/exports.sh"
+
+{
+  echo "export PG_CONN_STR=${PG_CONN_STR}"
+  echo "export PGDATABASE=${PGDATABASE}"
+  echo "export PGHOST=${PGHOST}"
+  echo "export PGPASSWORD=${PGPASSWORD}"
+  echo "export PGPORT=${PGPORT}"
+  echo "export PGUSER=${PGUSER}"
+} > "${home}/exports.sh"
+
+sed -i '1s/^/source exports.sh\n/' "${home}/.bashrc"
+
+while : ; do sleep 500 ; done
+

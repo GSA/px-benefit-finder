@@ -1,5 +1,15 @@
 #!/bin/bash
 
+home="/home/vcap"
+PATH="${PATH}:${home}/deps/0/bin/"
+
+VERSION=$(curl  "https://api.github.com/repos/cli/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c2-)
+curl -sSL "https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_amd64.tar.gz" -o "gh_${VERSION}_linux_amd64.tar.gz"
+
+tar xvf "gh_${VERSION}_linux_amd64.tar.gz"
+cp "gh_${VERSION}_linux_amd64/bin/gh" ${home}/deps/0/bin/
+
+
 ## Field configuration options.
 gh_status_option="QA"
 gh_domain_option="DevOps"

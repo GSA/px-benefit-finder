@@ -1,89 +1,157 @@
+// Merriweather Web
 @mixin h0 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 100%;
+  font-family:
+    "Merriweather Web",
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
+  font-size: 39px;
+  font-weight: 900;
+  line-height: 45.79px;
 }
 
 @mixin h1 {
-  font-family: 'Public Sans', sans-serif;
+  font-family:
+    "Merriweather Web",
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
   font-size: 36px;
-  font-weight: 800;
-  line-height: 100%;
+  font-weight: 900;
+  line-height: 45.79px;
 }
 
 @mixin h2 {
-  font-family: 'Public Sans', sans-serif;
+  font-family:
+    "Merriweather Web",
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
   font-size: 32px;
-  font-weight: 800;
-  line-height: 100%;
-}
-
-@mixin h3 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 134.09%;
+  font-weight: 900;
+  line-height: 37.57px;
 }
 
 @mixin h4 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 114.59%;
-}
-
-@mixin h5 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 134.09%;
+  font-family:
+    "Merriweather Web",
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 32.57px;
 }
 
 @mixin h6 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 20px;
+  font-family:
+    "Merriweather Web",
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
+  font-size: 21px;
   font-weight: 700;
-  line-height: 134.09%;
+  line-height: 34.44px;
 }
 
 @mixin important-x-bold {
-  font-family: 'Public Sans', sans-serif;
+  font-family:
+    "Merriweather Web",
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
   font-size: 16px;
   font-weight: 800;
-  line-height: 134.09%;
-}
-
-@mixin important-bold {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 134.09%;
-}
-
-@mixin p {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
   line-height: 18.8px;
 }
 
 @mixin p1 {
-  font-family: 'Public Sans', sans-serif;
+  font-family:
+    "Merriweather Web",
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18.8px;
 }
 
+// Source Sans Pro Web
+@mixin h3 {
+  font-family:
+    "Source Sans Pro Web",
+    "Helvetica Neue",
+    Helvetica,
+    Roboto,
+    Arial,
+    sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 24.65px;
+}
+
+@mixin h5 {
+  font-family:
+    "Source Sans Pro Web",
+    "Helvetica Neue",
+    Helvetica,
+    Roboto,
+    Arial,
+    sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.63px;
+}
+
+@mixin important-bold {
+  font-family:
+    "Source Sans Pro Web",
+    "Helvetica Neue",
+    Helvetica,
+    Roboto,
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 134.09%;
+}
+
+// Source Sans Pro Web
 @mixin p2 {
-  font-family: 'Public Sans', sans-serif;
+  font-family:
+    "Source Sans Pro Web",
+    "Helvetica Neue",
+    Helvetica,
+    Roboto,
+    Arial,
+    sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 18.8px;
 }
 
 @mixin p3 {
-  font-family: 'Public Sans', sans-serif;
+  font-family:
+    "Source Sans Pro Web",
+    "Helvetica Neue",
+    Helvetica,
+    Roboto,
+    Arial,
+    sans-serif;
   font-size: 15px;
   font-weight: 200;
   line-height: 18.8px;

@@ -25,7 +25,7 @@ exports[`loads intro 1`] = `
           >
             <h1
               aria-level="1"
-              class="bf-chevron-heading font-family-sans"
+              class="bf-chevron-heading "
               id="skip-to-h1"
               role="heading"
             >
@@ -53,7 +53,7 @@ exports[`loads intro 1`] = `
         >
           <h2
             aria-level="2"
-            class="font-family-sans"
+            class=""
             id=""
             role="heading"
           >
@@ -116,7 +116,7 @@ exports[`loads intro 1`] = `
             >
               <h2
                 aria-level="2"
-                class="bf-intro-process-notices-heading font-family-sans"
+                class="bf-intro-process-notices-heading "
                 id=""
                 role="heading"
               >
@@ -291,7 +291,7 @@ exports[`loads window query scenario 1 1`] = `
           >
             <h1
               aria-level="1"
-              class="bf-chevron-heading font-family-sans"
+              class="bf-chevron-heading "
               id="skip-to-h1"
               role="heading"
             >
@@ -322,7 +322,7 @@ exports[`loads window query scenario 1 1`] = `
             </button>
             <h2
               aria-level="2"
-              class="bf-result-view-heading font-family-sans"
+              class="bf-result-view-heading "
               id=""
               role="heading"
             >
@@ -330,7 +330,7 @@ exports[`loads window query scenario 1 1`] = `
             </h2>
             <h3
               aria-level="3"
-              class="bf-result-view-description font-family-sans"
+              class="bf-result-view-description "
               id=""
               role="heading"
             >
@@ -348,7 +348,7 @@ exports[`loads window query scenario 1 1`] = `
               >
                 <h4
                   aria-level="4"
-                  class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+                  class="bf-usa-summary-box__heading usa-summary-box__heading "
                   id="bf-summary-box-key-information"
                   role="heading"
                 >
@@ -448,7 +448,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -467,7 +467,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -727,7 +727,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -746,7 +746,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -904,7 +904,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -923,7 +923,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -1104,7 +1104,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -1123,7 +1123,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -1339,7 +1339,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -1358,7 +1358,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -1564,7 +1564,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -1583,7 +1583,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -1769,7 +1769,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -1788,7 +1788,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -1969,7 +1969,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -1988,7 +1988,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -2169,7 +2169,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -2188,7 +2188,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -2364,7 +2364,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -2383,7 +2383,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -2564,7 +2564,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -2583,7 +2583,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -2794,7 +2794,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -2813,7 +2813,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -2994,7 +2994,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -3013,7 +3013,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -3231,7 +3231,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -3250,7 +3250,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -3376,7 +3376,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -3395,7 +3395,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -3625,7 +3625,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -3644,7 +3644,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -3825,7 +3825,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -3844,7 +3844,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -4025,7 +4025,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -4044,7 +4044,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -4241,7 +4241,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -4260,7 +4260,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -4520,7 +4520,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -4539,7 +4539,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -4697,7 +4697,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -4716,7 +4716,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -4874,7 +4874,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -4893,7 +4893,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -5069,7 +5069,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -5088,7 +5088,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -5299,7 +5299,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -5318,7 +5318,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -5516,7 +5516,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -5535,7 +5535,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -5716,7 +5716,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -5735,7 +5735,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -5885,7 +5885,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -5904,7 +5904,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -6085,7 +6085,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -6104,7 +6104,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -6264,7 +6264,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -6283,7 +6283,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -6500,7 +6500,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -6519,7 +6519,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -6728,7 +6728,7 @@ exports[`loads window query scenario 1 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-unmet-heading font-family-sans"
+                class="bf-result-view-unmet-heading "
                 id=""
                 role="heading"
               >
@@ -6754,7 +6754,7 @@ exports[`loads window query scenario 1 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-relvant-benefits-heading font-family-sans"
+                class="bf-result-view-relvant-benefits-heading "
                 id=""
                 role="heading"
               >
@@ -6797,7 +6797,7 @@ exports[`loads window query scenario 1 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class="bf-usa-card__heading usa-card__heading font-family-sans"
+                        class="bf-usa-card__heading usa-card__heading "
                         id=""
                         role="heading"
                       >
@@ -6890,7 +6890,7 @@ exports[`loads window query scenario 1 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class="bf-usa-card__heading usa-card__heading font-family-sans"
+                        class="bf-usa-card__heading usa-card__heading "
                         id=""
                         role="heading"
                       >
@@ -6941,7 +6941,7 @@ exports[`loads window query scenario 1 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-share-results-heading font-family-sans"
+                class="bf-result-view-share-results-heading "
                 id=""
                 role="heading"
               >
@@ -7047,7 +7047,7 @@ exports[`loads window query scenario 2 1`] = `
           >
             <h1
               aria-level="1"
-              class="bf-chevron-heading font-family-sans"
+              class="bf-chevron-heading "
               id="skip-to-h1"
               role="heading"
             >
@@ -7078,7 +7078,7 @@ exports[`loads window query scenario 2 1`] = `
             </button>
             <h2
               aria-level="2"
-              class="bf-result-view-heading font-family-sans"
+              class="bf-result-view-heading "
               id=""
               role="heading"
             >
@@ -7086,7 +7086,7 @@ exports[`loads window query scenario 2 1`] = `
             </h2>
             <h3
               aria-level="3"
-              class="bf-result-view-description font-family-sans"
+              class="bf-result-view-description "
               id=""
               role="heading"
             >
@@ -7104,7 +7104,7 @@ exports[`loads window query scenario 2 1`] = `
               >
                 <h4
                   aria-level="4"
-                  class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+                  class="bf-usa-summary-box__heading usa-summary-box__heading "
                   id="bf-summary-box-key-information"
                   role="heading"
                 >
@@ -7204,7 +7204,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -7223,7 +7223,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -7482,7 +7482,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -7501,7 +7501,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -7671,7 +7671,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -7690,7 +7690,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -7871,7 +7871,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -7890,7 +7890,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -8131,7 +8131,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -8150,7 +8150,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -8356,7 +8356,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -8375,7 +8375,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -8561,7 +8561,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -8580,7 +8580,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -8761,7 +8761,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -8780,7 +8780,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -8961,7 +8961,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -8980,7 +8980,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -9156,7 +9156,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -9175,7 +9175,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -9356,7 +9356,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -9375,7 +9375,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -9586,7 +9586,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -9605,7 +9605,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -9785,7 +9785,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -9804,7 +9804,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -10033,7 +10033,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -10052,7 +10052,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -10191,7 +10191,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -10210,7 +10210,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -10440,7 +10440,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -10459,7 +10459,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -10640,7 +10640,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -10659,7 +10659,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -10840,7 +10840,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -10859,7 +10859,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -11057,7 +11057,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -11076,7 +11076,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -11324,7 +11324,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -11343,7 +11343,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -11501,7 +11501,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -11520,7 +11520,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -11678,7 +11678,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -11697,7 +11697,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -11873,7 +11873,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -11892,7 +11892,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -12103,7 +12103,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -12122,7 +12122,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -12320,7 +12320,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -12339,7 +12339,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -12520,7 +12520,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -12539,7 +12539,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -12689,7 +12689,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -12708,7 +12708,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -12889,7 +12889,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -12908,7 +12908,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -13068,7 +13068,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -13087,7 +13087,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -13280,7 +13280,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
+                        class="bf-usa-detail-title "
                         id=""
                         role="heading"
                       >
@@ -13299,7 +13299,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
+                          class="bf-key-eligibility-criteria-heading "
                           id=""
                           role="heading"
                         >
@@ -13496,7 +13496,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-unmet-heading font-family-sans"
+                class="bf-result-view-unmet-heading "
                 id=""
                 role="heading"
               >
@@ -13522,7 +13522,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-relvant-benefits-heading font-family-sans"
+                class="bf-result-view-relvant-benefits-heading "
                 id=""
                 role="heading"
               >
@@ -13565,7 +13565,7 @@ exports[`loads window query scenario 2 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class="bf-usa-card__heading usa-card__heading font-family-sans"
+                        class="bf-usa-card__heading usa-card__heading "
                         id=""
                         role="heading"
                       >
@@ -13658,7 +13658,7 @@ exports[`loads window query scenario 2 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class="bf-usa-card__heading usa-card__heading font-family-sans"
+                        class="bf-usa-card__heading usa-card__heading "
                         id=""
                         role="heading"
                       >
@@ -13709,7 +13709,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-share-results-heading font-family-sans"
+                class="bf-result-view-share-results-heading "
                 id=""
                 role="heading"
               >

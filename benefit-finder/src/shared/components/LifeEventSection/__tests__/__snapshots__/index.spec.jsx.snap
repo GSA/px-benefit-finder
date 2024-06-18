@@ -4,7 +4,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <h1
     aria-level="1"
-    class="bf-section-heading font-family-sans"
+    class="bf-section-heading "
     id="skip-to-h1"
     role="heading"
   >
@@ -79,7 +79,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           >
             <h2
               aria-level="2"
-              class="bf-usa-alert__heading usa-alert__heading font-family-sans"
+              class="bf-usa-alert__heading usa-alert__heading "
               id=""
               role="heading"
             >
@@ -94,7 +94,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         </div>
         <h2
           aria-level="2"
-          class="bf-usa-section-heading font-family-sans"
+          class="bf-usa-section-heading "
           id=""
           role="heading"
         >

@@ -28,7 +28,7 @@ exports[`loads view 1`] = `
         >
           <h1
             aria-level="1"
-            class="bf-chevron-heading font-family-sans"
+            class="bf-chevron-heading "
             id="skip-to-h1"
             role="heading"
           >
@@ -59,7 +59,7 @@ exports[`loads view 1`] = `
           </button>
           <h2
             aria-level="2"
-            class="bf-result-view-heading font-family-sans"
+            class="bf-result-view-heading "
             id=""
             role="heading"
           >
@@ -67,7 +67,7 @@ exports[`loads view 1`] = `
           </h2>
           <h3
             aria-level="3"
-            class="bf-result-view-description font-family-sans"
+            class="bf-result-view-description "
             id=""
             role="heading"
           >
@@ -85,7 +85,7 @@ exports[`loads view 1`] = `
             >
               <h4
                 aria-level="4"
-                class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+                class="bf-usa-summary-box__heading usa-summary-box__heading "
                 id="bf-summary-box-key-information"
                 role="heading"
               >
@@ -185,7 +185,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -204,7 +204,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -464,7 +464,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -483,7 +483,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -641,7 +641,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -660,7 +660,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -841,7 +841,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -860,7 +860,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -1101,7 +1101,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -1120,7 +1120,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -1326,7 +1326,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -1345,7 +1345,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -1531,7 +1531,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -1550,7 +1550,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -1731,7 +1731,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -1750,7 +1750,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -1931,7 +1931,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -1950,7 +1950,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -2126,7 +2126,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -2145,7 +2145,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -2326,7 +2326,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -2345,7 +2345,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -2556,7 +2556,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -2575,7 +2575,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -2755,7 +2755,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -2774,7 +2774,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -3004,7 +3004,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -3023,7 +3023,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -3149,7 +3149,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -3168,7 +3168,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -3398,7 +3398,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -3417,7 +3417,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -3598,7 +3598,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -3617,7 +3617,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -3798,7 +3798,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -3817,7 +3817,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -4014,7 +4014,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -4033,7 +4033,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -4293,7 +4293,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -4312,7 +4312,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -4470,7 +4470,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -4489,7 +4489,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -4647,7 +4647,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -4666,7 +4666,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -4842,7 +4842,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -4861,7 +4861,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -5072,7 +5072,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -5091,7 +5091,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -5289,7 +5289,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -5308,7 +5308,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -5489,7 +5489,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -5508,7 +5508,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -5658,7 +5658,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -5677,7 +5677,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -5858,7 +5858,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -5877,7 +5877,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -6037,7 +6037,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -6056,7 +6056,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -6273,7 +6273,7 @@ exports[`loads view 1`] = `
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -6292,7 +6292,7 @@ exports[`loads view 1`] = `
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -6501,7 +6501,7 @@ exports[`loads view 1`] = `
           >
             <h3
               aria-level="3"
-              class="bf-result-view-unmet-heading font-family-sans"
+              class="bf-result-view-unmet-heading "
               id=""
               role="heading"
             >
@@ -6527,7 +6527,7 @@ exports[`loads view 1`] = `
           >
             <h3
               aria-level="3"
-              class="bf-result-view-share-results-heading font-family-sans"
+              class="bf-result-view-share-results-heading "
               id=""
               role="heading"
             >
@@ -6627,7 +6627,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
         >
           <h1
             aria-level="1"
-            class="bf-chevron-heading font-family-sans"
+            class="bf-chevron-heading "
             id="skip-to-h1"
             role="heading"
           >
@@ -6658,7 +6658,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           </button>
           <h2
             aria-level="2"
-            class="bf-result-view-heading font-family-sans"
+            class="bf-result-view-heading "
             id=""
             role="heading"
           >
@@ -6666,7 +6666,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           </h2>
           <h3
             aria-level="3"
-            class="bf-result-view-description font-family-sans"
+            class="bf-result-view-description "
             id=""
             role="heading"
           >
@@ -6684,7 +6684,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             >
               <h4
                 aria-level="4"
-                class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+                class="bf-usa-summary-box__heading usa-summary-box__heading "
                 id="bf-summary-box-key-information"
                 role="heading"
               >
@@ -6784,7 +6784,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -6803,7 +6803,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -7063,7 +7063,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -7082,7 +7082,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -7240,7 +7240,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -7259,7 +7259,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -7440,7 +7440,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -7459,7 +7459,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -7700,7 +7700,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -7719,7 +7719,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -7925,7 +7925,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -7944,7 +7944,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -8130,7 +8130,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -8149,7 +8149,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -8330,7 +8330,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -8349,7 +8349,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -8530,7 +8530,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -8549,7 +8549,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -8725,7 +8725,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -8744,7 +8744,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -8925,7 +8925,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -8944,7 +8944,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -9155,7 +9155,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -9174,7 +9174,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -9354,7 +9354,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -9373,7 +9373,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -9603,7 +9603,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -9622,7 +9622,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -9748,7 +9748,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -9767,7 +9767,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -9997,7 +9997,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -10016,7 +10016,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -10197,7 +10197,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -10216,7 +10216,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -10397,7 +10397,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -10416,7 +10416,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -10613,7 +10613,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -10632,7 +10632,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -10892,7 +10892,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -10911,7 +10911,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -11069,7 +11069,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -11088,7 +11088,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -11246,7 +11246,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -11265,7 +11265,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -11441,7 +11441,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -11460,7 +11460,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -11671,7 +11671,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -11690,7 +11690,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -11888,7 +11888,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -11907,7 +11907,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -12088,7 +12088,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -12107,7 +12107,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -12257,7 +12257,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -12276,7 +12276,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -12457,7 +12457,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -12476,7 +12476,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -12636,7 +12636,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -12655,7 +12655,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -12872,7 +12872,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                   <div>
                     <h4
                       aria-level="4"
-                      class="bf-usa-detail-title font-family-sans"
+                      class="bf-usa-detail-title "
                       id=""
                       role="heading"
                     >
@@ -12891,7 +12891,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                        
                       <h5
                         aria-level="5"
-                        class="bf-key-eligibility-criteria-heading font-family-sans"
+                        class="bf-key-eligibility-criteria-heading "
                         id=""
                         role="heading"
                       >
@@ -13100,7 +13100,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           >
             <h3
               aria-level="3"
-              class="bf-result-view-unmet-heading font-family-sans"
+              class="bf-result-view-unmet-heading "
               id=""
               role="heading"
             >
@@ -13126,7 +13126,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           >
             <h3
               aria-level="3"
-              class="bf-result-view-share-results-heading font-family-sans"
+              class="bf-result-view-share-results-heading "
               id=""
               role="heading"
             >

@@ -10,7 +10,7 @@ exports[`Chevron > renders a match to the previous snapshot 1`] = `
     >
       <h1
         aria-level="1"
-        class="bf-chevron-heading font-family-sans"
+        class="bf-chevron-heading "
         id="skip-to-h1"
         role="heading"
       />

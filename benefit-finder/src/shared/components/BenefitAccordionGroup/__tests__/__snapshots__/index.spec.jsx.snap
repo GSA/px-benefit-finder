@@ -62,7 +62,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
         <div>
           <h4
             aria-level="4"
-            class="bf-usa-detail-title font-family-sans"
+            class="bf-usa-detail-title "
             id=""
             role="heading"
           >
@@ -81,7 +81,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
              
             <h5
               aria-level="5"
-              class="bf-key-eligibility-criteria-heading font-family-sans"
+              class="bf-key-eligibility-criteria-heading "
               id=""
               role="heading"
             >

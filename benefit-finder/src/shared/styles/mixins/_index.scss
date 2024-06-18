@@ -1,178 +1,107 @@
-// Merriweather Web
+@mixin font-family($font-family) {
+  @if $font-family == 'sans' {
+    font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto,
+      Arial, sans-serif;
+  } @else {
+    font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
+      serif;
+  }
+}
 
-@mixin h0 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
+// Merriweather: 'serif'
+// Source Sans Pro: 'sans'
+
+@mixin h0($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 39px;
   font-weight: 900;
   line-height: 45.79px;
 }
 
-@mixin h1 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
+@mixin h1($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 36px;
   font-weight: 900;
   line-height: 45.79px;
 }
 
-@mixin h2 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
+@mixin h2($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 32px;
   font-weight: 900;
   line-height: 37.57px;
 }
 
-@mixin h3 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
+@mixin h3($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 26px;
   font-weight: 700;
   line-height: 24.65px;
 }
 
-@mixin h4 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
+@mixin h4($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 21px;
   font-weight: 400;
   line-height: 34.44px;
 }
 
-@mixin h5 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 22.63px;
-}
+@mixin h5($font-family: 'serif') {
+  @include font-family($font-family);
 
-@mixin h6 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
   font-size: 21px;
   font-weight: 700;
   line-height: 34.44px;
 }
 
-@mixin important-x-bold {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 18.8px;
-}
+@mixin h6($font-family: 'serif') {
+  @include font-family($font-family);
 
-@mixin important-bold {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 134.09%;
-}
-
-@mixin p1 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18.8px;
-}
-
-@mixin p2 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 21.37px;
-}
-
-@mixin p3 {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 18.8px;
-}
-
-// Source Sans Pro Web
-
-@mixin h0-sans {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
-  font-size: 39px;
-  font-weight: 900;
-  line-height: 45.79px;
-}
-
-@mixin h1-sans {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 45.79px;
-}
-
-@mixin h3-sans {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 24.65px;
-}
-
-@mixin h4-sans {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
-  font-size: 26px;
-  font-weight: 900;
-  line-height: 32.57px;
-}
-
-@mixin h5-sans {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 22.63px;
+  line-height: 34.44px;
 }
 
-@mixin important-x-bold-sans {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
+@mixin important-x-bold($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 16px;
   font-weight: 800;
   line-height: 18.8px;
 }
 
-@mixin important-bold-sans {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
+@mixin important-bold($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 16px;
   font-weight: 700;
   line-height: 134.09%;
 }
 
-@mixin p1-sans {
-  font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
-    serif;
-  font-size: 16px;
+@mixin p1($font-family: 'serif') {
+  @include font-family($font-family);
+
+  font-size: 17px;
   font-weight: 400;
   line-height: 18.8px;
 }
 
-@mixin p2-sans {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
-  font-size: 17px;
+@mixin p2($font-family: 'serif') {
+  @include font-family($font-family);
+
+  font-size: 16px;
   font-weight: 400;
   line-height: 21.37px;
 }
 
-@mixin p3-sans {
-  font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto, Arial,
-    sans-serif;
+@mixin p3($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 15px;
   font-weight: 200;
   line-height: 18.8px;

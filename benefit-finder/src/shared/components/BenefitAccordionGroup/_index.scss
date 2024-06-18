@@ -11,7 +11,7 @@
     }
 
     .bf-usa-detail-title {
-      @include h6;
+      @include h5;
 
       padding: 0;
       margin: 0 0 24px;
@@ -21,8 +21,6 @@
     .bf-usa-detail-summary,
     .bf-usa-criteria-list,
     .bf-usa-alert {
-      @include p;
-
       margin: 0 0 24px;
     }
 
@@ -30,8 +28,6 @@
       margin: 0 0 24px;
 
       .bf-unmet-criteria-title {
-        @include p;
-
         width: 100%;
         text-align: center;
         color: color.$pure-black;
@@ -45,8 +41,6 @@
   }
 
   .bf-expand-all {
-    @include p;
-
     background-color: transparent;
     color: color.$electric-blue;
     margin-bottom: space.$space-lg;

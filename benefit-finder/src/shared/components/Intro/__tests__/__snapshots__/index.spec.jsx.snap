@@ -42,7 +42,6 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
       <h2
         aria-level="2"
         class=""
-        id=""
         role="heading"
       >
         Steps
@@ -103,7 +102,6 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
           <h2
             aria-level="2"
             class="bf-intro-process-notices-heading "
-            id=""
             role="heading"
           >
             Before you start:

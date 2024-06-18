@@ -36,12 +36,14 @@
     }
 
     .bf-accordion-heading {
-      @include h6;
+      @include h5;
 
       letter-spacing: 0;
     }
 
     .bf-accordion-sub-heading {
+      @include p2;
+
       letter-spacing: 0;
     }
   }

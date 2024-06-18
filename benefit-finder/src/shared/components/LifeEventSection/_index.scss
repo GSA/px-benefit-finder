@@ -66,6 +66,10 @@
   h2.bf-usa-section-heading {
     @include h3;
   }
+
+  .bf-usa-section-description p {
+    @include p1;
+  }
 }
 
 .bf-radio-group {

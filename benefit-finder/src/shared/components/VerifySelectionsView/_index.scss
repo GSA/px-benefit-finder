@@ -17,7 +17,7 @@
 }
 
 .bf-verify-criteria-section-heading {
-  @include h2;
+  @include h6;
 
   border-bottom: 2px solid color.$marine;
   padding-bottom: space.$padding-bottom-lg;

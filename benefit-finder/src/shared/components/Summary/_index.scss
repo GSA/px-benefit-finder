@@ -1,7 +1,7 @@
 @use '../../styles/mixins/_index.scss' as *;
 
 .bf-usa-summary-box__heading {
-  @include h5;
+  @include h5-sans;
 }
 
 .bf-usa-list {

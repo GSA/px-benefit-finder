@@ -48,14 +48,15 @@
   }
 
   h3.bf-usa-card__heading {
-    @include h5;
+    @include h5-sans;
   }
 
   .bf-usa-card__body {
     display: none;
   }
 
-  .bf-usa-card__cta {
+  .bf-usa-card__cta,
+  .bf-usa-card__body {
     padding: space.$padding-bottom-md-plus;
     padding-top: 0;
     margin-top: 0;
@@ -71,6 +72,8 @@
       margin-bottom: 0;
 
       p {
+        @include p2-sans;
+
         max-width: 90%;
       }
     }

@@ -19,13 +19,13 @@ echo "Getting backup bucket credentials..."
   AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
 
   export AWS_ACCESS_KEY_ID
-  
+
   bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
   export bucket
 
   AWS_BUCKET="${bucket}"
   export AWS_BUCKET
-  
+
   AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
   export AWS_DEFAULT_REGION
 
@@ -49,13 +49,13 @@ echo "Checking AWS credentials..."
     fi
   done
   echo "Credentials Verified, Proceeding with Upload"
- } 
+ }
 
 echo "Uploading backup..."
  {
 
-  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl # 2>/dev/null
-  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/latest.sql.gz" --no-verify-ssl # 2>/dev/null
+  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl 2>/dev/null
+  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/latest.sql.gz" --no-verify-ssl 2>/dev/null
   cf delete-service-key "${service}" "${service_key}" -f
 
  } &> /dev/null

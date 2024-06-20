@@ -1,93 +1,113 @@
-@mixin h0 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 100%;
+@mixin font-family($font-family) {
+  @if $font-family == 'sans' {
+    font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto,
+      Arial, sans-serif;
+  } @else {
+    font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
+      serif;
+  }
 }
 
-@mixin h1 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 36px;
+// Merriweather: 'serif'
+// Source Sans Pro: 'sans'
+
+@mixin h0($font-family: 'serif') {
+  @include font-family($font-family);
+
+  font-size: 39px;
   font-weight: 800;
-  line-height: 100%;
+  line-height: 45.79px;
 }
 
-@mixin h2 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h1($font-family: 'serif') {
+  @include font-family($font-family);
+
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 45.79px;
+}
+
+@mixin h2($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 32px;
   font-weight: 800;
-  line-height: 100%;
+  line-height: 37.57px;
 }
 
-@mixin h3 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h3($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 32px;
   font-weight: 700;
-  line-height: 134.09%;
+  line-height: 24.65px;
 }
 
-@mixin h4 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h4($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 24px;
-  font-weight: 800;
-  line-height: 114.59%;
+  font-weight: 700;
+  line-height: 34.44px;
 }
 
-@mixin h5 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h5($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 22px;
   font-weight: 700;
-  line-height: 134.09%;
+  line-height: 34.44px;
 }
 
-@mixin h6 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h6($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 20px;
-  font-weight: 700;
-  line-height: 134.09%;
+  font-weight: 400;
+  line-height: 34.44px;
 }
 
-@mixin important-x-bold {
-  font-family: 'Public Sans', sans-serif;
+@mixin important-x-bold($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 16px;
   font-weight: 800;
-  line-height: 134.09%;
+  line-height: 18.8px;
 }
 
-@mixin important-bold {
-  font-family: 'Public Sans', sans-serif;
+@mixin important-bold($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 16px;
   font-weight: 700;
-  line-height: 134.09%;
+  line-height: 18.8px;
 }
 
-@mixin p {
-  font-family: 'Public Sans', sans-serif;
+@mixin p1($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 16px;
   font-weight: 400;
   line-height: 18.8px;
 }
 
-@mixin p1 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18.8px;
-}
+@mixin p2($font-family: 'serif') {
+  @include font-family($font-family);
 
-@mixin p2 {
-  font-family: 'Public Sans', sans-serif;
   font-size: 15px;
   font-weight: 400;
-  line-height: 18.8px;
+  line-height: 21.37px;
 }
 
-@mixin p3 {
-  font-family: 'Public Sans', sans-serif;
+@mixin p3($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 15px;
   font-weight: 200;
   line-height: 18.8px;
 }
+
+// other
 
 @mixin list-items {
   font-size: 17px;

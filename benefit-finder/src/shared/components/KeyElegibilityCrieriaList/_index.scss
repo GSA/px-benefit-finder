@@ -4,7 +4,7 @@
 
 .bf-key-eligibility-criteria-group {
   .bf-key-eligibility-criteria-heading {
-    @include important-bold;
+    @include important-bold($font-family: 'sans');
 
     background-color: color.$marine;
     border-radius: 4px 4px 0 0;
@@ -15,6 +15,8 @@
   }
 
   .bf-key-eligibility-criteria-sub-heading {
+    @include p2($font-family: 'sans');
+
     margin-bottom: 0;
   }
 
@@ -37,15 +39,7 @@
     }
 
     li.bf-usa-list {
-      @include p2;
-    }
-
-    li.bf-unmet-criteria-item {
-      @include p;
+      @include p2($font-family: 'sans');
     }
   }
-}
-
-.bf-usa-alert .bf-usa-alert__text {
-  @include p3;
 }

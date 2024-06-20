@@ -25,7 +25,7 @@ exports[`loads intro 1`] = `
           >
             <h1
               aria-level="1"
-              class="bf-chevron-heading font-family-sans"
+              class="bf-chevron-heading "
               id="skip-to-h1"
               role="heading"
             >
@@ -53,8 +53,7 @@ exports[`loads intro 1`] = `
         >
           <h2
             aria-level="2"
-            class="font-family-sans"
-            id=""
+            class=""
             role="heading"
           >
             Steps
@@ -116,8 +115,7 @@ exports[`loads intro 1`] = `
             >
               <h2
                 aria-level="2"
-                class="bf-intro-process-notices-heading font-family-sans"
-                id=""
+                class="bf-intro-process-notices-heading "
                 role="heading"
               >
                 Before you start:
@@ -291,7 +289,7 @@ exports[`loads window query scenario 1 1`] = `
           >
             <h1
               aria-level="1"
-              class="bf-chevron-heading font-family-sans"
+              class="bf-chevron-heading "
               id="skip-to-h1"
               role="heading"
             >
@@ -322,16 +320,14 @@ exports[`loads window query scenario 1 1`] = `
             </button>
             <h2
               aria-level="2"
-              class="bf-result-view-heading font-family-sans"
-              id=""
+              class="bf-result-view-heading "
               role="heading"
             >
               Results
             </h2>
             <h3
               aria-level="3"
-              class="bf-result-view-description font-family-sans"
-              id=""
+              class="bf-result-view-description "
               role="heading"
             >
               <strong>
@@ -348,7 +344,7 @@ exports[`loads window query scenario 1 1`] = `
               >
                 <h4
                   aria-level="4"
-                  class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+                  class="bf-usa-summary-box__heading usa-summary-box__heading "
                   id="bf-summary-box-key-information"
                   role="heading"
                 >
@@ -448,8 +444,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By  Federal Emergency Management Agency (FEMA)
@@ -467,8 +462,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -727,8 +721,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Labor (DOL)
@@ -746,8 +739,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -904,8 +896,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -923,8 +914,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -1104,8 +1094,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -1123,8 +1112,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -1339,8 +1327,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -1358,8 +1345,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -1564,8 +1550,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -1583,8 +1568,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -1769,8 +1753,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -1788,8 +1771,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -1969,8 +1951,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -1988,8 +1969,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -2169,8 +2149,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -2188,8 +2167,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -2364,8 +2342,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -2383,8 +2360,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -2564,8 +2540,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -2583,8 +2558,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -2794,8 +2768,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Defense (DOD)
@@ -2813,8 +2786,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -2994,8 +2966,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -3013,8 +2984,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -3231,8 +3201,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Interior (DOI) - Indian Affairs
@@ -3250,8 +3219,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -3376,8 +3344,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -3395,8 +3362,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -3625,8 +3591,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Defense (DOD)
@@ -3644,8 +3609,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -3825,8 +3789,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -3844,8 +3807,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -4025,8 +3987,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -4044,8 +4005,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -4241,8 +4201,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -4260,8 +4219,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -4520,8 +4478,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Justice (DOJ)
@@ -4539,8 +4496,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -4697,8 +4653,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Justice (DOJ)
@@ -4716,8 +4671,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -4874,8 +4828,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -4893,8 +4846,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -5069,8 +5021,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -5088,8 +5039,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -5299,8 +5249,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -5318,8 +5267,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -5516,8 +5464,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Defense (DOD)
@@ -5535,8 +5482,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -5716,8 +5662,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -5735,8 +5680,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -5885,8 +5829,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Defense (DOD)
@@ -5904,8 +5847,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -6085,8 +6027,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -6104,8 +6045,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -6264,8 +6204,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -6283,8 +6222,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -6500,8 +6438,7 @@ exports[`loads window query scenario 1 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -6519,8 +6456,7 @@ exports[`loads window query scenario 1 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -6728,8 +6664,7 @@ exports[`loads window query scenario 1 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-unmet-heading font-family-sans"
-                id=""
+                class="bf-result-view-unmet-heading "
                 role="heading"
               >
                 Benefits you did not qualify for
@@ -6754,8 +6689,7 @@ exports[`loads window query scenario 1 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-relvant-benefits-heading font-family-sans"
-                id=""
+                class="bf-result-view-relvant-benefits-heading "
                 role="heading"
               >
                 More benefits
@@ -6797,8 +6731,7 @@ exports[`loads window query scenario 1 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class="bf-usa-card__heading usa-card__heading font-family-sans"
-                        id=""
+                        class="bf-usa-card__heading usa-card__heading "
                         role="heading"
                       >
                         Benefit finder: retirement
@@ -6890,8 +6823,7 @@ exports[`loads window query scenario 1 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class="bf-usa-card__heading usa-card__heading font-family-sans"
-                        id=""
+                        class="bf-usa-card__heading usa-card__heading "
                         role="heading"
                       >
                         Benefit finder: disability
@@ -6941,8 +6873,7 @@ exports[`loads window query scenario 1 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-share-results-heading font-family-sans"
-                id=""
+                class="bf-result-view-share-results-heading "
                 role="heading"
               >
                 Share results
@@ -7047,7 +6978,7 @@ exports[`loads window query scenario 2 1`] = `
           >
             <h1
               aria-level="1"
-              class="bf-chevron-heading font-family-sans"
+              class="bf-chevron-heading "
               id="skip-to-h1"
               role="heading"
             >
@@ -7078,16 +7009,14 @@ exports[`loads window query scenario 2 1`] = `
             </button>
             <h2
               aria-level="2"
-              class="bf-result-view-heading font-family-sans"
-              id=""
+              class="bf-result-view-heading "
               role="heading"
             >
               Results
             </h2>
             <h3
               aria-level="3"
-              class="bf-result-view-description font-family-sans"
-              id=""
+              class="bf-result-view-description "
               role="heading"
             >
               <strong>
@@ -7104,7 +7033,7 @@ exports[`loads window query scenario 2 1`] = `
               >
                 <h4
                   aria-level="4"
-                  class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+                  class="bf-usa-summary-box__heading usa-summary-box__heading "
                   id="bf-summary-box-key-information"
                   role="heading"
                 >
@@ -7204,8 +7133,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By  Federal Emergency Management Agency (FEMA)
@@ -7223,8 +7151,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -7482,8 +7409,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Labor (DOL)
@@ -7501,8 +7427,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -7671,8 +7596,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -7690,8 +7614,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -7871,8 +7794,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -7890,8 +7812,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -8131,8 +8052,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -8150,8 +8070,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -8356,8 +8275,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -8375,8 +8293,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -8561,8 +8478,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -8580,8 +8496,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -8761,8 +8676,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -8780,8 +8694,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -8961,8 +8874,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -8980,8 +8892,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -9156,8 +9067,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -9175,8 +9085,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -9356,8 +9265,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -9375,8 +9283,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -9586,8 +9493,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Defense (DOD)
@@ -9605,8 +9511,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -9785,8 +9690,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -9804,8 +9708,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -10033,8 +9936,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Interior (DOI) - Indian Affairs
@@ -10052,8 +9954,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -10191,8 +10092,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -10210,8 +10110,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -10440,8 +10339,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Defense (DOD)
@@ -10459,8 +10357,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -10640,8 +10537,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -10659,8 +10555,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -10840,8 +10735,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -10859,8 +10753,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -11057,8 +10950,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -11076,8 +10968,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -11324,8 +11215,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Justice (DOJ)
@@ -11343,8 +11233,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -11501,8 +11390,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Justice (DOJ)
@@ -11520,8 +11408,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -11678,8 +11565,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -11697,8 +11583,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -11873,8 +11758,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -11892,8 +11776,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -12103,8 +11986,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -12122,8 +12004,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -12320,8 +12201,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Defense (DOD)
@@ -12339,8 +12219,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -12520,8 +12399,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -12539,8 +12417,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -12689,8 +12566,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Department of Defense (DOD)
@@ -12708,8 +12584,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -12889,8 +12764,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Veterans Affairs Department (VA)
@@ -12908,8 +12782,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -13068,8 +12941,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -13087,8 +12959,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -13280,8 +13151,7 @@ exports[`loads window query scenario 2 1`] = `
                     <div>
                       <h4
                         aria-level="4"
-                        class="bf-usa-detail-title font-family-sans"
-                        id=""
+                        class="bf-usa-detail-title "
                         role="heading"
                       >
                         By Social Security Administration (SSA)
@@ -13299,8 +13169,7 @@ exports[`loads window query scenario 2 1`] = `
                          
                         <h5
                           aria-level="5"
-                          class="bf-key-eligibility-criteria-heading font-family-sans"
-                          id=""
+                          class="bf-key-eligibility-criteria-heading "
                           role="heading"
                         >
                           Key eligibility criteria
@@ -13496,8 +13365,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-unmet-heading font-family-sans"
-                id=""
+                class="bf-result-view-unmet-heading "
                 role="heading"
               >
                 Benefits you did not qualify for
@@ -13522,8 +13390,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-relvant-benefits-heading font-family-sans"
-                id=""
+                class="bf-result-view-relvant-benefits-heading "
                 role="heading"
               >
                 More benefits
@@ -13565,8 +13432,7 @@ exports[`loads window query scenario 2 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class="bf-usa-card__heading usa-card__heading font-family-sans"
-                        id=""
+                        class="bf-usa-card__heading usa-card__heading "
                         role="heading"
                       >
                         Benefit finder: retirement
@@ -13658,8 +13524,7 @@ exports[`loads window query scenario 2 1`] = `
                     >
                       <h3
                         aria-level="3"
-                        class="bf-usa-card__heading usa-card__heading font-family-sans"
-                        id=""
+                        class="bf-usa-card__heading usa-card__heading "
                         role="heading"
                       >
                         Benefit finder: disability
@@ -13709,8 +13574,7 @@ exports[`loads window query scenario 2 1`] = `
             >
               <h3
                 aria-level="3"
-                class="bf-result-view-share-results-heading font-family-sans"
-                id=""
+                class="bf-result-view-share-results-heading "
                 role="heading"
               >
                 Share results

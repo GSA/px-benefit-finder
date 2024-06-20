@@ -100,7 +100,7 @@
     "notEligible": {
       "chevron": {
         "heading": "Benefits you did not qualify for",
-        "description": "According to your answers you are not eligible for these benefits."
+        "description": "<div><p>According to your answers you are not eligible for these benefits./p></div>"
       },
       "heading": "Results",
       "description": "<strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes."

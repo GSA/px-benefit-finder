@@ -12,14 +12,14 @@ import './_index.scss'
  */
 const Heading = ({ children, className, headingLevel, ...props }) => {
   // pass our default classes
-  const defaultClasses = ['font-family-sans']
+  const defaultClasses = ['']
 
   // return html as a tring for heading element values
   const Tag = `h${headingLevel}`
   return (
     <Tag
       className={useHandleClassName({ className, defaultClasses })}
-      id={headingLevel === 1 ? 'skip-to-h1' : ''}
+      id={headingLevel === 1 ? 'skip-to-h1' : null}
       {...props}
       aria-level={headingLevel}
       role="heading"

@@ -317,6 +317,7 @@ const LifeEventSection = ({
                   {currentData.section.heading}
                 </Heading>
                 <div
+                  className="bf-usa-section-description"
                   dangerouslySetInnerHTML={createMarkup(
                     currentData.section.description
                   )}

@@ -54,8 +54,8 @@ echo "Checking AWS credentials..."
 echo "Uploading backup..."
  {
 
-  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl # 2>/dev/null
-  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/latest.sql.gz" --no-verify-ssl # 2>/dev/null
+  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl 2>/dev/null
+  aws s3 cp "${TIMESTAMP}.sql.gz" "s3://${bucket}/latest.sql.gz" --no-verify-ssl 2>/dev/null
   cf delete-service-key "${service}" "${service_key}" -f
 
  } &> /dev/null

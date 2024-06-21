@@ -53,6 +53,7 @@ jobs:
           CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
           CF_ORG: "${{ secrets.CF_ORG }}"
           PROJECT: "${{ secrets.PROJECT }}"
+          DATABASE_BACKUP_BASTION_NAME: '${{ secrets.DATABASE_BACKUP_BASTION_NAME }}'
         run: |
           export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
           source ./scripts/pipeline/database-backup.sh

@@ -11,8 +11,10 @@ on:
         required: true
       PROJECT:
         required: true
+      DATABASE_BACKUP_BASTION_NAME:
+        required: true
   schedule:
-    - cron: '0 1 * * *'
+    - cron: "0 1 * * *"
 
 jobs:
   backup-database:
@@ -33,16 +35,18 @@ jobs:
         run: ./scripts/pipeline/deb-cf-install.sh
       - name: Cloud.gov login
         env:
-          CF_USER: '${{ secrets.CF_USER }}'
-          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
-          CF_ORG: '${{ secrets.CF_ORG }}'
-          PROJECT: '${{ secrets.PROJECT }}'
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
       - name: Start Bastion
         env:
-          DATABASE_BACKUP_BASTION_NAME: '${{ secrets.DATABASE_BACKUP_BASTION_NAME }}'
+          DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
+          echo "BRANCH=main" >> $GITHUB_ENV
           cf start "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1
           ./scripts/pipeline/cloud-gov-wait-for-app-start.sh "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}"
       - name: Backup Database (main)
@@ -53,7 +57,7 @@ jobs:
           CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
           CF_ORG: "${{ secrets.CF_ORG }}"
           PROJECT: "${{ secrets.PROJECT }}"
-          DATABASE_BACKUP_BASTION_NAME: '${{ secrets.DATABASE_BACKUP_BASTION_NAME }}'
+          DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
         run: |
           export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
           source ./scripts/pipeline/database-backup.sh
@@ -74,13 +78,17 @@ jobs:
         run: ./scripts/pipeline/deb-cf-install.sh
       - name: Cloud.gov login
         env:
-          CF_USER: '${{ secrets.CF_USER }}'
-          CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
-          CF_ORG: '${{ secrets.CF_ORG }}'
-          PROJECT: '${{ secrets.PROJECT }}'
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
       - name: Stop Bastion
         env:
-          DATABASE_BACKUP_BASTION_NAME: '${{ secrets.DATABASE_BACKUP_BASTION_NAME }}'
-        run: cf stop "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1
+          DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
+          PROJECT: "${{ secrets.PROJECT }}"
+        run: |
+          echo "BRANCH=main" >> $GITHUB_ENV
+          cf stop "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1
+

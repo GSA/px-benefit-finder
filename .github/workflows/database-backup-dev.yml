@@ -47,7 +47,7 @@ jobs:
           PROJECT: "${{ secrets.PROJECT }}"
         run: |
           echo "BRANCH=dev" >> $GITHUB_ENV
-          cf start "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" #>/dev/null 2>&1
+          cf start "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1
           ./scripts/pipeline/cloud-gov-wait-for-app-start.sh "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}"
       - name: Backup Database (dev)
         id: backup
@@ -86,5 +86,8 @@ jobs:
           source ./scripts/pipeline/cloud-gov-login.sh
       - name: Stop Bastion
         env:
+          PROJECT: "${{ secrets.PROJECT }}"
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
-        run: cf stop "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1
+        run: |
+          echo "BRANCH=dev" >> $GITHUB_ENV
+          cf stop "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1

@@ -1,0 +1,7 @@
+---
+packages:
+  - curl
+  - gettext
+  - mysql-client
+  - postgresql-client
+  - wget

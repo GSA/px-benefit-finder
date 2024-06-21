@@ -44,6 +44,7 @@ jobs:
           CF_PASSWORD: '${{ secrets.CF_PASSWORD }}'
           CF_ORG: '${{ secrets.CF_ORG }}'
           PROJECT: '${{ secrets.PROJECT }}'
+          DATABASE_BACKUP_BASTION_NAME: '${{ secrets.DATABASE_BACKUP_BASTION_NAME }}'
         run: |
           export S3_FILE_PATH=${{ github.event.inputs.database_file_override }}
           source ./scripts/pipeline/s3-backup-download.sh

@@ -43,7 +43,10 @@ jobs:
         env:
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
         run: |
-          cf start "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" #>/dev/null 2>&1
+          cf start ${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH} #>/dev/null 2>&1
+          echo "PROJECT=${PROJECT}"
+          echo "DATABASE_BACKUP_BASTION_NAME=${DATABASE_BACKUP_BASTION_NAME}"
+          echo "BRANCH=${BRANCH}"
           ./scripts/pipeline/cloud-gov-wait-for-app-start.sh "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}"
       - name: Backup Database (dev)
         id: backup
@@ -84,4 +87,3 @@ jobs:
         env:
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
         run: cf stop "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1
-

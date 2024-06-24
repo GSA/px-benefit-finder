@@ -44,7 +44,7 @@ const BenefitAccordionGroup = ({
   /**
    * a function that returns the string value of our expanded action
    * @function
-   * @return {stroing} returns label for our button
+   * @return {string} returns label for our button
    */
   const handleExpandIcon = isExpandAll ? `${openState} -` : `${closedState} +`
 
@@ -208,6 +208,7 @@ const BenefitAccordionGroup = ({
                 href={SourceLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                noCarrot
               >
                 {visitLabel} {agency.title}{' '}
                 {sourceIsEnglish && SourceIsEnglish === true

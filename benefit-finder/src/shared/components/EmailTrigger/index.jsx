@@ -1,14 +1,12 @@
 import { useState } from 'react'
-import { Button } from '../index'
 import { buildURIParameter } from '../../utils'
-import './_index.scss'
 
 /**
- * a functional component that renders a button with mailto email context
+ * a functional component that renders a anchor with mailto email context
  * @component
- * @return {html} returns a semantic html button element with a custom function onClick event
+ * @return {html} returns a semantic html anchor element with a custom function onClick event
  */
-const EmailButton = ({ ui, data }) => {
+const EmailTrigger = ({ ui, data }) => {
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href
@@ -22,21 +20,21 @@ const EmailButton = ({ ui, data }) => {
   /**
    * a handler that triggers an email with context from the users window location href
    */
-  const handleClick = () => {
+  const handleClick = e => {
+    e.preventDefault()
     setShareLink(buildURIParameter(window.location.href, data))
     window.location = `mailto:?subject=${ui?.emailSubject}&body=${emailBody}`
   }
 
   return (
-    <Button
-      className="bf-email-button"
-      secondary
-      onClick={handleClick}
-      icon="email"
+    <a
+      href=""
+      className="bf-email-trigger bf-usa-link usa-link"
+      onClick={e => handleClick(e)}
     >
-      {ui?.emailButton || 'Email'}
-    </Button>
+      {ui?.emailTrigger || 'Email'}
+    </a>
   )
 }
 
-export default EmailButton
+export default EmailTrigger

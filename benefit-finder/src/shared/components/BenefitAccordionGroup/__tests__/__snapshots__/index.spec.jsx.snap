@@ -136,33 +136,12 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
             </ul>
           </div>
           <a
-            class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+            class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
             href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
             rel="noopener noreferrer"
             target="_blank"
           >
             Visit  Federal Emergency Management Agency (FEMA) 
-            <i
-              aria-hidden="true"
-              data-testid="icon-carrot-small"
-            >
-              <svg
-                class="bf-carrot-small"
-                fill="white"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M7 10l5 5 5-5z"
-                />
-              </svg>
-            </i>
           </a>
         </div>
       </div>

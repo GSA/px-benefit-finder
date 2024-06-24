@@ -552,7 +552,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           Back
         </button>
         <button
-          class="bf-usa-button usa-button"
+          class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
           type="button"
         >
           Continue

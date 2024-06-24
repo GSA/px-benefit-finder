@@ -18,7 +18,8 @@ locals {
   tf_backend = {
     type = "pg"
     name_pattern_psql = "${local.project}-terraform-backend-bootstrap"
-    name_pattern_secrets = "${local.project}--pg-secrets-bootstrap "
+    name_pattern_secrets = "${local.project}--pg-secrets-bootstrap"
+    space = "main"
   }
 
   ## "Common" applications and services that are deployed to every space.
@@ -127,6 +128,61 @@ locals {
           }
         ]
       }
+      database-backup-bastion = {
+
+          ## Should the application have access to the internet?
+          allow_egress = true
+
+          ## Buildpacks to use with this application.
+          ## List buildpacks avalible with: cf buildpacks
+          buildpacks = [
+            "https://github.com/cloudfoundry/apt-buildpack",
+            "binary_buildpack"
+          ]
+
+          ## Command to run when container starts.
+          command = "./start"
+
+          ## Ephemeral disk storage.
+          disk_quota = 1024
+
+          ## Should SSH be enabled?
+          enable_ssh = true
+
+          ## Environmental variables. Avoid sensitive variables.
+          environment = {}
+
+          ## Timeout for health checks, in seconds.
+          health_check_timeout = 180
+
+          ## Type of health check.
+          ## Options: port, process, http
+          health_check_type = "process"
+
+          ## Number of instances of application to deploy.
+          instances = 1
+
+          ## Labels to add to the application.
+          labels = {
+            environment = terraform.workspace
+          }
+
+          ## Maximum amount of memory the application can use.
+          memory = 64
+
+          services_external = [
+            "${local.project}-mysql-${terraform.workspace}",
+            "${local.project}-backup-${terraform.workspace}",
+            terraform.workspace == local.tf_backend.space ? "${local.project}-terraform-backend-bootstrap" : null
+          ]
+
+          ## The source file should be a directory or a zip file.
+          source = "../applications/database-backup-bastion"
+
+          space = terraform.workspace
+
+          stopped = true
+        }
     }
 
     ## Services to deploy in this environment.
@@ -412,16 +468,14 @@ locals {
 
         ## Passwords that need to be generated for this environment.
         ## These will actually use the sha256 result from the random module.
-        passwords = [
-          {
-            name = "hash_salt"
-            length = 32
-          },
-          {
-            name = "cron_key"
+         passwords = {
+          hash_salt = {
             length = 32
           }
-        ]
+          cron_key = {
+            length = 32
+          }
+        }
       }
     )
   }

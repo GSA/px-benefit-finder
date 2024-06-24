@@ -109,7 +109,8 @@ const ResultsView = ({
 
   // handle dataLayer
   useEffect(() => {
-    window.dataLayer &&
+    eligibilityCount.notEligible >= 0 &&
+      window.dataLayer &&
       window.dataLayer.push({
         event: 'bf_page_change',
         bfData: {
@@ -128,7 +129,7 @@ const ResultsView = ({
                 'bf-eligible-view',
         },
       })
-  }, [notEligibleView])
+  }, [notEligibleView, zeroBenefitsResult, eligibilityCount])
 
   useEffect(() => {
     eligibilityCount.notEligible >= 0 &&

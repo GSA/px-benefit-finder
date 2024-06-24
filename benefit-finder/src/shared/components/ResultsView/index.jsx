@@ -16,6 +16,8 @@ import {
 import { createMarkup } from '../../utils'
 import './_index.scss'
 
+// Results View is a single view with three states, eligible, not eligible, and zero benefits
+
 /**
  * a functional component that renders a view of the form benefit state values
  * @component
@@ -114,12 +116,16 @@ const ResultsView = ({
           pageView: 'bf-result-view',
           viewTitle:
             notEligibleView === false
-              ? eligible.chevron.heading
-              : notEligible.chevron.heading,
+              ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
+                eligible.chevron.heading
+              : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
+                notEligible.chevron.heading,
           viewState:
             notEligibleView === true
-              ? 'bf-not-eligible-view'
-              : 'bf-eligible-view',
+              ? (zeroBenefitsResult && 'bf-not-eligible-view-zero-benefits') ||
+                'bf-not-eligible-view'
+              : (zeroBenefitsResult && 'bf-eligible-view-zero-benefits') ||
+                'bf-eligible-view',
         },
       })
   }, [notEligibleView])
@@ -211,11 +217,11 @@ const ResultsView = ({
 
           {zeroBenefitsResult && !notEligibleView && (
             <div className="bf-result-view-zero-benefits">
-              <Button onClick={handleViewToggle}>{zeroBenefits?.cta}</Button>
+              <Button onClick={handleViewToggle} secondary>
+                {zeroBenefits?.cta}
+              </Button>
             </div>
           )}
-          {/* <a onClick={(e) => {    e.preventDefault() &&
-    window.location.href = `${window.location.origin}${window.location.pathname}`} /> */}
           {/* map all the benefits into cards */}
           <div className="bf-result-view-benefits">
             <BenefitAccordionGroup

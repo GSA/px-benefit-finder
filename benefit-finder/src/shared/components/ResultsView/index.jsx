@@ -13,7 +13,7 @@ import {
   RelativeBenefitList,
   Summary,
 } from '../index'
-import { createMarkup } from '../../utils'
+import { createMarkup, dataLayerUtils } from '../../utils'
 import './_index.scss'
 
 /**
@@ -104,27 +104,31 @@ const ResultsView = ({
 
   // handle dataLayer
   useEffect(() => {
-    window.dataLayer &&
-      window.dataLayer.push({
-        event: 'bf_page_change',
-        bfData: {
-          pageView: 'bf-result-view',
-          viewTitle:
-            notEligibleView === false
-              ? eligible.chevron.heading
-              : notEligible.chevron.heading,
-          viewState:
-            notEligibleView === true
-              ? 'bf-not-eligible-view'
-              : 'bf-eligible-view',
-        },
-      })
+    const { resultsView } = dataLayerUtils.dataLayerStructure
+    dataLayerUtils.dataLayerPush(window, {
+      event: resultsView.event,
+      bfData: {
+        pageView: resultsView.bfData.pageView,
+        viewTitle:
+          notEligibleView === false
+            ? eligible.chevron.heading
+            : notEligible.chevron.heading,
+        viewState:
+          notEligibleView === true
+            ? resultsView.bfData.viewState[0]
+            : resultsView.bfData.viewState[1],
+      },
+    })
   }, [notEligibleView])
 
+  // handle dataLayer
   useEffect(() => {
+    const { benefitCount } = dataLayerUtils.dataLayerStructure
     eligibilityCount.notEligible >= 0 &&
-      window.dataLayer &&
-      window.dataLayer.push({ event: 'bf_count', bfData: eligibilityCount })
+      dataLayerUtils.dataLayerPush({
+        event: benefitCount.event,
+        bfData: eligibilityCount,
+      })
   }, [eligibilityCount])
 
   // compare the selected criteria array with benefits

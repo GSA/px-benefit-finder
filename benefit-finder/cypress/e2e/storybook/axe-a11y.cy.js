@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 import * as utils from '../../support/utils.js'
+import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 import { pageObjects } from '../../support/pageObjects'
@@ -107,16 +108,27 @@ describe(`Validate code passes axe scanning`, () => {
   })
 
   it('Has no detectable a11y violations on see benefits', () => {
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    utils.dataInputs({ dod })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    pageObjects
-      .button()
-      .contains(EN_LOCALE_DATA.reviewSelectionModal.buttonGroup[1].value)
-      .click()
-    runA11y()
+    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
+    const scenario = utils.encodeURIFromObject(selectedData)
+    delete selectedData.shared // We don't want to include the "shared" param
+
+    cy.visit(`${utils.storybookUri}${scenario}`)
+    cy.injectAxe() // we inject axe again because of the reload -> visit
+    // get a node list of all accordions
+    // get the heading of the first in the list
+    cy.get(`[data-analytics="bf-usa-accordion"]`).then(accordionItems => {
+      pageObjects
+        .benefitResultsView()
+        .invoke('attr', 'data-analytics')
+        .should('eq', 'bf-result-view')
+
+      pageObjects
+        .accordion(
+          `${accordionItems[0].getAttribute('data-analytics-content')}`
+        )
+        .click()
+      runA11y()
+    })
   })
 
   it('Has no detectable a11y violations on see benefits you did not qualify for', () => {
@@ -131,8 +143,17 @@ describe(`Validate code passes axe scanning`, () => {
       .click()
     pageObjects
       .button()
-      .contains(EN_LOCALE_DATA.resultsView.notEligibleResults.cta)
+      .contains(EN_LOCALE_DATA.resultsView.zeroBenefits.cta)
       .click()
-    runA11y()
+    // get a node list of all accordions
+    // get the heading of the first in the list
+    cy.get(`[data-analytics="bf-usa-accordion"]`).then(accordionItems => {
+      pageObjects
+        .accordion(
+          `${accordionItems[0].getAttribute('data-analytics-content')}`
+        )
+        .click()
+      runA11y()
+    })
   })
 })

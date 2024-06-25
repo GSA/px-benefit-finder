@@ -116,12 +116,16 @@ const ResultsView = ({
         pageView: resultsView.bfData.pageView,
         viewTitle:
           notEligibleView === false
-            ? eligible.chevron.heading
-            : notEligible.chevron.heading,
+            ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
+              eligible.chevron.heading
+            : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
+              notEligible.chevron.heading,
         viewState:
           notEligibleView === true
-            ? resultsView.bfData.viewState[0]
-            : resultsView.bfData.viewState[1],
+            ? (zeroBenefitsResult && resultsView.bfData.viewState[2]) ||
+              resultsView.bfData.viewState[0]
+            : (zeroBenefitsResult && resultsView.bfData.viewState[3]) ||
+              resultsView.bfData.viewState[1],
       },
     })
   }, [notEligibleView])

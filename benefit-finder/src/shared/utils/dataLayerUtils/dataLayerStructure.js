@@ -40,21 +40,3 @@ const dataLayerStructure = {
 }
 
 export default dataLayerStructure
-
-// {
-// event: 'bf_page_change',
-// bfData: {
-//   pageView: 'bf-result-view',
-//   viewTitle:
-//     notEligibleView === false
-//       ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
-//         eligible.chevron.heading
-//       : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
-//         notEligible.chevron.heading,
-//   viewState:
-//     notEligibleView === true
-//       ? (zeroBenefitsResult && 'bf-not-eligible-view-zero-benefits') ||
-//         'bf-not-eligible-view'
-//       : (zeroBenefitsResult && 'bf-eligible-view-zero-benefits') ||
-//         'bf-eligible-view',
-// }

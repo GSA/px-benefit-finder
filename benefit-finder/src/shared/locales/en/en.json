@@ -105,6 +105,15 @@
       "heading": "Results",
       "description": "<strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes."
     },
+    "zeroBenefits": {
+      "chevron": {
+        "heading": "You are likely not eligible for benefits",
+        "description": "<div><p>If you  reached these results by mistake, please go back to review your answers.</p></div>"
+      },
+      "heading": "No eligible results",
+      "description": "Based on your answers you are likely not eligible for benefits. You may become eligible if you enter more information or your situation changes.",
+      "cta": "See all benefits"
+    },
     "stepBackLink": "Back",
     "eligibleResults": {
       "heading": "Results",

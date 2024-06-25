@@ -16,6 +16,8 @@ import {
 import { createMarkup } from '../../utils'
 import './_index.scss'
 
+// Results View is a single view with three states, eligible, not eligible, and zero benefits
+
 /**
  * a functional component that renders a view of the form benefit state values
  * @component
@@ -37,6 +39,7 @@ const ResultsView = ({
     stepBackLink,
     notEligible,
     eligible,
+    zeroBenefits,
     notEligibleResults,
     resultsRelativeBenefits,
     shareResults,
@@ -87,6 +90,8 @@ const ResultsView = ({
     resetElement.current.focus()
   }
 
+  const zeroBenefitsResult = eligibilityCount.eligible === 0
+
   useEffect(() => {
     window.scrollTo(0, 0)
     setEligibilityCount({
@@ -104,22 +109,27 @@ const ResultsView = ({
 
   // handle dataLayer
   useEffect(() => {
-    window.dataLayer &&
+    eligibilityCount.notEligible >= 0 &&
+      window.dataLayer &&
       window.dataLayer.push({
         event: 'bf_page_change',
         bfData: {
           pageView: 'bf-result-view',
           viewTitle:
             notEligibleView === false
-              ? eligible.chevron.heading
-              : notEligible.chevron.heading,
+              ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
+                eligible.chevron.heading
+              : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
+                notEligible.chevron.heading,
           viewState:
             notEligibleView === true
-              ? 'bf-not-eligible-view'
-              : 'bf-eligible-view',
+              ? (zeroBenefitsResult && 'bf-not-eligible-view-zero-benefits') ||
+                'bf-not-eligible-view'
+              : (zeroBenefitsResult && 'bf-eligible-view-zero-benefits') ||
+                'bf-eligible-view',
         },
       })
-  }, [notEligibleView])
+  }, [notEligibleView, zeroBenefitsResult, eligibilityCount])
 
   useEffect(() => {
     eligibilityCount.notEligible >= 0 &&
@@ -145,13 +155,17 @@ const ResultsView = ({
       <Chevron
         heading={
           notEligibleView === false
-            ? eligible.chevron.heading
-            : notEligible.chevron.heading
+            ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
+              eligible.chevron.heading
+            : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
+              notEligible.chevron.heading
         }
         description={
           notEligibleView === false
-            ? eligible.chevron.description
-            : notEligible.chevron.description
+            ? (zeroBenefitsResult && zeroBenefits.chevron.description) ||
+              eligible.chevron.description
+            : (zeroBenefitsResult && zeroBenefits.chevron.description) ||
+              notEligible.chevron.description
         }
       />
       <div className="bf-grid-container grid-container">
@@ -173,22 +187,42 @@ const ResultsView = ({
             </Button>
           )}
           <Heading className="bf-result-view-heading" headingLevel={2}>
-            {notEligibleView ? notEligible.heading : eligible.heading}
+            {notEligibleView
+              ? (zeroBenefitsResult && zeroBenefits.heading) ||
+                notEligible.heading
+              : (zeroBenefitsResult && zeroBenefits.heading) ||
+                eligible.heading}
           </Heading>
           <Heading
             className="bf-result-view-description"
             headingLevel={3}
             dangerouslySetInnerHTML={
               notEligibleView
-                ? createMarkup(notEligible.description)
-                : createMarkup(eligible.description)
+                ? createMarkup(
+                    (zeroBenefitsResult && zeroBenefits.description) ||
+                      notEligible.description
+                  )
+                : createMarkup(
+                    (zeroBenefitsResult && zeroBenefits.description) ||
+                      eligible.description
+                  )
             }
           />
-          <Summary
-            heading={summaryBox.heading}
-            listItems={summaryBox.list}
-            cta={summaryBox.cta}
-          />
+          {zeroBenefitsResult === false && (
+            <Summary
+              heading={summaryBox.heading}
+              listItems={summaryBox.list}
+              cta={summaryBox.cta}
+            />
+          )}
+
+          {zeroBenefitsResult && !notEligibleView && (
+            <div className="bf-result-view-zero-benefits">
+              <Button onClick={handleViewToggle} secondary>
+                {zeroBenefits?.cta}
+              </Button>
+            </div>
+          )}
           {/* map all the benefits into cards */}
           <div className="bf-result-view-benefits">
             <BenefitAccordionGroup
@@ -201,11 +235,14 @@ const ResultsView = ({
               }
               entryKey={'benefit'}
               notEligibleView={notEligibleView}
-              expandAll
+              expandAll={
+                zeroBenefitsResult === false ||
+                (zeroBenefitsResult && notEligibleView)
+              }
               ui={ui}
             />
           </div>
-          {notEligibleView === false && (
+          {notEligibleView === false && zeroBenefitsResult === false && (
             <div className="bf-result-view-unmet">
               <Heading
                 className="bf-result-view-unmet-heading"

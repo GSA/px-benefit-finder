@@ -42,6 +42,12 @@ const dataLayerStructure = {
       benefitTitle: null,
     },
   },
+  benefitLink: {
+    event: 'bf_benefit_link',
+    bfData: {
+      benefitTitle: null,
+    },
+  },
   benefitCount: { event: 'bf_count', bfData: null },
 }
 

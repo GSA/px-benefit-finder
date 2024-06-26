@@ -13,7 +13,7 @@ import {
   RelativeBenefitList,
   Summary,
 } from '../index'
-import { createMarkup } from '../../utils'
+import { createMarkup, dataLayerUtils } from '../../utils'
 import './_index.scss'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
@@ -109,12 +109,12 @@ const ResultsView = ({
 
   // handle dataLayer
   useEffect(() => {
+    const { resultsView } = dataLayerUtils.dataLayerStructure
     eligibilityCount.notEligible >= 0 &&
-      window.dataLayer &&
-      window.dataLayer.push({
-        event: 'bf_page_change',
+      dataLayerUtils.dataLayerPush(window, {
+        event: resultsView.event,
         bfData: {
-          pageView: 'bf-result-view',
+          pageView: resultsView.bfData.pageView,
           viewTitle:
             notEligibleView === false
               ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
@@ -123,18 +123,22 @@ const ResultsView = ({
                 notEligible.chevron.heading,
           viewState:
             notEligibleView === true
-              ? (zeroBenefitsResult && 'bf-not-eligible-view-zero-benefits') ||
-                'bf-not-eligible-view'
-              : (zeroBenefitsResult && 'bf-eligible-view-zero-benefits') ||
-                'bf-eligible-view',
+              ? (zeroBenefitsResult && resultsView.bfData.viewState[2]) ||
+                resultsView.bfData.viewState[0]
+              : (zeroBenefitsResult && resultsView.bfData.viewState[3]) ||
+                resultsView.bfData.viewState[1],
         },
       })
-  }, [notEligibleView, zeroBenefitsResult, eligibilityCount])
+  }, [notEligibleView, eligibilityCount])
 
+  // handle dataLayer
   useEffect(() => {
+    const { benefitCount } = dataLayerUtils.dataLayerStructure
     eligibilityCount.notEligible >= 0 &&
-      window.dataLayer &&
-      window.dataLayer.push({ event: 'bf_count', bfData: eligibilityCount })
+      dataLayerUtils.dataLayerPush(window, {
+        event: benefitCount.event,
+        bfData: eligibilityCount,
+      })
   }, [eligibilityCount])
 
   // compare the selected criteria array with benefits

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import accordion from '@uswds/uswds/js/usa-accordion'
 import { Icon } from '../index'
+import { dataLayerUtils } from '../../utils'
 import PropTypes from 'prop-types'
 import './_index.scss'
 
@@ -38,6 +39,21 @@ const Accordion = ({
    */
   const [isOpen, setOpen] = useState(false)
 
+  const { benefitClick } = dataLayerUtils.dataLayerStructure
+
+  // handle dataLayer
+  const handleOpenClose = isOpen => {
+    setOpen(isOpen)
+    isOpen === true &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: benefitClick.event,
+        bfData: {
+          benefitTitle: heading,
+        },
+      })
+  }
+
+  // handle expand all
   useEffect(() => {
     setOpen(isExpanded)
   }, [isExpanded])
@@ -67,7 +83,7 @@ const Accordion = ({
           className="bf-usa-accordion__button usa-accordion__button"
           aria-expanded={isOpen || false}
           aria-controls={id && handleAriaControl(id)}
-          onClick={() => setOpen(!isOpen)}
+          onClick={() => handleOpenClose(!isOpen)}
         >
           <span className="bf-accordion-heading">{heading}</span>
           <br />

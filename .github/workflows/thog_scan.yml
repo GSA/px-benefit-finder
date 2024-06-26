@@ -1,3 +1,5 @@
+name: TruffleHog Scan
+
 on:
   # schedule:
   #   - cron: '0 8 * * *' # Runs daily at 8 AM UTC

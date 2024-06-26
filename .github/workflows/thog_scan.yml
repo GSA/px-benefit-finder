@@ -11,14 +11,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Run TruffleHog scan
-        uses: trufflesecurity/trufflehog@v3
+        uses: actions/checkout@v4
         with:
-          scan: filesystem
-          output_format: json
-          directory: .
+          fetch-depth: 0
+
+      - name: scan
+        uses: trufflesecurity/trufflehog@main
+        with:
+          base: ""
+          head: ${{ github.ref_name }}
+          extra_args: --only-verified
 
       - name: Upload TruffleHog scan results
         uses: actions/upload-artifact@v3

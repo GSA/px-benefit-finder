@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { dataLayerUtils } from '../../utils'
 import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import {
@@ -24,7 +25,6 @@ import './_index.scss'
 const Intro = ({ data, ui, setStep, step }) => {
   const { timeEstimate, title, summary } = data
   const { heading, timeIndicator, steps, notices, button } = ui
-  // const resetElements = document.querySelectorAll('[tabindex="-1"]')
   const resetElement = useResetElement()
 
   const handleStep = () => {
@@ -34,11 +34,11 @@ const Intro = ({ data, ui, setStep, step }) => {
 
   // handle dataLayer
   useEffect(() => {
-    window.dataLayer &&
-      window.dataLayer.push({
-        event: 'bf_page_change',
-        bfData: { pageView: 'bf-intro', viewTitle: title },
-      })
+    const { intro } = dataLayerUtils.dataLayerStructure
+    dataLayerUtils.dataLayerPush(window, {
+      event: intro.event,
+      bfData: { pageView: intro.bfData.pageView, viewTitle: title },
+    })
   }, [])
 
   return (

@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
 import { Button, ObfuscatedLink, Icon, Heading } from '../index'
-import { scrollLock } from '../../utils'
+import { scrollLock, dataLayerUtils } from '../../utils'
 
 import './_index.scss'
 
@@ -98,6 +98,18 @@ const Modal = ({
     // set our application root id here
     NavModal.setAppElement('#benefit-finder')
     return cleanUp()
+  }, [])
+
+  // handle dataLayer
+  useEffect(() => {
+    const { modal } = dataLayerUtils.dataLayerStructure
+    modalOpen === true &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: modal.event,
+        bfData: {
+          modalOpen,
+        },
+      })
   }, [])
 
   /**

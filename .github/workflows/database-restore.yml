@@ -34,6 +34,7 @@ jobs:
       - name: Start Bastion
         env:
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
+          PROJECT: "${{ secrets.PROJECT }}"
         run: |
           echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
           cf start "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1

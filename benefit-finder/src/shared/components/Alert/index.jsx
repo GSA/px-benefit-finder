@@ -28,6 +28,7 @@ const Alert = ({
   hasError,
   noBackground,
   tabIndex,
+  errorCount,
 }) => {
   const defaultClasses =
     type === 'error'
@@ -65,7 +66,7 @@ const Alert = ({
             headingLevel={2}
             className="bf-usa-alert__heading usa-alert__heading"
           >
-            {heading}
+            {heading?.prefix}&nbsp;{errorCount}&nbsp;{heading?.suffix}
           </Heading>
           <p className="bf-usa-alert__text usa-alert__text">{description}</p>
         </div>

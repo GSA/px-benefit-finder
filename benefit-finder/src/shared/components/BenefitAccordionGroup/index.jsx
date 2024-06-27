@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import { createMarkup } from '../../utils'
+import { createMarkup, dataLayerUtils } from '../../utils'
 import {
   Accordion,
   Button,
@@ -34,6 +34,7 @@ const BenefitAccordionGroup = ({
     sourceIsEnglish,
   } = benefitAccordion
   const { closedState, openState } = benefitAccordionGroup
+  const { benefitLink } = dataLayerUtils.dataLayerStructure
   /**
    * a hook that hanldes our open state of the accordions in our group
    * @function
@@ -44,9 +45,22 @@ const BenefitAccordionGroup = ({
   /**
    * a function that returns the string value of our expanded action
    * @function
-   * @return {stroing} returns label for our button
+   * @return {string} returns label for our button
    */
   const handleExpandIcon = isExpandAll ? `${openState} -` : `${closedState} +`
+
+  /**
+   * a function that pushes dataLayer events when the user clicks the link of that benefit
+   * @function
+   */
+  const handleBenefitLinkClick = title => {
+    dataLayerUtils.dataLayerPush(window, {
+      event: benefitLink.event,
+      bfData: {
+        benefitTitle: title,
+      },
+    })
+  }
 
   /**
    * a functional component that renders a button and controls the expansion of our accordions
@@ -208,6 +222,7 @@ const BenefitAccordionGroup = ({
                 href={SourceLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleBenefitLinkClick(title)}
               >
                 {visitLabel} {agency.title}{' '}
                 {sourceIsEnglish && SourceIsEnglish === true

@@ -80,7 +80,8 @@ variable "env" {
           port         = optional(number, 80)
           public_route = optional(bool, false)
           source       = optional(string, null)
-          templates    = list(map(string))
+          stopped       = optional(bool, false)
+          templates    = optional(list(map(string)), [])
         })
       ), {}
     )

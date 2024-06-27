@@ -44,6 +44,9 @@ const server = test ? testServer : devServer
 export default defineConfig({
   base: './',
   plugins: [react(), eslint(), copy(copyConfig)],
+  optimizeDeps: {
+    exclude: ['@storybook/blocks'],
+  },
   css: {
     postcss: poscssConfig,
   },

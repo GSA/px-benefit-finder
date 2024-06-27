@@ -17,7 +17,7 @@ use Drupal\usagov_benefit_finder_api\Controller\LifeEventController;
  */
 function usagov_benefit_finder_api_node_update(Node $node) {
   $url = _usagov_benefit_finder_api_get_current_page_url();
-  if (strpos($url, "/admin/content") === false) {
+  if (strpos($url, "/admin/content") === FALSE) {
     _usagov_benefit_finder_api_batch_generate_json_data_files($node);
   }
   else {

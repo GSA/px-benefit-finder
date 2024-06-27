@@ -202,4 +202,3 @@ jobs:
         env:
           TF_BASTION: "${{ secrets.TF_BASTION }}"
         run: cf stop "${TF_BASTION}"  >/dev/null 2>&1
-

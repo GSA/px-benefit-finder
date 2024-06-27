@@ -83,7 +83,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               id=""
               role="heading"
             >
-              Error
+              Your information contains  errors
             </h2>
             <p
               class="bf-usa-alert__text usa-alert__text"

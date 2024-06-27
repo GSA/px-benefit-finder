@@ -39,7 +39,7 @@
     "value": "requerido"
   },
   "alertBanner": {
-    "heading": "Error",
+    "heading": { "prefix": "Tu información contiene", "suffix": "errores" },
     "description": "Responda los campos requeridos."
   },
   "buttonGroup": [

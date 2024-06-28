@@ -560,6 +560,7 @@ const LifeEventSection = ({
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
                     completed={currentData.completed}
+                    alertElement={alertFieldRef}
                   />
                 </div>
               )}

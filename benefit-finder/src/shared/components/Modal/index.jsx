@@ -54,6 +54,7 @@ const Modal = ({
   handleCheckRequriedFields,
   modalOpen,
   setModalOpen,
+  alertElement,
 }) => {
   // state
   const triggerRef = useRef(null)
@@ -67,6 +68,9 @@ const Modal = ({
       if (valid === true) {
         scrollLock.enableScroll()
         setModalOpen(true)
+      } else {
+        window.scrollTo(0, 0)
+        alertElement.current.focus()
       }
     })
   }

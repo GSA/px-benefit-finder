@@ -9,10 +9,11 @@ import './_index.scss'
  * @param {string} className - inherited classes
  * @param {string} children - inherited children
  * @param {any} alertFieldRef - inherited ref hook
- * @param {string} heading - inherited heading
+ * @param {obj} heading - inherited heading, contains prefix and suffix
  * @param {string} description - inherited description
  * @param {bool} type - string
  * @param {bool}  hasError - checks for current error state of parent value
+ * @param {number} errorCount - number of errors in the view
  * @param {bool} noBackground - style variant
  * @param {number} tabIndex - index value of tab order
  * @return {html} returns a wrapped paragraph styled as usa-alert
@@ -79,12 +80,13 @@ Alert.propTypes = {
   className: PropTypes.string,
   children: PropTypes.any,
   alertFieldRef: PropTypes.any,
-  heading: PropTypes.string,
+  heading: PropTypes.object,
   description: PropTypes.string,
   type: PropTypes.string,
   hasError: PropTypes.bool,
   noBackground: PropTypes.bool,
   tabIndex: PropTypes.number,
+  errorCount: PropTypes.number,
 }
 
 export default Alert

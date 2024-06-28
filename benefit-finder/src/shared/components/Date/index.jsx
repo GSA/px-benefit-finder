@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { Alert } from '../index'
 import './_index.scss'
 
 /**
@@ -7,34 +6,28 @@ import './_index.scss'
  * @component
  * @param {func} onChange - inherited change handler
  * @param {object} value - inherited state values
- * @param {boolean} required - inherited boolean value to manage required state
   * @param {object} ui - inherited ui object values
  * @param {string} id - inherited string value for id specificity
- * @param {boolean} invalid - inherited boolean value to manage error state
+ * @param {array} invalid - inherited boolean value to manage error state
 
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
-const Date = ({ onChange, value, required, ui, id, invalid }) => {
+const Date = ({ onChange, value, ui, id, invalid }) => {
   const { date, select } = ui
-  const { labelDay, labelMonth, labelYear, monthOptions, alert } = date
+  const { labelDay, labelMonth, labelYear, monthOptions } = date
   const { dateDefaultValue } = select
 
   // Note: when we break each input into functional components they trigger unwanted rerenders
+
+  const handleInvalid = (invalidArray, id) => {
+    return invalidArray && invalidArray.map(el => el.id === id).includes(true)
+  }
 
   return (
     <div
       id={`bf-usa-memorable-date-${id} usa-memorable-date-${id}`}
       className="bf-usa-memorable-date usa-memorable-date"
     >
-      {invalid === true && (
-        <Alert
-          className="bf-usa-date-alert"
-          heading={ui.alertBanner.heading}
-          description={alert}
-          type="error"
-          hasError={invalid}
-        ></Alert>
-      )}
       <div className="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select">
         <label
           className="bf-usa-label usa-label"
@@ -46,16 +39,13 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           Select a month from the list
         </div>
         <select
-          className={`bf-usa-select usa-select ${
-            required === true ? 'required-field' : ''
-          }`}
+          className={`bf-usa-select usa-select ${handleInvalid(invalid, `date_of_birth_month-${id}`) ? 'usa-input--error' : ''}`}
           id={`date_of_birth_month-${id}`}
           name={`date_of_birth_month-${id}`}
           aria-describedby={`month-description-${id}`}
-          required={required === true}
           value={(value && value.month) || ''}
           onChange={onChange}
-          aria-invalid={invalid === true}
+          aria-invalid={handleInvalid(invalid, `date_of_birth_month-${id}`)}
         >
           <option value="" key="default" disabled>
             {dateDefaultValue}
@@ -78,15 +68,14 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           Enter two numerals for day
         </div>
         <input
-          className={`bf-usa-input usa-input ${required === true ? 'required-field' : ''}`}
+          className={`bf-usa-input usa-input ${handleInvalid(invalid, `date_of_birth_day-${id}`) ? 'usa-input--error' : ''}`}
           aria-describedby={`day-description-${id}`}
           id={`date_of_birth_day-${id}`}
           name={`date_of_birth_day-${id}`}
           inputMode="numeric"
           value={(value && value.day) || ''}
           onChange={onChange}
-          required={required === true}
-          aria-invalid={invalid === true}
+          aria-invalid={handleInvalid(invalid, `date_of_birth_day-${id}`)}
         />
       </div>
       <div className="bf-usa-form-group usa-form-group bf-usa-form-group--year usa-form-group--year">
@@ -100,15 +89,14 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
           Enter four numerals for year
         </div>
         <input
-          className={`bf-usa-input usa-input ${required === true ? 'required-field' : ''}`}
+          className={`bf-usa-input usa-input ${handleInvalid(invalid, `date_of_birth_year-${id}`) ? 'usa-input--error' : ''}`}
           aria-describedby={`year-description-${id}`}
           id={`date_of_birth_year-${id}`}
           name={`date_of_birth_year-${id}`}
           inputMode="numeric"
           value={(value && value.year) || ''}
           onChange={onChange}
-          required={required === true}
-          aria-invalid={invalid === true}
+          aria-invalid={handleInvalid(invalid, `date_of_birth_year-${id}`)}
         />
       </div>
     </div>
@@ -118,10 +106,9 @@ const Date = ({ onChange, value, required, ui, id, invalid }) => {
 Date.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.object,
-  required: PropTypes.bool,
   ui: PropTypes.object,
   id: PropTypes.string,
-  invalid: PropTypes.bool,
+  invalid: PropTypes.array,
 }
 
 export default Date

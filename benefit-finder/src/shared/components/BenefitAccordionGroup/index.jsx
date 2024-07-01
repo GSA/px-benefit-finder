@@ -71,17 +71,16 @@ const BenefitAccordionGroup = ({
    */
   const handleExpandAll = isExpandAll => {
     setExpandAll(!isExpandAll)
-    isExpandAll === false &&
-      dataLayerUtils.dataLayerPush(
-        window,
-        {
-          event: openAllBenefitAccordions.event,
-          bfData: {
-            accordionsOpen: isExpandAll,
-          },
+    dataLayerUtils.dataLayerPush(
+      window,
+      {
+        event: openAllBenefitAccordions.event,
+        bfData: {
+          accordionsOpen: !isExpandAll,
         },
-        false
-      )
+      },
+      false
+    )
   }
 
   /**

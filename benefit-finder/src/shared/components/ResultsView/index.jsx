@@ -114,7 +114,10 @@ const ResultsView = ({
       dataLayerUtils.dataLayerPush(window, {
         event: resultsView.event,
         bfData: {
-          pageView: resultsView.bfData.pageView,
+          pageView:
+            notEligibleView === true
+              ? resultsView.bfData.pageView[1]
+              : resultsView.bfData.pageView[0],
           viewTitle:
             notEligibleView === false
               ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||

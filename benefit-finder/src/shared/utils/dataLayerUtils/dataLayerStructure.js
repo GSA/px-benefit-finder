@@ -37,7 +37,7 @@ const dataLayerStructure = {
     },
   },
   benefitAccordion: {
-    event: 'bf-accordion-open',
+    event: 'bf_accordion_open',
     bfData: {
       benefitTitle: null,
     },

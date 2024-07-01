@@ -26,7 +26,7 @@ const dataLayerValues = [
   {
     event: resultsView.event,
     bfData: {
-      pageView: resultsView.bfData.pageView,
+      pageView: resultsView.bfData.pageView[1],
       viewTitle: 'Your potential benefits',
       viewState: resultsView.bfData.viewState[1],
     },

@@ -39,7 +39,7 @@ const dataLayerStructure = {
   openAllBenefitAccordions: {
     event: 'bf_open_all_accordions',
     bfData: {
-      accordionsOpen: false,
+      accordionsOpen: true,
     },
   },
   benefitClick: {

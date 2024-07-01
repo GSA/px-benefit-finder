@@ -45,12 +45,16 @@ const Accordion = ({
   const handleOpenClose = isOpen => {
     setOpen(isOpen)
     isOpen === true &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: benefitAccordion.event,
-        bfData: {
-          benefitTitle: heading,
+      dataLayerUtils.dataLayerPush(
+        window,
+        {
+          event: benefitAccordion.event,
+          bfData: {
+            benefitTitle: heading,
+          },
         },
-      })
+        false
+      )
   }
 
   // handle expand all

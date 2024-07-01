@@ -39,14 +39,14 @@ const Accordion = ({
    */
   const [isOpen, setOpen] = useState(false)
 
-  const { benefitClick } = dataLayerUtils.dataLayerStructure
+  const { benefitAccordion } = dataLayerUtils.dataLayerStructure
 
   // handle dataLayer
   const handleOpenClose = isOpen => {
     setOpen(isOpen)
     isOpen === true &&
       dataLayerUtils.dataLayerPush(window, {
-        event: benefitClick.event,
+        event: benefitAccordion.event,
         bfData: {
           benefitTitle: heading,
         },

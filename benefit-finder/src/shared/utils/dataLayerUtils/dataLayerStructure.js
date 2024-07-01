@@ -36,8 +36,8 @@ const dataLayerStructure = {
       ],
     },
   },
-  benefitClick: {
-    event: 'bf_benefit_click',
+  benefitAccordion: {
+    event: 'bf-accordion-open',
     bfData: {
       benefitTitle: null,
     },

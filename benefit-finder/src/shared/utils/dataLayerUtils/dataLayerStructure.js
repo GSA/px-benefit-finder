@@ -36,6 +36,12 @@ const dataLayerStructure = {
       ],
     },
   },
+  openAllBenefitAccordions: {
+    event: 'bf_open_all_accordions',
+    bfData: {
+      accordionsOpen: false,
+    },
+  },
   benefitClick: {
     event: 'bf_benefit_click',
     bfData: {

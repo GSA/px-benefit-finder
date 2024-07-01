@@ -5,8 +5,13 @@ import { pageObjects } from '../../support/pageObjects'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
-const { intro, lifeEventSection, resultsView, benefitCount } =
-  dataLayerUtils.dataLayerStructure
+const {
+  intro,
+  lifeEventSection,
+  resultsView,
+  benefitCount,
+  openAllBenefitAccordions,
+} = dataLayerUtils.dataLayerStructure
 
 const dataLayerValues = [
   {
@@ -37,6 +42,12 @@ const dataLayerValues = [
       eligible: 4,
       moreInfo: 1,
       notEligible: 25,
+    },
+  },
+  {
+    event: openAllBenefitAccordions.event,
+    bfData: {
+      accordionsOpen: openAllBenefitAccordions.bfData.accordionsOpen,
     },
   },
 ]
@@ -132,6 +143,54 @@ describe('Calls to Google Analytics Object', function () {
             delete evCount[0]['gtm.uniqueEventId']
 
             expect(dataLayerValues[3]).to.deep.equal(evCount[0])
+          })
+        })
+    })
+  })
+
+  it('clicking open all on results page has a bf_open_all_accordions event', function () {
+    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
+    const scenario = utils.encodeURIFromObject(selectedData)
+    cy.visit(`${utils.storybookUri}${scenario}`)
+
+    cy.window().then(window => {
+      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      pageObjects
+        .expandAll()
+        .click()
+        .then(() => {
+          // we wait for the last event to fire
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(100).then(() => {
+            // check last page change event
+            const ev = {
+              ...window.dataLayer.filter(
+                x => x?.event === dataLayerValues[4].event
+              ),
+            }
+            delete ev[0]['gtm.uniqueEventId']
+
+            expect(dataLayerValues[4]).to.deep.equal(ev[0])
+          })
+        })
+
+      pageObjects
+        .expandAll()
+        .click()
+        .then(() => {
+          // we wait for the last event to fire
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(100).then(() => {
+            // check last page change event
+            const ev = {
+              ...window.dataLayer.filter(
+                x => x?.event === dataLayerValues[4].event
+              ),
+            }
+            delete ev[0]['gtm.uniqueEventId']
+
+            expect(dataLayerValues[4]).to.not.deep.equal(ev[0])
           })
         })
     })

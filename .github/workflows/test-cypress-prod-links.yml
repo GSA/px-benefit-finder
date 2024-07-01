@@ -30,7 +30,7 @@ jobs:
         with:
           browser: chrome
           env: NODE_ENV=test
-          config-file: cypress.prod.config.js
+          config-file: cypress.prod.links.config.js
           working-directory: benefit-finder
 
       - name: create github issue

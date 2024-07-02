@@ -30,7 +30,7 @@ jobs:
         with:
           base: ""
           head: ${{ github.ref_name }}
-          extra_args: --only-verified --json --entropy=True --max-depth=10
+          extra_args: --only-verified --json --entropy --max-depth=10
         continue-on-error: true
 
       - name: Upload TruffleHog scan results

@@ -31,7 +31,7 @@ const dataLayerValues = [
   {
     event: resultsView.event,
     bfData: {
-      pageView: resultsView.bfData.pageView,
+      pageView: resultsView.bfData.pageView[0],
       viewTitle: 'Your potential benefits',
       viewState: resultsView.bfData.viewState[1],
     },
@@ -122,7 +122,7 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(100).then(() => {
+          cy.wait(1000).then(() => {
             // check last page change event
             const ev = {
               ...window.dataLayer.filter(
@@ -130,6 +130,9 @@ describe('Calls to Google Analytics Object', function () {
               ),
             }
             delete ev[0]['gtm.uniqueEventId']
+
+            cy.log(resultsView.bfData.pageView[1])
+            cy.log(dataLayerValues[2])
 
             expect(dataLayerValues[2]).to.deep.equal(ev[0])
 

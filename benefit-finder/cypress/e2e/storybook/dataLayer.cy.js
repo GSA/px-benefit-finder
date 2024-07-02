@@ -163,38 +163,31 @@ describe('Calls to Google Analytics Object', function () {
         .expandAll()
         .click()
         .then(() => {
-          // we wait for the last event to fire
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(100).then(() => {
-            // check last page change event
-            const ev = {
-              ...window.dataLayer.filter(
-                x => x?.event === dataLayerValues[4].event
-              ),
-            }
-            delete ev[0]['gtm.uniqueEventId']
+          // check last page change event
+          const ev = {
+            ...window.dataLayer.filter(
+              x => x?.event === dataLayerValues[4].event
+            ),
+          }
+          delete ev[0]['gtm.uniqueEventId']
 
-            expect(dataLayerValues[4]).to.deep.equal(ev[0])
-          })
+          expect(dataLayerValues[4]).to.deep.equal(ev[0])
         })
 
       pageObjects
         .expandAll()
         .click()
         .then(() => {
-          // we wait for the last event to fire
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(100).then(() => {
-            // check last page change event
-            const ev = {
-              ...window.dataLayer.filter(
-                x => x?.event === dataLayerValues[4].event
-              ),
-            }
-            delete ev[0]['gtm.uniqueEventId']
+          // check last page change event
+          const ev = {
+            ...window.dataLayer.filter(
+              x => x?.event === dataLayerValues[4].event
+            ),
+          }
+          // we ignore dedup here so there can be multiple fires
+          delete ev[1]['gtm.uniqueEventId']
 
-            expect(dataLayerValues[4]).to.not.deep.equal(ev[0])
-          })
+          expect(dataLayerValues[4]).to.not.deep.equal(ev[1])
         })
     })
   })

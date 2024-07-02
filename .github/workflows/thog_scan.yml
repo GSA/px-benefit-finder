@@ -26,7 +26,7 @@ jobs:
 
       - name: Run TruffleHog scan
         id: trufflehog_scan
-        uses: trufflesecurity/trufflehog@main
+        uses: trufflesecurity/trufflehog@v3.79.0
         with:
           base: ""
           head: ${{ github.ref_name }}

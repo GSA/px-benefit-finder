@@ -44,7 +44,6 @@ const validateErrorCodes = test => {
 }
 
 const validateLinks = ({ selectedData, path }) => {
-  console.log(selectedData, path)
   const scenario = utils.encodeURIFromObject(selectedData)
   cy.visit(`${path}?${scenario}`)
   validateErrorCodes()

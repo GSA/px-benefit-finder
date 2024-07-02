@@ -26,7 +26,7 @@ const dataLayerStructure = {
   resultsView: {
     event: 'bf_page_change',
     bfData: {
-      pageView: 'bf-result-view',
+      pageView: ['bf-result-eligible-view', 'bf-result-not-eligible-view'],
       viewTitle: null,
       viewState: [
         'bf-not-eligible-view',

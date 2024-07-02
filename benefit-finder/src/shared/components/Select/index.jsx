@@ -22,15 +22,14 @@ function Select({
   options,
   selected,
   onChange,
-  required,
   ui,
   className,
   invalid,
 }) {
   const { labelSelect, defaultValue } = ui
-  const handleRequired = required === true ? ['required-field'] : ''
-  const defaultClasses = ['bf-usa-select usa-select']
-  const utilityClasses = handleRequired
+  const defaultClasses = [
+    `bf-usa-select usa-select ${invalid === true ? 'usa-input--error' : ''}`,
+  ]
   /**
    * a functional component to create a list of options for a select element.
    * @function
@@ -54,14 +53,12 @@ function Select({
         className={useHandleClassName({
           className,
           defaultClasses,
-          utilityClasses,
         })}
         name={htmlFor}
         id={htmlFor}
         onChange={onChange}
         value={selected || ''}
-        required={required === true}
-        aria-invalid={invalid}
+        aria-invalid={invalid === true}
       >
         <option value="" key="default" disabled>
           {defaultValue}

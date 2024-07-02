@@ -39,6 +39,7 @@ const customStyles = {
  * @param {string} modalHeading - heading value
  * @param {string} navItemOneLabel - passed to button for nav item in modal
  * @param {string} navItemTwoLabel - passed to button for nav item in modal
+ * @param {function} handleCheckRequriedFields - inherited async function to check validity of fields
  * @return {html} returns html for seting up a usa-modal component
  */
 const Modal = ({
@@ -53,6 +54,7 @@ const Modal = ({
   handleCheckRequriedFields,
   modalOpen,
   setModalOpen,
+  alertElement,
 }) => {
   // state
   const triggerRef = useRef(null)
@@ -62,10 +64,15 @@ const Modal = ({
    * @function
    */
   const handleOpenModal = () => {
-    if (handleCheckRequriedFields() === true) {
-      scrollLock.enableScroll()
-      setModalOpen(true)
-    }
+    handleCheckRequriedFields().then(valid => {
+      if (valid === true) {
+        scrollLock.enableScroll()
+        setModalOpen(true)
+      } else {
+        window.scrollTo(0, 0)
+        alertElement.current.focus()
+      }
+    })
   }
 
   /**
@@ -242,6 +249,7 @@ Modal.propTypes = {
   navItemOneFunction: PropTypes.func,
   navItemTwoLabel: PropTypes.string,
   navItemTwoFunction: PropTypes.func,
+  handleCheckRequriedFields: PropTypes.func,
 }
 
 export default Modal

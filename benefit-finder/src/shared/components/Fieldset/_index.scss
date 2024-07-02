@@ -1,5 +1,23 @@
 @use '../../styles/space/_index.scss' as space;
 
-.bf-hint {
-  margin: 0 0 space.$space-md;
+.bf-usa-fieldset {
+  padding-bottom: space.$padding-bottom-lg;
+  padding-left: space.$padding-bottom-lg;
+
+  .bf-hint {
+    margin: space.$space-md 0;
+  }
+
+  position: relative;
+  padding-top: 20px;
+
+  .bf-legend {
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+  }
+
+  &.usa-input--error {
+    border-left: 0.25rem solid #c61f0c;
+  }
 }

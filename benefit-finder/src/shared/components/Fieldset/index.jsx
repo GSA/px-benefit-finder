@@ -9,8 +9,13 @@ import './_index.scss'
  * @component
  * @param {React.ReactNode} children - inherited children
  * @param {string} legend - passed to Legend component
+ * @param {bool} required - inherited from data
+ * @param {node} alertRef - inherited reference
+ * @param {object} requiredLabel - passed to Legend component
+ * @param {boolean} hidden - inherited from data
  * @param {string} hint - passed to Hint component
  * @param {string} className - inherited classes
+ * @param {string} id - inherited id value
  * @return {html} returns a div
  */
 const Fieldset = ({
@@ -22,9 +27,13 @@ const Fieldset = ({
   hidden,
   hint,
   className,
+  id,
+  invalid,
 }) => {
   const handleHidden = hidden !== undefined && hidden ? ['display-none'] : ''
-  const defaultClasses = ['bf-usa-fieldset usa-fieldset']
+  const defaultClasses = [
+    `bf-usa-fieldset usa-fieldset ${required === true ? 'required-field' : ''} ${invalid === true ? 'usa-input--error' : ''}`,
+  ]
   const utilityClasses = handleHidden
 
   /**
@@ -56,9 +65,11 @@ const Fieldset = ({
         utilityClasses,
       })}
       ref={alertRef}
+      required={required === true}
+      id={id}
     >
-      {hint && <div className="bf-hint">{hint}</div>}
       {legend && handleRequired}
+      {hint && <div className="bf-hint">{hint}</div>}
       {children}
     </fieldset>
   )

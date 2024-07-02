@@ -39,7 +39,7 @@
     "value": "required"
   },
   "alertBanner": {
-    "heading": "Error",
+    "heading": { "prefix": "Your information contains", "suffix": "errors" },
     "description": "Complete all required fields."
   },
   "buttonGroup": [

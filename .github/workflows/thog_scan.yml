@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
         run: |
-          echo "${{ secrets.ADD_TO_PROJECT_PAT }}" | gh auth login --with-token
+          gh auth setup-git
 
       - name: Run TruffleHog scan
         id: trufflehog_scan

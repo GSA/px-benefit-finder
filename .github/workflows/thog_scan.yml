@@ -33,32 +33,36 @@ jobs:
           extra_args: --only-verified --json --entropy --max-depth=10
         continue-on-error: true
 
-      - name: Show me files
+      - name: Check TruffleHog Results
+        id: check_results
         run: |
-          ls -la
-          pwd
+          if [ -f truffleHogResults.json ]; then
+            echo "file_exists=true" >> $GITHUB_ENV
+          else
+            echo "file_exists=false" >> $GITHUB_ENV
+          fi
 
       - name: Upload TruffleHog scan results
-        if: always()
+        if: always() && env.file_exists == 'true'
         uses: actions/upload-artifact@v3
         with:
           name: trufflehog-results
           path: truffleHogResults.json
 
       - name: Convert JSON to Readable Report
-        if: always()
+        if: always() && env.file_exists == 'true'
         run: |
           jq -r '.results[] | "File: \(.path)\nCommit: \(.commit)\nDate: \(.date)\nReason: \(.reason)\n---------------------------"' truffleHogResults.json > truffleHogReport.txt
 
       - name: Upload Readable Report
-        if: always()
+        if: always() && env.file_exists == 'true'
         uses: actions/upload-artifact@v3
         with:
           name: trufflehog-readable-report
           path: truffleHogReport.txt
 
       - name: Check for findings and create issue
-        if: failure()
+        if: failure() && env.file_exists == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
         run: |
@@ -66,6 +70,8 @@ jobs:
             echo "Secrets found. Creating GitHub issue."
             gh issue create --title "TruffleHog Scan Results" --body "$(cat truffleHogReport.txt)" --label "bug,security" --assignee "@me"
             exit 1
+          else
+            echo "No secrets found or no results file."
           fi
 
       - name: Fail the job if any secrets are found

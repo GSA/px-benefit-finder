@@ -33,6 +33,11 @@ jobs:
           extra_args: --only-verified --json --entropy --max-depth=10
         continue-on-error: true
 
+      - name: Show me files
+        run: |
+          ls -la
+          pwd
+
       - name: Upload TruffleHog scan results
         if: always()
         uses: actions/upload-artifact@v3

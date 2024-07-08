@@ -16,6 +16,8 @@ import './_index.scss'
  * @param {string} hint - passed to Hint component
  * @param {string} className - inherited classes
  * @param {string} id - inherited id value
+ * @param {bool} invalid - inherited boolean value for valid or invalid state
+ * @param {object} ui - inherited locale based ui values
  * @return {html} returns a div
  */
 const Fieldset = ({
@@ -29,12 +31,14 @@ const Fieldset = ({
   className,
   id,
   invalid,
+  ui,
 }) => {
   const handleHidden = hidden !== undefined && hidden ? ['display-none'] : ''
   const defaultClasses = [
     `bf-usa-fieldset usa-fieldset ${required === true ? 'required-field' : ''} ${invalid === true ? 'usa-input--error' : ''}`,
   ]
   const utilityClasses = handleHidden
+  const { prefix, suffix } = ui
 
   /**
    * a functional component that renders a legend with a required hint
@@ -69,6 +73,11 @@ const Fieldset = ({
       id={id}
     >
       {legend && handleRequired}
+      {invalid === true && (
+        <div id={id} className="bf-error-detail">
+          {prefix} {legend && legend.toLowerCase()} {suffix}
+        </div>
+      )}
       {hint && <div className="bf-hint">{hint}</div>}
       {children}
     </fieldset>
@@ -83,6 +92,8 @@ Fieldset.propTypes = {
   hidden: PropTypes.bool,
   hint: PropTypes.string,
   className: PropTypes.string,
+  invalid: PropTypes.bool,
+  ui: PropTypes.obj,
 }
 
 export default Fieldset

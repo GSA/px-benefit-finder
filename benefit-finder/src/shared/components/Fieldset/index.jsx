@@ -93,7 +93,7 @@ Fieldset.propTypes = {
   hint: PropTypes.string,
   className: PropTypes.string,
   invalid: PropTypes.bool,
-  ui: PropTypes.obj,
+  ui: PropTypes.object,
 }
 
 export default Fieldset

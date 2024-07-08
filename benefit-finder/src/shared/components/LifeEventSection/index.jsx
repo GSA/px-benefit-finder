@@ -310,6 +310,7 @@ const LifeEventSection = ({
                               })
                               .includes(true)
                           }
+                          ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
@@ -368,6 +369,7 @@ const LifeEventSection = ({
                           required={item.fieldset.required}
                           requiredLabel={requiredLabel}
                           hidden={hidden && hidden}
+                          ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
@@ -443,6 +445,7 @@ const LifeEventSection = ({
                               })
                               .includes(true)
                           }
+                          ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`

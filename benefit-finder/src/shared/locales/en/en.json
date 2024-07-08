@@ -42,6 +42,10 @@
     "heading": { "prefix": "Your information contains", "suffix": "errors" },
     "description": "Complete all required fields."
   },
+  "errorText": {
+    "prefix": "Fill out the",
+    "suffix": "field"
+  },
   "buttonGroup": [
     {
       "value": "Back"

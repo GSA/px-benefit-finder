@@ -42,6 +42,10 @@
     "heading": { "prefix": "Tu información contiene", "suffix": "errores" },
     "description": "Responda los campos requeridos."
   },
+  "errorText": {
+    "prefix": "Responda los campo",
+    "suffix": ""
+  },
   "buttonGroup": [
     {
       "value": "Volver"

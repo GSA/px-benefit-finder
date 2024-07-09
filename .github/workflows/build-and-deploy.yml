@@ -6,6 +6,10 @@ on:
       - dev
       - main
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   php-lint:
     name: PHP Lint

@@ -37,7 +37,7 @@ jobs:
           PROJECT: "${{ secrets.PROJECT }}"
         run: |
           echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
-          cf start "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1
+          cf start "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" #>/dev/null 2>&1
           ./scripts/pipeline/cloud-gov-wait-for-app-start.sh "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}"
       - name: Restore database
         shell: bash

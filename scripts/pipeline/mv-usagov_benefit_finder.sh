@@ -35,6 +35,7 @@ if test -d "$BENEFIT_FINDER_MODULE_LOCATION"
 then
     echo "usa.gov benefit-finder module exist"
     echo "Moving BENEFIT_FINDER custom module to usa.gov project..."
+    rm  -r "${USAGOV_PROJECT_CUSTOM_MODULES_LOCATION}/${BENEFIT_FINDER_MODULE}"/* || exit 1
     cp -r "${BENEFIT_FINDER_MODULE_LOCATION}" "${USAGOV_PROJECT_CUSTOM_MODULES_LOCATION}" || exit 1
-    test -f "${USAGOV_PROJECT_CUSTOM_MODULES_LOCATION}${BENEFIT_FINDER_MODULE}"; echo -e "BENEFIT_FINDER Module successfully moved"
+    test -f "${USAGOV_PROJECT_CUSTOM_MODULES_LOCATION}/${BENEFIT_FINDER_MODULE}"; echo -e "BENEFIT_FINDER Module successfully moved"
 fi

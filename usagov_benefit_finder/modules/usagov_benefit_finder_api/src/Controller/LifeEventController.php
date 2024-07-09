@@ -531,16 +531,6 @@ class LifeEventController {
   public function getNode($nid, $mode) {
     $vid = 0;
 
-    // Do not use node of moderation state archived.
-    $id = $this->database
-      ->query('SELECT id FROM content_moderation_state_field_data
-                        WHERE moderation_state = :mstate AND content_entity_id = :nid',
-                        [':mstate' => 'archived', ':nid' => $nid])
-      ->fetchField();
-    if ($id) {
-      return NULL;
-    }
-
     if ($mode == "published") {
       $query = $this->entityTypeManager->getStorage('node')
         ->getQuery()

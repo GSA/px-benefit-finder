@@ -542,21 +542,30 @@ class LifeEventController {
     }
 
     if ($mode == "published") {
-      $vid = $this->database
-        ->query('SELECT MAX(vid) AS vid FROM node_field_revision WHERE status = 1 AND nid = :nid', [':nid' => $nid])
-        ->fetchField();
+      $query = $this->entityTypeManager->getStorage('node')
+        ->getQuery()
+        ->allRevisions()
+        ->condition('nid', $nid)
+        ->condition('status', 1)
+        ->sort('vid', 'DESC')
+        ->range(0, 1)
+        ->accessCheck(TRUE);
     }
     elseif ($mode == "draft") {
-      $vid = $this->database
-        ->query('SELECT MAX(vid) AS vid FROM node_field_revision WHERE nid = :nid', [':nid' => $nid])
-        ->fetchField();
-    }
-    else {
-      // @todo Unknown
+      $query = $this->entityTypeManager->getStorage('node')
+        ->getQuery()
+        ->allRevisions()
+        ->condition('nid', $nid)
+        ->sort('vid', 'DESC')
+        ->range(0, 1)
+        ->accessCheck(TRUE);
     }
 
-    if ($vid) {
-      $node = node_revision_load($vid);
+    $result = $query->execute();
+
+    if (!empty($result)) {
+      $revision_id = key($result);
+      $node = $this->entityTypeManager->getStorage('node')->loadRevision($revision_id);
     }
     else {
       $node = NULL;

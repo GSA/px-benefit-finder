@@ -1,0 +1,83 @@
+name: TruffleHog Scan
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+
+      - name: Authenticate GitHub CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        run: |
+          gh auth setup-git
+
+      - name: Run TruffleHog scan
+        id: trufflehog_scan
+        uses: trufflesecurity/trufflehog@v3.79.0
+        with:
+          base: ""
+          head: ${{ github.ref_name }}
+          extra_args: --only-verified --json --entropy --max-depth=50
+        continue-on-error: true
+
+      - name: Check TruffleHog Results
+        id: check_results
+        run: |
+          if [ -f truffleHogResults.json ]; then
+            echo "file_exists=true" >> $GITHUB_ENV
+          else
+            echo "file_exists=false" >> $GITHUB_ENV
+          fi
+
+      - name: Upload TruffleHog scan results
+        if: always() && env.file_exists == 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: trufflehog-results
+          path: truffleHogResults.json
+
+      - name: Convert JSON to Readable Report
+        if: always() && env.file_exists == 'true'
+        run: |
+          jq -r '.results[] | "File: \(.path)\nCommit: \(.commit)\nDate: \(.date)\nReason: \(.reason)\n---------------------------"' truffleHogResults.json > truffleHogReport.txt
+
+      - name: Upload Readable Report
+        if: always() && env.file_exists == 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: trufflehog-readable-report
+          path: truffleHogReport.txt
+
+      - name: Check for findings and create issue
+        if: failure() && env.file_exists == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        run: |
+          if jq -e '.results | length > 0' truffleHogResults.json > /dev/null; then
+            echo "Secrets found. Creating GitHub issue."
+            gh issue create --title "TruffleHog Scan Results" --body "$(cat truffleHogReport.txt)" --label "bug,security" --assignee "@me"
+            exit 1
+          else
+            echo "No secrets found or no results file."
+          fi
+
+      - name: Fail the job if any secrets are found
+        if: steps.trufflehog_scan.outcome == 'failure'
+        run: exit 1

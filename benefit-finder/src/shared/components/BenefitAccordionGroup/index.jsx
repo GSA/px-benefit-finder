@@ -34,7 +34,8 @@ const BenefitAccordionGroup = ({
     sourceIsEnglish,
   } = benefitAccordion
   const { closedState, openState } = benefitAccordionGroup
-  const { benefitLink } = dataLayerUtils.dataLayerStructure
+  const { benefitLink, openAllBenefitAccordions } =
+    dataLayerUtils.dataLayerStructure
   /**
    * a hook that hanldes our open state of the accordions in our group
    * @function
@@ -49,6 +50,7 @@ const BenefitAccordionGroup = ({
    */
   const handleExpandIcon = isExpandAll ? `${openState} -` : `${closedState} +`
 
+  // handle dataLayer
   /**
    * a function that pushes dataLayer events when the user clicks the link of that benefit
    * @function
@@ -63,6 +65,25 @@ const BenefitAccordionGroup = ({
   }
 
   /**
+   * a function that handles expanded state and pushes dataLayer events when the user clicks the "open all" action
+   * @function
+   * @prop {boolean} isExpandAll true or false
+   */
+  const handleExpandAll = isExpandAll => {
+    setExpandAll(!isExpandAll)
+    dataLayerUtils.dataLayerPush(
+      window,
+      {
+        event: openAllBenefitAccordions.event,
+        bfData: {
+          accordionsOpen: !isExpandAll,
+        },
+      },
+      false
+    )
+  }
+
+  /**
    * a functional component that renders a button and controls the expansion of our accordions
    * @component
    * @return {html} returns html
@@ -74,7 +95,7 @@ const BenefitAccordionGroup = ({
           className="bf-expand-all"
           aria-label={handleExpandIcon}
           unstyled
-          onClick={() => setExpandAll(!isExpandAll)}
+          onClick={() => handleExpandAll(isExpandAll)}
         >
           {handleExpandIcon}
         </Button>

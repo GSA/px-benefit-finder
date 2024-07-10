@@ -5,7 +5,7 @@ import { pageObjects } from '../../support/pageObjects'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
-const { intro, lifeEventSection, resultsView, benefitCount } =
+const { intro, lifeEventSection, resultsView, openAllBenefitAccordions } =
   dataLayerUtils.dataLayerStructure
 
 const dataLayerValues = [
@@ -26,17 +26,17 @@ const dataLayerValues = [
   {
     event: resultsView.event,
     bfData: {
-      pageView: resultsView.bfData.pageView,
+      pageView: resultsView.bfData.pageView[0],
       viewTitle: 'Your potential benefits',
-      viewState: resultsView.bfData.viewState[1],
+      eligibleBenefitCount: { number: 4, string: '4' },
+      moreInfoBenefitCount: { number: 1, string: '1' },
+      notEligibleBenefitCount: { number: 25, string: '25' },
     },
   },
   {
-    event: benefitCount.event,
+    event: openAllBenefitAccordions.event,
     bfData: {
-      eligible: 4,
-      moreInfo: 1,
-      notEligible: 25,
+      accordionsOpen: openAllBenefitAccordions.bfData.accordionsOpen,
     },
   },
 ]
@@ -120,19 +120,49 @@ describe('Calls to Google Analytics Object', function () {
             }
             delete ev[0]['gtm.uniqueEventId']
 
-            expect(dataLayerValues[2]).to.deep.equal(ev[0])
-
-            // // check count event
-            const evCount = {
-              ...window.dataLayer.filter(
-                x => x.event === dataLayerValues[3].event
-              ),
-            }
-
-            delete evCount[0]['gtm.uniqueEventId']
-
-            expect(dataLayerValues[3]).to.deep.equal(evCount[0])
+            expect(ev[0]).to.deep.equal(dataLayerValues[2])
           })
+        })
+    })
+  })
+
+  it('clicking open all on results page has a bf_open_all_accordions event', function () {
+    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
+    const scenario = utils.encodeURIFromObject(selectedData)
+    cy.visit(`${utils.storybookUri}${scenario}`)
+
+    cy.window().then(window => {
+      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      pageObjects
+        .expandAll()
+        .click()
+        .then(() => {
+          // check last page change event
+          const ev = {
+            ...window.dataLayer.filter(
+              x => x?.event === dataLayerValues[3].event
+            ),
+          }
+          delete ev[0]['gtm.uniqueEventId']
+
+          expect(dataLayerValues[3]).to.deep.equal(ev[0])
+        })
+
+      pageObjects
+        .expandAll()
+        .click()
+        .then(() => {
+          // check last page change event
+          const ev = {
+            ...window.dataLayer.filter(
+              x => x?.event === dataLayerValues[3].event
+            ),
+          }
+          // we ignore dedup here so there can be multiple fires
+          delete ev[1]['gtm.uniqueEventId']
+
+          expect(dataLayerValues[4]).to.not.deep.equal(ev[1])
         })
     })
   })

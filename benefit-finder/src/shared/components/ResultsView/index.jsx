@@ -47,11 +47,7 @@ const ResultsView = ({
   } = ui
 
   const [notEligibleView, setnotEligibleView] = useState(false)
-  const [eligibilityCount, setEligibilityCount] = useState({
-    eligibleBenefitCount: { number: 0, string: '0' },
-    notEligibleBenefitCount: { number: 0, string: '0' },
-    moreInfoBenefitCount: { number: 0, string: '0' },
-  })
+  const [eligibilityCount, setEligibilityCount] = useState(null)
 
   const resetElement = useResetElement()
 
@@ -90,7 +86,7 @@ const ResultsView = ({
     resetElement.current.focus()
   }
 
-  const zeroBenefitsResult = eligibilityCount.eligibleBenefitCount.number === 0
+  const zeroBenefitsResult = eligibilityCount?.eligibleBenefitCount.number === 0
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -110,7 +106,7 @@ const ResultsView = ({
   // handle dataLayer
   useEffect(() => {
     const { resultsView } = dataLayerUtils.dataLayerStructure
-    eligibilityCount.notEligibleBenefitCount.number >= 0 &&
+    eligibilityCount !== null &&
       dataLayerUtils.dataLayerPush(window, {
         event: resultsView.event,
         bfData: {
@@ -141,13 +137,13 @@ const ResultsView = ({
       data-analytics-content-criteria-values={criteriaValues}
       data-analytics-content-benefits={benefitsLength}
       data-analytics-content-eligible={
-        eligibilityCount.eligibleBenefitCount.number
+        eligibilityCount?.eligibleBenefitCount.number
       }
       data-analytics-content-not-eligible={
-        eligibilityCount.notEligibleBenefitCount.number
+        eligibilityCount?.notEligibleBenefitCount.number
       }
       data-analytics-content-more-info={
-        eligibilityCount.moreInfoBenefitCount.number
+        eligibilityCount?.moreInfoBenefitCount.number
       }
     >
       <Chevron

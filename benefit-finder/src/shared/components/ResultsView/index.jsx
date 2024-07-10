@@ -48,9 +48,9 @@ const ResultsView = ({
 
   const [notEligibleView, setnotEligibleView] = useState(false)
   const [eligibilityCount, setEligibilityCount] = useState({
-    eligible: 0,
-    notEligible,
-    moreInfo: 0,
+    eligibleBenefitCount: { number: 0, string: '0' },
+    notEligibleBenefitCount: { number: 0, string: '0' },
+    moreInfoBenefitCount: { number: 0, string: '0' },
   })
 
   const resetElement = useResetElement()
@@ -81,7 +81,7 @@ const ResultsView = ({
         matches.push(div)
       }
     }
-    return matches.length
+    return { number: matches.length, string: `${matches.length}` }
   }
 
   const handleViewToggle = () => {
@@ -90,18 +90,18 @@ const ResultsView = ({
     resetElement.current.focus()
   }
 
-  const zeroBenefitsResult = eligibilityCount.eligible === 0
+  const zeroBenefitsResult = eligibilityCount.eligibleBenefitCount.number === 0
 
   useEffect(() => {
     window.scrollTo(0, 0)
     setEligibilityCount({
-      eligible: handleEligibilityLength(
+      eligibleBenefitCount: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[0]
       ),
-      moreInfo: handleEligibilityLength(
+      moreInfoBenefitCount: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[1]
       ),
-      notEligible: handleEligibilityLength(
+      notEligibleBenefitCount: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[2]
       ),
     })
@@ -110,7 +110,7 @@ const ResultsView = ({
   // handle dataLayer
   useEffect(() => {
     const { resultsView } = dataLayerUtils.dataLayerStructure
-    eligibilityCount.notEligible >= 0 &&
+    eligibilityCount.notEligibleBenefitCount.number >= 0 &&
       dataLayerUtils.dataLayerPush(window, {
         event: resultsView.event,
         bfData: {
@@ -124,19 +124,10 @@ const ResultsView = ({
                 eligible.chevron.heading
               : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
                 notEligible.chevron.heading,
+          ...eligibilityCount,
         },
       })
   }, [notEligibleView, eligibilityCount])
-
-  // handle dataLayer
-  useEffect(() => {
-    const { benefitCount } = dataLayerUtils.dataLayerStructure
-    eligibilityCount.notEligible >= 0 &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: benefitCount.event,
-        bfData: eligibilityCount,
-      })
-  }, [eligibilityCount])
 
   // compare the selected criteria array with benefits
   return (
@@ -149,9 +140,15 @@ const ResultsView = ({
       }
       data-analytics-content-criteria-values={criteriaValues}
       data-analytics-content-benefits={benefitsLength}
-      data-analytics-content-eligible={eligibilityCount.eligible}
-      data-analytics-content-not-eligible={eligibilityCount.notEligible}
-      data-analytics-content-more-info={eligibilityCount.moreInfo}
+      data-analytics-content-eligible={
+        eligibilityCount.eligibleBenefitCount.number
+      }
+      data-analytics-content-not-eligible={
+        eligibilityCount.notEligibleBenefitCount.number
+      }
+      data-analytics-content-more-info={
+        eligibilityCount.moreInfoBenefitCount.number
+      }
     >
       <Chevron
         heading={

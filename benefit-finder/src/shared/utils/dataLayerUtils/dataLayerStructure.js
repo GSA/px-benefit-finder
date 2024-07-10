@@ -49,7 +49,6 @@ const dataLayerStructure = {
       benefitTitle: null,
     },
   },
-  benefitCount: { event: 'bf_count', bfData: null },
 }
 
 export default dataLayerStructure

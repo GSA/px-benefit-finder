@@ -50,6 +50,7 @@ const validateLinks = ({ selectedData, path }) => {
 }
 
 // to be removed when uncaught exceptions are addressed
+// eslint-disable-next-line n/handle-callback-err
 Cypress.on('uncaught:exception', (error, runnable) => {
   return false
 })
@@ -58,6 +59,7 @@ describe('Verify correct status code handling', () => {
   // negate validation on our functional code
   Cypress.on('fail', (error, runnable) => {
     if (JSON.stringify(error).includes('httpstat')) {
+      // eslint-disable-next-line no-unused-expressions
       expect(error).to.not.be.undefined
     } else {
       throw error

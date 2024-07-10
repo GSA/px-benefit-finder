@@ -5,13 +5,8 @@ import { pageObjects } from '../../support/pageObjects'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
-const {
-  intro,
-  lifeEventSection,
-  resultsView,
-  benefitCount,
-  openAllBenefitAccordions,
-} = dataLayerUtils.dataLayerStructure
+const { intro, lifeEventSection, resultsView, openAllBenefitAccordions } =
+  dataLayerUtils.dataLayerStructure
 
 const dataLayerValues = [
   {
@@ -33,15 +28,9 @@ const dataLayerValues = [
     bfData: {
       pageView: resultsView.bfData.pageView[0],
       viewTitle: 'Your potential benefits',
-      viewState: resultsView.bfData.viewState[1],
-    },
-  },
-  {
-    event: benefitCount.event,
-    bfData: {
-      eligible: 4,
-      moreInfo: 1,
-      notEligible: 25,
+      eligibleBenefitCount: { number: 4, string: '4' },
+      moreInfoBenefitCount: { number: 1, string: '1' },
+      notEligibleBenefitCount: { number: 25, string: '25' },
     },
   },
   {
@@ -122,7 +111,7 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(1000).then(() => {
+          cy.wait(100).then(() => {
             // check last page change event
             const ev = {
               ...window.dataLayer.filter(
@@ -131,21 +120,7 @@ describe('Calls to Google Analytics Object', function () {
             }
             delete ev[0]['gtm.uniqueEventId']
 
-            cy.log(resultsView.bfData.pageView[1])
-            cy.log(dataLayerValues[2])
-
-            expect(dataLayerValues[2]).to.deep.equal(ev[0])
-
-            // // check count event
-            const evCount = {
-              ...window.dataLayer.filter(
-                x => x.event === dataLayerValues[3].event
-              ),
-            }
-
-            delete evCount[0]['gtm.uniqueEventId']
-
-            expect(dataLayerValues[3]).to.deep.equal(evCount[0])
+            expect(ev[0]).to.deep.equal(dataLayerValues[2])
           })
         })
     })
@@ -166,12 +141,12 @@ describe('Calls to Google Analytics Object', function () {
           // check last page change event
           const ev = {
             ...window.dataLayer.filter(
-              x => x?.event === dataLayerValues[4].event
+              x => x?.event === dataLayerValues[3].event
             ),
           }
           delete ev[0]['gtm.uniqueEventId']
 
-          expect(dataLayerValues[4]).to.deep.equal(ev[0])
+          expect(dataLayerValues[3]).to.deep.equal(ev[0])
         })
 
       pageObjects
@@ -181,7 +156,7 @@ describe('Calls to Google Analytics Object', function () {
           // check last page change event
           const ev = {
             ...window.dataLayer.filter(
-              x => x?.event === dataLayerValues[4].event
+              x => x?.event === dataLayerValues[3].event
             ),
           }
           // we ignore dedup here so there can be multiple fires

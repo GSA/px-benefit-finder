@@ -561,6 +561,7 @@ const LifeEventSection = ({
                 <div>
                   <Modal
                     id="nav-modal"
+                    dataLayerValue={{ viewTitle: currentData.section.heading }}
                     modalHeading={reviewSelectionModal.heading}
                     navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
                     navItemOneFunction={setVerifyStep}

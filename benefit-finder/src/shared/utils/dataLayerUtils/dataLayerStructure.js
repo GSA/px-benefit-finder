@@ -11,9 +11,10 @@ const dataLayerStructure = {
     },
   },
   modal: {
-    event: 'bf_modal_open',
+    event: 'bf_page_change',
     bfData: {
-      modalOpen: false,
+      pageView: 'bf-form-completion-modal',
+      viewTitle: null,
     },
   },
   verifySelections: {

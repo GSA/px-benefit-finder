@@ -5,13 +5,8 @@ import { pageObjects } from '../../support/pageObjects'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
-const {
-  intro,
-  lifeEventSection,
-  resultsView,
-  benefitCount,
-  openAllBenefitAccordions,
-} = dataLayerUtils.dataLayerStructure
+const { intro, lifeEventSection, resultsView, openAllBenefitAccordions } =
+  dataLayerUtils.dataLayerStructure
 
 const dataLayerValues = [
   {
@@ -116,7 +111,7 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(2000).then(() => {
+          cy.wait(100).then(() => {
             // check last page change event
             const ev = {
               ...window.dataLayer.filter(
@@ -126,17 +121,6 @@ describe('Calls to Google Analytics Object', function () {
             delete ev[0]['gtm.uniqueEventId']
 
             expect(ev[0]).to.deep.equal(dataLayerValues[2])
-
-            // // check count event
-            // const evCount = {
-            //   ...window.dataLayer.filter(
-            //     x => x.event === dataLayerValues[2].event
-            //   ),
-            // }
-
-            // delete evCount[0]['gtm.uniqueEventId']
-
-            // expect(dataLayerValues[3]).to.deep.equal(evCount[0])
           })
         })
     })

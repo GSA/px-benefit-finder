@@ -109,7 +109,7 @@ const Modal = ({
         event: modal.event,
         bfData: {
           pageView: modal.bfData.pageView,
-          viewTitle: dataLayerValue.viewTitle,
+          viewTitle: `${dataLayerValue.viewTitle} modal`,
         },
       })
   }, [])

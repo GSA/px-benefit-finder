@@ -51,7 +51,6 @@ const validateLinks = ({ selectedData, path }) => {
 
 // to be removed when uncaught exceptions are addressed
 Cypress.on('uncaught:exception', (error, runnable) => {
-  console.log(error)
   return false
 })
 

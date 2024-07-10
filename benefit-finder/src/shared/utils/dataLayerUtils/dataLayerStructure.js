@@ -29,12 +29,6 @@ const dataLayerStructure = {
     bfData: {
       pageView: ['bf-result-eligible-view', 'bf-result-not-eligible-view'],
       viewTitle: null,
-      viewState: [
-        'bf-not-eligible-view',
-        'bf-eligible-view',
-        'bf-not-eligible-view-zero-benefits',
-        'bf-eligible-view-zero-benefits',
-      ],
     },
   },
   openAllBenefitAccordions: {

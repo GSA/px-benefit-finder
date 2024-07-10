@@ -124,12 +124,6 @@ const ResultsView = ({
                 eligible.chevron.heading
               : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
                 notEligible.chevron.heading,
-          viewState:
-            notEligibleView === true
-              ? (zeroBenefitsResult && resultsView.bfData.viewState[2]) ||
-                resultsView.bfData.viewState[0]
-              : (zeroBenefitsResult && resultsView.bfData.viewState[3]) ||
-                resultsView.bfData.viewState[1],
         },
       })
   }, [notEligibleView, eligibilityCount])

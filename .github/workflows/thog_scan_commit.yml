@@ -51,7 +51,9 @@ jobs:
         continue-on-error: true
 
       - name: Fake TruffleHog Results for testing.
-        run: touch truffleHogResults.json
+        run: |
+          touch truffleHogResults.json
+          echo "file_exists=true" >> $GITHUB_ENV
 
       - name: Check TruffleHog Results
         id: check_results
@@ -87,20 +89,6 @@ jobs:
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
         run: |
           source ./scripts/pipeline/s3-thog-upload.sh
-
-      # - name: Upload TruffleHog scan results
-      #   if: always() && env.file_exists == 'true'
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: trufflehog-results
-      #     path: truffleHogResults.json
-
-      # - name: Upload Readable Report
-      #   if: always() && env.file_exists == 'true'
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: trufflehog-readable-report
-      #     path: truffleHogReport.txt
 
       - name: Check for findings and create issue
         if: failure() && env.file_exists == 'true'

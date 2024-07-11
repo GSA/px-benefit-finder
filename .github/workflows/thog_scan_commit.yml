@@ -1,6 +1,7 @@
 name: TruffleHog Scan
 
 on:
+  workflow_call:
   push:
     branches:
       - main
@@ -16,6 +17,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Install basic dependancies
+        run: ./scripts/pipeline/deb-basic-deps.sh
+
+      - name: Install AWSCLI
+        run: ./scripts/pipeline/awscli-install.sh
+
+      - name: Install Cloudfoundry CLI
+        run: ./scripts/pipeline/deb-cf-install.sh
 
       - name: Install GitHub CLI
         run: |
@@ -49,6 +59,20 @@ jobs:
             echo "file_exists=false" >> $GITHUB_ENV
           fi
 
+      - name: Convert JSON to Readable Report
+        if: always() && env.file_exists == 'true'
+        run: |
+          jq -r '.results[] | "File: \(.path)\nCommit: \(.commit)\nDate: \(.date)\nReason: \(.reason)\n---------------------------"' truffleHogResults.json > truffleHogReport.txt
+
+      - name: Cloud.gov login
+        env:
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
+        run: |
+          source ./scripts/pipeline/cloud-gov-login.sh
+
       - name: Upload Trufflehog Results
         if: always() && env.file_exists == 'true'
         shell: bash
@@ -69,17 +93,12 @@ jobs:
       #     name: trufflehog-results
       #     path: truffleHogResults.json
 
-      - name: Convert JSON to Readable Report
-        if: always() && env.file_exists == 'true'
-        run: |
-          jq -r '.results[] | "File: \(.path)\nCommit: \(.commit)\nDate: \(.date)\nReason: \(.reason)\n---------------------------"' truffleHogResults.json > truffleHogReport.txt
-
-      - name: Upload Readable Report
-        if: always() && env.file_exists == 'true'
-        uses: actions/upload-artifact@v3
-        with:
-          name: trufflehog-readable-report
-          path: truffleHogReport.txt
+      # - name: Upload Readable Report
+      #   if: always() && env.file_exists == 'true'
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: trufflehog-readable-report
+      #     path: truffleHogReport.txt
 
       - name: Check for findings and create issue
         if: failure() && env.file_exists == 'true'

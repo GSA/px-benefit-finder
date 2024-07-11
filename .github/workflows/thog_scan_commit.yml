@@ -47,7 +47,7 @@ jobs:
         with:
           base: ""
           head: ${{ github.ref_name }}
-          extra_args: --only-verified --json --regex --max-depth=50 --rules .trufflehog.yaml
+          extra_args: --only-verified --json --regex --max-depth=50
         continue-on-error: true
 
       - name: Check TruffleHog Results

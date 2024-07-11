@@ -53,6 +53,8 @@ jobs:
       - name: Install and Run Trufflehog Scan
         id: trufflehog_scan
         run: |
+          pwd
+          ls -al
           curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
           trufflehog filesystem . --only-verified --fail --json | jq . > truffleHogResults.json
         continue-on-error: true
@@ -93,8 +95,7 @@ jobs:
           source ./scripts/pipeline/s3-thog-upload.sh
 
       - name: Check for findings and create issue
-        # if: failure() && env.file_exists == 'true'
-        if: env.file_exists == 'true'
+        if: failure() && env.file_exists == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
         run: |

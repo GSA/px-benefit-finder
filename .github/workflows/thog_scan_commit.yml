@@ -50,10 +50,6 @@ jobs:
           extra_args: --only-verified --json --entropy --max-depth=50
         continue-on-error: true
 
-      - name: Fake TruffleHog Results for testing.
-        run: |
-          touch truffleHogResults.json
-
       - name: Check TruffleHog Results
         id: check_results
         run: |
@@ -94,7 +90,8 @@ jobs:
           source ./scripts/pipeline/s3-thog-upload.sh
 
       - name: Check for findings and create issue
-        if: failure() && env.file_exists == 'true'
+        # if: failure() && env.file_exists == 'true'
+        if: env.file_exists == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
         run: |

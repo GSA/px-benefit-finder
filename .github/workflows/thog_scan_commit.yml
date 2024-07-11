@@ -1,0 +1,104 @@
+name: TruffleHog Scan
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install basic dependancies
+        run: ./scripts/pipeline/deb-basic-deps.sh
+
+      - name: Install AWSCLI
+        run: ./scripts/pipeline/awscli-install.sh
+
+      - name: Install Cloudfoundry CLI
+        run: ./scripts/pipeline/deb-cf-install.sh
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+
+      - name: Set branch name
+        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+
+      - name: Authenticate GitHub CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        run: |
+          gh auth setup-git
+
+      - name: Run TruffleHog scan
+        id: trufflehog_scan
+        uses: trufflesecurity/trufflehog@v3.79.0
+        with:
+          base: ""
+          head: ${{ github.ref_name }}
+          extra_args: --only-verified --json --entropy --max-depth=50
+        continue-on-error: true
+
+      - name: Check TruffleHog Results
+        id: check_results
+        run: |
+          if [ -f truffleHogResults.json ]; then
+            echo "file_exists=true" >> $GITHUB_ENV
+          else
+            echo "file_exists=false" >> $GITHUB_ENV
+          fi
+
+      - name: Convert JSON to Readable Report
+        if: always() && env.file_exists == 'true'
+        run: |
+          jq -r '.results[] | "File: \(.path)\nCommit: \(.commit)\nDate: \(.date)\nReason: \(.reason)\n---------------------------"' truffleHogResults.json > truffleHogReport.txt
+
+      - name: Cloud.gov login
+        env:
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
+        run: |
+          source ./scripts/pipeline/cloud-gov-login.sh
+
+      - name: Upload Trufflehog Results
+        if: always() && env.file_exists == 'true'
+        shell: bash
+        env:
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
+          DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
+        run: |
+          source ./scripts/pipeline/s3-thog-upload.sh
+
+      - name: Check for findings and create issue
+        # if: failure() && env.file_exists == 'true'
+        if: env.file_exists == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        run: |
+          if jq -e '.results | length > 0' truffleHogResults.json > /dev/null; then
+            echo "Secrets found. Creating GitHub issue."
+            gh issue create --title "TruffleHog Scan Results" --body "$(cat truffleHogReport.txt)" --label "bug,security" --assignee "@me"
+            exit 1
+          else
+            echo "No secrets found or no results file."
+          fi
+
+      - name: Fail the job if any secrets are found
+        if: steps.trufflehog_scan.outcome == 'failure'
+        run: exit 1

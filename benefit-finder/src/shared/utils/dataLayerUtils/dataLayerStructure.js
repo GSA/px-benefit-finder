@@ -11,9 +11,10 @@ const dataLayerStructure = {
     },
   },
   modal: {
-    event: 'bf_modal_open',
+    event: 'bf_page_change',
     bfData: {
-      modalOpen: false,
+      pageView: 'bf-form-completion-modal',
+      viewTitle: null,
     },
   },
   verifySelections: {
@@ -26,18 +27,18 @@ const dataLayerStructure = {
   resultsView: {
     event: 'bf_page_change',
     bfData: {
-      pageView: 'bf-result-view',
+      pageView: ['bf-result-eligible-view', 'bf-result-not-eligible-view'],
       viewTitle: null,
-      viewState: [
-        'bf-not-eligible-view',
-        'bf-eligible-view',
-        'bf-not-eligible-view-zero-benefits',
-        'bf-eligible-view-zero-benefits',
-      ],
     },
   },
-  benefitClick: {
-    event: 'bf_benefit_click',
+  openAllBenefitAccordions: {
+    event: 'bf_open_all_accordions',
+    bfData: {
+      accordionsOpen: true,
+    },
+  },
+  benefitAccordion: {
+    event: 'bf_accordion_open',
     bfData: {
       benefitTitle: null,
     },
@@ -48,7 +49,6 @@ const dataLayerStructure = {
       benefitTitle: null,
     },
   },
-  benefitCount: { event: 'bf_count', bfData: null },
 }
 
 export default dataLayerStructure

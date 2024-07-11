@@ -55,6 +55,7 @@ const Modal = ({
   modalOpen,
   setModalOpen,
   alertElement,
+  dataLayerValue,
 }) => {
   // state
   const triggerRef = useRef(null)
@@ -114,7 +115,8 @@ const Modal = ({
       dataLayerUtils.dataLayerPush(window, {
         event: modal.event,
         bfData: {
-          modalOpen,
+          pageView: modal.bfData.pageView,
+          viewTitle: `${dataLayerValue.viewTitle} modal`,
         },
       })
   }, [])

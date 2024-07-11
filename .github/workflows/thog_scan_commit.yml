@@ -32,6 +32,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gh
 
+      - name: Set branch name
+        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+
       - name: Authenticate GitHub CLI
         env:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
@@ -83,7 +86,6 @@ jobs:
           PROJECT: "${{ secrets.PROJECT }}"
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
         run: |
-          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
           source ./scripts/pipeline/s3-thog-upload.sh
 
       # - name: Upload TruffleHog scan results

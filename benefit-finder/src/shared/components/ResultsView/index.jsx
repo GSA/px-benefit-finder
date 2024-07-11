@@ -88,7 +88,6 @@ const ResultsView = ({
   }
 
   const handleViewToggle = () => {
-    console.log('handleToggleView', isExpandAll)
     setExpandAll(false)
     setnotEligibleView(!notEligibleView)
     window.scrollTo(0, 0)

@@ -46,12 +46,25 @@ jobs:
             echo "file_exists=false" >> $GITHUB_ENV
           fi
 
-      - name: Upload TruffleHog scan results
+      - name: Upload Trufflehog Results
         if: always() && env.file_exists == 'true'
-        uses: actions/upload-artifact@v3
-        with:
-          name: trufflehog-results
-          path: truffleHogResults.json
+        shell: bash
+        env:
+          CF_USER: "${{ secrets.CF_USER }}"
+          CF_PASSWORD: "${{ secrets.CF_PASSWORD }}"
+          CF_ORG: "${{ secrets.CF_ORG }}"
+          PROJECT: "${{ secrets.PROJECT }}"
+          DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
+        run: |
+          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+          source ./scripts/pipeline/s3-thog-upload.sh
+
+      # - name: Upload TruffleHog scan results
+      #   if: always() && env.file_exists == 'true'
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: trufflehog-results
+      #     path: truffleHogResults.json
 
       - name: Convert JSON to Readable Report
         if: always() && env.file_exists == 'true'

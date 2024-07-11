@@ -18,3 +18,7 @@ The purpose of this file is to have fake AWS credentials in it to make sure truf
 }
 
 
+mysql://fake_mysql_user:fake_mysql_password@mysql.example.com:3306/fake_mysql_database
+
+postgresql://fake_postgres_user:fake_postgres_password@postgres.example.com:5432/fake_postgres_database
+

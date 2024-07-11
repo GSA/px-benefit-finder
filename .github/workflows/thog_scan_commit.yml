@@ -50,6 +50,10 @@ jobs:
           extra_args: --only-verified --json --entropy --max-depth=50
         continue-on-error: true
 
+      - name: Fake TruffleHog Results for testing 2.
+        run: |
+          touch truffleHogResults.json
+
       - name: Check TruffleHog Results
         id: check_results
         run: |

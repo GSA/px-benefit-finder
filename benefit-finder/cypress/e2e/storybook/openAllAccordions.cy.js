@@ -8,7 +8,7 @@ beforeEach(() => {
   cy.visit(`${utils.storybookUri}${scenario}`)
 })
 
-describe('BenefitAccordionGroup component tests', () => {
+describe('open all interaction tests', () => {
   it('Validate clicking open all expands the accordions', () => {
     pageObjects
       .expandAll()

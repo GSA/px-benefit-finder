@@ -53,7 +53,6 @@ jobs:
       - name: Fake TruffleHog Results for testing.
         run: |
           touch truffleHogResults.json
-          echo "file_exists=true" >> $GITHUB_ENV
 
       - name: Check TruffleHog Results
         id: check_results
@@ -63,6 +62,10 @@ jobs:
           else
             echo "file_exists=false" >> $GITHUB_ENV
           fi
+
+      - name: Fake TruffleHog Results for testing 2.
+        run: |
+          echo "file_exists=true" >> $GITHUB_ENV
 
       - name: Convert JSON to Readable Report
         if: always() && env.file_exists == 'true'

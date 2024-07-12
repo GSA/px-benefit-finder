@@ -4,7 +4,6 @@ import { createMarkup } from '../../../../utils'
 import './_index.scss'
 
 const NotEligibleBenefitsHeadingBlock = ({ ui }) => {
-  console.log(ui)
   const { notEligible, summaryBox } = ui
   return (
     <div>

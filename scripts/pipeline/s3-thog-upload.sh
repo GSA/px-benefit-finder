@@ -54,8 +54,8 @@ echo "Checking AWS credentials..."
 echo "Uploading thog results..."
  {
 
-  aws s3 cp "truffleHogResults.json" "s3://${bucket}/thog_results/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl 2>/dev/null
-  aws s3 cp "truffleHogReport.txt" "s3://${bucket}/thog_results/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl 2>/dev/null
+  aws s3 cp "${TIMESTAMP}_truffleHogResults.json" "s3://${bucket}/thog_results/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl 2>/dev/null
+  aws s3 cp "${TIMESTAMP}_truffleHogReport.html" "s3://${bucket}/thog_results/$(date +%Y)/$(date +%m)/$(date +%d)/" --no-verify-ssl 2>/dev/null
   cf delete-service-key "${service}" "${service_key}" -f
 
  } &> /dev/null

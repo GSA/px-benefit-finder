@@ -50,12 +50,27 @@ jobs:
       #     extra_args: --only-verified --json --regex --max-depth=50
       #   continue-on-error: true
 
-      - name: Install and Run Trufflehog Scan
-        id: trufflehog_scan
+      # - name: Install and Run Trufflehog Scan
+      #   id: trufflehog_scan
+      #   run: |
+      #     curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
+      #     trufflehog filesystem --directory="/home/runner/work/px-benefit-finder/px-benefit-finder" --debug --fail --only-verified --json > truffleHogResults.json
+      #   continue-on-error: true
+
+      - name: Install TruffleHog3
         run: |
-          curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
-          trufflehog filesystem --directory="/home/runner/work/px-benefit-finder/px-benefit-finder" --debug --fail --only-verified --json > truffleHogResults.json
-        continue-on-error: true
+          pip install trufflehog3
+
+      - name: TruffleHog3 Scan
+        id: scan
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          ACTOR=${{ github.actor }}
+          echo "Scanning branch: $BRANCH_NAME"
+          echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "emoji=:exclamation:" >> $GITHUB_OUTPUT
+          echo "actor=$ACTOR" >> $GITHUB_OUTPUT
+          trufflehog3 --depth 10 -R truffleHogResults.json --no-entropy --severity MEDIUM -vv --output tuffleHogReport.html
 
       - name: Check TruffleHog Results
         id: check_results
@@ -66,10 +81,11 @@ jobs:
             echo "file_exists=false" >> $GITHUB_ENV
           fi
 
-      - name: Convert JSON to Readable Report
-        if: always() && env.file_exists == 'true'
-        run: |
-          jq -r '.results[] | "File: \(.path)\nCommit: \(.commit)\nDate: \(.date)\nReason: \(.reason)\n---------------------------"' truffleHogResults.json > truffleHogReport.txt
+      # - name: Convert JSON to Readable Report
+      #   if: always() && env.file_exists == 'true'
+      #   run: |
+      #     jq -r '.results[] | "File: \(.path)\nCommit: \(.commit)\nDate: \(.date)\nReason: \(.reason)\n---------------------------"' truffleHogResults.json > truffleHogReport.txt
+      #
 
       - name: Cloud.gov login
         env:
@@ -90,6 +106,7 @@ jobs:
           PROJECT: "${{ secrets.PROJECT }}"
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
         run: |
+          export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
           source ./scripts/pipeline/s3-thog-upload.sh
 
       - name: Check for findings and create issue

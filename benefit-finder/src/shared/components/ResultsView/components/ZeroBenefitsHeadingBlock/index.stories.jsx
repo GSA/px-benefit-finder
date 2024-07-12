@@ -3,8 +3,6 @@ import * as en from '../../../../locales/en/en.json'
 
 const { zeroBenefits } = en.resultsView
 
-console.log(en)
-
 export default {
   component: ZeroBenefitsHeadingBlock,
   tags: ['autodocs'],

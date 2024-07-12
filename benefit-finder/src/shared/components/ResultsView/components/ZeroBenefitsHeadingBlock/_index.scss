@@ -1,0 +1,9 @@
+@use '../../../../styles/mixins/_index.scss' as *;
+
+.bf-zero-benefits-view-heading {
+  @include h2;
+}
+
+.bf-zero-benefit-view-description {
+  @include h6;
+}

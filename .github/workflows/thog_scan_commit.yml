@@ -70,7 +70,8 @@ jobs:
           echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
           echo "emoji=:exclamation:" >> $GITHUB_OUTPUT
           echo "actor=$ACTOR" >> $GITHUB_OUTPUT
-          trufflehog3 --depth 10 -R truffleHogResults.json --no-entropy --severity MEDIUM -vv --output tuffleHogReport.html
+          trufflehog3 --no-entropy --severity MEDIUM -vv --format json --output truffleHogResults.json
+          trufflehog3 -R report.json --output truffleHogReport.html
 
       - name: Check TruffleHog Results
         id: check_results
@@ -107,6 +108,8 @@ jobs:
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
         run: |
           export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
+          mv truffleHogResults.json truffleHogResults-${TIMESTAMP}.json
+          mv truffleHogReport.html truffleHogReport-${TIMESTAMP}.html
           source ./scripts/pipeline/s3-thog-upload.sh
 
       - name: Check for findings and create issue

@@ -11,9 +11,13 @@ import {
   Chevron,
   ShareButton,
   RelativeBenefitList,
-  Summary,
+  // Summary,
 } from '../index'
-import { createMarkup, dataLayerUtils } from '../../utils'
+import { ZeroBenefitsHeadingBlock } from './components/index'
+import {
+  // createMarkup,
+  dataLayerUtils,
+} from '../../utils'
 import './_index.scss'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
@@ -40,10 +44,10 @@ const ResultsView = ({
     notEligible,
     eligible,
     zeroBenefits,
-    notEligibleResults,
+    // notEligibleResults,
     resultsRelativeBenefits,
     shareResults,
-    summaryBox,
+    // summaryBox,
   } = ui
 
   const [notEligibleView, setnotEligibleView] = useState(false)
@@ -88,7 +92,7 @@ const ResultsView = ({
   }
 
   const handleViewToggle = () => {
-    setExpandAll(false)
+    // setExpandAll(false)
     setnotEligibleView(!notEligibleView)
     window.scrollTo(0, 0)
     resetElement.current.focus()
@@ -188,14 +192,21 @@ const ResultsView = ({
               {stepBackLink}
             </Button>
           )}
-          <Heading className="bf-result-view-heading" headingLevel={2}>
+          {zeroBenefitsResult && (
+            <ZeroBenefitsHeadingBlock
+              handleViewToggle={handleViewToggle}
+              notEligibleView={notEligibleView}
+              ui={zeroBenefits}
+            />
+          )}
+          {/* <Heading className="bf-result-view-heading" headingLevel={2}>
             {notEligibleView
               ? (zeroBenefitsResult && zeroBenefits.heading) ||
                 notEligible.heading
               : (zeroBenefitsResult && zeroBenefits.heading) ||
                 eligible.heading}
-          </Heading>
-          <Heading
+          </Heading> */}
+          {/* <Heading
             className="bf-result-view-description"
             headingLevel={3}
             dangerouslySetInnerHTML={
@@ -209,22 +220,22 @@ const ResultsView = ({
                       eligible.description
                   )
             }
-          />
-          {zeroBenefitsResult === false && (
+          /> */}
+          {/* {zeroBenefitsResult === false && (
             <Summary
               heading={summaryBox.heading}
               listItems={summaryBox.list}
               cta={summaryBox.cta}
             />
-          )}
+          )} */}
 
-          {zeroBenefitsResult && !notEligibleView && (
+          {/* {zeroBenefitsResult && !notEligibleView && (
             <div className="bf-result-view-zero-benefits">
               <Button onClick={handleViewToggle} secondary>
                 {zeroBenefits?.cta}
               </Button>
             </div>
-          )}
+          )} */}
           {/* map all the benefits into cards */}
           <div className="bf-result-view-benefits">
             <BenefitAccordionGroup
@@ -246,7 +257,7 @@ const ResultsView = ({
               ui={ui}
             />
           </div>
-          {notEligibleView === false && zeroBenefitsResult === false && (
+          {/* {notEligibleView === false && zeroBenefitsResult === false && (
             <div className="bf-result-view-unmet">
               <Heading
                 className="bf-result-view-unmet-heading"
@@ -263,7 +274,7 @@ const ResultsView = ({
                 {notEligibleResults?.cta}
               </Button>
             </div>
-          )}
+          )} */}
           {relevantBenefits?.length > 0 && (
             <div className="bf-result-view-relvant-benefits">
               <Heading

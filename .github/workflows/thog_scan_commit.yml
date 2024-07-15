@@ -55,7 +55,7 @@ jobs:
           echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
           echo "emoji=:exclamation:" >> $GITHUB_OUTPUT
           echo "actor=$ACTOR" >> $GITHUB_OUTPUT
-          trufflehog3 --branch $BRANCH_NAME --no-entropy --severity MEDIUM -vv -R truffleHogResults.html
+          trufflehog3 --branch $BRANCH_NAME --no-entropy --severity MEDIUM -vv -R
           # trufflehog3 -R truffleHogResults.json --output truffleHogReport.html
 
       - name: Check TruffleHog Results

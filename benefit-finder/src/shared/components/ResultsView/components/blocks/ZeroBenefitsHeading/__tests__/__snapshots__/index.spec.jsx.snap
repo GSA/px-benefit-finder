@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ZeroBenefitsHeadingBlock > renders a match to the previous snapshot 1`] = `
+exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <h2
     aria-level="2"

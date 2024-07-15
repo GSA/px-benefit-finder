@@ -1,10 +1,12 @@
 import { render } from '@testing-library/react'
-import ZeroBenefitsHeadingBlock from '../index.jsx'
+import Results from '../index.jsx'
 import * as en from '../../../../../locales/en/en.json'
 
-describe('ZeroBenefitsHeadingBlock', () => {
+const { resultsView } = en
+
+describe('Results', () => {
   it('renders a match to the previous snapshot', () => {
-    const { asFragment } = render(<ZeroBenefitsHeadingBlock ui={en} />)
+    const { asFragment } = render(<Results ui={resultsView} />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

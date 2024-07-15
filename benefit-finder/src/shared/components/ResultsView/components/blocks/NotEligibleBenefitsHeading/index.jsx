@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import { Summary, Heading } from '../../../index'
-import { createMarkup } from '../../../../utils'
+import { Summary, Heading } from '../../../../index'
+import { createMarkup } from '../../../../../utils'
 import './_index.scss'
 
 const NotEligibleBenefitsHeadingBlock = ({ ui }) => {

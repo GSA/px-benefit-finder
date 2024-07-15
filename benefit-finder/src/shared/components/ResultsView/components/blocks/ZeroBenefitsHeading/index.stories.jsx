@@ -1,10 +1,10 @@
-import ZeroBenefitsHeadingBlock from './index.jsx'
-import * as en from '../../../../locales/en/en.json'
+import ZeroBenefitsHeading from './index.jsx'
+import * as en from '../../../../../locales/en/en.json'
 
 const { zeroBenefits } = en.resultsView
 
 export default {
-  component: ZeroBenefitsHeadingBlock,
+  component: ZeroBenefitsHeading,
   tags: ['autodocs'],
   args: {
     ui: zeroBenefits,

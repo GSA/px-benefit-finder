@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
-import { ResultsViewBlock } from './components/index'
+import { Results } from './components/index'
 import { dataLayerUtils } from '../../utils'
 // import './_index.scss'
 
@@ -133,7 +133,7 @@ const ResultsView = ({
         eligibilityCount?.moreInfoBenefitCount.number
       }
     >
-      <ResultsViewBlock
+      <Results
         handleStepBack={handleStepBack}
         notEligibleView={notEligibleView}
         zeroBenefitsResult={zeroBenefitsResult}

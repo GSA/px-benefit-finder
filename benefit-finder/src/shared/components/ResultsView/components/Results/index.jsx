@@ -10,16 +10,16 @@ import {
   RelativeBenefitList,
 } from '../../../index'
 import {
-  ZeroBenefitsHeadingBlock,
-  EligibleBenefitsHeadingBlock,
-  NotEligibleBenefitsHeadingBlock,
-} from '../index'
+  ZeroBenefitsHeading,
+  EligibleBenefitsHeading,
+  NotEligibleBenefitsHeading,
+} from '../blocks/index'
 import * as apiCalls from '../../../../api/apiCalls'
 import { createMarkup } from '../../../../utils'
 
 import './_index.scss'
 
-const ResultsViewBlock = ({
+const Results = ({
   notEligibleView,
   zeroBenefitsResult,
   stepDataArray,
@@ -33,11 +33,7 @@ const ResultsViewBlock = ({
   ui,
 }) => {
   // Results view components
-  const ResultsViewChevronBlock = ({
-    notEligibleView,
-    zeroBenefitsResult,
-    ui,
-  }) => {
+  const ResultsChevronBlock = ({ notEligibleView, zeroBenefitsResult, ui }) => {
     const { eligible, notEligible, zeroBenefits } = ui
     return (
       <Chevron
@@ -59,22 +55,18 @@ const ResultsViewBlock = ({
     )
   }
 
-  const ResultsViewHeadingBlock = ({
-    zeroBenefitsResult,
-    notEligibleView,
-    ui,
-  }) => {
+  const ResultsHeadingBlock = ({ zeroBenefitsResult, notEligibleView, ui }) => {
     const { notEligible, eligible, summaryBox, zeroBenefits } = ui
     return zeroBenefitsResult ? (
-      <ZeroBenefitsHeadingBlock
+      <ZeroBenefitsHeading
         handleViewToggle={handleViewToggle}
         notEligibleView={notEligibleView}
         ui={zeroBenefits}
       />
     ) : notEligibleView ? (
-      <NotEligibleBenefitsHeadingBlock ui={{ notEligible, summaryBox }} />
+      <NotEligibleBenefitsHeading ui={{ notEligible, summaryBox }} />
     ) : (
-      <EligibleBenefitsHeadingBlock ui={{ eligible, summaryBox }} />
+      <EligibleBenefitsHeading ui={{ eligible, summaryBox }} />
     )
   }
 
@@ -98,7 +90,7 @@ const ResultsViewBlock = ({
     )
   }
 
-  const ResultsNotEligibleCTA = ({ handleViewToggle, ui }) => {
+  const NotEligibleCTA = ({ handleViewToggle, ui }) => {
     const { notEligibleResults } = ui
     return (
       <div className="bf-result-view-unmet">
@@ -115,7 +107,7 @@ const ResultsViewBlock = ({
     )
   }
 
-  const ResultsViewShareResults = ({ stepDataArray, ui }) => {
+  const ShareResults = ({ stepDataArray, ui }) => {
     const { shareResults } = ui
     return (
       <div className="bf-result-view-share-results">
@@ -140,7 +132,7 @@ const ResultsViewBlock = ({
     )
   }
 
-  const ResultsViewRelevantBenefits = ({ relevantBenefits, ui }) => {
+  const RelevantBenefits = ({ relevantBenefits, ui }) => {
     const { resultsRelativeBenefits } = ui
     return (
       <div className="bf-result-view-relvant-benefits">
@@ -160,7 +152,7 @@ const ResultsViewBlock = ({
     )
   }
 
-  const ResultsViewAccordions = ({
+  const BenefitAccordions = ({
     zeroBenefitsResult,
     notEligibleView,
     stepDataArray,
@@ -194,7 +186,7 @@ const ResultsViewBlock = ({
 
   return (
     <>
-      <ResultsViewChevronBlock
+      <ResultsChevronBlock
         notEligibleView={notEligibleView}
         zeroBenefitsResult={zeroBenefitsResult}
         ui={ui}
@@ -207,14 +199,14 @@ const ResultsViewBlock = ({
             handleStepBack={handleStepBack}
           />
 
-          <ResultsViewHeadingBlock
+          <ResultsHeadingBlock
             zeroBenefitsResult={zeroBenefitsResult}
             notEligibleView={notEligibleView}
             ui={ui}
           />
 
           {/* map all the benefits into accordions */}
-          <ResultsViewAccordions
+          <BenefitAccordions
             zeroBenefitsResult={zeroBenefitsResult}
             notEligibleView={notEligibleView}
             isExpandAll={isExpandAll}
@@ -224,7 +216,7 @@ const ResultsViewBlock = ({
           />
 
           {notEligibleView === false && zeroBenefitsResult === false && (
-            <ResultsNotEligibleCTA
+            <NotEligibleCTA
               notEligibleView={notEligibleView}
               zeroBenefitsResult={zeroBenefitsResult}
               handleViewToggle={handleViewToggle}
@@ -233,21 +225,18 @@ const ResultsViewBlock = ({
           )}
 
           {relevantBenefits?.length > 0 && (
-            <ResultsViewRelevantBenefits
-              relevantBenefits={relevantBenefits}
-              ui={ui}
-            />
+            <RelevantBenefits relevantBenefits={relevantBenefits} ui={ui} />
           )}
 
-          <ResultsViewShareResults stepDataArray={stepDataArray} ui={ui} />
+          <ShareResults stepDataArray={stepDataArray} ui={ui} />
         </div>
       </div>
     </>
   )
 }
 
-ResultsViewBlock.propTypes = {
+Results.propTypes = {
   props: PropTypes.any,
 }
 
-export default ResultsViewBlock
+export default Results

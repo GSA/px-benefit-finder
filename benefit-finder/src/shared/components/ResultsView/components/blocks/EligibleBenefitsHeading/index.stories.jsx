@@ -1,10 +1,10 @@
-import EligibleBenefitsHeadingBlock from './index.jsx'
-import * as en from '../../../../locales/en/en.json'
+import EligibleBenefitsHeading from './index.jsx'
+import * as en from '../../../../../locales/en/en.json'
 
 const { eligible, summaryBox } = en.resultsView
 
 export default {
-  component: EligibleBenefitsHeadingBlock,
+  component: EligibleBenefitsHeading,
   tags: ['autodocs'],
   args: {
     ui: { eligible, summaryBox },

@@ -1,16 +1,16 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`EligibleBenefitsHeadingBlock > renders a match to the previous snapshot 1`] = `
+exports[`NotEligibleBenefitsHeading > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div>
     <h2
       aria-level="2"
-      class="bf-eligible-view-heading font-family-sans"
+      class="bf-not-eligible-view-heading font-family-sans"
       role="heading"
     />
     <h3
       aria-level="3"
-      class="bf-eligible-view-description font-family-sans"
+      class="bf-not-eligible-view-description font-family-sans"
       role="heading"
     />
     <div

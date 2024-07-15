@@ -46,6 +46,7 @@ jobs:
           pip install trufflehog3
 
       - name: TruffleHog3 Scan
+        continue-on-error: true
         id: scan
         run: |
           BRANCH_NAME=${GITHUB_REF#refs/heads/}
@@ -54,7 +55,7 @@ jobs:
           echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
           echo "emoji=:exclamation:" >> $GITHUB_OUTPUT
           echo "actor=$ACTOR" >> $GITHUB_OUTPUT
-          trufflehog3 --branch $BRANCH_NAME --no-entropy -vvv -r rules.yml --format json --output truffleHogResults.json
+          trufflehog3 --branch $BRANCH_NAME --no-entropy -vv -r rules.yml --format json --output truffleHogResults.json
           trufflehog3 -R truffleHogResults.json --output truffleHogReport.html
 
       - name: Check TruffleHog Results

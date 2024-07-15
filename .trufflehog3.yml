@@ -3,3 +3,4 @@ exclude: # exclude matching issues
     paths:
       - rules.yml
       - .trufflehog3.yml
+      - aws/**

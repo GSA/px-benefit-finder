@@ -122,11 +122,11 @@ jobs:
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
-      - name: Export External Link Testing Report
-        if: always()
+      - name: Artifact(s)
+        if: failure()
         uses: actions/upload-artifact@v3
         with:
-          name: Export External Link Testing Report
+          name: cypress screenshots
           path: ./benefit-finder/cypress/screenshots
   tests-components:
     runs-on: ubuntu-latest

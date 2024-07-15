@@ -48,7 +48,8 @@ jobs:
       - name: TruffleHog3 Scan
         id: scan
         run: |
-          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          # BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          BRANCH_NAME=dev
           ACTOR=${{ github.actor }}
           echo "Scanning branch: $BRANCH_NAME"
           echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT

@@ -99,11 +99,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: "./benefit-finder/package.json"
-      - uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
 
       - name: Install Submodule
         run: |
@@ -127,6 +122,13 @@ jobs:
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
+
+      - name: Artifact(s)
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
 
   tests-components:
     runs-on: ubuntu-latest

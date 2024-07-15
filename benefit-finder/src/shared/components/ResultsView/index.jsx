@@ -49,6 +49,13 @@ const ResultsView = ({
   const [notEligibleView, setnotEligibleView] = useState(false)
   const [eligibilityCount, setEligibilityCount] = useState(null)
 
+  /**
+   * a hook that hanldes our open state of the accordions in our group
+   * @function
+   * @return {boolean} returns true or false
+   */
+  const [isExpandAll, setExpandAll] = useState(false)
+
   const resetElement = useResetElement()
 
   useEffect(() => {
@@ -81,6 +88,7 @@ const ResultsView = ({
   }
 
   const handleViewToggle = () => {
+    setExpandAll(false)
     setnotEligibleView(!notEligibleView)
     window.scrollTo(0, 0)
     resetElement.current.focus()
@@ -233,6 +241,8 @@ const ResultsView = ({
                 zeroBenefitsResult === false ||
                 (zeroBenefitsResult && notEligibleView)
               }
+              isExpandAll={isExpandAll}
+              setExpandAll={setExpandAll}
               ui={ui}
             />
           </div>

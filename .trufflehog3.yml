@@ -4,7 +4,7 @@ exclude: # exclude matching issues
       - rules.yml
       - .trufflehog3.yml
       - aws/**
-      - *.tar.gz
+      - *.gz
       - *.zip
       - *.deb
 

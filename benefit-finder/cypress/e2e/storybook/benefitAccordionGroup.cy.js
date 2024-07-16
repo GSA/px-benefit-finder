@@ -21,9 +21,9 @@ describe('BenefitAccordionGroup component tests', () => {
     //   })
     cy.wait(5000)
     cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button').eq(0).click()
-    // cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
-    //   .eq(0)
-    //   .should('have.attr', 'aria-expanded', 'true')
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
+      .eq(0)
+      .should('have.attr', 'aria-expanded', 'true')
   })
 
   //   it('Validate clicking Expand all opens all accordions', () => {

@@ -1,5 +1,0 @@
-name: TruffleHog Scan
-
-on:
-  schedule:
-    - cron: "30 4 * * *"

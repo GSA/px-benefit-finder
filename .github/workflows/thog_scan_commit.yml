@@ -41,17 +41,21 @@ jobs:
         run: |
           gh auth setup-git
 
-      - name: Run TruffleHog scan
-        id: trufflehog_scan
-        uses: trufflesecurity/trufflehog@v3.79.0
-        with:
-          base: ""
-          head: ${{ github.ref_name }}
-          extra_args: --only-verified --json --entropy --max-depth=50
-        continue-on-error: true
+      - name: Install TruffleHog3
+        run: |
+          pip install trufflehog3
 
-      - name: Fake TruffleHog Results for testing.
-        run: touch truffleHogResults.json
+      - name: TruffleHog3 Scan
+        id: scan
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          ACTOR=${{ github.actor }}
+          echo "Scanning branch: $BRANCH_NAME"
+          echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "emoji=:exclamation:" >> $GITHUB_OUTPUT
+          echo "actor=$ACTOR" >> $GITHUB_OUTPUT
+          trufflehog3 --branch $BRANCH_NAME --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json --exclude '\.(png|jpg|jpeg|gif|zip|tar\.gz|deb)$' || true
+          trufflehog3 -R truffleHogResults.json --output truffleHogReport.html
 
       - name: Check TruffleHog Results
         id: check_results
@@ -61,11 +65,6 @@ jobs:
           else
             echo "file_exists=false" >> $GITHUB_ENV
           fi
-
-      - name: Convert JSON to Readable Report
-        if: always() && env.file_exists == 'true'
-        run: |
-          jq -r '.results[] | "File: \(.path)\nCommit: \(.commit)\nDate: \(.date)\nReason: \(.reason)\n---------------------------"' truffleHogResults.json > truffleHogReport.txt
 
       - name: Cloud.gov login
         env:
@@ -86,21 +85,10 @@ jobs:
           PROJECT: "${{ secrets.PROJECT }}"
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
         run: |
+          export TIMESTAMP=$(date --utc +%FT%TZ | tr ':', '-')
+          mv truffleHogResults.json truffleHogResults-${TIMESTAMP}.json
+          mv truffleHogReport.html truffleHogReport-${TIMESTAMP}.html
           source ./scripts/pipeline/s3-thog-upload.sh
-
-      # - name: Upload TruffleHog scan results
-      #   if: always() && env.file_exists == 'true'
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: trufflehog-results
-      #     path: truffleHogResults.json
-
-      # - name: Upload Readable Report
-      #   if: always() && env.file_exists == 'true'
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: trufflehog-readable-report
-      #     path: truffleHogReport.txt
 
       - name: Check for findings and create issue
         if: failure() && env.file_exists == 'true'

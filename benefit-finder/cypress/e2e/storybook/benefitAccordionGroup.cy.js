@@ -23,6 +23,7 @@ describe('BenefitAccordionGroup component tests', () => {
         cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
           .eq(0)
           .click()
+          .wait(1000)
           .should('have.attr', 'aria-expanded', 'true')
         // check that the next accordion in the list is not expanded
         cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')

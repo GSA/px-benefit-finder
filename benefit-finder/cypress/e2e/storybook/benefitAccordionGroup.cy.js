@@ -26,24 +26,24 @@ describe('BenefitAccordionGroup component tests', () => {
     //   .should('have.attr', 'aria-expanded', 'true')
   })
 
-//   it('Validate clicking Expand all opens all accordions', () => {
-//     cy.get('.bf-expand-all').click()
-//     cy.get('.bf-expand-all').should('contain.text', 'Close all')
-//     cy.get('.bf-usa-accordion:visible').each(accordion => {
-//       cy.wrap(accordion)
-//         .get('.bf-usa-accordion__button')
-//         .should('have.attr', 'aria-expanded', 'true')
-//     })
-//   })
+  //   it('Validate clicking Expand all opens all accordions', () => {
+  //     cy.get('.bf-expand-all').click()
+  //     cy.get('.bf-expand-all').should('contain.text', 'Close all')
+  //     cy.get('.bf-usa-accordion:visible').each(accordion => {
+  //       cy.wrap(accordion)
+  //         .get('.bf-usa-accordion__button')
+  //         .should('have.attr', 'aria-expanded', 'true')
+  //     })
+  //   })
 
-//   it('Validate clicking Collapse all closes all accordions', () => {
-//     cy.get('.bf-expand-all').click()
-//     cy.get('.bf-expand-all').click()
-//     cy.get('.bf-expand-all').should('contain.text', 'Open all')
-//     cy.get('.bf-usa-accordion:visible').each(accordion => {
-//       cy.wrap(accordion)
-//         .get('.bf-usa-accordion__button')
-//         .should('have.attr', 'aria-expanded', 'false')
-//     })
-//   })
-// })
+  //   it('Validate clicking Collapse all closes all accordions', () => {
+  //     cy.get('.bf-expand-all').click()
+  //     cy.get('.bf-expand-all').click()
+  //     cy.get('.bf-expand-all').should('contain.text', 'Open all')
+  //     cy.get('.bf-usa-accordion:visible').each(accordion => {
+  //       cy.wrap(accordion)
+  //         .get('.bf-usa-accordion__button')
+  //         .should('have.attr', 'aria-expanded', 'false')
+  //     })
+  //   })
+})

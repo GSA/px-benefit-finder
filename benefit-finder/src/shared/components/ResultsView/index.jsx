@@ -2,19 +2,9 @@ import { useEffect, useState } from 'react'
 import { useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
-import {
-  BenefitAccordionGroup,
-  Button,
-  EmailButton,
-  Heading,
-  StepBackLink,
-  Chevron,
-  ShareButton,
-  RelativeBenefitList,
-  Summary,
-} from '../index'
-import { createMarkup, dataLayerUtils } from '../../utils'
-import './_index.scss'
+import { Results } from './components/index'
+import { dataLayerUtils } from '../../utils'
+// import './_index.scss'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
 
@@ -22,30 +12,19 @@ import './_index.scss'
  * a functional component that renders a view of the form benefit state values
  * @component
  * @param {function} handlStepBack inherited ui translations
- * @param {object} ui inherited ui translations
- * @param {array} data inherited benefits data
  * @param {func} setBenefitsArray inherited state handler
  * @param {array} stepDataArray inherited state of inupt values from form entry
+ * @param {object} ui inherited ui translations
+ * @param {array} data inherited benefits data
  * @return {html} returns a view page of filtered benefits
  */
 const ResultsView = ({
   handleStepBack,
-  ui,
-  data,
   stepDataArray,
   relevantBenefits,
+  ui,
+  data,
 }) => {
-  const {
-    stepBackLink,
-    notEligible,
-    eligible,
-    zeroBenefits,
-    notEligibleResults,
-    resultsRelativeBenefits,
-    shareResults,
-    summaryBox,
-  } = ui
-
   const [notEligibleView, setnotEligibleView] = useState(false)
   const [eligibilityCount, setEligibilityCount] = useState(null)
 
@@ -124,16 +103,16 @@ const ResultsView = ({
               : resultsView.bfData.pageView[0],
           viewTitle:
             notEligibleView === false
-              ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
-                eligible.chevron.heading
-              : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
-                notEligible.chevron.heading,
+              ? (zeroBenefitsResult && ui.zeroBenefits.chevron.heading) ||
+                ui?.eligible.chevron.heading
+              : (zeroBenefitsResult && ui?.zeroBenefits.chevron.heading) ||
+                ui?.notEligible.chevron.heading,
           ...eligibilityCount,
         },
       })
   }, [notEligibleView, eligibilityCount])
 
-  // compare the selected criteria array with benefits
+  // compare the selected criteria array with benefits and render our view
   return (
     <div
       className="bf-result-view"
@@ -154,157 +133,19 @@ const ResultsView = ({
         eligibilityCount?.moreInfoBenefitCount.number
       }
     >
-      <Chevron
-        heading={
-          notEligibleView === false
-            ? (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
-              eligible.chevron.heading
-            : (zeroBenefitsResult && zeroBenefits.chevron.heading) ||
-              notEligible.chevron.heading
-        }
-        description={
-          notEligibleView === false
-            ? (zeroBenefitsResult && zeroBenefits.chevron.description) ||
-              eligible.chevron.description
-            : (zeroBenefitsResult && zeroBenefits.chevron.description) ||
-              notEligible.chevron.description
-        }
+      <Results
+        handleStepBack={handleStepBack}
+        notEligibleView={notEligibleView}
+        zeroBenefitsResult={zeroBenefitsResult}
+        stepDataArray={stepDataArray}
+        handleViewToggle={handleViewToggle}
+        isExpandAll={isExpandAll}
+        setExpandAll={setExpandAll}
+        relevantBenefits={relevantBenefits}
+        resetElement={resetElement}
+        data={data}
+        ui={ui}
       />
-      <div className="bf-grid-container grid-container">
-        <div className="bf-result-view-details">
-          {notEligibleView === false ? (
-            <StepBackLink
-              onClick={() => resetElement.current.focus()}
-              setCurrent={handleStepBack}
-            >
-              {stepBackLink}
-            </StepBackLink>
-          ) : (
-            <Button
-              className="bf-step-back-link"
-              onClick={() => handleViewToggle()}
-              unstyled
-            >
-              {stepBackLink}
-            </Button>
-          )}
-          <Heading className="bf-result-view-heading" headingLevel={2}>
-            {notEligibleView
-              ? (zeroBenefitsResult && zeroBenefits.heading) ||
-                notEligible.heading
-              : (zeroBenefitsResult && zeroBenefits.heading) ||
-                eligible.heading}
-          </Heading>
-          <Heading
-            className="bf-result-view-description"
-            headingLevel={3}
-            dangerouslySetInnerHTML={
-              notEligibleView
-                ? createMarkup(
-                    (zeroBenefitsResult && zeroBenefits.description) ||
-                      notEligible.description
-                  )
-                : createMarkup(
-                    (zeroBenefitsResult && zeroBenefits.description) ||
-                      eligible.description
-                  )
-            }
-          />
-          {zeroBenefitsResult === false && (
-            <Summary
-              heading={summaryBox.heading}
-              listItems={summaryBox.list}
-              cta={summaryBox.cta}
-            />
-          )}
-
-          {zeroBenefitsResult && !notEligibleView && (
-            <div className="bf-result-view-zero-benefits">
-              <Button onClick={handleViewToggle} secondary>
-                {zeroBenefits?.cta}
-              </Button>
-            </div>
-          )}
-          {/* map all the benefits into cards */}
-          <div className="bf-result-view-benefits">
-            <BenefitAccordionGroup
-              data={
-                stepDataArray &&
-                apiCalls.GET.ElegibilityByCriteria(
-                  apiCalls.GET.SelectedValueAll(stepDataArray),
-                  data
-                )
-              }
-              entryKey={'benefit'}
-              notEligibleView={notEligibleView}
-              expandAll={
-                zeroBenefitsResult === false ||
-                (zeroBenefitsResult && notEligibleView)
-              }
-              isExpandAll={isExpandAll}
-              setExpandAll={setExpandAll}
-              ui={ui}
-            />
-          </div>
-          {notEligibleView === false && zeroBenefitsResult === false && (
-            <div className="bf-result-view-unmet">
-              <Heading
-                className="bf-result-view-unmet-heading"
-                headingLevel={3}
-              >
-                {notEligibleResults?.heading}
-              </Heading>
-              <p
-                dangerouslySetInnerHTML={createMarkup(
-                  notEligibleResults?.description
-                )}
-              />
-              <Button onClick={handleViewToggle}>
-                {notEligibleResults?.cta}
-              </Button>
-            </div>
-          )}
-          {relevantBenefits?.length > 0 && (
-            <div className="bf-result-view-relvant-benefits">
-              <Heading
-                className="bf-result-view-relvant-benefits-heading"
-                headingLevel={3}
-              >
-                {resultsRelativeBenefits?.heading}
-              </Heading>
-              {relevantBenefits && (
-                <RelativeBenefitList
-                  data={relevantBenefits}
-                  carrotType="carrot-big"
-                ></RelativeBenefitList>
-              )}
-            </div>
-          )}
-          <div className="bf-result-view-share-results">
-            <Heading
-              className="bf-result-view-share-results-heading"
-              headingLevel={3}
-            >
-              {shareResults?.heading}
-            </Heading>
-            <p>{shareResults?.description}</p>
-            <div className="bf-result-view-share-results-button-group">
-              <ShareButton
-                ui={shareResults}
-                data={
-                  stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
-                }
-              />
-              <EmailButton
-                ui={shareResults}
-                data={
-                  stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
-                }
-              />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

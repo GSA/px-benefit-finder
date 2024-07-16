@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
+<DocumentFragment>
+  <h2
+    aria-level="2"
+    class="bf-zero-benefits-view-heading font-family-sans"
+    role="heading"
+  />
+  <h3
+    aria-level="3"
+    class="bf-zero-benefits-view-description font-family-sans"
+    role="heading"
+  />
+  <div
+    class="bf-zero-benefits-view-cta"
+  >
+    <button
+      class="bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+      type="button"
+    />
+  </div>
+</DocumentFragment>
+`;

@@ -110,7 +110,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           working-directory: ./benefit-finder
-          build: npx playwright install-deps webkit
+          build: npx playwright-webkit install-deps
           runTests: false
 
       - name: Cypress run (WebKit)
@@ -122,6 +122,13 @@ jobs:
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
+
+      - name: Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress screenshots
+          path: ./benefit-finder/cypress/screenshots
 
   tests-components:
     runs-on: ubuntu-latest

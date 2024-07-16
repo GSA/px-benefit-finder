@@ -1,0 +1,6 @@
+exclude: # exclude matching issues
+  - message: Build directories
+    paths:
+      - rules.yml
+      - .trufflehog3.yml
+      - aws/**

@@ -8,27 +8,47 @@ beforeEach(() => {
 })
 
 describe('BenefitAccordionGroup component tests', () => {
-  it('Validate opening individual accordion only expands the clicked accordion and clicking it again closes it', () => {
-    cy.get('.bf-usa-accordion__button.usa-accordion__button').eq(0).click()
-    cy.get('.bf-usa-accordion__button.usa-accordion__button')
+  it('Validate all accordions are closed on load', () => {
+    cy.get('.bf-usa-accordion:visible').each(accordion => {
+      cy.wrap(accordion)
+        .find('.bf-usa-accordion__button')
+        .should('have.attr', 'aria-expanded', 'false')
+    })
+  })
+
+  it('Validate opening individual accordion expands the clicked accordion and clicking it again closes it', () => {
+    // we wait for the last event to fire
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
+    cy.wait(2500)
+    // get the first visible accordion and check if it is expanded
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
+      .eq(0)
+      .should('have.attr', 'aria-expanded', 'false')
+    // get the first visible accordion and click it
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button').eq(0).click()
+    // get the first visible accordion and check if it is expanded
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
       .eq(0)
       .should('have.attr', 'aria-expanded', 'true')
-    cy.get('.bf-usa-accordion__button.usa-accordion__button')
+    // get the second visible accordion and check if it is expanded
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
       .eq(1)
       .should('have.attr', 'aria-expanded', 'false')
-    cy.get('.bf-usa-accordion__button.usa-accordion__button').eq(0).click()
-    cy.get('.bf-usa-accordion__button.usa-accordion__button').each(
-      accordion => {
-        cy.wrap(accordion).should('have.attr', 'aria-expanded', 'false')
-      }
-    )
+    // get the first visible accordion and click it
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button').eq(0).click()
+    // get the first visible accordion and check if it is expanded
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
+      .eq(0)
+      .should('have.attr', 'aria-expanded', 'false')
   })
 
   it('Validate clicking Expand all opens all accordions', () => {
     cy.get('.bf-expand-all').click()
     cy.get('.bf-expand-all').should('contain.text', 'Close all')
-    cy.get('.usa-accordion__button').each(accordion => {
-      cy.wrap(accordion).should('have.attr', 'aria-expanded', 'true')
+    cy.get('.bf-usa-accordion:visible').each(accordion => {
+      cy.wrap(accordion)
+        .find('.bf-usa-accordion__button')
+        .should('have.attr', 'aria-expanded', 'true')
     })
   })
 
@@ -36,8 +56,10 @@ describe('BenefitAccordionGroup component tests', () => {
     cy.get('.bf-expand-all').click()
     cy.get('.bf-expand-all').click()
     cy.get('.bf-expand-all').should('contain.text', 'Open all')
-    cy.get('.usa-accordion__button').each(accordion => {
-      cy.wrap(accordion).should('have.attr', 'aria-expanded', 'false')
+    cy.get('.bf-usa-accordion:visible').each(accordion => {
+      cy.wrap(accordion)
+        .find('.bf-usa-accordion__button')
+        .should('have.attr', 'aria-expanded', 'false')
     })
   })
 })

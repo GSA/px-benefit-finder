@@ -29,13 +29,13 @@ const Summary = ({ heading, listItems, cta }) => {
                 <li key={`bf-summary-list-${i}`}>{item.item}</li>
               ))}
             <li>
-              {cta.text}{' '}
+              {cta?.text}{' '}
               <a
                 className="bf-usa-summary-box__link usa-summary-box__link"
                 href="#"
                 onClick={e => handleReload(e)}
               >
-                {cta.link}
+                {cta?.link}
               </a>
             </li>
           </ul>

@@ -1,7 +1,7 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/breakpoints/_index.scss' as *;
-@use '../../styles/space/_index.scss' as space;
-@use '../../styles/mixins/_index.scss' as *;
+@use '../../../../styles/colors/_index.scss' as color;
+@use '../../../../styles/breakpoints/_index.scss' as *;
+@use '../../../../styles/space/_index.scss' as space;
+@use '../../../../styles/mixins/_index.scss' as *;
 
 .bf-result-view-details {
   padding: space.$space-lg;
@@ -10,14 +10,6 @@
     color: color.$dark-medium-grey;
     background-color: color.$white;
     width: auto;
-  }
-
-  .bf-result-view-heading {
-    @include h2;
-  }
-
-  .bf-result-view-description {
-    @include h6;
   }
 }
 

@@ -110,7 +110,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           working-directory: ./benefit-finder
-          build: npx playwright install-deps webkit
+          build: npx playwright-webkit install-deps
           runTests: false
 
       - name: Cypress run (WebKit)

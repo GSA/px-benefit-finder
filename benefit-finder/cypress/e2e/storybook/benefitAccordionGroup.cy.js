@@ -20,10 +20,13 @@ describe('BenefitAccordionGroup component tests', () => {
         })
         // click to opne the first accordion
         // check that the accordion clicked is expanded
+        cy.get('.bf-usa-accordion__button').eq(0).should('be.visible').click()
+
         cy.get('.bf-usa-accordion__button')
           .eq(0)
-          .click()
+          .should('be.visible')
           .should('have.attr', 'aria-expanded', 'true')
+        // .should('have.attr', 'aria-expanded', 'true')
         // // check that the next accordion in the list is not expanded
         // cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
         //   .eq(1)

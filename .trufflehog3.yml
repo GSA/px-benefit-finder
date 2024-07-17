@@ -4,10 +4,10 @@ exclude: # exclude matching issues
       - rules.yml
       - .trufflehog3.yml
       - aws/**
-      - *.png
-      - *.zip
-      - *.tar.gz
-      - *.deb
-      - *.so
-      - *.so.*
+      - /home/runner/work/px-benefit-finder/px-benefit-finder/*.png
+      - /home/runner/work/px-benefit-finder/px-benefit-finder/*.zip
+      - /home/runner/work/px-benefit-finder/px-benefit-finder/*.tar.gz
+      - /home/runner/work/px-benefit-finder/px-benefit-finder/*.deb
+      - /home/runner/work/px-benefit-finder/px-benefit-finder/*.so
+      - /home/runner/work/px-benefit-finder/px-benefit-finder/*.so.*
       - fake_creds.txt

@@ -65,6 +65,7 @@ jobs:
           CF_ORG: "${{ secrets.CF_ORG }}"
           PROJECT: "${{ secrets.PROJECT }}"
         run: |
+          BRANCH=${GITHUB_REF#refs/heads/}
           source ./scripts/pipeline/cloud-gov-login.sh
 
       - name: Upload Trufflehog Results

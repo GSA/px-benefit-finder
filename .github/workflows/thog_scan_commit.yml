@@ -49,11 +49,7 @@ jobs:
         id: scan
         run: |
           BRANCH_NAME=${GITHUB_REF#refs/heads/}
-          ACTOR=${{ github.actor }}
           echo "Scanning branch: $BRANCH_NAME"
-          echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
-          echo "emoji=:exclamation:" >> $GITHUB_OUTPUT
-          echo "actor=$ACTOR" >> $GITHUB_OUTPUT
           trufflehog3 --branch $BRANCH_NAME --no-entropy --severity MEDIUM -vv -c .trufflehog3.yml -r rules.yml --format json --output truffleHogResults.json  || true
           trufflehog3 -R truffleHogResults.json --output truffleHogReport.html
 
@@ -96,7 +92,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
         run: |
           echo "Secrets found. Creating GitHub issue."
-          gh issue create --title "TruffleHog Scan Results" --body "Please see backup s3 for TruffleHog Results" --label "bug,security" --assignee "@me"
+          gh issue create --title "CREDS FOUND: TruffleHog Scan Results" --body "Please see backup s3 for TruffleHog Results" --label "bug,security" --assignee "@me"
 
       - name: Fail the job if any secrets are found
         if: steps.check_file.outputs.skip == 'false'

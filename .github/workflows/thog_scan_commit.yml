@@ -68,7 +68,6 @@ jobs:
 
       - name: Upload Trufflehog Results
         id: check_file
-        if: always() && env.file_exists == 'true'
         shell: bash
         env:
           CF_USER: "${{ secrets.CF_USER }}"
@@ -81,14 +80,18 @@ jobs:
           mv truffleHogResults.json truffleHogResults-${TIMESTAMP}.json
           mv truffleHogReport.html truffleHogReport-${TIMESTAMP}.html
           source ./scripts/pipeline/s3-thog-upload.sh
-          FILE_SIZE=$(stat -c%s truffleHogResults-${TIMESTAMP}.json)
-          if [ $FILE_SIZE -le 5120 ]; then
-            echo "File is smaller than 5KB. Skipping step."
+          CONTENT=$(jq 'length' truffleHogResults-${TIMESTAMP}.json)
+          if [ "$CONTENT" -eq 0 ]; then
+            echo "No content found in JSON. Setting Skip to true."
             echo "::set-output name=skip::true"
-            exit 0
+          exit 0
+          else
+            echo "Content found in JSON. Proceeding."
+            echo "::set-output name=skip::false"
+          fi
 
-      - name: Check for findings and create issue
-        if: failure() && env.file_exists == 'true' && steps.check_file.outputs.skip == 'false'
+      - name: If findings found, create issue
+        if: steps.check_file.outputs.skip == 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
         run: |
@@ -96,5 +99,5 @@ jobs:
           gh issue create --title "TruffleHog Scan Results" --body "Please see backup s3 for TruffleHog Results" --label "bug,security" --assignee "@me"
 
       - name: Fail the job if any secrets are found
-        if: steps.check_file.outputs.skip == 'failure'
+        if: steps.check_file.outputs.skip == 'false'
         run: exit 1

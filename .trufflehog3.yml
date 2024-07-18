@@ -12,5 +12,5 @@ exclude: # exclude matching issues
       - /home/runner/work/px-benefit-finder/px-benefit-finder/*.so.*
       - fake_creds.txt
       - truffleHogResults.json
-      - bears-app/package.json
-      - .circleci/config.yml
+      # - bears-app/package.json
+      # - .circleci/config.yml

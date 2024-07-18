@@ -37,8 +37,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gh
 
-      - name: Set branch name
-        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+      - name: Determine the branch name
+        id: determine-branch
+        run: |
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            echo "BRANCH=${{ github.event.pull_request.head.ref }}" >> $GITHUB_ENV
+          else
+            echo "BRANCH=${{ github.ref_name }}" >> $GITHUB_ENV
+          fi
 
       - name: Authenticate GitHub CLI
         env:
@@ -53,9 +59,8 @@ jobs:
       - name: TruffleHog3 Scan
         id: scan
         run: |
-          BRANCH_NAME=${GITHUB_REF#refs/heads/}
-          echo "Scanning branch: $BRANCH_NAME"
-          trufflehog3 --branch $BRANCH_NAME --no-entropy --severity MEDIUM -vv -c .trufflehog3.yml -r rules.yml --format json --output truffleHogResults.json  || true
+          echo "Scanning branch: $BRANCH"
+          trufflehog3 --branch $BRANCH --no-entropy --severity MEDIUM -vv -c .trufflehog3.yml -r rules.yml --format json --output truffleHogResults.json  || true
           trufflehog3 -R truffleHogResults.json --output truffleHogReport.html
 
       - name: Cloud.gov login
@@ -65,7 +70,6 @@ jobs:
           CF_ORG: "${{ secrets.CF_ORG }}"
           PROJECT: "${{ secrets.PROJECT }}"
         run: |
-          BRANCH=${GITHUB_REF#refs/heads/}
           source ./scripts/pipeline/cloud-gov-login.sh
 
       - name: Upload Trufflehog Results

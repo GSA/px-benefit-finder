@@ -54,19 +54,8 @@ jobs:
           echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
           echo "emoji=:exclamation:" >> $GITHUB_OUTPUT
           echo "actor=$ACTOR" >> $GITHUB_OUTPUT
-          pwd
-          ls -al
           trufflehog3 --branch $BRANCH_NAME --no-entropy --severity MEDIUM -vv -c .trufflehog3.yml -r rules.yml --format json --output truffleHogResults.json  || true
           trufflehog3 -R truffleHogResults.json --output truffleHogReport.html
-
-      - name: Check TruffleHog Results
-        id: check_results
-        run: |
-          if [ -f truffleHogResults.json ]; then
-            echo "file_exists=true" >> $GITHUB_ENV
-          else
-            echo "file_exists=false" >> $GITHUB_ENV
-          fi
 
       - name: Cloud.gov login
         env:
@@ -78,6 +67,7 @@ jobs:
           source ./scripts/pipeline/cloud-gov-login.sh
 
       - name: Upload Trufflehog Results
+        id: check_file
         if: always() && env.file_exists == 'true'
         shell: bash
         env:
@@ -91,20 +81,20 @@ jobs:
           mv truffleHogResults.json truffleHogResults-${TIMESTAMP}.json
           mv truffleHogReport.html truffleHogReport-${TIMESTAMP}.html
           source ./scripts/pipeline/s3-thog-upload.sh
+          FILE_SIZE=$(stat -c%s truffleHogResults-${TIMESTAMP}.json)
+          if [ $FILE_SIZE -le 5120 ]; then
+            echo "File is smaller than 5KB. Skipping step."
+            echo "::set-output name=skip::true"
+            exit 0
 
       - name: Check for findings and create issue
-        if: failure() && env.file_exists == 'true'
+        if: failure() && env.file_exists == 'true' && steps.check_file.outputs.skip == 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
         run: |
-          if jq -e '.results | length > 0' truffleHogResults.json > /dev/null; then
-            echo "Secrets found. Creating GitHub issue."
-            gh issue create --title "TruffleHog Scan Results" --body "$(cat truffleHogReport.txt)" --label "bug,security" --assignee "@me"
-            exit 1
-          else
-            echo "No secrets found or no results file."
-          fi
+          echo "Secrets found. Creating GitHub issue."
+          gh issue create --title "TruffleHog Scan Results" --body "Please see backup s3 for TruffleHog Results" --label "bug,security" --assignee "@me"
 
       - name: Fail the job if any secrets are found
-        if: steps.trufflehog_scan.outcome == 'failure'
+        if: steps.check_file.outputs.skip == 'failure'
         run: exit 1

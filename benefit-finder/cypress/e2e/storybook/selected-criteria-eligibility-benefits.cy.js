@@ -206,5 +206,6 @@ describe('Validate correct eligibility benefits display based on selected criter
     pageObjects
       .keyEligibilityCriteriaListIcon()
       .should('have.class', 'bf-checkmark--green')
+    pageObjects.benefitsAccordion().should('have.length', 22)
   })
 })

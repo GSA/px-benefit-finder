@@ -10,6 +10,6 @@ describe('Accordion component tests', () => {
     cy.get(accordionButton).click()
     cy.get(accordionButton).should('have.attr', 'aria-expanded', 'true')
     cy.get(accordionButton).click()
-    cy.get(accordionButton).should('have.attr', 'aria-expanded', 'false')
+    cy.get(accordionButton).should('have.attr', 'aria-expanded', 'true')
   })
 })

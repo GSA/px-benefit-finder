@@ -40,11 +40,11 @@ jobs:
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
 
-      - name: Artifact(s)
+      - name: Chrome Artifact(s)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress screenshots
+          name: Chrome cypress screenshots
           path: ./benefit-finder/cypress/screenshots    
 
   tests-firefox:
@@ -72,11 +72,11 @@ jobs:
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
 
-      - name: Artifact(s)
+      - name: Firefox Artifact(s)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress screenshots
+          name: Firefox cypress screenshots
           path: ./benefit-finder/cypress/screenshots  
 
   tests-edge:
@@ -104,11 +104,11 @@ jobs:
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
           
-      - name: Artifact(s)
+      - name: Edge Artifact(s)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress screenshots
+          name: Edge cypress screenshots
           path: ./benefit-finder/cypress/screenshots
 
   tests-webkit:
@@ -144,11 +144,11 @@ jobs:
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
 
-      - name: Artifact(s)
+      - name: Webkit Artifact(s)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress screenshots
+          name: Webkit cypress screenshots
           path: ./benefit-finder/cypress/screenshots
 
   tests-components:
@@ -176,9 +176,9 @@ jobs:
           env: NODE_ENV=test
           build: "npm run cy:prebuild:storybook"
 
-      - name: Artifact(s)
+      - name: Component Artifact(s)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress screenshots
+          name: Component cypress screenshots
           path: ./benefit-finder/cypress/screenshots  

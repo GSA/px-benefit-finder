@@ -5,6 +5,7 @@ exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
   <h2
     aria-level="2"
     class="bf-zero-benefits-view-heading font-family-sans"
+    data-testid="zero-benefits-view-heading"
     role="heading"
   />
   <h3
@@ -17,6 +18,7 @@ exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
   >
     <button
       class="bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+      data-testid="zero-benefits-view-cta-button"
       type="button"
     />
   </div>

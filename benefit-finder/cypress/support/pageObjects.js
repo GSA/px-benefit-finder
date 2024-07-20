@@ -124,6 +124,14 @@ class PageObjects {
   stepBackLink() {
     return cy.get('.bf-step-back-link')
   }
+
+  zeroBenefitsViewHeading() {
+    return cy.get('[data-testid="zero-benefits-view-heading"]')
+  }
+
+  seeAllBenefitsButton() {
+    return cy.get('.bf-zero-benefits-view-cta .bf-usa-button')
+  }
 }
 
 export const pageObjects = new PageObjects()

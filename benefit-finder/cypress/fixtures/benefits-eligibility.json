@@ -209,5 +209,29 @@
         "shared": "true"
       }
     }
+  },
+  "zero_benefit_view": {
+    "en": {
+      "param": {
+        "applicant_date_of_birth": {
+          "month": 4,
+          "day": 5,
+          "year": 1972
+        },
+        "applicant_relationship_to_the_deceased": "Parent",
+        "applicant_marital_status": "Married",
+        "deceased_date_of_death": {
+          "month": 12,
+          "day": 12,
+          "year": 2023
+        },
+        "shared": "true"
+      },
+      "results": {
+        "eligible": {
+          "length": 0
+        }
+      }
+    }
   }
 }

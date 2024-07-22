@@ -1,0 +1,79 @@
+#!/bin/bash
+## Set the root directory in the pipeline
+ROOT_DIR=$(git rev-parse --show-toplevel)
+CURRENT_DIR="${PWD##*/}"
+
+JS_APP_DIR=benefit-finder
+USAGOV_APP_DIR=usagov-2021
+
+echo "Current directory ${CURRENT_DIR}"
+
+STAGED_FILES=$(git diff-index --cached --name-only HEAD)
+
+# run custom actions for our JS App
+for file in $STAGED_FILES; do
+  # Check file extension or content, or run a custom script
+  echo "Found stagged file: $file"
+  if [[ $file == *$JS_APP_DIR* ]]; then
+    echo "running processes on staged files"
+    cd $ROOT_DIR/$JS_APP_DIR && npm run lint-staged --verbose
+    if [ $? -eq 0 ]; then
+        echo "Process succeeded."
+        cd $ROOT_DIR
+    else
+        echo "Process failed."
+        exit 1
+    fi
+  fi
+done
+
+# Check if Python 3 is installed and install if not
+if ! command -v python3 &> /dev/null; then
+    echo "Python 3 is not installed. Attempting to install Python 3..."
+    brew install python3 || { echo "Failed to install Python 3. Please install it manually."; exit 1; }
+fi
+# Check if venv module is available in Python, install if not
+if ! python3 -c "import venv" &> /dev/null; then
+    echo "venv module is not available. Python installation might not support venv."
+    exit 1
+fi
+# Set up Python virtual environment
+if [ ! -d ".venv" ]; then
+    python3 -m venv .venv
+    echo "Virtual environment created."
+else
+    echo "Virtual environment already exists."
+fi
+source .venv/bin/activate
+# Check if TruffleHog3 is installed and install if not
+if ! command -v trufflehog3 &> /dev/null; then
+    echo "TruffleHog3 is not installed. Installing TruffleHog3..."
+    pip install trufflehog3 || { echo "Failed to install TruffleHog3. Please install it manually."; exit 1; }
+fi
+# Check if jq is installed and install if not
+if ! command -v jq &> /dev/null; then
+    echo "jq is not installed. Installing jq..."
+    brew install jq || { echo "Failed to install jq. Please install it manually."; exit 1; }
+fi
+# Determine the branch name locally
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+if [ -z "$BRANCH_NAME" ]; then
+    echo "Failed to determine the branch name. Ensure you are in a Git repository."
+    exit 1
+fi
+
+echo "Scanning branch: $BRANCH_NAME"
+# TruffleHog3 Scan on local branch files
+trufflehog3 --no-history --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json || true
+# Prepare for result checking
+# Check for secrets in the results
+CONTENT=$(jq 'length' $ROOT_DIR/truffleHogResults.json)
+if [ "$CONTENT" -eq 0 ]; then
+    rm $ROOT_DIR/truffleHogResults.json
+    echo "No secrets found. Commit is safe."
+    exit 0
+else
+    echo "Secrets detected! Commit blocked."
+    echo "Please review and resolve issues."
+    exit 1
+fi

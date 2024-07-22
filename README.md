@@ -71,16 +71,22 @@ git clone git@github.com:GSA/px-benefit-finder.git
 cd px-benefit-finder
 ```
 
-5. usagov-2021 directory is there but empty. You must run the following two commands to initialize your local configuration file and fetch all the data from that project.
+5. From the root, set custom path for custom githooks
+
+```
+git config --local core.hooksPath .githooks/
+```
+
+6. usagov-2021 directory is there but empty. You must run the following two commands to initialize your local configuration file and fetch all the data from that project.
 
 ```
 git submodule init
 git submodule update
 ```
 
-6. You have now successfully cloned the repository with a submodule. You can work with the main repository and its submodule as separate entities.
+7. You have now successfully cloned the repository with a submodule. You can work with the main repository and its submodule as separate entities.
 
-7. If you've already cloned a repository with submodules and want to update them, follow these steps:
+8. If you've already cloned a repository with submodules and want to update them, follow these steps:
 
    a. Navigate to the main repository's directory using the command line.
    b. Run the following command to update the main repository along with its submodules:

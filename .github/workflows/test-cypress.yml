@@ -40,6 +40,13 @@ jobs:
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
 
+      - name: Chrome Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Chrome cypress screenshots
+          path: ./benefit-finder/cypress/screenshots    
+
   tests-firefox:
     runs-on: ubuntu-latest
     steps:
@@ -65,6 +72,13 @@ jobs:
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
 
+      - name: Firefox Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Firefox cypress screenshots
+          path: ./benefit-finder/cypress/screenshots  
+
   tests-edge:
     runs-on: ubuntu-latest
     steps:
@@ -89,6 +103,13 @@ jobs:
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
+          
+      - name: Edge Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Edge cypress screenshots
+          path: ./benefit-finder/cypress/screenshots
 
   tests-webkit:
     runs-on: ubuntu-latest
@@ -123,11 +144,11 @@ jobs:
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
 
-      - name: Artifact(s)
+      - name: Webkit Artifact(s)
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: cypress screenshots
+          name: Webkit cypress screenshots
           path: ./benefit-finder/cypress/screenshots
 
   tests-components:
@@ -154,3 +175,10 @@ jobs:
           browser: chrome
           env: NODE_ENV=test
           build: "npm run cy:prebuild:storybook"
+
+      - name: Component Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Component cypress screenshots
+          path: ./benefit-finder/cypress/screenshots  

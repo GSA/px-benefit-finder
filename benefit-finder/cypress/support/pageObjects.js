@@ -130,7 +130,7 @@ class PageObjects {
   }
 
   seeAllBenefitsButton() {
-    return cy.get('.bf-zero-benefits-view-cta .bf-usa-button')
+    return cy.get('[data-testid="zero-benefits-view-cta-button"]')
   }
 }
 

@@ -6,6 +6,7 @@
     "node": "20.x.x"
   },
   "scripts": {
+    "preinstall": "git config --local core.hooksPath ../.githooks",
     "mv:uswds:usagov": "bash ../scripts/pipeline/mv-uswds-usagov-theme.sh",
     "prestart": "npm run mv:uswds:usagov",
     "start": "vite --host",

@@ -6,6 +6,7 @@
     "node": "20.x.x"
   },
   "scripts": {
+    "preinstall": "git config --local core.hookspath .githooks",
     "mv:uswds:usagov": "bash ../scripts/pipeline/mv-uswds-usagov-theme.sh",
     "prestart": "npm run mv:uswds:usagov",
     "start": "vite --host",
@@ -19,7 +20,6 @@
     "lint:scss:fix": "stylelint 'src/**/*.scss' --fix",
     "lint:js": "eslint . --ext .js,.jsx,.json",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "postinstall": "cd .. && husky benefit-finder/.husky",
     "lint-staged": "lint-staged",
     "generate:component": "plop",
     "prebuild:storybook": "npm run mv:uswds:usagov && npm run build",
@@ -76,7 +76,6 @@
     "eslint-plugin-cypress": "^3.3.0",
     "eslint-plugin-storybook": "^0.8.0",
     "http-server": "^14.1.1",
-    "husky": "^9.0.11",
     "jsdom": "^24.1.0",
     "lint-staged": "^15.2.7",
     "playwright-webkit": "^1.45.2",

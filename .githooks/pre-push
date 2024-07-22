@@ -1,0 +1,25 @@
+#!/bin/bash
+## Set the root directory in the pipeline
+ROOT_DIR=$(git rev-parse --show-toplevel)
+JS_APP_DIR=benefit-finder
+
+COMMITTED_FILES=$(git diff --name-only HEAD~1..HEAD )
+
+echo $COMMITTED_FILES
+
+# run custom actions for our JS App
+for file in $COMMITTED_FILES; do
+  # Check file extension or content, or run a custom script
+  echo "Found committed file: $file"
+  if [[ $file == *$JS_APP_DIR* ]]; then
+    echo "running processes on committed files"
+    cd $ROOT_DIR/$JS_APP_DIR && CI=true npm run test:coverage
+    # check to see if process failed
+    if [ $? -eq 0 ]; then
+        echo "Process succeeded."
+    else
+        echo "Process failed."
+        exit 1
+    fi
+  fi
+done

@@ -334,5 +334,3 @@ npm run generate:component <component-name>
 ```
 
 > It's important to export components from the root of the shared index file. This is where you will import and destructure across other documents.
-
-test

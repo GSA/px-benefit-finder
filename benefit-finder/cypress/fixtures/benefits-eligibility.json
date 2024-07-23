@@ -230,7 +230,11 @@
       "results": {
         "eligible": {
           "length": 0
-        }
+        },
+        "moreInformationNeeded": {
+          "length": 22
+        },
+        "total_benefits": 30
       }
     }
   }

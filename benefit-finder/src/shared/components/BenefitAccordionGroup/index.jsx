@@ -244,6 +244,7 @@ const BenefitAccordionGroup = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => handleBenefitLinkClick(title)}
+                data-testid="bf-benefit-link"
               >
                 {visitLabel} {agency.title}{' '}
                 {sourceIsEnglish && SourceIsEnglish === true

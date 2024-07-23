@@ -1,4 +1,4 @@
-# Benefit Finder v2 React Application TEST
+# Benefit Finder v2 React Application
 
 ```text
 /benefit-finder

@@ -207,4 +207,24 @@ describe('Validate correct eligibility benefits display based on selected criter
       .keyEligibilityCriteriaListIcon()
       .should('have.class', 'bf-checkmark--green')
   })
+
+  it('Should display Zero benefit view when no benefit are eligible', () => {
+    const selectedData = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.param
+    const enResults = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.results
+    const scenario = utils.encodeURIFromObject(selectedData)
+    cy.visit(`${utils.storybookUri}${scenario}`)
+
+    pageObjects
+      .zeroBenefitsViewHeading()
+      .should('contain', EN_LOCALE_DATA.resultsView.zeroBenefits.heading)
+
+    pageObjects
+      .benefitsAccordion()
+      .filter(':visible')
+      .should('have.length', enResults.eligible.length)
+
+    pageObjects
+      .seeAllBenefitsButton()
+      .should('contain', EN_LOCALE_DATA.resultsView.zeroBenefits.cta)
+  })
 })

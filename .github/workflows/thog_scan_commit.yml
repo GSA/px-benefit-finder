@@ -6,12 +6,10 @@ on:
     branches:
       - main
       - dev
-      - "feature/*"
   pull_request:
     branches:
       - main
       - dev
-      - "feature/*"
 
 jobs:
   scan:

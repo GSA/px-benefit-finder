@@ -11,7 +11,11 @@ const ZeroBenefitsHeadingBlock = ({
 }) => {
   return (
     <>
-      <Heading className="bf-zero-benefits-view-heading" headingLevel={2}>
+      <Heading
+        className="bf-zero-benefits-view-heading"
+        data-testid="zero-benefits-view-heading"
+        headingLevel={2}
+      >
         {ui?.heading}
       </Heading>
       <Heading
@@ -21,7 +25,11 @@ const ZeroBenefitsHeadingBlock = ({
       />
       {!notEligibleView && (
         <div className="bf-zero-benefits-view-cta">
-          <Button onClick={handleViewToggle} secondary>
+          <Button
+            data-testid="zero-benefits-view-cta-button"
+            onClick={handleViewToggle}
+            secondary
+          >
             {ui?.cta}
           </Button>
         </div>

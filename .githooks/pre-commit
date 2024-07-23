@@ -57,7 +57,7 @@ if ! command -v trufflehog3 &> /dev/null; then
     pip install trufflehog3 || { echo "Failed to install TruffleHog3. Please install it manually."; exit 1; }
 fi
 # Check if jq is installed and install if not
-if ! command -v jq &> /dev/null; then
+if ! command -v /opt/homebrew/bin/jq &> /dev/null; then
     echo "jq is not installed. Installing jq..."
     brew install jq || { echo "Failed to install jq. Please install it manually."; exit 1; }
 fi
@@ -73,7 +73,7 @@ echo "Scanning branch: $BRANCH_NAME"
 trufflehog3 --no-history --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json || true
 # Prepare for result checking
 # Check for secrets in the results
-CONTENT=$(jq 'length' $ROOT_DIR/truffleHogResults.json)
+CONTENT=$(/opt/homebrew/bin/jq 'length' $ROOT_DIR/truffleHogResults.json)
 if [ "$CONTENT" -eq 0 ]; then
     rm $ROOT_DIR/truffleHogResults.json
     echo "No secrets found. Commit is safe."

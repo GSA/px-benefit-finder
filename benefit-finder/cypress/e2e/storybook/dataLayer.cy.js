@@ -35,61 +35,81 @@ const eligibilityCount = {
   },
 }
 
-const dataLayerValues = [
-  {
-    event: intro.event,
-    bfData: {
-      pageView: intro.bfData.pageView,
-      viewTitle: lifeEventForm.title,
-    },
+const dataLayerValueIntro = {
+  event: intro.event,
+  bfData: {
+    pageView: intro.bfData.pageView,
+    viewTitle: lifeEventForm.title,
   },
-  {
-    event: lifeEventSection.event,
-    bfData: {
-      pageView: `${lifeEventSection.bfData.pageView}-1`,
-      viewTitle: lifeEventForm.sectionsEligibilityCriteria[0].section.heading,
-    },
+}
+
+const dataLayerValueFormStepOne = {
+  event: lifeEventSection.event,
+  bfData: {
+    pageView: `${lifeEventSection.bfData.pageView}-1`,
+    viewTitle: lifeEventForm.sectionsEligibilityCriteria[0].section.heading,
   },
-  {
-    event: resultsView.event,
-    bfData: {
-      pageView: resultsView.bfData.pageView[0],
-      viewTitle: EN_LOCALE_DATA.resultsView.eligible.chevron.heading,
-      ...eligibilityCount,
-    },
+}
+
+const dataLayerValueFormStepTwo = {
+  event: lifeEventSection.event,
+  bfData: {
+    pageView: `${lifeEventSection.bfData.pageView}-2`,
+    viewTitle: lifeEventForm.sectionsEligibilityCriteria[1].section.heading,
   },
-  {
-    event: resultsView.event,
-    bfData: {
-      pageView: resultsView.bfData.pageView[1],
-      viewTitle: EN_LOCALE_DATA.resultsView.notEligible.chevron.heading,
-      ...eligibilityCount,
-    },
+}
+
+const dataLayerValueResultsViewEligible = {
+  event: resultsView.event,
+  bfData: {
+    pageView: resultsView.bfData.pageView[0],
+    viewTitle: EN_LOCALE_DATA.resultsView.eligible.chevron.heading,
+    ...eligibilityCount,
   },
-  {
-    event: openAllBenefitAccordions.event,
-    bfData: {
-      accordionsOpen: openAllBenefitAccordions.bfData.accordionsOpen,
-    },
+}
+
+const dataLayerValueResultsViewNotEligible = {
+  event: resultsView.event,
+  bfData: {
+    pageView: resultsView.bfData.pageView[1],
+    viewTitle: EN_LOCALE_DATA.resultsView.notEligible.chevron.heading,
+    ...eligibilityCount,
   },
-  {
-    event: 'bf_accordion_open',
-    bfData: {
-      benefitTitle: enResults.eligible.eligible_benefits[0],
-    },
+}
+
+const dataLayerValueOpenAllAccordions = {
+  event: openAllBenefitAccordions.event,
+  bfData: {
+    accordionsOpen: openAllBenefitAccordions.bfData.accordionsOpen,
   },
-  {
-    event: 'bf_benefit_link',
-    bfData: {
-      benefitTitle: enResults.eligible.eligible_benefits[0],
-    },
+}
+
+const dataLayerValueAccordionOpen = {
+  event: 'bf_accordion_open',
+  bfData: {
+    benefitTitle: enResults.eligible.eligible_benefits[0],
   },
-]
+}
+
+const dataLayerValueBenefitLink = {
+  event: 'bf_benefit_link',
+  bfData: {
+    benefitTitle: enResults.eligible.eligible_benefits[0],
+  },
+}
+
+// const dataLayerValueFormCompletionModal = {
+//   event: 'bf_page_change',
+//   bfData: {
+//     pageView: 'bf-form-completion-modal',
+//     viewTitle: resultsView.bfData.pageView[1],
+//   },
+// }
+
+// const dataLayerValues = []
 
 // check incrmenting events
 // check modal event
-// check benefit accordion event
-// check benefitLink event
 
 describe('Basic Data Layer Checks', () => {
   it('has a dataLayer and loads GTM', () => {
@@ -120,12 +140,12 @@ describe('Calls to Google Analytics Object', function () {
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
           delete ev['gtm.uniqueEventId']
 
-          expect(ev).to.deep.equal(dataLayerValues[0])
+          expect(ev).to.deep.equal(dataLayerValueIntro)
         })
     })
   })
 
-  it('homepage has a bf_page_change event', function () {
+  it('first form step bf_page_change event', function () {
     cy.visit(utils.storybookUri)
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
 
@@ -140,7 +160,7 @@ describe('Calls to Google Analytics Object', function () {
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
           delete ev['gtm.uniqueEventId']
 
-          expect(dataLayerValues[1]).to.deep.equal(ev)
+          expect(ev).to.deep.equal(dataLayerValueFormStepOne)
         })
     })
   })
@@ -156,7 +176,7 @@ describe('Calls to Google Analytics Object', function () {
         .filter(':visible')
         .should(
           'have.length',
-          dataLayerValues[2].bfData.eligibleBenefitCount.number
+          dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
           // we wait for the last event to fire
@@ -165,12 +185,12 @@ describe('Calls to Google Analytics Object', function () {
             // check last page change event
             const ev = {
               ...window.dataLayer.filter(
-                x => x?.event === dataLayerValues[2].event
+                x => x?.event === dataLayerValueResultsViewEligible.event
               ),
             }
             delete ev[0]['gtm.uniqueEventId']
 
-            expect(ev[0]).to.deep.equal(dataLayerValues[2])
+            expect(ev[0]).to.deep.equal(dataLayerValueResultsViewEligible)
           })
         })
     })
@@ -187,7 +207,7 @@ describe('Calls to Google Analytics Object', function () {
         .filter(':visible')
         .should(
           'have.length',
-          dataLayerValues[2].bfData.eligibleBenefitCount.number
+          dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
           pageObjects.accordion(enResults.eligible.eligible_benefits[0]).click()
@@ -197,12 +217,12 @@ describe('Calls to Google Analytics Object', function () {
             // check last page change event
             const ev = [
               ...window.dataLayer.filter(
-                x => x?.event === dataLayerValues[5].event
+                x => x?.event === dataLayerValueAccordionOpen.event
               ),
             ]
             delete ev[0]['gtm.uniqueEventId']
 
-            expect(ev[0]).to.deep.equal(dataLayerValues[5])
+            expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
           })
         })
     })
@@ -219,7 +239,7 @@ describe('Calls to Google Analytics Object', function () {
         .filter(':visible')
         .should(
           'have.length',
-          dataLayerValues[2].bfData.eligibleBenefitCount.number
+          dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
           pageObjects.accordion(enResults.eligible.eligible_benefits[0]).click()
@@ -229,12 +249,12 @@ describe('Calls to Google Analytics Object', function () {
             // check last page change event
             const ev = [
               ...window.dataLayer.filter(
-                x => x?.event === dataLayerValues[5].event
+                x => x?.event === dataLayerValueAccordionOpen.event
               ),
             ]
             delete ev[0]['gtm.uniqueEventId']
 
-            expect(ev[0]).to.deep.equal(dataLayerValues[5])
+            expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
           })
 
           pageObjects
@@ -244,11 +264,11 @@ describe('Calls to Google Analytics Object', function () {
             .then(() => {
               const ev = [
                 ...window.dataLayer.filter(
-                  x => x?.event === dataLayerValues[6].event
+                  x => x?.event === dataLayerValueBenefitLink.event
                 ),
               ]
               delete ev[0]['gtm.uniqueEventId']
-              expect(ev[0]).to.deep.equal(dataLayerValues[6])
+              expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
             })
         })
     })
@@ -268,8 +288,10 @@ describe('Calls to Google Analytics Object', function () {
         .filter(':visible')
         .should(
           'have.length',
-          dataLayerValues[3].bfData.notEligibleBenefitCount.number +
-            dataLayerValues[3].bfData.moreInfoBenefitCount.number
+          dataLayerValueResultsViewNotEligible.bfData.notEligibleBenefitCount
+            .number +
+            dataLayerValueResultsViewNotEligible.bfData.moreInfoBenefitCount
+              .number
         )
         .then(() => {
           // we wait for the last event to fire
@@ -278,21 +300,19 @@ describe('Calls to Google Analytics Object', function () {
             // check last page change event
             const ev = [
               ...window.dataLayer.filter(
-                x => x?.event === dataLayerValues[3].event
+                x => x?.event === dataLayerValueResultsViewNotEligible.event
               ),
             ]
             delete ev[1]['gtm.uniqueEventId']
             console.log(ev[1])
 
-            expect(ev[1]).to.deep.equal(dataLayerValues[3])
+            expect(ev[1]).to.deep.equal(dataLayerValueResultsViewNotEligible)
           })
         })
     })
   })
 
-  it('clicking open all on results page has a bf_open_all_accordions event', function () {
-    const scenario = utils.encodeURIFromObject(selectedData)
-
+  it.only('clicking open all on results page has a bf_open_all_accordions event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {
@@ -305,13 +325,13 @@ describe('Calls to Google Analytics Object', function () {
           // check last page change event
           const ev = [
             ...window.dataLayer.filter(
-              x => x?.event === dataLayerValues[4].event
+              x => x?.event === dataLayerValueOpenAllAccordions.event
             ),
           ]
           console.log(ev)
           delete ev[0]['gtm.uniqueEventId']
 
-          expect(ev[0]).to.deep.equal(dataLayerValues[4])
+          expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
         })
 
       pageObjects
@@ -321,7 +341,7 @@ describe('Calls to Google Analytics Object', function () {
           // check last page change event
           const ev = [
             ...window.dataLayer.filter(
-              x => x?.event === dataLayerValues[4].event
+              x => x?.event === dataLayerValueOpenAllAccordions.event
             ),
           ]
           console.log(ev)
@@ -329,7 +349,7 @@ describe('Calls to Google Analytics Object', function () {
           delete ev[1]['gtm.uniqueEventId']
 
           expect(ev[1].bfData.accordionsOpen).to.equal(
-            !dataLayerValues[4].bfData.accordionsOpen
+            !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
           )
         })
     })

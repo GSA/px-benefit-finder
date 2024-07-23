@@ -78,7 +78,9 @@ class PageObjects {
   }
 
   benefitsAccordionLink(accordionHeading) {
-    return cy.get(`[data-analytics-content="${accordionHeading}"] a`)
+    return cy.get(
+      `[data-analytics-content="${accordionHeading}"] a[data-testid="bf-benefit-link"]`
+    )
   }
 
   menuButton() {

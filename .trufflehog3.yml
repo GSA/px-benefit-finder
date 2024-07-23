@@ -17,5 +17,6 @@ exclude: # exclude matching issues
       - benefit-finder/storybook-static
       - benefit-finder/themes
       - benefit-finder/node_modules
+      - benefit-finder/build
       - usagov-2021
       - .venv

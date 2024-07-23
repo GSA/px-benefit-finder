@@ -13,6 +13,7 @@ const { lifeEventForm } = content.data
 
 const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
 const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
+const zero_benefit_view = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.results
 const scenario = utils.encodeURIFromObject(selectedData)
 
 const eligibilityCount = {
@@ -31,6 +32,28 @@ const eligibilityCount = {
     string: `${
       enResults.total_benefits -
       (enResults.eligible.length + enResults.moreInformationNeeded.length)
+    }`,
+  },
+}
+
+const zeroBenefitsEligibilityCount = {
+  eligibleBenefitCount: {
+    number: zero_benefit_view.eligible.length,
+    string: `${zero_benefit_view.eligible.length}`,
+  },
+  moreInfoBenefitCount: {
+    number: zero_benefit_view.moreInformationNeeded.length,
+    string: `${zero_benefit_view.moreInformationNeeded.length}`,
+  },
+  notEligibleBenefitCount: {
+    number:
+      zero_benefit_view.total_benefits -
+      (zero_benefit_view.eligible.length +
+        zero_benefit_view.moreInformationNeeded.length),
+    string: `${
+      zero_benefit_view.total_benefits -
+      (zero_benefit_view.eligible.length +
+        zero_benefit_view.moreInformationNeeded.length)
     }`,
   },
 }
@@ -98,18 +121,58 @@ const dataLayerValueBenefitLink = {
   },
 }
 
-// const dataLayerValueFormCompletionModal = {
-//   event: 'bf_page_change',
-//   bfData: {
-//     pageView: 'bf-form-completion-modal',
-//     viewTitle: resultsView.bfData.pageView[1],
-//   },
-// }
+const dataLayerValueFormCompletionModal = {
+  event: 'bf_page_change',
+  bfData: {
+    pageView: 'bf-form-completion-modal',
+    viewTitle: `${lifeEventForm.sectionsEligibilityCriteria[1].section.heading} modal`,
+  },
+}
 
-// const dataLayerValues = []
+const dataLayerValueVerifySecletions = {
+  event: 'bf_page_change',
+  bfData: {
+    pageView: 'bf-verify-selections',
+    viewTitle: EN_LOCALE_DATA.verifySelectionsView.heading,
+  },
+}
 
-// check incrmenting events
-// check modal event
+const dataLayerValueZeroResultsViewEligible = {
+  event: resultsView.event,
+  bfData: {
+    pageView: resultsView.bfData.pageView[0],
+    viewTitle: EN_LOCALE_DATA.resultsView.zeroBenefits.chevron.heading,
+    ...zeroBenefitsEligibilityCount,
+  },
+}
+
+const dataLayerValueZeroResultsViewNotEligible = {
+  event: resultsView.event,
+  bfData: {
+    pageView: resultsView.bfData.pageView[1],
+    viewTitle: EN_LOCALE_DATA.resultsView.zeroBenefits.chevron.heading,
+    ...zeroBenefitsEligibilityCount,
+  },
+}
+
+const dataLayerValues = [
+  dataLayerValueIntro,
+  dataLayerValueFormStepOne,
+  dataLayerValueFormStepTwo,
+  dataLayerValueFormCompletionModal,
+  dataLayerValueVerifySecletions,
+  dataLayerValueZeroResultsViewEligible,
+  dataLayerValueZeroResultsViewNotEligible,
+  dataLayerValueOpenAllAccordions,
+  { ...dataLayerValueOpenAllAccordions, bfData: { accordionsOpen: false } },
+  dataLayerValueAccordionOpen,
+  dataLayerValueBenefitLink,
+]
+
+const removeID = item => delete item['gtm.uniqueEventId']
+
+// confirm full user journey
+// no eligible results events
 
 describe('Basic Data Layer Checks', () => {
   it('has a dataLayer and loads GTM', () => {
@@ -138,7 +201,8 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // get the last pushed event
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          delete ev['gtm.uniqueEventId']
+          removeID(ev)
+          // delete ev['gtm.uniqueEventId']
 
           expect(ev).to.deep.equal(dataLayerValueIntro)
         })
@@ -158,9 +222,159 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // get the last pushed event
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          delete ev['gtm.uniqueEventId']
+          // delete ev['gtm.uniqueEventId']
+          removeID(ev)
 
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
+        })
+    })
+  })
+
+  it('second form step bf_page_change event, asserts incrmenting values', function () {
+    cy.visit(utils.storybookUri)
+    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.window().then(window => {
+      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      pageObjects
+        .button()
+        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+        .then(() => {
+          // get the last pushed event
+          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+          // delete ev['gtm.uniqueEventId']
+          removeID(ev)
+
+          expect(ev).to.deep.equal(dataLayerValueFormStepOne)
+
+          // fill out required fields
+          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
+          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+
+          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+          cy.enterDateOfBirth(
+            dateOfBirth.month,
+            dateOfBirth.day,
+            dateOfBirth.year
+          )
+          pageObjects
+            .applicantRelationshipToDeceased()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+          pageObjects
+            .applicantMaritalStatus()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+
+          pageObjects
+            .button()
+            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+            .click()
+            .then(() => {
+              // get the last pushed event
+              const ev = [
+                ...window.dataLayer.filter(
+                  x => x?.event === dataLayerValueFormStepTwo.event
+                ),
+              ]
+
+              removeID(ev[2])
+              // delete ev[2]['gtm.uniqueEventId']
+
+              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+            })
+        })
+    })
+  })
+
+  it('clicking Continue on the final form step opens a modal and triggers the modal event', function () {
+    cy.visit(utils.storybookUri)
+    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.window().then(window => {
+      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      pageObjects
+        .button()
+        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+        .then(() => {
+          // get the last pushed event
+          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+          // delete ev['gtm.uniqueEventId']
+          removeID(ev)
+
+          expect(ev).to.deep.equal(dataLayerValueFormStepOne)
+
+          // fill out required fields
+          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
+          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+
+          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+          cy.enterDateOfBirth(
+            dateOfBirth.month,
+            dateOfBirth.day,
+            dateOfBirth.year
+          )
+          pageObjects
+            .applicantRelationshipToDeceased()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+          pageObjects
+            .applicantMaritalStatus()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+
+          pageObjects
+            .button()
+            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+            .click()
+            .then(() => {
+              // get the last pushed event
+              const ev = [
+                ...window.dataLayer.filter(
+                  x => x?.event === dataLayerValueFormStepTwo.event
+                ),
+              ]
+
+              // delete ev[2]['gtm.uniqueEventId']
+              removeID(ev[2])
+
+              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+
+              // Date of death - 30 days ago
+              const dateOfDeath = utils.getDateByOffset(-30)
+              cy.enterDateOfDeath(
+                dateOfDeath.month,
+                dateOfDeath.day,
+                dateOfDeath.year
+              )
+
+              pageObjects
+                .button()
+                .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+                .click()
+                .then(() => {
+                  const ev = [
+                    ...window.dataLayer.filter(
+                      x => x?.event === dataLayerValueFormCompletionModal.event
+                    ),
+                  ]
+
+                  // delete ev[3]['gtm.uniqueEventId']
+                  removeID(ev[3])
+
+                  expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
+                })
+            })
         })
     })
   })
@@ -188,7 +402,7 @@ describe('Calls to Google Analytics Object', function () {
                 x => x?.event === dataLayerValueResultsViewEligible.event
               ),
             }
-            delete ev[0]['gtm.uniqueEventId']
+            removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueResultsViewEligible)
           })
@@ -220,7 +434,8 @@ describe('Calls to Google Analytics Object', function () {
                 x => x?.event === dataLayerValueAccordionOpen.event
               ),
             ]
-            delete ev[0]['gtm.uniqueEventId']
+            // delete ev[0]['gtm.uniqueEventId']
+            removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
           })
@@ -252,7 +467,8 @@ describe('Calls to Google Analytics Object', function () {
                 x => x?.event === dataLayerValueAccordionOpen.event
               ),
             ]
-            delete ev[0]['gtm.uniqueEventId']
+            // delete ev[0]['gtm.uniqueEventId']
+            removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
           })
@@ -267,7 +483,8 @@ describe('Calls to Google Analytics Object', function () {
                   x => x?.event === dataLayerValueBenefitLink.event
                 ),
               ]
-              delete ev[0]['gtm.uniqueEventId']
+              // delete ev[0]['gtm.uniqueEventId']
+              removeID(ev[0])
               expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
             })
         })
@@ -303,8 +520,8 @@ describe('Calls to Google Analytics Object', function () {
                 x => x?.event === dataLayerValueResultsViewNotEligible.event
               ),
             ]
-            delete ev[1]['gtm.uniqueEventId']
-            console.log(ev[1])
+            // delete ev[1]['gtm.uniqueEventId']
+            removeID(ev[1])
 
             expect(ev[1]).to.deep.equal(dataLayerValueResultsViewNotEligible)
           })
@@ -312,7 +529,113 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it.only('clicking open all on results page has a bf_open_all_accordions event', function () {
+  it('clicking Continue on the final form step opens a modal, clicking Review selections loads the verification view and a bf_page_change event', function () {
+    cy.visit(utils.storybookUri)
+    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.window().then(window => {
+      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      pageObjects
+        .button()
+        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+        .then(() => {
+          // get the last pushed event
+          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+          // delete ev['gtm.uniqueEventId']
+          removeID(ev)
+
+          expect(ev).to.deep.equal(dataLayerValueFormStepOne)
+
+          // fill out required fields
+          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
+          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+
+          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+          cy.enterDateOfBirth(
+            dateOfBirth.month,
+            dateOfBirth.day,
+            dateOfBirth.year
+          )
+          pageObjects
+            .applicantRelationshipToDeceased()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+          pageObjects
+            .applicantMaritalStatus()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+
+          pageObjects
+            .button()
+            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+            .click()
+            .then(() => {
+              // get the last pushed event
+              const ev = [
+                ...window.dataLayer.filter(
+                  x => x?.event === dataLayerValueFormStepTwo.event
+                ),
+              ]
+
+              // delete ev[2]['gtm.uniqueEventId']
+              removeID(ev[2])
+
+              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+
+              // Date of death - 30 days ago
+              const dateOfDeath = utils.getDateByOffset(-30)
+              cy.enterDateOfDeath(
+                dateOfDeath.month,
+                dateOfDeath.day,
+                dateOfDeath.year
+              )
+
+              pageObjects
+                .button()
+                .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+                .click()
+                .then(() => {
+                  const ev = [
+                    ...window.dataLayer.filter(
+                      x => x?.event === dataLayerValueFormCompletionModal.event
+                    ),
+                  ]
+
+                  // delete ev[3]['gtm.uniqueEventId']
+                  removeID(ev[3])
+
+                  expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
+
+                  pageObjects
+                    .button()
+                    .contains('Review selections')
+                    .click()
+                    .then(() => {
+                      const ev = [
+                        ...window.dataLayer.filter(
+                          x => x?.event === dataLayerValueVerifySecletions.event
+                        ),
+                      ]
+
+                      // delete ev[4]['gtm.uniqueEventId']
+                      removeID(ev[4])
+
+                      expect(ev[4]).to.deep.equal(
+                        dataLayerValueVerifySecletions
+                      )
+                    })
+                })
+            })
+        })
+    })
+  })
+
+  it('clicking open all on results page has a bf_open_all_accordions event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {
@@ -328,8 +651,9 @@ describe('Calls to Google Analytics Object', function () {
               x => x?.event === dataLayerValueOpenAllAccordions.event
             ),
           ]
-          console.log(ev)
-          delete ev[0]['gtm.uniqueEventId']
+
+          // delete ev[0]['gtm.uniqueEventId']
+          removeID(ev[0])
 
           expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
         })
@@ -344,13 +668,419 @@ describe('Calls to Google Analytics Object', function () {
               x => x?.event === dataLayerValueOpenAllAccordions.event
             ),
           ]
-          console.log(ev)
+
           // we ignore dedup here so there can be multiple fires
-          delete ev[1]['gtm.uniqueEventId']
+          // delete ev[1]['gtm.uniqueEventId']
+          removeID(ev[1])
 
           expect(ev[1].bfData.accordionsOpen).to.equal(
             !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
           )
+        })
+    })
+  })
+
+  it('navigating through all the form results in zeroBenefits views', function () {
+    cy.visit(utils.storybookUri)
+    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.window().then(window => {
+      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      pageObjects
+        .button()
+        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+        .then(() => {
+          // get the last pushed event
+          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+          // delete ev['gtm.uniqueEventId']
+          removeID(ev)
+
+          expect(ev).to.deep.equal(dataLayerValueFormStepOne)
+
+          // fill out required fields
+          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
+          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+
+          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+          cy.enterDateOfBirth(
+            dateOfBirth.month,
+            dateOfBirth.day,
+            dateOfBirth.year
+          )
+          pageObjects
+            .applicantRelationshipToDeceased()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+          pageObjects
+            .applicantMaritalStatus()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+
+          pageObjects
+            .button()
+            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+            .click()
+            .then(() => {
+              // get the last pushed event
+              const ev = [
+                ...window.dataLayer.filter(
+                  x => x?.event === dataLayerValueFormStepTwo.event
+                ),
+              ]
+
+              // delete ev[2]['gtm.uniqueEventId']
+              removeID(ev[2])
+
+              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+
+              // Date of death - 30 days ago
+              const dateOfDeath = utils.getDateByOffset(-30)
+              cy.enterDateOfDeath(
+                dateOfDeath.month,
+                dateOfDeath.day,
+                dateOfDeath.year
+              )
+
+              pageObjects
+                .button()
+                .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+                .click()
+                .then(() => {
+                  const ev = [
+                    ...window.dataLayer.filter(
+                      x => x?.event === dataLayerValueFormCompletionModal.event
+                    ),
+                  ]
+
+                  // delete ev[3]['gtm.uniqueEventId']
+                  removeID(ev[3])
+
+                  expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
+
+                  pageObjects
+                    .button()
+                    .contains('Review selections')
+                    .click()
+                    .then(() => {
+                      const ev = [
+                        ...window.dataLayer.filter(
+                          x => x?.event === dataLayerValueVerifySecletions.event
+                        ),
+                      ]
+
+                      // delete ev[4]['gtm.uniqueEventId']
+                      removeID(ev[4])
+
+                      expect(ev[4]).to.deep.equal(
+                        dataLayerValueVerifySecletions
+                      )
+
+                      pageObjects
+                        .button()
+                        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+                        .click()
+                        .then(() => {
+                          // cy.wait(200)
+                          const ev = [
+                            ...window.dataLayer.filter(
+                              x =>
+                                x?.event ===
+                                dataLayerValueZeroResultsViewEligible.event
+                            ),
+                          ]
+
+                          // delete ev[5]['gtm.uniqueEventId']
+                          removeID(ev[5])
+
+                          expect(ev[5]).to.deep.equal(
+                            dataLayerValueZeroResultsViewEligible
+                          )
+
+                          pageObjects
+                            .seeAllBenefitsButton()
+                            .click()
+                            .then(() => {
+                              const ev = [
+                                ...window.dataLayer.filter(
+                                  x =>
+                                    x?.event ===
+                                    dataLayerValueZeroResultsViewNotEligible.event
+                                ),
+                              ]
+
+                              delete ev[6]['gtm.uniqueEventId']
+                              removeID(ev[6])
+
+                              expect(ev[6]).to.deep.equal(
+                                dataLayerValueZeroResultsViewNotEligible
+                              )
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    })
+  })
+
+  it('navigating through all the test steps produces a deep equal comparison to our expected dataLayer array values', function () {
+    cy.visit(utils.storybookUri)
+    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.window().then(window => {
+      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      pageObjects
+        .button()
+        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+        .then(() => {
+          // get the last pushed event
+          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+          // delete ev['gtm.uniqueEventId']
+          removeID(ev)
+
+          expect(ev).to.deep.equal(dataLayerValueFormStepOne)
+
+          // fill out required fields
+          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
+          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+
+          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+          cy.enterDateOfBirth(
+            dateOfBirth.month,
+            dateOfBirth.day,
+            dateOfBirth.year
+          )
+          pageObjects
+            .applicantRelationshipToDeceased()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+          pageObjects
+            .applicantMaritalStatus()
+            .select(
+              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
+                .fieldset.inputs[0].inputCriteria.values[1].value
+            )
+
+          pageObjects
+            .button()
+            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+            .click()
+            .then(() => {
+              // get the last pushed event
+              const ev = [
+                ...window.dataLayer.filter(
+                  x => x?.event === dataLayerValueFormStepTwo.event
+                ),
+              ]
+
+              // delete ev[2]['gtm.uniqueEventId']
+              removeID(ev[2])
+
+              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+
+              // Date of death - 30 days ago
+              const dateOfDeath = utils.getDateByOffset(-30)
+              cy.enterDateOfDeath(
+                dateOfDeath.month,
+                dateOfDeath.day,
+                dateOfDeath.year
+              )
+
+              pageObjects
+                .button()
+                .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+                .click()
+                .then(() => {
+                  const ev = [
+                    ...window.dataLayer.filter(
+                      x => x?.event === dataLayerValueFormCompletionModal.event
+                    ),
+                  ]
+
+                  // delete ev[3]['gtm.uniqueEventId']
+                  removeID(ev[3])
+
+                  expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
+
+                  pageObjects
+                    .button()
+                    .contains('Review selections')
+                    .click()
+                    .then(() => {
+                      const ev = [
+                        ...window.dataLayer.filter(
+                          x => x?.event === dataLayerValueVerifySecletions.event
+                        ),
+                      ]
+
+                      // delete ev[4]['gtm.uniqueEventId']
+                      removeID(ev[4])
+
+                      expect(ev[4]).to.deep.equal(
+                        dataLayerValueVerifySecletions
+                      )
+
+                      pageObjects
+                        .button()
+                        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+                        .click()
+                        .then(() => {
+                          // cy.wait(200)
+                          const ev = [
+                            ...window.dataLayer.filter(
+                              x =>
+                                x?.event ===
+                                dataLayerValueZeroResultsViewEligible.event
+                            ),
+                          ]
+
+                          // delete ev[5]['gtm.uniqueEventId']
+                          removeID(ev[5])
+
+                          expect(ev[5]).to.deep.equal(
+                            dataLayerValueZeroResultsViewEligible
+                          )
+
+                          pageObjects
+                            .seeAllBenefitsButton()
+                            .click()
+                            .then(() => {
+                              const ev = [
+                                ...window.dataLayer.filter(
+                                  x =>
+                                    x?.event ===
+                                    dataLayerValueZeroResultsViewNotEligible.event
+                                ),
+                              ]
+
+                              // delete ev[6]['gtm.uniqueEventId']
+                              removeID(ev[6])
+
+                              expect(ev[6]).to.deep.equal(
+                                dataLayerValueZeroResultsViewNotEligible
+                              )
+                            })
+                          // confirm zero benefits event and view
+                          // click see all benefits
+                          pageObjects
+                            .expandAll()
+                            .click()
+                            .then(() => {
+                              // check last page change event
+                              const ev = [
+                                ...window.dataLayer.filter(
+                                  x =>
+                                    x?.event ===
+                                    dataLayerValueOpenAllAccordions.event
+                                ),
+                              ]
+
+                              // delete ev[0]['gtm.uniqueEventId']
+                              removeID(ev[0])
+
+                              expect(ev[0]).to.deep.equal(
+                                dataLayerValueOpenAllAccordions
+                              )
+                              pageObjects
+                                .expandAll()
+                                .click()
+                                .then(() => {
+                                  // check last page change event
+                                  const ev = [
+                                    ...window.dataLayer.filter(
+                                      x =>
+                                        x?.event ===
+                                        dataLayerValueOpenAllAccordions.event
+                                    ),
+                                  ]
+
+                                  // we ignore dedup here so there can be multiple fires
+                                  // delete ev[1]['gtm.uniqueEventId']
+                                  removeID(ev[1])
+
+                                  expect(ev[1].bfData.accordionsOpen).to.equal(
+                                    !dataLayerValueOpenAllAccordions.bfData
+                                      .accordionsOpen
+                                  )
+
+                                  pageObjects
+                                    .accordion(
+                                      enResults.eligible.eligible_benefits[0]
+                                    )
+                                    .click()
+                                  // we wait for the last event to fire
+                                  // eslint-disable-next-line cypress/no-unnecessary-waiting
+                                  cy.wait(100).then(() => {
+                                    // check last page change event
+                                    const ev = [
+                                      ...window.dataLayer.filter(
+                                        x =>
+                                          x?.event ===
+                                          dataLayerValueAccordionOpen.event
+                                      ),
+                                    ]
+                                    console.log(ev)
+                                    // delete ev[0]['gtm.uniqueEventId']
+                                    removeID(ev[0])
+
+                                    expect(ev[0]).to.deep.equal(
+                                      dataLayerValueAccordionOpen
+                                    )
+
+                                    pageObjects
+                                      .benefitsAccordionLink(
+                                        enResults.eligible.eligible_benefits[0]
+                                      )
+                                      .invoke('removeAttr', 'href')
+                                      .click()
+                                      .then(() => {
+                                        const ev = [
+                                          ...window.dataLayer.filter(
+                                            x =>
+                                              x?.event ===
+                                              dataLayerValueBenefitLink.event
+                                          ),
+                                        ]
+                                        // delete ev[0]['gtm.uniqueEventId']
+                                        removeID(ev[0])
+                                        expect(ev[0]).to.deep.equal(
+                                          dataLayerValueBenefitLink
+                                        )
+
+                                        // loop through the data layer and remove any events that are gtm
+
+                                        const bfDataLayer =
+                                          window.dataLayer.filter(
+                                            item => !item.event.includes('gtm')
+                                          )
+
+                                        const cleanBfDataLayer =
+                                          bfDataLayer.map(item => {
+                                            removeID(item)
+                                            return item
+                                          })
+
+                                        console.log(cleanBfDataLayer)
+
+                                        expect(cleanBfDataLayer).to.deep.equal(
+                                          dataLayerValues
+                                        )
+                                      })
+                                  })
+                                })
+                            })
+                        })
+                    })
+                })
+            })
         })
     })
   })

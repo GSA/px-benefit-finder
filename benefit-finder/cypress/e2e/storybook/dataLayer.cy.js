@@ -435,7 +435,7 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
+  it.only('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {
@@ -462,13 +462,13 @@ describe('Calls to Google Analytics Object', function () {
             removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
-            cy.wait(wait)
-            // cy.wait(wait * 3).then(() => {
+            // we wait for the last event to fire
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            cy.wait(2500)
             pageObjects
               .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
               .invoke('removeAttr', 'href')
               .click()
-              .click() // second click because cypress failing in safari
               .then(() => {
                 // get all the events in our layer that matches the event value
                 const ev = [
@@ -480,7 +480,6 @@ describe('Calls to Google Analytics Object', function () {
 
                 expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
               })
-            // })
           })
         })
     })
@@ -932,8 +931,6 @@ describe('Calls to Google Analytics Object', function () {
                                     dataLayerValueZeroResultsViewNotEligible.event
                                 ),
                               ]
-
-                              // delete ev[6]['gtm.uniqueEventId']
                               removeID(ev[6])
 
                               expect(ev[6]).to.deep.equal(
@@ -954,8 +951,6 @@ describe('Calls to Google Analytics Object', function () {
                                     dataLayerValueOpenAllAccordions.event
                                 ),
                               ]
-
-                              // delete ev[0]['gtm.uniqueEventId']
                               removeID(ev[0])
 
                               expect(ev[0]).to.deep.equal(
@@ -975,7 +970,6 @@ describe('Calls to Google Analytics Object', function () {
                                   ]
 
                                   // we ignore dedup here so there can be multiple fires
-                                  // delete ev[1]['gtm.uniqueEventId']
                                   removeID(ev[1])
 
                                   expect(ev[1].bfData.accordionsOpen).to.equal(

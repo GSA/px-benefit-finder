@@ -14,6 +14,7 @@ const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
 const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
 const zero_benefit_view = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.results
 const scenario = utils.encodeURIFromObject(selectedData)
+const wait = 1000
 
 // calculate out elibibility counts we expect for our event values
 const eligibilityCount = {
@@ -386,7 +387,7 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(100).then(() => {
+          cy.wait(wait).then(() => {
             // get all the events in our layer that matches the event value
             const ev = {
               ...window.dataLayer.filter(
@@ -418,7 +419,7 @@ describe('Calls to Google Analytics Object', function () {
           pageObjects.accordion(enResults.eligible.eligible_benefits[0]).click()
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(100).then(() => {
+          cy.wait(wait).then(() => {
             // get all the events in our layer that matches the event value
             const ev = [
               ...window.dataLayer.filter(
@@ -450,7 +451,7 @@ describe('Calls to Google Analytics Object', function () {
           pageObjects.accordion(enResults.eligible.eligible_benefits[0]).click()
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(100).then(() => {
+          cy.wait(wait).then(() => {
             // get all the events in our layer that matches the event value
             const ev = [
               ...window.dataLayer.filter(
@@ -503,7 +504,7 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(100).then(() => {
+          cy.wait(wait).then(() => {
             // get all the events in our layer that matches the event value
             const ev = [
               ...window.dataLayer.filter(
@@ -903,7 +904,6 @@ describe('Calls to Google Analytics Object', function () {
                         .contains(EN_LOCALE_DATA.buttonGroup[1].value)
                         .click()
                         .then(() => {
-                          // cy.wait(200)
                           const ev = [
                             ...window.dataLayer.filter(
                               x =>
@@ -911,8 +911,6 @@ describe('Calls to Google Analytics Object', function () {
                                 dataLayerValueZeroResultsViewEligible.event
                             ),
                           ]
-
-                          // delete ev[5]['gtm.uniqueEventId']
                           removeID(ev[5])
 
                           expect(ev[5]).to.deep.equal(
@@ -988,7 +986,7 @@ describe('Calls to Google Analytics Object', function () {
                                     .click()
                                   // we wait for the last event to fire
                                   // eslint-disable-next-line cypress/no-unnecessary-waiting
-                                  cy.wait(100).then(() => {
+                                  cy.wait(wait).then(() => {
                                     // check last page change event
                                     const ev = [
                                       ...window.dataLayer.filter(

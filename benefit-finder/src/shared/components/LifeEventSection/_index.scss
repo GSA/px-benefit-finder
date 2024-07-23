@@ -44,7 +44,7 @@
 }
 
 .bf-section-heading {
-  @include h3;
+  @include h0;
 
   background-color: color.$officer-navy;
   color: color.$white;
@@ -64,7 +64,7 @@
   border-bottom: 1px solid color.$base-light-grey;
 
   h2.bf-usa-section-heading {
-    @include h3;
+    @include h1;
   }
 }
 

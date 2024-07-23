@@ -435,7 +435,7 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it.only('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
+  it('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {
@@ -462,12 +462,13 @@ describe('Calls to Google Analytics Object', function () {
             removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
-            cy.wait(wait * 3)
+            cy.wait(wait)
             // cy.wait(wait * 3).then(() => {
             pageObjects
               .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
               .invoke('removeAttr', 'href')
               .click()
+              .click() // second click because cypress failing in safari
               .then(() => {
                 // get all the events in our layer that matches the event value
                 const ev = [

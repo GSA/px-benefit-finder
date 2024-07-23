@@ -143,7 +143,7 @@ const dataLayerValueZeroResultsViewEligible = {
   event: resultsView.event,
   bfData: {
     pageView: resultsView.bfData.pageView[0],
-    viewTitle: EN_LOCALE_DATA.resultsView.zeroBenefits.chevron.heading,
+    viewTitle: EN_LOCALE_DATA.resultsView.zeroBenefits.eligible.chevron.heading,
     ...zeroBenefitsEligibilityCount,
   },
 }
@@ -152,7 +152,8 @@ const dataLayerValueZeroResultsViewNotEligible = {
   event: resultsView.event,
   bfData: {
     pageView: resultsView.bfData.pageView[1],
-    viewTitle: EN_LOCALE_DATA.resultsView.zeroBenefits.chevron.heading,
+    viewTitle:
+      EN_LOCALE_DATA.resultsView.zeroBenefits.notEligible.chevron.heading,
     ...zeroBenefitsEligibilityCount,
   },
 }
@@ -434,7 +435,7 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it.only('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
+  it('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {

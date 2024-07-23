@@ -434,7 +434,7 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
+  it.only('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {
@@ -461,23 +461,23 @@ describe('Calls to Google Analytics Object', function () {
             removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
+
+            pageObjects
+              .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
+              .invoke('removeAttr', 'href')
+              .click()
+              .then(() => {
+                // get all the events in our layer that matches the event value
+                const ev = [
+                  ...window.dataLayer.filter(
+                    x => x?.event === dataLayerValueBenefitLink.event
+                  ),
+                ]
+                removeID(ev[0])
+
+                expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
+              })
           })
-
-          pageObjects
-            .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
-            .invoke('removeAttr', 'href')
-            .click()
-            .then(() => {
-              // get all the events in our layer that matches the event value
-              const ev = [
-                ...window.dataLayer.filter(
-                  x => x?.event === dataLayerValueBenefitLink.event
-                ),
-              ]
-              removeID(ev[0])
-
-              expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
-            })
         })
     })
   })

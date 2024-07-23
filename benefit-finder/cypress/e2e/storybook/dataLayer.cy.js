@@ -6,16 +6,16 @@ import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/e
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import content from '../../../src/shared/api/mock-data/current.json'
 
+// establish some common data points from our mock values and scenarios
 const { intro, lifeEventSection, resultsView, openAllBenefitAccordions } =
   dataLayerUtils.dataLayerStructure
-
 const { lifeEventForm } = content.data
-
 const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
 const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
 const zero_benefit_view = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.results
 const scenario = utils.encodeURIFromObject(selectedData)
 
+// calculate out elibibility counts we expect for our event values
 const eligibilityCount = {
   eligibleBenefitCount: {
     number: enResults.eligible.length,
@@ -58,6 +58,7 @@ const zeroBenefitsEligibilityCount = {
   },
 }
 
+// create an object for each of our dataLayer assertions
 const dataLayerValueIntro = {
   event: intro.event,
   bfData: {
@@ -155,6 +156,7 @@ const dataLayerValueZeroResultsViewNotEligible = {
   },
 }
 
+// create a combined dataLayer assertions array, this is what we might expect to see for a user journey value that triggers all the events expected
 const dataLayerValues = [
   dataLayerValueIntro,
   dataLayerValueFormStepOne,
@@ -171,9 +173,7 @@ const dataLayerValues = [
 
 const removeID = item => delete item['gtm.uniqueEventId']
 
-// confirm full user journey
-// no eligible results events
-
+// check to make sure our data layer exists
 describe('Basic Data Layer Checks', () => {
   it('has a dataLayer and loads GTM', () => {
     cy.visit(utils.storybookUri)
@@ -202,7 +202,6 @@ describe('Calls to Google Analytics Object', function () {
           // get the last pushed event
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
           removeID(ev)
-          // delete ev['gtm.uniqueEventId']
 
           expect(ev).to.deep.equal(dataLayerValueIntro)
         })
@@ -222,7 +221,6 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // get the last pushed event
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          // delete ev['gtm.uniqueEventId']
           removeID(ev)
 
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
@@ -243,7 +241,6 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // get the last pushed event
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          // delete ev['gtm.uniqueEventId']
           removeID(ev)
 
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
@@ -276,15 +273,13 @@ describe('Calls to Google Analytics Object', function () {
             .contains(EN_LOCALE_DATA.buttonGroup[1].value)
             .click()
             .then(() => {
-              // get the last pushed event
+              // get all the events in our layer that matches the event value
               const ev = [
                 ...window.dataLayer.filter(
                   x => x?.event === dataLayerValueFormStepTwo.event
                 ),
               ]
-
               removeID(ev[2])
-              // delete ev[2]['gtm.uniqueEventId']
 
               expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
             })
@@ -305,7 +300,6 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // get the last pushed event
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          // delete ev['gtm.uniqueEventId']
           removeID(ev)
 
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
@@ -338,14 +332,12 @@ describe('Calls to Google Analytics Object', function () {
             .contains(EN_LOCALE_DATA.buttonGroup[1].value)
             .click()
             .then(() => {
-              // get the last pushed event
+              // get all the events in our layer that matches the event value
               const ev = [
                 ...window.dataLayer.filter(
                   x => x?.event === dataLayerValueFormStepTwo.event
                 ),
               ]
-
-              // delete ev[2]['gtm.uniqueEventId']
               removeID(ev[2])
 
               expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
@@ -363,13 +355,12 @@ describe('Calls to Google Analytics Object', function () {
                 .contains(EN_LOCALE_DATA.buttonGroup[1].value)
                 .click()
                 .then(() => {
+                  // get all the events in our layer that matches the event value
                   const ev = [
                     ...window.dataLayer.filter(
                       x => x?.event === dataLayerValueFormCompletionModal.event
                     ),
                   ]
-
-                  // delete ev[3]['gtm.uniqueEventId']
                   removeID(ev[3])
 
                   expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
@@ -396,7 +387,7 @@ describe('Calls to Google Analytics Object', function () {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(100).then(() => {
-            // check last page change event
+            // get all the events in our layer that matches the event value
             const ev = {
               ...window.dataLayer.filter(
                 x => x?.event === dataLayerValueResultsViewEligible.event
@@ -428,13 +419,12 @@ describe('Calls to Google Analytics Object', function () {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(100).then(() => {
-            // check last page change event
+            // get all the events in our layer that matches the event value
             const ev = [
               ...window.dataLayer.filter(
                 x => x?.event === dataLayerValueAccordionOpen.event
               ),
             ]
-            // delete ev[0]['gtm.uniqueEventId']
             removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
@@ -461,13 +451,12 @@ describe('Calls to Google Analytics Object', function () {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(100).then(() => {
-            // check last page change event
+            // get all the events in our layer that matches the event value
             const ev = [
               ...window.dataLayer.filter(
                 x => x?.event === dataLayerValueAccordionOpen.event
               ),
             ]
-            // delete ev[0]['gtm.uniqueEventId']
             removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
@@ -478,13 +467,14 @@ describe('Calls to Google Analytics Object', function () {
             .invoke('removeAttr', 'href')
             .click()
             .then(() => {
+              // get all the events in our layer that matches the event value
               const ev = [
                 ...window.dataLayer.filter(
                   x => x?.event === dataLayerValueBenefitLink.event
                 ),
               ]
-              // delete ev[0]['gtm.uniqueEventId']
               removeID(ev[0])
+
               expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
             })
         })
@@ -514,13 +504,12 @@ describe('Calls to Google Analytics Object', function () {
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(100).then(() => {
-            // check last page change event
+            // get all the events in our layer that matches the event value
             const ev = [
               ...window.dataLayer.filter(
                 x => x?.event === dataLayerValueResultsViewNotEligible.event
               ),
             ]
-            // delete ev[1]['gtm.uniqueEventId']
             removeID(ev[1])
 
             expect(ev[1]).to.deep.equal(dataLayerValueResultsViewNotEligible)
@@ -542,7 +531,6 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // get the last pushed event
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          // delete ev['gtm.uniqueEventId']
           removeID(ev)
 
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
@@ -575,14 +563,12 @@ describe('Calls to Google Analytics Object', function () {
             .contains(EN_LOCALE_DATA.buttonGroup[1].value)
             .click()
             .then(() => {
-              // get the last pushed event
+              // get all the events in our layer that matches the event value
               const ev = [
                 ...window.dataLayer.filter(
                   x => x?.event === dataLayerValueFormStepTwo.event
                 ),
               ]
-
-              // delete ev[2]['gtm.uniqueEventId']
               removeID(ev[2])
 
               expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
@@ -600,13 +586,12 @@ describe('Calls to Google Analytics Object', function () {
                 .contains(EN_LOCALE_DATA.buttonGroup[1].value)
                 .click()
                 .then(() => {
+                  // get all the events in our layer that matches the event value
                   const ev = [
                     ...window.dataLayer.filter(
                       x => x?.event === dataLayerValueFormCompletionModal.event
                     ),
                   ]
-
-                  // delete ev[3]['gtm.uniqueEventId']
                   removeID(ev[3])
 
                   expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
@@ -616,13 +601,12 @@ describe('Calls to Google Analytics Object', function () {
                     .contains('Review selections')
                     .click()
                     .then(() => {
+                      // get all the events in our layer that matches the event value
                       const ev = [
                         ...window.dataLayer.filter(
                           x => x?.event === dataLayerValueVerifySecletions.event
                         ),
                       ]
-
-                      // delete ev[4]['gtm.uniqueEventId']
                       removeID(ev[4])
 
                       expect(ev[4]).to.deep.equal(
@@ -651,8 +635,6 @@ describe('Calls to Google Analytics Object', function () {
               x => x?.event === dataLayerValueOpenAllAccordions.event
             ),
           ]
-
-          // delete ev[0]['gtm.uniqueEventId']
           removeID(ev[0])
 
           expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
@@ -662,15 +644,12 @@ describe('Calls to Google Analytics Object', function () {
         .expandAll()
         .click()
         .then(() => {
-          // check last page change event
+          // get all the events in our layer that matches the event value
           const ev = [
             ...window.dataLayer.filter(
               x => x?.event === dataLayerValueOpenAllAccordions.event
             ),
           ]
-
-          // we ignore dedup here so there can be multiple fires
-          // delete ev[1]['gtm.uniqueEventId']
           removeID(ev[1])
 
           expect(ev[1].bfData.accordionsOpen).to.equal(
@@ -693,7 +672,6 @@ describe('Calls to Google Analytics Object', function () {
         .then(() => {
           // get the last pushed event
           const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          // delete ev['gtm.uniqueEventId']
           removeID(ev)
 
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
@@ -726,14 +704,12 @@ describe('Calls to Google Analytics Object', function () {
             .contains(EN_LOCALE_DATA.buttonGroup[1].value)
             .click()
             .then(() => {
-              // get the last pushed event
+              // get all the events in our layer that matches the event value
               const ev = [
                 ...window.dataLayer.filter(
                   x => x?.event === dataLayerValueFormStepTwo.event
                 ),
               ]
-
-              // delete ev[2]['gtm.uniqueEventId']
               removeID(ev[2])
 
               expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
@@ -756,8 +732,6 @@ describe('Calls to Google Analytics Object', function () {
                       x => x?.event === dataLayerValueFormCompletionModal.event
                     ),
                   ]
-
-                  // delete ev[3]['gtm.uniqueEventId']
                   removeID(ev[3])
 
                   expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
@@ -767,13 +741,12 @@ describe('Calls to Google Analytics Object', function () {
                     .contains('Review selections')
                     .click()
                     .then(() => {
+                      // get all the events in our layer that matches the event value
                       const ev = [
                         ...window.dataLayer.filter(
                           x => x?.event === dataLayerValueVerifySecletions.event
                         ),
                       ]
-
-                      // delete ev[4]['gtm.uniqueEventId']
                       removeID(ev[4])
 
                       expect(ev[4]).to.deep.equal(
@@ -785,7 +758,7 @@ describe('Calls to Google Analytics Object', function () {
                         .contains(EN_LOCALE_DATA.buttonGroup[1].value)
                         .click()
                         .then(() => {
-                          // cy.wait(200)
+                          // get all the events in our layer that matches the event value
                           const ev = [
                             ...window.dataLayer.filter(
                               x =>
@@ -793,8 +766,6 @@ describe('Calls to Google Analytics Object', function () {
                                 dataLayerValueZeroResultsViewEligible.event
                             ),
                           ]
-
-                          // delete ev[5]['gtm.uniqueEventId']
                           removeID(ev[5])
 
                           expect(ev[5]).to.deep.equal(
@@ -805,6 +776,7 @@ describe('Calls to Google Analytics Object', function () {
                             .seeAllBenefitsButton()
                             .click()
                             .then(() => {
+                              // get all the events in our layer that matches the event value
                               const ev = [
                                 ...window.dataLayer.filter(
                                   x =>
@@ -812,8 +784,6 @@ describe('Calls to Google Analytics Object', function () {
                                     dataLayerValueZeroResultsViewNotEligible.event
                                 ),
                               ]
-
-                              delete ev[6]['gtm.uniqueEventId']
                               removeID(ev[6])
 
                               expect(ev[6]).to.deep.equal(

@@ -461,22 +461,23 @@ describe('Calls to Google Analytics Object', function () {
             removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
+            cy.wait(wait).then(() => {
+              pageObjects
+                .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
+                .invoke('removeAttr', 'href')
+                .click()
+                .then(() => {
+                  // get all the events in our layer that matches the event value
+                  const ev = [
+                    ...window.dataLayer.filter(
+                      x => x?.event === dataLayerValueBenefitLink.event
+                    ),
+                  ]
+                  removeID(ev[0])
 
-            pageObjects
-              .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
-              .invoke('removeAttr', 'href')
-              .click()
-              .then(() => {
-                // get all the events in our layer that matches the event value
-                const ev = [
-                  ...window.dataLayer.filter(
-                    x => x?.event === dataLayerValueBenefitLink.event
-                  ),
-                ]
-                removeID(ev[0])
-
-                expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
-              })
+                  expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
+                })
+            })
           })
         })
     })
@@ -995,8 +996,6 @@ describe('Calls to Google Analytics Object', function () {
                                           dataLayerValueAccordionOpen.event
                                       ),
                                     ]
-                                    console.log(ev)
-                                    // delete ev[0]['gtm.uniqueEventId']
                                     removeID(ev[0])
 
                                     expect(ev[0]).to.deep.equal(
@@ -1035,8 +1034,6 @@ describe('Calls to Google Analytics Object', function () {
                                             removeID(item)
                                             return item
                                           })
-
-                                        console.log(cleanBfDataLayer)
 
                                         expect(cleanBfDataLayer).to.deep.equal(
                                           dataLayerValues

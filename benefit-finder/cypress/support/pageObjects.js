@@ -116,6 +116,22 @@ class PageObjects {
   benefitResultsView() {
     return cy.get('.bf-result-view')
   }
+
+  notEligibleResultsButton() {
+    return cy.get('.bf-result-view-unmet > .usa-button')
+  }
+
+  stepBackLink() {
+    return cy.get('.bf-step-back-link')
+  }
+
+  zeroBenefitsViewHeading() {
+    return cy.get('[data-testid="zero-benefits-view-heading"]')
+  }
+
+  seeAllBenefitsButton() {
+    return cy.get('[data-testid="zero-benefits-view-cta-button"]')
+  }
 }
 
 export const pageObjects = new PageObjects()

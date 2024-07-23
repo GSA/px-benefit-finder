@@ -63,7 +63,6 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
           <h4
             aria-level="4"
             class="bf-usa-detail-title font-family-sans"
-            id=""
             role="heading"
           >
             By  Federal Emergency Management Agency (FEMA)
@@ -82,7 +81,6 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
             <h5
               aria-level="5"
               class="bf-key-eligibility-criteria-heading font-family-sans"
-              id=""
               role="heading"
             >
               Key eligibility criteria

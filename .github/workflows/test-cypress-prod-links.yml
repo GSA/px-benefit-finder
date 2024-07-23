@@ -33,6 +33,14 @@ jobs:
           config-file: cypress.prod.links.config.js
           working-directory: benefit-finder
 
+      - name: Prod Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Prod cypress screenshots
+          path: ./benefit-finder/cypress/screenshots
+
+
       - name: create github issue
         uses: dacbd/create-issue-action@main
         if: failure()

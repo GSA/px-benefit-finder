@@ -103,9 +103,11 @@ const ResultsView = ({
               : resultsView.bfData.pageView[0],
           viewTitle:
             notEligibleView === false
-              ? (zeroBenefitsResult && ui.zeroBenefits.chevron.heading) ||
+              ? (zeroBenefitsResult &&
+                  ui.zeroBenefits.eligible.chevron.heading) ||
                 ui?.eligible.chevron.heading
-              : (zeroBenefitsResult && ui?.zeroBenefits.chevron.heading) ||
+              : (zeroBenefitsResult &&
+                  ui?.zeroBenefits.notEligible.chevron.heading) ||
                 ui?.notEligible.chevron.heading,
           ...eligibilityCount,
         },

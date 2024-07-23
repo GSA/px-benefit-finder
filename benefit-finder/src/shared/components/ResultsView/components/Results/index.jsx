@@ -39,16 +39,19 @@ const Results = ({
       <Chevron
         heading={
           notEligibleView === false
-            ? (zeroBenefitsResult && zeroBenefits?.chevron.heading) ||
+            ? (zeroBenefitsResult && zeroBenefits?.eligible.chevron.heading) ||
               eligible?.chevron.heading
-            : (zeroBenefitsResult && zeroBenefits?.chevron.heading) ||
+            : (zeroBenefitsResult &&
+                zeroBenefits?.notEligible.chevron.heading) ||
               notEligible?.chevron.heading
         }
         description={
           notEligibleView === false
-            ? (zeroBenefitsResult && zeroBenefits?.chevron.description) ||
+            ? (zeroBenefitsResult &&
+                zeroBenefits?.eligible.chevron.description) ||
               eligible?.chevron.description
-            : (zeroBenefitsResult && zeroBenefits?.chevron.description) ||
+            : (zeroBenefitsResult &&
+                zeroBenefits?.notEligible.chevron.description) ||
               notEligible?.chevron.description
         }
       />

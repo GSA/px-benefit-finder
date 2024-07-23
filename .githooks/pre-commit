@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# Function to get the full path of a command
+get_command_path() {
+  command -v $1
+}
+
 ## Set the root directory in the pipeline
 ROOT_DIR=$(git rev-parse --show-toplevel)
 CURRENT_DIR="${PWD##*/}"
@@ -13,17 +19,16 @@ STAGED_FILES=$(git diff-index --cached --name-only HEAD)
 
 for file in $STAGED_FILES; do
   # Check if file is located in the JS_APP_DIR
-  echo "Found stagged file: $file"
+  echo "Found staged file: $file"
   if [[ $file == *$JS_APP_DIR* ]]; then
     IS_JS_APP=true
   fi
 done
 
-# run custom actions for our JS App
+# Run custom actions for our JS App
 if [ $IS_JS_APP = true ]; then
     echo "Found a JS application file, running front end task(s)"
-    # echo "running processes on staged files"
-    cd $ROOT_DIR/$JS_APP_DIR && npm run lint-staged
+    cd $ROOT_DIR/$JS_APP_DIR && $(get_command_path npm) run lint-staged
     if [ $? -eq 0 ]; then
         echo "Process succeeded."
         cd $ROOT_DIR
@@ -34,33 +39,44 @@ if [ $IS_JS_APP = true ]; then
 fi
 
 # Check if Python 3 is installed and install if not
-if ! command -v python3 &> /dev/null; then
+PYTHON3_PATH=$(get_command_path python3)
+if [ -z "$PYTHON3_PATH" ]; then
     echo "Python 3 is not installed. Attempting to install Python 3..."
-    brew install python3 || { echo "Failed to install Python 3. Please install it manually."; exit 1; }
+    $(get_command_path brew) install python3 || { echo "Failed to install Python 3. Please install it manually."; exit 1; }
+    PYTHON3_PATH=$(get_command_path python3)
 fi
+
 # Check if venv module is available in Python, install if not
-if ! python3 -c "import venv" &> /dev/null; then
+if ! $PYTHON3_PATH -c "import venv" &> /dev/null; then
     echo "venv module is not available. Python installation might not support venv."
     exit 1
 fi
+
 # Set up Python virtual environment
 if [ ! -d ".venv" ]; then
-    python3 -m venv .venv
+    $PYTHON3_PATH -m venv .venv
     echo "Virtual environment created."
 else
     echo "Virtual environment already exists."
 fi
 source .venv/bin/activate
+
 # Check if TruffleHog3 is installed and install if not
-if ! command -v trufflehog3 &> /dev/null; then
+TRUFFLEHOG3_PATH=$(get_command_path trufflehog3)
+if [ -z "$TRUFFLEHOG3_PATH" ]; then
     echo "TruffleHog3 is not installed. Installing TruffleHog3..."
-    pip install trufflehog3 || { echo "Failed to install TruffleHog3. Please install it manually."; exit 1; }
+    $(get_command_path pip) install trufflehog3 || { echo "Failed to install TruffleHog3. Please install it manually."; exit 1; }
+    TRUFFLEHOG3_PATH=$(get_command_path trufflehog3)
 fi
+
 # Check if jq is installed and install if not
-if ! command -v /opt/homebrew/bin/jq &> /dev/null; then
+JQ_PATH=$(get_command_path jq)
+if [ -z "$JQ_PATH" ]; then
     echo "jq is not installed. Installing jq..."
-    brew install jq || { echo "Failed to install jq. Please install it manually."; exit 1; }
+    $(get_command_path brew) install jq || { echo "Failed to install jq. Please install it manually."; exit 1; }
+    JQ_PATH=$(get_command_path jq)
 fi
+
 # Determine the branch name locally
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 if [ -z "$BRANCH_NAME" ]; then
@@ -69,11 +85,13 @@ if [ -z "$BRANCH_NAME" ]; then
 fi
 
 echo "Scanning branch: $BRANCH_NAME"
+
 # TruffleHog3 Scan on local branch files
-trufflehog3 --no-history --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json || true
+$TRUFFLEHOG3_PATH --no-history --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json || true
+
 # Prepare for result checking
 # Check for secrets in the results
-CONTENT=$(/opt/homebrew/bin/jq 'length' $ROOT_DIR/truffleHogResults.json)
+CONTENT=$($JQ_PATH 'length' $ROOT_DIR/truffleHogResults.json)
 if [ "$CONTENT" -eq 0 ]; then
     rm $ROOT_DIR/truffleHogResults.json
     echo "No secrets found. Commit is safe."
@@ -83,3 +101,4 @@ else
     echo "Please review and resolve issues."
     exit 1
 fi
+

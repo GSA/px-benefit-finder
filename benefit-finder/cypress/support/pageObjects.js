@@ -77,6 +77,12 @@ class PageObjects {
     return cy.get('.usa-accordion__button')
   }
 
+  benefitsAccordionLink(accordionHeading) {
+    return cy.get(
+      `[data-analytics-content="${accordionHeading}"] a[data-testid="bf-benefit-link"]`
+    )
+  }
+
   menuButton() {
     return cy.get('.usa-menu-btn')
   }

@@ -112,6 +112,20 @@ gh_effort_option_id=$(echo "${field_values}" | jq -r "select(.name == \"Effort\"
 gh_priority_id=$(echo "${field_values}" | jq -r 'select(.name == "Priority").id')
 gh_priority_option_id=$(echo "${field_values}" | jq -r "select(.name == \"Priority\") | .options[] | select(.name == \"${gh_priority_option}\").id")
 
+
+echo "Project ID: ${gh_project_id}"
+echo "Issue ID: ${gh_issue_id}"
+echo "Status ID: ${gh_status_id}"
+echo "Status Option ID: ${gh_status_option_id}"
+echo "Domain ID: ${gh_domain_id}"
+echo "Domain Option ID: ${gh_domain_option_id}"
+echo "Sprint ID: ${gh_sprint_id}"
+echo "Sprint Option ID: ${gh_sprint_option_id}"
+echo "Effort ID: ${gh_effort_id}"
+echo "Effort Option ID: ${gh_effort_option_id}"
+echo "Priority ID: ${gh_priority_id}"
+echo "Priority Option ID: ${gh_priority_option_id}"
+
 echo "Updating issue project fields..."
 {
   gh project item-edit \

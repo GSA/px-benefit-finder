@@ -38,7 +38,8 @@ jobs:
           source ./scripts/pipeline/cloud-gov-waf-version.sh
     outputs:
       current_nginx_version: ${{ steps.version.outputs.current_nginx_version }}
-      new_nginx_version: ${{ steps.version.outputs.new_nginx_version }}
+      # new_nginx_version: ${{ steps.version.outputs.new_nginx_version }}
+      new_nginx_version: ${{ steps.version.outputs.current_nginx_version }}
       current_bp_version: ${{ steps.version.outputs.current_bp_version }}
       new_bp_version: ${{ steps.version.outputs.new_bp_version }}
       update: ${{ steps.version.outputs.update }}
@@ -85,7 +86,8 @@ jobs:
         env:
           ubuntu_version: "${{ vars.UBUNTU_VERSION }}"
           modsecurity_nginx_version: "${{ vars.MODSECURITY_NGINX_VERSION }}"
-          new_nginx_version: ${{ needs.checkVersion.outputs.new_nginx_version }}
+          # new_nginx_version: ${{ needs.checkVersion.outputs.new_nginx_version }}
+          new_nginx_version: ${{ needs.checkVersion.outputs.current_nginx_version }}
           TF_BASTION: "${{ secrets.TF_BASTION }}"
         run: |
           source ./scripts/pipeline/terraform-build-waf-plugin.sh
@@ -140,7 +142,7 @@ jobs:
         with:
           token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           assignees: ${{ vars.TECH_LEAD }}
-          title: "Update to NGINX v${{ needs.checkVersion.outputs.new_nginx_version }} (main)"
+          title: "Update to NGINX ${{ needs.checkVersion.outputs.new_nginx_version }} (main)"
           body: |
             ## Automated update of NGINX WAF
 

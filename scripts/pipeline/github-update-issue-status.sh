@@ -16,9 +16,11 @@ curl -sSL "https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION
 tar xvf "gh_${VERSION}_linux_amd64.tar.gz"
 
 if cp "gh_${VERSION}_linux_amd64/bin/gh" "${home}/deps/0/bin/"; then
+  echo "Successfully copied to ${home}/deps/0/bin/"
 else
   # Fallback to copying to the local user's .local/bin directory
   cp "gh_${VERSION}_linux_amd64/bin/gh" "/usr/local/bin/"
+  echo "Fallback: copied to /usr/local/bin/"
 fi
 
 ## Field configuration options.

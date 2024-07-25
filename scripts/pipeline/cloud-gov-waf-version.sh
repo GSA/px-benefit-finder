@@ -37,7 +37,8 @@ if [ "${new_bp_version}" -ne "${current_bp_version}" ]; then
   new_nginx_version=$(cat /tmp/new_nginx_version | pup 'table json{}' | jq -r ".[].children[].children[] | select(.children[].text == \"nginx\") | select(.children[].text == \"cflinuxfs4\") | select(.children[].text | contains(\"${default_nginx_binary_version}\")) | .children[].text" | tr '\n' ' ' | sed -E 's/cflinuxfs4 /cflinuxfs4\n/g' | sort -r | head -n 1 | awk '{print $2}')
 
 
-  echo "new_nginx_version=${new_nginx_version}" >> "${GITHUB_OUTPUT}"
+  # echo "new_nginx_version=${new_nginx_version}" >> "${GITHUB_OUTPUT}"
+  echo "new_nginx_version=${current_nginx_version}" >> "${GITHUB_OUTPUT}"
   echo "current_nginx_version=${current_nginx_version}" >> "${GITHUB_OUTPUT}"
   echo "current_bp_version=${CURRENT_BP_VERSION}" >> "${GITHUB_OUTPUT}"
   echo "new_bp_version=${NEW_BP_VERSION}" >> "${GITHUB_OUTPUT}"

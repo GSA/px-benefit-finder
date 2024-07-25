@@ -143,6 +143,6 @@ echo "Updating issue project fields..."
     --id "${gh_issue_id}" \
     --field-id "${gh_priority_id}" \
     --single-select-option-id "${gh_priority_option_id}"
-} >
+} 
 
 echo "Update completed."

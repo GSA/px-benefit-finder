@@ -33,7 +33,7 @@ gh_priority_option="Low"
 echo "Getting project ID..."
 gh_project_id=$(gh api graphql -f query="
   query{
-    organization(login: \"${GITHUB_REPOSITORY_OWNER}\"){
+    organization(login: \"GSA\"){
       projectV2(number: ${GH_PROJECT_NUMBER}) {
         id
       }

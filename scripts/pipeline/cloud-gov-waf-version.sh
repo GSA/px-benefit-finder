@@ -21,7 +21,7 @@ NEW_BP_VERSION=$(cf buildpacks | grep nginx | grep cflinuxfs4 | awk '{print $NF}
 new_bp_version=$(version "${NEW_BP_VERSION}")
 current_bp_version=$(version "${CURRENT_BP_VERSION}")
 
-if [ "${new_bp_version}" -ne "${current_bp_version}" ]; then
+# if [ "${new_bp_version}" -ne "${current_bp_version}" ]; then
   echo "New version of buildpack found!"
 
   curl -Ls "https://github.com/cloudfoundry/nginx-buildpack/releases/tag/v${CURRENT_BP_VERSION}" > /tmp/current_bp_version
@@ -43,9 +43,9 @@ if [ "${new_bp_version}" -ne "${current_bp_version}" ]; then
   echo "current_bp_version=${CURRENT_BP_VERSION}" >> "${GITHUB_OUTPUT}"
   echo "new_bp_version=${NEW_BP_VERSION}" >> "${GITHUB_OUTPUT}"
   echo "update=true" >> "${GITHUB_OUTPUT}"
-else
-  echo "Running latest version of the buildpack!"
-fi
+# else
+  # echo "Running latest version of the buildpack!"
+# fi
 
   echo "new_nginx_version=${new_nginx_version}"
   echo "current_nginx_version=${current_nginx_version}"

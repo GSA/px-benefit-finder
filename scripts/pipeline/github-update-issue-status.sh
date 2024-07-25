@@ -1,14 +1,26 @@
 #!/bin/bash
 
-home="/home/vcap"
-PATH="${PATH}:${home}/deps/0/bin/"
+# Check if running in CloudFoundry environment
+if [ -d "/home/vcap/deps/0/bin" ]; then
+  home="/home/vcap"
+  PATH="${PATH}:${home}/deps/0/bin/"
+else
+  # Set to a similar path on a plain Ubuntu install
+  home="$HOME"
+  PATH="${PATH}:${home}/.local/bin"
+fi
 
-VERSION=$(curl  "https://api.github.com/repos/cli/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c2-)
+VERSION=$(curl -s "https://api.github.com/repos/cli/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c2-)
 curl -sSL "https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_amd64.tar.gz" -o "gh_${VERSION}_linux_amd64.tar.gz"
 
 tar xvf "gh_${VERSION}_linux_amd64.tar.gz"
-cp "gh_${VERSION}_linux_amd64/bin/gh" ${home}/deps/0/bin/
+cp "gh_${VERSION}_linux_amd64/bin/gh" ${home}/.local/bin/
 
+if cp "gh_${VERSION}_linux_amd64/bin/gh" "/home/vcap/deps/0/bin/"; then
+else
+  # Fallback to copying to the local user's .local/bin directory
+  cp "gh_${VERSION}_linux_amd64/bin/gh" "${home}/.local/bin/"
+fi
 
 ## Field configuration options.
 gh_status_option="QA"
@@ -119,13 +131,13 @@ echo "Updating issue project fields..."
     --field-id "${gh_sprint_id}" \
     --iteration-id "${gh_sprint_option_id}"
 
-    gh project item-edit \
+  gh project item-edit \
     --project-id "${gh_project_id}" \
     --id "${gh_issue_id}" \
     --field-id "${gh_effort_id}" \
     --single-select-option-id "${gh_effort_option_id}"
 
-    gh project item-edit \
+  gh project item-edit \
     --project-id "${gh_project_id}" \
     --id "${gh_issue_id}" \
     --field-id "${gh_priority_id}" \

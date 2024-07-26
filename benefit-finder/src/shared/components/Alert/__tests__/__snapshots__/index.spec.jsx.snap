@@ -22,6 +22,7 @@ exports[`Alert > renders a match to the previous snapshot when it has an error 1
       <p
         class="bf-usa-alert__text usa-alert__text"
       />
+      <ul />
     </div>
   </div>
 </DocumentFragment>
@@ -49,6 +50,7 @@ exports[`Alert > renders a match to the previous snapshot, default 1`] = `
       <p
         class="bf-usa-alert__text usa-alert__text"
       />
+      <ul />
     </div>
   </div>
 </DocumentFragment>
@@ -76,6 +78,7 @@ exports[`Alert > renders a match to the previous snapshot, error type with no er
       <p
         class="bf-usa-alert__text usa-alert__text"
       />
+      <ul />
     </div>
   </div>
 </DocumentFragment>

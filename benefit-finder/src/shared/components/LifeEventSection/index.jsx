@@ -268,6 +268,7 @@ const LifeEventSection = ({
                   type="error"
                   hasError={hasError.length > 0}
                   errorCount={hasError.length}
+                  errorList={hasError}
                 ></Alert>
                 <Heading className="bf-usa-section-heading" headingLevel={2}>
                   {currentData.section.heading}

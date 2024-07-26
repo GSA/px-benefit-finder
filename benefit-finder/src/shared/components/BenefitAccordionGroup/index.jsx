@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { createMarkup, dataLayerUtils } from '../../utils'
 import {
@@ -16,12 +16,18 @@ import './_index.scss'
  * @param {array} data - our benefits data
  * @param {string} entryKey - which key in the array to target
  * @param {bool} expandAll - determnines if we include ExpandAll component
+ * @param {bool} isExpandAll - determines if all the accordions in the group are expanded
+ * @param {function} setExpandAll - inherited useState function
+ * @param {function} notEligibleView - inherited bolean state
+ * @param {object} ui - inherited ui content
  * @return {html} returns html
  */
 const BenefitAccordionGroup = ({
   data,
   entryKey,
   expandAll,
+  isExpandAll,
+  setExpandAll,
   notEligibleView,
   ui,
 }) => {
@@ -36,12 +42,6 @@ const BenefitAccordionGroup = ({
   const { closedState, openState } = benefitAccordionGroup
   const { benefitLink, openAllBenefitAccordions } =
     dataLayerUtils.dataLayerStructure
-  /**
-   * a hook that hanldes our open state of the accordions in our group
-   * @function
-   * @return {boolean} returns true or false
-   */
-  const [isExpandAll, setExpandAll] = useState(false)
 
   /**
    * a function that returns the string value of our expanded action
@@ -244,6 +244,7 @@ const BenefitAccordionGroup = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => handleBenefitLinkClick(title)}
+                data-testid="bf-benefit-link"
               >
                 {visitLabel} {agency.title}{' '}
                 {sourceIsEnglish && SourceIsEnglish === true
@@ -261,6 +262,10 @@ BenefitAccordionGroup.propTypes = {
   data: PropTypes.array,
   entryKey: PropTypes.string,
   expandAll: PropTypes.bool,
+  isExpandAll: PropTypes.bool,
+  setExpandAll: PropTypes.func,
+  notEligibleView: PropTypes.bool,
+  ui: PropTypes.object,
 }
 
 export default BenefitAccordionGroup

@@ -77,6 +77,12 @@ class PageObjects {
     return cy.get('.usa-accordion__button')
   }
 
+  benefitsAccordionLink(accordionHeading) {
+    return cy.get(
+      `[data-analytics-content="${accordionHeading}"] a[data-testid="bf-benefit-link"]`
+    )
+  }
+
   menuButton() {
     return cy.get('.usa-menu-btn')
   }
@@ -115,6 +121,22 @@ class PageObjects {
 
   benefitResultsView() {
     return cy.get('.bf-result-view')
+  }
+
+  notEligibleResultsButton() {
+    return cy.get('.bf-result-view-unmet > .usa-button')
+  }
+
+  stepBackLink() {
+    return cy.get('.bf-step-back-link')
+  }
+
+  zeroBenefitsViewHeading() {
+    return cy.get('[data-testid="zero-benefits-view-heading"]')
+  }
+
+  seeAllBenefitsButton() {
+    return cy.get('[data-testid="zero-benefits-view-cta-button"]')
   }
 }
 

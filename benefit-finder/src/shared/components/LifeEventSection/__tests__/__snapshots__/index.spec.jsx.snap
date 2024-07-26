@@ -80,7 +80,6 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             <h2
               aria-level="2"
               class="bf-usa-alert__heading usa-alert__heading font-family-sans"
-              id=""
               role="heading"
             >
               Your information contains 0 errors
@@ -95,7 +94,6 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         <h2
           aria-level="2"
           class="bf-usa-section-heading font-family-sans"
-          id=""
           role="heading"
         >
           About the applicant

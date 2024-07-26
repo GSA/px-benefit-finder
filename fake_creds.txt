@@ -1,5 +1,0 @@
-The purpose of this file is to have fake AWS credentials in it to make sure trufflehog detects them and operates as designed.
-
-AKIAIOSFODNN7EXAMPLE
-
-wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY

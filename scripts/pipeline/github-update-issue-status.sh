@@ -1,14 +1,27 @@
 #!/bin/bash
 
-home="/home/vcap"
-PATH="${PATH}:${home}/deps/0/bin/"
+# Check if running in CloudFoundry environment
+if [ -d "/home/vcap/deps/0/bin" ]; then
+  home="/home/vcap"
+  PATH="${PATH}:${home}/deps/0/bin/"
+else
+  # Set to a similar path on a plain Ubuntu install
+  home="$HOME"
+  PATH="${PATH}:/usr/local/bin/"
+fi
 
-VERSION=$(curl  "https://api.github.com/repos/cli/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c2-)
+VERSION=$(curl -s "https://api.github.com/repos/cli/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c2-)
 curl -sSL "https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_amd64.tar.gz" -o "gh_${VERSION}_linux_amd64.tar.gz"
 
 tar xvf "gh_${VERSION}_linux_amd64.tar.gz"
-cp "gh_${VERSION}_linux_amd64/bin/gh" ${home}/deps/0/bin/
 
+if cp "gh_${VERSION}_linux_amd64/bin/gh" "${home}/deps/0/bin/"; then
+  echo "Successfully copied to ${home}/deps/0/bin/"
+else
+  # Fallback to copying to the local user's .local/bin directory
+  cp "gh_${VERSION}_linux_amd64/bin/gh" "/usr/local/bin/"
+  echo "Fallback: copied to /usr/local/bin/"
+fi
 
 ## Field configuration options.
 gh_status_option="QA"
@@ -20,7 +33,7 @@ gh_priority_option="Low"
 echo "Getting project ID..."
 gh_project_id=$(gh api graphql -f query="
   query{
-    organization(login: \"${GITHUB_REPOSITORY_OWNER}\"){
+    organization(login: \"GSA\"){
       projectV2(number: ${GH_PROJECT_NUMBER}) {
         id
       }
@@ -99,6 +112,20 @@ gh_effort_option_id=$(echo "${field_values}" | jq -r "select(.name == \"Effort\"
 gh_priority_id=$(echo "${field_values}" | jq -r 'select(.name == "Priority").id')
 gh_priority_option_id=$(echo "${field_values}" | jq -r "select(.name == \"Priority\") | .options[] | select(.name == \"${gh_priority_option}\").id")
 
+
+echo "Project ID: ${gh_project_id}"
+echo "Issue ID: ${gh_issue_id}"
+echo "Status ID: ${gh_status_id}"
+echo "Status Option ID: ${gh_status_option_id}"
+echo "Domain ID: ${gh_domain_id}"
+echo "Domain Option ID: ${gh_domain_option_id}"
+echo "Sprint ID: ${gh_sprint_id}"
+echo "Sprint Option ID: ${gh_sprint_option_id}"
+echo "Effort ID: ${gh_effort_id}"
+echo "Effort Option ID: ${gh_effort_option_id}"
+echo "Priority ID: ${gh_priority_id}"
+echo "Priority Option ID: ${gh_priority_option_id}"
+
 echo "Updating issue project fields..."
 {
   gh project item-edit \
@@ -119,17 +146,17 @@ echo "Updating issue project fields..."
     --field-id "${gh_sprint_id}" \
     --iteration-id "${gh_sprint_option_id}"
 
-    gh project item-edit \
+  gh project item-edit \
     --project-id "${gh_project_id}" \
     --id "${gh_issue_id}" \
     --field-id "${gh_effort_id}" \
     --single-select-option-id "${gh_effort_option_id}"
 
-    gh project item-edit \
+  gh project item-edit \
     --project-id "${gh_project_id}" \
     --id "${gh_issue_id}" \
     --field-id "${gh_priority_id}" \
     --single-select-option-id "${gh_priority_option_id}"
-} >/dev/null 2>&1
+} 
 
 echo "Update completed."

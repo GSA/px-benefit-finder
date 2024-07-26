@@ -4,6 +4,8 @@
 .bf-usa-fieldset {
   padding-bottom: space.$padding-bottom-lg;
   padding-left: space.$padding-bottom-lg;
+  position: relative;
+  padding-top: 20px;
 
   .bf-error-detail {
     margin-top: space.$space-md;
@@ -14,9 +16,6 @@
   .bf-hint {
     margin: space.$space-md 0;
   }
-
-  position: relative;
-  padding-top: 20px;
 
   .bf-legend {
     position: absolute;

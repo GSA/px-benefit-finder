@@ -1,25 +1,37 @@
 #!/bin/bash
+
+# Function to get the full path of a command
+get_command_path() {
+  command -v $1
+}
+
 ## Set the root directory in the pipeline
 ROOT_DIR=$(git rev-parse --show-toplevel)
+CURRENT_DIR="${PWD##*/}"
 JS_APP_DIR=benefit-finder
-
+IS_JS_APP=false
 COMMITTED_FILES=$(git diff --name-only HEAD~1..HEAD )
 
+echo "Current directory ${CURRENT_DIR}"
 echo $COMMITTED_FILES
 
-# run custom actions for our JS App
 for file in $COMMITTED_FILES; do
-  # Check file extension or content, or run a custom script
-  echo "Found committed file: $file"
+  # Check if file is located in the JS_APP_DIR
+  echo "Found staged file: $file"
   if [[ $file == *$JS_APP_DIR* ]]; then
-    echo "running processes on committed files"
-    cd $ROOT_DIR/$JS_APP_DIR && CI=true npm run test:coverage
-    # check to see if process failed
+    IS_JS_APP=true
+  fi
+done
+
+# Run custom actions for our JS App
+if [ $IS_JS_APP = true ]; then
+    echo "Found a JS application file, running front end task(s)"
+    cd $ROOT_DIR/$JS_APP_DIR && CI=true $(get_command_path npm) run test:coverage
     if [ $? -eq 0 ]; then
         echo "Process succeeded."
+        cd $ROOT_DIR
     else
         echo "Process failed."
         exit 1
     fi
-  fi
-done
+fi

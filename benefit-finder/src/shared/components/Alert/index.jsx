@@ -75,11 +75,15 @@ const Alert = ({
           <ul>
             {/* TODO: get Labels */}
             {errorList &&
-              errorList.map(item => (
-                <li key={item.id}>
-                  <a href={`#${item.id}`}>{item.id}</a>
-                </li>
-              ))}
+              errorList.map(item => {
+                return (
+                  <li key={item.id}>
+                    <a href={`#${item.id}`}>
+                      {item.getAttribute('data-errordescription') || item.id}
+                    </a>
+                  </li>
+                )
+              })}
           </ul>
         </div>
       )}

@@ -331,10 +331,12 @@ const LifeEventSection = ({
                                 })
                                 .includes(true)
 
+                            const { select, errorText } = ui
+
                             return (
                               <div key={fieldSetId}>
                                 <Select
-                                  ui={ui?.select}
+                                  ui={{ select, errorText }}
                                   htmlFor={fieldSetId}
                                   key={fieldSetId}
                                   options={inputValues}
@@ -346,6 +348,7 @@ const LifeEventSection = ({
                                     )
                                   }
                                   invalid={invalid}
+                                  legend={item.fieldset.legend}
                                 />
                               </div>
                             )

@@ -14,6 +14,7 @@ import './_index.scss'
  * @param {bool} type - string
  * @param {bool}  hasError - checks for current error state of parent value
  * @param {number} errorCount - number of errors in the view
+ * @param {array} errorList - array of error ids and label values
  * @param {bool} noBackground - style variant
  * @param {number} tabIndex - index value of tab order
  * @return {html} returns a wrapped paragraph styled as usa-alert
@@ -30,6 +31,7 @@ const Alert = ({
   noBackground,
   tabIndex,
   errorCount,
+  errorList,
 }) => {
   const defaultClasses =
     type === 'error'
@@ -70,6 +72,15 @@ const Alert = ({
             {heading?.prefix}&nbsp;{errorCount}&nbsp;{heading?.suffix}
           </Heading>
           <p className="bf-usa-alert__text usa-alert__text">{description}</p>
+          <ul>
+            {/* TODO: get Labels */}
+            {errorList &&
+              errorList.map(item => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`}>{item.id}</a>
+                </li>
+              ))}
+          </ul>
         </div>
       )}
     </div>

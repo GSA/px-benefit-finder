@@ -11,6 +11,10 @@
     margin-top: space.$space-md;
     color: color.$alert-red;
     font-weight: 600;
+
+    ~ li {
+      margin-top: 2px;
+    }
   }
 
   .bf-hint {

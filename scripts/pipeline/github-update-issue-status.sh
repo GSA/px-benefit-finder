@@ -76,6 +76,28 @@ gh_issue_id=$(gh api graphql -f query="
   }" | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
 )
 
+
+echo "Does it actually get issue ID?..."
+gh api graphql -f query="
+  query{
+    node(id: \"${gh_project_id}\") {
+      ... on ProjectV2 {
+        items(last: 30) {
+          nodes{
+            id
+            content {
+              ...on Issue {
+                title
+                number
+              }
+            }
+          }
+        }
+      }
+    }
+  }" | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
+
+
 echo "Looking up field values..."
 field_values=$(gh api graphql -f query="
   query{

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 60
+
 # Check if running in CloudFoundry environment
 if [ -d "/home/vcap/deps/0/bin" ]; then
   home="/home/vcap"

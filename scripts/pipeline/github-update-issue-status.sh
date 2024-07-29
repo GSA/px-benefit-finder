@@ -51,6 +51,7 @@ gh api graphql -f query="
     }
   }" | jq -r '.data.organization.projectV2.id'
 
+echo "gh_project_id: ${gh_project_id}"
 
 echo "gh version"
 gh --version
@@ -75,7 +76,6 @@ gh_issue_id=$(gh api graphql -f query="
     }
   }" | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
 )
-
 
 echo "Does it actually get issue ID?..."
 gh api graphql -f query="

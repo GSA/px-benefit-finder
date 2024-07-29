@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sleep 60
+#Waiting a few seconds for GitHub to create the previous ticket.
+sleep 10
 
 # Check if running in CloudFoundry environment
 if [ -d "/home/vcap/deps/0/bin" ]; then
@@ -60,11 +61,8 @@ gh_issue_id=$(gh api graphql -f query="
         }
       }
     }
-  }" | tee response.json | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
+  }" jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
 )
-
-echo "Response .json: "
-cat response.json
 
 echo "Looking up field values..."
 field_values=$(gh api graphql -f query="
@@ -117,20 +115,6 @@ gh_effort_option_id=$(echo "${field_values}" | jq -r "select(.name == \"Effort\"
 gh_priority_id=$(echo "${field_values}" | jq -r 'select(.name == "Priority").id')
 gh_priority_option_id=$(echo "${field_values}" | jq -r "select(.name == \"Priority\") | .options[] | select(.name == \"${gh_priority_option}\").id")
 
-
-echo "Project ID: ${gh_project_id}"
-echo "Issue ID: ${gh_issue_id}"
-echo "Status ID: ${gh_status_id}"
-echo "Status Option ID: ${gh_status_option_id}"
-echo "Domain ID: ${gh_domain_id}"
-echo "Domain Option ID: ${gh_domain_option_id}"
-echo "Sprint ID: ${gh_sprint_id}"
-echo "Sprint Option ID: ${gh_sprint_option_id}"
-echo "Effort ID: ${gh_effort_id}"
-echo "Effort Option ID: ${gh_effort_option_id}"
-echo "Priority ID: ${gh_priority_id}"
-echo "Priority Option ID: ${gh_priority_option_id}"
-
 echo "Updating issue project fields..."
 {
   gh project item-edit \
@@ -162,6 +146,6 @@ echo "Updating issue project fields..."
     --id "${gh_issue_id}" \
     --field-id "${gh_priority_id}" \
     --single-select-option-id "${gh_priority_option_id}"
-} 
+} >/dev/null 2>&1 
 
 echo "Update completed."

@@ -58,7 +58,7 @@ gh_issue_id=$(gh api graphql -f query="
         }
       }
     }
-  }" tee response.json | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
+  }" | tee response.json | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
 )
 
 echo "Response .json: "

@@ -40,6 +40,18 @@ gh_project_id=$(gh api graphql -f query="
     }
   }" | jq -r '.data.organization.projectV2.id')
 
+
+echo "Does it actually find the project ID?"
+gh api graphql -f query="
+  query{
+    organization(login: \"GSA\"){
+      projectV2(number: ${GH_PROJECT_NUMBER}) {
+        id
+      }
+    }
+  }" | jq -r '.data.organization.projectV2.id
+
+
 echo "Getting issue ID..."
 gh_issue_id=$(gh api graphql -f query="
   query{

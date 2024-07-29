@@ -56,6 +56,8 @@ echo "gh_project_id: ${gh_project_id}"
 echo "gh version"
 gh --version
 
+echo "Show Issue Number: ${ISSUE_NUMBER}"
+
 echo "Getting issue ID..."
 gh_issue_id=$(gh api graphql -f query="
   query{

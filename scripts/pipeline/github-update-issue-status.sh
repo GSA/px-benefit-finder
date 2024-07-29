@@ -49,8 +49,11 @@ gh api graphql -f query="
         id
       }
     }
-  }" | jq -r '.data.organization.projectV2.id
+  }" | jq -r '.data.organization.projectV2.id'
 
+
+echo "gh version"
+gh --version
 
 echo "Getting issue ID..."
 gh_issue_id=$(gh api graphql -f query="

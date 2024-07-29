@@ -40,24 +40,6 @@ gh_project_id=$(gh api graphql -f query="
     }
   }" | jq -r '.data.organization.projectV2.id')
 
-
-echo "Does it actually find the project ID?"
-gh api graphql -f query="
-  query{
-    organization(login: \"GSA\"){
-      projectV2(number: ${GH_PROJECT_NUMBER}) {
-        id
-      }
-    }
-  }" | jq -r '.data.organization.projectV2.id'
-
-echo "gh_project_id: ${gh_project_id}"
-
-echo "gh version"
-gh --version
-
-echo "Show Issue Number: ${ISSUE_NUMBER}"
-
 echo "Getting issue ID..."
 gh_issue_id=$(gh api graphql -f query="
   query{
@@ -76,29 +58,11 @@ gh_issue_id=$(gh api graphql -f query="
         }
       }
     }
-  }" | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
+  }" tee response.json | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
 )
 
-echo "Does it actually get issue ID?..."
-gh api graphql -f query="
-  query{
-    node(id: \"${gh_project_id}\") {
-      ... on ProjectV2 {
-        items(last: 30) {
-          nodes{
-            id
-            content {
-              ...on Issue {
-                title
-                number
-              }
-            }
-          }
-        }
-      }
-    }
-  }" | jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
-
+echo "Response .json: "
+cat response.json
 
 echo "Looking up field values..."
 field_values=$(gh api graphql -f query="

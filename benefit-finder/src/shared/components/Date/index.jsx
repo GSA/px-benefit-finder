@@ -6,13 +6,14 @@ import './_index.scss'
  * @component
  * @param {func} onChange - inherited change handler
  * @param {object} value - inherited state values
-  * @param {object} ui - inherited ui object values
+ * @param {object} ui - inherited ui object values
+ * @param {string} parentLegend - inherited ui string values
  * @param {string} id - inherited string value for id specificity
  * @param {array} invalid - inherited boolean value to manage error state
 
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
-const Date = ({ onChange, value, ui, id, invalid }) => {
+const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
   const { date, select, errorText } = ui
   const { labelDay, labelMonth, labelYear, monthOptions } = date
   const { dateDefaultValue } = select
@@ -24,17 +25,23 @@ const Date = ({ onChange, value, ui, id, invalid }) => {
     return invalidArray && invalidArray.map(el => el.id === id).includes(true)
   }
 
+  const errorMessages = {
+    month: `${prefix} ${parentLegend?.toLowerCase()} ${labelMonth.toLowerCase()} ${suffix}`,
+    day: `${prefix} ${parentLegend?.toLowerCase()} ${labelDay.toLowerCase()} ${suffix}`,
+    year: `${prefix} ${parentLegend?.toLowerCase()} ${labelYear.toLowerCase()} ${suffix}`,
+  }
+
   return (
     <>
       <ul className="add-list-reset">
         {handleInvalid(invalid, `date_of_birth_month-${id}`) && (
-          <li className="bf-error-detail">{`${prefix} ${labelMonth.toLowerCase()} ${suffix}`}</li>
+          <li className="bf-error-detail">{errorMessages.month}</li>
         )}
         {handleInvalid(invalid, `date_of_birth_day-${id}`) && (
-          <li className="bf-error-detail">{`${prefix} ${labelDay.toLowerCase()} ${suffix}`}</li>
+          <li className="bf-error-detail">{errorMessages.day}</li>
         )}
         {handleInvalid(invalid, `date_of_birth_year-${id}`) && (
-          <li className="bf-error-detail">{`${prefix} ${labelYear.toLowerCase()} ${suffix}`}</li>
+          <li className="bf-error-detail">{errorMessages.year}</li>
         )}
       </ul>
       <div
@@ -59,7 +66,7 @@ const Date = ({ onChange, value, ui, id, invalid }) => {
             value={(value && value.month) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_month-${id}`)}
-            data-errordescription={`${prefix} ${labelMonth.toLowerCase()} ${suffix}`}
+            data-errordescription={errorMessages.month}
           >
             <option value="" key="default" disabled>
               {dateDefaultValue}
@@ -90,7 +97,7 @@ const Date = ({ onChange, value, ui, id, invalid }) => {
             value={(value && value.day) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_day-${id}`)}
-            data-errordescription={`${prefix} ${labelDay.toLowerCase()} ${suffix}`}
+            data-errordescription={errorMessages.day}
           />
         </div>
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--year usa-form-group--year">
@@ -112,7 +119,7 @@ const Date = ({ onChange, value, ui, id, invalid }) => {
             value={(value && value.year) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_year-${id}`)}
-            data-errordescription={`${prefix} ${labelYear.toLowerCase()} ${suffix}`}
+            data-errordescription={errorMessages.year}
           />
         </div>
       </div>

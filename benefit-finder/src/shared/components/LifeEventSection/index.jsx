@@ -474,6 +474,7 @@ const LifeEventSection = ({
                                     )
                                   }
                                   ui={ui}
+                                  parentLegend={item.fieldset.legend}
                                   id={fieldSetId}
                                   invalid={invalid}
                                 />

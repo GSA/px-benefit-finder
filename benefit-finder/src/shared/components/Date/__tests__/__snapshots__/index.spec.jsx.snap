@@ -27,7 +27,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <select
         aria-describedby="month-description-undefined"
         class="bf-usa-select usa-select "
-        data-errordescription="Fill out the month field"
+        data-errordescription="Fill out the undefined month field"
         id="date_of_birth_month-undefined"
         name="date_of_birth_month-undefined"
       >
@@ -117,7 +117,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <input
         aria-describedby="day-description-undefined"
         class="bf-usa-input usa-input "
-        data-errordescription="Fill out the day field"
+        data-errordescription="Fill out the undefined day field"
         id="date_of_birth_day-undefined"
         inputmode="numeric"
         name="date_of_birth_day-undefined"
@@ -142,7 +142,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       <input
         aria-describedby="year-description-undefined"
         class="bf-usa-input usa-input "
-        data-errordescription="Fill out the year field"
+        data-errordescription="Fill out the undefined year field"
         id="date_of_birth_year-undefined"
         inputmode="numeric"
         name="date_of_birth_year-undefined"

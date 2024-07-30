@@ -79,7 +79,7 @@ const Alert = ({
                 return (
                   <li key={item.id}>
                     <a href={`#${item.id}`}>
-                      {item.getAttribute('data-errordescription') || item.id}
+                      {item.getAttribute('aria-errormessage') || item.id}
                     </a>
                   </li>
                 )

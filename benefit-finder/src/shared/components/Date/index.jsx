@@ -66,7 +66,7 @@ const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
             value={(value && value.month) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_month-${id}`)}
-            data-errordescription={errorMessages.month}
+            aria-errormessage={errorMessages.month}
           >
             <option value="" key="default" disabled>
               {dateDefaultValue}
@@ -97,7 +97,7 @@ const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
             value={(value && value.day) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_day-${id}`)}
-            data-errordescription={errorMessages.day}
+            aria-errormessage={errorMessages.day}
           />
         </div>
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--year usa-form-group--year">
@@ -119,7 +119,7 @@ const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
             value={(value && value.year) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_year-${id}`)}
-            data-errordescription={errorMessages.year}
+            aria-errormessage={errorMessages.year}
           />
         </div>
       </div>

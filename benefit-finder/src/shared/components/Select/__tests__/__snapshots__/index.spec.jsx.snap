@@ -8,9 +8,9 @@ exports[`Select > renders a match to the previous snapshot 1`] = `
     Dropdown Label
   </label>
   <select
+    aria-errormessage="undefined undefined undefined"
     aria-invalid="false"
     class="bf-usa-select usa-select "
-    data-errordescription="undefined undefined undefined"
   >
     <option
       disabled=""

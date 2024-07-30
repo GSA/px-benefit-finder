@@ -61,7 +61,7 @@ function Select({
         onChange={onChange}
         value={selected || ''}
         aria-invalid={invalid === true}
-        data-errordescription={`${errorText?.prefix} ${legend && legend.toLowerCase()} ${errorText?.suffix}`}
+        aria-errormessage={`${errorText?.prefix} ${legend && legend.toLowerCase()} ${errorText?.suffix}`}
       >
         <option value="" key="default" disabled>
           {select?.defaultValue}

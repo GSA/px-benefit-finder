@@ -48,8 +48,6 @@ function Select({
     })
   }
 
-  console.log(legend)
-
   return (
     <>
       <Label label={label || select?.labelSelect} htmlFor={htmlFor} />

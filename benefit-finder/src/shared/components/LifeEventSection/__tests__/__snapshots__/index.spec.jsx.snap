@@ -414,6 +414,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Are you a U.S. citizen or eligible non-citizen?
           </legend>
           <div
+            aria-invalid="false"
             class="radio-group"
           >
             <div
@@ -461,6 +462,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Are you caring for the deceased's child who is under age 16 or has a disability?
           </legend>
           <div
+            aria-invalid="false"
             class="radio-group"
           >
             <div
@@ -508,6 +510,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             Did you pay for funeral or burial expenses?
           </legend>
           <div
+            aria-invalid="false"
             class="radio-group"
           >
             <div

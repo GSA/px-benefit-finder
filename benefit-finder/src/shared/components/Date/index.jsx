@@ -36,13 +36,13 @@ const Date = ({
 
   const errorMessages = {
     month: errorMessage
-      ? `${errorMessage} ${labelMonth.toLowerCase()} ${suffix}`
+      ? `${errorMessage} : ${labelMonth.toLowerCase()}`
       : `${prefix} ${parentLegend?.toLowerCase()} ${labelMonth.toLowerCase()} ${suffix}`,
     day: errorMessage
-      ? `${errorMessage} ${labelDay.toLowerCase()} ${suffix}`
+      ? `${errorMessage} : ${labelDay.toLowerCase()}`
       : `${prefix} ${parentLegend?.toLowerCase()} ${labelDay.toLowerCase()} ${suffix}`,
     year: errorMessage
-      ? `${errorMessage} ${labelYear.toLowerCase()} ${suffix}`
+      ? `${errorMessage} : ${labelYear.toLowerCase()}`
       : `${prefix} ${parentLegend?.toLowerCase()} ${labelYear.toLowerCase()} ${suffix}`,
   }
 

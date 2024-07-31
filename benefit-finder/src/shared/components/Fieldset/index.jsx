@@ -63,7 +63,7 @@ const Fieldset = ({
     required === false ? <Legend>{legend}</Legend> : RequiredFlag()
 
   const handleErrorMessage = errorMessage
-    ? `${errorMessage} ${suffix}`
+    ? `${errorMessage}`
     : `${prefix} ${legend && legend.toLowerCase()} ${suffix}`
 
   return (

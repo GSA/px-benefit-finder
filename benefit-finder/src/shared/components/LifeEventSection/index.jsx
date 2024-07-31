@@ -299,6 +299,7 @@ const LifeEventSection = ({
                         <Fieldset
                           key={`select-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
+                          errorMessage={item.fieldset.errorMessage}
                           hint={item.fieldset.hint}
                           required={item.fieldset.required}
                           requiredLabel={requiredLabel}
@@ -375,6 +376,7 @@ const LifeEventSection = ({
                         <Fieldset
                           key={`radio-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
+                          errorMessage={item.fieldset.errorMessage}
                           hint={item.fieldset.hint}
                           required={item.fieldset.required}
                           requiredLabel={requiredLabel}
@@ -443,6 +445,7 @@ const LifeEventSection = ({
                         <Fieldset
                           key={`date-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
+                          errorMessage={item.fieldset.errorMessage}
                           hint={item.fieldset.hint}
                           required={item.fieldset.required}
                           requiredLabel={requiredLabel}
@@ -486,6 +489,7 @@ const LifeEventSection = ({
                                     )
                                   }
                                   ui={ui}
+                                  errorMessage={item.fieldset.errorMessage}
                                   parentLegend={item.fieldset.legend}
                                   id={fieldSetId}
                                   invalid={invalid}

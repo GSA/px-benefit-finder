@@ -7,13 +7,22 @@ import './_index.scss'
  * @param {func} onChange - inherited change handler
  * @param {object} value - inherited state values
  * @param {object} ui - inherited ui object values
+ * @param {string} errorMessage - inherited ui string value for custom error overrides
  * @param {string} parentLegend - inherited ui string values
  * @param {string} id - inherited string value for id specificity
  * @param {array} invalid - inherited boolean value to manage error state
 
  * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
  */
-const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
+const Date = ({
+  onChange,
+  value,
+  ui,
+  parentLegend,
+  id,
+  invalid,
+  errorMessage,
+}) => {
   const { date, select, errorText } = ui
   const { labelDay, labelMonth, labelYear, monthOptions } = date
   const { dateDefaultValue } = select
@@ -26,9 +35,15 @@ const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
   }
 
   const errorMessages = {
-    month: `${prefix} ${parentLegend?.toLowerCase()} ${labelMonth.toLowerCase()} ${suffix}`,
-    day: `${prefix} ${parentLegend?.toLowerCase()} ${labelDay.toLowerCase()} ${suffix}`,
-    year: `${prefix} ${parentLegend?.toLowerCase()} ${labelYear.toLowerCase()} ${suffix}`,
+    month: errorMessage
+      ? `${errorMessage} ${labelMonth.toLowerCase()} ${suffix}`
+      : `${prefix} ${parentLegend?.toLowerCase()} ${labelMonth.toLowerCase()} ${suffix}`,
+    day: errorMessage
+      ? `${errorMessage} ${labelDay.toLowerCase()} ${suffix}`
+      : `${prefix} ${parentLegend?.toLowerCase()} ${labelDay.toLowerCase()} ${suffix}`,
+    year: errorMessage
+      ? `${errorMessage} ${labelYear.toLowerCase()} ${suffix}`
+      : `${prefix} ${parentLegend?.toLowerCase()} ${labelYear.toLowerCase()} ${suffix}`,
   }
 
   return (

@@ -27,6 +27,7 @@ const Fieldset = ({
   alertRef,
   requiredLabel,
   hidden,
+  errorMessage,
   hint,
   className,
   id,
@@ -61,6 +62,10 @@ const Fieldset = ({
   const handleRequired =
     required === false ? <Legend>{legend}</Legend> : RequiredFlag()
 
+  const handleErrorMessage = errorMessage
+    ? `${errorMessage} ${suffix}`
+    : `${prefix} ${legend && legend.toLowerCase()} ${suffix}`
+
   return (
     <fieldset
       className={useHandleClassName({
@@ -75,7 +80,7 @@ const Fieldset = ({
       {legend && handleRequired}
       {invalid === true && (
         <div id={id} className="bf-error-detail">
-          {prefix} {legend && legend.toLowerCase()} {suffix}
+          {handleErrorMessage}
         </div>
       )}
       {hint && <div className="bf-hint">{hint}</div>}

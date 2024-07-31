@@ -130,7 +130,7 @@ const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_year-${id}`)}
             aria-errormessage={
-              handleInvalid(invalid, `date_of_birth_day-${id}`)
+              handleInvalid(invalid, `date_of_birth_year-${id}`)
                 ? errorMessages.year
                 : undefined
             }

@@ -78,7 +78,13 @@ const LifeEventSection = ({
         return (
           Array.from(fieldset.elements)
             // check all the required inputs, if there is no value, there the input is invalid
-            .filter(el => !el.value)
+            .filter(el => {
+              // we need to custom handle our dates verification to ensure a 4 digit year
+              if (el.attributes['data-datetype']?.value === 'year') {
+                return !el.value || (el.value && el.value.length !== 4)
+              }
+              return !el.value
+            })
         )
       })
       .flat()

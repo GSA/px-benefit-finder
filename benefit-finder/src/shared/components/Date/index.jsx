@@ -66,7 +66,12 @@ const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
             value={(value && value.month) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_month-${id}`)}
-            aria-errormessage={errorMessages.month}
+            aria-errormessage={
+              handleInvalid(invalid, `date_of_birth_month-${id}`)
+                ? errorMessages.month
+                : undefined
+            }
+            data-datetype="month"
           >
             <option value="" key="default" disabled>
               {dateDefaultValue}
@@ -97,7 +102,12 @@ const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
             value={(value && value.day) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_day-${id}`)}
-            aria-errormessage={errorMessages.day}
+            aria-errormessage={
+              handleInvalid(invalid, `date_of_birth_day-${id}`)
+                ? errorMessages.day
+                : undefined
+            }
+            data-datetype="day"
           />
         </div>
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--year usa-form-group--year">
@@ -119,7 +129,12 @@ const Date = ({ onChange, value, ui, parentLegend, id, invalid }) => {
             value={(value && value.year) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_year-${id}`)}
-            aria-errormessage={errorMessages.year}
+            aria-errormessage={
+              handleInvalid(invalid, `date_of_birth_day-${id}`)
+                ? errorMessages.year
+                : undefined
+            }
+            data-datetype="year"
           />
         </div>
       </div>

@@ -89,7 +89,9 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             >
               Complete all required fields.
             </p>
-            <ul />
+            <ul
+              data-testid="bf-errors-list"
+            />
           </div>
         </div>
         <h2

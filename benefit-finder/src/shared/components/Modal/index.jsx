@@ -65,14 +65,11 @@ const Modal = ({
    * @function
    */
   const handleOpenModal = () => {
-    console.log(handleCheckRequriedFields())
-    if (handleCheckRequriedFields() === true) {
-      scrollLock.enableScroll()
-      setModalOpen(true)
-    } else {
-      window.scrollTo(0, 0)
-      alertElement.current.focus()
-    }
+    handleCheckRequriedFields().then(valid =>
+      valid
+        ? setModalOpen(true) && scrollLock.enableScroll()
+        : window.scrollTo(0, 0) && alertElement.current.focus()
+    )
   }
 
   /**

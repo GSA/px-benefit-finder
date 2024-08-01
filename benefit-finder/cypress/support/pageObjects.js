@@ -49,8 +49,12 @@ class PageObjects {
     return cy.get('div#bf-section > div[role="alert"]')
   }
 
-  dateAlert() {
-    return cy.get('.bf-usa-date-alert')
+  bfAlertList() {
+    return cy.get('[data-testid="bf-errors-list"]')
+  }
+
+  bfAlertListItem() {
+    return cy.get('[data-testid="bf-errors-list-item"]')
   }
 
   applicantRelationshipToDeceased() {

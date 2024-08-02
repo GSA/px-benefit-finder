@@ -143,23 +143,23 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               >
                 <label
                   class="bf-usa-label usa-label"
-                  for="date_of_birth_month-applicant_date_of_birth_0"
+                  for="applicant_date_of_birth_0-date_of_birth_month"
                 >
                   Month
                 </label>
                 <div
                   class="usa-sr-only"
-                  id="month-description-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-month-description"
                 >
                   Select a month from the list
                 </div>
                 <select
-                  aria-describedby="month-description-applicant_date_of_birth_0"
+                  aria-describedby="applicant_date_of_birth_0-month-description"
                   aria-invalid="false"
                   class="bf-usa-select usa-select "
                   data-datetype="month"
-                  id="date_of_birth_month-applicant_date_of_birth_0"
-                  name="date_of_birth_month-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-date_of_birth_month"
+                  name="applicant_date_of_birth_0-date_of_birth_month"
                 >
                   <option
                     disabled=""
@@ -234,24 +234,24 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               >
                 <label
                   class="bf-usa-label usa-label"
-                  for="date_of_birth_day-applicant_date_of_birth_0"
+                  for="applicant_date_of_birth_0-date_of_birth_day"
                 >
                   Day
                 </label>
                 <div
                   class="usa-sr-only"
-                  id="day-description-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-day-description"
                 >
                   Enter two numerals for day
                 </div>
                 <input
-                  aria-describedby="day-description-applicant_date_of_birth_0"
+                  aria-describedby="applicant_date_of_birth_0-day-description"
                   aria-invalid="false"
                   class="bf-usa-input usa-input "
                   data-datetype="day"
-                  id="date_of_birth_day-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-date_of_birth_day"
                   inputmode="numeric"
-                  name="date_of_birth_day-applicant_date_of_birth_0"
+                  name="applicant_date_of_birth_0-date_of_birth_day"
                   value=""
                 />
               </div>
@@ -260,24 +260,24 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               >
                 <label
                   class="bf-usa-label usa-label"
-                  for="date_of_birth_year-applicant_date_of_birth_0"
+                  for="applicant_date_of_birth_0-date_of_birth_year"
                 >
                   Year
                 </label>
                 <div
                   class="usa-sr-only"
-                  id="year-description-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-year-description"
                 >
                   Enter four numerals for year
                 </div>
                 <input
-                  aria-describedby="year-description-applicant_date_of_birth_0"
+                  aria-describedby="applicant_date_of_birth_0-year-description"
                   aria-invalid="false"
                   class="bf-usa-input usa-input "
                   data-datetype="year"
-                  id="date_of_birth_year-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-date_of_birth_year"
                   inputmode="numeric"
-                  name="date_of_birth_year-applicant_date_of_birth_0"
+                  name="applicant_date_of_birth_0-date_of_birth_year"
                   value=""
                 />
               </div>

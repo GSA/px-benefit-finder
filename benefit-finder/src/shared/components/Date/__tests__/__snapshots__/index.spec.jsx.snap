@@ -7,29 +7,29 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
   />
   <div
     class="bf-usa-memorable-date usa-memorable-date"
-    id="bf-usa-memorable-date-undefined usa-memorable-date-undefined"
+    id="bf-usa-memorable-date-applicant_date_of_birth_0 usa-memorable-date-applicant_date_of_birth_0"
   >
     <div
       class="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select"
     >
       <label
         class="bf-usa-label usa-label"
-        for="date_of_birth_month-undefined"
+        for="applicant_date_of_birth_0-date_of_birth_month"
       >
         Month
       </label>
       <div
         class="usa-sr-only"
-        id="month-description-undefined"
+        id="applicant_date_of_birth_0-month-description"
       >
         Select a month from the list
       </div>
       <select
-        aria-describedby="month-description-undefined"
+        aria-describedby="applicant_date_of_birth_0-month-description"
         class="bf-usa-select usa-select "
         data-datetype="month"
-        id="date_of_birth_month-undefined"
-        name="date_of_birth_month-undefined"
+        id="applicant_date_of_birth_0-date_of_birth_month"
+        name="applicant_date_of_birth_0-date_of_birth_month"
       >
         <option
           disabled=""
@@ -104,23 +104,23 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
     >
       <label
         class="bf-usa-label usa-label"
-        for="date_of_birth_day-undefined"
+        for="applicant_date_of_birth_0-date_of_birth_day"
       >
         Day
       </label>
       <div
         class="usa-sr-only"
-        id="day-description-undefined"
+        id="applicant_date_of_birth_0-day-description"
       >
         Enter two numerals for day
       </div>
       <input
-        aria-describedby="day-description-undefined"
+        aria-describedby="applicant_date_of_birth_0-day-description"
         class="bf-usa-input usa-input "
         data-datetype="day"
-        id="date_of_birth_day-undefined"
+        id="applicant_date_of_birth_0-date_of_birth_day"
         inputmode="numeric"
-        name="date_of_birth_day-undefined"
+        name="applicant_date_of_birth_0-date_of_birth_day"
         value=""
       />
     </div>
@@ -129,23 +129,23 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
     >
       <label
         class="bf-usa-label usa-label"
-        for="date_of_birth_year-undefined"
+        for="applicant_date_of_birth_0-date_of_birth_year"
       >
         Year
       </label>
       <div
         class="usa-sr-only"
-        id="year-description-undefined"
+        id="applicant_date_of_birth_0-year-description"
       >
         Enter four numerals for year
       </div>
       <input
-        aria-describedby="year-description-undefined"
+        aria-describedby="applicant_date_of_birth_0-year-description"
         class="bf-usa-input usa-input "
         data-datetype="year"
-        id="date_of_birth_year-undefined"
+        id="applicant_date_of_birth_0-date_of_birth_year"
         inputmode="numeric"
-        name="date_of_birth_year-undefined"
+        name="applicant_date_of_birth_0-date_of_birth_year"
         value=""
       />
     </div>

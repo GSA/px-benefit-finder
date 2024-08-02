@@ -79,7 +79,11 @@ const Fieldset = ({
     >
       {legend && handleRequired}
       {invalid === true && (
-        <div id={id} className="bf-error-detail">
+        <div
+          id={`error-description-${id}`}
+          className="bf-error-detail"
+          aria-live="assertive"
+        >
           {handleErrorMessage}
         </div>
       )}

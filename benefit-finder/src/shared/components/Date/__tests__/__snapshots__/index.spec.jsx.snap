@@ -7,29 +7,31 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
   />
   <div
     class="bf-usa-memorable-date usa-memorable-date"
-    id="bf-usa-memorable-date-undefined usa-memorable-date-undefined"
+    id="bf-usa-memorable-date-applicant_date_of_birth_0"
   >
     <div
       class="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select"
     >
       <label
         class="bf-usa-label usa-label"
-        for="date_of_birth_month-undefined"
+        for="date_of_birth_month-applicant_date_of_birth_0"
       >
         Month
       </label>
       <div
         class="usa-sr-only"
-        id="month-description-undefined"
+        id="month-description-applicant_date_of_birth_0"
       >
         Select a month from the list
       </div>
       <select
-        aria-describedby="month-description-undefined"
+        aria-describedby="month-description-applicant_date_of_birth_0"
+        aria-errormessage="month-error-description-applicant_date_of_birth_0"
         class="bf-usa-select usa-select "
         data-datetype="month"
-        id="date_of_birth_month-undefined"
-        name="date_of_birth_month-undefined"
+        data-errormessage="Fill out the undefined month field"
+        id="date_of_birth_month-applicant_date_of_birth_0"
+        name="date_of_birth_month-applicant_date_of_birth_0"
       >
         <option
           disabled=""
@@ -104,23 +106,25 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
     >
       <label
         class="bf-usa-label usa-label"
-        for="date_of_birth_day-undefined"
+        for="date_of_birth_day-applicant_date_of_birth_0"
       >
         Day
       </label>
       <div
         class="usa-sr-only"
-        id="day-description-undefined"
+        id="day-description-applicant_date_of_birth_0"
       >
         Enter two numerals for day
       </div>
       <input
-        aria-describedby="day-description-undefined"
+        aria-describedby="day-description-applicant_date_of_birth_0"
+        aria-errormessage="day-error-description-applicant_date_of_birth_0"
         class="bf-usa-input usa-input "
         data-datetype="day"
-        id="date_of_birth_day-undefined"
+        data-errormessage="Fill out the undefined day field"
+        id="date_of_birth_day-applicant_date_of_birth_0"
         inputmode="numeric"
-        name="date_of_birth_day-undefined"
+        name="date_of_birth_day-applicant_date_of_birth_0"
         value=""
       />
     </div>
@@ -129,23 +133,25 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
     >
       <label
         class="bf-usa-label usa-label"
-        for="date_of_birth_year-undefined"
+        for="date_of_birth_year-applicant_date_of_birth_0"
       >
         Year
       </label>
       <div
         class="usa-sr-only"
-        id="year-description-undefined"
+        id="year-description-applicant_date_of_birth_0"
       >
         Enter four numerals for year
       </div>
       <input
-        aria-describedby="year-description-undefined"
+        aria-describedby="year-description-applicant_date_of_birth_0"
+        aria-errormessage="year-error-description-applicant_date_of_birth_0"
         class="bf-usa-input usa-input "
         data-datetype="year"
-        id="date_of_birth_year-undefined"
+        data-errormessage="Fill out the undefined year field"
+        id="date_of_birth_year-applicant_date_of_birth_0"
         inputmode="numeric"
-        name="date_of_birth_year-undefined"
+        name="date_of_birth_year-applicant_date_of_birth_0"
         value=""
       />
     </div>

@@ -136,7 +136,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             />
             <div
               class="bf-usa-memorable-date usa-memorable-date"
-              id="bf-usa-memorable-date-applicant_date_of_birth_0 usa-memorable-date-applicant_date_of_birth_0"
+              id="bf-usa-memorable-date-applicant_date_of_birth_0"
             >
               <div
                 class="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select"
@@ -155,9 +155,11 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 </div>
                 <select
                   aria-describedby="month-description-applicant_date_of_birth_0"
+                  aria-errormessage="month-error-description-applicant_date_of_birth_0"
                   aria-invalid="false"
                   class="bf-usa-select usa-select "
                   data-datetype="month"
+                  data-errormessage="Fill out the date of birth month field"
                   id="date_of_birth_month-applicant_date_of_birth_0"
                   name="date_of_birth_month-applicant_date_of_birth_0"
                 >
@@ -246,9 +248,11 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 </div>
                 <input
                   aria-describedby="day-description-applicant_date_of_birth_0"
+                  aria-errormessage="day-error-description-applicant_date_of_birth_0"
                   aria-invalid="false"
                   class="bf-usa-input usa-input "
                   data-datetype="day"
+                  data-errormessage="Fill out the date of birth day field"
                   id="date_of_birth_day-applicant_date_of_birth_0"
                   inputmode="numeric"
                   name="date_of_birth_day-applicant_date_of_birth_0"
@@ -272,9 +276,11 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 </div>
                 <input
                   aria-describedby="year-description-applicant_date_of_birth_0"
+                  aria-errormessage="year-error-description-applicant_date_of_birth_0"
                   aria-invalid="false"
                   class="bf-usa-input usa-input "
                   data-datetype="year"
+                  data-errormessage="Fill out the date of birth year field"
                   id="date_of_birth_year-applicant_date_of_birth_0"
                   inputmode="numeric"
                   name="date_of_birth_year-applicant_date_of_birth_0"
@@ -308,9 +314,10 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               Select
             </label>
             <select
-              aria-errormessage="Fill out the relationship to the deceased field"
+              aria-errormessage="error-description-applicant_relationship_to_the_deceased_0"
               aria-invalid="false"
               class="bf-usa-select usa-select "
+              data-errormessage="Fill out the relationship to the deceased field"
               id="applicant_relationship_to_the_deceased_0"
               name="applicant_relationship_to_the_deceased_0"
             >
@@ -372,9 +379,10 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               Select
             </label>
             <select
-              aria-errormessage="Fill out the marital status field"
+              aria-errormessage="error-description-applicant_marital_status_0"
               aria-invalid="false"
               class="bf-usa-select usa-select "
+              data-errormessage="Fill out the marital status field"
               id="applicant_marital_status_0"
               name="applicant_marital_status_0"
             >

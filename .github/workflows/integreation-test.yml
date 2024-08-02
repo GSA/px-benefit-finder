@@ -24,7 +24,7 @@ jobs:
           curl -L "$tarball_url" -o latest_release.tar.gz
 
           # Extract the tarball
-          tar -xzf latest_release.tar.gz
+          tar -xzf latest_release.tar.gz --strip-components=1
           ls -la
           pwd
 

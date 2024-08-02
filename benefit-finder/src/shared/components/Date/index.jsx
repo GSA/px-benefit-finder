@@ -49,7 +49,7 @@ const Date = ({
   return (
     <>
       <ul className="add-list-reset">
-        {handleInvalid(invalid, `date_of_birth_month-${id}`) && (
+        {handleInvalid(invalid, `${id}-date_of_birth_month`) && (
           <li
             id={`month-error-description-${id}`}
             className="bf-error-detail"
@@ -58,7 +58,7 @@ const Date = ({
             {errorMessages.month}
           </li>
         )}
-        {handleInvalid(invalid, `date_of_birth_day-${id}`) && (
+        {handleInvalid(invalid, `${id}-date_of_birth_day`) && (
           <li
             id={`day-error-description-${id}`}
             className="bf-error-detail"
@@ -67,7 +67,7 @@ const Date = ({
             {errorMessages.day}
           </li>
         )}
-        {handleInvalid(invalid, `date_of_birth_year-${id}`) && (
+        {handleInvalid(invalid, `${id}-date_of_birth_year`) && (
           <li
             id={`year-error-description-${id}`}
             className="bf-error-detail"

@@ -1,4 +1,4 @@
-name: Test Frontend
+name: Integration Test
 
 on:
   workflow_dispatch:
@@ -19,12 +19,12 @@ jobs:
       - name: Download Latest Release
         run: |
           # Get the latest release tarball URL
+          mkdir benefit-finder
           release_data=$(curl --silent "https://api.github.com/repos/GSA/px-benefit-finder/releases/latest")
           tarball_url=$(echo "$release_data" | grep "tarball_url" | cut -d : -f 2,3 | tr -d \" | tr -d , | tr -d ' ')
           curl -L "$tarball_url" -o latest_release.tar.gz
 
           # Extract the tarball
-          mkdir benefit-finder
           tar -xzf latest_release.tar.gz -C benefit-finder --strip-components=1
           git submodule init && git submodule update
 

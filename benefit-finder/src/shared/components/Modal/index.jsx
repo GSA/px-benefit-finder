@@ -115,6 +115,20 @@ const Modal = ({
           viewTitle: `${dataLayerValue.viewTitle} modal`,
         },
       })
+    // handle dataLayer
+    const { errors } = dataLayerUtils.dataLayerStructure
+    modalOpen === true &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: errors.event,
+        bfData: {
+          errors: '',
+          errorCount: {
+            number: 0,
+            string: `0`,
+          },
+          formSuccess: true,
+        },
+      })
   }, [])
 
   /**

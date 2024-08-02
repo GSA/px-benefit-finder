@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
 import { Heading } from '../index'
 import { useHandleClassName } from '../../hooks'
+import { dataLayerUtils } from '../../utils'
 import './_index.scss'
+import { useEffect } from 'react'
 
 /**
  * a functional component that renders an information alert
@@ -49,6 +51,24 @@ const Alert = ({
           'usa-alert--info',
           `${noBackground ? 'no-background' : ''}`,
         ]
+
+  useEffect(() => {
+    // handle dataLayer
+    const { errors } = dataLayerUtils.dataLayerStructure
+    hasError &&
+      errorList &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: errors.event,
+        bfData: {
+          errors: errorList.map(item => item?.id).join(','),
+          errorCount: {
+            number: errorCount,
+            string: `${errorCount}`,
+          },
+          formSuccess: false,
+        },
+      })
+  }, [hasError])
 
   return (
     <div

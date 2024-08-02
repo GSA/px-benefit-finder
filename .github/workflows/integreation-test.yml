@@ -19,14 +19,12 @@ jobs:
       - name: Download Latest Release
         run: |
           # Get the latest release tarball URL
-          mkdir benefit-finder
           release_data=$(curl --silent "https://api.github.com/repos/GSA/px-benefit-finder/releases/latest")
           tarball_url=$(echo "$release_data" | grep "tarball_url" | cut -d : -f 2,3 | tr -d \" | tr -d , | tr -d ' ')
           curl -L "$tarball_url" -o latest_release.tar.gz
 
           # Extract the tarball
-          tar -xzf latest_release.tar.gz -C benefit-finder --strip-components=1
-          cd benefit-finder
+          tar -xzf latest_release.tar.gz
           ls -la
           pwd
 
@@ -37,16 +35,14 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: "/home/runner/work/px-benefit-finder/px-benefit-finder/package.json"
+          node-version-file: "./benefit-finder/package.json"
 
       - name: Install Dependencies
         run: |
-          cd benefit-finder
           npm ci
 
       - name: Test Frontend
         run: |
-          cd benefit-finder
           npm run test:coverage
 
   # tests-chrome:
@@ -60,7 +56,6 @@ jobs:
   #
   #     - name: Install Submodule
   #       run: |
-  #         cd benefit-finder
   #         git submodule init
   #         git submodule update
   #

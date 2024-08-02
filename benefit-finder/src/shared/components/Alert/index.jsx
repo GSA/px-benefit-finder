@@ -9,10 +9,12 @@ import './_index.scss'
  * @param {string} className - inherited classes
  * @param {string} children - inherited children
  * @param {any} alertFieldRef - inherited ref hook
- * @param {string} heading - inherited heading
+ * @param {obj} heading - inherited heading, contains prefix and suffix
  * @param {string} description - inherited description
  * @param {bool} type - string
  * @param {bool}  hasError - checks for current error state of parent value
+ * @param {number} errorCount - number of errors in the view
+ * @param {array} errorList - array of error ids and label values
  * @param {bool} noBackground - style variant
  * @param {number} tabIndex - index value of tab order
  * @return {html} returns a wrapped paragraph styled as usa-alert
@@ -28,6 +30,8 @@ const Alert = ({
   hasError,
   noBackground,
   tabIndex,
+  errorCount,
+  errorList,
 }) => {
   const defaultClasses =
     type === 'error'
@@ -65,9 +69,21 @@ const Alert = ({
             headingLevel={2}
             className="bf-usa-alert__heading usa-alert__heading"
           >
-            {heading}
+            {heading?.prefix}&nbsp;{errorCount}&nbsp;{heading?.suffix}
           </Heading>
           <p className="bf-usa-alert__text usa-alert__text">{description}</p>
+          <ul data-testid="bf-errors-list">
+            {errorList &&
+              errorList.map(item => {
+                return (
+                  <li key={item.id} data-testid="bf-errors-list-item">
+                    <a href={`#${item.id}`}>
+                      {item.getAttribute('data-errormessage') || item.id}
+                    </a>
+                  </li>
+                )
+              })}
+          </ul>
         </div>
       )}
     </div>
@@ -78,12 +94,13 @@ Alert.propTypes = {
   className: PropTypes.string,
   children: PropTypes.any,
   alertFieldRef: PropTypes.any,
-  heading: PropTypes.string,
+  heading: PropTypes.object,
   description: PropTypes.string,
   type: PropTypes.string,
   hasError: PropTypes.bool,
   noBackground: PropTypes.bool,
   tabIndex: PropTypes.number,
+  errorCount: PropTypes.number,
 }
 
 export default Alert

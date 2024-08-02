@@ -4,18 +4,22 @@ exports[`Select > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <label
     class="bf-usa-label usa-label"
+    for="applicant_relationship_to_the_deceased"
   >
     Dropdown Label
   </label>
   <select
+    aria-errormessage="error-description-applicant_relationship_to_the_deceased"
+    aria-invalid="false"
     class="bf-usa-select usa-select "
+    data-errormessage="undefined legend undefined"
+    id="applicant_relationship_to_the_deceased"
+    name="applicant_relationship_to_the_deceased"
   >
     <option
       disabled=""
       value=""
-    >
-      Click to select
-    </option>
+    />
     <option
       value=""
     />

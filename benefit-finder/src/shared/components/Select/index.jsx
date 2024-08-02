@@ -14,6 +14,7 @@ import './_index.scss'
  * @param {object} ui - The inherited object for ui translations
  * @param {string} className - inherited class string
  * @param {boolean} invalid - state of validity passed from handler
+ * @param {string} legend - inherited legend value from fieldset
  * @return {html} returns a semantic html select element with options
  */
 function Select({
@@ -22,15 +23,15 @@ function Select({
   options,
   selected,
   onChange,
-  required,
   ui,
   className,
   invalid,
+  legend,
 }) {
-  const { labelSelect, defaultValue } = ui
-  const handleRequired = required === true ? ['required-field'] : ''
-  const defaultClasses = ['bf-usa-select usa-select']
-  const utilityClasses = handleRequired
+  const { select, errorText } = ui
+  const defaultClasses = [
+    `bf-usa-select usa-select ${invalid === true ? 'usa-input--error' : ''}`,
+  ]
   /**
    * a functional component to create a list of options for a select element.
    * @function
@@ -49,22 +50,22 @@ function Select({
 
   return (
     <>
-      <Label label={label || labelSelect} htmlFor={htmlFor} />
+      <Label label={label || select?.labelSelect} htmlFor={htmlFor} />
       <select
         className={useHandleClassName({
           className,
           defaultClasses,
-          utilityClasses,
         })}
         name={htmlFor}
         id={htmlFor}
         onChange={onChange}
         value={selected || ''}
-        required={required === true}
-        aria-invalid={invalid}
+        aria-invalid={invalid === true}
+        data-errormessage={`${errorText?.prefix} ${legend && legend.toLowerCase()} ${errorText?.suffix}`}
+        aria-errormessage={`error-description-${htmlFor}`}
       >
         <option value="" key="default" disabled>
-          {defaultValue}
+          {select?.defaultValue}
         </option>
         <Options options={options} />
       </select>

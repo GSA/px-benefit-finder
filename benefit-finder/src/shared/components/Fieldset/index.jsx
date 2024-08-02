@@ -9,8 +9,15 @@ import './_index.scss'
  * @component
  * @param {React.ReactNode} children - inherited children
  * @param {string} legend - passed to Legend component
+ * @param {bool} required - inherited from data
+ * @param {node} alertRef - inherited reference
+ * @param {object} requiredLabel - passed to Legend component
+ * @param {boolean} hidden - inherited from data
  * @param {string} hint - passed to Hint component
  * @param {string} className - inherited classes
+ * @param {string} id - inherited id value
+ * @param {bool} invalid - inherited boolean value for valid or invalid state
+ * @param {object} ui - inherited locale based ui values
  * @return {html} returns a div
  */
 const Fieldset = ({
@@ -20,12 +27,19 @@ const Fieldset = ({
   alertRef,
   requiredLabel,
   hidden,
+  errorMessage,
   hint,
   className,
+  id,
+  invalid,
+  ui,
 }) => {
   const handleHidden = hidden !== undefined && hidden ? ['display-none'] : ''
-  const defaultClasses = ['bf-usa-fieldset usa-fieldset']
+  const defaultClasses = [
+    `bf-usa-fieldset usa-fieldset ${required === true ? 'required-field' : ''} ${invalid === true ? 'usa-input--error' : ''}`,
+  ]
   const utilityClasses = handleHidden
+  const { prefix, suffix } = ui
 
   /**
    * a functional component that renders a legend with a required hint
@@ -48,6 +62,10 @@ const Fieldset = ({
   const handleRequired =
     required === false ? <Legend>{legend}</Legend> : RequiredFlag()
 
+  const handleErrorMessage = errorMessage
+    ? `${errorMessage}`
+    : `${prefix} ${legend && legend.toLowerCase()} ${suffix}`
+
   return (
     <fieldset
       className={useHandleClassName({
@@ -56,9 +74,20 @@ const Fieldset = ({
         utilityClasses,
       })}
       ref={alertRef}
+      required={required === true}
+      id={id}
     >
-      {hint && <div className="bf-hint">{hint}</div>}
       {legend && handleRequired}
+      {invalid === true && (
+        <div
+          id={`error-description-${id}`}
+          className="bf-error-detail"
+          aria-live="assertive"
+        >
+          {handleErrorMessage}
+        </div>
+      )}
+      {hint && <div className="bf-hint">{hint}</div>}
       {children}
     </fieldset>
   )
@@ -72,6 +101,8 @@ Fieldset.propTypes = {
   hidden: PropTypes.bool,
   hint: PropTypes.string,
   className: PropTypes.string,
+  invalid: PropTypes.bool,
+  ui: PropTypes.object,
 }
 
 export default Fieldset

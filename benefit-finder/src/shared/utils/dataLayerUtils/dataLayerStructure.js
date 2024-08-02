@@ -37,6 +37,11 @@ const dataLayerStructure = {
     bfData: {
       pageView: ['bf-result-eligible-view', 'bf-result-not-eligible-view'],
       viewTitle: null,
+      eligibilityCount: {
+        eligibleBenefitCount: null,
+        moreInfoBenefitCount: null,
+        notEligibleBenefitCount: null,
+      },
     },
   },
   openAllBenefitAccordions: {

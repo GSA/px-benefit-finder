@@ -50,17 +50,35 @@ const Date = ({
     <>
       <ul className="add-list-reset">
         {handleInvalid(invalid, `date_of_birth_month-${id}`) && (
-          <li className="bf-error-detail">{errorMessages.month}</li>
+          <li
+            id={`month-error-description-${id}`}
+            className="bf-error-detail"
+            aria-live="assertive"
+          >
+            {errorMessages.month}
+          </li>
         )}
         {handleInvalid(invalid, `date_of_birth_day-${id}`) && (
-          <li className="bf-error-detail">{errorMessages.day}</li>
+          <li
+            id={`day-error-description-${id}`}
+            className="bf-error-detail"
+            aria-live="assertive"
+          >
+            {errorMessages.day}
+          </li>
         )}
         {handleInvalid(invalid, `date_of_birth_year-${id}`) && (
-          <li className="bf-error-detail">{errorMessages.year}</li>
+          <li
+            id={`year-error-description-${id}`}
+            className="bf-error-detail"
+            aria-live="assertive"
+          >
+            {errorMessages.year}
+          </li>
         )}
       </ul>
       <div
-        id={`bf-usa-memorable-date-${id} usa-memorable-date-${id}`}
+        id={`bf-usa-memorable-date-${id}`}
         className="bf-usa-memorable-date usa-memorable-date"
       >
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select">
@@ -81,11 +99,8 @@ const Date = ({
             value={(value && value.month) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_month-${id}`)}
-            aria-errormessage={
-              handleInvalid(invalid, `date_of_birth_month-${id}`)
-                ? errorMessages.month
-                : undefined
-            }
+            data-errormessage={errorMessages.month}
+            aria-errormessage={`month-error-description-${id}`}
             data-datetype="month"
           >
             <option value="" key="default" disabled>
@@ -117,11 +132,8 @@ const Date = ({
             value={(value && value.day) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_day-${id}`)}
-            aria-errormessage={
-              handleInvalid(invalid, `date_of_birth_day-${id}`)
-                ? errorMessages.day
-                : undefined
-            }
+            data-errormessage={errorMessages.day}
+            aria-errormessage={`day-error-description-${id}`}
             data-datetype="day"
           />
         </div>
@@ -144,11 +156,8 @@ const Date = ({
             value={(value && value.year) || ''}
             onChange={onChange}
             aria-invalid={handleInvalid(invalid, `date_of_birth_year-${id}`)}
-            aria-errormessage={
-              handleInvalid(invalid, `date_of_birth_year-${id}`)
-                ? errorMessages.year
-                : undefined
-            }
+            data-errormessage={errorMessages.year}
+            aria-errormessage={`year-error-description-${id}`}
             data-datetype="year"
           />
         </div>

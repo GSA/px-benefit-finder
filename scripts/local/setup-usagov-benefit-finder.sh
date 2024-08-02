@@ -6,6 +6,7 @@ ROOT_DIR=$(git rev-parse --show-toplevel)
 # usagov-2021 project
 USAGOV_PROJECT_LOCATION="${ROOT_DIR}/usagov-2021"
 SCRIPTS_LOCATION="${ROOT_DIR}/scripts/pipeline"
+BRANCH=""
 
 
 # make specific to usagov
@@ -35,13 +36,6 @@ then
     PARAM=$(echo "$param" | cut -d= -f1)
     BRANCH=$(echo "$param" | cut -d= -f2)
 
-    # stop and checkout if --dev flag is passed
-        if [ "$PARAM" = "--dev" ]; then
-            echo "Parameter found: ${PARAM}"
-            echo "checking out dev branch"
-            git fetch origin dev:dev
-            git checkout dev
-        fi
     # stop and checkout custom branch request
         if [ "$PARAM" = "--branch" ]; then
             echo "Parameter found: ${PARAM}"
@@ -65,6 +59,7 @@ then
     bash "${SCRIPTS_LOCATION}/mv-usagov_benefit_finder.sh"
 
     cd "${USAGOV_PROJECT_LOCATION}" || exit 1
+    git checkout "${BRANCH}"
 
     docker-compose up -d
     bin/db-update

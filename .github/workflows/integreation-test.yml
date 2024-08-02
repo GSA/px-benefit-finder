@@ -2,15 +2,15 @@ name: Integration Test
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - benefit-finder/*
+  # push:
+  # paths:
+  # - benefit-finder/*
 
 permissions: read-all
 
-defaults:
-  run:
-    working-directory: ./benefit-finder
+# defaults:
+# run:
+# working-directory: ./benefit-finder
 
 jobs:
   download_and_prepare:
@@ -26,7 +26,6 @@ jobs:
 
           # Extract the tarball
           tar -xzf latest_release.tar.gz -C benefit-finder --strip-components=1
-          git submodule init && git submodule update
 
   test_frontend:
     needs: download_and_prepare
@@ -38,10 +37,14 @@ jobs:
           node-version-file: "./benefit-finder/package.json"
 
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          cd benefit-finder
+          npm ci
 
       - name: Test Frontend
-        run: npm run test:coverage
+        run: |
+          cd benefit-finder
+          npm run test:coverage
 
   tests-chrome:
     needs: download_and_prepare
@@ -54,7 +57,7 @@ jobs:
 
       - name: Install Submodule
         run: |
-          cd ..
+          cd benefit-finder
           git submodule init
           git submodule update
 

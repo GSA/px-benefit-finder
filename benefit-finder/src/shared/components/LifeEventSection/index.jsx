@@ -164,6 +164,19 @@ const LifeEventSection = ({
     handleCheckRequriedFields()
     handleCheckForRequiredValues().then(valid => {
       if (valid === true) {
+        // handle dataLayer
+        const { errors } = dataLayerUtils.dataLayerStructure
+        dataLayerUtils.dataLayerPush(window, {
+          event: errors.event,
+          bfData: {
+            errors: '',
+            errorCount: {
+              number: 0,
+              string: `0`,
+            },
+            formSuccess: true,
+          },
+        })
         setStep(step + updateIndex)
         setStepData(updateIndex)
         resetElement && resetElement.current.focus()

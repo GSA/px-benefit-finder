@@ -93,13 +93,12 @@ const Alert = ({
           </Heading>
           <p className="bf-usa-alert__text usa-alert__text">{description}</p>
           <ul data-testid="bf-errors-list">
-            {/* TODO: get Labels */}
             {errorList &&
               errorList.map(item => {
                 return (
                   <li key={item.id} data-testid="bf-errors-list-item">
                     <a href={`#${item.id}`}>
-                      {item.getAttribute('aria-errormessage') || item.id}
+                      {item.getAttribute('data-errormessage') || item.id}
                     </a>
                   </li>
                 )

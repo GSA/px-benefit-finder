@@ -4,6 +4,7 @@ exports[`Fieldset > renders a match to the previous error snapshot 1`] = `
 <DocumentFragment>
   <fieldset
     class="bf-usa-fieldset usa-fieldset required-field usa-input--error "
+    id="applicant_date_of_birth_0"
     required=""
   >
     <legend
@@ -18,7 +19,9 @@ exports[`Fieldset > renders a match to the previous error snapshot 1`] = `
       </span>
     </legend>
     <div
+      aria-live="assertive"
       class="bf-error-detail"
+      id="error-description-applicant_date_of_birth_0"
     >
       Fill out the legend field
     </div>

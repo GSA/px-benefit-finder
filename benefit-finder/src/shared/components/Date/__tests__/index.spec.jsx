@@ -2,7 +2,6 @@ import { render } from '@testing-library/react'
 import Date from '../index.jsx'
 import * as en from '../../../locales/en/en.json'
 
-// `${item.fieldset.criteriaKey}_${index}`
 const fieldSetId = 'applicant_date_of_birth_0'
 
 describe('Date', () => {

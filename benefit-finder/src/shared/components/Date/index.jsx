@@ -49,18 +49,36 @@ const Date = ({
   return (
     <>
       <ul className="add-list-reset">
-        {handleInvalid(invalid, `${id}-date_of_birth_month`) && (
-          <li className="bf-error-detail">{errorMessages.month}</li>
+        {handleInvalid(invalid, `date_of_birth_month-${id}`) && (
+          <li
+            id={`month-error-description-${id}`}
+            className="bf-error-detail"
+            aria-live="assertive"
+          >
+            {errorMessages.month}
+          </li>
         )}
-        {handleInvalid(invalid, `${id}-date_of_birth_day`) && (
-          <li className="bf-error-detail">{errorMessages.day}</li>
+        {handleInvalid(invalid, `date_of_birth_day-${id}`) && (
+          <li
+            id={`day-error-description-${id}`}
+            className="bf-error-detail"
+            aria-live="assertive"
+          >
+            {errorMessages.day}
+          </li>
         )}
-        {handleInvalid(invalid, `${id}-date_of_birth_year`) && (
-          <li className="bf-error-detail">{errorMessages.year}</li>
+        {handleInvalid(invalid, `date_of_birth_year-${id}`) && (
+          <li
+            id={`year-error-description-${id}`}
+            className="bf-error-detail"
+            aria-live="assertive"
+          >
+            {errorMessages.year}
+          </li>
         )}
       </ul>
       <div
-        id={`bf-usa-memorable-date-${id} usa-memorable-date-${id}`}
+        id={`bf-usa-memorable-date-${id}`}
         className="bf-usa-memorable-date usa-memorable-date"
       >
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select">
@@ -80,12 +98,9 @@ const Date = ({
             aria-describedby={`${id}-month-description`}
             value={(value && value.month) || ''}
             onChange={onChange}
-            aria-invalid={handleInvalid(invalid, `${id}-date_of_birth_month`)}
-            aria-errormessage={
-              handleInvalid(invalid, `${id}-date_of_birth_month`)
-                ? errorMessages.month
-                : undefined
-            }
+            aria-invalid={handleInvalid(invalid, `date_of_birth_month-${id}`)}
+            data-errormessage={errorMessages.month}
+            aria-errormessage={`month-error-description-${id}`}
             data-datetype="month"
           >
             <option value="" key="default" disabled>
@@ -116,12 +131,9 @@ const Date = ({
             inputMode="numeric"
             value={(value && value.day) || ''}
             onChange={onChange}
-            aria-invalid={handleInvalid(invalid, `${id}-date_of_birth_day`)}
-            aria-errormessage={
-              handleInvalid(invalid, `${id}-date_of_birth_day`)
-                ? errorMessages.day
-                : undefined
-            }
+            aria-invalid={handleInvalid(invalid, `date_of_birth_day-${id}`)}
+            data-errormessage={errorMessages.day}
+            aria-errormessage={`day-error-description-${id}`}
             data-datetype="day"
           />
         </div>
@@ -143,12 +155,9 @@ const Date = ({
             inputMode="numeric"
             value={(value && value.year) || ''}
             onChange={onChange}
-            aria-invalid={handleInvalid(invalid, `${id}-date_of_birth_year`)}
-            aria-errormessage={
-              handleInvalid(invalid, `${id}-date_of_birth_year`)
-                ? errorMessages.year
-                : undefined
-            }
+            aria-invalid={handleInvalid(invalid, `date_of_birth_year-${id}`)}
+            data-errormessage={errorMessages.year}
+            aria-errormessage={`year-error-description-${id}`}
             data-datetype="year"
           />
         </div>

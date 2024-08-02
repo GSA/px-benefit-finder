@@ -7,7 +7,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
   />
   <div
     class="bf-usa-memorable-date usa-memorable-date"
-    id="bf-usa-memorable-date-applicant_date_of_birth_0 usa-memorable-date-applicant_date_of_birth_0"
+    id="bf-usa-memorable-date-applicant_date_of_birth_0"
   >
     <div
       class="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select"
@@ -26,8 +26,10 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       </div>
       <select
         aria-describedby="applicant_date_of_birth_0-month-description"
+        aria-errormessage="month-error-description-applicant_date_of_birth_0"
         class="bf-usa-select usa-select "
         data-datetype="month"
+        data-errormessage="Fill out the undefined month field"
         id="applicant_date_of_birth_0-date_of_birth_month"
         name="applicant_date_of_birth_0-date_of_birth_month"
       >
@@ -116,8 +118,10 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       </div>
       <input
         aria-describedby="applicant_date_of_birth_0-day-description"
+        aria-errormessage="day-error-description-applicant_date_of_birth_0"
         class="bf-usa-input usa-input "
         data-datetype="day"
+        data-errormessage="Fill out the undefined day field"
         id="applicant_date_of_birth_0-date_of_birth_day"
         inputmode="numeric"
         name="applicant_date_of_birth_0-date_of_birth_day"
@@ -141,8 +145,10 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
       </div>
       <input
         aria-describedby="applicant_date_of_birth_0-year-description"
+        aria-errormessage="year-error-description-applicant_date_of_birth_0"
         class="bf-usa-input usa-input "
         data-datetype="year"
+        data-errormessage="Fill out the undefined year field"
         id="applicant_date_of_birth_0-date_of_birth_year"
         inputmode="numeric"
         name="applicant_date_of_birth_0-date_of_birth_year"

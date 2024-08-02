@@ -26,6 +26,8 @@ jobs:
 
           # Extract the tarball
           tar -xzf latest_release.tar.gz -C benefit-finder --strip-components=1
+          ls -l
+          pwd
 
   test_frontend:
     needs: download_and_prepare

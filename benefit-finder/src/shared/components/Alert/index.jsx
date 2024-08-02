@@ -60,14 +60,12 @@ const Alert = ({
       dataLayerUtils.dataLayerPush(window, {
         event: errors.event,
         bfData: {
-          errors: errorList
-            .map(item => item?.getAttribute('aria-errormessage'))
-            .join(','),
+          errors: errorList.map(item => item?.id).join(','),
           errorCount: {
             number: errorCount,
             string: `${errorCount}`,
           },
-          formSuccess: errors.formSuccess,
+          formSuccess: false,
         },
       })
   }, [hasError])

@@ -32,12 +32,22 @@ then
     git checkout prod
 
     for param in "$@"; do
+    PARAM=$(echo "$param" | cut -d= -f1)
+    BRANCH=$(echo "$param" | cut -d= -f2)
+
     # stop and checkout if --dev flag is passed
-        if [ "$param" = "--dev" ]; then
-            echo "Parameter found: ${param}"
+        if [ "$PARAM" = "--dev" ]; then
+            echo "Parameter found: ${PARAM}"
             echo "checking out dev branch"
             git fetch origin dev:dev
             git checkout dev
+        fi
+    # stop and checkout custom branch request
+        if [ "$PARAM" = "--branch" ]; then
+            echo "Parameter found: ${PARAM}"
+            echo "checking out ${BRANCH}"
+            git fetch origin "${BRANCH}:${BRANCH}"
+            git checkout "${BRANCH}"
         fi
     done
     # set up usagov project

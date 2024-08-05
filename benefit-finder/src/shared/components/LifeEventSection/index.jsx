@@ -417,7 +417,7 @@ const LifeEventSection = ({
 
                             return (
                               <div
-                                className="radio-group"
+                                className="bf-radio-group radio-group"
                                 key={fieldSetId}
                                 aria-invalid={invalid}
                               >

@@ -289,15 +289,20 @@ const LifeEventSection = ({
                   errorCount={hasError.length}
                   errorList={hasError}
                 ></Alert>
-                <Heading className="bf-usa-section-heading" headingLevel={2}>
-                  {currentData.section.heading}
-                </Heading>
-                <div
-                  dangerouslySetInnerHTML={createMarkup(
-                    currentData.section.description
-                  )}
-                ></div>
-
+                <div className="bf-form-heading-group">
+                  <Heading
+                    className="bf-form-heading bf-usa-form-heading"
+                    headingLevel={2}
+                  >
+                    {currentData.section.heading}
+                  </Heading>
+                  <div
+                    className="bf-section-sub-heading"
+                    dangerouslySetInnerHTML={createMarkup(
+                      currentData.section.description
+                    )}
+                  ></div>
+                </div>
                 {currentData.section.fieldsets.map((item, i) => {
                   const Input = ({ item, children, index, hidden }) =>
                     item.fieldset.inputs[0].inputCriteria.type === 'Select' ? (

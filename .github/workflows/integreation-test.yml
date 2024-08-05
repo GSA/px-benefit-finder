@@ -37,6 +37,7 @@ jobs:
           cd benefit-finder
           git init
           git branch -M main
+          git submodule init && git submodule update
 
       - name: Install Dependencies
         run: |

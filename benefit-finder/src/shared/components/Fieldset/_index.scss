@@ -2,7 +2,7 @@
 @use '../../styles/colors/_index.scss' as color;
 
 .bf-usa-fieldset {
-  padding-bottom: space.$padding-bottom-lg;
+  padding-bottom: space.$padding-bottom-lg-plus;
   padding-left: space.$space-md-gap;
   position: relative;
   padding-top: 20px;

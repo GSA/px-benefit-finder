@@ -34,8 +34,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pwd
-          ls -la
+          cd benefit-finder
           npm ic
 
       - name: Test Frontend

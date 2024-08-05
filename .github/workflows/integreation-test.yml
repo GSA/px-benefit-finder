@@ -35,6 +35,7 @@ jobs:
       - name: Install Dependencies
         run: |
           cd benefit-finder
+          git init
           npm ic
 
       - name: Test Frontend

@@ -45,6 +45,7 @@ jobs:
 
       - name: Test Frontend
         run: |
+          cd benefit-finder
           npm run test:coverage
 
   # tests-chrome:

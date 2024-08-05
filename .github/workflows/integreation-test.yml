@@ -36,6 +36,7 @@ jobs:
         run: |
           cd benefit-finder
           git init
+          cd benefit-finder
           npm ic
 
       - name: Test Frontend

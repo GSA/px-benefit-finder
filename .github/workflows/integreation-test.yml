@@ -29,7 +29,6 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          # node-version-file: "./benefit-finder/package.json"
           node-version-file: "./benefit-finder/package.json"
 
       - name: Git Init
@@ -75,6 +74,7 @@ jobs:
 
       - name: Install Submodule
         run: |
+          cd ..
           git submodule init
           git submodule update
 

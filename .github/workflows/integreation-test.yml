@@ -34,7 +34,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm ci
+          npm ic
 
       - name: Test Frontend
         run: |

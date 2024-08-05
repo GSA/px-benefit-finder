@@ -49,164 +49,164 @@ jobs:
           cd benefit-finder
           npm run test:coverage
 
-  # tests-chrome:
-  #   needs: download_and_prepare
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Install Node
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version-file: "./benefit-finder/package.json"
-  #
-  #     - name: Install Submodule
-  #       run: |
-  #         git submodule init
-  #         git submodule update
-  #
-  #     - name: Cypress run (Chrome)
-  #       uses: cypress-io/github-action@v6
-  #       with:
-  #         working-directory: ./benefit-finder
-  #         browser: chrome
-  #         env: NODE_ENV=test
-  #         build: "npm run cy:build:storybook"
-  #         start: "npm run cy:run:pipeline"
-  #
-  #     - name: Chrome Artifact(s)
-  #       if: failure()
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: Chrome cypress screenshots
-  #         path: ./benefit-finder/cypress/screenshots
-  #
-  # tests-firefox:
-  #   needs: download_and_prepare
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Install Node
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version-file: "./benefit-finder/package.json"
-  #
-  #     - name: Install Submodule
-  #       run: |
-  #         cd ..
-  #         git submodule init
-  #         git submodule update
-  #
-  #     - name: Cypress run (Firefox)
-  #       uses: cypress-io/github-action@v6
-  #       with:
-  #         working-directory: ./benefit-finder
-  #         browser: firefox
-  #         env: NODE_ENV=test
-  #         build: "npm run cy:build:storybook"
-  #         start: "npm run cy:run:pipeline"
-  #
-  #     - name: Firefox Artifact(s)
-  #       if: failure()
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: Firefox cypress screenshots
-  #         path: ./benefit-finder/cypress/screenshots
-  #
-  # tests-edge:
-  #   needs: download_and_prepare
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Install Node
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version-file: "./benefit-finder/package.json"
-  #
-  #     - name: Install Submodule
-  #       run: |
-  #         cd ..
-  #         git submodule init
-  #         git submodule update
-  #
-  #     - name: Cypress run (Edge)
-  #       uses: cypress-io/github-action@v6
-  #       with:
-  #         working-directory: ./benefit-finder
-  #         browser: edge
-  #         env: NODE_ENV=test
-  #         build: "npm run cy:build:storybook"
-  #         start: "npm run cy:run:pipeline"
-  #
-  #     - name: Edge Artifact(s)
-  #       if: failure()
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: Edge cypress screenshots
-  #         path: ./benefit-finder/cypress/screenshots
-  #
-  # tests-webkit:
-  #   needs: download_and_prepare
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Install Node
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version-file: "./benefit-finder/package.json"
-  #
-  #     - name: Install Submodule
-  #       run: |
-  #         cd ..
-  #         git submodule init
-  #         git submodule update
-  #
-  #     - name: Install dependencies
-  #       uses: cypress-io/github-action@v6
-  #       with:
-  #         working-directory: ./benefit-finder
-  #         build: npx playwright-webkit install-deps
-  #         runTests: false
-  #
-  #     - name: Cypress run (WebKit)
-  #       uses: cypress-io/github-action@v6
-  #       with:
-  #         working-directory: ./benefit-finder
-  #         install: false
-  #         browser: webkit
-  #         env: NODE_ENV=test
-  #         build: "npm run cy:build:storybook"
-  #         start: "npm run cy:run:pipeline"
-  #
-  #     - name: Webkit Artifact(s)
-  #       if: failure()
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: Webkit cypress screenshots
-  #         path: ./benefit-finder/cypress/screenshots
-  #
-  # tests-components:
-  #   needs: download_and_prepare
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Install Node
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version-file: "./benefit-finder/package.json"
-  #
-  #     - name: Install Submodule
-  #       run: |
-  #         cd ..
-  #         git submodule init
-  #         git submodule update
-  #
-  #     - name: Cypress run (Chrome)
-  #       uses: cypress-io/github-action@v6
-  #       with:
-  #         working-directory: ./benefit-finder
-  #         component: true
-  #         browser: chrome
-  #         env: NODE_ENV=test
-  #         build: "npm run cy:prebuild:storybook"
-  #
-  #     - name: Component Artifact(s)
-  #       if: failure()
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: Component cypress screenshots
-  #         path: ./benefit-finder/cypress/screenshots
+  tests-chrome:
+    needs: download_and_prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          git submodule init
+          git submodule update
+
+      - name: Cypress run (Chrome)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          browser: chrome
+          env: NODE_ENV=test
+          build: "npm run cy:build:storybook"
+          start: "npm run cy:run:pipeline"
+
+      - name: Chrome Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Chrome cypress screenshots
+          path: ./benefit-finder/cypress/screenshots
+
+  tests-firefox:
+    needs: download_and_prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          cd ..
+          git submodule init
+          git submodule update
+
+      - name: Cypress run (Firefox)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          browser: firefox
+          env: NODE_ENV=test
+          build: "npm run cy:build:storybook"
+          start: "npm run cy:run:pipeline"
+
+      - name: Firefox Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Firefox cypress screenshots
+          path: ./benefit-finder/cypress/screenshots
+
+  tests-edge:
+    needs: download_and_prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          cd ..
+          git submodule init
+          git submodule update
+
+      - name: Cypress run (Edge)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          browser: edge
+          env: NODE_ENV=test
+          build: "npm run cy:build:storybook"
+          start: "npm run cy:run:pipeline"
+
+      - name: Edge Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Edge cypress screenshots
+          path: ./benefit-finder/cypress/screenshots
+
+  tests-webkit:
+    needs: download_and_prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          cd ..
+          git submodule init
+          git submodule update
+
+      - name: Install dependencies
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          build: npx playwright-webkit install-deps
+          runTests: false
+
+      - name: Cypress run (WebKit)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          install: false
+          browser: webkit
+          env: NODE_ENV=test
+          build: "npm run cy:build:storybook"
+          start: "npm run cy:run:pipeline"
+
+      - name: Webkit Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Webkit cypress screenshots
+          path: ./benefit-finder/cypress/screenshots
+
+  tests-components:
+    needs: download_and_prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "./benefit-finder/package.json"
+
+      - name: Install Submodule
+        run: |
+          cd ..
+          git submodule init
+          git submodule update
+
+      - name: Cypress run (Chrome)
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./benefit-finder
+          component: true
+          browser: chrome
+          env: NODE_ENV=test
+          build: "npm run cy:prebuild:storybook"
+
+      - name: Component Artifact(s)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Component cypress screenshots
+          path: ./benefit-finder/cypress/screenshots

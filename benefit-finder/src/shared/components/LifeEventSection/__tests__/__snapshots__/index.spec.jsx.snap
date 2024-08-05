@@ -94,20 +94,26 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             />
           </div>
         </div>
-        <h2
-          aria-level="2"
-          class="bf-usa-section-heading font-family-sans"
-          role="heading"
+        <div
+          class="bf-form-heading-group"
         >
-          About the applicant
-        </h2>
-        <div>
-          <p>
-            <strong>
-              About you:
-            </strong>
-             the applicant looking for benefits
-          </p>
+          <h2
+            aria-level="2"
+            class="bf-form-heading bf-usa-form-heading font-family-sans"
+            role="heading"
+          >
+            About the applicant
+          </h2>
+          <div
+            class="bf-section-sub-heading"
+          >
+            <p>
+              <strong>
+                About you:
+              </strong>
+               the applicant looking for benefits
+            </p>
+          </div>
         </div>
         <fieldset
           class="bf-usa-fieldset usa-fieldset required-field  "

@@ -53,6 +53,23 @@ jobs:
     needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
+      - name: Download Latest Release
+        run: |
+          # Get the latest release tarball URL
+          release_data=$(curl --silent "https://api.github.com/repos/GSA/px-benefit-finder/releases/latest")
+          tarball_url=$(echo "$release_data" | grep "tarball_url" | cut -d : -f 2,3 | tr -d \" | tr -d , | tr -d ' ')
+          curl -L "$tarball_url" -o latest_release.tar.gz
+
+          # Extract the tarball
+          tar -xzf latest_release.tar.gz --strip-components=1
+
+      - name: Git Init
+        run: |
+          cd benefit-finder
+          git init
+          git branch -M main
+          git submodule init && git submodule update
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -83,6 +100,23 @@ jobs:
     needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
+      - name: Download Latest Release
+        run: |
+          # Get the latest release tarball URL
+          release_data=$(curl --silent "https://api.github.com/repos/GSA/px-benefit-finder/releases/latest")
+          tarball_url=$(echo "$release_data" | grep "tarball_url" | cut -d : -f 2,3 | tr -d \" | tr -d , | tr -d ' ')
+          curl -L "$tarball_url" -o latest_release.tar.gz
+
+          # Extract the tarball
+          tar -xzf latest_release.tar.gz --strip-components=1
+
+      - name: Git Init
+        run: |
+          cd benefit-finder
+          git init
+          git branch -M main
+          git submodule init && git submodule update
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -114,6 +148,23 @@ jobs:
     needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
+      - name: Download Latest Release
+        run: |
+          # Get the latest release tarball URL
+          release_data=$(curl --silent "https://api.github.com/repos/GSA/px-benefit-finder/releases/latest")
+          tarball_url=$(echo "$release_data" | grep "tarball_url" | cut -d : -f 2,3 | tr -d \" | tr -d , | tr -d ' ')
+          curl -L "$tarball_url" -o latest_release.tar.gz
+
+          # Extract the tarball
+          tar -xzf latest_release.tar.gz --strip-components=1
+
+      - name: Git Init
+        run: |
+          cd benefit-finder
+          git init
+          git branch -M main
+          git submodule init && git submodule update
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -145,6 +196,23 @@ jobs:
     needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
+      - name: Download Latest Release
+        run: |
+          # Get the latest release tarball URL
+          release_data=$(curl --silent "https://api.github.com/repos/GSA/px-benefit-finder/releases/latest")
+          tarball_url=$(echo "$release_data" | grep "tarball_url" | cut -d : -f 2,3 | tr -d \" | tr -d , | tr -d ' ')
+          curl -L "$tarball_url" -o latest_release.tar.gz
+
+          # Extract the tarball
+          tar -xzf latest_release.tar.gz --strip-components=1
+
+      - name: Git Init
+        run: |
+          cd benefit-finder
+          git init
+          git branch -M main
+          git submodule init && git submodule update
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -184,6 +252,23 @@ jobs:
     needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
+      - name: Download Latest Release
+        run: |
+          # Get the latest release tarball URL
+          release_data=$(curl --silent "https://api.github.com/repos/GSA/px-benefit-finder/releases/latest")
+          tarball_url=$(echo "$release_data" | grep "tarball_url" | cut -d : -f 2,3 | tr -d \" | tr -d , | tr -d ' ')
+          curl -L "$tarball_url" -o latest_release.tar.gz
+
+          # Extract the tarball
+          tar -xzf latest_release.tar.gz --strip-components=1
+
+      - name: Git Init
+        run: |
+          cd benefit-finder
+          git init
+          git branch -M main
+          git submodule init && git submodule update
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:

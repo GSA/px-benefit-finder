@@ -34,6 +34,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          pwd
+          ls -la
           npm ic
 
       - name: Test Frontend

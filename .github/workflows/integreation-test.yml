@@ -32,10 +32,15 @@ jobs:
           # node-version-file: "./benefit-finder/package.json"
           node-version-file: "./benefit-finder/package.json"
 
-      - name: Install Dependencies
+      - name: Git Init
         run: |
           cd benefit-finder
           git init
+          git branch -M main
+
+      - name: Install Dependencies
+        run: |
+          cd benefit-finder
           npm ic
 
       - name: Test Frontend

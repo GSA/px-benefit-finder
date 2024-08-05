@@ -32,9 +32,18 @@ jobs:
     needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
+      - name: What's in the directory
+        run: |
+          ls -la
+          pwd
+          cd benefit-finder
+          ls -la
+          pwd
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
+          # node-version-file: "./benefit-finder/package.json"
           node-version-file: "./benefit-finder/package.json"
 
       - name: Install Dependencies

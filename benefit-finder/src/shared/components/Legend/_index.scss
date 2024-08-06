@@ -4,6 +4,7 @@
 .bf-legend {
   @include h6;
 
-  padding-bottom: space.$padding-bottom-sm;
+  margin: 0 0 space.$space-sm;
+  padding: 0;
   max-width: fit-content;
 }

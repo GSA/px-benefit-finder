@@ -2,32 +2,27 @@
 @use '../../styles/colors/_index.scss' as color;
 
 .bf-usa-fieldset {
-  padding-bottom: space.$padding-bottom-lg-plus;
-  padding-left: space.$space-md-gap;
   position: relative;
-  padding-top: 20px;
+  padding: 0;
+  margin: 0;
 
   .bf-error-detail {
-    margin-top: space.$space-sm;
+    margin: 0 0 space.$space-sm;
     color: color.$alert-red;
     font-weight: 600;
-
-    ~ li {
-      margin-top: 2px;
-    }
   }
 
-  .bf-hint {
-    margin: space.$space-sm 0;
+  // list errors need a differnt margin spacing
+  li.bf-error-detail {
+    margin: 0 0 space.$space-xs 0;
   }
+}
 
-  .bf-legend {
-    position: absolute;
-    top: 0;
-    margin-top: 0;
-  }
+.bf-fieldset-wrapper {
+  padding: 0 space.$space-md-gap space.$space-lg space.$space-md-gap;
+}
 
-  &.usa-input--error {
-    border-left: 0.25rem solid #c61f0c;
-  }
+// we check to see if any of the fieldsets in the wrapper have the error
+.bf-fieldset-wrapper:has(fieldset.usa-input--error) {
+  border-left: 0.25rem solid #c61f0c;
 }

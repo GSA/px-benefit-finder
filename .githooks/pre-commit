@@ -139,9 +139,9 @@ touch "$TEMP_FILE"
 # Read each line of the configuration file
 while IFS= read -r line; do
     # Check if the line contains an asterisk for wildcard patterns and is not already in the correct format
-    if [[ "$line" == *"*"* && ! "$line" == "**/*"* ]]; then
+    if [[ "$line" == *"*"* && ! "$line" == "\"**/*"* ]]; then
         # Adjust the pattern and add double quotes around the corrected line
-        corrected_line=$(echo "$line" | sed -E 's/^(\s*-\s*)\*([^*])/\1"**\/\2"/; s/^(\s*-\s*)\/\*([^*])/\1"**\/\2"/')
+        corrected_line=$(echo "$line" | sed -E 's/^(\s*-\s*)\*([^*]*)/\1"**\/\2"/; s/^(\s*-\s*)\/\*([^*]*)/\1"**\/\2"/')
         echo "$corrected_line" >> "$TEMP_FILE"
     else
         # Write the line as-is if no correction is needed

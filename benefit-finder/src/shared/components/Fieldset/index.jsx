@@ -64,7 +64,7 @@ const Fieldset = ({
 
   const handleErrorMessage = errorMessage
     ? `${errorMessage}`
-    : `${prefix} ${legend && legend.toLowerCase()} ${suffix}`
+    : `${prefix} ${legend && legend.toLowerCase().replace('?', '')} ${suffix}`
 
   return (
     <div className="bf-fieldset-wrapper">
@@ -77,6 +77,7 @@ const Fieldset = ({
         ref={alertRef}
         required={required === true}
         id={id}
+        data-errormessage={handleErrorMessage}
       >
         {legend && handleRequired}
         {invalid === true && (

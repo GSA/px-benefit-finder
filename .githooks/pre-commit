@@ -84,6 +84,20 @@ if [ -z "$BRANCH_NAME" ]; then
     exit 1
 fi
 
+GITIGNORE_FILE=".gitignore"
+TRUFFLEHOG_CONFIG="trufflehog3.local.yml"
+
+# Read paths from .gitignore, ignoring blank lines and comments
+readarray -t gitignore_paths < <(grep -vE '^\s*(#|$)' "$GITIGNORE_FILE")
+
+# Convert .gitignore contents to YAML for TruffleHog3
+echo -e "exclude:\n  paths:" > "$TRUFFLEHOG_CONFIG"
+for path in "${gitignore_paths[@]}"; do
+    echo "  - $path" >> "$TRUFFLEHOG_CONFIG"
+done
+
+echo "Created $TRUFFLEHOG_CONFIG with paths from .gitignore"
+
 echo "Scanning branch: $BRANCH_NAME"
 
 # TruffleHog3 Scan on local branch files
@@ -94,6 +108,7 @@ $TRUFFLEHOG3_PATH --no-history --no-entropy --severity MEDIUM -vv -r rules.yml -
 CONTENT=$($JQ_PATH 'length' $ROOT_DIR/truffleHogResults.json)
 if [ "$CONTENT" -eq 0 ]; then
     rm $ROOT_DIR/truffleHogResults.json
+    rm $ROOT_DIR/trufflehog3.local.yml
     echo "No secrets found. Commit is safe."
     exit 0
 else

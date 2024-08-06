@@ -4,8 +4,8 @@
 .bf-usa-button {
   @include important-bold;
 
-  background-color: color.$pop-blue;
-  color: color.$white;
+  background-color: color.$usagov-button-background;
+  box-shadow: inset 0 0 0 2px color.$usagov-button-outline;
 }
 
 .bf-usa-button--unstyled {
@@ -21,8 +21,11 @@
 }
 
 .bf-usa-button:hover {
-  background-color: color.$marine;
-  color: color.$white;
+  background-color: color.$usagov-button-background-hover;
+}
+
+.bf-usa-button:focus {
+  box-shadow: inset 0 0 0 2px color.$white;
 }
 
 .bf-usa-button--outline {

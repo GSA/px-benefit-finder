@@ -9,7 +9,7 @@ h1.bf-chevron-heading {
 
 .bf-chevron {
   position: relative;
-  background-color: color.$officer-navy;
+  background-color: color.$usagov-backround-blue;
   padding: space.$space-xl space.$space-lg 38px;
   margin: 0 auto;
   color: color.$white;
@@ -38,7 +38,7 @@ h1.bf-chevron-heading {
   position: absolute;
   top: 100%;
   left: 0;
-  border-top: 76px solid color.$officer-navy;
+  border-top: 76px solid color.$usagov-backround-blue;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
 }

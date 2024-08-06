@@ -37,3 +37,5 @@ exclude:
   - **backup.txt
   - truffleHogResults.json
   - .venv
+  - message: Exclude Test Files, False Positives, and Compressed Files.
+    paths:

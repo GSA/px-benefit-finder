@@ -84,19 +84,32 @@ if [ -z "$BRANCH_NAME" ]; then
     exit 1
 fi
 
-GITIGNORE_FILE=".gitignore"
-TRUFFLEHOG_CONFIG="trufflehog3.local.yml"
+# Assuming trufflehog3.local.yml is already created and filled with paths from .gitignore
+TRUFFLEHOG_LOCAL_CONFIG="trufflehog3.local.yml"
+TRUFFLEHOG_GLOBAL_CONFIG=".trufflehog3.yml"
 
-# Read paths from .gitignore, ignoring blank lines and comments
-readarray -t gitignore_paths < <(grep -vE '^\s*(#|$)' "$GITIGNORE_FILE")
-
-# Convert .gitignore contents to YAML for TruffleHog3
-echo -e "exclude:\n  paths:" > "$TRUFFLEHOG_CONFIG"
-for path in "${gitignore_paths[@]}"; do
-    echo "  - $path" >> "$TRUFFLEHOG_CONFIG"
-done
-
-echo "Created $TRUFFLEHOG_CONFIG with paths from .gitignore"
+# Check if the global config file exists
+if [ -f "$TRUFFLEHOG_GLOBAL_CONFIG" ]; then
+    # Read and merge unique keys from global config to local config
+    while IFS= read -r line; do
+        # Clean up leading and trailing whitespace
+        clean_line=$(echo "$line" | sed 's/^\s*//;s/\s*$//')
+        
+        # Check if the line contains a key-value pair (improved check for lines containing ':')
+        if [[ "$clean_line" =~ ^[^#]*: ]]; then
+            key=$(echo "$clean_line" | cut -d ':' -f 1 | sed 's/^\s*//;s/\s*$//')  # Clean up spaces around the key
+            value=$(echo "$clean_line" | cut -d ':' -f 2- | sed 's/^\s*//;s/\s*$//') # Get the value and clean up spaces
+            
+            # Check if the key already exists in the local config
+            if ! grep -qE "^$key\s*:" "$TRUFFLEHOG_LOCAL_CONFIG"; then
+                # Append non-existing settings to the local config, ensuring proper YAML format
+                echo "$key: $value" >> "$TRUFFLEHOG_LOCAL_CONFIG"
+            fi
+        fi
+    done < "$TRUFFLEHOG_GLOBAL_CONFIG"
+    
+    echo "Merged configuration from $TRUFFLEHOG_GLOBAL_CONFIG into $TRUFFLEHOG_LOCAL_CONFIG"
+fi
 
 echo "Scanning branch: $BRANCH_NAME"
 

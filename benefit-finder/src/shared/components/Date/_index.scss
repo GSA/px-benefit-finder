@@ -1,4 +1,5 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/space/index.scss' as space;
 @use '../../styles/breakpoints/_index.scss' as *;
 @use '../../styles/mixins/_index.scss' as *;
 
@@ -17,7 +18,7 @@
   @include p;
 
   &.usa-input--error {
-    padding: 9.75px;
+    padding: 8px;
     height: initial;
     border-radius: 3px;
     border-color: color.$alert-red;
@@ -26,14 +27,17 @@
 
 .bf-usa-form-group--month {
   width: 242px;
+  margin-top: space.$space-sm;
 }
 
 .bf-usa-form-group--day {
   width: 64px;
+  margin-top: space.$space-sm;
 }
 
 .bf-usa-form-group--year {
   width: 95px;
+  margin-top: space.$space-sm;
 }
 
 @media (width >= $desktop) {

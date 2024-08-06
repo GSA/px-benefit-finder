@@ -2,7 +2,6 @@ import { render } from '@testing-library/react'
 import Select from '../index.jsx'
 import * as en from '../../../locales/en/en.json'
 
-// data-errormessage={`${errorText?.prefix} ${legend && legend.toLowerCase()} ${errorText?.suffix}`}
 const fieldSetId = 'applicant_relationship_to_the_deceased'
 
 const selectLabel = 'Dropdown Label'

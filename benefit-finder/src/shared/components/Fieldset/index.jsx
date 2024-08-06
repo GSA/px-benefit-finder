@@ -67,29 +67,31 @@ const Fieldset = ({
     : `${prefix} ${legend && legend.toLowerCase()} ${suffix}`
 
   return (
-    <fieldset
-      className={useHandleClassName({
-        className,
-        defaultClasses,
-        utilityClasses,
-      })}
-      ref={alertRef}
-      required={required === true}
-      id={id}
-    >
-      {legend && handleRequired}
-      {invalid === true && (
-        <div
-          id={`error-description-${id}`}
-          className="bf-error-detail"
-          aria-live="assertive"
-        >
-          {handleErrorMessage}
-        </div>
-      )}
-      {hint && <div className="bf-hint">{hint}</div>}
-      {children}
-    </fieldset>
+    <div className="bf-fieldset-wrapper">
+      <fieldset
+        className={useHandleClassName({
+          className,
+          defaultClasses,
+          utilityClasses,
+        })}
+        ref={alertRef}
+        required={required === true}
+        id={id}
+      >
+        {legend && handleRequired}
+        {invalid === true && (
+          <div
+            id={`error-description-${id}`}
+            className="bf-error-detail"
+            aria-live="assertive"
+          >
+            {handleErrorMessage}
+          </div>
+        )}
+        {hint && <div className="bf-hint">{hint}</div>}
+        {children}
+      </fieldset>
+    </div>
   )
 }
 

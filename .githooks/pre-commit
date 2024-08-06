@@ -84,6 +84,20 @@ if [ -z "$BRANCH_NAME" ]; then
     exit 1
 fi
 
+GITIGNORE_FILE=".gitignore"
+TRUFFLEHOG_CONFIG="trufflehog3.local.yml"
+
+# Read paths from .gitignore, ignoring blank lines and comments
+readarray -t gitignore_paths < <(grep -vE '^\s*(#|$)' "$GITIGNORE_FILE")
+
+# Convert .gitignore contents to YAML for TruffleHog3
+echo -e "exclude:\n  paths:" > "$TRUFFLEHOG_CONFIG"
+for path in "${gitignore_paths[@]}"; do
+    echo "  - $path" >> "$TRUFFLEHOG_CONFIG"
+done
+
+echo "Created $TRUFFLEHOG_CONFIG with paths from .gitignore"
+
 TRUFFLEHOG_LOCAL_CONFIG="trufflehog3.local.yml"
 TRUFFLEHOG_GLOBAL_CONFIG=".trufflehog3.yml"
 

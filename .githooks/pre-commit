@@ -130,6 +130,10 @@ awk '!seen[$0]++' "$TRUFFLEHOG_LOCAL_CONFIG" > temp_file.yml && mv temp_file.yml
 
 echo "Duplicates removed from $TRUFFLEHOG_LOCAL_CONFIG"
 
+
+
+#!/bin/bash
+
 TRUFFLEHOG_LOCAL_CONFIG="trufflehog3.local.yml"
 TEMP_FILE="temp_trufflehog3.local.yml"
 
@@ -139,13 +143,12 @@ touch "$TEMP_FILE"
 # Read each line of the configuration file
 while IFS= read -r line; do
     # Check if the line contains an asterisk for wildcard patterns
-    if [[ "$line" == *"*"* ]]; then
-        # Replace asterisk patterns to match the expected format by trufflehog3
-        # This will handle both *.filename and /*.filename cases
-        corrected_line=$(echo "$line" | sed -E 's/\*([^\/])/**\/\1/g; s/\/\*/**\//g')
+    if [[ "$line" == *"*"* && ! "$line" == "**/*"* ]]; then
+        # Specific pattern adjustments to ensure only incorrect patterns are changed
+        corrected_line=$(echo "$line" | sed -E 's/^(\s*-\s*)\*([^*])/\1**\/\2/; s/^(\s*-\s*)\/\*([^*])/\1**\/\2/')
         echo "$corrected_line" >> "$TEMP_FILE"
     else
-        # Write the line as-is if no asterisk is found
+        # Write the line as-is if no asterisk is found or if it's already correctly formatted
         echo "$line" >> "$TEMP_FILE"
     fi
 done < "$TRUFFLEHOG_LOCAL_CONFIG"
@@ -153,7 +156,7 @@ done < "$TRUFFLEHOG_LOCAL_CONFIG"
 # Replace the old config file with the corrected version
 mv "$TEMP_FILE" "$TRUFFLEHOG_LOCAL_CONFIG"
 
-echo "All patterns corrected in $TRUFFLEHOG_LOCAL_CONFIG"
+echo "Patterns corrected as necessary in $TRUFFLEHOG_LOCAL_CONFIG"
 
 echo "Scanning branch: $BRANCH_NAME"
 

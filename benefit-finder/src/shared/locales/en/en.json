@@ -183,8 +183,8 @@
     "final": "Final questions"
   },
   "select": {
-    "labelSelect": "Select",
-    "defaultValue": "Click to select",
+    "labelSelect": "Select an option",
+    "defaultValue": "-Select-",
     "dateDefaultValue": "-Select-"
   },
   "date": {

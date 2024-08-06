@@ -18,7 +18,15 @@ const RadioGroup = ({
   fieldSetId,
   handleChanged,
   criteriaKey,
+  errorMessage,
+  legend,
+  ui,
 }) => {
+  const errorText = ui
+  const errorMessageValue = errorMessage
+    ? `${errorMessage}`
+    : `${errorText?.prefix} ${legend && legend.toLowerCase()} ${errorText?.suffix}`
+
   return (
     <div className="bf-radio-group radio-group" aria-invalid={invalid}>
       {/* map the options */}
@@ -37,6 +45,8 @@ const RadioGroup = ({
               onChange={event => {
                 handleChanged(event, criteriaKey)
               }}
+              data-errormessage={errorMessageValue}
+              aria-errormessage={`error-description-${inputId}`}
             />
           )
         })}

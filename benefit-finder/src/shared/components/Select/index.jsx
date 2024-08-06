@@ -27,6 +27,7 @@ function Select({
   className,
   invalid,
   legend,
+  errorMessage,
 }) {
   const { select, errorText } = ui
   const defaultClasses = [
@@ -48,6 +49,10 @@ function Select({
     })
   }
 
+  const errorMessageValue = errorMessage
+    ? `${errorMessage}`
+    : `${errorText?.prefix} ${legend && legend.toLowerCase()} ${errorText?.suffix}`
+
   return (
     <>
       <Label label={label || select?.labelSelect} htmlFor={htmlFor} />
@@ -61,7 +66,7 @@ function Select({
         onChange={onChange}
         value={selected || ''}
         aria-invalid={invalid === true}
-        data-errormessage={`${errorText?.prefix} ${legend && legend.toLowerCase()} ${errorText?.suffix}`}
+        data-errormessage={errorMessageValue}
         aria-errormessage={`error-description-${htmlFor}`}
       >
         <option value="" key="default" disabled>

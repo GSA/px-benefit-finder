@@ -1,12 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/space/_index.scss' as space;
 
-.bf-radio-group > .bf-usa-radio:first-of-type {
-  .bf-usa-radio__label {
-    margin-top: space.$space-md-plus;
-  }
-}
-
 .bf-usa-radio__label {
   margin-top: space.$space-md;
 }

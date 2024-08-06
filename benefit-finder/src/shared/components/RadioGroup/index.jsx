@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import { Radio } from '../index'
 
+import './_index.scss'
+
 /**
  * a functional component that renders an input of radio type
  * @component

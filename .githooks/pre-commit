@@ -130,6 +130,7 @@ awk '!seen[$0]++' "$TRUFFLEHOG_LOCAL_CONFIG" > temp_file.yml && mv temp_file.yml
 
 echo "Duplicates removed from $TRUFFLEHOG_LOCAL_CONFIG"
 
+
 TRUFFLEHOG_LOCAL_CONFIG="trufflehog3.local.yml"
 TEMP_FILE="temp_trufflehog3.local.yml"
 
@@ -138,22 +139,31 @@ touch "$TEMP_FILE"
 
 # Read each line of the configuration file
 while IFS= read -r line; do
-    # Check if the line contains an asterisk for wildcard patterns and is not already in the correct format
-    if [[ "$line" == *"*"* && ! "$line" == "\"**/*"* ]]; then
-        # Adjust the pattern and add double quotes around the corrected line
-        corrected_line=$(echo "$line" | sed -E 's/^(\s*-\s*)\*([^*]*)/\1"**\/\2"/; s/^(\s*-\s*)\/\*([^*]*)/\1"**\/\2"/')
-        echo "$corrected_line" >> "$TEMP_FILE"
+    # Remove extra quotes and slashes that may interfere with pattern matching
+    cleaned_line=$(echo "$line" | sed 's/"//g' | sed 's/^\s*- \/\{0,1\}\*\//\- /')
+    
+    # Check if the line contains an asterisk and needs to be reformatted
+    if [[ "$cleaned_line" == *" "* ]]; then
+        # This handles the transformation for patterns starting with *. or /*.
+        if [[ "$cleaned_line" =~ \*[^/]* || "$cleaned_line" =~ /\*[^/]* ]]; then
+            # Correctly enclose with quotes and replace with proper wildcard format
+            corrected_line=$(echo "$cleaned_line" | sed -E 's/(\s*- \/*)(\*)([^*]+)/\1"**\/\3"/')
+        else
+            corrected_line="$cleaned_line"
+        fi
     else
-        # Write the line as-is if no correction is needed
-        echo "$line" >> "$TEMP_FILE"
+        corrected_line="$cleaned_line"
     fi
+    
+    # Write the potentially corrected line to the temporary file
+    echo "$corrected_line" >> "$TEMP_FILE"
 done < "$TRUFFLEHOG_LOCAL_CONFIG"
 
 # Replace the old config file with the corrected version
 mv "$TEMP_FILE" "$TRUFFLEHOG_LOCAL_CONFIG"
 
-echo "Patterns corrected as necessary in $TRUFFLEHOG_LOCAL_CONFIG, with quotes added to modified lines."
-
+echo "Patterns corrected as necessary in $TRUFFLEHOG_LOCAL_CONFIG, with quotes added only to modified lines."
+  
 echo "Scanning branch: $BRANCH_NAME"
 
 # TruffleHog3 Scan on local branch files

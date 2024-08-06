@@ -123,23 +123,40 @@ done < "$TRUFFLEHOG_GLOBAL_CONFIG"
 
 echo "Updated paths in $TRUFFLEHOG_LOCAL_CONFIG from $TRUFFLEHOG_GLOBAL_CONFIG"
 
+TRUFFLEHOG_LOCAL_CONFIG="trufflehog3.local.yml"
+
+# Remove duplicate lines while preserving the order and structure
+awk '!seen[$0]++' "$TRUFFLEHOG_LOCAL_CONFIG" > temp_file.yml && mv temp_file.yml "$TRUFFLEHOG_LOCAL_CONFIG"
+
+echo "Duplicates removed from $TRUFFLEHOG_LOCAL_CONFIG"
 
 echo "Scanning branch: $BRANCH_NAME"
 
 # TruffleHog3 Scan on local branch files
-$TRUFFLEHOG3_PATH --no-history --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json || true
+$TRUFFLEHOG3_PATH --no-history --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json -c $TRUFFLEHOG_LOCAL_CONFIG || true
 
 # Prepare for result checking
 # Check for secrets in the results
-CONTENT=$($JQ_PATH 'length' $ROOT_DIR/truffleHogResults.json)
-if [ "$CONTENT" -eq 0 ]; then
-    rm $ROOT_DIR/truffleHogResults.json
-    # rm $ROOT_DIR/trufflehog3.local.yml
+
+
+# Check if the results JSON file exists and is not empty
+if [ -f "$ROOT_DIR/truffleHogResults.json" ]; then
+    # Use jq to get the length of the content, assuming it might return a count of items or entries
+    CONTENT=$($JQ_PATH 'length' "$ROOT_DIR/truffleHogResults.json")
+else
+    # Set CONTENT to 0 if the file does not exist or is empty to indicate no findings
+    CONTENT=0
+fi
+
+# Now, use the CONTENT to determine the next steps
+if [[ "$CONTENT" -eq 0 ]]; then
+    # If no content is found, remove the JSON file and output that no secrets were found
+    rm "$ROOT_DIR/truffleHogResults.json"
     echo "No secrets found. Commit is safe."
     exit 0
 else
+    # If CONTENT is not zero, indicate that secrets were detected and block the commit
     echo "Secrets detected! Commit blocked."
     echo "Please review and resolve issues."
     exit 1
 fi
-

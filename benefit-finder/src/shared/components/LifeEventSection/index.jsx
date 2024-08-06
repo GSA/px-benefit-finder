@@ -114,10 +114,10 @@ const LifeEventSection = ({
       })
       .flat()
 
-    const mergeInvalidElements = [...invalidElements]
-    console.log('mergedInvalid Elements', mergeInvalidElements)
+    // const mergeInvalidElements = [...invalidElements]
+
     setHasError(invalidElements)
-    return mergeInvalidElements.length === 0
+    return invalidElements.length === 0
   }
 
   /**

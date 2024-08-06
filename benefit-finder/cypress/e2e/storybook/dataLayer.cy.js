@@ -7,8 +7,13 @@ import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.js
 import content from '../../../src/shared/api/mock-data/current.json'
 
 // establish some common data points from our mock values and scenarios
-const { intro, lifeEventSection, resultsView, openAllBenefitAccordions } =
-  dataLayerUtils.dataLayerStructure
+const {
+  intro,
+  lifeEventSection,
+  errors,
+  resultsView,
+  openAllBenefitAccordions,
+} = dataLayerUtils.dataLayerStructure
 const { lifeEventForm } = content.data
 const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
 const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
@@ -73,6 +78,15 @@ const dataLayerValueFormStepOne = {
   bfData: {
     pageView: `${lifeEventSection.bfData.pageView}-1`,
     viewTitle: lifeEventForm.sectionsEligibilityCriteria[0].section.heading,
+  },
+}
+
+const dataLayerValueFormSubmitSuccess = {
+  event: errors.event,
+  bfData: {
+    errors: '',
+    errorCount: { number: 0, string: '0' },
+    formSuccess: true,
   },
 }
 
@@ -162,8 +176,10 @@ const dataLayerValueZeroResultsViewNotEligible = {
 const dataLayerValues = [
   dataLayerValueIntro,
   dataLayerValueFormStepOne,
+  dataLayerValueFormSubmitSuccess,
   dataLayerValueFormStepTwo,
   dataLayerValueFormCompletionModal,
+  dataLayerValueFormSubmitSuccess,
   dataLayerValueVerifySecletions,
   dataLayerValueZeroResultsViewEligible,
   dataLayerValueZeroResultsViewNotEligible,

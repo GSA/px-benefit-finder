@@ -40,13 +40,11 @@ const LifeEventSection = ({
   modalOpen,
   setModalOpen,
 }) => {
-  // const currentStep = step - 1
   // state
   const [modal, setModal] = useState(false)
   const [currentData, setCurrentData] = useState(() => data && data[step - 1])
-  const [values, setValues] = useState([])
+  const [requiredFieldsets, setRequiredFieldsets] = useState([])
   const [hasError, setHasError] = useState([])
-  const classError = 'usa-input--error'
   const [hasData, setHasData] = useState(false)
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
@@ -74,8 +72,24 @@ const LifeEventSection = ({
     handleData([...data])
   }
 
-  const handleFieldAlerts = () => {
-    setHasError(Array.from(document.querySelectorAll(`.${classError}`)))
+  const handleCheckForRequiredValues = async () => {
+    const invalidElements = await requiredFieldsets
+      .map(fieldset => {
+        return (
+          Array.from(fieldset.elements)
+            // check all the required inputs, if there is no value, there the input is invalid
+            .filter(el => {
+              // we need to custom handle our dates verification to ensure a 4 digit year
+              if (el.attributes['data-datetype']?.value === 'year') {
+                return !el.value || (el.value && el.value.length !== 4)
+              }
+              return !el.value
+            })
+        )
+      })
+      .flat()
+    setHasError(invalidElements)
+    return invalidElements.length === 0
   }
 
   /**
@@ -95,15 +109,8 @@ const LifeEventSection = ({
     // remove the display class from the alert
     alertFieldRef.current.classList.remove('display-none')
     alertFieldRef.current.focus()
-    // add to all the collected error fields an error class
-    values.forEach(field => {
-      field.classList.contains('required-field') &&
-        field.classList.add(classError)
-    })
-    handleFieldAlerts()
     currentData.completed = false
     window.scrollTo(0, 0)
-    return false
   }
 
   /**
@@ -113,26 +120,21 @@ const LifeEventSection = ({
   const handleSuccess = () => {
     // hide alert by adding the display class
     alertFieldRef.current.classList.add('display-none')
-    // remove from all the collected error fields the error class
-    values.forEach(field => {
-      field.classList.remove(classError)
-    })
     currentData.completed = true
     handleUpdateData()
-    setValues([])
-    return true
+    setRequiredFieldsets([])
   }
 
   /**
    * a function that collect all the required fields in the current step
    * @function
    */
-  const getRequiredFields = () => {
-    const collectedNodeList = document.querySelectorAll('input, select')
+  const getRequiredFieldsets = () => {
+    const collectedNodeList = document.querySelectorAll('fieldset')
     const requiredNodeList = Array.from(collectedNodeList).filter(
       node => node.attributes.required
     )
-    setValues(Array.from(requiredNodeList))
+    setRequiredFieldsets(Array.from(requiredNodeList))
   }
 
   /**
@@ -142,33 +144,9 @@ const LifeEventSection = ({
    */
   const handleCheckRequriedFields = () => {
     // collect all the required fields in the current step
-    getRequiredFields()
-    // check if any of these elements are valid (will add others later)
-    const valid = element => {
-      return !element.classList.contains('required-field')
-    }
-
-    return values.length === 0 || values.every(valid)
-      ? handleSuccess()
-      : handleAlert()
-  }
-
-  /**
-   * a function that updates our step count and set our data index
-   * @function
-   * @param {array} hasError - collection of error elements
-   * @param {event} event - passed in change handler
-   */
-  const updateAlertArray = (hasError, event) => {
-    hasError.forEach((element, index) => {
-      if (element.id.includes(event.target.id)) {
-        hasError.splice(index, 1)
-      }
+    handleCheckForRequiredValues().then(valid => {
+      valid === true ? handleSuccess() : handleAlert()
     })
-
-    if (hasError.length === 0) {
-      alertFieldRef.current.classList.add('display-none')
-    }
   }
   /**
    *
@@ -183,12 +161,27 @@ const LifeEventSection = ({
    * @return {null} only executes inherited functions
    */
   const handleForwardUpdate = updateIndex => {
-    if (handleCheckRequriedFields() === true) {
-      // set complete step usa-step-indicator__segment--complete
-      setStep(step + updateIndex)
-      setStepData(updateIndex)
-      resetElement && resetElement.current.focus()
-    }
+    handleCheckRequriedFields()
+    handleCheckForRequiredValues().then(valid => {
+      if (valid === true) {
+        // handle dataLayer
+        const { errors } = dataLayerUtils.dataLayerStructure
+        dataLayerUtils.dataLayerPush(window, {
+          event: errors.event,
+          bfData: {
+            errors: '',
+            errorCount: {
+              number: 0,
+              string: `0`,
+            },
+            formSuccess: true,
+          },
+        })
+        setStep(step + updateIndex)
+        setStepData(updateIndex)
+        resetElement && resetElement.current.focus()
+      }
+    })
   }
 
   /**
@@ -217,7 +210,7 @@ const LifeEventSection = ({
       setCurrentData,
       event.target.value
     )
-    updateAlertArray(hasError, event)
+    hasError.length > 0 && handleCheckForRequiredValues()
   }
 
   /**
@@ -237,15 +230,8 @@ const LifeEventSection = ({
         event.target.value,
         event.target.id
       )
-      updateAlertArray(hasError, event)
+      hasError.length > 0 && handleCheckForRequiredValues()
     }
-  }
-
-  const handleDateRequired = (values, item) => {
-    return Object.keys(values?.value).length === 3 &&
-      values?.value?.year?.length === 4
-      ? false
-      : item.fieldset.required
   }
 
   // manage the display of our modal initializer
@@ -256,7 +242,7 @@ const LifeEventSection = ({
   // check for all required fields and scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0)
-    getRequiredFields()
+    getRequiredFieldsets()
   }, [])
 
   // handle dataLayer
@@ -289,7 +275,7 @@ const LifeEventSection = ({
               setCurrent={setStep}
               data={data}
               backLinkLabel={stepIndicator.stepBackLink}
-              handleCheckRequriedFields={() => handleCheckRequriedFields()}
+              handleCheckRequriedFields={() => handleForwardUpdate(1)}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
@@ -300,6 +286,8 @@ const LifeEventSection = ({
                   description={ui.alertBanner.description}
                   type="error"
                   hasError={hasError.length > 0}
+                  errorCount={hasError.length}
+                  errorList={hasError}
                 ></Alert>
                 <Heading className="bf-usa-section-heading" headingLevel={2}>
                   {currentData.section.heading}
@@ -324,10 +312,26 @@ const LifeEventSection = ({
                         <Fieldset
                           key={`select-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
+                          errorMessage={item.fieldset.errorMessage}
                           hint={item.fieldset.hint}
                           required={item.fieldset.required}
                           requiredLabel={requiredLabel}
                           hidden={hidden && hidden}
+                          id={item.fieldset.criteriaKey}
+                          invalid={
+                            item.fieldset.required &&
+                            hasError
+                              .map(errorItem => {
+                                return (
+                                  errorItem.id !== undefined &&
+                                  errorItem.id.includes(
+                                    item.fieldset?.criteriaKey
+                                  )
+                                )
+                              })
+                              .includes(true)
+                          }
+                          ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
@@ -336,14 +340,23 @@ const LifeEventSection = ({
                               value => value.selected !== undefined
                             )
 
+                            const invalid =
+                              item.fieldset.required &&
+                              hasError
+                                .map(item => {
+                                  return (
+                                    item.id !== undefined &&
+                                    fieldSetId.includes(item.id)
+                                  )
+                                })
+                                .includes(true)
+
+                            const { select, errorText } = ui
+
                             return (
                               <div key={fieldSetId}>
                                 <Select
-                                  required={
-                                    defaultSelected === undefined &&
-                                    item.fieldset.required
-                                  }
-                                  ui={ui?.select}
+                                  ui={{ select, errorText }}
                                   htmlFor={fieldSetId}
                                   key={fieldSetId}
                                   options={inputValues}
@@ -354,12 +367,8 @@ const LifeEventSection = ({
                                       item.fieldset.criteriaKey
                                     )
                                   }
-                                  invalid={
-                                    hasError.length > 0 &&
-                                    hasError
-                                      .map(item => item.id.includes(fieldSetId))
-                                      .includes(true)
-                                  }
+                                  invalid={invalid}
+                                  legend={item.fieldset.legend}
                                 />
                               </div>
                             )
@@ -380,29 +389,32 @@ const LifeEventSection = ({
                         <Fieldset
                           key={`radio-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
+                          errorMessage={item.fieldset.errorMessage}
                           hint={item.fieldset.hint}
                           required={item.fieldset.required}
                           requiredLabel={requiredLabel}
                           hidden={hidden && hidden}
+                          ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
 
-                            const inputValues = input.inputCriteria.values
-                            const optionSelected = inputValues.find(
-                              value => value.selected !== undefined
-                            )
+                            const invalid =
+                              item.fieldset.required &&
+                              hasError
+                                .map(item => {
+                                  return (
+                                    item.id !== undefined &&
+                                    fieldSetId.includes(item.id)
+                                  )
+                                })
+                                .includes(true)
 
                             return (
                               <div
                                 className="radio-group"
                                 key={fieldSetId}
-                                aria-invalid={
-                                  hasError.length > 0 &&
-                                  hasError
-                                    .map(item => item.id.includes(fieldSetId))
-                                    .includes(true)
-                                }
+                                aria-invalid={invalid}
                               >
                                 {/* map the options */}
                                 {input.inputCriteria.values.map(
@@ -411,10 +423,6 @@ const LifeEventSection = ({
 
                                     return (
                                       <Radio
-                                        required={
-                                          !optionSelected &&
-                                          item.fieldset.required
-                                        }
                                         name={fieldSetId}
                                         key={inputId}
                                         id={inputId}
@@ -450,21 +458,42 @@ const LifeEventSection = ({
                         <Fieldset
                           key={`date-${item.fieldset.criteriaKey}-${index}`}
                           legend={item.fieldset.legend}
+                          errorMessage={item.fieldset.errorMessage}
                           hint={item.fieldset.hint}
                           required={item.fieldset.required}
                           requiredLabel={requiredLabel}
                           hidden={hidden && hidden}
+                          id={item.fieldset.criteriaKey}
+                          invalid={
+                            item.fieldset.required &&
+                            hasError
+                              .map(errorItem => {
+                                return (
+                                  errorItem.id !== undefined &&
+                                  errorItem.id.includes(
+                                    item.fieldset?.criteriaKey
+                                  )
+                                )
+                              })
+                              .includes(true)
+                          }
+                          ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
 
+                            const invalid =
+                              item.fieldset.required &&
+                              hasError.filter(item => {
+                                return (
+                                  item.id !== undefined &&
+                                  item.id.includes(fieldSetId)
+                                )
+                              })
+
                             return (
                               <div key={fieldSetId}>
                                 <Date
-                                  required={handleDateRequired(
-                                    input.inputCriteria.values[0],
-                                    item
-                                  )}
                                   value={input.inputCriteria.values[0]?.value}
                                   onChange={event =>
                                     handleDateChanged(
@@ -473,13 +502,10 @@ const LifeEventSection = ({
                                     )
                                   }
                                   ui={ui}
+                                  errorMessage={item.fieldset.errorMessage}
+                                  parentLegend={item.fieldset.legend}
                                   id={fieldSetId}
-                                  invalid={
-                                    hasError.length > 0 &&
-                                    hasError
-                                      .map(item => item.id.includes(fieldSetId))
-                                      .includes(true)
-                                  }
+                                  invalid={invalid}
                                 />
                               </div>
                             )
@@ -568,10 +594,11 @@ const LifeEventSection = ({
                     navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
                     navItemTwoFunction={setViewResults}
                     triggerLabel={buttonGroup[1].value}
-                    handleCheckRequriedFields={handleCheckRequriedFields}
+                    handleCheckRequriedFields={handleCheckForRequiredValues}
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
                     completed={currentData.completed}
+                    alertElement={alertFieldRef}
                   />
                 </div>
               )}

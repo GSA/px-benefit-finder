@@ -10,47 +10,51 @@ class PageObjects {
   }
 
   applicantDateOfBirthMonth() {
-    return cy.get('#date_of_birth_month-applicant_date_of_birth_0')
+    return cy.get('#applicant_date_of_birth_0-date_of_birth_month')
   }
 
   applicantDateOfBirthDay() {
-    return cy.get('#date_of_birth_day-applicant_date_of_birth_0')
+    return cy.get('#applicant_date_of_birth_0-date_of_birth_day')
   }
 
   applicantDateOfBirthYear() {
-    return cy.get('#date_of_birth_year-applicant_date_of_birth_0')
+    return cy.get('#applicant_date_of_birth_0-date_of_birth_year')
   }
 
   applicantDateOfDeathMonth() {
-    return cy.get('#date_of_birth_month-deceased_date_of_death_0')
+    return cy.get('#deceased_date_of_death_0-date_of_birth_month')
   }
 
   applicantDateOfDeathDay() {
-    return cy.get('#date_of_birth_day-deceased_date_of_death_0')
+    return cy.get('#deceased_date_of_death_0-date_of_birth_day')
   }
 
   applicantDateOfDeathYear() {
-    return cy.get('#date_of_birth_year-deceased_date_of_death_0')
+    return cy.get('#deceased_date_of_death_0-date_of_birth_year')
   }
 
   applicantDateOfFuneralMonth() {
-    return cy.get('#date_of_birth_month-deceased_date_of_funeral_0')
+    return cy.get('#deceased_date_of_funeral_0-date_of_birth_month')
   }
 
   applicantDateOfFuneralDay() {
-    return cy.get('#date_of_birth_day-deceased_date_of_funeral_0')
+    return cy.get('#deceased_date_of_funeral_0-date_of_birth_day')
   }
 
   applicantDateOfFuneralYear() {
-    return cy.get('#date_of_birth_year-deceased_date_of_funeral_0')
+    return cy.get('#deceased_date_of_funeral_0-date_of_birth_year')
   }
 
   benefitSectionAlert() {
     return cy.get('div#bf-section > div[role="alert"]')
   }
 
-  dateAlert() {
-    return cy.get('.bf-usa-date-alert')
+  bfAlertList() {
+    return cy.get('[data-testid="bf-errors-list"]')
+  }
+
+  bfAlertListItem() {
+    return cy.get('[data-testid="bf-errors-list-item"]')
   }
 
   applicantRelationshipToDeceased() {

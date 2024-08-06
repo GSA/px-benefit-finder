@@ -82,13 +82,16 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               class="bf-usa-alert__heading usa-alert__heading font-family-sans"
               role="heading"
             >
-              Error
+              Your information contains 0 errors
             </h2>
             <p
               class="bf-usa-alert__text usa-alert__text"
             >
               Complete all required fields.
             </p>
+            <ul
+              data-testid="bf-errors-list"
+            />
           </div>
         </div>
         <h2
@@ -107,13 +110,10 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </p>
         </div>
         <fieldset
-          class="bf-usa-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset required-field  "
+          id="applicant_date_of_birth"
+          required=""
         >
-          <div
-            class="bf-hint"
-          >
-            For example: January 19 2000
-          </div>
           <legend
             class="bf-legend usa-legend"
           >
@@ -125,33 +125,43 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               (required)
             </span>
           </legend>
+          <div
+            class="bf-hint"
+          >
+            For example: January 19 2000
+          </div>
           <div>
+            <ul
+              class="add-list-reset"
+            />
             <div
               class="bf-usa-memorable-date usa-memorable-date"
-              id="bf-usa-memorable-date-applicant_date_of_birth_0 usa-memorable-date-applicant_date_of_birth_0"
+              id="bf-usa-memorable-date-applicant_date_of_birth_0"
             >
               <div
                 class="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select"
               >
                 <label
                   class="bf-usa-label usa-label"
-                  for="date_of_birth_month-applicant_date_of_birth_0"
+                  for="applicant_date_of_birth_0-date_of_birth_month"
                 >
                   Month
                 </label>
                 <div
                   class="usa-sr-only"
-                  id="month-description-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-month-description"
                 >
                   Select a month from the list
                 </div>
                 <select
-                  aria-describedby="month-description-applicant_date_of_birth_0"
+                  aria-describedby="applicant_date_of_birth_0-month-description"
+                  aria-errormessage="month-error-description-applicant_date_of_birth_0"
                   aria-invalid="false"
-                  class="bf-usa-select usa-select required-field"
-                  id="date_of_birth_month-applicant_date_of_birth_0"
-                  name="date_of_birth_month-applicant_date_of_birth_0"
-                  required=""
+                  class="bf-usa-select usa-select "
+                  data-datetype="month"
+                  data-errormessage="Fill out the date of birth month field"
+                  id="applicant_date_of_birth_0-date_of_birth_month"
+                  name="applicant_date_of_birth_0-date_of_birth_month"
                 >
                   <option
                     disabled=""
@@ -226,24 +236,26 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               >
                 <label
                   class="bf-usa-label usa-label"
-                  for="date_of_birth_day-applicant_date_of_birth_0"
+                  for="applicant_date_of_birth_0-date_of_birth_day"
                 >
                   Day
                 </label>
                 <div
                   class="usa-sr-only"
-                  id="day-description-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-day-description"
                 >
                   Enter two numerals for day
                 </div>
                 <input
-                  aria-describedby="day-description-applicant_date_of_birth_0"
+                  aria-describedby="applicant_date_of_birth_0-day-description"
+                  aria-errormessage="day-error-description-applicant_date_of_birth_0"
                   aria-invalid="false"
-                  class="bf-usa-input usa-input required-field"
-                  id="date_of_birth_day-applicant_date_of_birth_0"
+                  class="bf-usa-input usa-input "
+                  data-datetype="day"
+                  data-errormessage="Fill out the date of birth day field"
+                  id="applicant_date_of_birth_0-date_of_birth_day"
                   inputmode="numeric"
-                  name="date_of_birth_day-applicant_date_of_birth_0"
-                  required=""
+                  name="applicant_date_of_birth_0-date_of_birth_day"
                   value=""
                 />
               </div>
@@ -252,24 +264,26 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               >
                 <label
                   class="bf-usa-label usa-label"
-                  for="date_of_birth_year-applicant_date_of_birth_0"
+                  for="applicant_date_of_birth_0-date_of_birth_year"
                 >
                   Year
                 </label>
                 <div
                   class="usa-sr-only"
-                  id="year-description-applicant_date_of_birth_0"
+                  id="applicant_date_of_birth_0-year-description"
                 >
                   Enter four numerals for year
                 </div>
                 <input
-                  aria-describedby="year-description-applicant_date_of_birth_0"
+                  aria-describedby="applicant_date_of_birth_0-year-description"
+                  aria-errormessage="year-error-description-applicant_date_of_birth_0"
                   aria-invalid="false"
-                  class="bf-usa-input usa-input required-field"
-                  id="date_of_birth_year-applicant_date_of_birth_0"
+                  class="bf-usa-input usa-input "
+                  data-datetype="year"
+                  data-errormessage="Fill out the date of birth year field"
+                  id="applicant_date_of_birth_0-date_of_birth_year"
                   inputmode="numeric"
-                  name="date_of_birth_year-applicant_date_of_birth_0"
-                  required=""
+                  name="applicant_date_of_birth_0-date_of_birth_year"
                   value=""
                 />
               </div>
@@ -277,7 +291,9 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="bf-usa-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset required-field  "
+          id="applicant_relationship_to_the_deceased"
+          required=""
         >
           <legend
             class="bf-legend usa-legend"
@@ -298,11 +314,12 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               Select
             </label>
             <select
+              aria-errormessage="error-description-applicant_relationship_to_the_deceased_0"
               aria-invalid="false"
-              class="bf-usa-select usa-select required-field"
+              class="bf-usa-select usa-select "
+              data-errormessage="Fill out the relationship to the deceased field"
               id="applicant_relationship_to_the_deceased_0"
               name="applicant_relationship_to_the_deceased_0"
-              required=""
             >
               <option
                 disabled=""
@@ -339,7 +356,9 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="bf-usa-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset required-field  "
+          id="applicant_marital_status"
+          required=""
         >
           <legend
             class="bf-legend usa-legend"
@@ -360,11 +379,12 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               Select
             </label>
             <select
+              aria-errormessage="error-description-applicant_marital_status_0"
               aria-invalid="false"
-              class="bf-usa-select usa-select required-field"
+              class="bf-usa-select usa-select "
+              data-errormessage="Fill out the marital status field"
               id="applicant_marital_status_0"
               name="applicant_marital_status_0"
-              required=""
             >
               <option
                 disabled=""
@@ -396,7 +416,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="bf-usa-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset   "
         >
           <legend
             class="bf-legend usa-legend"
@@ -444,7 +464,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="bf-usa-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset   "
         >
           <legend
             class="bf-legend usa-legend"
@@ -492,7 +512,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="bf-usa-fieldset usa-fieldset "
+          class="bf-usa-fieldset usa-fieldset   "
         >
           <legend
             class="bf-legend usa-legend"

@@ -9,7 +9,7 @@ import {
   Date,
   Fieldset,
   Heading,
-  Radio,
+  RadioGroup,
   Select,
   StepIndicator,
   Modal,
@@ -73,6 +73,35 @@ const LifeEventSection = ({
   }
 
   const handleCheckForRequiredValues = async () => {
+    // collect radio groups
+    // const invalidRadioFieldSets = await requiredFieldsets
+    //   .map(fieldset => {
+    //     console.log(fieldset)
+
+    //     const radioGroup = Array.from(fieldset.elements).filter(
+    //       el => el.attributes.type?.value === 'radio'
+    //     )
+
+    //     if (radioGroup.every(group => !group.checked)) {
+    //       // find the parent fieldset and return
+    //       console.log(radioGroup)
+
+    //       // get an id from the radio group
+    //       const groupId = radioGroup[0]?.name
+    //       const trimmedGroupId = groupId && groupId.replace(/_[0-9]/, '')
+    //       // if the id matches the id in our fieldset return the fieldset
+    //       const invalidRadioSets = requiredFieldsets.filter(
+    //         fieldset => fieldset.id === trimmedGroupId
+    //       )
+    //       return invalidRadioSets
+    //     } else {
+    //       return undefined
+    //     }
+    //   })
+    //   .flat()
+
+    // console.log('invalidRadioFieldSets', invalidRadioFieldSets)
+
     const invalidElements = await requiredFieldsets
       .map(fieldset => {
         return (
@@ -88,6 +117,10 @@ const LifeEventSection = ({
         )
       })
       .flat()
+
+    // const mergeInvalidElements = [...invalidElements, ...invalidRadioFieldSets]
+    // console.log(mergeInvalidElements)
+    // setHasError(mergeInvalidElements)
     setHasError(invalidElements)
     return invalidElements.length === 0
   }
@@ -391,63 +424,46 @@ const LifeEventSection = ({
                       <Fragment
                         key={`radio-${item.fieldset.criteriaKey}+${index}`}
                       >
-                        <Fieldset
-                          key={`radio-${item.fieldset.criteriaKey}-${index}`}
-                          legend={item.fieldset.legend}
-                          errorMessage={item.fieldset.errorMessage}
-                          hint={item.fieldset.hint}
-                          required={item.fieldset.required}
-                          requiredLabel={requiredLabel}
-                          hidden={hidden && hidden}
-                          ui={ui.errorText}
-                        >
-                          {item.fieldset.inputs.map((input, index) => {
-                            const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
+                        {item.fieldset.inputs.map((input, index) => {
+                          const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
 
-                            const invalid =
-                              item.fieldset.required &&
-                              hasError
-                                .map(item => {
-                                  return (
-                                    item.id !== undefined &&
-                                    fieldSetId.includes(item.id)
+                          const invalid =
+                            item.fieldset.required &&
+                            hasError
+                              .map(errorItem => {
+                                return (
+                                  errorItem.id !== undefined &&
+                                  errorItem.id.includes(
+                                    item.fieldset?.criteriaKey
                                   )
-                                })
-                                .includes(true)
+                                )
+                              })
+                              .includes(true)
 
-                            return (
-                              <div
-                                className="bf-radio-group radio-group"
+                          return (
+                            <Fieldset
+                              key={`radio-${item.fieldset.criteriaKey}-${index}`}
+                              id={item.fieldset.criteriaKey}
+                              legend={item.fieldset.legend}
+                              errorMessage={item.fieldset.errorMessage}
+                              hint={item.fieldset.hint}
+                              required={item.fieldset.required}
+                              requiredLabel={requiredLabel}
+                              hidden={hidden && hidden}
+                              ui={ui.errorText}
+                              invalid={invalid}
+                            >
+                              <RadioGroup
+                                invalid={invalid}
                                 key={fieldSetId}
-                                aria-invalid={invalid}
-                              >
-                                {/* map the options */}
-                                {input.inputCriteria.values.map(
-                                  (option, index) => {
-                                    const inputId = `${fieldSetId}_${index}`
-
-                                    return (
-                                      <Radio
-                                        name={fieldSetId}
-                                        key={inputId}
-                                        id={inputId}
-                                        label={option.value}
-                                        value={option.value}
-                                        checked={option.selected || false}
-                                        onChange={event => {
-                                          handleChanged(
-                                            event,
-                                            item.fieldset.criteriaKey
-                                          )
-                                        }}
-                                      />
-                                    )
-                                  }
-                                )}
-                              </div>
-                            )
-                          })}
-                        </Fieldset>
+                                fieldSetId={fieldSetId}
+                                handleChanged={handleChanged}
+                                values={input.inputCriteria.values}
+                                criteriaKey={item.fieldset.criteriaKey}
+                              />
+                            </Fieldset>
+                          )
+                        })}
                         {children || null}
                       </Fragment>
                     ) : item.fieldset.inputs[0].inputCriteria.type ===

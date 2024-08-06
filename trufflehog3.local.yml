@@ -41,3 +41,5 @@ exclude:
     paths:
 - message: Exclude Test Files, False Positives, and Compressed Files.
 paths: 
+  paths:
+    - 

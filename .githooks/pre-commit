@@ -84,38 +84,30 @@ if [ -z "$BRANCH_NAME" ]; then
     exit 1
 fi
 
-# Assuming trufflehog3.local.yml is already created and filled with paths from .gitignore
 TRUFFLEHOG_LOCAL_CONFIG="trufflehog3.local.yml"
 TRUFFLEHOG_GLOBAL_CONFIG=".trufflehog3.yml"
 
-# Check if the global config file exists
-if [ -f "$TRUFFLEHOG_GLOBAL_CONFIG" ]; then
-    # First we'll handle the simple path entries
-    while IFS= read -r line; do
-        # Clean up leading and trailing whitespace
-        clean_line=$(echo "$line" | sed 's/^\s*//;s/\s*$//')
-        
-        # Check if the line contains a key-value pair and ignore comments
-        if [[ "$clean_line" == *":"* ]] && [[ ! "$clean_line" == "#"* ]]; then
-            key=$(echo "$clean_line" | cut -d ':' -f 1 | sed 's/^\s*//;s/\s*$//')
-            value=$(echo "$clean_line" | cut -d ':' -f 2- | sed 's/^\s*//;s/\s*$//')
-            
-            # Check if it is a paths or message key
-            if [[ "$key" == "paths" ]] || [[ "$key" == "message" ]]; then
-                # Append complex structures with proper indentation
-                echo -e "  $key:\n    - $value" >> "$TRUFFLEHOG_LOCAL_CONFIG"
-            else
-                # Check if the key already exists in the local config
-                if ! grep -qE "^$key\s*:" "$TRUFFLEHOG_LOCAL_CONFIG"; then
-                    # Append non-existing settings to the local config
-                    echo "$key: $value" >> "$TRUFFLEHOG_LOCAL_CONFIG"
-                fi
-            fi
+# Start reading from the line where paths start
+start_reading=false
+
+while IFS= read -r line; do
+    clean_line=$(echo "$line" | sed 's/^\s*//;s/\s*$//')  # Clean line from leading/trailing whitespace
+
+    if [[ "$clean_line" == "paths:" ]]; then
+        start_reading=true
+        echo "  paths:" >> "$TRUFFLEHOG_LOCAL_CONFIG"  # Start the paths section in the local config
+        continue
+    fi
+
+    if $start_reading; then
+        if [[ "$clean_line" == "-"* ]]; then  # Check if the line is a path entry
+            echo "  $clean_line" >> "$TRUFFLEHOG_LOCAL_CONFIG"  # Maintain the correct indentation
         fi
-    done < "$TRUFFLEHOG_GLOBAL_CONFIG"
-    
-    echo "Merged configuration from $TRUFFLEHOG_GLOBAL_CONFIG into $TRUFFLEHOG_LOCAL_CONFIG"
-fi
+    fi
+
+done < "$TRUFFLEHOG_GLOBAL_CONFIG"
+
+echo "Updated paths in $TRUFFLEHOG_LOCAL_CONFIG from $TRUFFLEHOG_GLOBAL_CONFIG"
 
 
 echo "Scanning branch: $BRANCH_NAME"

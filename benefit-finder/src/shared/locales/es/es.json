@@ -184,8 +184,8 @@
     "final": "Preguntas finales"
   },
   "select": {
-    "labelSelect": "Seleccionar",
-    "defaultValue": "Presione para seleccionar",
+    "labelSelect": "Seleccione una opción",
+    "defaultValue": "-Seleccionar-",
     "dateDefaultValue": "-Seleccionar-"
   },
   "date": {

@@ -74,7 +74,6 @@ jobs:
 
       - name: Install Submodule
         run: |
-          cd ..
           pwd
           ls -la
           git submodule init

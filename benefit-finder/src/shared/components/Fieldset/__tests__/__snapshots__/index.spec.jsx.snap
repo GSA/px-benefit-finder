@@ -2,54 +2,62 @@
 
 exports[`Fieldset > renders a match to the previous error snapshot 1`] = `
 <DocumentFragment>
-  <fieldset
-    class="bf-usa-fieldset usa-fieldset required-field usa-input--error "
-    id="applicant_date_of_birth_0"
-    required=""
+  <div
+    class="bf-fieldset-wrapper"
   >
-    <legend
-      class="bf-legend usa-legend"
+    <fieldset
+      class="bf-usa-fieldset usa-fieldset required-field usa-input--error "
+      id="applicant_date_of_birth_0"
+      required=""
     >
-      legend
-      <span
-        class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
-        title="required"
+      <legend
+        class="bf-legend usa-legend"
       >
-        (Required)
-      </span>
-    </legend>
-    <div
-      aria-live="assertive"
-      class="bf-error-detail"
-      id="error-description-applicant_date_of_birth_0"
-    >
-      Fill out the legend field
-    </div>
-  </fieldset>
+        legend
+        <span
+          class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
+          title="required"
+        >
+          (Required)
+        </span>
+      </legend>
+      <div
+        aria-live="assertive"
+        class="bf-error-detail"
+        id="error-description-applicant_date_of_birth_0"
+      >
+        Fill out the legend field
+      </div>
+    </fieldset>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Fieldset > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
-  <fieldset
-    class="bf-usa-fieldset usa-fieldset   "
+  <div
+    class="bf-fieldset-wrapper"
   >
-    <legend
-      class="bf-legend usa-legend"
+    <fieldset
+      class="bf-usa-fieldset usa-fieldset   "
     >
-      Legend
-      <span
-        class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
-        title="required"
+      <legend
+        class="bf-legend usa-legend"
       >
-        (Required)
-      </span>
-    </legend>
-    <div
-      class="bf-hint"
-    >
-      hint
-    </div>
-  </fieldset>
+        Legend
+        <span
+          class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
+          title="required"
+        >
+          (Required)
+        </span>
+      </legend>
+      <div
+        class="bf-hint"
+      >
+        hint
+      </div>
+    </fieldset>
+  </div>
 </DocumentFragment>
 `;

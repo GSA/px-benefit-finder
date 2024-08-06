@@ -1,7 +1,8 @@
 const Colors = {
-  officerNavy: '#162e51',
+  officerNavy: '#112f42',
   marine: '#1a4480',
   popBlue: '#005ea2',
+  linkBlue: '#1a4480',
   sky: '#d9e8f6',
   darkSky: '#b6dbfd',
   offBlack: '#1b1b1b',
@@ -16,7 +17,7 @@ const Colors = {
   electricBlue: '#0050d8',
   teal: '#00bde3',
   alertRed: '#b50909',
-  greenCheck: '#009831',
+  greenCheck: '#00a91c',
 }
 
 export default Colors

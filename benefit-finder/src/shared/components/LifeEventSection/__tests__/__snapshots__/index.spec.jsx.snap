@@ -120,6 +120,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
+            data-errormessage="Fill out the date of birth field"
             id="applicant_date_of_birth"
             required=""
           >
@@ -305,6 +306,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
+            data-errormessage="Fill out the relationship to the deceased field"
             id="applicant_relationship_to_the_deceased"
             required=""
           >
@@ -374,6 +376,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
+            data-errormessage="Fill out the marital status field"
             id="applicant_marital_status"
             required=""
           >
@@ -438,6 +441,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
+            data-errormessage="Fill out the are you a u.s. citizen or eligible non-citizen field"
             id="applicant_citizen_status"
             required=""
           >
@@ -498,6 +502,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
+            data-errormessage="Fill out the are you caring for the deceased's child who is under age 16 or has a disability field"
             id="applicant_care_for_child"
             required=""
           >
@@ -558,6 +563,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <fieldset
             class="bf-usa-fieldset usa-fieldset   "
+            data-errormessage="Fill out the did you pay for funeral or burial expenses field"
             id="applicant_paid_funeral_expenses"
           >
             <legend

@@ -73,19 +73,15 @@ const LifeEventSection = ({
   }
 
   const handleCheckForRequiredValues = async () => {
-    // collect radio groups
+    // TODO: collect and handle radio groups
     // const invalidRadioFieldSets = await requiredFieldsets
     //   .map(fieldset => {
-    //     console.log(fieldset)
-
     //     const radioGroup = Array.from(fieldset.elements).filter(
     //       el => el.attributes.type?.value === 'radio'
     //     )
 
+    //     // find the parent fieldset and return
     //     if (radioGroup.every(group => !group.checked)) {
-    //       // find the parent fieldset and return
-    //       console.log(radioGroup)
-
     //       // get an id from the radio group
     //       const groupId = radioGroup[0]?.name
     //       const trimmedGroupId = groupId && groupId.replace(/_[0-9]/, '')
@@ -118,11 +114,10 @@ const LifeEventSection = ({
       })
       .flat()
 
-    // const mergeInvalidElements = [...invalidElements, ...invalidRadioFieldSets]
-    // console.log(mergeInvalidElements)
-    // setHasError(mergeInvalidElements)
+    const mergeInvalidElements = [...invalidElements]
+    console.log('mergedInvalid Elements', mergeInvalidElements)
     setHasError(invalidElements)
-    return invalidElements.length === 0
+    return mergeInvalidElements.length === 0
   }
 
   /**
@@ -407,6 +402,7 @@ const LifeEventSection = ({
                                   }
                                   invalid={invalid}
                                   legend={item.fieldset.legend}
+                                  errorMessage={item.fieldset.errorMessage}
                                 />
                               </div>
                             )
@@ -460,6 +456,9 @@ const LifeEventSection = ({
                                 handleChanged={handleChanged}
                                 values={input.inputCriteria.values}
                                 criteriaKey={item.fieldset.criteriaKey}
+                                errorMessage={item.fieldset.errorMessage}
+                                legend={item.fieldset.legend}
+                                ui={ui.errorText}
                               />
                             </Fieldset>
                           )

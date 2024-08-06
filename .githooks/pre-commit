@@ -108,7 +108,7 @@ $TRUFFLEHOG3_PATH --no-history --no-entropy --severity MEDIUM -vv -r rules.yml -
 CONTENT=$($JQ_PATH 'length' $ROOT_DIR/truffleHogResults.json)
 if [ "$CONTENT" -eq 0 ]; then
     rm $ROOT_DIR/truffleHogResults.json
-    rm $ROOT_DIR/trufflehog3.local.yml
+    # rm $ROOT_DIR/trufflehog3.local.yml
     echo "No secrets found. Commit is safe."
     exit 0
 else

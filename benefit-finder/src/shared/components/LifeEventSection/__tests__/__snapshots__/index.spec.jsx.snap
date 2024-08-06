@@ -440,21 +440,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-fieldset-wrapper"
         >
           <fieldset
-            class="bf-usa-fieldset usa-fieldset required-field  "
+            class="bf-usa-fieldset usa-fieldset   "
             data-errormessage="Fill out the are you a u.s. citizen or eligible non-citizen field"
             id="applicant_citizen_status"
-            required=""
           >
             <legend
               class="bf-legend usa-legend"
             >
               Are you a U.S. citizen or eligible non-citizen?
-              <span
-                class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
-                title="required"
-              >
-                (required)
-              </span>
             </legend>
             <div
               aria-invalid="false"
@@ -501,21 +494,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-fieldset-wrapper"
         >
           <fieldset
-            class="bf-usa-fieldset usa-fieldset required-field  "
+            class="bf-usa-fieldset usa-fieldset   "
             data-errormessage="Fill out the are you caring for the deceased's child who is under age 16 or has a disability field"
             id="applicant_care_for_child"
-            required=""
           >
             <legend
               class="bf-legend usa-legend"
             >
               Are you caring for the deceased's child who is under age 16 or has a disability?
-              <span
-                class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
-                title="required"
-              >
-                (required)
-              </span>
             </legend>
             <div
               aria-invalid="false"

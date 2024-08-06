@@ -1,0 +1,28 @@
+@use '../../styles/colors/_index.scss' as color;
+@use '../../styles/space/_index.scss' as space;
+
+.bf-radio-group > .bf-usa-radio:first-of-type {
+  .bf-usa-radio__label {
+    margin-top: space.$space-md-plus;
+  }
+}
+
+.bf-usa-radio__label {
+  margin-top: space.$space-md;
+}
+
+.bf-usa-radio__input:checked + .bf-usa-radio__label::before {
+  background-color: #005ea2;
+  box-shadow:
+    0 0 0 2px #005ea2,
+    inset 0 0 0 2px white;
+  outline-offset: 4px;
+}
+
+.bf-usa-radio__input:checked.usa-input--error + .bf-usa-radio__label::before {
+  background-color: #005ea2;
+  box-shadow:
+    0 0 0 3px color.$alert-red,
+    inset 0 0 0 2px white;
+  outline-offset: 4px;
+}

@@ -4,10 +4,6 @@
 .bf-usa-select {
   border-radius: 3px;
 
-  option {
-    @include p;
-  }
-
   &.usa-input--error {
     padding: 8px 32px 8px 8px;
     height: auto;

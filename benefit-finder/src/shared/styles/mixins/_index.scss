@@ -1,3 +1,13 @@
+@mixin font-family($font-family) {
+  @if $font-family == 'sans' {
+    font-family: 'Source Sans Pro Web', 'Helvetica Neue', Helvetica, Roboto,
+      Arial, sans-serif;
+  } @else {
+    font-family: 'Merriweather Web', Georgia, Cambria, 'Times New Roman', Times,
+      serif;
+  }
+}
+
 // USAGov font ratio is based on 16px
 // for example h1 @ 2.44rem = 39.04px
 
@@ -11,64 +21,76 @@
 // 16px = 1rem
 // 15px = 0.938rem
 
-@mixin h0 {
-  font-family: 'Public Sans', sans-serif;
+// Merriweather: 'serif'
+// Source Sans Pro: 'sans'
+
+@mixin h0($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 2.25rem;
   font-weight: 800;
   line-height: 100%;
 }
 
-@mixin h1 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h1($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 2rem;
   font-weight: 800;
-  line-height: 100%;
+  line-height: 45.79px;
 }
 
-@mixin h2 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h2($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 1.5rem;
   font-weight: 800;
-  line-height: 100%;
+  line-height: 37.57px;
 }
 
-@mixin h3 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h3($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 1.375rem;
   font-weight: 700;
-  line-height: 134.09%;
+  line-height: 24.65px;
 }
 
-@mixin h4 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h4($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 114.59%;
+  font-weight: 700;
+  line-height: 34.44px;
 }
 
-@mixin h5 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h5($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 1.375rem;
   font-weight: 700;
-  line-height: 134.09%;
+  line-height: 34.44px;
 }
 
-@mixin h6 {
-  font-family: 'Public Sans', sans-serif;
+@mixin h6($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 134.09%;
 }
 
-@mixin important-x-bold {
-  font-family: 'Public Sans', sans-serif;
+@mixin important-x-bold($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 1rem;
   font-weight: 800;
-  line-height: 134.09%;
+  line-height: 18.8px;
 }
 
-@mixin important-bold {
-  font-family: 'Public Sans', sans-serif;
+@mixin important-bold($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 1rem;
   font-weight: 700;
   line-height: 134.09%;
@@ -81,26 +103,31 @@
   line-height: 18.8px;
 }
 
-@mixin p1 {
-  font-family: 'Public Sans', sans-serif;
+@mixin p1($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 1rem;
   font-weight: 400;
   line-height: 18.8px;
 }
 
-@mixin p2 {
-  font-family: 'Public Sans', sans-serif;
+@mixin p2($font-family: 'serif') {
+  @include font-family($font-family);
+
   font-size: 0.938rem;
   font-weight: 400;
-  line-height: 18.8px;
+  line-height: 21.37px;
 }
 
-@mixin p3 {
-  font-family: 'Public Sans', sans-serif;
-  font-size: 15px;
+@mixin p3($font-family: 'serif') {
+  @include font-family($font-family);
+
+  font-size: 0.938rem;
   font-weight: 200;
   line-height: 18.8px;
 }
+
+// other
 
 @mixin list-items {
   font-size: 1.063rem;

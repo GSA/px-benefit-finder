@@ -44,7 +44,7 @@
 }
 
 .bf-section-heading {
-  @include h0;
+  @include h2($font-family: 'serif');
 
   background-color: color.$officer-navy;
   color: color.$white;
@@ -60,6 +60,11 @@
   border-bottom: 1px solid color.$base-light-grey;
 
   h2.bf-usa-section-heading {
+    @include h2($font-family: 'sans');
+  }
+
+  .bf-usa-section-description p {
+    @include p1($font-family: 'sans');
     @include h1;
   }
 

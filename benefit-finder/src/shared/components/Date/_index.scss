@@ -15,8 +15,6 @@
 .bf-usa-input {
   border-radius: 3px;
 
-  @include p;
-
   &.usa-input--error {
     padding: 8px;
     height: initial;

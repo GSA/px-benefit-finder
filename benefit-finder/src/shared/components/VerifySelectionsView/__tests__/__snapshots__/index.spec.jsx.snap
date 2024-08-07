@@ -10,7 +10,7 @@ exports[`VerifySelectionsView > renders a match to the previous snapshot 1`] = `
     >
       <h1
         aria-level="1"
-        class="bf-section-heading font-family-sans"
+        class="bf-section-heading "
         id="skip-to-h1"
         role="heading"
       />

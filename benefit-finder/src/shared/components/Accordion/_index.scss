@@ -36,13 +36,13 @@
     }
 
     .bf-accordion-heading {
-      @include h6;
+      @include h5($font-family: 'sans');
 
       letter-spacing: 0;
     }
 
     .bf-accordion-sub-heading {
-      @include p;
+      @include p2($font-family: 'sans');
 
       letter-spacing: 0;
     }

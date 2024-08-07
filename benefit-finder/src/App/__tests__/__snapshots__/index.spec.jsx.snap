@@ -25,7 +25,7 @@ exports[`loads intro 1`] = `
           >
             <h1
               aria-level="1"
-              class="bf-chevron-heading font-family-sans"
+              class="bf-chevron-heading "
               id="skip-to-h1"
               role="heading"
             >
@@ -53,7 +53,7 @@ exports[`loads intro 1`] = `
         >
           <h2
             aria-level="2"
-            class="font-family-sans"
+            class=""
             role="heading"
           >
             Steps
@@ -115,7 +115,7 @@ exports[`loads intro 1`] = `
             >
               <h2
                 aria-level="2"
-                class="bf-intro-process-notices-heading font-family-sans"
+                class="bf-intro-process-notices-heading "
                 role="heading"
               >
                 Before you start:

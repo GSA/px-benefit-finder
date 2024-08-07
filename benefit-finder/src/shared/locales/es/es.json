@@ -104,7 +104,7 @@
     "notEligible": {
       "chevron": {
         "heading": "Beneficios a los que no calificó",
-        "description": "Según sus respuestas usted no es elegible para estos beneficios."
+        "description": "<div><p>Según sus respuestas usted no es elegible para estos beneficios.</p></div>"
       },
       "heading": "Resultados",
       "description": "<strong>Según sus respuestas no es elegible para estos beneficios.<strong/> Podría calificar si tiene información adicional o si su situación cambia."

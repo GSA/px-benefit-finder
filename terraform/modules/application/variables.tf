@@ -92,7 +92,8 @@ variable "env" {
           services_external = optional(list(string), [])
           space        = optional(string ,null)
           source       = optional(string, null)
-          templates    = list(map(string))
+          stopped       = optional(bool, false)
+          templates    = optional(list(map(string)), [])
         })
       ), {}
     )

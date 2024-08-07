@@ -39,8 +39,12 @@
     "value": "required"
   },
   "alertBanner": {
-    "heading": "Error",
+    "heading": { "prefix": "Your information contains", "suffix": "errors" },
     "description": "Complete all required fields."
+  },
+  "errorText": {
+    "prefix": "Fill out the",
+    "suffix": "field"
   },
   "buttonGroup": [
     {
@@ -105,6 +109,23 @@
       "heading": "Results",
       "description": "<strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes."
     },
+    "zeroBenefits": {
+      "eligible": {
+        "chevron": {
+          "heading": "You are likely not eligible for these benefits.",
+          "description": "<div><p>If you reached these results by mistake, please go back to review your answers.</p></div>"
+        }
+      },
+      "notEligible": {
+        "chevron": {
+          "heading": "Benefits you did not qualify for",
+          "description": "<div><p>According to your answers you are not eligible for these benefits.</p></div>"
+        }
+      },
+      "heading": "No eligible results.",
+      "description": "Based on your answers you are likely not eligible for benefits. You may become eligible if you enter more information or your situation changes.",
+      "cta": "See all benefits"
+    },
     "stepBackLink": "Back",
     "eligibleResults": {
       "heading": "Results",
@@ -162,8 +183,8 @@
     "final": "Final questions"
   },
   "select": {
-    "labelSelect": "Select",
-    "defaultValue": "Click to select",
+    "labelSelect": "Select an option",
+    "defaultValue": "-Select-",
     "dateDefaultValue": "-Select-"
   },
   "date": {

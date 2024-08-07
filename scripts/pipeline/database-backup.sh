@@ -22,7 +22,7 @@ wait_for_tunnel() {
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
-cf connect-to-service --no-client "${PROJECT}-cms-${BRANCH}" "${PROJECT}-mysql-${BRANCH}" > backup.txt &
+cf connect-to-service --no-client "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" "${PROJECT}-mysql-${BRANCH}" > backup.txt &
 
 wait_for_tunnel
 

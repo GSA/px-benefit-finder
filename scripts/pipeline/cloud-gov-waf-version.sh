@@ -45,7 +45,6 @@ if [ "${new_bp_version}" -ne "${current_bp_version}" ]; then
 else
   echo "Running latest version of the buildpack!"
 fi
-
   echo "new_nginx_version=${new_nginx_version}"
   echo "current_nginx_version=${current_nginx_version}"
   echo "current_bp_version=${CURRENT_BP_VERSION}"

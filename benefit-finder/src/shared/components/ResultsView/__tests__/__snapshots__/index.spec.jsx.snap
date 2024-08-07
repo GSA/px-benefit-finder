@@ -57,60 +57,62 @@ exports[`loads view 1`] = `
           >
             Back
           </button>
-          <h2
-            aria-level="2"
-            class="bf-result-view-heading "
-            role="heading"
-          >
-            Results
-          </h2>
-          <h3
-            aria-level="3"
-            class="bf-result-view-description "
-            role="heading"
-          >
-            <strong>
-              You may be eligible for these benefits:
-            </strong>
-          </h3>
-          <div
-            aria-labelledby="bf-summary-box-key-information"
-            class="bf-usa-summary-box usa-summary-box"
-            role="region"
-          >
-            <div
-              class="bf-usa-summary-box__body usa-summary-box__body"
+          <div>
+            <h2
+              aria-level="2"
+              class="bf-eligible-view-heading "
+              role="heading"
             >
-              <h4
-                aria-level="4"
-                class="bf-usa-summary-box__heading usa-summary-box__heading "
-                id="bf-summary-box-key-information"
-                role="heading"
-              >
-                Important
-              </h4>
+              Results
+            </h2>
+            <h3
+              aria-level="3"
+              class="bf-eligible-view-description "
+              role="heading"
+            >
+              <strong>
+                You may be eligible for these benefits:
+              </strong>
+            </h3>
+            <div
+              aria-labelledby="bf-summary-box-key-information"
+              class="bf-usa-summary-box usa-summary-box"
+              role="region"
+            >
               <div
-                class="bf-usa-summary-box__text usa-summary-box__text"
+                class="bf-usa-summary-box__body usa-summary-box__body"
               >
-                <ul
-                  class="bf-usa-list usa-list"
+                <h4
+                  aria-level="4"
+                  class="bf-usa-summary-box__heading usa-summary-box__heading "
+                  id="bf-summary-box-key-information"
+                  role="heading"
                 >
-                  <li>
-                    Visit each agency’s website to find full eligibility requirements.
-                  </li>
-                  <li>
-                    Your results may change if you answer more questions or modify your answers.
-                  </li>
-                  <li>
-                     
-                    <a
-                      class="bf-usa-summary-box__link usa-summary-box__link"
-                      href="#"
-                    >
-                      Clear my answers and restart the form.
-                    </a>
-                  </li>
-                </ul>
+                  Important
+                </h4>
+                <div
+                  class="bf-usa-summary-box__text usa-summary-box__text"
+                >
+                  <ul
+                    class="bf-usa-list usa-list"
+                  >
+                    <li>
+                      Visit each agency’s website to find full eligibility requirements.
+                    </li>
+                    <li>
+                      Your results may change if you answer more questions or modify your answers.
+                    </li>
+                    <li>
+                       
+                      <a
+                        class="bf-usa-summary-box__link usa-summary-box__link"
+                        href="#"
+                      >
+                        Clear my answers and restart the form.
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -369,6 +371,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -544,6 +547,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.dol.gov/agencies/owcp/dcmwc/filing_guide_survivor"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -742,6 +746,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1000,6 +1005,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1223,6 +1229,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1426,6 +1433,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1624,6 +1632,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1822,6 +1831,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2015,6 +2025,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2213,6 +2224,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2441,6 +2453,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2639,6 +2652,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2885,6 +2899,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3029,6 +3044,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3275,6 +3291,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/forms/ssa-5.html"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3473,6 +3490,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://militarypay.defense.gov/Benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3671,6 +3689,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/education/survivor-dependent-benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3886,6 +3905,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4162,6 +4182,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4337,6 +4358,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4512,6 +4534,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4705,6 +4728,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -4933,6 +4957,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5148,6 +5173,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5346,6 +5372,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5513,6 +5540,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/eligibility/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5711,6 +5739,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5888,6 +5917,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6123,6 +6153,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6399,6 +6430,7 @@ exports[`loads view 1`] = `
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6592,60 +6624,62 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           >
             Back
           </button>
-          <h2
-            aria-level="2"
-            class="bf-result-view-heading "
-            role="heading"
-          >
-            Results
-          </h2>
-          <h3
-            aria-level="3"
-            class="bf-result-view-description "
-            role="heading"
-          >
-            <strong>
-              You may be eligible for these benefits:
-            </strong>
-          </h3>
-          <div
-            aria-labelledby="bf-summary-box-key-information"
-            class="bf-usa-summary-box usa-summary-box"
-            role="region"
-          >
-            <div
-              class="bf-usa-summary-box__body usa-summary-box__body"
+          <div>
+            <h2
+              aria-level="2"
+              class="bf-eligible-view-heading "
+              role="heading"
             >
-              <h4
-                aria-level="4"
-                class="bf-usa-summary-box__heading usa-summary-box__heading "
-                id="bf-summary-box-key-information"
-                role="heading"
-              >
-                Important
-              </h4>
+              Results
+            </h2>
+            <h3
+              aria-level="3"
+              class="bf-eligible-view-description "
+              role="heading"
+            >
+              <strong>
+                You may be eligible for these benefits:
+              </strong>
+            </h3>
+            <div
+              aria-labelledby="bf-summary-box-key-information"
+              class="bf-usa-summary-box usa-summary-box"
+              role="region"
+            >
               <div
-                class="bf-usa-summary-box__text usa-summary-box__text"
+                class="bf-usa-summary-box__body usa-summary-box__body"
               >
-                <ul
-                  class="bf-usa-list usa-list"
+                <h4
+                  aria-level="4"
+                  class="bf-usa-summary-box__heading usa-summary-box__heading "
+                  id="bf-summary-box-key-information"
+                  role="heading"
                 >
-                  <li>
-                    Visit each agency’s website to find full eligibility requirements.
-                  </li>
-                  <li>
-                    Your results may change if you answer more questions or modify your answers.
-                  </li>
-                  <li>
-                     
-                    <a
-                      class="bf-usa-summary-box__link usa-summary-box__link"
-                      href="#"
-                    >
-                      Clear my answers and restart the form.
-                    </a>
-                  </li>
-                </ul>
+                  Important
+                </h4>
+                <div
+                  class="bf-usa-summary-box__text usa-summary-box__text"
+                >
+                  <ul
+                    class="bf-usa-list usa-list"
+                  >
+                    <li>
+                      Visit each agency’s website to find full eligibility requirements.
+                    </li>
+                    <li>
+                      Your results may change if you answer more questions or modify your answers.
+                    </li>
+                    <li>
+                       
+                      <a
+                        class="bf-usa-summary-box__link usa-summary-box__link"
+                        href="#"
+                      >
+                        Clear my answers and restart the form.
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -6904,6 +6938,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7079,6 +7114,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.dol.gov/agencies/owcp/dcmwc/filing_guide_survivor"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7277,6 +7313,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/presidential-memorial-certificates/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7535,6 +7572,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/veterans-burial-allowance/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7758,6 +7796,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -7961,6 +8000,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8159,6 +8199,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8357,6 +8398,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/headstones-markers-medallions/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8550,6 +8592,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.benefits.va.gov/INSURANCE/sglivgli.asp"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8748,6 +8791,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/disability/dependency-indemnity-compensation/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -8976,6 +9020,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/health-care/family-caregiver-benefits/champva/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9174,6 +9219,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.militaryonesource.mil/benefits/funeral-and-burial-benefits-for-service-members/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9420,6 +9466,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h7"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9564,6 +9611,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.bia.gov/bia/ois/dhs/financial-assistance"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -9810,6 +9858,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/forms/ssa-5.html"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10008,6 +10057,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://militarypay.defense.gov/Benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10206,6 +10256,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/education/survivor-dependent-benefits/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10421,6 +10472,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10697,6 +10749,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -10872,6 +10925,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://psob.bja.ojp.gov/PSOB_Education2018.pdf"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11047,6 +11101,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11240,6 +11295,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/memorial-items/burial-flags/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11468,6 +11524,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/housing-assistance/home-loans/surviving-spouse/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11683,6 +11740,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h4"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -11881,6 +11939,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://bja.ojp.gov/program/psob/benefits"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12048,6 +12107,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/burials-memorials/eligibility/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12246,6 +12306,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://militarypay.defense.gov/Benefits/Death-Gratuity/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12423,6 +12484,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.va.gov/pension/survivors-pension/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12658,6 +12720,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h5"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -12934,6 +12997,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     </div>
                     <a
                       class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+                      data-testid="bf-benefit-link"
                       href="https://www.ssa.gov/benefits/survivors/ifyou.html#h2"
                       rel="noopener noreferrer"
                       target="_blank"

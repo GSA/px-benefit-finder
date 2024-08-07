@@ -39,8 +39,12 @@
     "value": "requerido"
   },
   "alertBanner": {
-    "heading": "Error",
+    "heading": { "prefix": "Tu información contiene", "suffix": "errores" },
     "description": "Responda los campos requeridos."
+  },
+  "errorText": {
+    "prefix": "Complete",
+    "suffix": ""
   },
   "buttonGroup": [
     {
@@ -105,6 +109,23 @@
       "heading": "Resultados",
       "description": "<strong>Según sus respuestas no es elegible para estos beneficios.<strong/> Podría calificar si tiene información adicional o si su situación cambia."
     },
+    "zeroBenefits": {
+      "eligible": {
+        "chevron": {
+          "heading": "Usted parece no ser elegible para estos beneficios",
+          "description": "<div><p>Si cree que cometió un error, por favor regrese para corregir sus respuestas.</p></div>"
+        }
+      },
+      "notEligible": {
+        "chevron": {
+          "heading": "Beneficios a los que no calificó",
+          "description": "<div><p>Según sus respuestas usted no es elegible para estos beneficios.</p></div>"
+        }
+      },
+      "heading": "No tiene resultados elegibles.",
+      "description": "Basado en sus respuestas usted no es elegible para estos beneficios. Podría ser elegible si ingresa más información o si su situación cambia.",
+      "cta": "Ver todos los beneficios"
+    },
     "stepBackLink": "Volver",
     "eligibleResults": {
       "heading": "Resultados",
@@ -163,8 +184,8 @@
     "final": "Preguntas finales"
   },
   "select": {
-    "labelSelect": "Seleccionar",
-    "defaultValue": "Presione para seleccionar",
+    "labelSelect": "Seleccione una opción",
+    "defaultValue": "-Seleccionar-",
     "dateDefaultValue": "-Seleccionar-"
   },
   "date": {

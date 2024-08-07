@@ -135,6 +135,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
           </div>
           <a
             class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
+            data-testid="bf-benefit-link"
             href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
             rel="noopener noreferrer"
             target="_blank"

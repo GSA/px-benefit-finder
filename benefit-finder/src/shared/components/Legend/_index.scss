@@ -4,6 +4,7 @@
 .bf-legend {
   @include h5($font-family: 'sans');
 
-  padding-bottom: space.$padding-bottom-md;
+  margin: 0 0 space.$space-sm;
+  padding: 0;
   max-width: fit-content;
 }

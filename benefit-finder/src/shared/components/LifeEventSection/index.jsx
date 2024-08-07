@@ -73,32 +73,7 @@ const LifeEventSection = ({
   }
 
   const handleCheckForRequiredValues = async () => {
-    // TODO: collect and handle radio groups
-    // const invalidRadioFieldSets = await requiredFieldsets
-    //   .map(fieldset => {
-    //     const radioGroup = Array.from(fieldset.elements).filter(
-    //       el => el.attributes.type?.value === 'radio'
-    //     )
-
-    //     // find the parent fieldset and return
-    //     if (radioGroup.every(group => !group.checked)) {
-    //       // get an id from the radio group
-    //       const groupId = radioGroup[0]?.name
-    //       const trimmedGroupId = groupId && groupId.replace(/_[0-9]/, '')
-    //       // if the id matches the id in our fieldset return the fieldset
-    //       const invalidRadioSets = requiredFieldsets.filter(
-    //         fieldset => fieldset.id === trimmedGroupId
-    //       )
-    //       return invalidRadioSets
-    //     } else {
-    //       return undefined
-    //     }
-    //   })
-    //   .flat()
-
-    // console.log('invalidRadioFieldSets', invalidRadioFieldSets)
-
-    const invalidElements = await requiredFieldsets
+    const invalidElements = requiredFieldsets
       .map(fieldset => {
         return (
           Array.from(fieldset.elements)
@@ -108,16 +83,38 @@ const LifeEventSection = ({
               if (el.attributes['data-datetype']?.value === 'year') {
                 return !el.value || (el.value && el.value.length !== 4)
               }
+
               return !el.value
             })
         )
       })
       .flat()
 
-    // const mergeInvalidElements = [...invalidElements]
+    // handle radios/checks seperately
+    const invalidRadioFieldSets = requiredFieldsets
+      .map(fieldset => {
+        if (
+          Array.from(fieldset.elements).every(
+            el => !el.attributes.type?.value === 'radio'
+          )
+        ) {
+          return []
+        }
 
-    setHasError(invalidElements)
-    return invalidElements.length === 0
+        const radios = Array.from(fieldset.elements).filter(
+          el => el.attributes.type?.value === 'radio'
+        )
+
+        if (radios.length > 0 && radios.every(el => !el.checked)) {
+          return fieldset
+        }
+        return []
+      })
+      .flat()
+
+    const mergeInvalidElements = [invalidElements, invalidRadioFieldSets].flat()
+    setHasError(mergeInvalidElements)
+    return mergeInvalidElements.length === 0
   }
 
   /**

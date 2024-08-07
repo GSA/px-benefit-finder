@@ -14,6 +14,7 @@ export const handleCheckForRequiredValues = async (
   requiredFieldsets,
   setHasError
 ) => {
+  // handle most elements
   const invalidElements = requiredFieldsets
     .map(fieldset => {
       return (

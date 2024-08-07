@@ -2,11 +2,11 @@ import PropTypes from 'prop-types'
 import {
   BenefitAccordionGroup,
   Button,
-  EmailButton,
+  EmailTrigger,
   Heading,
   StepBackLink,
   Chevron,
-  ShareButton,
+  ShareTrigger,
   RelativeBenefitList,
 } from '../../../index'
 import {
@@ -122,11 +122,11 @@ const Results = ({
         </Heading>
         <p>{shareResults?.description}</p>
         <div className="bf-result-view-share-results-button-group">
-          <ShareButton
+          <ShareTrigger
             ui={shareResults}
             data={stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)}
           />
-          <EmailButton
+          <EmailTrigger
             ui={shareResults}
             data={stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)}
           />

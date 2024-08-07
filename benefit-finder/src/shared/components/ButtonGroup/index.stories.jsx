@@ -5,11 +5,12 @@ export default {
   tags: ['autodocs'],
   args: {
     buttonOne: {
-      secondary: true,
+      outline: true,
       children: 'Back',
       onClick: () => alert('navigate back'),
     },
     buttonTwo: {
+      secondary: true,
       children: 'Continue',
       onClick: () => alert('navigate forward'),
     },

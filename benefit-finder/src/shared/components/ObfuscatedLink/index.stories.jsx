@@ -15,6 +15,7 @@ export const Primary = {}
 export const AccordionButton = {
   args: {
     children: 'Aplicar para el beneficio de suma global por muerte',
+    noCarrot: true,
   },
 }
 

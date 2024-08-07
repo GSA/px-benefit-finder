@@ -38,7 +38,7 @@ for (const scenario of scenarios.death) {
     await screen.findByTestId('app')
     await screen.findAllByTestId('benefit')
     await screen.findAllByTestId('bf-result-view')
-    await screen.findAllByTestId('bf-share-button')
+    await screen.findAllByTestId('bf-share-trigger')
     expect(view.baseElement).toMatchSnapshot()
   })
 }

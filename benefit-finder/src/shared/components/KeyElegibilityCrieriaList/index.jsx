@@ -4,7 +4,7 @@ import { useHandleClassName } from '../../hooks'
 import './_index.scss'
 
 /**
- * a functional component that renders a link as a button
+ * a functional component that renders a list of criteria related to eligiblity
  * @component
  * @param {string} className - inherited class names
  * @param {array} data - contains our criteria

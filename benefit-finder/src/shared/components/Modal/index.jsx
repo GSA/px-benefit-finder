@@ -189,6 +189,7 @@ const Modal = ({
             onKeyDown={e => handleKeyDown(e, navItemOneFunction)}
             noCarrot
             tabIndex="0"
+            secondary
           >
             {navItemOneLabel}
           </Button>
@@ -204,6 +205,7 @@ const Modal = ({
             onKeyDown={e => handleKeyDown(e, navItemTwoFunction)}
             noCarrot
             tabIndex="0"
+            secondary
           >
             {navItemTwoLabel}
           </Button>

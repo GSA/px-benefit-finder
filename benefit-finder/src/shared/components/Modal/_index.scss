@@ -17,19 +17,8 @@
 
   .bf-nav-item-one,
   .bf-nav-item-two {
-    @include important-bold;
-
     &.bf-usa-button {
-      @include important-bold;
-
-      background-color: color.$pop-blue;
-      color: color.$white;
       width: $button-max-width;
-    }
-
-    &.bf-usa-button:hover {
-      background-color: color.$officer-navy;
-      color: color.$white;
     }
   }
 

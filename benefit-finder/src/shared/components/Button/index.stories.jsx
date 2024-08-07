@@ -25,6 +25,13 @@ export const Secondary = {
   },
 }
 
+export const Outline = {
+  args: {
+    ...Primary.args,
+    outline: true,
+  },
+}
+
 export const Unstyled = {
   args: {
     ...Primary.args,

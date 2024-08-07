@@ -47,6 +47,7 @@ const BenefitAccordionGroup = ({
    * a function that returns the string value of our expanded action
    * @function
    * @return {string} returns label for our button
+   * @return {string} returns label for our button
    */
   const handleExpandIcon = isExpandAll ? `${openState} -` : `${closedState} +`
 

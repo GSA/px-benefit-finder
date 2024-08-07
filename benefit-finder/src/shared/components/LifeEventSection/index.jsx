@@ -305,19 +305,11 @@ const LifeEventSection = ({
                           requiredLabel={requiredLabel}
                           hidden={hidden && hidden}
                           id={item.fieldset.criteriaKey}
-                          invalid={
-                            item.fieldset.required &&
-                            hasError
-                              .map(errorItem => {
-                                return (
-                                  errorItem.id !== undefined &&
-                                  errorItem.id.includes(
-                                    item.fieldset?.criteriaKey
-                                  )
-                                )
-                              })
-                              .includes(true)
-                          }
+                          invalid={errorHandling.handleInvalid({
+                            required: item.fieldset.required,
+                            hasError,
+                            criteriaKey: item.fieldset?.criteriaKey,
+                          })}
                           ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
@@ -326,17 +318,6 @@ const LifeEventSection = ({
                             const defaultSelected = inputValues.find(
                               value => value.selected !== undefined
                             )
-
-                            const invalid =
-                              item.fieldset.required &&
-                              hasError
-                                .map(item => {
-                                  return (
-                                    item.id !== undefined &&
-                                    fieldSetId.includes(item.id)
-                                  )
-                                })
-                                .includes(true)
 
                             const { select, errorText } = ui
 
@@ -354,7 +335,12 @@ const LifeEventSection = ({
                                       item.fieldset.criteriaKey
                                     )
                                   }
-                                  invalid={invalid}
+                                  invalid={errorHandling.handleInvalid({
+                                    required: item.fieldset.required,
+                                    hasError,
+                                    criteriaKey: item.fieldset?.criteriaKey,
+                                    fieldSetId,
+                                  })}
                                   legend={item.fieldset.legend}
                                   errorMessage={item.fieldset.errorMessage}
                                 />
@@ -377,19 +363,6 @@ const LifeEventSection = ({
                         {item.fieldset.inputs.map((input, index) => {
                           const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
 
-                          const invalid =
-                            item.fieldset.required &&
-                            hasError
-                              .map(errorItem => {
-                                return (
-                                  errorItem.id !== undefined &&
-                                  errorItem.id.includes(
-                                    item.fieldset?.criteriaKey
-                                  )
-                                )
-                              })
-                              .includes(true)
-
                           return (
                             <Fieldset
                               key={`radio-${item.fieldset.criteriaKey}-${index}`}
@@ -401,10 +374,18 @@ const LifeEventSection = ({
                               requiredLabel={requiredLabel}
                               hidden={hidden && hidden}
                               ui={ui.errorText}
-                              invalid={invalid}
+                              invalid={errorHandling.handleInvalid({
+                                required: item.fieldset.required,
+                                hasError,
+                                criteriaKey: item.fieldset?.criteriaKey,
+                              })}
                             >
                               <RadioGroup
-                                invalid={invalid}
+                                invalid={errorHandling.handleInvalid({
+                                  required: item.fieldset.required,
+                                  hasError,
+                                  criteriaKey: item.fieldset?.criteriaKey,
+                                })}
                                 key={fieldSetId}
                                 fieldSetId={fieldSetId}
                                 handleChanged={handleChanged}
@@ -438,32 +419,15 @@ const LifeEventSection = ({
                           requiredLabel={requiredLabel}
                           hidden={hidden && hidden}
                           id={item.fieldset.criteriaKey}
-                          invalid={
-                            item.fieldset.required &&
-                            hasError
-                              .map(errorItem => {
-                                return (
-                                  errorItem.id !== undefined &&
-                                  errorItem.id.includes(
-                                    item.fieldset?.criteriaKey
-                                  )
-                                )
-                              })
-                              .includes(true)
-                          }
+                          invalid={errorHandling.handleInvalid({
+                            required: item.fieldset.required,
+                            hasError,
+                            criteriaKey: item.fieldset?.criteriaKey,
+                          })}
                           ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-
-                            const invalid =
-                              item.fieldset.required &&
-                              hasError.filter(item => {
-                                return (
-                                  item.id !== undefined &&
-                                  item.id.includes(fieldSetId)
-                                )
-                              })
 
                             return (
                               <div key={fieldSetId}>
@@ -479,7 +443,13 @@ const LifeEventSection = ({
                                   errorMessage={item.fieldset.errorMessage}
                                   parentLegend={item.fieldset.legend}
                                   id={fieldSetId}
-                                  invalid={invalid}
+                                  invalid={errorHandling.handleInvalid({
+                                    required: item.fieldset.required,
+                                    hasError,
+                                    criteriaKey: item.fieldset?.criteriaKey,
+                                    fieldSetId,
+                                    useFilter: true,
+                                  })}
                                 />
                               </div>
                             )

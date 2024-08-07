@@ -58,4 +58,33 @@ export const handleCheckForRequiredValues = async (
   return mergeInvalidElements.length === 0
 }
 
-export default { getRequiredFieldsets, handleCheckForRequiredValues }
+export const handleInvalid = ({
+  required,
+  hasError,
+  criteriaKey,
+  fieldSetId,
+  useFilter = false,
+}) => {
+  const handleMap = hasError
+    .map(errorItem => {
+      return (
+        (errorItem.id !== undefined &&
+          fieldSetId &&
+          fieldSetId.includes(errorItem.id)) ||
+        (errorItem.id !== undefined && errorItem.id.includes(criteriaKey))
+      )
+    })
+    .includes(true)
+
+  const hanldeFilter = hasError.filter(errorItem => {
+    return errorItem.id !== undefined && errorItem.id.includes(fieldSetId)
+  })
+
+  return required && useFilter === true ? hanldeFilter : handleMap
+}
+
+export default {
+  getRequiredFieldsets,
+  handleCheckForRequiredValues,
+  handleInvalid,
+}

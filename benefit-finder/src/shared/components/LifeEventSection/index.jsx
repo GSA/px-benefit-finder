@@ -96,6 +96,7 @@ const LifeEventSection = ({
     alertFieldRef.current.focus()
     currentData.completed = false
     window.scrollTo(0, 0)
+    return false
   }
 
   /**
@@ -108,6 +109,7 @@ const LifeEventSection = ({
     currentData.completed = true
     handleUpdateData()
     setRequiredFieldsets([])
+    return true
   }
 
   /**
@@ -117,10 +119,10 @@ const LifeEventSection = ({
    */
   const handleCheckRequriedFields = () => {
     // collect all the required fields in the current step
-    errorHandling
+    return errorHandling
       .handleCheckForRequiredValues(requiredFieldsets, setHasError)
       .then(valid => {
-        valid === true ? handleSuccess() : handleAlert()
+        return valid === true ? handleSuccess() : handleAlert()
       })
   }
   /**

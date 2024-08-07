@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { dateInputValidation, createMarkup, dataLayerUtils } from '../../utils'
+import {
+  dateInputValidation,
+  createMarkup,
+  dataLayerUtils,
+  errorHandling,
+} from '../../utils'
 import { useHandleUnload, useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import {
@@ -72,51 +77,6 @@ const LifeEventSection = ({
     handleData([...data])
   }
 
-  const handleCheckForRequiredValues = async () => {
-    const invalidElements = requiredFieldsets
-      .map(fieldset => {
-        return (
-          Array.from(fieldset.elements)
-            // check all the required inputs, if there is no value, there the input is invalid
-            .filter(el => {
-              // we need to custom handle our dates verification to ensure a 4 digit year
-              if (el.attributes['data-datetype']?.value === 'year') {
-                return !el.value || (el.value && el.value.length !== 4)
-              }
-
-              return !el.value
-            })
-        )
-      })
-      .flat()
-
-    // handle radios/checks seperately
-    const invalidRadioFieldSets = requiredFieldsets
-      .map(fieldset => {
-        if (
-          Array.from(fieldset.elements).every(
-            el => !el.attributes.type?.value === 'radio'
-          )
-        ) {
-          return []
-        }
-
-        const radios = Array.from(fieldset.elements).filter(
-          el => el.attributes.type?.value === 'radio'
-        )
-
-        if (radios.length > 0 && radios.every(el => !el.checked)) {
-          return fieldset
-        }
-        return []
-      })
-      .flat()
-
-    const mergeInvalidElements = [invalidElements, invalidRadioFieldSets].flat()
-    setHasError(mergeInvalidElements)
-    return mergeInvalidElements.length === 0
-  }
-
   /**
    *
    * start alert
@@ -151,27 +111,17 @@ const LifeEventSection = ({
   }
 
   /**
-   * a function that collect all the required fields in the current step
-   * @function
-   */
-  const getRequiredFieldsets = () => {
-    const collectedNodeList = document.querySelectorAll('fieldset')
-    const requiredNodeList = Array.from(collectedNodeList).filter(
-      node => node.attributes.required
-    )
-    setRequiredFieldsets(Array.from(requiredNodeList))
-  }
-
-  /**
    * a function that checks if all our required fields have values
    * @function
    * @return {func} either success or alert handler
    */
   const handleCheckRequriedFields = () => {
     // collect all the required fields in the current step
-    handleCheckForRequiredValues().then(valid => {
-      valid === true ? handleSuccess() : handleAlert()
-    })
+    errorHandling
+      .handleCheckForRequiredValues(requiredFieldsets, setHasError)
+      .then(valid => {
+        valid === true ? handleSuccess() : handleAlert()
+      })
   }
   /**
    *
@@ -187,26 +137,28 @@ const LifeEventSection = ({
    */
   const handleForwardUpdate = updateIndex => {
     handleCheckRequriedFields()
-    handleCheckForRequiredValues().then(valid => {
-      if (valid === true) {
-        // handle dataLayer
-        const { errors } = dataLayerUtils.dataLayerStructure
-        dataLayerUtils.dataLayerPush(window, {
-          event: errors.event,
-          bfData: {
-            errors: '',
-            errorCount: {
-              number: 0,
-              string: `0`,
+    errorHandling
+      .handleCheckForRequiredValues(requiredFieldsets, setHasError)
+      .then(valid => {
+        if (valid === true) {
+          // handle dataLayer
+          const { errors } = dataLayerUtils.dataLayerStructure
+          dataLayerUtils.dataLayerPush(window, {
+            event: errors.event,
+            bfData: {
+              errors: '',
+              errorCount: {
+                number: 0,
+                string: `0`,
+              },
+              formSuccess: true,
             },
-            formSuccess: true,
-          },
-        })
-        setStep(step + updateIndex)
-        setStepData(updateIndex)
-        resetElement && resetElement.current.focus()
-      }
-    })
+          })
+          setStep(step + updateIndex)
+          setStepData(updateIndex)
+          resetElement && resetElement.current.focus()
+        }
+      })
   }
 
   /**
@@ -235,7 +187,8 @@ const LifeEventSection = ({
       setCurrentData,
       event.target.value
     )
-    hasError.length > 0 && handleCheckForRequiredValues()
+    hasError.length > 0 &&
+      errorHandling.handleCheckForRequiredValues(requiredFieldsets, setHasError)
   }
 
   /**
@@ -255,7 +208,11 @@ const LifeEventSection = ({
         event.target.value,
         event.target.id
       )
-      hasError.length > 0 && handleCheckForRequiredValues()
+      hasError.length > 0 &&
+        errorHandling.handleCheckForRequiredValues(
+          requiredFieldsets,
+          setHasError
+        )
     }
   }
 
@@ -267,7 +224,7 @@ const LifeEventSection = ({
   // check for all required fields and scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0)
-    getRequiredFieldsets()
+    errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
   }, [])
 
   // handle dataLayer
@@ -611,7 +568,7 @@ const LifeEventSection = ({
                     navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
                     navItemTwoFunction={setViewResults}
                     triggerLabel={buttonGroup[1].value}
-                    handleCheckRequriedFields={handleCheckForRequiredValues}
+                    handleCheckRequriedFields={handleCheckRequriedFields}
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
                     completed={currentData.completed}

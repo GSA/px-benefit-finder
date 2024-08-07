@@ -2,53 +2,38 @@ import { useEffect, useState } from 'react'
 import { useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
-import {
-  BenefitAccordionGroup,
-  Button,
-  EmailTrigger,
-  Heading,
-  StepBackLink,
-  Chevron,
-  ShareTrigger,
-  RelativeBenefitList,
-  Summary,
-} from '../index'
-import { createMarkup } from '../../utils'
-import './_index.scss'
+import { Results } from './components/index'
+import { dataLayerUtils } from '../../utils'
+// import './_index.scss'
+
+// Results View is a single view with three states, eligible, not eligible, and zero benefits
 
 /**
  * a functional component that renders a view of the form benefit state values
  * @component
  * @param {function} handlStepBack inherited ui translations
- * @param {object} ui inherited ui translations
- * @param {array} data inherited benefits data
  * @param {func} setBenefitsArray inherited state handler
  * @param {array} stepDataArray inherited state of inupt values from form entry
+ * @param {object} ui inherited ui translations
+ * @param {array} data inherited benefits data
  * @return {html} returns a view page of filtered benefits
  */
 const ResultsView = ({
   handleStepBack,
-  ui,
-  data,
   stepDataArray,
   relevantBenefits,
+  ui,
+  data,
 }) => {
-  const {
-    stepBackLink,
-    notEligible,
-    eligible,
-    notEligibleResults,
-    resultsRelativeBenefits,
-    shareResults,
-    summaryBox,
-  } = ui
-
   const [notEligibleView, setnotEligibleView] = useState(false)
-  const [eligibilityCount, setEligibilityCount] = useState({
-    eligible: 0,
-    notEligible,
-    moreInfo: 0,
-  })
+  const [eligibilityCount, setEligibilityCount] = useState(null)
+
+  /**
+   * a hook that hanldes our open state of the accordions in our group
+   * @function
+   * @return {boolean} returns true or false
+   */
+  const [isExpandAll, setExpandAll] = useState(false)
 
   const resetElement = useResetElement()
 
@@ -78,25 +63,28 @@ const ResultsView = ({
         matches.push(div)
       }
     }
-    return matches.length
+    return { number: matches.length, string: `${matches.length}` }
   }
 
   const handleViewToggle = () => {
+    setExpandAll(false)
     setnotEligibleView(!notEligibleView)
     window.scrollTo(0, 0)
     resetElement.current.focus()
   }
 
+  const zeroBenefitsResult = eligibilityCount?.eligibleBenefitCount.number === 0
+
   useEffect(() => {
     window.scrollTo(0, 0)
     setEligibilityCount({
-      eligible: handleEligibilityLength(
+      eligibleBenefitCount: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[0]
       ),
-      moreInfo: handleEligibilityLength(
+      moreInfoBenefitCount: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[1]
       ),
-      notEligible: handleEligibilityLength(
+      notEligibleBenefitCount: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[2]
       ),
     })
@@ -104,30 +92,29 @@ const ResultsView = ({
 
   // handle dataLayer
   useEffect(() => {
-    window.dataLayer &&
-      window.dataLayer.push({
-        event: 'bf_page_change',
+    const { resultsView } = dataLayerUtils.dataLayerStructure
+    eligibilityCount !== null &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: resultsView.event,
         bfData: {
-          pageView: 'bf-result-view',
+          pageView:
+            notEligibleView === true
+              ? resultsView.bfData.pageView[1]
+              : resultsView.bfData.pageView[0],
           viewTitle:
             notEligibleView === false
-              ? eligible.chevron.heading
-              : notEligible.chevron.heading,
-          viewState:
-            notEligibleView === true
-              ? 'bf-not-eligible-view'
-              : 'bf-eligible-view',
+              ? (zeroBenefitsResult &&
+                  ui.zeroBenefits.eligible.chevron.heading) ||
+                ui?.eligible.chevron.heading
+              : (zeroBenefitsResult &&
+                  ui?.zeroBenefits.notEligible.chevron.heading) ||
+                ui?.notEligible.chevron.heading,
+          ...eligibilityCount,
         },
       })
-  }, [notEligibleView])
+  }, [notEligibleView, eligibilityCount])
 
-  useEffect(() => {
-    eligibilityCount.notEligible >= 0 &&
-      window.dataLayer &&
-      window.dataLayer.push({ event: 'bf_count', bfData: eligibilityCount })
-  }, [eligibilityCount])
-
-  // compare the selected criteria array with benefits
+  // compare the selected criteria array with benefits and render our view
   return (
     <div
       className="bf-result-view"
@@ -138,138 +125,29 @@ const ResultsView = ({
       }
       data-analytics-content-criteria-values={criteriaValues}
       data-analytics-content-benefits={benefitsLength}
-      data-analytics-content-eligible={eligibilityCount.eligible}
-      data-analytics-content-not-eligible={eligibilityCount.notEligible}
-      data-analytics-content-more-info={eligibilityCount.moreInfo}
+      data-analytics-content-eligible={
+        eligibilityCount?.eligibleBenefitCount.number
+      }
+      data-analytics-content-not-eligible={
+        eligibilityCount?.notEligibleBenefitCount.number
+      }
+      data-analytics-content-more-info={
+        eligibilityCount?.moreInfoBenefitCount.number
+      }
     >
-      <Chevron
-        heading={
-          notEligibleView === false
-            ? eligible.chevron.heading
-            : notEligible.chevron.heading
-        }
-        description={
-          notEligibleView === false
-            ? eligible.chevron.description
-            : notEligible.chevron.description
-        }
+      <Results
+        handleStepBack={handleStepBack}
+        notEligibleView={notEligibleView}
+        zeroBenefitsResult={zeroBenefitsResult}
+        stepDataArray={stepDataArray}
+        handleViewToggle={handleViewToggle}
+        isExpandAll={isExpandAll}
+        setExpandAll={setExpandAll}
+        relevantBenefits={relevantBenefits}
+        resetElement={resetElement}
+        data={data}
+        ui={ui}
       />
-      <div className="bf-grid-container grid-container">
-        <div className="bf-result-view-details">
-          {notEligibleView === false ? (
-            <StepBackLink
-              onClick={() => resetElement.current.focus()}
-              setCurrent={handleStepBack}
-            >
-              {stepBackLink}
-            </StepBackLink>
-          ) : (
-            <Button
-              className="bf-step-back-link"
-              onClick={() => handleViewToggle()}
-              unstyled
-            >
-              {stepBackLink}
-            </Button>
-          )}
-          <Heading className="bf-result-view-heading" headingLevel={2}>
-            {notEligibleView ? notEligible.heading : eligible.heading}
-          </Heading>
-          <Heading
-            className="bf-result-view-description"
-            headingLevel={3}
-            dangerouslySetInnerHTML={
-              notEligibleView
-                ? createMarkup(notEligible.description)
-                : createMarkup(eligible.description)
-            }
-          />
-          <Summary
-            heading={summaryBox.heading}
-            listItems={summaryBox.list}
-            cta={summaryBox.cta}
-          />
-          {/* map all the benefits into cards */}
-          <div className="bf-result-view-benefits">
-            <BenefitAccordionGroup
-              data={
-                stepDataArray &&
-                apiCalls.GET.ElegibilityByCriteria(
-                  apiCalls.GET.SelectedValueAll(stepDataArray),
-                  data
-                )
-              }
-              entryKey={'benefit'}
-              notEligibleView={notEligibleView}
-              expandAll
-              ui={ui}
-            />
-          </div>
-          {notEligibleView === false && (
-            <div className="bf-result-view-unmet">
-              <Heading
-                className="bf-result-view-unmet-heading"
-                headingLevel={3}
-              >
-                {notEligibleResults?.heading}
-              </Heading>
-              <p
-                dangerouslySetInnerHTML={createMarkup(
-                  notEligibleResults?.description
-                )}
-              />
-              <Button secondary onClick={handleViewToggle}>
-                {notEligibleResults?.cta}
-              </Button>
-            </div>
-          )}
-          {relevantBenefits?.length > 0 && (
-            <div className="bf-result-view-relvant-benefits">
-              <Heading
-                className="bf-result-view-relvant-benefits-heading"
-                headingLevel={3}
-              >
-                {resultsRelativeBenefits?.heading}
-              </Heading>
-              {relevantBenefits && (
-                <RelativeBenefitList
-                  data={relevantBenefits}
-                  carrotType="carrot-big"
-                ></RelativeBenefitList>
-              )}
-            </div>
-          )}
-          <div className="bf-result-view-share-results">
-            <Heading
-              className="bf-result-view-share-results-heading"
-              headingLevel={3}
-            >
-              {shareResults?.heading}
-            </Heading>
-            <p>{shareResults?.description}</p>
-            <ul className="bf-result-view-share-results-button-group">
-              <li>
-                <ShareTrigger
-                  ui={shareResults}
-                  data={
-                    stepDataArray &&
-                    apiCalls.GET.SelectedValueAll(stepDataArray)
-                  }
-                />
-              </li>
-              <li>
-                <EmailTrigger
-                  ui={shareResults}
-                  data={
-                    stepDataArray &&
-                    apiCalls.GET.SelectedValueAll(stepDataArray)
-                  }
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

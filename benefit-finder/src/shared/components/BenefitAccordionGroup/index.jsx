@@ -1,6 +1,6 @@
-import { useState } from 'react'
+// import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { createMarkup } from '../../utils'
+import { createMarkup, dataLayerUtils } from '../../utils'
 import {
   Accordion,
   Button,
@@ -16,12 +16,18 @@ import './_index.scss'
  * @param {array} data - our benefits data
  * @param {string} entryKey - which key in the array to target
  * @param {bool} expandAll - determnines if we include ExpandAll component
+ * @param {bool} isExpandAll - determines if all the accordions in the group are expanded
+ * @param {function} setExpandAll - inherited useState function
+ * @param {function} notEligibleView - inherited bolean state
+ * @param {object} ui - inherited ui content
  * @return {html} returns html
  */
 const BenefitAccordionGroup = ({
   data,
   entryKey,
   expandAll,
+  isExpandAll,
+  setExpandAll,
   notEligibleView,
   ui,
 }) => {
@@ -34,19 +40,49 @@ const BenefitAccordionGroup = ({
     sourceIsEnglish,
   } = benefitAccordion
   const { closedState, openState } = benefitAccordionGroup
-  /**
-   * a hook that hanldes our open state of the accordions in our group
-   * @function
-   * @return {boolean} returns true or false
-   */
-  const [isExpandAll, setExpandAll] = useState(false)
+  const { benefitLink, openAllBenefitAccordions } =
+    dataLayerUtils.dataLayerStructure
 
   /**
    * a function that returns the string value of our expanded action
    * @function
    * @return {string} returns label for our button
+   * @return {string} returns label for our button
    */
   const handleExpandIcon = isExpandAll ? `${openState} -` : `${closedState} +`
+
+  // handle dataLayer
+  /**
+   * a function that pushes dataLayer events when the user clicks the link of that benefit
+   * @function
+   */
+  const handleBenefitLinkClick = title => {
+    dataLayerUtils.dataLayerPush(window, {
+      event: benefitLink.event,
+      bfData: {
+        benefitTitle: title,
+      },
+    })
+  }
+
+  /**
+   * a function that handles expanded state and pushes dataLayer events when the user clicks the "open all" action
+   * @function
+   * @prop {boolean} isExpandAll true or false
+   */
+  const handleExpandAll = isExpandAll => {
+    setExpandAll(!isExpandAll)
+    dataLayerUtils.dataLayerPush(
+      window,
+      {
+        event: openAllBenefitAccordions.event,
+        bfData: {
+          accordionsOpen: !isExpandAll,
+        },
+      },
+      false
+    )
+  }
 
   /**
    * a functional component that renders a button and controls the expansion of our accordions
@@ -60,7 +96,7 @@ const BenefitAccordionGroup = ({
           className="bf-expand-all"
           aria-label={handleExpandIcon}
           unstyled
-          onClick={() => setExpandAll(!isExpandAll)}
+          onClick={() => handleExpandAll(isExpandAll)}
         >
           {handleExpandIcon}
         </Button>
@@ -208,7 +244,8 @@ const BenefitAccordionGroup = ({
                 href={SourceLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                noCarrot
+                onClick={() => handleBenefitLinkClick(title)}
+                data-testid="bf-benefit-link"
               >
                 {visitLabel} {agency.title}{' '}
                 {sourceIsEnglish && SourceIsEnglish === true
@@ -226,6 +263,10 @@ BenefitAccordionGroup.propTypes = {
   data: PropTypes.array,
   entryKey: PropTypes.string,
   expandAll: PropTypes.bool,
+  isExpandAll: PropTypes.bool,
+  setExpandAll: PropTypes.func,
+  notEligibleView: PropTypes.bool,
+  ui: PropTypes.object,
 }
 
 export default BenefitAccordionGroup

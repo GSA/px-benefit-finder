@@ -15,11 +15,15 @@ exports[`Alert > renders a match to the previous snapshot when it has an error 1
       <h2
         aria-level="2"
         class="bf-usa-alert__heading usa-alert__heading font-family-sans"
-        id=""
         role="heading"
-      />
+      >
+          
+      </h2>
       <p
         class="bf-usa-alert__text usa-alert__text"
+      />
+      <ul
+        data-testid="bf-errors-list"
       />
     </div>
   </div>
@@ -41,11 +45,15 @@ exports[`Alert > renders a match to the previous snapshot, default 1`] = `
       <h2
         aria-level="2"
         class="bf-usa-alert__heading usa-alert__heading font-family-sans"
-        id=""
         role="heading"
-      />
+      >
+          
+      </h2>
       <p
         class="bf-usa-alert__text usa-alert__text"
+      />
+      <ul
+        data-testid="bf-errors-list"
       />
     </div>
   </div>
@@ -67,11 +75,15 @@ exports[`Alert > renders a match to the previous snapshot, error type with no er
       <h2
         aria-level="2"
         class="bf-usa-alert__heading usa-alert__heading font-family-sans"
-        id=""
         role="heading"
-      />
+      >
+          
+      </h2>
       <p
         class="bf-usa-alert__text usa-alert__text"
+      />
+      <ul
+        data-testid="bf-errors-list"
       />
     </div>
   </div>

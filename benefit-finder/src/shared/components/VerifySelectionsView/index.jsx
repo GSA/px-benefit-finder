@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { parseDate } from '../../utils'
+import { parseDate, dataLayerUtils } from '../../utils'
 import * as apiCalls from '../../api/apiCalls'
 import { Heading, Button } from '../index'
 
@@ -109,14 +109,14 @@ const VerifySelectionsView = ({
 
   // handle dataLayer
   useEffect(() => {
-    window.dataLayer &&
-      window.dataLayer.push({
-        event: 'bf_page_change',
-        bfData: {
-          pageView: 'bf-verify-selections',
-          viewTitle: verifySelectionsView?.heading,
-        },
-      })
+    const { verifySelections } = dataLayerUtils.dataLayerStructure
+    dataLayerUtils.dataLayerPush(window, {
+      event: verifySelections.event,
+      bfData: {
+        pageView: verifySelections.bfData.pageView,
+        viewTitle: verifySelectionsView?.heading,
+      },
+    })
   }, [])
 
   return (

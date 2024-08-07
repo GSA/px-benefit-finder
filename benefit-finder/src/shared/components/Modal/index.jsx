@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
 import { Button, ObfuscatedLink, Icon, Heading } from '../index'
-import { scrollLock } from '../../utils'
+import { scrollLock, dataLayerUtils } from '../../utils'
 
 import './_index.scss'
 
@@ -39,6 +39,7 @@ const customStyles = {
  * @param {string} modalHeading - heading value
  * @param {string} navItemOneLabel - passed to button for nav item in modal
  * @param {string} navItemTwoLabel - passed to button for nav item in modal
+ * @param {function} handleCheckRequriedFields - inherited async function to check validity of fields
  * @return {html} returns html for seting up a usa-modal component
  */
 const Modal = ({
@@ -53,6 +54,8 @@ const Modal = ({
   handleCheckRequriedFields,
   modalOpen,
   setModalOpen,
+  alertElement,
+  dataLayerValue,
 }) => {
   // state
   const triggerRef = useRef(null)
@@ -62,10 +65,11 @@ const Modal = ({
    * @function
    */
   const handleOpenModal = () => {
-    if (handleCheckRequriedFields() === true) {
-      scrollLock.enableScroll()
-      setModalOpen(true)
-    }
+    handleCheckRequriedFields().then(valid =>
+      valid
+        ? setModalOpen(true) && scrollLock.enableScroll()
+        : window.scrollTo(0, 0) && alertElement.current.focus()
+    )
   }
 
   /**
@@ -98,6 +102,33 @@ const Modal = ({
     // set our application root id here
     NavModal.setAppElement('#benefit-finder')
     return cleanUp()
+  }, [])
+
+  // handle dataLayer
+  useEffect(() => {
+    const { modal } = dataLayerUtils.dataLayerStructure
+    modalOpen === true &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: modal.event,
+        bfData: {
+          pageView: modal.bfData.pageView,
+          viewTitle: `${dataLayerValue.viewTitle} modal`,
+        },
+      })
+    // handle dataLayer
+    const { errors } = dataLayerUtils.dataLayerStructure
+    modalOpen === true &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: errors.event,
+        bfData: {
+          errors: '',
+          errorCount: {
+            number: 0,
+            string: `0`,
+          },
+          formSuccess: true,
+        },
+      })
   }, [])
 
   /**
@@ -232,6 +263,7 @@ Modal.propTypes = {
   navItemOneFunction: PropTypes.func,
   navItemTwoLabel: PropTypes.string,
   navItemTwoFunction: PropTypes.func,
+  handleCheckRequriedFields: PropTypes.func,
 }
 
 export default Modal

@@ -22,7 +22,7 @@ gunzip database_restore.sql.gz
 
 ## Create a tunnel through the application to restore the database.
 echo "Creating tunnel to database..."
-cf connect-to-service --no-client "${PROJECT}-cms-${BRANCH}" "${PROJECT}-mysql-${BRANCH}" > restore.txt &
+cf connect-to-service --no-client "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" "${PROJECT}-mysql-${BRANCH}" > restore.txt &
 
 wait_for_tunnel
 

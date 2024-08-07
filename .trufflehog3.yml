@@ -1,0 +1,22 @@
+exclude: # exclude matching issues
+  - message: Exclude Test Files, False Positives, and Compressed Files.
+    paths:
+      - rules.yml
+      - .trufflehog3.yml
+      - aws/**
+      - fake_creds.txt
+      - truffleHogResults.json
+      - bears-app/package.json
+      - .circleci/config.yml
+      - "**/*.png"
+      - "**/*.zip"
+      - "**/*.tar.gz"
+      - "**/*.deb"
+      - "**/*.so"
+      - "**/*.so."
+      - benefit-finder/storybook-static
+      - benefit-finder/themes
+      - benefit-finder/node_modules
+      - benefit-finder/build
+      - usagov-2021
+      - .venv

@@ -44,16 +44,12 @@
 }
 
 .bf-section-heading {
-  @include h3;
+  @include h0;
 
   background-color: color.$officer-navy;
   color: color.$white;
   margin: 0;
   padding: space.$space-xl space.$space-md;
-}
-
-.bf-usa-fieldset {
-  padding-bottom: space.$padding-bottom-lg;
 }
 
 #bf-section {
@@ -64,7 +60,22 @@
   border-bottom: 1px solid color.$base-light-grey;
 
   h2.bf-usa-section-heading {
-    @include h3;
+    @include h1;
+  }
+
+  .bf-form-heading-group {
+    padding-bottom: space.$space-lg;
+
+    h2.bf-form-heading {
+      @include h1;
+
+      margin-bottom: 0;
+      padding-bottom: space.$padding-bottom-sm;
+    }
+
+    .bf-section-sub-heading p {
+      margin: 0;
+    }
   }
 }
 

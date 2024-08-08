@@ -71,17 +71,10 @@ git clone git@github.com:GSA/px-benefit-finder.git
 cd px-benefit-finder
 ```
 
-5. From the root, set custom path for custom githooks
+5. execute the init script.
 
 ```
-git config --local core.hooksPath .githooks/
-```
-
-6. usagov-2021 directory is there but empty. You must run the following two commands to initialize your local configuration file and fetch all the data from that project.
-
-```
-git submodule init
-git submodule update
+scripts/local/init
 ```
 
 7. You have now successfully cloned the repository with a submodule. You can work with the main repository and its submodule as separate entities.
@@ -97,20 +90,7 @@ git pull --recurse-submodules
 
 This command updates the main repository and its submodules to the latest commit.
 
-### Local Development Environment
-
-#### Get USAgov code
-
-```
-git clone git@github.com:usagov/usagov-2021.git poc
-cd poc
-```
-
-#### Get USAgov code
-
-Set up local development site following README.md.
-
-#### Get a Database Dump
+## Get a Database Dump
 
 1. Make sure you login cloud.gov on your terminal and target your org and space.
 
@@ -194,13 +174,13 @@ aws s3 ls s3://${AWS_BUCKET}/
 
       CMS App main page URL:
 
-      https://bf-static-main.bxdev.net/
+      https://bf-cms-main.bxdev.net/
 
 #### Benefit-finder-main : The main/pre-release environment.
 
       CMS App main page URL:
 
-      https://bf-static-dev.bxdev.net/
+      https://bf-cms-dev.bxdev.net/
 
 ## How to use terraform to manage the infrastructure
 

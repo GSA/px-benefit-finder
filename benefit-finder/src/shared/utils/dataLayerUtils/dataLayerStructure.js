@@ -10,6 +10,14 @@ const dataLayerStructure = {
       viewTitle: null,
     },
   },
+  errors: {
+    event: 'bf_form_page_submit_attempt',
+    bfData: {
+      errors: null,
+      errorCount: { number: null, string: null },
+      formSuccess: false,
+    },
+  },
   modal: {
     event: 'bf_page_change',
     bfData: {
@@ -29,6 +37,11 @@ const dataLayerStructure = {
     bfData: {
       pageView: ['bf-result-eligible-view', 'bf-result-not-eligible-view'],
       viewTitle: null,
+      eligibilityCount: {
+        eligibleBenefitCount: null,
+        moreInfoBenefitCount: null,
+        notEligibleBenefitCount: null,
+      },
     },
   },
   openAllBenefitAccordions: {

@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "0 5 * * 4"
 
+# on:
+#   workflow_dispatch:
+#
 jobs:
   checkVersion:
     name: Check versions
@@ -136,7 +139,7 @@ jobs:
         with:
           token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           assignees: ${{ vars.TECH_LEAD }}
-          title: "Update to NGINX v${{ needs.checkVersion.outputs.new_nginx_version }} (main)"
+          title: "Update to NGINX ${{ needs.checkVersion.outputs.new_nginx_version }} (main)"
           body: |
             ## Automated update of NGINX WAF
 
@@ -172,7 +175,9 @@ jobs:
           GH_PROJECT_NUMBER: ${{ secrets.GH_PROJECT_NUMBER }}
           GH_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
           ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
-        run: source ./scripts/pipeline/github-update-issue-status.sh
+        run: |
+          source ./scripts/pipeline/github-update-issue-status.sh
+
   stopBastion:
     name: Stop Bastion
     runs-on: ubuntu-latest

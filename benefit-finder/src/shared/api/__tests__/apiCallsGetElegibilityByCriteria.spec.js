@@ -60,21 +60,21 @@ test('correctly update date data after init state, key match and value match is 
     currentData,
     setCurrentData,
     selectedDate.month,
-    'date_of_birth_month-applicant_date_of_birth_0'
+    'applicant_date_of_birth_0-date_of_birth_month'
   ).then(() => {
     apiCalls.PUT.DataDate(
       criteriaKeyDate,
       currentData,
       setCurrentData,
       selectedDate.year,
-      'date_of_birth_year-applicant_date_of_birth_0'
+      'applicant_date_of_birth_0-date_of_birth_year'
     ).then(() => {
       apiCalls.PUT.DataDate(
         criteriaKeyDate,
         currentData,
         setCurrentData,
         selectedDate.day,
-        'date_of_birth_day-applicant_date_of_birth_0'
+        'applicant_date_of_birth_0-date_of_birth_day'
       ).then(() => {
         expect(expectedDateUpdate[0]).toHaveProperty('selected', true)
         expect(expectedDateUpdate[0].value).toHaveProperty(

@@ -39,8 +39,12 @@
     "value": "required"
   },
   "alertBanner": {
-    "heading": "Error",
+    "heading": { "prefix": "Your information contains", "suffix": "errors" },
     "description": "Complete all required fields."
+  },
+  "errorText": {
+    "prefix": "Fill out the",
+    "suffix": "field"
   },
   "buttonGroup": [
     {
@@ -179,8 +183,8 @@
     "final": "Final questions"
   },
   "select": {
-    "labelSelect": "Select",
-    "defaultValue": "Click to select",
+    "labelSelect": "Select an option",
+    "defaultValue": "-Select-",
     "dateDefaultValue": "-Select-"
   },
   "date": {

@@ -52,10 +52,6 @@
   padding: space.$space-xl space.$space-md;
 }
 
-.bf-usa-fieldset {
-  padding-bottom: space.$padding-bottom-lg;
-}
-
 #bf-section {
   padding-left: space.$space-md;
   padding-right: space.$space-md;
@@ -65,6 +61,21 @@
 
   h2.bf-usa-section-heading {
     @include h1;
+  }
+
+  .bf-form-heading-group {
+    padding-bottom: space.$space-lg;
+
+    h2.bf-form-heading {
+      @include h1;
+
+      margin-bottom: 0;
+      padding-bottom: space.$padding-bottom-sm;
+    }
+
+    .bf-section-sub-heading p {
+      margin: 0;
+    }
   }
 }
 

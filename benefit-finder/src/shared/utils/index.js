@@ -1,4 +1,5 @@
 export { default as buildURIParameter } from './buildURIParameter'
+export { default as errorHandling } from './errorHandling'
 export { default as createMarkup } from './createMarkup'
 export { default as dataLayerUtils } from './dataLayerUtils'
 export { default as dateInputValidation } from './dateInputValidation'

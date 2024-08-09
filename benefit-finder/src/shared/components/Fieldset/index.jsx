@@ -78,6 +78,8 @@ const Fieldset = ({
         required={required === true}
         id={id}
         data-errormessage={handleErrorMessage}
+        hidden={hidden}
+        aria-hidden={hidden}
       >
         {legend && handleRequired}
         {invalid === true && (

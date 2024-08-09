@@ -105,7 +105,11 @@ const Results = ({
             notEligibleResults?.description
           )}
         />
-        <Button onClick={handleViewToggle}>{notEligibleResults?.cta}</Button>
+        <div className="bf-result-view-cta-wrapper">
+          <Button secondary onClick={handleViewToggle}>
+            {notEligibleResults?.cta}
+          </Button>
+        </div>
       </div>
     )
   }

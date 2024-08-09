@@ -133,36 +133,40 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
               </li>
             </ul>
           </div>
-          <a
-            class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
-            data-testid="bf-benefit-link"
-            href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
-            rel="noopener noreferrer"
-            target="_blank"
+          <div
+            class="bf-usa-accordion-group-cta-wrapper"
           >
-            Visit  Federal Emergency Management Agency (FEMA) 
-            <i
-              aria-hidden="true"
-              data-testid="icon-carrot-small"
+            <a
+              class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
+              data-testid="bf-benefit-link"
+              href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <svg
-                class="bf-carrot-small"
-                fill="black"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              Visit  Federal Emergency Management Agency (FEMA) 
+              <i
+                aria-hidden="true"
+                data-testid="icon-carrot-small"
               >
-                <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M7 10l5 5 5-5z"
-                />
-              </svg>
-            </i>
-          </a>
+                <svg
+                  class="bf-carrot-small"
+                  fill="black"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </i>
+            </a>
+          </div>
         </div>
       </div>
     </div>

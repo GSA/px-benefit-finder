@@ -52,7 +52,7 @@ exports[`loads view 1`] = `
           class="bf-result-view-details"
         >
           <button
-            class="step-back-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+            class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
             type="button"
           >
             Back
@@ -207,12 +207,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  5 of
+                           - Met  5 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -489,12 +489,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             2
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -669,12 +669,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -872,12 +872,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  3 of
+                           - Met  3 of
             6
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -1135,12 +1135,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -1363,12 +1363,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -1571,12 +1571,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -1774,12 +1774,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -1977,12 +1977,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             3
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -2175,12 +2175,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -2378,12 +2378,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -2611,12 +2611,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -2813,12 +2813,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  4 of
+                           - Met  4 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -3065,12 +3065,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  0 of
+                           - Met  0 of
             1
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -3213,12 +3213,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  4 of
+                           - Met  4 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -3465,12 +3465,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -3668,12 +3668,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -3871,12 +3871,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -4090,12 +4090,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  5 of
+                           - Met  5 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -4372,12 +4372,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             2
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -4552,12 +4552,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             2
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -4732,12 +4732,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             3
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -4930,12 +4930,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -5163,12 +5163,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -5383,12 +5383,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -5586,12 +5586,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  0 of
+                           - Met  0 of
             3
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -5758,12 +5758,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -5961,12 +5961,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  0 of
+                           - Met  0 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -6143,12 +6143,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  3 of
+                           - Met  3 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -6382,12 +6382,12 @@ exports[`loads view 1`] = `
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  5 of
+                           - Met  5 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -6628,23 +6628,29 @@ exports[`loads view 1`] = `
             <p>
               Copy or email these results. Your answers will be visible. Only share with those you trust.
             </p>
-            <div
+            <ul
               class="bf-result-view-share-results-button-group"
             >
-              <a
-                class="bf-share-trigger bf-usa-link usa-link"
-                data-testid="bf-share-trigger"
-                href=""
-              >
-                Share link
-              </a>
-              <a
-                class="bf-email-trigger bf-usa-link usa-link"
-                href=""
-              >
-                Email results
-              </a>
-            </div>
+              <li>
+                 
+                <a
+                  class="bf-share-trigger bf-usa-link usa-link"
+                  data-testid="bf-share-trigger"
+                  href=""
+                >
+                  Share link
+                </a>
+              </li>
+              <li>
+                 
+                <a
+                  class="bf-email-trigger bf-usa-link usa-link"
+                  href=""
+                >
+                  Email results
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -6705,7 +6711,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
           class="bf-result-view-details"
         >
           <button
-            class="step-back-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+            class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
             type="button"
           >
             Back
@@ -6860,12 +6866,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  5 of
+                           - Met  5 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -7142,12 +7148,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             2
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -7322,12 +7328,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -7525,12 +7531,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  3 of
+                           - Met  3 of
             6
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -7788,12 +7794,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -8016,12 +8022,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -8224,12 +8230,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -8427,12 +8433,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -8630,12 +8636,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             3
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -8828,12 +8834,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -9031,12 +9037,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -9264,12 +9270,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -9466,12 +9472,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  4 of
+                           - Met  4 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -9718,12 +9724,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  0 of
+                           - Met  0 of
             1
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -9866,12 +9872,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  4 of
+                           - Met  4 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -10118,12 +10124,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -10321,12 +10327,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -10524,12 +10530,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -10743,12 +10749,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  5 of
+                           - Met  5 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -11025,12 +11031,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             2
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -11205,12 +11211,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             2
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -11385,12 +11391,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             3
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -11583,12 +11589,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -11816,12 +11822,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  2 of
+                           - Met  2 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -12036,12 +12042,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -12239,12 +12245,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  0 of
+                           - Met  0 of
             3
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -12411,12 +12417,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  1 of
+                           - Met  1 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -12614,12 +12620,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  0 of
+                           - Met  0 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -12796,12 +12802,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  3 of
+                           - Met  3 of
             4
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -13035,12 +13041,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         role="heading"
                       >
                         Key eligibility criteria
-                        <p
+                        <span
                           class="bf-key-eligibility-criteria-sub-heading"
                         >
-                          Met  5 of
+                           - Met  5 of
             5
-                        </p>
+                        </span>
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
@@ -13281,23 +13287,29 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             <p>
               Copy or email these results. Your answers will be visible. Only share with those you trust.
             </p>
-            <div
+            <ul
               class="bf-result-view-share-results-button-group"
             >
-              <a
-                class="bf-share-trigger bf-usa-link usa-link"
-                data-testid="bf-share-trigger"
-                href=""
-              >
-                Share link
-              </a>
-              <a
-                class="bf-email-trigger bf-usa-link usa-link"
-                href=""
-              >
-                Email results
-              </a>
-            </div>
+              <li>
+                 
+                <a
+                  class="bf-share-trigger bf-usa-link usa-link"
+                  data-testid="bf-share-trigger"
+                  href=""
+                >
+                  Share link
+                </a>
+              </li>
+              <li>
+                 
+                <a
+                  class="bf-email-trigger bf-usa-link usa-link"
+                  href=""
+                >
+                  Email results
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

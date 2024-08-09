@@ -5,12 +5,7 @@
 
 .bf-usa-accordion {
   .bf-usa-accordion__button {
-    padding-bottom: space.$padding-bottom-md-plus;
     position: relative;
-
-    &:not(:focus) {
-      box-shadow: 0 rem(4px) rem(4px) 0 rgb(0 0 0 / 11%);
-    }
 
     svg {
       position: absolute;
@@ -20,22 +15,6 @@
       margin: auto 0;
     }
 
-    &[aria-expanded='true'] {
-      background-image: none;
-      background-color: color.$marine;
-      color: color.$white;
-    }
-
-    &[aria-expanded='false'] {
-      background-image: none;
-      background-color: color.$sky;
-      color: color.$marine;
-
-      &:hover {
-        background-color: color.$dark-sky;
-      }
-    }
-
     .bf-accordion-heading {
       @include h6;
 
@@ -43,16 +22,16 @@
     }
 
     .bf-accordion-sub-heading {
-      @include p;
+      @include p1;
 
       letter-spacing: 0;
     }
   }
 
   .bf-usa-accordion__content {
-    border-bottom: rem(1px) solid color.$pop-blue;
-    border-left: rem(1px) solid color.$pop-blue;
-    border-right: rem(1px) solid color.$pop-blue;
-    padding-bottom: space.$space-md;
+    border-bottom: rem(2px) solid color.$base-light-grey;
+    border-left: rem(2px) solid color.$base-light-grey;
+    border-right: rem(2px) solid color.$base-light-grey;
+    padding: 0 space.$space-lg-plus space.$space-md space.$space-lg-plus;
   }
 }

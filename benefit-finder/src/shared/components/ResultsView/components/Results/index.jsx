@@ -88,7 +88,7 @@ const Results = ({
       <Button
         className="bf-step-back-button"
         onClick={() => handleViewToggle()}
-        outline
+        unstyled
       >
         {stepBackButton}
       </Button>
@@ -127,16 +127,26 @@ const Results = ({
           {shareResults?.heading}
         </Heading>
         <p>{shareResults?.description}</p>
-        <div className="bf-result-view-share-results-button-group">
-          <ShareTrigger
-            ui={shareResults}
-            data={stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)}
-          />
-          <EmailTrigger
-            ui={shareResults}
-            data={stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)}
-          />
-        </div>
+        <ul className="bf-result-view-share-results-button-group">
+          <li>
+            {' '}
+            <ShareTrigger
+              ui={shareResults}
+              data={
+                stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
+              }
+            />
+          </li>
+          <li>
+            {' '}
+            <EmailTrigger
+              ui={shareResults}
+              data={
+                stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
+              }
+            />
+          </li>
+        </ul>
       </div>
     )
   }

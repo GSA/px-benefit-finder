@@ -30,7 +30,7 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
       class="bf-result-view-details"
     >
       <button
-        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
         type="button"
       >
         Back
@@ -114,23 +114,29 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
         <p>
           Copy or email these results. Your answers will be visible. Only share with those you trust.
         </p>
-        <div
+        <ul
           class="bf-result-view-share-results-button-group"
         >
-          <a
-            class="bf-share-trigger bf-usa-link usa-link"
-            data-testid="bf-share-trigger"
-            href=""
-          >
-            Share link
-          </a>
-          <a
-            class="bf-email-trigger bf-usa-link usa-link"
-            href=""
-          >
-            Email results
-          </a>
-        </div>
+          <li>
+             
+            <a
+              class="bf-share-trigger bf-usa-link usa-link"
+              data-testid="bf-share-trigger"
+              href=""
+            >
+              Share link
+            </a>
+          </li>
+          <li>
+             
+            <a
+              class="bf-email-trigger bf-usa-link usa-link"
+              href=""
+            >
+              Email results
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

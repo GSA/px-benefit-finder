@@ -1,6 +1,7 @@
 import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import { Button } from '../index'
+
 import './_index.scss'
 
 /**
@@ -20,7 +21,11 @@ const StepBackButton = ({ children, setCurrent, currentIndex }) => {
   }
 
   return (
-    <Button className="step-back-button" outline onClick={() => handleStep()}>
+    <Button
+      className="bf-step-back-button"
+      unstyled
+      onClick={() => handleStep()}
+    >
       {children || 'Back'}
     </Button>
   )

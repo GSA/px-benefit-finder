@@ -7,41 +7,18 @@
   .bf-usa-accordion {
     margin-bottom: space.$space-md-plus;
 
-    .bf-usa-accordion__button {
-      border-radius: rem(3px);
-    }
-
-    .bf-usa-detail-title {
-      @include h6;
-
-      padding: 0;
-      margin: 0 0 rem(24px);
-      text-align: left;
-    }
-
-    .bf-usa-detail-summary,
-    .bf-usa-criteria-list,
-    .bf-usa-alert {
-      @include p;
-
-      margin: 0 0 rem(24px);
-    }
-
-    .bf-unmet-criteria-group {
-      margin: 0 0 rem(24px);
-
-      .bf-unmet-criteria-title {
+    .bf-usa-detail-summary {
+      p {
         @include p;
 
-        width: 100%;
-        text-align: center;
-        color: color.$pure-black;
+        margin-bottom: space.$space-md-plus;
       }
     }
 
     .bf-usa-accordion-group-cta-wrapper {
       display: flex;
       justify-content: center;
+      margin-top: space.$space-lg;
 
       .bf-usa-link {
         margin-bottom: space.$space-lg;

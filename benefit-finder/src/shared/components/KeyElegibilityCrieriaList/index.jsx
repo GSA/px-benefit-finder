@@ -30,8 +30,8 @@ const KeyElegibilityCrieriaList = ({
             headingLevel={5}
           >
             {`${benefitSummary}`}
-            <p className="bf-key-eligibility-criteria-sub-heading">{`${benefitSummaryPrefix} ${data.length} ${benefitSummaryConjunction}
-            ${initialEligibilityLength}`}</p>
+            <span className="bf-key-eligibility-criteria-sub-heading">{` - ${benefitSummaryPrefix} ${data.length} ${benefitSummaryConjunction}
+            ${initialEligibilityLength}`}</span>
           </Heading>
           <ul className="bf-key-eligibility-criteria-list">
             {data.map((item, index) => {

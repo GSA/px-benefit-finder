@@ -84,12 +84,12 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
               role="heading"
             >
               Key eligibility criteria
-              <p
+              <span
                 class="bf-key-eligibility-criteria-sub-heading"
               >
-                Met  0 of
+                 - Met  0 of
             5
-              </p>
+              </span>
             </h5>
             <ul
               class="bf-key-eligibility-criteria-list"

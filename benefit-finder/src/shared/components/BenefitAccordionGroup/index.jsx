@@ -95,7 +95,7 @@ const BenefitAccordionGroup = ({
         <Button
           className="bf-expand-all"
           aria-label={handleExpandIcon}
-          unstyled
+          outline
           onClick={() => handleExpandAll(isExpandAll)}
         >
           {handleExpandIcon}

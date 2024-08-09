@@ -123,7 +123,7 @@ exports[`loads view 1`] = `
               class="bf-usa-accordion-group"
             >
               <button
-                class="bf-expand-all bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                class="bf-expand-all bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
                 Open all +
@@ -6776,7 +6776,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               class="bf-usa-accordion-group"
             >
               <button
-                class="bf-expand-all bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                class="bf-expand-all bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
                 Open all +

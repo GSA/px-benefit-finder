@@ -39,23 +39,18 @@
       }
     }
 
-    .bf-usa-accordion__content {
-      .bf-usa-accordion-group-cta-wrapper {
-        display: flex;
-        justify-content: center;
+    .bf-usa-accordion-group-cta-wrapper {
+      display: flex;
+      justify-content: center;
 
-        .bf-usa-link {
-          margin-bottom: space.$space-lg;
-        }
+      .bf-usa-link {
+        margin-bottom: space.$space-lg;
       }
     }
   }
 
   .bf-expand-all {
-    @include p;
-
-    background-color: transparent;
-    color: color.$electric-blue;
     margin-bottom: space.$space-lg;
+    margin-top: space.$space-lg;
   }
 }

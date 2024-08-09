@@ -20,7 +20,7 @@ const StepBackLink = ({ children, setCurrent, currentIndex }) => {
   }
 
   return (
-    <Button className="step-back-link" unstyled onClick={() => handleStep()}>
+    <Button className="step-back-link" outline onClick={() => handleStep()}>
       {children || 'Back'}
     </Button>
   )

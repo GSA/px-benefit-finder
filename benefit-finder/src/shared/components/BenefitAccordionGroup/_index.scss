@@ -39,9 +39,15 @@
       }
     }
 
-    .bf-usa-link {
-      width: 100%;
-      margin-bottom: space.$space-lg;
+    .bf-usa-accordion__content {
+      .bf-usa-accordion-group-cta-wrapper {
+        display: flex;
+        justify-content: center;
+
+        .bf-usa-link {
+          margin-bottom: space.$space-lg;
+        }
+      }
     }
   }
 

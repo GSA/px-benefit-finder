@@ -23,13 +23,13 @@
 }
 
 .bf-result-view-unmet {
-  button {
-    margin-bottom: space.$space-md;
-    width: 100%;
-  }
-
   p {
     padding-bottom: space.$padding-bottom-md;
+  }
+
+  .bf-result-view-cta-wrapper {
+    display: flex;
+    justify-content: center;
   }
 }
 

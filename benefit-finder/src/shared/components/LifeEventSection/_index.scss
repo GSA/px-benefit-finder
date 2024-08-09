@@ -14,7 +14,7 @@
 
 .bf-section-wrapper {
   background-color: color.$white;
-  border: rem(1px) solid white;
+  border: rem(1px) solid color.$white;
   border-radius: rem(8px);
 
   button {
@@ -36,6 +36,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  .bf-usa-button:first-of-type {
+    margin-right: space.$space-lg-plus;
+  }
 
   button,
   .bf-usa-modal-group a {

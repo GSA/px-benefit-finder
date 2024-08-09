@@ -66,8 +66,8 @@ const Modal = ({
    */
   const handleOpenModal = () => {
     handleCheckRequriedFields().then(valid =>
-      valid
-        ? setModalOpen(true) && scrollLock.enableScroll()
+      valid === true
+        ? setModalOpen(true)
         : window.scrollTo(0, 0) && alertElement.current.focus()
     )
   }
@@ -88,6 +88,10 @@ const Modal = ({
   }
 
   const handleKeyValidation = e => e.which === 32 || e.which === 13
+
+  useEffect(() => {
+    modalOpen && scrollLock.enableScroll()
+  }, [modalOpen])
 
   // effects
   useEffect(() => {

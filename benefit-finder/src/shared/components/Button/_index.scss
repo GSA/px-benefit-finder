@@ -2,6 +2,11 @@
 @use '../../styles/functions/_index.scss' as *;
 @use '../../styles/colors/_index.scss' as colors;
 
+.bf-usa-button {
+  padding: space.$space-md space.$space-md-gap;
+  font-size: rem(17.6px);
+}
+
 .bf-usa-button--outline {
   background-color: transparent;
   box-shadow: inset 0 0 0 rem(2px) #000;

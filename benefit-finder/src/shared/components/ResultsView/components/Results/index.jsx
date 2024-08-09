@@ -86,7 +86,7 @@ const Results = ({
       <Button
         className="bf-step-back-link"
         onClick={() => handleViewToggle()}
-        unstyled
+        outline
       >
         {stepBackLink}
       </Button>

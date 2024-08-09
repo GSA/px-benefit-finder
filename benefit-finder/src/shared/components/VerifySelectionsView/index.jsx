@@ -130,7 +130,7 @@ const VerifySelectionsView = ({
             <Button
               className="bf-step-back-link"
               onClick={handleStepBack}
-              unstyled
+              outline
             >
               {stepIndicator?.stepBackLink}
             </Button>

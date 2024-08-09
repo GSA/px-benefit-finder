@@ -17,14 +17,8 @@
   border: rem(1px) solid color.$white;
   border-radius: rem(8px);
 
-  button {
+  .bf-usa-button {
     margin-bottom: space.$space-md;
-  }
-
-  button.bf-step-back-link {
-    color: color.$dark-medium-grey;
-    background-color: color.$white;
-    width: auto;
   }
 }
 

@@ -33,7 +33,7 @@
     "button": "Comenzar"
   },
   "stepIndicator": {
-    "stepBackLink": "Volver"
+    "stepBackButton": "Volver"
   },
   "requiredLabel": {
     "value": "requerido"
@@ -126,7 +126,7 @@
       "description": "Basado en sus respuestas usted no es elegible para estos beneficios. Podría ser elegible si ingresa más información o si su situación cambia.",
       "cta": "Ver todos los beneficios"
     },
-    "stepBackLink": "Volver",
+    "stepBackButton": "Volver",
     "eligibleResults": {
       "heading": "Resultados",
       "description": "Podría calificar para estos beneficios:"

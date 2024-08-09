@@ -258,7 +258,7 @@ const LifeEventSection = ({
               current={step - 1}
               setCurrent={setStep}
               data={data}
-              backLinkLabel={stepIndicator.stepBackLink}
+              backLinkLabel={stepIndicator.StepBackButton}
               handleCheckRequriedFields={() => handleForwardUpdate(1)}
               key={`step-indicator-${sectionHeadings}`}
             />

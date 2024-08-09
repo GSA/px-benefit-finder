@@ -58,7 +58,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           </ol>
         </div>
         <button
-          class="step-back-link bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+          class="step-back-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
           type="button"
         >
           Back

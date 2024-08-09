@@ -128,11 +128,11 @@ const VerifySelectionsView = ({
         <div className="bf-section-wrapper">
           <div className="bf-section-info">
             <Button
-              className="bf-step-back-link"
+              className="bf-step-back-button"
               onClick={handleStepBack}
               outline
             >
-              {stepIndicator?.stepBackLink}
+              {stepIndicator?.stepBackButton}
             </Button>
             <div>
               {data &&

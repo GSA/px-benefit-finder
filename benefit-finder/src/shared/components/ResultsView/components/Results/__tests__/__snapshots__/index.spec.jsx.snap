@@ -30,7 +30,7 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
       class="bf-result-view-details"
     >
       <button
-        class="bf-step-back-link bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
         type="button"
       >
         Back

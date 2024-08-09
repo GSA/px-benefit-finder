@@ -4,7 +4,7 @@ import {
   Button,
   EmailTrigger,
   Heading,
-  StepBackLink,
+  StepBackButton,
   Chevron,
   ShareTrigger,
   RelativeBenefitList,
@@ -73,22 +73,24 @@ const Results = ({
     )
   }
 
-  const ResultsStepBackLink = ({ notEligibleView, handleStepBack, ui }) => {
-    const { stepBackLink } = ui
+  const ResultsStepBackButton = ({ notEligibleView, handleStepBack, ui }) => {
+    console.log(ui)
+    const { stepBackButton } = ui
     return notEligibleView === false ? (
-      <StepBackLink
+      <StepBackButton
         onClick={() => resetElement.current.focus()}
         setCurrent={handleStepBack}
       >
-        {stepBackLink}
-      </StepBackLink>
+        {stepBackButton}
+      </StepBackButton>
     ) : (
+      // we don't step back on toggle view
       <Button
-        className="bf-step-back-link"
+        className="bf-step-back-button"
         onClick={() => handleViewToggle()}
         outline
       >
-        {stepBackLink}
+        {stepBackButton}
       </Button>
     )
   }
@@ -200,7 +202,7 @@ const Results = ({
       />
       <div className="bf-grid-container grid-container">
         <div className="bf-result-view-details">
-          <ResultsStepBackLink
+          <ResultsStepBackButton
             notEligibleView={notEligibleView}
             ui={ui}
             handleStepBack={handleStepBack}

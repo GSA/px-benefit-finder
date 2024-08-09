@@ -26,3 +26,8 @@
 .bf-fieldset-wrapper:has(fieldset.usa-input--error) {
   border-left: 0.25rem solid #c61f0c;
 }
+
+// we check to see if any of the fieldsets in the wrapper have the error
+.bf-fieldset-wrapper:has(fieldset.display-none) {
+  padding: 0;
+}

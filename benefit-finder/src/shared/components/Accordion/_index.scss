@@ -1,5 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
 .bf-usa-accordion {
@@ -8,14 +9,14 @@
     position: relative;
 
     &:not(:focus) {
-      box-shadow: 0 4px 4px 0 rgb(0 0 0 / 11%);
+      box-shadow: 0 rem(4px) rem(4px) 0 rgb(0 0 0 / 11%);
     }
 
     svg {
       position: absolute;
       top: 0;
       bottom: 0;
-      right: 20px;
+      right: rem(20px);
       margin: auto 0;
     }
 
@@ -49,9 +50,9 @@
   }
 
   .bf-usa-accordion__content {
-    border-bottom: 1px solid color.$pop-blue;
-    border-left: 1px solid color.$pop-blue;
-    border-right: 1px solid color.$pop-blue;
+    border-bottom: rem(1px) solid color.$pop-blue;
+    border-left: rem(1px) solid color.$pop-blue;
+    border-right: rem(1px) solid color.$pop-blue;
     padding-bottom: space.$space-md;
   }
 }

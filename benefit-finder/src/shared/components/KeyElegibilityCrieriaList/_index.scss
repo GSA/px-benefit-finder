@@ -1,13 +1,14 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 
 .bf-key-eligibility-criteria-group {
   .bf-key-eligibility-criteria-heading {
     @include important-bold;
 
     background-color: color.$marine;
-    border-radius: 4px 4px 0 0;
+    border-radius: rem(4px) rem(4px) 0 0;
     padding: space.$space-md space.$space-lg;
     margin: 0;
     color: color.$white;
@@ -25,7 +26,7 @@
     .bf-key-eligibility-criteria-list-item {
       margin: 0;
       padding: space.$space-md space.$space-lg;
-      border: 0.5px solid color.$pop-blue;
+      border: rem(0.5px) solid color.$pop-blue;
       background-color: color.$sky;
       display: flex;
       flex-wrap: nowrap;

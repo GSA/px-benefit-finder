@@ -1,13 +1,15 @@
-$space-xs: 4px;
-$space-sm: 8px;
-$space-sm-plus: 12px;
-$space-md: 16px;
-$space-md-gap: 20px;
-$space-md-plus: 24px;
-$space-lg: 32px;
-$space-lg-plus: 40px;
-$space-xl: 64px;
-$space-xl-plus: 86px;
+@use '../functions/index.scss' as *;
+
+$space-xs: rem(4px);
+$space-sm: rem(8px);
+$space-sm-plus: rem(12px);
+$space-md: rem(16px);
+$space-md-gap: rem(20px);
+$space-md-plus: rem(24px);
+$space-lg: rem(32px);
+$space-lg-plus: 4rem (0);
+$space-xl: rem(64px);
+$space-xl-plus: rem(86px);
 $padding-bottom-sm: $space-sm;
 $padding-bottom-md: $space-md;
 $padding-bottom-md-plus: $space-md-plus;

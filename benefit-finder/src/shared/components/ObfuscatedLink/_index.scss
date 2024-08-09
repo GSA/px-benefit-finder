@@ -1,9 +1,10 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/functions/_index.scss' as *;
 
 .bf-obfuscated-link {
   position: relative;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: rem(50px);
+  padding-left: rem(50px);
   text-decoration: none;
 
   &:visited {

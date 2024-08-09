@@ -1,9 +1,11 @@
+@use '../../styles/functions/_index.scss' as *;
+
 .bf-carrot-small,
 .bf-carrot-big {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 20px;
+  right: rem(20px);
   margin: auto 0;
   transform: rotate(-90deg);
 

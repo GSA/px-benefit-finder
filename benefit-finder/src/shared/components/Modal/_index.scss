@@ -15,13 +15,6 @@
     cursor: pointer;
   }
 
-  .bf-nav-item-one,
-  .bf-nav-item-two {
-    &.bf-usa-button {
-      width: $button-max-width;
-    }
-  }
-
   .bf-modal-heading {
     @include important-bold;
 

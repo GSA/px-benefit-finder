@@ -1,5 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
 .bf-usa-accordion-group {
@@ -7,14 +8,14 @@
     margin-bottom: space.$space-md-plus;
 
     .bf-usa-accordion__button {
-      border-radius: 3px;
+      border-radius: rem(3px);
     }
 
     .bf-usa-detail-title {
       @include h6;
 
       padding: 0;
-      margin: 0 0 24px;
+      margin: 0 0 rem(24px);
       text-align: left;
     }
 
@@ -23,11 +24,11 @@
     .bf-usa-alert {
       @include p;
 
-      margin: 0 0 24px;
+      margin: 0 0 rem(24px);
     }
 
     .bf-unmet-criteria-group {
-      margin: 0 0 24px;
+      margin: 0 0 rem(24px);
 
       .bf-unmet-criteria-title {
         @include p;

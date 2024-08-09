@@ -6709,12 +6709,16 @@ exports[`loads window query scenario 1 1`] = `
                   </strong>
                 </div>
               </p>
-              <button
-                class=""
-                type="button"
+              <div
+                class="bf-result-view-cta-wrapper"
               >
-                See benefits you did not qualify for
-              </button>
+                <button
+                  class=""
+                  type="button"
+                >
+                  See benefits you did not qualify for
+                </button>
+              </div>
             </div>
             <div
               class="bf-result-view-relvant-benefits"
@@ -13404,12 +13408,16 @@ exports[`loads window query scenario 2 1`] = `
                   </strong>
                 </div>
               </p>
-              <button
-                class=""
-                type="button"
+              <div
+                class="bf-result-view-cta-wrapper"
               >
-                See benefits you did not qualify for
-              </button>
+                <button
+                  class=""
+                  type="button"
+                >
+                  See benefits you did not qualify for
+                </button>
+              </div>
             </div>
             <div
               class="bf-result-view-relvant-benefits"

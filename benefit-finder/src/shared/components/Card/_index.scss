@@ -8,8 +8,8 @@
   margin-bottom: space.$space-md;
 
   .bf-usa-card__container {
-    background-color: color.$sky;
-    border-radius: rem(4px);
+    border-radius: 0;
+    border: rem(2px) solid color.$dark-teal;
     color: color.$officer-navy;
     height: auto;
     margin: 0;
@@ -20,11 +20,11 @@
   }
 
   a:hover.bf-usa-card__container {
-    background-color: color.$dark-sky;
+    background-color: color.$medium-teal;
   }
 
   a:active.bf-usa-card__container {
-    border: rem(2px) solid color.$pop-blue;
+    border: rem(2px) solid color.$dark-teal;
   }
 
   &.bf-card-icon {
@@ -44,12 +44,10 @@
     }
   }
 
-  .bf-usa-card__header {
-    padding-bottom: 0;
-  }
-
   h3.bf-usa-card__heading {
     @include h6;
+
+    text-decoration: underline;
   }
 
   .bf-usa-card__body {

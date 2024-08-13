@@ -8,19 +8,9 @@
 }
 
 .bf-usa-process-list__item {
-  min-height: rem(100px);
-  border-left: 0.5rem solid color.$sky;
+  min-height: rem(80px);
 
-  &::before {
-    background-color: color.$electric-blue;
-    color: color.$white;
+  .bf-usa-process-list__heading {
+    font-size: rem(21px);
   }
-}
-
-.bf-usa-process-list__item:last-child {
-  border-left: rem(8px) solid transparent;
-}
-
-h3.bf-usa-process-list__heading {
-  @include h5;
 }

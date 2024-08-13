@@ -74,7 +74,6 @@ const Results = ({
   }
 
   const ResultsStepBackButton = ({ notEligibleView, handleStepBack, ui }) => {
-    console.log(ui)
     const { stepBackButton } = ui
     return notEligibleView === false ? (
       <StepBackButton

@@ -385,10 +385,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -565,10 +565,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -768,10 +768,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -1031,10 +1031,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -1259,10 +1259,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -1467,10 +1467,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -1670,10 +1670,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -1873,10 +1873,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -2071,10 +2071,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -2274,10 +2274,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -2507,10 +2507,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -2710,10 +2710,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -2961,10 +2961,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -3110,10 +3110,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -3361,10 +3361,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -3564,10 +3564,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -3767,10 +3767,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -3987,10 +3987,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -4268,10 +4268,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -4448,10 +4448,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -4628,10 +4628,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -4826,10 +4826,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -5059,10 +5059,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -5279,10 +5279,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -5482,10 +5482,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -5654,10 +5654,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -5857,10 +5857,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -6039,10 +6039,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -6279,10 +6279,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -6560,10 +6560,10 @@ exports[`loads view 1`] = `
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -7044,10 +7044,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -7224,10 +7224,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -7427,10 +7427,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -7690,10 +7690,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -7918,10 +7918,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -8126,10 +8126,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -8329,10 +8329,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -8532,10 +8532,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -8730,10 +8730,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -8933,10 +8933,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -9166,10 +9166,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -9369,10 +9369,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -9620,10 +9620,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -9769,10 +9769,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -10020,10 +10020,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -10223,10 +10223,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -10426,10 +10426,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -10646,10 +10646,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -10927,10 +10927,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -11107,10 +11107,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -11287,10 +11287,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -11485,10 +11485,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -11718,10 +11718,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -11938,10 +11938,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -12141,10 +12141,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -12313,10 +12313,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -12516,10 +12516,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -12698,10 +12698,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -12938,10 +12938,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"
@@ -13219,10 +13219,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         <i
                           aria-hidden="true"
-                          data-testid="icon-carrot-small"
+                          data-testid="icon-carrot-solid"
                         >
                           <svg
-                            class="bf-carrot-small"
+                            class="bf-carrot-solid"
                             fill="black"
                             height="24"
                             viewBox="0 0 24 24"

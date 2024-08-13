@@ -2,29 +2,29 @@ import Colors from '../../styles/colors/_index.js'
 
 // export svg components in alpha order
 
-// carrot-big
-export const CarrotBig = ({ color }) => (
+// carrot
+export const Carrot = ({ color }) => (
   <svg
-    className="bf-carrot-big"
-    width="13"
-    height="22"
-    viewBox="0 0 13 22"
+    className="bf-carrot"
+    width="12"
+    height="19"
+    viewBox="0 0 12 19"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M3.18079 1.18074C2.79027 0.790216 2.1571 0.790215 1.76658 1.18074L0.706337 2.24098C0.316114 2.6312 0.315768 3.26377 0.705565 3.65442L7.33029 10.2936C7.71979 10.684 7.71979 11.3159 7.33029 11.7063L0.705566 18.3455C0.315768 18.7361 0.316113 19.3687 0.706336 19.7589L1.76658 20.8192C2.1571 21.2097 2.79027 21.2097 3.18079 20.8192L12.2929 11.7071C12.6834 11.3165 12.6834 10.6834 12.2929 10.2928L3.18079 1.18074Z"
+      d="M3.78013 1.73698C3.33373 1.29058 2.60998 1.29059 2.16359 1.73698L1.74049 2.16007C1.29444 2.60612 1.29405 3.32919 1.73961 3.77573L6.7498 8.79686C7.19502 9.24305 7.19502 9.96544 6.7498 10.4116L1.73961 15.4328C1.29405 15.8793 1.29444 16.6024 1.7405 17.0484L2.16359 17.4715C2.60998 17.9179 3.33373 17.9179 3.78013 17.4715L10.8391 10.4125C11.2855 9.96612 11.2855 9.24237 10.8391 8.79597L3.78013 1.73698Z"
       fill={color || Colors.officerNavy}
     />
   </svg>
 )
 
-// carrot-small
-export const CarrotSmall = ({ color }) => (
+// carrot-solid
+export const CarrotSolid = ({ color }) => (
   <svg
-    className="bf-carrot-small"
+    className="bf-carrot-solid"
     xmlns="http://www.w3.org/2000/svg"
     height="24"
     viewBox="0 0 24 24"
@@ -320,8 +320,8 @@ export const Share = ({ color }) => (
 )
 
 export default {
-  CarrotBig,
-  CarrotSmall,
+  Carrot,
+  CarrotSolid,
   Close,
   Death,
   Disability,

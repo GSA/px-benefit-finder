@@ -47,7 +47,7 @@ const ObfuscatedLink = ({
 
   const handleCarrot =
     noCarrot === true ? null : (
-      <Icon type="carrot-small" color="black" aria-hidden="true" />
+      <Icon type="carrot-solid" color="black" aria-hidden="true" />
     )
 
   return (

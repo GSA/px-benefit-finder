@@ -163,7 +163,7 @@ const Results = ({
         {relevantBenefits && (
           <RelativeBenefitList
             data={relevantBenefits}
-            carrotType="carrot-big"
+            carrotType="carrot"
           ></RelativeBenefitList>
         )}
       </div>

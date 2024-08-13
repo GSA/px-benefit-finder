@@ -1,7 +1,12 @@
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/colors/_index.scss' as color;
 
-.bf-usa-list {
-  li {
-    @include list-items
+.bf-usa-summary-box {
+  border-color: color.$teal;
+
+  .bf-usa-list {
+    li {
+      @include list-items;
+    }
   }
 }

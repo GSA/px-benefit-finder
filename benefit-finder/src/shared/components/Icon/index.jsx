@@ -24,10 +24,10 @@ const Icon = ({ type, color, ...props }) => {
       icon = <Icons.Close color={color} />
       break
     case 'death':
-      icon = <Icons.Death color={color} />
+      icon = <Icons.Death />
       break
     case 'disability':
-      icon = <Icons.Disability color={color} />
+      icon = <Icons.Disability />
       break
     case 'email':
       icon = <Icons.Email color={color} />
@@ -45,7 +45,7 @@ const Icon = ({ type, color, ...props }) => {
       icon = <Icons.ModalClose color={color} />
       break
     case 'retirement':
-      icon = <Icons.Retirement color={color} />
+      icon = <Icons.Retirement />
       break
     case 'share':
       icon = <Icons.Share color={color} />

@@ -1,19 +1,41 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/space/_index.scss' as space;
+@use '../../styles/functions/_index.scss' as *;
 
-.bf-usa-step-indicator__segment-label {
-  color: color.$dark-medium-grey;
-}
+// default
 
-.bf-usa-step-indicator__segment--complete
+.bf-usa-step-indicator__segment {
   .bf-usa-step-indicator__segment-label {
-  color: color.$officer-navy;
+    color: color.$grey;
+    font-size: rem(17px);
+  }
+
+  &::after {
+    background-color: color.$grey;
+  }
 }
 
-.bf-usa-step-indicator__segment--current::after {
-  background-color: color.$officer-navy;
+// complete
+
+.bf-usa-step-indicator__segment--complete {
+  .bf-usa-step-indicator__segment-label {
+    color: color.$officer-navy;
+  }
+
+  &::after {
+    background-color: color.$officer-navy;
+  }
 }
 
-.bf-usa-step-indicator__segment--complete::after {
-  background-color: color.$officer-navy;
+// current
+
+.bf-usa-step-indicator__segment--current {
+  .bf-usa-step-indicator__segment-label {
+    color: color.$dark-teal;
+    font-style: italic;
+  }
+
+  &::after {
+    background-color: color.$dark-teal;
+  }
 }

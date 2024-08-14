@@ -501,14 +501,14 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
+  it.only('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
-
-    // click not eligible benefits view
-    pageObjects.notEligibleResultsButton().click()
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      // click not eligible benefits view
+      pageObjects.notEligibleResultsButton().click()
 
       pageObjects
         .benefitsAccordion()

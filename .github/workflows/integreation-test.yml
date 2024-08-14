@@ -21,8 +21,6 @@ jobs:
         with:
           repository: "GSA/px-benefit-finder"
           ref: "release" # Specify the branch name here
-          submodules: "recursive" # Ensures submodules are also checked out
-          fetch-depth: 0 # Fetches all history for all branches and tags
 
       - name: Install Node
         uses: actions/setup-node@v4

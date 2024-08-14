@@ -58,12 +58,14 @@ jobs:
 
       - name: Install Submodule
         run: |
+          cd benefit-finder
           git submodule init && git submodule update
 
       - name: Cypress run (Chrome)
         uses: cypress-io/github-action@v6
         with:
-          working-directory: ./benefit-finder
+          # working-directory: ./benefit-finder
+          working-directory: . 
           browser: chrome
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
@@ -92,14 +94,14 @@ jobs:
 
       - name: Install Submodule
         run: |
-          cd ..
-          git submodule init
-          git submodule update
+          cd benefit-finder
+          git submodule init && git submodule update
 
       - name: Cypress run (Firefox)
         uses: cypress-io/github-action@v6
         with:
-          working-directory: ./benefit-finder
+          # working-directory: ./benefit-finder
+          working-directory: .
           browser: firefox
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
@@ -128,14 +130,14 @@ jobs:
 
       - name: Install Submodule
         run: |
-          cd ..
-          git submodule init
-          git submodule update
+          cd benefit-finder
+          git submodule init && git submodule update
 
       - name: Cypress run (Edge)
         uses: cypress-io/github-action@v6
         with:
-          working-directory: ./benefit-finder
+          # working-directory: ./benefit-finder
+          working-directory: .
           browser: edge
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
@@ -165,7 +167,8 @@ jobs:
       - name: Install dependencies
         uses: cypress-io/github-action@v6
         with:
-          working-directory: ./benefit-finder
+          # working-directory: ./benefit-finder
+          working-directory: .
           build: npx playwright-webkit install-deps
           runTests: false
 
@@ -200,15 +203,18 @@ jobs:
         with:
           node-version-file: "./benefit-finder/package.json"
 
+          git submodule update
+          git submodule updateu
+
       - name: Install Submodule
         run: |
-          cd ..
-          git submodule init
-          git submodule update
+          cd benefit-finder
+          git submodule init && git submodule update
 
       - name: Cypress run (Chrome)
         uses: cypress-io/github-action@v6
         with:
+          # working-directory: ./benefit-finder
           working-directory: ./benefit-finder
           component: true
           browser: chrome

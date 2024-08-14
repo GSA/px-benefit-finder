@@ -45,6 +45,6 @@
 
 @media (width >= $desktop) {
   .bf-result-view-details {
-    padding: space.$space-md-plus space.$space-xl-plus;
+    padding: space.$space-md-plus rem(164px);
   }
 }

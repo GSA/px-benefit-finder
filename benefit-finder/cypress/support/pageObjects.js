@@ -128,11 +128,11 @@ class PageObjects {
   }
 
   notEligibleResultsButton() {
-    return cy.get('.bf-result-view-unmet > .usa-button')
+    return cy.get('[data-testid="bf-result-view-unmet-button"]')
   }
 
   stepBackLink() {
-    return cy.get('.bf-step-back-link')
+    return cy.get('.bf-step-back-button')
   }
 
   zeroBenefitsViewHeading() {

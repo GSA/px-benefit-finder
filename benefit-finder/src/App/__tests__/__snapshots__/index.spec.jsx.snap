@@ -6204,6 +6204,7 @@ exports[`loads window query scenario 1 1`] = `
               >
                 <button
                   class=""
+                  data-testid="bf-result-view-unmet-button"
                   type="button"
                 >
                   See benefits you did not qualify for
@@ -12483,6 +12484,7 @@ exports[`loads window query scenario 2 1`] = `
               >
                 <button
                   class=""
+                  data-testid="bf-result-view-unmet-button"
                   type="button"
                 >
                   See benefits you did not qualify for

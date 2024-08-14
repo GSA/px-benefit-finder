@@ -87,7 +87,7 @@ fi
 echo "Scanning branch: $BRANCH_NAME"
 
 # TruffleHog3 Scan on local branch files
-$TRUFFLEHOG3_PATH --no-history --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json -c $TRUFFLEHOG_LOCAL_CONFIG || true
+$TRUFFLEHOG3_PATH --no-history --no-entropy --severity MEDIUM -vv -r rules.yml --format json --output truffleHogResults.json || true
 
 # Prepare for result checking
 # Check for secrets in the results

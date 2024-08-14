@@ -65,7 +65,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           # working-directory: ./benefit-finder
-          working-directory: . 
+          working-directory: .
           browser: chrome
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
@@ -202,9 +202,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: "./benefit-finder/package.json"
-
-          git submodule update
-          git submodule updateu
 
       - name: Install Submodule
         run: |

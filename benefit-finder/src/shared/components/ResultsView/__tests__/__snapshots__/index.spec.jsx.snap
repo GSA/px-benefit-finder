@@ -383,27 +383,6 @@ exports[`loads view 1`] = `
                          
                          Federal Emergency Management Agency (FEMA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -563,27 +542,6 @@ exports[`loads view 1`] = `
                          
                         Department of Labor (DOL)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -766,27 +724,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -1029,27 +966,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -1257,27 +1173,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -1465,27 +1360,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -1668,27 +1542,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -1871,27 +1724,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -2069,27 +1901,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -2272,27 +2083,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -2505,27 +2295,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -2708,27 +2477,6 @@ exports[`loads view 1`] = `
                          
                         Department of Defense (DOD)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -2959,27 +2707,6 @@ exports[`loads view 1`] = `
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -3108,27 +2835,6 @@ exports[`loads view 1`] = `
                          
                         Department of Interior (DOI) - Indian Affairs
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -3359,27 +3065,6 @@ exports[`loads view 1`] = `
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -3562,27 +3247,6 @@ exports[`loads view 1`] = `
                          
                         Department of Defense (DOD)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -3765,27 +3429,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -3985,27 +3628,6 @@ exports[`loads view 1`] = `
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -4266,27 +3888,6 @@ exports[`loads view 1`] = `
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -4446,27 +4047,6 @@ exports[`loads view 1`] = `
                          
                         Department of Justice (DOJ)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -4626,27 +4206,6 @@ exports[`loads view 1`] = `
                          
                         Department of Justice (DOJ)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -4824,27 +4383,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -5057,27 +4595,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -5277,27 +4794,6 @@ exports[`loads view 1`] = `
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -5480,27 +4976,6 @@ exports[`loads view 1`] = `
                          
                         Department of Defense (DOD)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -5652,27 +5127,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -5855,27 +5309,6 @@ exports[`loads view 1`] = `
                          
                         Department of Defense (DOD)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -6037,27 +5470,6 @@ exports[`loads view 1`] = `
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -6277,27 +5689,6 @@ exports[`loads view 1`] = `
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -6558,27 +5949,6 @@ exports[`loads view 1`] = `
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -7042,27 +6412,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                          Federal Emergency Management Agency (FEMA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -7222,27 +6571,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Department of Labor (DOL)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -7425,27 +6753,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -7688,27 +6995,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -7916,27 +7202,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -8124,27 +7389,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -8327,27 +7571,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -8530,27 +7753,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -8728,27 +7930,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -8931,27 +8112,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -9164,27 +8324,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -9367,27 +8506,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Department of Defense (DOD)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -9618,27 +8736,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -9767,27 +8864,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Department of Interior (DOI) - Indian Affairs
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -10018,27 +9094,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -10221,27 +9276,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Department of Defense (DOD)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -10424,27 +9458,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -10644,27 +9657,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -10925,27 +9917,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -11105,27 +10076,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Department of Justice (DOJ)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -11285,27 +10235,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Department of Justice (DOJ)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -11483,27 +10412,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -11716,27 +10624,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -11936,27 +10823,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -12139,27 +11005,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Department of Defense (DOD)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -12311,27 +11156,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -12514,27 +11338,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Department of Defense (DOD)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -12696,27 +11499,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Veterans Affairs Department (VA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -12936,27 +11718,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>
@@ -13217,27 +11978,6 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                          
                         Social Security Administration (SSA)
                          
-                        <i
-                          aria-hidden="true"
-                          data-testid="icon-carrot-solid"
-                        >
-                          <svg
-                            class="bf-carrot-solid"
-                            fill="black"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </i>
                       </a>
                     </div>
                   </div>

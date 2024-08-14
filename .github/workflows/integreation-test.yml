@@ -161,6 +161,11 @@ jobs:
         with:
           node-version-file: "./benefit-finder/package.json"
 
+      - name: Install Submodule
+        run: |
+          cd benefit-finder
+          git submodule init && git submodule update
+
       - name: Install dependencies
         uses: cypress-io/github-action@v6
         with:

@@ -2,15 +2,6 @@ name: Integration Test
 
 on:
   workflow_dispatch:
-  # push:
-  # paths:
-  # - benefit-finder/*
-
-permissions: read-all
-
-# defaults:
-# run:
-# working-directory: ./benefit-finder
 
 jobs:
   test-frontend:

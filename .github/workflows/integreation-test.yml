@@ -64,8 +64,7 @@ jobs:
       - name: Cypress run (Chrome)
         uses: cypress-io/github-action@v6
         with:
-          # working-directory: ./benefit-finder
-          working-directory: .
+          working-directory: ./benefit-finder
           browser: chrome
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
@@ -100,8 +99,7 @@ jobs:
       - name: Cypress run (Firefox)
         uses: cypress-io/github-action@v6
         with:
-          # working-directory: ./benefit-finder
-          working-directory: .
+          working-directory: ./benefit-finder
           browser: firefox
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
@@ -136,8 +134,7 @@ jobs:
       - name: Cypress run (Edge)
         uses: cypress-io/github-action@v6
         with:
-          # working-directory: ./benefit-finder
-          working-directory: .
+          working-directory: ./benefit-finder
           browser: edge
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
@@ -167,8 +164,7 @@ jobs:
       - name: Install dependencies
         uses: cypress-io/github-action@v6
         with:
-          # working-directory: ./benefit-finder
-          working-directory: .
+          working-directory: ./benefit-finder
           build: npx playwright-webkit install-deps
           runTests: false
 

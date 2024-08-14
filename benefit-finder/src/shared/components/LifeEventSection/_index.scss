@@ -31,6 +31,10 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  .bf-usa-button {
+    min-width: rem(120px);
+  }
+
   .bf-usa-button:first-of-type {
     margin-right: space.$space-lg-plus;
   }

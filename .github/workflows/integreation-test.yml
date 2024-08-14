@@ -13,7 +13,7 @@ permissions: read-all
 # working-directory: ./benefit-finder
 
 jobs:
-  download_and_prepare:
+  test-frontend:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the release branch
@@ -43,7 +43,6 @@ jobs:
           npm run test:coverage
 
   tests-chrome:
-    needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the release branch
@@ -78,7 +77,6 @@ jobs:
           path: ./benefit-finder/cypress/screenshots
 
   tests-firefox:
-    needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the release branch
@@ -115,7 +113,6 @@ jobs:
           path: ./benefit-finder/cypress/screenshots
 
   tests-edge:
-    needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the release branch
@@ -152,7 +149,6 @@ jobs:
           path: ./benefit-finder/cypress/screenshots
 
   tests-webkit:
-    needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the release branch
@@ -191,7 +187,6 @@ jobs:
           path: ./benefit-finder/cypress/screenshots
 
   tests-components:
-    needs: download_and_prepare
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the release branch
@@ -200,7 +195,6 @@ jobs:
           repository: "GSA/px-benefit-finder"
           ref: "release" # Specify the branch name here
 
-      - name: Download Latest Release
       - name: Install Node
         uses: actions/setup-node@v4
         with:

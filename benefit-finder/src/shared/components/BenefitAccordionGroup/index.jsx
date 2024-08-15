@@ -47,6 +47,7 @@ const BenefitAccordionGroup = ({
    * a function that returns the string value of our expanded action
    * @function
    * @return {string} returns label for our button
+   * @return {string} returns label for our button
    */
   const handleExpandIcon = isExpandAll ? `${openState} -` : `${closedState} +`
 
@@ -94,7 +95,7 @@ const BenefitAccordionGroup = ({
         <Button
           className="bf-expand-all"
           aria-label={handleExpandIcon}
-          unstyled
+          outline
           onClick={() => handleExpandAll(isExpandAll)}
         >
           {handleExpandIcon}
@@ -238,19 +239,22 @@ const BenefitAccordionGroup = ({
               {moreInformationNeeded.length > 0 && (
                 <MoreInfoList items={moreInformationNeeded} />
               )}
-              <ObfuscatedLink
-                className="bf-usa-link"
-                href={SourceLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => handleBenefitLinkClick(title)}
-                data-testid="bf-benefit-link"
-              >
-                {visitLabel} {agency.title}{' '}
-                {sourceIsEnglish && SourceIsEnglish === true
-                  ? sourceIsEnglish
-                  : ''}
-              </ObfuscatedLink>
+              <div className="bf-usa-accordion-group-cta-wrapper">
+                <ObfuscatedLink
+                  className="bf-usa-link"
+                  href={SourceLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => handleBenefitLinkClick(title)}
+                  data-testid="bf-benefit-link"
+                  noCarrot
+                >
+                  {visitLabel} {agency.title}{' '}
+                  {sourceIsEnglish && SourceIsEnglish === true
+                    ? sourceIsEnglish
+                    : ''}
+                </ObfuscatedLink>
+              </div>
             </Accordion>
           )
         })}

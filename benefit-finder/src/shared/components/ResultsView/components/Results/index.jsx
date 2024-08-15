@@ -2,11 +2,11 @@ import PropTypes from 'prop-types'
 import {
   BenefitAccordionGroup,
   Button,
-  EmailButton,
+  EmailTrigger,
   Heading,
-  StepBackLink,
+  StepBackButton,
   Chevron,
-  ShareButton,
+  ShareTrigger,
   RelativeBenefitList,
 } from '../../../index'
 import {
@@ -73,22 +73,23 @@ const Results = ({
     )
   }
 
-  const ResultsStepBackLink = ({ notEligibleView, handleStepBack, ui }) => {
-    const { stepBackLink } = ui
+  const ResultsStepBackButton = ({ notEligibleView, handleStepBack, ui }) => {
+    const { stepBackButton } = ui
     return notEligibleView === false ? (
-      <StepBackLink
+      <StepBackButton
         onClick={() => resetElement.current.focus()}
         setCurrent={handleStepBack}
       >
-        {stepBackLink}
-      </StepBackLink>
+        {stepBackButton}
+      </StepBackButton>
     ) : (
+      // we don't step back on toggle view
       <Button
-        className="bf-step-back-link"
+        className="bf-step-back-button"
         onClick={() => handleViewToggle()}
         unstyled
       >
-        {stepBackLink}
+        {stepBackButton}
       </Button>
     )
   }
@@ -105,7 +106,15 @@ const Results = ({
             notEligibleResults?.description
           )}
         />
-        <Button onClick={handleViewToggle}>{notEligibleResults?.cta}</Button>
+        <div className="bf-result-view-cta-wrapper">
+          <Button
+            data-testid="bf-result-view-unmet-button"
+            secondary
+            onClick={handleViewToggle}
+          >
+            {notEligibleResults?.cta}
+          </Button>
+        </div>
       </div>
     )
   }
@@ -121,16 +130,26 @@ const Results = ({
           {shareResults?.heading}
         </Heading>
         <p>{shareResults?.description}</p>
-        <div className="bf-result-view-share-results-button-group">
-          <ShareButton
-            ui={shareResults}
-            data={stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)}
-          />
-          <EmailButton
-            ui={shareResults}
-            data={stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)}
-          />
-        </div>
+        <ul className="bf-result-view-share-results-button-group">
+          <li>
+            {' '}
+            <ShareTrigger
+              ui={shareResults}
+              data={
+                stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
+              }
+            />
+          </li>
+          <li>
+            {' '}
+            <EmailTrigger
+              ui={shareResults}
+              data={
+                stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray)
+              }
+            />
+          </li>
+        </ul>
       </div>
     )
   }
@@ -148,7 +167,7 @@ const Results = ({
         {relevantBenefits && (
           <RelativeBenefitList
             data={relevantBenefits}
-            carrotType="carrot-big"
+            carrotType="carrot"
           ></RelativeBenefitList>
         )}
       </div>
@@ -196,7 +215,7 @@ const Results = ({
       />
       <div className="bf-grid-container grid-container">
         <div className="bf-result-view-details">
-          <ResultsStepBackLink
+          <ResultsStepBackButton
             notEligibleView={notEligibleView}
             ui={ui}
             handleStepBack={handleStepBack}

@@ -1,7 +1,7 @@
-import StepBackLink from './index.jsx'
+import StepBackButton from './index.jsx'
 
 export default {
-  component: StepBackLink,
+  component: StepBackButton,
   tags: ['autodocs'],
   args: {
     setCurrent: currentIndex =>

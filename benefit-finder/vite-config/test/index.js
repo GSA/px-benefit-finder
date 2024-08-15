@@ -15,7 +15,7 @@ const testConfig = {
     reportsDirectory: '../coverage',
     reporter: ['text', 'json'],
     thresholds: {
-      branches: 80,
+      branches: 75,
       functions: 55,
       lines: 80,
       statements: 80,

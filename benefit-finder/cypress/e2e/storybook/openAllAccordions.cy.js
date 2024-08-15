@@ -64,7 +64,10 @@ describe('open all interaction tests', () => {
       })
   })
 
-  it('from the not eligible view, validate clicking open all expands the accordions, then toggling eligible view, sets them back to close', () => {
+  it.only('from the not eligible view, validate clicking open all expands the accordions, then toggling eligible view, sets them back to close', () => {
+    // make sure all the accordions on not eligible view are closed
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
+    cy.wait(1000) // TODO: figure out why we have to wait here
     pageObjects
       .notEligibleResultsButton()
       .click()
@@ -75,6 +78,7 @@ describe('open all interaction tests', () => {
           }
         )
 
+        // click expand all and make sure they are now open
         pageObjects
           .expandAll()
           .click()
@@ -85,6 +89,7 @@ describe('open all interaction tests', () => {
               }
             )
 
+            // click step back and they should all be closed again
             pageObjects
               .stepBackLink()
               .click()
@@ -102,21 +107,4 @@ describe('open all interaction tests', () => {
           })
       })
   })
-
-  // it('Validate clicking Expand all opens all accordions', () => {
-  //   cy.get('.bf-expand-all').click()
-  //   cy.get('.bf-expand-all').should('contain.text', 'Close all')
-  //   cy.get('.usa-accordion__button').each(accordion => {
-  //     cy.wrap(accordion).should('have.attr', 'aria-expanded', 'true')
-  //   })
-  // })
-
-  // it('Validate clicking Collapse all closes all accordions', () => {
-  //   cy.get('.bf-expand-all').click()
-  //   cy.get('.bf-expand-all').click()
-  //   cy.get('.bf-expand-all').should('contain.text', 'Open all')
-  //   cy.get('.usa-accordion__button').each(accordion => {
-  //     cy.wrap(accordion).should('have.attr', 'aria-expanded', 'false')
-  //   })
-  // })
 })

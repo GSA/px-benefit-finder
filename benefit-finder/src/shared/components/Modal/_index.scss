@@ -1,6 +1,7 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/sizes/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
 #benefit-finder-modal {
@@ -13,24 +14,6 @@
     top: space.$space-md-plus;
     right: space.$space-md-plus;
     cursor: pointer;
-  }
-
-  .bf-nav-item-one,
-  .bf-nav-item-two {
-    @include important-bold;
-
-    &.bf-usa-button {
-      @include important-bold;
-
-      background-color: color.$pop-blue;
-      color: color.$white;
-      width: $button-max-width;
-    }
-
-    &.bf-usa-button:hover {
-      background-color: color.$officer-navy;
-      color: color.$white;
-    }
   }
 
   .bf-modal-heading {
@@ -46,5 +29,15 @@
   .bf-modal.bf-usa-button-group.width-full {
     margin: 0 auto;
     text-align: center;
+
+    .bf-usa-button-group__item {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .bf-usa-button {
+      width: rem(200px);
+      padding: rem(16px) rem(20px);
+    }
   }
 }

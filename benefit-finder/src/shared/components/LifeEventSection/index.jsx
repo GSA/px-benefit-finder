@@ -22,7 +22,7 @@ import {
 import './_index.scss'
 
 /**
- * a functional component that renders a link as a button
+ * a compound component that renders the main conditional view of the form
  * @component
  * @param {number} step - inherited current step value
  * @param {function} setStep - inherited function to inc/dec step value
@@ -259,7 +259,7 @@ const LifeEventSection = ({
             <StepIndicator
               current={step - 1}
               data={data}
-              backLinkLabel={stepIndicator.stepBackLink}
+              backLinkLabel={stepIndicator.StepBackButton}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
@@ -523,11 +523,11 @@ const LifeEventSection = ({
               </div>
             )}
             <div className="bf-section-nav-btn-group">
-              <Button secondary onClick={() => handleBackUpdate(-1)}>
+              <Button outline onClick={() => handleBackUpdate(-1)}>
                 {buttonGroup[0].value}
               </Button>
               {modal === false ? (
-                <Button onClick={() => handleForwardUpdate(1)}>
+                <Button secondary onClick={() => handleForwardUpdate(1)}>
                   {buttonGroup[1].value}
                 </Button>
               ) : (

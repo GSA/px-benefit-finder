@@ -13,6 +13,14 @@ jobs:
           repository: "GSA/px-benefit-finder"
           ref: "release" # Specify the branch name here
 
+      - name: Delete usagov-2021 folder
+        run: |
+          rm -rf ./benefit-finder/usagov-2021
+
+      - name: Clone usagov-2021 repository
+        run: |
+          git clone --branch ${{ github.ref_name }} https://github.com/usagov/usagov-2021.git ./benefit-finder/usagov-2021
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -41,6 +49,14 @@ jobs:
         with:
           repository: "GSA/px-benefit-finder"
           ref: "release" # Specify the branch name here
+
+      - name: Delete usagov-2021 folder
+        run: |
+          rm -rf ./benefit-finder/usagov-2021
+
+      - name: Clone usagov-2021 repository
+        run: |
+          git clone --branch ${{ github.ref_name }} https://github.com/usagov/usagov-2021.git ./benefit-finder/usagov-2021
 
       - name: Install Node
         uses: actions/setup-node@v4
@@ -77,6 +93,14 @@ jobs:
           repository: "GSA/px-benefit-finder"
           ref: "release" # Specify the branch name here
 
+      - name: Delete usagov-2021 folder
+        run: |
+          rm -rf ./benefit-finder/usagov-2021
+
+      - name: Clone usagov-2021 repository
+        run: |
+          git clone --branch ${{ github.ref_name }} https://github.com/usagov/usagov-2021.git ./benefit-finder/usagov-2021
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -112,6 +136,14 @@ jobs:
           repository: "GSA/px-benefit-finder"
           ref: "release" # Specify the branch name here
 
+      - name: Delete usagov-2021 folder
+        run: |
+          rm -rf ./benefit-finder/usagov-2021
+
+      - name: Clone usagov-2021 repository
+        run: |
+          git clone --branch ${{ github.ref_name }} https://github.com/usagov/usagov-2021.git ./benefit-finder/usagov-2021
+
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -146,6 +178,14 @@ jobs:
         with:
           repository: "GSA/px-benefit-finder"
           ref: "release" # Specify the branch name here
+
+      - name: Delete usagov-2021 folder
+        run: |
+          rm -rf ./benefit-finder/usagov-2021
+
+      - name: Clone usagov-2021 repository
+        run: |
+          git clone --branch ${{ github.ref_name }} https://github.com/usagov/usagov-2021.git ./benefit-finder/usagov-2021
 
       - name: Install Node
         uses: actions/setup-node@v4
@@ -189,6 +229,14 @@ jobs:
         with:
           repository: "GSA/px-benefit-finder"
           ref: "release" # Specify the branch name here
+
+      - name: Delete usagov-2021 folder
+        run: |
+          rm -rf ./benefit-finder/usagov-2021
+
+      - name: Clone usagov-2021 repository
+        run: |
+          git clone --branch ${{ github.ref_name }} https://github.com/usagov/usagov-2021.git ./benefit-finder/usagov-2021
 
       - name: Install Node
         uses: actions/setup-node@v4

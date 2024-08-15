@@ -65,6 +65,7 @@ describe('open all interaction tests', () => {
   })
 
   it('from the not eligible view, validate clicking open all expands the accordions, then toggling eligible view, sets them back to close', () => {
+    // make sure all the accordions on not eligible view are closed
     pageObjects
       .notEligibleResultsButton()
       .click()
@@ -74,16 +75,19 @@ describe('open all interaction tests', () => {
             cy.wrap(accordion).should('have.attr', 'aria-expanded', 'false')
           }
         )
+
+        // click expand all and make sure they are now open
         pageObjects
-          .notEligibleResultsButton()
+          .expandAll()
           .click()
           .then(() => {
             cy.get('.bf-usa-accordion__button.usa-accordion__button').each(
               accordion => {
-                cy.wrap(accordion).should('have.attr', 'aria-expanded', 'false')
+                cy.wrap(accordion).should('have.attr', 'aria-expanded', 'true')
               }
             )
 
+            // click step back and they should all be closed again
             pageObjects
               .stepBackLink()
               .click()

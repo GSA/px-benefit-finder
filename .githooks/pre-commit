@@ -91,14 +91,26 @@ $TRUFFLEHOG3_PATH --no-history --no-entropy --severity MEDIUM -vv -r rules.yml -
 
 # Prepare for result checking
 # Check for secrets in the results
-CONTENT=$($JQ_PATH 'length' $ROOT_DIR/truffleHogResults.json)
-if [ "$CONTENT" -eq 0 ]; then
-    rm $ROOT_DIR/truffleHogResults.json
+
+
+# Check if the results JSON file exists and is not empty
+if [ -f "$ROOT_DIR/truffleHogResults.json" ]; then
+    # Use jq to get the length of the content, assuming it might return a count of items or entries
+    CONTENT=$($JQ_PATH 'length' "$ROOT_DIR/truffleHogResults.json")
+else
+    # Set CONTENT to 0 if the file does not exist or is empty to indicate no findings
+    CONTENT=0
+fi
+
+# Now, use the CONTENT to determine the next steps
+if [[ "$CONTENT" -eq 0 ]]; then
+    # If no content is found, remove the JSON file and output that no secrets were found
+    rm "$ROOT_DIR/truffleHogResults.json"
     echo "No secrets found. Commit is safe."
     exit 0
 else
+    # If CONTENT is not zero, indicate that secrets were detected and block the commit
     echo "Secrets detected! Commit blocked."
     echo "Please review and resolve issues."
     exit 1
 fi
-

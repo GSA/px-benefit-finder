@@ -6,7 +6,7 @@ const { data } = JSON.parse(content)
 const relativeBenefits = data.lifeEventForm.relevantBenefits
 const args = {
   data: relativeBenefits,
-  carrotType: 'carrot-big',
+  carrotType: 'carrot',
 }
 
 describe('RelativeBenefitList', () => {

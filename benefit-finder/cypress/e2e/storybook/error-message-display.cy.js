@@ -93,7 +93,6 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.bfAlertList().then(() => {
       pageObjects.bfAlertListItem().then(errors => {
         const errorsArray = [...errors]
-        console.log(errorsArray)
         errorsArray.forEach(() => cy.focused().tab())
         cy.focused().should('have.class', 'usa-input--error')
       })
@@ -125,7 +124,6 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.bfAlertList().then(() => {
       pageObjects.bfAlertListItem().then(errors => {
         const errorsArray = [...errors]
-        console.log(errorsArray)
         errorsArray.forEach(() => cy.focused().tab())
         cy.focused().should('have.class', 'usa-input--error')
 
@@ -157,37 +155,6 @@ describe('Validate correct error messages display for negative scenarios', () =>
             .should('eq', alertDisplayState[attr])
         }
       })
-    })
-  })
-
-  it.only('Should not allow moving forward by clicking step nav when error banner is present', () => {
-    // expect when a user tabs from the focus error they can tab any other error notices in the form
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    cy.focused().should('have.class', 'usa-alert--error').tab()
-    pageObjects.bfAlertList().then(() => {
-      pageObjects.bfAlertListItem().then(errors => {
-        cy.get(errors[0])
-          .children()
-          .invoke('attr', 'href')
-          .then(href => {
-            cy.focused().should('have.attr', 'href').and('include', href)
-          })
-      })
-
-      // expect when a user has resolved all errors the top level error notices is not visible or accessible
-      utils.dataInputs({ dob, relation })
-
-      // expect the error notice to be visible and focused if errors are present
-      pageObjects.benefitSectionAlert().should('not.have.class', 'display-none')
-      pageObjects.stepIndicator().click()
-      cy.focused().should('have.class', 'usa-alert--error')
-      // expect date DOM structure alert to be accessible
-      for (const attr in alertDisplayState) {
-        pageObjects
-          .benefitSectionAlert()
-          .invoke('attr', attr)
-          .should('eq', alertDisplayState[attr])
-      }
     })
   })
 })

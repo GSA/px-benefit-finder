@@ -34,6 +34,7 @@ const Alert = ({
   tabIndex,
   errorCount,
   errorList,
+  submissionCount,
 }) => {
   const defaultClasses =
     type === 'error'
@@ -53,22 +54,26 @@ const Alert = ({
         ]
 
   useEffect(() => {
-    // handle dataLayer
+    // we use a submission count to force the effect on each submission
     const { errors } = dataLayerUtils.dataLayerStructure
     hasError &&
       errorList &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: errors.event,
-        bfData: {
-          errors: errorList.map(item => item?.id).join(','),
-          errorCount: {
-            number: errorCount,
-            string: `${errorCount}`,
+      dataLayerUtils.dataLayerPush(
+        window,
+        {
+          event: errors.event,
+          bfData: {
+            errors: errorList.map(item => item?.id).join(','),
+            errorCount: {
+              number: errorCount,
+              string: `${errorCount}`,
+            },
+            formSuccess: false,
           },
-          formSuccess: false,
         },
-      })
-  }, [hasError])
+        false
+      )
+  }, [submissionCount])
 
   return (
     <div

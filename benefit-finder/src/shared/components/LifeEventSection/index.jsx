@@ -22,7 +22,7 @@ import {
 import './_index.scss'
 
 /**
- * a functional component that renders a link as a button
+ * a compound component that renders the main conditional view of the form
  * @component
  * @param {number} step - inherited current step value
  * @param {function} setStep - inherited function to inc/dec step value
@@ -51,6 +51,7 @@ const LifeEventSection = ({
   const [requiredFieldsets, setRequiredFieldsets] = useState([])
   const [hasError, setHasError] = useState([])
   const [hasData, setHasData] = useState(false)
+  const [submissionCount, setSubmissionCount] = useState(0)
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
 
@@ -94,6 +95,7 @@ const LifeEventSection = ({
     // remove the display class from the alert
     alertFieldRef.current.classList.remove('display-none')
     alertFieldRef.current.focus()
+    setSubmissionCount(submissionCount + 1)
     currentData.completed = false
     window.scrollTo(0, 0)
     return false
@@ -258,8 +260,7 @@ const LifeEventSection = ({
               current={step - 1}
               setCurrent={setStep}
               data={data}
-              backLinkLabel={stepIndicator.stepBackLink}
-              handleCheckRequriedFields={() => handleForwardUpdate(1)}
+              backLinkLabel={stepIndicator.StepBackButton}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
@@ -272,6 +273,7 @@ const LifeEventSection = ({
                   hasError={hasError.length > 0}
                   errorCount={hasError.length}
                   errorList={hasError}
+                  submissionCount={submissionCount}
                 ></Alert>
                 <div className="bf-form-heading-group">
                   <Heading
@@ -522,11 +524,11 @@ const LifeEventSection = ({
               </div>
             )}
             <div className="bf-section-nav-btn-group">
-              <Button secondary onClick={() => handleBackUpdate(-1)}>
+              <Button outline onClick={() => handleBackUpdate(-1)}>
                 {buttonGroup[0].value}
               </Button>
               {modal === false ? (
-                <Button onClick={() => handleForwardUpdate(1)}>
+                <Button secondary onClick={() => handleForwardUpdate(1)}>
                   {buttonGroup[1].value}
                 </Button>
               ) : (

@@ -84,12 +84,12 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
               role="heading"
             >
               Key eligibility criteria
-              <p
+              <span
                 class="bf-key-eligibility-criteria-sub-heading"
               >
-                Met  0 of
+                 - Met  0 of
             5
-              </p>
+              </span>
             </h5>
             <ul
               class="bf-key-eligibility-criteria-list"
@@ -133,36 +133,19 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
               </li>
             </ul>
           </div>
-          <a
-            class="bf-usa-link bf-usa-button usa-button bf-obfuscated-link"
-            data-testid="bf-benefit-link"
-            href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
-            rel="noopener noreferrer"
-            target="_blank"
+          <div
+            class="bf-usa-accordion-group-cta-wrapper"
           >
-            Visit  Federal Emergency Management Agency (FEMA) 
-            <i
-              aria-hidden="true"
-              data-testid="icon-carrot-small"
+            <a
+              class="bf-usa-link bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary bf-obfuscated-link"
+              data-testid="bf-benefit-link"
+              href="https://www.fema.gov/disasters/coronavirus/economic/funeral-assistance"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <svg
-                class="bf-carrot-small"
-                fill="white"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M7 10l5 5 5-5z"
-                />
-              </svg>
-            </i>
-          </a>
+              Visit  Federal Emergency Management Agency (FEMA) 
+            </a>
+          </div>
         </div>
       </div>
     </div>

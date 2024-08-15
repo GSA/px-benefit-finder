@@ -1,4 +1,4 @@
-import { StepBackLink } from '../index'
+import { StepBackButton } from '../index'
 import PropTypes from 'prop-types'
 
 import './_index.scss'
@@ -47,14 +47,7 @@ const StepIndicator = ({
    * @param {number} index - the index of this item
    * @return {html} returns markup for a usa step indicator segment
    */
-  const StepIndicatorSegment = ({
-    heading,
-    current,
-    setCurrent,
-    completed,
-    index,
-    handleCheckRequriedFields,
-  }) => {
+  const StepIndicatorSegment = ({ heading, current, completed, index }) => {
     const statusClass = current === index ? '--current' : ''
     return (
       <li
@@ -64,11 +57,6 @@ const StepIndicator = ({
             : ''
         }`}
         aria-current={current === index}
-        onClick={() =>
-          completed !== true
-            ? handleCheckRequriedFields() === true && setCurrent(index + 1)
-            : setCurrent(index + 1)
-        }
         key={`step-indicator-${heading}`}
       >
         <span
@@ -114,9 +102,9 @@ const StepIndicator = ({
           </ol>
         </div>
       )}
-      <StepBackLink currentIndex={current} setCurrent={setCurrent}>
+      <StepBackButton currentIndex={current} setCurrent={setCurrent}>
         {backLinkLabel}
-      </StepBackLink>
+      </StepBackButton>
     </div>
   )
 }
@@ -125,9 +113,7 @@ StepIndicator.propTypes = {
   data: PropTypes.array,
   noHeadings: PropTypes.bool,
   current: PropTypes.number,
-  setCurrent: PropTypes.func,
   backLinkLabel: PropTypes.string,
-  handleCheckRequiredFields: PropTypes.func,
 }
 
 export default StepIndicator

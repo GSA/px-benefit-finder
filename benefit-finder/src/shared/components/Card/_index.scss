@@ -1,14 +1,15 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 @use '../../styles/breakpoints/_index.scss' as *;
 
 .bf-usa-card--relative-benefit {
   margin-bottom: space.$space-md;
 
   .bf-usa-card__container {
-    background-color: color.$sky;
-    border-radius: 4px;
+    border-radius: 0;
+    border: rem(2px) solid color.$dark-teal;
     color: color.$officer-navy;
     height: auto;
     margin: 0;
@@ -19,11 +20,11 @@
   }
 
   a:hover.bf-usa-card__container {
-    background-color: color.$dark-sky;
+    background-color: color.$medium-teal;
   }
 
   a:active.bf-usa-card__container {
-    border: 2px solid color.$pop-blue;
+    border: rem(2px) solid color.$dark-teal;
   }
 
   &.bf-card-icon {
@@ -33,8 +34,8 @@
       top: 0;
       bottom: 0;
       left: space.$space-md;
-      width: 70px;
-      height: 70px;
+      width: rem(70px);
+      height: rem(70px);
       padding: space.$space-sm-plus;
     }
 
@@ -43,12 +44,10 @@
     }
   }
 
-  .bf-usa-card__header {
-    padding-bottom: 0;
-  }
-
   h3.bf-usa-card__heading {
     @include h6;
+
+    text-decoration: underline;
   }
 
   .bf-usa-card__body {

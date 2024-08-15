@@ -19,10 +19,15 @@
 }
 
 .bf-fieldset-wrapper {
-  padding: 0 space.$space-md-gap space.$space-lg space.$space-md-gap;
+  padding: 0 0 space.$space-lg 0;
 }
 
 // we check to see if any of the fieldsets in the wrapper have the error
 .bf-fieldset-wrapper:has(fieldset.usa-input--error) {
   border-left: 0.25rem solid #c61f0c;
+  padding-left: space.$space-md-gap;
+}
+
+.bf-fieldset-wrapper:has(fieldset.display-none) {
+  padding: 0;
 }

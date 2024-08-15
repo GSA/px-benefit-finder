@@ -258,10 +258,8 @@ const LifeEventSection = ({
           <div className="bf-section-info">
             <StepIndicator
               current={step - 1}
-              setCurrent={setStep}
               data={data}
               backLinkLabel={stepIndicator.stepBackLink}
-              handleCheckRequriedFields={() => handleForwardUpdate(1)}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (

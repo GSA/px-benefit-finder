@@ -2,21 +2,13 @@
 
 namespace Drupal\usagov_benefit_finder_content\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Database\Connection;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\File\FileSystemInterface;
-use Drupal\Core\File\FileUrlGeneratorInterface;
-use Drupal\file\FileRepositoryInterface;
 use Drupal\usagov_benefit_finder\Traits\BenefitFinderTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class CheckDataController
  * @package Drupal\usagov_benefit_finder_content\Controller
  */
-class CheckDataController extends ControllerBase {
+class CheckDataController {
 
   use BenefitFinderTrait;
 
@@ -56,11 +48,11 @@ class CheckDataController extends ControllerBase {
   protected $database;
 
   /**
-   * The request stack.
+   * Retrieves the currently active request object.
    *
-   * @var \Symfony\Component\HttpFoundation\RequestStack
+   * @var \Symfony\Component\HttpFoundation\Request
    */
-  protected $requestStack;
+  protected $request;
 
   /**
    * The benefit finder content mode.
@@ -84,49 +76,15 @@ class CheckDataController extends ControllerBase {
   protected $expanded;
 
   /**
-   * Constructs a new CheckDataController object.
-   *
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager.
-   * @param \Drupal\Core\File\FileSystemInterface $file_system
-   *   The file system service.
-   * @param \Drupal\file\FileRepositoryInterface|null $file_repository
-   *   The file repository.
-   * @param \Drupal\Core\File\FileUrlGeneratorInterface $file_url_generator
-   *   The file URL generator.
-   * @param \Drupal\Core\Database\Connection $connection
-   *   The database connection.
-   * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
-   *   The request stack.
+   * Constructs a new LifeEventController object.
    */
-  public function __construct(
-    EntityTypeManagerInterface $entity_type_manager,
-    FileSystemInterface $file_system,
-    FileRepositoryInterface $file_repository,
-    FileUrlGeneratorInterface $file_url_generator,
-    Connection $database,
-    RequestStack $request_stack
-  ) {
-    $this->entityTypeManager = $entity_type_manager;
-    $this->fileSystem = $file_system;
-    $this->fileRepository = $file_repository;
-    $this->fileUrlGenerator = $file_url_generator;
-    $this->database = $database;
-    $this->requestStack = $request_stack;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('entity_type.manager'),
-      $container->get('file_system'),
-      $container->get('file.repository'),
-      $container->get('file_url_generator'),
-      $container->get('database'),
-      $container->get('request_stack'),
-    );
+  public function __construct() {
+    $this->entityTypeManager = \Drupal::service('entity_type.manager');
+    $this->fileSystem = \Drupal::service('file_system');
+    $this->fileRepository = \Drupal::service('file.repository');
+    $this->fileUrlGenerator = \Drupal::service('file_url_generator');
+    $this->database = \Drupal::service('database');
+    $this->request = \Drupal::request();
   }
 
   /**
@@ -137,12 +95,12 @@ class CheckDataController extends ControllerBase {
 
     // Get langcode.
     if (empty($this->langcode)) {
-      $this->langcode = $this->requestStack->getCurrentRequest()->query->get('langcode') ?? "en";
+      $this->langcode = $this->request->get('langcode') ?? "en";
     }
 
     // Get expanded.
     if (empty($this->expanded)) {
-      $this->expanded = $this->requestStack->getCurrentRequest()->query->get('expanded') ?? "false";
+      $this->expanded = $this->request->get('expanded') ?? "false";
     }
 
     $help = <<<EOD

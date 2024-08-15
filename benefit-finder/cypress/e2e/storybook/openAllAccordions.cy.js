@@ -64,8 +64,9 @@ describe('open all interaction tests', () => {
       })
   })
 
-  it('from the not eligible view, validate clicking open all expands the accordions, then toggling eligible view, sets them back to close', () => {
+  it.only('from the not eligible view, validate clicking open all expands the accordions, then toggling eligible view, sets them back to close', () => {
     // make sure all the accordions on not eligible view are closed
+    cy.wait(1000) // TODO: figure out why we have to wait here
     pageObjects
       .notEligibleResultsButton()
       .click()

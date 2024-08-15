@@ -258,6 +258,7 @@ const LifeEventSection = ({
           <div className="bf-section-info">
             <StepIndicator
               current={step - 1}
+              setCurrent={setStep}
               data={data}
               backLinkLabel={stepIndicator.StepBackButton}
               key={`step-indicator-${sectionHeadings}`}

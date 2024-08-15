@@ -176,6 +176,12 @@ class LifeEventController {
       $this->mode = $this->request->get('mode') ?? "published";
     }
 
+    // Get life event node by its ID.
+    $life_event_node = $this->getLifeEventById($id, $this->mode);
+
+    // Get search title of life event.
+    $life_event_search_title = $life_event_node->get('field_b_search_title')->value;
+
     // Get life event form node and node ID of given life event.
     $life_event_form_node = $this->getLifeEventFormById($id, $this->mode);
     if (empty($life_event_form_node)) {
@@ -196,6 +202,7 @@ class LifeEventController {
       "timeEstimate" => $life_event_form_node->get('field_b_time_estimate')->value ?? "",
       "titlePrefix" => $life_event_form_node->get('field_b_title_prefix')->value ?? "",
       "title" => $life_event_form_node->get('title')->value ?? "",
+      "searchTitle" => $life_event_search_title ?? "",
       "summary" => $life_event_form_node->get('field_b_summary')->value ?? "",
     ];
 

@@ -507,6 +507,7 @@ describe('Calls to Google Analytics Object', function () {
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
+      // eslint-disable-next-line cypress/no-unnecessary-waiting
       cy.wait(2500).then(() => {
         // click not eligible benefits view
         pageObjects

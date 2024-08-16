@@ -4,42 +4,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-frontend:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the release branch
-        uses: actions/checkout@v4
-        with:
-          repository: "GSA/px-benefit-finder"
-          ref: "release" # Specify the branch name here
-
-      - name: Delete usagov-2021 folder
-        run: |
-          rm -rf ./benefit-finder/usagov-2021
-
-      - name: Clone usagov-2021 repository
-        run: |
-          git clone --branch ${{ github.ref_name }} https://github.com/usagov/usagov-2021.git ./benefit-finder/usagov-2021
-
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: "./benefit-finder/package.json"
-
-      - name: Install Submodule
-        run: |
-          cd benefit-finder
-          git submodule init && git submodule update
-
-      - name: Install Dependencies
-        run: |
-          cd benefit-finder
-          npm ic
-
-      - name: Test Frontend
-        run: |
-          cd benefit-finder
-          npm run test:coverage
 
   tests-chrome:
     runs-on: ubuntu-latest

@@ -27,6 +27,7 @@
       margin: 0;
       padding: space.$space-md space.$space-lg;
       border: rem(2px) solid color.$base-light-grey;
+      border-bottom: 0;
       display: flex;
       flex-wrap: nowrap;
 
@@ -34,6 +35,10 @@
         height: 100%;
         margin-right: space.$space-lg;
       }
+    }
+
+    &:last-child {
+      border-bottom: rem(2px) solid color.$base-light-grey;
     }
 
     li.bf-usa-list {

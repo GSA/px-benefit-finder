@@ -6240,8 +6240,8 @@ exports[`loads window query scenario 1 1`] = `
                       <svg
                         fill="none"
                         height="45"
-                        viewBox="0 0 46 45"
-                        width="46"
+                        viewBox="0 0 45 45"
+                        width="45"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -6380,8 +6380,8 @@ exports[`loads window query scenario 1 1`] = `
                       <svg
                         fill="none"
                         height="45"
-                        viewBox="0 0 46 45"
-                        width="46"
+                        viewBox="0 0 45 45"
+                        width="45"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -12520,8 +12520,8 @@ exports[`loads window query scenario 2 1`] = `
                       <svg
                         fill="none"
                         height="45"
-                        viewBox="0 0 46 45"
-                        width="46"
+                        viewBox="0 0 45 45"
+                        width="45"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -12660,8 +12660,8 @@ exports[`loads window query scenario 2 1`] = `
                       <svg
                         fill="none"
                         height="45"
-                        viewBox="0 0 46 45"
-                        width="46"
+                        viewBox="0 0 45 45"
+                        width="45"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path

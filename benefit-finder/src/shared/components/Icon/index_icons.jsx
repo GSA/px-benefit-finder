@@ -54,9 +54,9 @@ export const Close = ({ color }) => (
 export const Death = () => (
   <svg
     className="bf-death"
-    width="46"
+    width="45"
     height="45"
-    viewBox="0 0 46 45"
+    viewBox="0 0 45 45"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -100,9 +100,9 @@ export const Email = ({ color }) => (
 // disability
 export const Disability = () => (
   <svg
-    width="46"
+    width="45"
     height="45"
-    viewBox="0 0 46 45"
+    viewBox="0 0 45 45"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -224,9 +224,9 @@ export const Open = ({ color }) => (
 // retirement
 export const Retirement = () => (
   <svg
-    width="46"
+    width="45"
     height="45"
-    viewBox="0 0 46 45"
+    viewBox="0 0 45 45"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >

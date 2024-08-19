@@ -28,6 +28,11 @@
   padding-left: space.$space-md-gap;
 }
 
+.bf-fieldset-wrapper:has(fieldset.usa-input--error)
+  + .bf-fieldset-wrapper:has(fieldset:not(.usa-input--error)) {
+  padding-top: space.$space-md-gap;
+}
+
 .bf-fieldset-wrapper:has(fieldset.display-none) {
   padding: 0;
 }

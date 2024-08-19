@@ -1,1 +1,3 @@
-$button-max-width: 248px;
+@use '../functions/_index.scss' as *;
+
+$button-max-width: rem(248px);

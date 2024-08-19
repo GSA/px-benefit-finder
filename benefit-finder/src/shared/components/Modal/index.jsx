@@ -25,8 +25,8 @@ const customStyles = {
     width: '80%',
     borderRadius: '8px',
     borderColor: '#005ea2',
-    padding: '64px 24px',
-    maxWidth: '520px',
+    padding: '4rem 1.5rem',
+    maxWidth: '32.5rem',
   },
 }
 
@@ -193,6 +193,7 @@ const Modal = ({
             onKeyDown={e => handleKeyDown(e, navItemOneFunction)}
             noCarrot
             tabIndex="0"
+            secondary
           >
             {navItemOneLabel}
           </Button>
@@ -208,6 +209,7 @@ const Modal = ({
             onKeyDown={e => handleKeyDown(e, navItemTwoFunction)}
             noCarrot
             tabIndex="0"
+            secondary
           >
             {navItemTwoLabel}
           </Button>

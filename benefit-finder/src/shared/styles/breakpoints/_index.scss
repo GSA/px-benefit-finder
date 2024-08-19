@@ -1,1 +1,3 @@
-$desktop: 1049px;
+@use '../functions/index.scss' as *;
+
+$desktop: rem(1049px);

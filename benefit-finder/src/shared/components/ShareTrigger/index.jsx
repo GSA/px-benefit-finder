@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import { Button } from '../index'
 import { buildURIParameter } from '../../utils'
-import './_index.scss'
 
 /**
  * a functional component that renders a button with copy-to-cipboard functionality
@@ -9,7 +7,7 @@ import './_index.scss'
  * @return {html} returns a semantic html button element with a custom function onClick event
  */
 
-const ShareButton = ({ ui, data }) => {
+const ShareTrigger = ({ ui, data }) => {
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href
@@ -21,7 +19,8 @@ const ShareButton = ({ ui, data }) => {
   /**
    * a handler that copies the current window location href to the users clipboard
    */
-  const handleClick = () => {
+  const handleClick = e => {
+    e.preventDefault()
     setShareLink(buildURIParameter(window.location.href, data))
     navigator.clipboard.writeText(shareLink).then(
       () => alert(`${ui?.shareLinkContent} ${shareLink}`),
@@ -30,16 +29,15 @@ const ShareButton = ({ ui, data }) => {
   }
 
   return (
-    <Button
-      className="bf-share-button"
-      secondary
-      onClick={handleClick}
-      icon="share"
-      data-testid="bf-share-button"
+    <a
+      href=""
+      className="bf-share-trigger bf-usa-link usa-link"
+      onClick={e => handleClick(e)}
+      data-testid="bf-share-trigger"
     >
-      {ui?.shareButton || 'Share'}
-    </Button>
+      {ui?.shareTrigger || 'Share'}
+    </a>
   )
 }
 
-export default ShareButton
+export default ShareTrigger

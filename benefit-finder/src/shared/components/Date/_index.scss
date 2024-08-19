@@ -2,41 +2,42 @@
 @use '../../styles/space/index.scss' as space;
 @use '../../styles/breakpoints/_index.scss' as *;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 
 .bf-usa-form-group {
   width: 100%;
 }
 
 .bf-usa-memorable-date {
-  max-width: 320px;
+  max-width: rem(320px);
   flex-wrap: wrap;
 }
 
 .bf-usa-input {
-  border-radius: 3px;
+  border-radius: rem(3px);
 
   @include p;
 
   &.usa-input--error {
-    padding: 8px;
+    padding: rem(8px);
     height: initial;
-    border-radius: 3px;
+    border-radius: rem(3px);
     border-color: color.$alert-red;
   }
 }
 
 .bf-usa-form-group--month {
-  width: 242px;
+  width: rem(242px);
   margin-top: space.$space-sm;
 }
 
 .bf-usa-form-group--day {
-  width: 64px;
+  width: rem(64px);
   margin-top: space.$space-sm;
 }
 
 .bf-usa-form-group--year {
-  width: 95px;
+  width: rem(95px);
   margin-top: space.$space-sm;
 }
 

@@ -1,25 +1,14 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 
 .bf-usa-process-list {
-  margin-left: 70px;
-  margin-right: 18px;
+  margin-left: rem(70px);
+  margin-right: rem(18px);
 }
 
 .bf-usa-process-list__item {
-  min-height: 100px;
-  border-left: 0.5rem solid color.$sky;
+  min-height: rem(80px);
 
-  &::before {
-    background-color: color.$electric-blue;
-    color: color.$white;
+  .bf-usa-process-list__heading {
+    font-size: rem(21px);
   }
-}
-
-.bf-usa-process-list__item:last-child {
-  border-left: 0.5rem solid transparent;
-}
-
-h3.bf-usa-process-list__heading {
-  @include h5;
 }

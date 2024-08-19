@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
-import EmailButton from '../index.jsx'
+import ShareTrigger from '../index.jsx'
 
-describe('Email', () => {
+describe('Share', () => {
   it('renders a match to the previous snapshot', () => {
-    const { asFragment } = render(<EmailButton />)
+    const { asFragment } = render(<ShareTrigger />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

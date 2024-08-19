@@ -1,3 +1,5 @@
+@use '../../styles/functions/_index.scss' as *;
+
 .bf-usa-input.usa-input--error {
-  outline-offset: 2px;
+  outline-offset: rem(2px);
 }

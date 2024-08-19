@@ -10,39 +10,39 @@ class PageObjects {
   }
 
   applicantDateOfBirthMonth() {
-    return cy.get('#applicant_date_of_birth_0-date_of_birth_month')
+    return cy.get('#applicant_date_of_birth_0_month')
   }
 
   applicantDateOfBirthDay() {
-    return cy.get('#applicant_date_of_birth_0-date_of_birth_day')
+    return cy.get('#applicant_date_of_birth_0_day')
   }
 
   applicantDateOfBirthYear() {
-    return cy.get('#applicant_date_of_birth_0-date_of_birth_year')
+    return cy.get('#applicant_date_of_birth_0_year')
   }
 
   applicantDateOfDeathMonth() {
-    return cy.get('#deceased_date_of_death_0-date_of_birth_month')
+    return cy.get('#deceased_date_of_death_0_month')
   }
 
   applicantDateOfDeathDay() {
-    return cy.get('#deceased_date_of_death_0-date_of_birth_day')
+    return cy.get('#deceased_date_of_death_0_day')
   }
 
   applicantDateOfDeathYear() {
-    return cy.get('#deceased_date_of_death_0-date_of_birth_year')
+    return cy.get('#deceased_date_of_death_0_year')
   }
 
   applicantDateOfFuneralMonth() {
-    return cy.get('#deceased_date_of_funeral_0-date_of_birth_month')
+    return cy.get('#deceased_date_of_funeral_0_month')
   }
 
   applicantDateOfFuneralDay() {
-    return cy.get('#deceased_date_of_funeral_0-date_of_birth_day')
+    return cy.get('#deceased_date_of_funeral_0_day')
   }
 
   applicantDateOfFuneralYear() {
-    return cy.get('#deceased_date_of_funeral_0-date_of_birth_year')
+    return cy.get('#deceased_date_of_funeral_0_year')
   }
 
   benefitSectionAlert() {
@@ -128,11 +128,11 @@ class PageObjects {
   }
 
   notEligibleResultsButton() {
-    return cy.get('.bf-result-view-unmet > .usa-button')
+    return cy.get('[data-testid="bf-result-view-unmet-button"]')
   }
 
   stepBackLink() {
-    return cy.get('.bf-step-back-link')
+    return cy.get('.bf-step-back-button')
   }
 
   zeroBenefitsViewHeading() {

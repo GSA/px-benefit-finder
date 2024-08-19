@@ -1,21 +1,22 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 
 .bf-usa-select {
-  border-radius: 3px;
+  border-radius: rem(3px);
 
   option {
     @include p;
   }
 
   &.usa-input--error {
-    padding: 8px 32px 8px 8px;
+    padding: rem(8px) rem(32px) rem(8px) rem(8px);
     height: auto;
-    border-radius: 3px;
+    border-radius: rem(3px);
     border-color: color.$alert-red;
 
     &:focus {
-      outline-offset: 2px;
+      outline-offset: rem(2px);
     }
   }
 }

@@ -7,9 +7,9 @@
 }
 
 .bf-usa-radio__input:checked + .bf-usa-radio__label::before {
-  background-color: #005ea2;
+  background-color: color.$off-black;
   box-shadow:
-    0 0 0 rem(2px) #005ea2,
+    0 0 0 rem(2px) color.$off-black,
     inset 0 0 0 rem(2px) white;
   outline-offset: rem(4px);
 }

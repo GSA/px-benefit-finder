@@ -93,7 +93,6 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.bfAlertList().then(() => {
       pageObjects.bfAlertListItem().then(errors => {
         const errorsArray = [...errors]
-        console.log(errorsArray)
         errorsArray.forEach(() => cy.focused().tab())
         cy.focused().should('have.class', 'usa-input--error')
       })
@@ -125,7 +124,6 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.bfAlertList().then(() => {
       pageObjects.bfAlertListItem().then(errors => {
         const errorsArray = [...errors]
-        console.log(errorsArray)
         errorsArray.forEach(() => cy.focused().tab())
         cy.focused().should('have.class', 'usa-input--error')
 

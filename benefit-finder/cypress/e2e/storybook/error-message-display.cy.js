@@ -93,6 +93,7 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.bfAlertList().then(() => {
       pageObjects.bfAlertListItem().then(errors => {
         const errorsArray = [...errors]
+        console.log(errorsArray)
         errorsArray.forEach(() => cy.focused().tab())
         cy.focused().should('have.class', 'usa-input--error')
       })
@@ -124,6 +125,7 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.bfAlertList().then(() => {
       pageObjects.bfAlertListItem().then(errors => {
         const errorsArray = [...errors]
+        console.log(errorsArray)
         errorsArray.forEach(() => cy.focused().tab())
         cy.focused().should('have.class', 'usa-input--error')
 
@@ -156,5 +158,64 @@ describe('Validate correct error messages display for negative scenarios', () =>
         }
       })
     })
+  })
+
+  it('Should include error count in alert', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    pageObjects
+      .bfAlertList()
+      .find('li')
+      .its('length') // Get the count of 'li' elements using the base element
+      .then(count => {
+        // Assert that the heading contains the count
+        pageObjects.alertHeading().should('include.text', count)
+      })
+  })
+
+  it('Should include list of error links and clicking on a link navigates to a specific field', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+
+    pageObjects
+      .bfAlertList()
+      .find('a')
+      .each($el => {
+        cy.wrap($el)
+          .should('have.attr', 'href') // Check that each element has an 'href' attribute
+          .and('not.be.empty') // Ensure the 'href' attribute is not empty
+      })
+
+    pageObjects
+      .bfAlertList()
+      .find('a')
+      .each($el => {
+        cy.wrap($el).then($link => {
+          const href = $link.attr('href') // Get the href attribute value
+          cy.get(href).focus()
+          cy.get(href).should('have.focus') // Focus should be on the element
+        })
+      })
+  })
+
+  it('Should validate error label content overrides', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+
+    const labelErrorMessage =
+      EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
+        .section.fieldsets[1].fieldset.errorMessage
+    pageObjects
+      .relationshipToDeceasedError()
+      .should('be.visible')
+      .and('contain.text', labelErrorMessage)
+
+    pageObjects.dateOfBirthError().should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthMonthError()
+      .should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthDayError()
+      .should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthYearError()
+      .should('not.contain.text', labelErrorMessage)
   })
 })

@@ -65,6 +65,7 @@ const content = `{
                   "legend": "Relationship to the deceased",
                   "required": true,
                   "hint": "",
+                  "errorMessage": "Test overide error label",
                   "inputs": [
                     {
                       "inputCriteria": {

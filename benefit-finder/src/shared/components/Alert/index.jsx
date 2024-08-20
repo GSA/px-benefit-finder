@@ -93,6 +93,7 @@ const Alert = ({
           <Heading
             headingLevel={2}
             className="bf-usa-alert__heading usa-alert__heading"
+            data-testid="bf-alert-heading"
           >
             {heading?.prefix}&nbsp;{errorCount}&nbsp;{heading?.suffix}
           </Heading>

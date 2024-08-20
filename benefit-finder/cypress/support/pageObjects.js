@@ -49,6 +49,10 @@ class PageObjects {
     return cy.get('div#bf-section > div[role="alert"]')
   }
 
+  alertHeading() {
+    return cy.get('[data-testid="bf-alert-heading"]')
+  }
+
   bfAlertList() {
     return cy.get('[data-testid="bf-errors-list"]')
   }
@@ -133,6 +137,34 @@ class PageObjects {
 
   stepBackLink() {
     return cy.get('.bf-step-back-button')
+  }
+
+  dateOfBirthError() {
+    return cy.get('[data-testid="error-description-applicant_date_of_birth"]')
+  }
+
+  dateOfBirthMonthError() {
+    return cy.get(
+      '[data-testid="month-error-description-applicant_date_of_birth_0"]'
+    )
+  }
+
+  dateOfBirthDayError() {
+    return cy.get(
+      '[data-testid="day-error-description-applicant_date_of_birth_0"]'
+    )
+  }
+
+  dateOfBirthYearError() {
+    return cy.get(
+      '[data-testid="year-error-description-applicant_date_of_birth_0"]'
+    )
+  }
+
+  relationshipToDeceasedError() {
+    return cy.get(
+      '[data-testid="error-description-applicant_relationship_to_the_deceased"]'
+    )
   }
 
   zeroBenefitsViewHeading() {

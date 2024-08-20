@@ -13,13 +13,14 @@ const RelativeBenefitList = ({ data, carrotType }) => {
     <ul className="bf-usa-card-group usa-card-group">
       {data &&
         data.map((item, i) => {
-          const { title, link, cta, body, lifeEventId } = item.lifeEvent
+          const { title, searchTitle, link, cta, body, lifeEventId } =
+            item.lifeEvent
           const trimedLifeEventId = lifeEventId.replace('es_', '')
 
           return (
             <Card
               className="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12"
-              title={title}
+              title={searchTitle || title}
               cta={cta}
               href={link}
               body={body}

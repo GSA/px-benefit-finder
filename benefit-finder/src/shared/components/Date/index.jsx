@@ -52,6 +52,7 @@ const Date = ({
         {handleInvalid(invalid, `${id}_month`) && (
           <li
             id={`month-error-description-${id}`}
+            data-testid={`month-error-description-${id}`}
             className="bf-error-detail"
             aria-live="assertive"
           >
@@ -61,6 +62,7 @@ const Date = ({
         {handleInvalid(invalid, `${id}_day`) && (
           <li
             id={`day-error-description-${id}`}
+            data-testid={`day-error-description-${id}`}
             className="bf-error-detail"
             aria-live="assertive"
           >
@@ -70,6 +72,7 @@ const Date = ({
         {handleInvalid(invalid, `${id}_year`) && (
           <li
             id={`year-error-description-${id}`}
+            data-testid={`year-error-description-${id}`}
             className="bf-error-detail"
             aria-live="assertive"
           >

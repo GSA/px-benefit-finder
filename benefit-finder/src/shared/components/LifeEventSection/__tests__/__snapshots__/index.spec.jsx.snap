@@ -80,6 +80,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             <h2
               aria-level="2"
               class="bf-usa-alert__heading usa-alert__heading font-family-sans"
+              data-testid="bf-alert-heading"
               role="heading"
             >
               Your information contains 0 errors
@@ -306,7 +307,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
-            data-errormessage="Fill out the relationship to the deceased field"
+            data-errormessage="Test overide error label"
             id="applicant_relationship_to_the_deceased"
             required=""
           >
@@ -332,7 +333,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 aria-errormessage="error-description-applicant_relationship_to_the_deceased_0"
                 aria-invalid="false"
                 class="bf-usa-select usa-select "
-                data-errormessage="Fill out the relationship to the deceased field"
+                data-errormessage="Test overide error label"
                 id="applicant_relationship_to_the_deceased_0"
                 name="applicant_relationship_to_the_deceased_0"
               >

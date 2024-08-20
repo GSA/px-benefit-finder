@@ -85,6 +85,7 @@ const Fieldset = ({
         {invalid === true && (
           <div
             id={`error-description-${id}`}
+            data-testid={`error-description-${id}`}
             className="bf-error-detail"
             aria-live="assertive"
           >

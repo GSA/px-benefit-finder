@@ -5,6 +5,7 @@ import {
   createMarkup,
   dataLayerUtils,
   errorHandling,
+  handleSurvey,
 } from '../../utils'
 import { useHandleUnload, useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
@@ -242,6 +243,11 @@ const LifeEventSection = ({
           viewTitle: currentData.section.heading,
         },
       })
+  }, [])
+
+  useEffect(() => {
+    // hide the survey
+    handleSurvey({ hide: true })
   }, [])
 
   return (

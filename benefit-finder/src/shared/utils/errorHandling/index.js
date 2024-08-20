@@ -25,6 +25,10 @@ export const handleCheckForRequiredValues = async (
             if (el.attributes['data-datetype']?.value === 'year') {
               return !el.value || (el.value && el.value.length !== 4)
             }
+            // we allow for 02 but not 0 day value
+            if (el.attributes['data-datetype']?.value === 'day') {
+              return !el.value || (el.value && el.value === '0')
+            }
 
             return !el.value
           })

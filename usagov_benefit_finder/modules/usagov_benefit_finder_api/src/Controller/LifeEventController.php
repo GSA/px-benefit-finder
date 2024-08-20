@@ -205,8 +205,17 @@ class LifeEventController {
     // Build Relevant Benefits.
     $life_event_form_relevant_benefits = [];
     foreach ($relevant_benefits as $relevant_benefit) {
+
+      // Get life event node by its ID.
+      $id = current($relevant_benefit->get('field_b_life_event_form')->referencedEntities())->get('field_b_id')->value;
+      $life_event_node = $this->getLifeEventById($id, $this->mode);
+
+      // Get search title of life event.
+      $life_event_search_title = $life_event_node->get('field_b_search_title')->value;
+
       $life_event_form_relevant_benefit = [
         "title" => current($relevant_benefit->get('field_b_life_event_form')->referencedEntities())->get('title')->value ?? "",
+        "searchTitle" => $life_event_search_title ?? "",
         "body" => $relevant_benefit->get('field_b_body')->value ?? "",
         "link" => $relevant_benefit->get('field_b_link')->value ?? "",
         "cta" => $relevant_benefit->get('field_b_cta')->value ?? "",

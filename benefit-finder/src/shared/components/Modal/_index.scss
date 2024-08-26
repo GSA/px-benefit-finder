@@ -16,24 +16,6 @@
     cursor: pointer;
   }
 
-  .bf-nav-item-one,
-  .bf-nav-item-two {
-    @include important-bold($font-family: 'sans');
-
-    &.bf-usa-button {
-      @include important-bold($font-family: 'sans');
-
-      background-color: color.$pop-blue;
-      color: color.$white;
-      width: $button-max-width;
-    }
-
-    &.bf-usa-button:hover {
-      background-color: color.$officer-navy;
-      color: color.$white;
-    }
-  }
-
   .bf-modal-heading {
     @include important-bold($font-family: 'sans');
 

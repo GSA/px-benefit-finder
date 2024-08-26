@@ -1,27 +1,11 @@
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/functions/_index.scss' as *;
+@use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/colors/_index.scss' as colors;
 
 .bf-usa-button {
   @include important-bold($font-family: 'sans');
 
-  background-color: color.$pop-blue;
-  color: color.$white;
-}
-
-.bf-usa-button--unstyled {
-  background-color: transparent;
-  color: color.$pop-blue;
-}
-
-.bf-usa-button.bf-usa-button--unstyled:hover {
-  background-color: transparent;
-  color: color.$pop-blue;
-}
-
-.bf-usa-button:hover {
-  background-color: color.$marine;
-  color: color.$white;
   padding: space.$space-md space.$space-md-gap;
   font-size: rem(17.6px);
 }

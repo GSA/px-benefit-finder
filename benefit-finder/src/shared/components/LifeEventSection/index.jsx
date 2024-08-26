@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { dateInputValidation, createMarkup, dataLayerUtils } from '../../utils'
+import {
+  dateInputValidation,
+  createMarkup,
+  dataLayerUtils,
+  errorHandling,
+  handleSurvey,
+} from '../../utils'
 import { useHandleUnload, useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import {
@@ -17,7 +23,7 @@ import {
 import './_index.scss'
 
 /**
- * a functional component that renders a link as a button
+ * a compound component that renders the main conditional view of the form
  * @component
  * @param {number} step - inherited current step value
  * @param {function} setStep - inherited function to inc/dec step value
@@ -46,6 +52,7 @@ const LifeEventSection = ({
   const [requiredFieldsets, setRequiredFieldsets] = useState([])
   const [hasError, setHasError] = useState([])
   const [hasData, setHasData] = useState(false)
+  const [submissionCount, setSubmissionCount] = useState(0)
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
 
@@ -72,54 +79,6 @@ const LifeEventSection = ({
     handleData([...data])
   }
 
-  const handleCheckForRequiredValues = async () => {
-    // TODO: collect and handle radio groups
-    // const invalidRadioFieldSets = await requiredFieldsets
-    //   .map(fieldset => {
-    //     const radioGroup = Array.from(fieldset.elements).filter(
-    //       el => el.attributes.type?.value === 'radio'
-    //     )
-
-    //     // find the parent fieldset and return
-    //     if (radioGroup.every(group => !group.checked)) {
-    //       // get an id from the radio group
-    //       const groupId = radioGroup[0]?.name
-    //       const trimmedGroupId = groupId && groupId.replace(/_[0-9]/, '')
-    //       // if the id matches the id in our fieldset return the fieldset
-    //       const invalidRadioSets = requiredFieldsets.filter(
-    //         fieldset => fieldset.id === trimmedGroupId
-    //       )
-    //       return invalidRadioSets
-    //     } else {
-    //       return undefined
-    //     }
-    //   })
-    //   .flat()
-
-    // console.log('invalidRadioFieldSets', invalidRadioFieldSets)
-
-    const invalidElements = await requiredFieldsets
-      .map(fieldset => {
-        return (
-          Array.from(fieldset.elements)
-            // check all the required inputs, if there is no value, there the input is invalid
-            .filter(el => {
-              // we need to custom handle our dates verification to ensure a 4 digit year
-              if (el.attributes['data-datetype']?.value === 'year') {
-                return !el.value || (el.value && el.value.length !== 4)
-              }
-              return !el.value
-            })
-        )
-      })
-      .flat()
-
-    // const mergeInvalidElements = [...invalidElements]
-
-    setHasError(invalidElements)
-    return invalidElements.length === 0
-  }
-
   /**
    *
    * start alert
@@ -137,8 +96,10 @@ const LifeEventSection = ({
     // remove the display class from the alert
     alertFieldRef.current.classList.remove('display-none')
     alertFieldRef.current.focus()
+    setSubmissionCount(submissionCount + 1)
     currentData.completed = false
     window.scrollTo(0, 0)
+    return false
   }
 
   /**
@@ -151,18 +112,7 @@ const LifeEventSection = ({
     currentData.completed = true
     handleUpdateData()
     setRequiredFieldsets([])
-  }
-
-  /**
-   * a function that collect all the required fields in the current step
-   * @function
-   */
-  const getRequiredFieldsets = () => {
-    const collectedNodeList = document.querySelectorAll('fieldset')
-    const requiredNodeList = Array.from(collectedNodeList).filter(
-      node => node.attributes.required
-    )
-    setRequiredFieldsets(Array.from(requiredNodeList))
+    return true
   }
 
   /**
@@ -172,9 +122,11 @@ const LifeEventSection = ({
    */
   const handleCheckRequriedFields = () => {
     // collect all the required fields in the current step
-    handleCheckForRequiredValues().then(valid => {
-      valid === true ? handleSuccess() : handleAlert()
-    })
+    return errorHandling
+      .handleCheckForRequiredValues(requiredFieldsets, setHasError)
+      .then(valid => {
+        return valid === true ? handleSuccess() : handleAlert()
+      })
   }
   /**
    *
@@ -190,26 +142,28 @@ const LifeEventSection = ({
    */
   const handleForwardUpdate = updateIndex => {
     handleCheckRequriedFields()
-    handleCheckForRequiredValues().then(valid => {
-      if (valid === true) {
-        // handle dataLayer
-        const { errors } = dataLayerUtils.dataLayerStructure
-        dataLayerUtils.dataLayerPush(window, {
-          event: errors.event,
-          bfData: {
-            errors: '',
-            errorCount: {
-              number: 0,
-              string: `0`,
+    errorHandling
+      .handleCheckForRequiredValues(requiredFieldsets, setHasError)
+      .then(valid => {
+        if (valid === true) {
+          // handle dataLayer
+          const { errors } = dataLayerUtils.dataLayerStructure
+          dataLayerUtils.dataLayerPush(window, {
+            event: errors.event,
+            bfData: {
+              errors: '',
+              errorCount: {
+                number: 0,
+                string: `0`,
+              },
+              formSuccess: true,
             },
-            formSuccess: true,
-          },
-        })
-        setStep(step + updateIndex)
-        setStepData(updateIndex)
-        resetElement && resetElement.current.focus()
-      }
-    })
+          })
+          setStep(step + updateIndex)
+          setStepData(updateIndex)
+          resetElement && resetElement.current.focus()
+        }
+      })
   }
 
   /**
@@ -238,7 +192,8 @@ const LifeEventSection = ({
       setCurrentData,
       event.target.value
     )
-    hasError.length > 0 && handleCheckForRequiredValues()
+    hasError.length > 0 &&
+      errorHandling.handleCheckForRequiredValues(requiredFieldsets, setHasError)
   }
 
   /**
@@ -258,7 +213,11 @@ const LifeEventSection = ({
         event.target.value,
         event.target.id
       )
-      hasError.length > 0 && handleCheckForRequiredValues()
+      hasError.length > 0 &&
+        errorHandling.handleCheckForRequiredValues(
+          requiredFieldsets,
+          setHasError
+        )
     }
   }
 
@@ -270,7 +229,7 @@ const LifeEventSection = ({
   // check for all required fields and scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0)
-    getRequiredFieldsets()
+    errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
   }, [])
 
   // handle dataLayer
@@ -284,6 +243,11 @@ const LifeEventSection = ({
           viewTitle: currentData.section.heading,
         },
       })
+  }, [])
+
+  useEffect(() => {
+    // hide the survey
+    handleSurvey({ hide: true })
   }, [])
 
   return (
@@ -302,8 +266,7 @@ const LifeEventSection = ({
               current={step - 1}
               setCurrent={setStep}
               data={data}
-              backLinkLabel={stepIndicator.stepBackLink}
-              handleCheckRequriedFields={() => handleForwardUpdate(1)}
+              backLinkLabel={stepIndicator.StepBackButton}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
@@ -316,6 +279,7 @@ const LifeEventSection = ({
                   hasError={hasError.length > 0}
                   errorCount={hasError.length}
                   errorList={hasError}
+                  submissionCount={submissionCount}
                 ></Alert>
                 <div className="bf-form-heading-group">
                   <Heading
@@ -351,19 +315,11 @@ const LifeEventSection = ({
                           requiredLabel={requiredLabel}
                           hidden={hidden && hidden}
                           id={item.fieldset.criteriaKey}
-                          invalid={
-                            item.fieldset.required &&
-                            hasError
-                              .map(errorItem => {
-                                return (
-                                  errorItem.id !== undefined &&
-                                  errorItem.id.includes(
-                                    item.fieldset?.criteriaKey
-                                  )
-                                )
-                              })
-                              .includes(true)
-                          }
+                          invalid={errorHandling.handleInvalid({
+                            required: item.fieldset.required,
+                            hasError,
+                            criteriaKey: item.fieldset?.criteriaKey,
+                          })}
                           ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
@@ -372,17 +328,6 @@ const LifeEventSection = ({
                             const defaultSelected = inputValues.find(
                               value => value.selected !== undefined
                             )
-
-                            const invalid =
-                              item.fieldset.required &&
-                              hasError
-                                .map(item => {
-                                  return (
-                                    item.id !== undefined &&
-                                    fieldSetId.includes(item.id)
-                                  )
-                                })
-                                .includes(true)
 
                             const { select, errorText } = ui
 
@@ -400,7 +345,12 @@ const LifeEventSection = ({
                                       item.fieldset.criteriaKey
                                     )
                                   }
-                                  invalid={invalid}
+                                  invalid={errorHandling.handleInvalid({
+                                    required: item.fieldset.required,
+                                    hasError,
+                                    criteriaKey: item.fieldset?.criteriaKey,
+                                    fieldSetId,
+                                  })}
                                   legend={item.fieldset.legend}
                                   errorMessage={item.fieldset.errorMessage}
                                 />
@@ -423,19 +373,6 @@ const LifeEventSection = ({
                         {item.fieldset.inputs.map((input, index) => {
                           const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
 
-                          const invalid =
-                            item.fieldset.required &&
-                            hasError
-                              .map(errorItem => {
-                                return (
-                                  errorItem.id !== undefined &&
-                                  errorItem.id.includes(
-                                    item.fieldset?.criteriaKey
-                                  )
-                                )
-                              })
-                              .includes(true)
-
                           return (
                             <Fieldset
                               key={`radio-${item.fieldset.criteriaKey}-${index}`}
@@ -447,10 +384,18 @@ const LifeEventSection = ({
                               requiredLabel={requiredLabel}
                               hidden={hidden && hidden}
                               ui={ui.errorText}
-                              invalid={invalid}
+                              invalid={errorHandling.handleInvalid({
+                                required: item.fieldset.required,
+                                hasError,
+                                criteriaKey: item.fieldset?.criteriaKey,
+                              })}
                             >
                               <RadioGroup
-                                invalid={invalid}
+                                invalid={errorHandling.handleInvalid({
+                                  required: item.fieldset.required,
+                                  hasError,
+                                  criteriaKey: item.fieldset?.criteriaKey,
+                                })}
                                 key={fieldSetId}
                                 fieldSetId={fieldSetId}
                                 handleChanged={handleChanged}
@@ -484,32 +429,15 @@ const LifeEventSection = ({
                           requiredLabel={requiredLabel}
                           hidden={hidden && hidden}
                           id={item.fieldset.criteriaKey}
-                          invalid={
-                            item.fieldset.required &&
-                            hasError
-                              .map(errorItem => {
-                                return (
-                                  errorItem.id !== undefined &&
-                                  errorItem.id.includes(
-                                    item.fieldset?.criteriaKey
-                                  )
-                                )
-                              })
-                              .includes(true)
-                          }
+                          invalid={errorHandling.handleInvalid({
+                            required: item.fieldset.required,
+                            hasError,
+                            criteriaKey: item.fieldset?.criteriaKey,
+                          })}
                           ui={ui.errorText}
                         >
                           {item.fieldset.inputs.map((input, index) => {
                             const fieldSetId = `${item.fieldset.criteriaKey}_${index}`
-
-                            const invalid =
-                              item.fieldset.required &&
-                              hasError.filter(item => {
-                                return (
-                                  item.id !== undefined &&
-                                  item.id.includes(fieldSetId)
-                                )
-                              })
 
                             return (
                               <div key={fieldSetId}>
@@ -525,7 +453,13 @@ const LifeEventSection = ({
                                   errorMessage={item.fieldset.errorMessage}
                                   parentLegend={item.fieldset.legend}
                                   id={fieldSetId}
-                                  invalid={invalid}
+                                  invalid={errorHandling.handleInvalid({
+                                    required: item.fieldset.required,
+                                    hasError,
+                                    criteriaKey: item.fieldset?.criteriaKey,
+                                    fieldSetId,
+                                    useFilter: true,
+                                  })}
                                 />
                               </div>
                             )
@@ -596,11 +530,11 @@ const LifeEventSection = ({
               </div>
             )}
             <div className="bf-section-nav-btn-group">
-              <Button secondary onClick={() => handleBackUpdate(-1)}>
+              <Button outline onClick={() => handleBackUpdate(-1)}>
                 {buttonGroup[0].value}
               </Button>
               {modal === false ? (
-                <Button onClick={() => handleForwardUpdate(1)}>
+                <Button secondary onClick={() => handleForwardUpdate(1)}>
                   {buttonGroup[1].value}
                 </Button>
               ) : (
@@ -614,7 +548,7 @@ const LifeEventSection = ({
                     navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
                     navItemTwoFunction={setViewResults}
                     triggerLabel={buttonGroup[1].value}
-                    handleCheckRequriedFields={handleCheckForRequiredValues}
+                    handleCheckRequriedFields={handleCheckRequriedFields}
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
                     completed={currentData.completed}

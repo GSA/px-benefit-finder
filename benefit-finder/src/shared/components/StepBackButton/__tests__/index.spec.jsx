@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
-import StepBackLink from '../index.jsx'
+import StepBackButton from '../index.jsx'
 
-describe('StepBackLink', () => {
+describe('StepBackButton', () => {
   it('renders a match to the previous snapshot', () => {
-    const { asFragment } = render(<StepBackLink />)
+    const { asFragment } = render(<StepBackButton />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

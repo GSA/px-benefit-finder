@@ -93,7 +93,6 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.bfAlertList().then(() => {
       pageObjects.bfAlertListItem().then(errors => {
         const errorsArray = [...errors]
-        console.log(errorsArray)
         errorsArray.forEach(() => cy.focused().tab())
         cy.focused().should('have.class', 'usa-input--error')
       })
@@ -125,7 +124,6 @@ describe('Validate correct error messages display for negative scenarios', () =>
     pageObjects.bfAlertList().then(() => {
       pageObjects.bfAlertListItem().then(errors => {
         const errorsArray = [...errors]
-        console.log(errorsArray)
         errorsArray.forEach(() => cy.focused().tab())
         cy.focused().should('have.class', 'usa-input--error')
 
@@ -160,34 +158,62 @@ describe('Validate correct error messages display for negative scenarios', () =>
     })
   })
 
-  it.only('Should not allow moving forward by clicking step nav when error banner is present', () => {
-    // expect when a user tabs from the focus error they can tab any other error notices in the form
+  it('Should include error count in alert', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    cy.focused().should('have.class', 'usa-alert--error').tab()
-    pageObjects.bfAlertList().then(() => {
-      pageObjects.bfAlertListItem().then(errors => {
-        cy.get(errors[0])
-          .children()
-          .invoke('attr', 'href')
-          .then(href => {
-            cy.focused().should('have.attr', 'href').and('include', href)
-          })
+    pageObjects
+      .bfAlertList()
+      .find('li')
+      .its('length') // Get the count of 'li' elements using the base element
+      .then(count => {
+        // Assert that the heading contains the count
+        pageObjects.alertHeading().should('include.text', count)
+      })
+  })
+
+  it('Should include list of error links and clicking on a link navigates to a specific field', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+
+    pageObjects
+      .bfAlertList()
+      .find('a')
+      .each($el => {
+        cy.wrap($el)
+          .should('have.attr', 'href') // Check that each element has an 'href' attribute
+          .and('not.be.empty') // Ensure the 'href' attribute is not empty
       })
 
-      // expect when a user has resolved all errors the top level error notices is not visible or accessible
-      utils.dataInputs({ dob, relation })
+    pageObjects
+      .bfAlertList()
+      .find('a')
+      .each($el => {
+        cy.wrap($el).then($link => {
+          const href = $link.attr('href') // Get the href attribute value
+          cy.get(href).focus()
+          cy.get(href).should('have.focus') // Focus should be on the element
+        })
+      })
+  })
 
-      // expect the error notice to be visible and focused if errors are present
-      pageObjects.benefitSectionAlert().should('not.have.class', 'display-none')
-      pageObjects.stepIndicator().click()
-      cy.focused().should('have.class', 'usa-alert--error')
-      // expect date DOM structure alert to be accessible
-      for (const attr in alertDisplayState) {
-        pageObjects
-          .benefitSectionAlert()
-          .invoke('attr', attr)
-          .should('eq', alertDisplayState[attr])
-      }
-    })
+  it('Should validate error label content overrides', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+
+    const labelErrorMessage =
+      EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
+        .section.fieldsets[1].fieldset.errorMessage
+    pageObjects
+      .relationshipToDeceasedError()
+      .should('be.visible')
+      .and('contain.text', labelErrorMessage)
+
+    pageObjects.dateOfBirthError().should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthMonthError()
+      .should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthDayError()
+      .should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthYearError()
+      .should('not.contain.text', labelErrorMessage)
   })
 })

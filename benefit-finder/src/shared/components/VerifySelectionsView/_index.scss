@@ -1,12 +1,13 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
 .bf-verify-criteria-value {
   @include important-x-bold($font-family: 'sans');
 
   margin-bottom: space.$space-lg;
-  border-bottom: 1px solid color.$base-light-grey;
+  border-bottom: rem(1px) solid color.$base-light-grey;
   padding-bottom: space.$padding-bottom-lg;
 }
 
@@ -19,6 +20,6 @@
 .bf-verify-criteria-section-heading {
   @include h5;
 
-  border-bottom: 2px solid color.$marine;
+  border-bottom: rem(2px) solid color.$marine;
   padding-bottom: space.$padding-bottom-lg;
 }

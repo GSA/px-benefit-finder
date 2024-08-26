@@ -3,7 +3,7 @@ import { useResetElement } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
-import { dataLayerUtils } from '../../utils'
+import { dataLayerUtils, handleSurvey } from '../../utils'
 // import './_index.scss'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
@@ -113,6 +113,11 @@ const ResultsView = ({
         },
       })
   }, [notEligibleView, eligibilityCount])
+
+  useEffect(() => {
+    // show the survey
+    handleSurvey({ hide: false })
+  }, [])
 
   // compare the selected criteria array with benefits and render our view
   return (

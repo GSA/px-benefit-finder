@@ -6,7 +6,7 @@ const { data } = JSON.parse(content)
 export default {
   component: RelativeBenefitList,
   tags: ['autodocs'],
-  args: { data: data.lifeEventForm.relevantBenefits, carrotType: 'carrot-big' },
+  args: { data: data.lifeEventForm.relevantBenefits, carrotType: 'carrot' },
 }
 
 export const Primary = {}

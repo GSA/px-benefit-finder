@@ -15,6 +15,7 @@ exports[`Alert > renders a match to the previous snapshot when it has an error 1
       <h2
         aria-level="2"
         class="bf-usa-alert__heading usa-alert__heading "
+        data-testid="bf-alert-heading"
         role="heading"
       >
           
@@ -45,6 +46,7 @@ exports[`Alert > renders a match to the previous snapshot, default 1`] = `
       <h2
         aria-level="2"
         class="bf-usa-alert__heading usa-alert__heading "
+        data-testid="bf-alert-heading"
         role="heading"
       >
           
@@ -75,6 +77,7 @@ exports[`Alert > renders a match to the previous snapshot, error type with no er
       <h2
         aria-level="2"
         class="bf-usa-alert__heading usa-alert__heading "
+        data-testid="bf-alert-heading"
         role="heading"
       >
           

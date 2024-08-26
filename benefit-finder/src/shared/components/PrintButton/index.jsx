@@ -1,5 +1,4 @@
 import { Button } from '../index'
-import './_index.scss'
 
 /**
  * a functional component that renders a button with window print functionality
@@ -16,7 +15,7 @@ const PrintButton = ({ ui }) => {
   }
 
   return (
-    <Button className="print-button" secondary onClick={handleClick}>
+    <Button className="bf-print-button" secondary onClick={handleClick}>
       {ui || 'Print'}
     </Button>
   )

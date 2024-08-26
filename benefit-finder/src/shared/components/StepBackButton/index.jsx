@@ -1,6 +1,7 @@
 import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import { Button } from '../index'
+
 import './_index.scss'
 
 /**
@@ -11,7 +12,7 @@ import './_index.scss'
  * @param {number} currentIndex - inherited current index state
  * @return {html} returns markup for a usa unstyled button
  */
-const StepBackLink = ({ children, setCurrent, currentIndex }) => {
+const StepBackButton = ({ children, setCurrent, currentIndex }) => {
   const resetElement = useResetElement()
 
   const handleStep = () => {
@@ -20,16 +21,20 @@ const StepBackLink = ({ children, setCurrent, currentIndex }) => {
   }
 
   return (
-    <Button className="step-back-link" unstyled onClick={() => handleStep()}>
+    <Button
+      className="bf-step-back-button"
+      unstyled
+      onClick={() => handleStep()}
+    >
       {children || 'Back'}
     </Button>
   )
 }
 
-StepBackLink.propTypes = {
+StepBackButton.propTypes = {
   children: PropTypes.node,
   setCurrent: PropTypes.func,
   currentIndex: PropTypes.number,
 }
 
-export default StepBackLink
+export default StepBackButton

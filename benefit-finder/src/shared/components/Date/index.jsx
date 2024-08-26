@@ -49,27 +49,30 @@ const Date = ({
   return (
     <>
       <ul className="add-list-reset">
-        {handleInvalid(invalid, `${id}-date_of_birth_month`) && (
+        {handleInvalid(invalid, `${id}_month`) && (
           <li
             id={`month-error-description-${id}`}
+            data-testid={`month-error-description-${id}`}
             className="bf-error-detail"
             aria-live="assertive"
           >
             {errorMessages.month}
           </li>
         )}
-        {handleInvalid(invalid, `${id}-date_of_birth_day`) && (
+        {handleInvalid(invalid, `${id}_day`) && (
           <li
             id={`day-error-description-${id}`}
+            data-testid={`day-error-description-${id}`}
             className="bf-error-detail"
             aria-live="assertive"
           >
             {errorMessages.day}
           </li>
         )}
-        {handleInvalid(invalid, `${id}-date_of_birth_year`) && (
+        {handleInvalid(invalid, `${id}_year`) && (
           <li
             id={`year-error-description-${id}`}
+            data-testid={`year-error-description-${id}`}
             className="bf-error-detail"
             aria-live="assertive"
           >
@@ -82,23 +85,20 @@ const Date = ({
         className="bf-usa-memorable-date usa-memorable-date"
       >
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select">
-          <label
-            className="bf-usa-label usa-label"
-            htmlFor={`${id}-date_of_birth_month`}
-          >
+          <label className="bf-usa-label usa-label" htmlFor={`${id}_month`}>
             {labelMonth}
           </label>
           <div id={`${id}-month-description`} className="usa-sr-only">
             Select a month from the list
           </div>
           <select
-            className={`bf-usa-select usa-select ${handleInvalid(invalid, `${id}-date_of_birth_month`) ? 'usa-input--error' : ''}`}
-            id={`${id}-date_of_birth_month`}
-            name={`${id}-date_of_birth_month`}
+            className={`bf-usa-select usa-select ${handleInvalid(invalid, `${id}_month`) ? 'usa-input--error' : ''}`}
+            id={`${id}_month`}
+            name={`${id}_month`}
             aria-describedby={`${id}-month-description`}
             value={(value && value.month) || ''}
             onChange={onChange}
-            aria-invalid={handleInvalid(invalid, `${id}-date_of_birth_month`)}
+            aria-invalid={handleInvalid(invalid, `${id}_month`)}
             data-errormessage={errorMessages.month}
             aria-errormessage={`month-error-description-${id}`}
             data-datetype="month"
@@ -114,48 +114,42 @@ const Date = ({
           </select>
         </div>
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--day usa-form-group--day">
-          <label
-            className="bf-usa-label usa-label"
-            htmlFor={`${id}-date_of_birth_day`}
-          >
+          <label className="bf-usa-label usa-label" htmlFor={`${id}_day`}>
             {labelDay}
           </label>
           <div id={`${id}-day-description`} className="usa-sr-only">
             Enter two numerals for day
           </div>
           <input
-            className={`bf-usa-input usa-input ${handleInvalid(invalid, `${id}-date_of_birth_day`) ? 'usa-input--error' : ''}`}
+            className={`bf-usa-input usa-input ${handleInvalid(invalid, `${id}_day`) ? 'usa-input--error' : ''}`}
             aria-describedby={`${id}-day-description`}
-            id={`${id}-date_of_birth_day`}
-            name={`${id}-date_of_birth_day`}
+            id={`${id}_day`}
+            name={`${id}_day`}
             inputMode="numeric"
             value={(value && value.day) || ''}
             onChange={onChange}
-            aria-invalid={handleInvalid(invalid, `${id}-date_of_birth_day`)}
+            aria-invalid={handleInvalid(invalid, `${id}_day`)}
             data-errormessage={errorMessages.day}
             aria-errormessage={`day-error-description-${id}`}
             data-datetype="day"
           />
         </div>
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--year usa-form-group--year">
-          <label
-            className="bf-usa-label usa-label"
-            htmlFor={`${id}-date_of_birth_year`}
-          >
+          <label className="bf-usa-label usa-label" htmlFor={`${id}_year`}>
             {labelYear}
           </label>
           <div id={`${id}-year-description`} className="usa-sr-only">
             Enter four numerals for year
           </div>
           <input
-            className={`bf-usa-input usa-input ${handleInvalid(invalid, `${id}-date_of_birth_year`) ? 'usa-input--error' : ''}`}
+            className={`bf-usa-input usa-input ${handleInvalid(invalid, `${id}_year`) ? 'usa-input--error' : ''}`}
             aria-describedby={`${id}-year-description`}
-            id={`${id}-date_of_birth_year`}
-            name={`${id}-date_of_birth_year`}
+            id={`${id}_year`}
+            name={`${id}_year`}
             inputMode="numeric"
             value={(value && value.year) || ''}
             onChange={onChange}
-            aria-invalid={handleInvalid(invalid, `${id}-date_of_birth_year`)}
+            aria-invalid={handleInvalid(invalid, `${id}_year`)}
             data-errormessage={errorMessages.year}
             aria-errormessage={`year-error-description-${id}`}
             data-datetype="year"

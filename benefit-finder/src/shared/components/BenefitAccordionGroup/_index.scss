@@ -1,10 +1,11 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 
 .bf-usa-accordion-group {
   .bf-usa-accordion {
-    margin-bottom: space.$space-md-plus;
+    margin-bottom: space.$space-sm-plus;
 
     .bf-usa-accordion__button {
       border-radius: 3px;
@@ -31,18 +32,32 @@
         width: 100%;
         text-align: center;
         color: color.$pure-black;
+
+        .bf-usa-detail-summary {
+          p {
+            @include p;
+
+            margin-bottom: space.$space-md-plus;
+          }
+        }
+
+        .bf-usa-accordion-group-cta-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: space.$space-lg;
+
+          .bf-usa-link {
+            margin-bottom: space.$space-md;
+          }
+        }
+      }
+
+      .bf-expand-all {
+        background-color: transparent;
+        color: color.$electric-blue;
+        margin-bottom: space.$space-lg;
+        margin-top: space.$space-lg;
       }
     }
-
-    .bf-usa-link {
-      width: 100%;
-      margin-bottom: space.$space-lg;
-    }
-  }
-
-  .bf-expand-all {
-    background-color: transparent;
-    color: color.$electric-blue;
-    margin-bottom: space.$space-lg;
   }
 }

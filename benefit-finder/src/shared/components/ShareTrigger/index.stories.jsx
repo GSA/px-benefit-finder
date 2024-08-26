@@ -1,7 +1,7 @@
-import ShareButton from './index.jsx'
+import ShareTrigger from './index.jsx'
 
 export default {
-  component: ShareButton,
+  component: ShareTrigger,
   tags: ['autodocs'],
 }
 

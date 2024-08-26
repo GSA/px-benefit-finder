@@ -1,11 +1,14 @@
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/colors/_index.scss' as color;
 
-.bf-usa-summary-box__heading {
+.bf-usa-summary-box {
   @include h5($font-family: 'sans');
-}
 
-.bf-usa-list {
-  li {
-    @include list-items;
+  border-color: color.$teal;
+
+  .bf-usa-list {
+    li {
+      @include list-items;
+    }
   }
 }

@@ -2,6 +2,7 @@
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
 @use '../../styles/breakpoints/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 
 .bf-notices-list {
   margin-top: space.$space-md-plus;
@@ -31,7 +32,7 @@
 
 .bf-line-sperator {
   display: block;
-  border-top: 2px solid color.$base-light-grey;
+  border-top: rem(2px) solid color.$base-light-grey;
   width: 100%;
   height: 100%;
 }
@@ -63,7 +64,7 @@
 
   .bf-line-sperator--vertical {
     display: block;
-    border-left: 2px solid color.$base-light-grey;
+    border-left: rem(2px) solid color.$base-light-grey;
     width: 100%;
     height: 80%;
   }

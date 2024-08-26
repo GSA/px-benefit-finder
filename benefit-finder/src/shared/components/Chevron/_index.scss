@@ -1,5 +1,6 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/breakpoints/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
 
@@ -10,24 +11,26 @@ h1.bf-chevron-heading {
 .bf-chevron {
   position: relative;
   background-color: color.$officer-navy;
-  padding: space.$space-xl space.$space-lg 38px;
+  padding: space.$space-xl space.$space-lg rem(38px);
   margin: 0 auto;
   color: color.$white;
-  margin-bottom: 140px;
+  margin-bottom: rem(140px);
 
   .grid-container {
-    max-width: 850px;
+    max-width: rem(850px);
   }
 }
 
 .bf-chevron-description p {
-  line-height: 25.92px;
+  @include p;
+
+  line-height: rem(25.92px);
 }
 
 .bf-chevron-description p strong {
   @include important-x-bold;
 
-  line-height: 25.92px;
+  line-height: rem(25.92px);
 }
 
 // triangle down
@@ -36,7 +39,7 @@ h1.bf-chevron-heading {
   position: absolute;
   top: 100%;
   left: 0;
-  border-top: 76px solid color.$officer-navy;
+  border-top: rem(76px) solid color.$officer-navy;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
 }

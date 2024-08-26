@@ -33,7 +33,7 @@
     "button": "Start"
   },
   "stepIndicator": {
-    "stepBackLink": "Back"
+    "stepBackButton": "Back"
   },
   "requiredLabel": {
     "value": "required"
@@ -126,7 +126,7 @@
       "description": "Based on your answers you are likely not eligible for benefits. You may become eligible if you enter more information or your situation changes.",
       "cta": "See all benefits"
     },
-    "stepBackLink": "Back",
+    "stepBackButton": "Back",
     "eligibleResults": {
       "heading": "Results",
       "description": "You may be eligible for these benefits."
@@ -158,9 +158,9 @@
     },
     "shareResults": {
       "heading": "Share results",
-      "shareButton": "Share link",
+      "shareTrigger": "Share link",
       "shareLinkContent": "Copied",
-      "emailButton": "Email results",
+      "emailTrigger": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",
       "description": "Copy or email these results. Your answers will be visible. Only share with those you trust."
     }

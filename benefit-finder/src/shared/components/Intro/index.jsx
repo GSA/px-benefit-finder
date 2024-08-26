@@ -14,7 +14,7 @@ import {
 import './_index.scss'
 
 /**
- * a functional component that renders a link as a button
+ * a compound component that renders the introductional start of the form process
  * @component
  * @param {object} data - inherited life event content
  * @param {object} ui - life event form ui translations
@@ -76,7 +76,9 @@ const Intro = ({ data, ui, setStep, step }) => {
             <div className="bf-line-sperator" />
           </div>
           <div className="bf-cta-wrapper">
-            <Button onClick={() => handleStep()}>{button}</Button>
+            <Button secondary onClick={() => handleStep()}>
+              {button}
+            </Button>
           </div>
         </div>
       </div>

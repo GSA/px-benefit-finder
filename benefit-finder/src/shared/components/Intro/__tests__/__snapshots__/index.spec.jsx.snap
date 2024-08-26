@@ -24,12 +24,14 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         >
           <p>
             <strong>
-              Losing a loved one is hard.
+              We are sorry for your loss. 
             </strong>
-             Finding help shouldn’t be.
+            Losing a loved one is hard. Finding help shouldn’t be. 
           </p>
           <p>
-            Screen the federal benefits you may be eligible for.
+            <strong>
+              Answer a few questions and get a list of your potential benefits.
+            </strong>
           </p>
         </div>
       </div>
@@ -40,7 +42,6 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
       <h2
         aria-level="2"
         class="font-family-sans"
-        id=""
         role="heading"
       >
         Steps
@@ -101,7 +102,6 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
           <h2
             aria-level="2"
             class="bf-intro-process-notices-heading font-family-sans"
-            id=""
             role="heading"
           >
             Before you start:
@@ -116,8 +116,9 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  aria-label="Important"
                   data-testid="icon-info"
+                  role="img"
                 >
                   <svg
                     class="bf-info"
@@ -149,8 +150,9 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  aria-label="Important"
                   data-testid="icon-info"
+                  role="img"
                 >
                   <svg
                     class="bf-info"
@@ -181,8 +183,9 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                 class="bf-notice"
               >
                 <i
-                  aria-hidden="true"
+                  aria-label="Important"
                   data-testid="icon-info"
+                  role="img"
                 >
                   <svg
                     class="bf-info"
@@ -226,7 +229,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
         class="bf-cta-wrapper"
       >
         <button
-          class="bf-usa-button usa-button"
+          class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
           type="button"
         >
           Start

@@ -1,38 +1,22 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/space/_index.scss' as space;
+@use '../../styles/functions/_index.scss' as *;
+@use '../../styles/colors/_index.scss' as colors;
 
 .bf-usa-button {
-  @include important-bold;
-
-  background-color: color.$pop-blue;
-  color: color.$white;
-}
-
-.bf-usa-button--unstyled {
-  @include p;
-
-  background-color: transparent;
-  color: color.$pop-blue;
-}
-
-.bf-usa-button.bf-usa-button--unstyled:hover {
-  background-color: transparent;
-  color: color.$pop-blue;
-}
-
-.bf-usa-button:hover {
-  background-color: color.$marine;
-  color: color.$white;
+  padding: space.$space-md space.$space-md-gap;
+  font-size: rem(17.6px);
 }
 
 .bf-usa-button--outline {
-  background-color: color.$white;
-  color: color.$pop-blue;
-  box-shadow: inset 0 0 0 2px color.$pop-blue;
-}
+  background-color: transparent;
+  box-shadow: inset 0 0 0 rem(2px) #000;
+  color: colors.$pure-black;
 
-.bf-usa-button--outline:hover {
-  background-color: color.$white;
-  box-shadow: inset 0 0 0 2px color.$marine;
-  color: color.$marine;
+  &:focus {
+    box-shadow: inset 0 0 0 rem(2px) #fff;
+  }
+
+  &:hover {
+    background-color: colors.$base-light-grey;
+  }
 }

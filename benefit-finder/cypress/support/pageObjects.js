@@ -10,47 +10,55 @@ class PageObjects {
   }
 
   applicantDateOfBirthMonth() {
-    return cy.get('#date_of_birth_month-applicant_date_of_birth_0')
+    return cy.get('#applicant_date_of_birth_0_month')
   }
 
   applicantDateOfBirthDay() {
-    return cy.get('#date_of_birth_day-applicant_date_of_birth_0')
+    return cy.get('#applicant_date_of_birth_0_day')
   }
 
   applicantDateOfBirthYear() {
-    return cy.get('#date_of_birth_year-applicant_date_of_birth_0')
+    return cy.get('#applicant_date_of_birth_0_year')
   }
 
   applicantDateOfDeathMonth() {
-    return cy.get('#date_of_birth_month-deceased_date_of_death_0')
+    return cy.get('#deceased_date_of_death_0_month')
   }
 
   applicantDateOfDeathDay() {
-    return cy.get('#date_of_birth_day-deceased_date_of_death_0')
+    return cy.get('#deceased_date_of_death_0_day')
   }
 
   applicantDateOfDeathYear() {
-    return cy.get('#date_of_birth_year-deceased_date_of_death_0')
+    return cy.get('#deceased_date_of_death_0_year')
   }
 
   applicantDateOfFuneralMonth() {
-    return cy.get('#date_of_birth_month-deceased_date_of_funeral_0')
+    return cy.get('#deceased_date_of_funeral_0_month')
   }
 
   applicantDateOfFuneralDay() {
-    return cy.get('#date_of_birth_day-deceased_date_of_funeral_0')
+    return cy.get('#deceased_date_of_funeral_0_day')
   }
 
   applicantDateOfFuneralYear() {
-    return cy.get('#date_of_birth_year-deceased_date_of_funeral_0')
+    return cy.get('#deceased_date_of_funeral_0_year')
   }
 
   benefitSectionAlert() {
     return cy.get('div#bf-section > div[role="alert"]')
   }
 
-  dateAlert() {
-    return cy.get('.bf-usa-date-alert')
+  alertHeading() {
+    return cy.get('[data-testid="bf-alert-heading"]')
+  }
+
+  bfAlertList() {
+    return cy.get('[data-testid="bf-errors-list"]')
+  }
+
+  bfAlertListItem() {
+    return cy.get('[data-testid="bf-errors-list-item"]')
   }
 
   applicantRelationshipToDeceased() {
@@ -75,6 +83,12 @@ class PageObjects {
 
   benefitsAccordion() {
     return cy.get('.usa-accordion__button')
+  }
+
+  benefitsAccordionLink(accordionHeading) {
+    return cy.get(
+      `[data-analytics-content="${accordionHeading}"] a[data-testid="bf-benefit-link"]`
+    )
   }
 
   menuButton() {
@@ -115,6 +129,50 @@ class PageObjects {
 
   benefitResultsView() {
     return cy.get('.bf-result-view')
+  }
+
+  notEligibleResultsButton() {
+    return cy.get('[data-testid="bf-result-view-unmet-button"]')
+  }
+
+  stepBackLink() {
+    return cy.get('.bf-step-back-button')
+  }
+
+  dateOfBirthError() {
+    return cy.get('[data-testid="error-description-applicant_date_of_birth"]')
+  }
+
+  dateOfBirthMonthError() {
+    return cy.get(
+      '[data-testid="month-error-description-applicant_date_of_birth_0"]'
+    )
+  }
+
+  dateOfBirthDayError() {
+    return cy.get(
+      '[data-testid="day-error-description-applicant_date_of_birth_0"]'
+    )
+  }
+
+  dateOfBirthYearError() {
+    return cy.get(
+      '[data-testid="year-error-description-applicant_date_of_birth_0"]'
+    )
+  }
+
+  relationshipToDeceasedError() {
+    return cy.get(
+      '[data-testid="error-description-applicant_relationship_to_the_deceased"]'
+    )
+  }
+
+  zeroBenefitsViewHeading() {
+    return cy.get('[data-testid="zero-benefits-view-heading"]')
+  }
+
+  seeAllBenefitsButton() {
+    return cy.get('[data-testid="zero-benefits-view-cta-button"]')
   }
 }
 

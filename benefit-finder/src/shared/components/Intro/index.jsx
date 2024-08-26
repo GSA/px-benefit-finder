@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { dataLayerUtils } from '../../utils'
 import { useResetElement } from '../../hooks'
 import PropTypes from 'prop-types'
 import {
@@ -12,7 +14,7 @@ import {
 import './_index.scss'
 
 /**
- * a functional component that renders a link as a button
+ * a compound component that renders the introductional start of the form process
  * @component
  * @param {object} data - inherited life event content
  * @param {object} ui - life event form ui translations
@@ -23,13 +25,21 @@ import './_index.scss'
 const Intro = ({ data, ui, setStep, step }) => {
   const { timeEstimate, title, summary } = data
   const { heading, timeIndicator, steps, notices, button } = ui
-  // const resetElements = document.querySelectorAll('[tabindex="-1"]')
   const resetElement = useResetElement()
 
   const handleStep = () => {
     setStep(step + 1)
     resetElement.current.focus()
   }
+
+  // handle dataLayer
+  useEffect(() => {
+    const { intro } = dataLayerUtils.dataLayerStructure
+    dataLayerUtils.dataLayerPush(window, {
+      event: intro.event,
+      bfData: { pageView: intro.bfData.pageView, viewTitle: title },
+    })
+  }, [])
 
   return (
     data && (
@@ -58,6 +68,7 @@ const Intro = ({ data, ui, setStep, step }) => {
               <NoticesList
                 className="bf-intro-process-notices-list"
                 data={notices.list}
+                iconAlt={notices.iconAlt}
               />
             </div>
           </div>
@@ -65,7 +76,9 @@ const Intro = ({ data, ui, setStep, step }) => {
             <div className="bf-line-sperator" />
           </div>
           <div className="bf-cta-wrapper">
-            <Button onClick={() => handleStep()}>{button}</Button>
+            <Button secondary onClick={() => handleStep()}>
+              {button}
+            </Button>
           </div>
         </div>
       </div>

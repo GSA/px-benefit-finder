@@ -12,28 +12,41 @@ else
   unzip pup_v0.4.0_linux_amd64.zip -d /usr/local/bin
 fi
 
-declare CLOUDGOV_WF_VERSION
-CLOUDGOV_WF_VERSION=$(cf app "${PROJECT}-waf-${BRANCH}" | grep nginx_buildpack | xargs | awk '{print $2}')
+declare CURRENT_BP_VERSION
+CURRENT_BP_VERSION=$(cf app "${PROJECT}-waf-${BRANCH}" | grep nginx_buildpack | xargs | awk '{print $2}')
 
-declare CLOUDGOV_BP_VERSION
-CLOUDGOV_BP_VERSION=$(cf buildpacks | grep nginx | grep cflinuxfs4 | awk '{print $NF}' | grep -Eo '[0-9]\.[0-9]?(.[0-9]+)')
+declare NEW_BP_VERSION
+NEW_BP_VERSION=$(cf buildpacks | grep nginx | grep cflinuxfs4 | awk '{print $NF}' | grep -Eo '[0-9]\.[0-9]?(.[0-9]+)')
 
-bp_version=$(version "${CLOUDGOV_BP_VERSION}")
-waf_version=$(version "${CLOUDGOV_WF_VERSION}")
+new_bp_version=$(version "${NEW_BP_VERSION}")
+current_bp_version=$(version "${CURRENT_BP_VERSION}")
 
-if [ "${bp_version}" -ne "${waf_version}" ]; then
+if [ "${new_bp_version}" -ne "${current_bp_version}" ]; then
   echo "New version of buildpack found!"
+
+  curl -Ls "https://github.com/cloudfoundry/nginx-buildpack/releases/tag/v${CURRENT_BP_VERSION}" > /tmp/current_bp_version
   declare current_nginx_version
-  current_nginx_version=$(curl -s "https://github.com/cloudfoundry/nginx-buildpack/releases/tag/v${CLOUDGOV_WF_VERSION}" | pup 'table json{}' | jq -r '.[].children[].children[] | select(.children[].text == "nginx") | select(.children[].text == "cflinuxfs4") | .children[].text' | tr '\n' ' ' | sed -E 's/cflinuxfs4 /cflinuxfs4\n/g' | sort -r | head -n 1 | awk '{print $2}')
+  current_nginx_version=$(cat /tmp/current_bp_version | pup 'table json{}' | jq -r '.[].children[].children[] | select(.children[].text == "nginx") | select(.children[].text == "cflinuxfs4") | .children[].text' | tr '\n' ' ' | sed -E 's/cflinuxfs4 /cflinuxfs4\n/g' | sort -r | head -n 1 | awk '{print $2}')
 
-  declare nginx_version
-  nginx_version=$(curl -s "https://github.com/cloudfoundry/nginx-buildpack/releases/tag/v${CLOUDGOV_BP_VERSION}" | pup 'table json{}' | jq -r '.[].children[].children[] | select(.children[].text == "nginx") | select(.children[].text == "cflinuxfs4") | .children[].text' | tr '\n' ' ' | sed -E 's/cflinuxfs4 /cflinuxfs4\n/g' | sort -r | head -n 1 | awk '{print $2}')
+  curl -Ls "https://github.com/cloudfoundry/nginx-buildpack/releases/tag/v${NEW_BP_VERSION}" > /tmp/new_nginx_version
+  
+  declare default_nginx_binary_version
+  default_nginx_binary_version=$(cat /tmp/new_nginx_version | pup 'table json{}' | jq -r '.[].children[].children[] | select(.children[].text == "nginx") | select(.children[].text | contains(".x")) | .children[].text' | grep -v nginx | sed 's/.\{1\}$//')
+  
+  declare new_nginx_version
+  new_nginx_version=$(cat /tmp/new_nginx_version | pup 'table json{}' | jq -r ".[].children[].children[] | select(.children[].text == \"nginx\") | select(.children[].text == \"cflinuxfs4\") | select(.children[].text | contains(\"${default_nginx_binary_version}\")) | .children[].text" | tr '\n' ' ' | sed -E 's/cflinuxfs4 /cflinuxfs4\n/g' | sort -r | head -n 1 | awk '{print $2}')
 
-  echo "nginx_version=${nginx_version}" >> "${GITHUB_OUTPUT}"
+
+  echo "new_nginx_version=${new_nginx_version}" >> "${GITHUB_OUTPUT}"
   echo "current_nginx_version=${current_nginx_version}" >> "${GITHUB_OUTPUT}"
-  echo "cloudgov_wf_version=${CLOUDGOV_WF_VERSION}" >> "${GITHUB_OUTPUT}"
-  echo "cloudgov_bp_version=${CLOUDGOV_BP_VERSION}" >> "${GITHUB_OUTPUT}"
+  echo "current_bp_version=${CURRENT_BP_VERSION}" >> "${GITHUB_OUTPUT}"
+  echo "new_bp_version=${NEW_BP_VERSION}" >> "${GITHUB_OUTPUT}"
   echo "update=true" >> "${GITHUB_OUTPUT}"
 else
   echo "Running latest version of the buildpack!"
 fi
+  echo "new_nginx_version=${new_nginx_version}"
+  echo "current_nginx_version=${current_nginx_version}"
+  echo "current_bp_version=${CURRENT_BP_VERSION}"
+  echo "new_bp_version=${NEW_BP_VERSION}"
+  echo "update=true"

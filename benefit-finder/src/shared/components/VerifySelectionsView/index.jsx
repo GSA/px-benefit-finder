@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { parseDate } from '../../utils'
+import { parseDate, dataLayerUtils } from '../../utils'
 import * as apiCalls from '../../api/apiCalls'
 import { Heading, Button } from '../index'
 
@@ -107,6 +107,18 @@ const VerifySelectionsView = ({
     window.scrollTo(0, 0)
   }, [])
 
+  // handle dataLayer
+  useEffect(() => {
+    const { verifySelections } = dataLayerUtils.dataLayerStructure
+    dataLayerUtils.dataLayerPush(window, {
+      event: verifySelections.event,
+      bfData: {
+        pageView: verifySelections.bfData.pageView,
+        viewTitle: verifySelectionsView?.heading,
+      },
+    })
+  }, [])
+
   return (
     <div className="bf-verify-selections-view">
       <div className="bf-grid-container grid-container">
@@ -116,11 +128,11 @@ const VerifySelectionsView = ({
         <div className="bf-section-wrapper">
           <div className="bf-section-info">
             <Button
-              className="bf-step-back-link"
+              className="bf-step-back-button"
               onClick={handleStepBack}
               unstyled
             >
-              {stepIndicator?.stepBackLink}
+              {stepIndicator?.stepBackButton}
             </Button>
             <div>
               {data &&
@@ -162,10 +174,10 @@ const VerifySelectionsView = ({
                 })}
             </div>
             <div className="bf-section-nav-btn-group">
-              <Button secondary onClick={handleStepBack}>
+              <Button outline onClick={handleStepBack}>
                 {buttonGroup[0].value}
               </Button>
-              <Button onClick={handleStepForward}>
+              <Button secondary onClick={handleStepForward}>
                 {buttonGroup[1].value}
               </Button>
             </div>

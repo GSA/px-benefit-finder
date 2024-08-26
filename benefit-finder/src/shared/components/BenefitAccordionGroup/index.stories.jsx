@@ -1,3 +1,4 @@
+// import { useState } from 'react'
 import BenefitAccordionGroup from './index.jsx'
 import content from '../../api/mock-data/current.js'
 import * as en from '../../locales/en/en.json'
@@ -10,8 +11,11 @@ const entryKey = Object.keys(b[0])
 const { resultsView } = en
 
 const SourceIsEnglishBenefits = b.slice(5, 7)
-SourceIsEnglishBenefits[0].benefit.SourceIsEnglish = 'TRUE' // ensure true
-SourceIsEnglishBenefits[1].benefit.SourceIsEnglish = 'FALSE' // ensure false
+SourceIsEnglishBenefits[0].benefit.SourceIsEnglish = true // ensure true
+SourceIsEnglishBenefits[1].benefit.SourceIsEnglish = false // ensure false
+
+let isExpandAll = false
+const setExpandAll = () => (isExpandAll = !isExpandAll)
 
 export default {
   component: BenefitAccordionGroup,
@@ -34,6 +38,8 @@ export const ExpandAll = {
     ...Primary.args,
     data: b.slice(3, 5),
     expandAll: true,
+    isExpandAll: false,
+    setExpandAll,
   },
 }
 

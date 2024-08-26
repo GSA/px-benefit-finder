@@ -8,6 +8,17 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;400;600;700;800&family=Tilt+Warp&display=swap');
     </style>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [
+        {
+          nodeID: '1984',
+          contentType: 'basic_page',
+          language: 'en',
+          homepageTest: 'not_homepage',
+          basicPagesubType: 'Navigation Page',
+        },
+      ]
+    </script>
   </head>
   <body>
     <script type="module" src="./src/index.jsx"></script>
@@ -21,6 +32,22 @@
         json-data-file-path="/s3/files/benefit-finder/api/life-event/death.json"
         draft-json-data-file-path="/s3/files/benefit-finder/api/life-event/death.json"
       ></div>
+      <div
+        style="
+          width: 100%;
+          border: 2px solid red;
+          height: 200px;
+          text-align: center;
+        "
+        class="bf-qual-survey grid-container"
+        hidden
+      >
+        <div class="additional_body_info">
+          <div id="pagesurvey-qual-container">
+            <h2>pagesurvey-qual-container</h2>
+          </div>
+        </div>
+      </div>
     </main>
     <!--
       This HTML file is a template.

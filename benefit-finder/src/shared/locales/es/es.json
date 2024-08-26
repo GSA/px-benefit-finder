@@ -17,6 +17,7 @@
     },
     "notices": {
       "heading": "Antes de empezar:",
+      "iconAlt": "Importante",
       "list": [
         {
           "notice": "<div><strong>Esto no es una aplicación.</strong></div>"
@@ -32,14 +33,18 @@
     "button": "Comenzar"
   },
   "stepIndicator": {
-    "stepBackLink": "Volver"
+    "stepBackButton": "Volver"
   },
   "requiredLabel": {
     "value": "requerido"
   },
   "alertBanner": {
-    "heading": "Error",
+    "heading": { "prefix": "Tu información contiene", "suffix": "errores" },
     "description": "Responda los campos requeridos."
+  },
+  "errorText": {
+    "prefix": "Complete",
+    "suffix": ""
   },
   "buttonGroup": [
     {
@@ -77,15 +82,15 @@
       "heading": "Importante",
       "list": [
         {
-          "item": "Para confirmar su eligibilidad necesita visitar el enlace de cada agencia."
+          "item": "Visite el sitio web de cada agencia para confirmar su elegibilidad y requisitos."
         },
         {
-          "item": "Si modifica sus repuestas o responde más preguntas podría ser elegible para más beneficios."
+          "item": "Sus resultados podrían cambiar si responde más preguntas o modifica sus respuestas."
         }
       ],
       "cta": {
-        "text": "Para comenzar el formulario de nuevo",
-        "link": "seleccione aquí"
+        "text": "",
+        "link": "Borrar mis respuestas y empezar el formulario de nuevo."
       }
     },
     "eligible": {
@@ -104,7 +109,24 @@
       "heading": "Resultados",
       "description": "<strong>Según sus respuestas no es elegible para estos beneficios.<strong/> Podría calificar si tiene información adicional o si su situación cambia."
     },
-    "stepBackLink": "Volver",
+    "zeroBenefits": {
+      "eligible": {
+        "chevron": {
+          "heading": "Usted parece no ser elegible para estos beneficios",
+          "description": "<div><p>Si cree que cometió un error, por favor regrese para corregir sus respuestas.</p></div>"
+        }
+      },
+      "notEligible": {
+        "chevron": {
+          "heading": "Beneficios a los que no calificó",
+          "description": "<div><p>Según sus respuestas usted no es elegible para estos beneficios.</p></div>"
+        }
+      },
+      "heading": "No tiene resultados elegibles.",
+      "description": "Basado en sus respuestas usted no es elegible para estos beneficios. Podría ser elegible si ingresa más información o si su situación cambia.",
+      "cta": "Ver todos los beneficios"
+    },
+    "stepBackButton": "Volver",
     "eligibleResults": {
       "heading": "Resultados",
       "description": "Podría calificar para estos beneficios:"
@@ -124,7 +146,7 @@
       "benefitSummaryPrefix": "Cumple ",
       "benefitSummaryConjunction": "de",
       "unmetLabel": "No cumplió con",
-      "visitLabel": "Visita",
+      "visitLabel": "Visite",
       "sourceIsEnglish": "(en inglés)"
     },
     "notEligibleResults": {
@@ -137,8 +159,8 @@
     },
     "shareResults": {
       "heading": "Imprima y comparta",
-      "shareButton": "Compartir resultados",
-      "emailButton": "Enviar resultados",
+      "shareTrigger": "Compartir resultados",
+      "emailTrigger": "Enviar resultados",
       "shareLinkContent": "Copiado",
       "emailSubject": "Resultados del buscador de beneficios de USAGov",
       "description": "Copie o envíe sus resultados por correo. Sus respuestas serán visibles. Solo comparta con quienes confíe."
@@ -162,8 +184,8 @@
     "final": "Preguntas finales"
   },
   "select": {
-    "labelSelect": "Seleccionar",
-    "defaultValue": "Presione para seleccionar",
+    "labelSelect": "Seleccione una opción",
+    "defaultValue": "-Seleccionar-",
     "dateDefaultValue": "-Seleccionar-"
   },
   "date": {

@@ -53,3 +53,8 @@ backups/*.sql.gz
 *.Identifier
 *.gz
 **.log
+
+**restore.txt
+**backup.txt
+truffleHogResults.json
+.venv

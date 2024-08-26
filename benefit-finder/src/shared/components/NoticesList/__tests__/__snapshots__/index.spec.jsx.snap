@@ -12,8 +12,9 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
         class="bf-notice"
       >
         <i
-          aria-hidden="true"
+          aria-label="Important"
           data-testid="icon-info"
+          role="img"
         >
           <svg
             class="bf-info"
@@ -45,8 +46,9 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
         class="bf-notice"
       >
         <i
-          aria-hidden="true"
+          aria-label="Important"
           data-testid="icon-info"
+          role="img"
         >
           <svg
             class="bf-info"
@@ -77,8 +79,9 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
         class="bf-notice"
       >
         <i
-          aria-hidden="true"
+          aria-label="Important"
           data-testid="icon-info"
+          role="img"
         >
           <svg
             class="bf-info"

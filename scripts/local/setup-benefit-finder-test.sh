@@ -4,7 +4,7 @@
 ROOT_DIR=$(git rev-parse --show-toplevel)
 
 # BENEFIT_FINDER_TESTS
-BENEFIT_FINDER_TESTS="tests"
+BENEFIT_FINDER_MODULE_TESTS="usagov_benefit_finder/tests"
 readonly BENEFIT_FINDER_TESTS_LOCATION="${ROOT_DIR}/${BENEFIT_FINDER_TESTS}"
 
 # USAGOV-2021 project

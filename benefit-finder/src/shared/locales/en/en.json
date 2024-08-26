@@ -17,6 +17,7 @@
     },
     "notices": {
       "heading": "Before you start:",
+      "iconAlt": "Important",
       "list": [
         {
           "notice": "<div><strong>This is not an application.</strong></div>"
@@ -32,14 +33,18 @@
     "button": "Start"
   },
   "stepIndicator": {
-    "stepBackLink": "Back"
+    "stepBackButton": "Back"
   },
   "requiredLabel": {
     "value": "required"
   },
   "alertBanner": {
-    "heading": "Error",
+    "heading": { "prefix": "Your information contains", "suffix": "errors" },
     "description": "Complete all required fields."
+  },
+  "errorText": {
+    "prefix": "Fill out the",
+    "suffix": "field"
   },
   "buttonGroup": [
     {
@@ -77,15 +82,15 @@
       "heading": "Important",
       "list": [
         {
-          "item": "For full eligibility and requirements visit each agency providing the benefit."
+          "item": "Visit each agency’s website to find full eligibility requirements."
         },
         {
-          "item": "Modifying your responses and completing more questions may open your eligibility to other benefits."
+          "item": "Your results may change if you answer more questions or modify your answers."
         }
       ],
       "cta": {
-        "text": "To re-start the form",
-        "link": "click here"
+        "text": "",
+        "link": "Clear my answers and restart the form."
       }
     },
     "eligible": {
@@ -104,7 +109,24 @@
       "heading": "Results",
       "description": "<strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes."
     },
-    "stepBackLink": "Back",
+    "zeroBenefits": {
+      "eligible": {
+        "chevron": {
+          "heading": "You are likely not eligible for these benefits.",
+          "description": "<div><p>If you reached these results by mistake, please go back to review your answers.</p></div>"
+        }
+      },
+      "notEligible": {
+        "chevron": {
+          "heading": "Benefits you did not qualify for",
+          "description": "<div><p>According to your answers you are not eligible for these benefits.</p></div>"
+        }
+      },
+      "heading": "No eligible results.",
+      "description": "Based on your answers you are likely not eligible for benefits. You may become eligible if you enter more information or your situation changes.",
+      "cta": "See all benefits"
+    },
+    "stepBackButton": "Back",
     "eligibleResults": {
       "heading": "Results",
       "description": "You may be eligible for these benefits."
@@ -136,9 +158,9 @@
     },
     "shareResults": {
       "heading": "Share results",
-      "shareButton": "Share link",
+      "shareTrigger": "Share link",
       "shareLinkContent": "Copied",
-      "emailButton": "Email results",
+      "emailTrigger": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",
       "description": "Copy or email these results. Your answers will be visible. Only share with those you trust."
     }
@@ -161,8 +183,8 @@
     "final": "Final questions"
   },
   "select": {
-    "labelSelect": "Select",
-    "defaultValue": "Click to select",
+    "labelSelect": "Select an option",
+    "defaultValue": "-Select-",
     "dateDefaultValue": "-Select-"
   },
   "date": {

@@ -1,6 +1,6 @@
 # USAgov Benefit Finder module
 
-* USAgov bears app folder
+* USAgov Benefit Finder app folder
   * USAgov bears block module
 * USAgov bears content module
 * USAgov bears API module
@@ -68,7 +68,7 @@ The functional testing uses the existing database of local development site.
 #### Set up testing environment (Install testing software and set PHPUnit configuration)
 
 ```
-$ bash setup-benefit-finder-test
+$ bash scripts/local/setup-benefit-finder-test
 ```
 
 #### Change to local development site directory

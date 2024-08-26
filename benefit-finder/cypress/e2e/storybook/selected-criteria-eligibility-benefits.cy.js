@@ -5,6 +5,7 @@ import * as utils from '../../support/utils'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import content from '../../../../benefit-finder/src/shared/api/mock-data/current.js'
+import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 const { data } = JSON.parse(content)
 
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
@@ -14,7 +15,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
     cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
 
-    pageObjects.button().contains('Start').click()
+    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
     cy.enterDateOfBirth(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
     pageObjects
       .applicantRelationshipToDeceased()
@@ -40,7 +41,7 @@ describe('Validate correct eligibility benefits display based on selected criter
       .contains('Yes')
       .click()
 
-    pageObjects.button().contains('Continue').click()
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
     // Date of death - 30 days ago
     const dateOfDeath = utils.getDateByOffset(-30)
@@ -50,7 +51,7 @@ describe('Validate correct eligibility benefits display based on selected criter
       .benefitSectionFieldset()
       .contains(
         EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1]
-          .section.fieldsets[2].fieldset.inputs[0].inputCriteria.label
+          .section.fieldsets[2].fieldset.legend
       )
       .parent()
       .find('.usa-radio__label')
@@ -61,39 +62,42 @@ describe('Validate correct eligibility benefits display based on selected criter
       .benefitSectionFieldset()
       .contains(
         EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1]
-          .section.fieldsets[3].fieldset.inputs[0].inputCriteria.label
+          .section.fieldsets[3].fieldset.legend
       )
       .parent()
       .find('.usa-radio__label')
       .contains('Yes')
       .click()
 
-    pageObjects.button().contains('Continue').click()
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
-    pageObjects.buttonGroup().contains('See results').click()
-    pageObjects.accordion('Survivors benefits for child').click()
-
-    cy.get('.bf-key-eligibility-criteria-list li')
-      .filter(':visible')
+    pageObjects
+      .buttonGroup()
+      .contains(EN_LOCALE_DATA.reviewSelectionModal.buttonGroup[1].value)
+      .click()
+    pageObjects
+      .accordion(EN_DOLO_MOCK_DATA.data.benefits[23].benefit.title)
+      .click()
+      .find('.bf-key-eligibility-criteria-list li')
       .should(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[0].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[0].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[1].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[1].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[2].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[2].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[3].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[3].label
       )
       .and(
         'contain',
-        EN_DOLO_MOCK_DATA.data.benefits[22].benefit.eligibility[4].label
+        EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[4].label
       )
   })
 
@@ -111,7 +115,10 @@ describe('Validate correct eligibility benefits display based on selected criter
       .benefitsAccordion()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
-      .and('contain', 'Likely eligible')
+      .and(
+        'contain',
+        EN_LOCALE_DATA.resultsView.benefitAccordion.eligibleStatusLabels[0]
+      )
       .and('contain', enResults.eligible.eligible_benefits[0])
       .and('contain', enResults.eligible.eligible_benefits[1])
       .and('contain', enResults.eligible.eligible_benefits[2])
@@ -166,7 +173,10 @@ describe('Validate correct eligibility benefits display based on selected criter
       .benefitsAccordion()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
-      .and('contain', 'Likely eligible')
+      .and(
+        'contain',
+        EN_LOCALE_DATA.resultsView.benefitAccordion.eligibleStatusLabels[0]
+      )
       .and('contain', enResults.eligible.eligible_benefits[0])
   })
 
@@ -181,7 +191,10 @@ describe('Validate correct eligibility benefits display based on selected criter
       .benefitsAccordion()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
-      .and('contain', 'Likely eligible')
+      .and(
+        'contain',
+        EN_LOCALE_DATA.resultsView.benefitAccordion.eligibleStatusLabels[0]
+      )
       .and('contain', enResults.eligible.eligible_benefits[0])
   })
 
@@ -193,5 +206,25 @@ describe('Validate correct eligibility benefits display based on selected criter
     pageObjects
       .keyEligibilityCriteriaListIcon()
       .should('have.class', 'bf-checkmark--green')
+  })
+
+  it('Should display Zero benefit view when no benefit are eligible', () => {
+    const selectedData = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.param
+    const enResults = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.results
+    const scenario = utils.encodeURIFromObject(selectedData)
+    cy.visit(`${utils.storybookUri}${scenario}`)
+
+    pageObjects
+      .zeroBenefitsViewHeading()
+      .should('contain', EN_LOCALE_DATA.resultsView.zeroBenefits.heading)
+
+    pageObjects
+      .benefitsAccordion()
+      .filter(':visible')
+      .should('have.length', enResults.eligible.length)
+
+    pageObjects
+      .seeAllBenefitsButton()
+      .should('contain', EN_LOCALE_DATA.resultsView.zeroBenefits.cta)
   })
 })

@@ -4,7 +4,7 @@ import { useHandleClassName } from '../../hooks'
 import './_index.scss'
 
 /**
- * a functional component that renders a link as a button
+ * a functional component that renders a list of criteria related to eligiblity
  * @component
  * @param {string} className - inherited class names
  * @param {array} data - contains our criteria
@@ -30,8 +30,8 @@ const KeyElegibilityCrieriaList = ({
             headingLevel={5}
           >
             {`${benefitSummary}`}
-            <p className="bf-key-eligibility-criteria-sub-heading">{`${benefitSummaryPrefix} ${data.length} ${benefitSummaryConjunction}
-            ${initialEligibilityLength}`}</p>
+            <span className="bf-key-eligibility-criteria-sub-heading">{` - ${benefitSummaryPrefix} ${data.length} ${benefitSummaryConjunction}
+            ${initialEligibilityLength}`}</span>
           </Heading>
           <ul className="bf-key-eligibility-criteria-list">
             {data.map((item, index) => {
@@ -43,7 +43,7 @@ const KeyElegibilityCrieriaList = ({
                   data-testid={`${criteriaKey}`}
                 >
                   <div aria-hidden="true">
-                    <Icon type="green-check" />
+                    <Icon type="green-check" aria-hidden="true" />
                   </div>
                   {label}
                 </li>

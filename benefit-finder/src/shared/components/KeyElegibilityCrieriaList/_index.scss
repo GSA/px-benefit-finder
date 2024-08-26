@@ -1,20 +1,19 @@
 @use '../../styles/colors/_index.scss' as color;
 @use '../../styles/space/_index.scss' as space;
 @use '../../styles/mixins/_index.scss' as *;
+@use '../../styles/functions/_index.scss' as *;
 
 .bf-key-eligibility-criteria-group {
   .bf-key-eligibility-criteria-heading {
-    @include important-bold;
+    @include h6;
 
-    background-color: color.$marine;
-    border-radius: 4px 4px 0 0;
+    background-color: color.$base-light-grey;
     padding: space.$space-md space.$space-lg;
     margin: 0;
-    color: color.$white;
-    text-align: center;
   }
 
   .bf-key-eligibility-criteria-sub-heading {
+    font-weight: normal;
     margin-bottom: 0;
   }
 
@@ -23,10 +22,12 @@
     margin: 0;
 
     .bf-key-eligibility-criteria-list-item {
+      @include list-items;
+
       margin: 0;
       padding: space.$space-md space.$space-lg;
-      border: 0.5px solid color.$pop-blue;
-      background-color: color.$sky;
+      border: rem(2px) solid color.$base-light-grey;
+      border-bottom: 0;
       display: flex;
       flex-wrap: nowrap;
 
@@ -36,16 +37,28 @@
       }
     }
 
-    li.bf-usa-list {
-      @include p2;
+    &:last-child {
+      border-bottom: rem(2px) solid color.$base-light-grey;
     }
 
-    li.bf-unmet-criteria-item {
-      @include p;
+    li.bf-usa-list {
+      @include list-items;
+
+      line-height: normal;
     }
   }
 }
 
-.bf-usa-alert .bf-usa-alert__text {
-  @include p3;
+.bf-unmet-criteria-group {
+  padding: space.$space-md-plus 0 0 space.$space-md-plus;
+
+  .bf-unmet-criteria-title {
+    @include h6;
+
+    margin-bottom: space.$space-sm-plus;
+  }
+
+  li.bf-unmet-criteria-item {
+    @include list-items;
+  }
 }

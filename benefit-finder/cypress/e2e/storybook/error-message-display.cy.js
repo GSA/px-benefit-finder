@@ -62,77 +62,158 @@ describe('Validate correct error messages display for negative scenarios', () =>
     }
   })
 
+  it('Should have a list of errors', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    cy.focused().should('have.class', 'usa-alert--error').tab()
+    pageObjects.bfAlertList().then(() => {
+      pageObjects.bfAlertListItem().should('have.length.above', 0)
+    })
+  })
+
+  it('Should have a list of errors that link to the invalid fields', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    cy.focused().should('have.class', 'usa-alert--error').tab()
+    // expect the first tabbable item in the list to be the first error link
+    pageObjects.bfAlertList().then(() => {
+      pageObjects.bfAlertListItem().then(errors => {
+        cy.get(errors[0])
+          .children()
+          .invoke('attr', 'href')
+          .then(href => {
+            cy.focused().should('have.attr', 'href').and('include', href)
+          })
+      })
+    })
+  })
+
   it('Should allow tabbing to the next error message', () => {
     // expect when a user tabs from the focus error they can tab any other error notices in the form
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     cy.focused().should('have.class', 'usa-alert--error').tab()
-    cy.focused().should('have.class', 'bf-usa-date-alert')
+    pageObjects.bfAlertList().then(() => {
+      pageObjects.bfAlertListItem().then(errors => {
+        const errorsArray = [...errors]
+        errorsArray.forEach(() => cy.focused().tab())
+        cy.focused().should('have.class', 'usa-input--error')
+      })
+    })
   })
 
   it('Should hide the error message if field error is resolved', () => {
     // expect when a user tabs from the focus error they can tab any other error notices in the form
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     cy.focused().should('have.class', 'usa-alert--error').tab()
-    cy.focused().should('have.class', 'bf-usa-date-alert')
+    pageObjects.bfAlertList().then(() => {
+      pageObjects.bfAlertListItem().then(errors => {
+        const errorsArray = [...errors]
+        errorsArray.forEach(() => cy.focused().tab())
+        cy.focused().should('have.class', 'usa-input--error')
+        // expect when a user has resolved all errors the top level error notices is not visible or accessible
+        utils.dataInputs({ dob, relation, status })
 
-    // expect when a user has resolved all errors the top level error notices is not visible or accessible
-    utils.dataInputs({ dob, relation, status })
-
-    // expect the error notice to be hidden if errors are present
-    pageObjects.benefitSectionAlert().should('have.class', 'display-none')
-    pageObjects.dateAlert().should('not.exist')
+        // expect the error notice to be hidden if errors are present
+        pageObjects.benefitSectionAlert().should('have.class', 'display-none')
+      })
+    })
   })
 
   it('Should not allow moving forward by clicking continue when error banner is present', () => {
     // expect when a user tabs from the focus error they can tab any other error notices in the form
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
     cy.focused().should('have.class', 'usa-alert--error').tab()
-    cy.focused().should('have.class', 'bf-usa-date-alert')
-    // expect date DOM structure alert to be accessible
-    for (const attr in alertDisplayState) {
-      pageObjects
-        .dateAlert()
-        .invoke('attr', attr)
-        .should('eq', alertDisplayState[attr])
-    }
+    pageObjects.bfAlertList().then(() => {
+      pageObjects.bfAlertListItem().then(errors => {
+        const errorsArray = [...errors]
+        errorsArray.forEach(() => cy.focused().tab())
+        cy.focused().should('have.class', 'usa-input--error')
 
-    // expect when a user has resolved all errors the top level error notices is not visible or accessible
-    utils.dataInputs({ relation })
+        // expect date DOM structure alert to be accessible
+        for (const attr in alertDisplayState) {
+          pageObjects
+            .benefitSectionAlert()
+            .invoke('attr', attr)
+            .should('eq', alertDisplayState[attr])
+        }
 
-    // expect the error notice to be visible if errors are present
-    pageObjects.benefitSectionAlert().should('not.have.class', 'display-none')
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    cy.focused().should('have.class', 'usa-alert--error')
-    // expect date DOM structure alert to be accessible
-    for (const attr in alertDisplayState) {
-      pageObjects
-        .dateAlert()
-        .invoke('attr', attr)
-        .should('eq', alertDisplayState[attr])
-    }
+        // expect when a user has resolved all errors the top level error notices is not visible or accessible
+        utils.dataInputs({ relation })
+
+        // expect the error notice to be visible if errors are present
+        pageObjects
+          .benefitSectionAlert()
+          .should('not.have.class', 'display-none')
+        pageObjects
+          .button()
+          .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+          .click()
+        cy.focused().should('have.class', 'usa-alert--error')
+        // expect date DOM structure alert to be accessible
+        for (const attr in alertDisplayState) {
+          pageObjects
+            .benefitSectionAlert()
+            .invoke('attr', attr)
+            .should('eq', alertDisplayState[attr])
+        }
+      })
+    })
   })
 
-  it('Should not allow moving forward by clicking step nav when error banner is present', () => {
-    // expect when a user tabs from the focus error they can tab any other error notices in the form
+  it('Should include error count in alert', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    cy.focused().should('have.class', 'usa-alert--error').tab()
-    cy.focused().should('have.class', 'bf-usa-date-alert')
+    pageObjects
+      .bfAlertList()
+      .find('li')
+      .its('length') // Get the count of 'li' elements using the base element
+      .then(count => {
+        // Assert that the heading contains the count
+        pageObjects.alertHeading().should('include.text', count)
+      })
+  })
 
-    // expect when a user has resolved all errors the top level error notices is not visible or accessible
-    utils.dataInputs({ dob, relation })
+  it('Should include list of error links and clicking on a link navigates to a specific field', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
-    // expect the error notice to be visible and focused if errors are present
-    pageObjects.benefitSectionAlert().should('not.have.class', 'display-none')
-    pageObjects.stepIndicator().click()
-    cy.focused().should('have.class', 'usa-alert--error')
-    // expect date DOM structure alert to be accessible
-    for (const attr in alertDisplayState) {
-      pageObjects
-        .benefitSectionAlert()
-        .invoke('attr', attr)
-        .should('eq', alertDisplayState[attr])
-    }
-    // expect dob alert to not be in DOM
-    pageObjects.dateAlert().should('not.exist')
+    pageObjects
+      .bfAlertList()
+      .find('a')
+      .each($el => {
+        cy.wrap($el)
+          .should('have.attr', 'href') // Check that each element has an 'href' attribute
+          .and('not.be.empty') // Ensure the 'href' attribute is not empty
+      })
+
+    pageObjects
+      .bfAlertList()
+      .find('a')
+      .each($el => {
+        cy.wrap($el).then($link => {
+          const href = $link.attr('href') // Get the href attribute value
+          cy.get(href).focus()
+          cy.get(href).should('have.focus') // Focus should be on the element
+        })
+      })
+  })
+
+  it('Should validate error label content overrides', () => {
+    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+
+    const labelErrorMessage =
+      EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
+        .section.fieldsets[1].fieldset.errorMessage
+    pageObjects
+      .relationshipToDeceasedError()
+      .should('be.visible')
+      .and('contain.text', labelErrorMessage)
+
+    pageObjects.dateOfBirthError().should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthMonthError()
+      .should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthDayError()
+      .should('not.contain.text', labelErrorMessage)
+    pageObjects
+      .dateOfBirthYearError()
+      .should('not.contain.text', labelErrorMessage)
   })
 })

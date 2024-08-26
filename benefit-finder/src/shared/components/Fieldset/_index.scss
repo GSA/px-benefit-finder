@@ -1,5 +1,38 @@
 @use '../../styles/space/_index.scss' as space;
+@use '../../styles/colors/_index.scss' as color;
 
-.bf-hint {
-  margin: 0 0 space.$space-md;
+.bf-usa-fieldset {
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  .bf-error-detail {
+    margin: 0 0 space.$space-sm;
+    color: color.$alert-red;
+    font-weight: 600;
+  }
+
+  // list errors need a differnt margin spacing
+  li.bf-error-detail {
+    margin: 0 0 space.$space-xs 0;
+  }
+}
+
+.bf-fieldset-wrapper {
+  padding: 0 0 space.$space-lg 0;
+}
+
+// we check to see if any of the fieldsets in the wrapper have the error
+.bf-fieldset-wrapper:has(fieldset.usa-input--error) {
+  border-left: 0.25rem solid #c61f0c;
+  padding-left: space.$space-md-gap;
+}
+
+.bf-fieldset-wrapper:has(fieldset.usa-input--error)
+  + .bf-fieldset-wrapper:has(fieldset:not(.usa-input--error)) {
+  padding-top: space.$space-md-gap;
+}
+
+.bf-fieldset-wrapper:has(fieldset.display-none) {
+  padding: 0;
 }

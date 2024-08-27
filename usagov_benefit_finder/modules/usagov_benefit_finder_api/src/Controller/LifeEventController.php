@@ -100,7 +100,7 @@ class LifeEventController extends ControllerBase {
     FileRepositoryInterface $file_repository,
     FileUrlGeneratorInterface $file_url_generator,
     Connection $database,
-    RequestStack $request_stack
+    RequestStack $request_stack,
   ) {
     $this->entityTypeManager = $entity_type_manager;
     $this->fileSystem = $file_system;

@@ -38,7 +38,6 @@ jobs:
           cd ..
       - name: Install Linters and Sniffers
         run: |
-          npm install --prefix ./benefit-finder
           composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer false
           composer global require --dev drupal/coder php-parallel-lint/php-parallel-lint squizlabs/php_codesniffer=*
           COMPOSER_DIR=$(composer -n config --global home)

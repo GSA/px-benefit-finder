@@ -14,12 +14,9 @@
 }
 
 .bf-usa-input {
-  border-radius: rem(3px);
-
   &.usa-input--error {
     padding: rem(8px);
     height: initial;
-    border-radius: rem(3px);
     border-color: color.$alert-red;
   }
 }

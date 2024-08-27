@@ -3,23 +3,9 @@
 
 p,
 p.regular {
-  @include p1($font-family: 'sans');
+  @include p($font-family: 'sans');
 }
 
 p.bold {
   @include important-bold($font-family: 'sans');
-}
-
-p.extrabold {
-  @include important-x-bold;
-}
-
-p.light {
-  @include p3($font-family: 'sans');
-}
-
-p.thin {
-  @include p3($font-family: 'sans');
-
-  font-weight: 100;
 }

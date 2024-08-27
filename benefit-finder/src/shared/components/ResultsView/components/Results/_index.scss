@@ -13,12 +13,7 @@
 .bf-result-view-relvant-benefits,
 .bf-result-view-share-results {
   padding: space.$space-md 0;
-  border-bottom: rem(2px) solid color.$base-light-grey;
   text-align: left;
-
-  p {
-    @include p1($font-family: 'sans');
-  }
 
   .bf-result-view-unmet-heading,
   .bf-result-view-relvant-benefits-heading,
@@ -29,8 +24,6 @@
 
 .bf-result-view-unmet {
   p {
-    @include p2($font-family: 'sans');
-
     padding-bottom: space.$padding-bottom-md;
   }
 
@@ -44,18 +37,6 @@
   button {
     margin-bottom: space.$space-sm;
   }
-}
-
-.bf-result-view-unmet-heading {
-  @include h4;
-}
-
-.bf-result-view-relvant-benefits-heading {
-  @include h4;
-}
-
-.bf-result-view-share-results-heading {
-  @include h4;
 }
 
 .bf-result-view-share-results {

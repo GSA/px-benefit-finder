@@ -46,8 +46,6 @@
 }
 
 .bf-section-heading {
-  @include h2($font-family: 'serif');
-
   background-color: color.$officer-navy;
   color: color.$white;
   margin: 0;
@@ -60,26 +58,17 @@
   padding-bottom: space.$padding-bottom-lg;
   margin-bottom: space.$space-lg-plus;
 
-  h2.bf-usa-section-heading {
-    @include h2($font-family: 'sans');
-  }
-
-  .bf-usa-section-description p {
-    @include p1($font-family: 'sans');
-    @include h1;
-  }
-
   .bf-form-heading-group {
     padding-bottom: space.$space-lg;
 
     h2.bf-form-heading {
-      @include h1;
-
       margin-bottom: 0;
       padding-bottom: space.$padding-bottom-sm;
     }
 
     .bf-section-sub-heading p {
+      @include subheadings;
+
       margin: 0;
     }
   }

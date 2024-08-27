@@ -4,6 +4,6 @@
   @include h2;
 }
 
-.bf-zero-benefit-view-description {
-  @include h6;
+h3.bf-zero-benefits-view-description {
+  @include p;
 }

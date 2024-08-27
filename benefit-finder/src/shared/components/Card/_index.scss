@@ -44,9 +44,14 @@
     }
   }
 
-  h3.bf-usa-card__heading {
-    @include h6;
+  .bf-usa-card__header {
+    padding-bottom: 0;
+  }
 
+  h3.bf-usa-card__heading {
+    @include subheadings($font-family: 'sans');
+
+    font-weight: 700;
     text-decoration: underline;
   }
 
@@ -71,8 +76,6 @@
       margin-bottom: 0;
 
       p {
-        @include p2($font-family: 'sans');
-
         max-width: 90%;
       }
     }

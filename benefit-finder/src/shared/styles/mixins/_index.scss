@@ -26,52 +26,52 @@
 // Merriweather: 'serif'
 // Source Sans Pro: 'sans'
 
-@mixin h0($font-family: 'serif') {
-  @include font-family($font-family);
-
-  font-size: rem(36px);
-  font-weight: 800;
-  line-height: 100%;
-}
+// Desktop
 
 @mixin h1($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(32px);
-  font-weight: 800;
-  line-height: 45.79px;
+  font-size: rem(39px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 117.4%;
+  letter-spacing: -0.39px;
 }
 
 @mixin h2($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(24px);
-  font-weight: 800;
-  line-height: 37.57px;
+  font-size: rem(32px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 117.4%;
 }
 
 @mixin h3($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(22px);
-  font-weight: 700;
-  line-height: 24.65px;
+  font-size: rem(26px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 117.4%;
 }
 
-@mixin h4($font-family: 'serif') {
+@mixin h4($font-family: 'sans') {
   @include font-family($font-family);
 
-  font-size: rem(20px);
-  font-weight: 800;
-  line-height: 114.59%;
+  font-size: rem(21px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117.4%;
 }
 
 @mixin h5($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(22px);
+  font-size: rem(21px);
+  font-style: normal;
   font-weight: 700;
-  line-height: 34.44px;
+  line-height: 117.4%;
 }
 
 @mixin h6($font-family: 'serif') {
@@ -82,57 +82,57 @@
   line-height: 134.09%;
 }
 
-@mixin important-x-bold($font-family: 'serif') {
-  @include font-family($font-family);
-
-  font-size: rem(16px);
-  font-weight: 800;
-  line-height: 18.8px;
-}
-
-@mixin important-bold($font-family: 'serif') {
-  @include font-family($font-family);
-
-  font-size: rem(16px);
-  font-weight: 700;
-  line-height: 134.09%;
-}
-
-@mixin p($font-family: 'serif') {
-  @include font-family($font-family);
-
-  font-size: rem(16px);
-  font-weight: 400;
-  line-height: 18.8px;
-}
-
-@mixin p1($font-family: 'serif') {
+// Body Text Regular
+// Body LINKS
+@mixin p($font-family: 'sans') {
   @include font-family($font-family);
 
   font-size: rem(17px);
+  font-style: normal;
   font-weight: 400;
-  line-height: 18.8px;
+  line-height: 132%;
 }
 
-@mixin p2($font-family: 'serif') {
-  @include font-family($font-family);
+// Body Text Bold
+@mixin important-bold($font-family: 'sans') {
+  @include p;
 
-  font-size: rem(15px);
-  font-weight: 400;
-  line-height: 21.37px;
-}
-
-@mixin p3($font-family: 'serif') {
-  @include font-family($font-family);
-
-  font-size: rem(15px);
-  font-weight: 200;
-  line-height: 18.8px;
+  font-weight: 700;
 }
 
 // other
-@mixin list-items {
-  font-size: rem(17px);
-  font-weight: 400;
+@mixin list-items($font-family: 'sans') {
+  @include p;
+
   line-height: 26px;
+}
+
+// Underlined Text for Buttons Desktop Bold
+@mixin buttons-text($font-family: 'sans') {
+  @include font-family($font-family);
+
+  font-size: rem(17.6px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+// Form Questions, Subheadings Desktop SemiBold, Recap screen questions desktop
+@mixin subheadings($font-family: 'sans') {
+  @include font-family($font-family);
+
+  font-size: rem(21px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145.4%;
+}
+
+// Intro Text Bold
+@mixin intro-text($font-family: 'serif') {
+  @include font-family($font-family);
+
+  font-size: rem(21px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 164%;
 }

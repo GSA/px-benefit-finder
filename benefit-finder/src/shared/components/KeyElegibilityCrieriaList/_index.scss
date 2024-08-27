@@ -13,8 +13,6 @@
   }
 
   .bf-key-eligibility-criteria-sub-heading {
-    @include p2($font-family: 'sans');
-
     margin-bottom: 0;
   }
 
@@ -38,10 +36,6 @@
       }
     }
 
-    li.bf-usa-list {
-      @include p2($font-family: 'sans');
-    }
-
     &:last-child {
       border-bottom: rem(2px) solid color.$base-light-grey;
     }
@@ -58,7 +52,7 @@
   padding: space.$space-md-plus 0 0 space.$space-md-plus;
 
   .bf-unmet-criteria-title {
-    @include h6;
+    @include h5($font-family: 'sans');
 
     margin-bottom: space.$space-sm-plus;
   }

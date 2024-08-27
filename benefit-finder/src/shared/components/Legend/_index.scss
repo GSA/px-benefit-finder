@@ -2,8 +2,9 @@
 @use '../../styles/space/_index.scss' as space;
 
 .bf-legend {
-  @include h5($font-family: 'sans');
+  @include subheadings;
 
+  font-weight: 600;
   margin: 0 0 space.$space-sm;
   padding: 0;
   max-width: fit-content;

@@ -10,7 +10,7 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
     >
       <h1
         aria-level="1"
-        class="bf-chevron-heading font-family-sans"
+        class="bf-chevron-heading "
         id="skip-to-h1"
         role="heading"
       >
@@ -19,7 +19,11 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
       <div
         class="bf-chevron-description"
       >
-        According to your answers you are not eligible for these benefits.
+        <div>
+          <p>
+            According to your answers you are not eligible for these benefits./p&gt;
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -38,14 +42,14 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
       <div>
         <h2
           aria-level="2"
-          class="bf-eligible-view-heading font-family-sans"
+          class="bf-eligible-view-heading "
           role="heading"
         >
           Results
         </h2>
         <h3
           aria-level="3"
-          class="bf-eligible-view-description font-family-sans"
+          class="bf-eligible-view-description "
           role="heading"
         >
           <strong>
@@ -62,7 +66,7 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
           >
             <h4
               aria-level="4"
-              class="bf-usa-summary-box__heading usa-summary-box__heading font-family-sans"
+              class="bf-usa-summary-box__heading usa-summary-box__heading "
               id="bf-summary-box-key-information"
               role="heading"
             >
@@ -106,7 +110,7 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
       >
         <h3
           aria-level="3"
-          class="bf-result-view-share-results-heading font-family-sans"
+          class="bf-result-view-share-results-heading "
           role="heading"
         >
           Share results

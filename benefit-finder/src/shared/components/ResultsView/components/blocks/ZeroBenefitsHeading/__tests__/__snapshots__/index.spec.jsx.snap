@@ -4,13 +4,13 @@ exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <h2
     aria-level="2"
-    class="bf-zero-benefits-view-heading font-family-sans"
+    class="bf-zero-benefits-view-heading "
     data-testid="zero-benefits-view-heading"
     role="heading"
   />
   <h3
     aria-level="3"
-    class="bf-zero-benefits-view-description font-family-sans"
+    class="bf-zero-benefits-view-description "
     role="heading"
   />
   <div

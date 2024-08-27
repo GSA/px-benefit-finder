@@ -4,11 +4,9 @@
 @use '../../styles/space/_index.scss' as space;
 
 .bf-verify-criteria-value {
-  @include h6;
+  @include important-bold($font-family: 'sans');
 
-  margin-bottom: space.$space-lg;
-  border-bottom: rem(1px) solid color.$base-light-grey;
-  padding-bottom: space.$padding-bottom-lg;
+  padding-bottom: space.$padding-bottom-lg-plus;
 }
 
 .bf-verify-criteria-legend {
@@ -18,8 +16,10 @@
 }
 
 .bf-verify-criteria-section-heading {
-  @include h4;
+  border-bottom: rem(2px) solid color.$dark-teal;
+  padding-bottom: space.$padding-bottom-sm;
+}
 
-  border-bottom: rem(2px) solid color.$marine;
-  padding-bottom: space.$padding-bottom-lg;
+.bf-verify-criteria-section:last-of-type {
+  padding-bottom: space.$padding-bottom-xl;
 }

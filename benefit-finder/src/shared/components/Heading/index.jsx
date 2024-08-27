@@ -12,7 +12,7 @@ import './_index.scss'
  */
 const Heading = ({ children, className, headingLevel, ...props }) => {
   // pass our default classes
-  const defaultClasses = ['font-family-sans']
+  const defaultClasses = ['']
 
   // return html as a tring for heading element values
   const Tag = `h${headingLevel}`

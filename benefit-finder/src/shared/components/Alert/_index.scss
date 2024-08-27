@@ -7,9 +7,9 @@
 }
 
 h2.bf-usa-alert__heading {
-  @include h6;
+  @include h5($font-family: 'sans');
 }
 
-.bf-usa-alert__text {
-  @include p2;
+.bf-errors-list-item a {
+  @include p;
 }

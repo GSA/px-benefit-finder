@@ -14,6 +14,9 @@ const Icon = ({ type, color, ...props }) => {
   let icon
 
   switch (type) {
+    case 'all_benefits':
+      icon = <Icons.AllBenefits />
+      break
     case 'carrot-solid':
       icon = <Icons.CarrotSolid color={color} />
       break

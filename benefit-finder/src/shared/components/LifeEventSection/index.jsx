@@ -203,22 +203,37 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleDateChanged = (event, criteriaKey) => {
+    // if event target is empty check if all values in date are empty
     event.target.value.length > 0 && setHasData(true)
     window.history.replaceState({}, '', window.location.pathname)
-    if (dateInputValidation(event) === true) {
-      apiCalls.PUT.DataDate(
-        criteriaKey,
-        currentData,
-        setCurrentData,
-        event.target.value,
-        event.target.id
-      )
-      hasError.length > 0 &&
-        errorHandling.handleCheckForRequiredValues(
-          requiredFieldsets,
-          setHasError
+
+    async function validUpdate() {
+      if (dateInputValidation(event) === true) {
+        apiCalls.PUT.DataDate(
+          criteriaKey,
+          currentData,
+          setCurrentData,
+          event.target.value,
+          event.target.id
         )
+        hasError.length > 0 &&
+          errorHandling.handleCheckForRequiredValues(
+            requiredFieldsets,
+            setHasError
+          )
+      }
     }
+
+    validUpdate().then(() => {
+      errorHandling.getNonRequiredFieldsets(
+        criteriaKey,
+        requiredFieldsets,
+        setRequiredFieldsets,
+        setHasError,
+        hasError,
+        apiCalls.GET.SelectedValueAll(data)
+      )
+    })
   }
 
   // manage the display of our modal initializer
@@ -316,7 +331,6 @@ const LifeEventSection = ({
                           hidden={hidden && hidden}
                           id={item.fieldset.criteriaKey}
                           invalid={errorHandling.handleInvalid({
-                            required: item.fieldset.required,
                             hasError,
                             criteriaKey: item.fieldset?.criteriaKey,
                           })}
@@ -346,7 +360,6 @@ const LifeEventSection = ({
                                     )
                                   }
                                   invalid={errorHandling.handleInvalid({
-                                    required: item.fieldset.required,
                                     hasError,
                                     criteriaKey: item.fieldset?.criteriaKey,
                                     fieldSetId,
@@ -385,14 +398,12 @@ const LifeEventSection = ({
                               hidden={hidden && hidden}
                               ui={ui.errorText}
                               invalid={errorHandling.handleInvalid({
-                                required: item.fieldset.required,
                                 hasError,
                                 criteriaKey: item.fieldset?.criteriaKey,
                               })}
                             >
                               <RadioGroup
                                 invalid={errorHandling.handleInvalid({
-                                  required: item.fieldset.required,
                                   hasError,
                                   criteriaKey: item.fieldset?.criteriaKey,
                                 })}
@@ -430,7 +441,6 @@ const LifeEventSection = ({
                           hidden={hidden && hidden}
                           id={item.fieldset.criteriaKey}
                           invalid={errorHandling.handleInvalid({
-                            required: item.fieldset.required,
                             hasError,
                             criteriaKey: item.fieldset?.criteriaKey,
                           })}
@@ -454,7 +464,6 @@ const LifeEventSection = ({
                                   parentLegend={item.fieldset.legend}
                                   id={fieldSetId}
                                   invalid={errorHandling.handleInvalid({
-                                    required: item.fieldset.required,
                                     hasError,
                                     criteriaKey: item.fieldset?.criteriaKey,
                                     fieldSetId,

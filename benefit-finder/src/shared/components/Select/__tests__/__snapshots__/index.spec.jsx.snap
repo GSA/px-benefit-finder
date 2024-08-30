@@ -17,7 +17,6 @@ exports[`Select > renders a match to the previous snapshot 1`] = `
     name="applicant_relationship_to_the_deceased"
   >
     <option
-      disabled=""
       value=""
     />
     <option

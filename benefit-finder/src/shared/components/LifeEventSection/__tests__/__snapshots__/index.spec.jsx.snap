@@ -175,7 +175,6 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                     name="applicant_date_of_birth_0_month"
                   >
                     <option
-                      disabled=""
                       value=""
                     >
                       -Select-
@@ -338,7 +337,6 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 name="applicant_relationship_to_the_deceased_0"
               >
                 <option
-                  disabled=""
                   value=""
                 >
                   -Select-
@@ -408,7 +406,6 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 name="applicant_marital_status_0"
               >
                 <option
-                  disabled=""
                   value=""
                 >
                   -Select-

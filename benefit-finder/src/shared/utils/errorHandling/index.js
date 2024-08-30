@@ -1,3 +1,5 @@
+// import * as apiCalls from '../../api/apiCalls'
+
 /**
  * a function that collect all the required fields in the current step
  * @function
@@ -8,6 +10,54 @@ export const getRequiredFieldsets = (document, setHandler) => {
     node => node.attributes.required
   )
   setHandler(Array.from(requiredNodeList))
+}
+
+/**
+ * a function that collect all the non required fields in the current step which still need to be validated if there are requirements
+ * @function
+ */
+
+// if a date fieldset has values, add it to required fieldsets array even if not attributed as required
+export const getNonRequiredFieldsets = (
+  criteriaKey,
+  requiredFieldsets,
+  setHandler,
+  setHasError,
+  hasError,
+  data
+) => {
+  const node = document.getElementById(`${criteriaKey}`)
+
+  const dateDataObj = data.filter(item => item.criteriaKey === criteriaKey)
+
+  const dateValues = dateDataObj[0].values.value
+
+  const isEmpty = obj => {
+    for (const key in obj) {
+      if (obj[key] !== '') {
+        return false // returns false if object has a non-empty string value
+      }
+    }
+    return true // returns true if all values are empty strings
+  }
+
+  const addToRequiredFields = [...requiredFieldsets, node]
+
+  const makeUniq = [...new Set(addToRequiredFields)]
+
+  const removeFromRequiredFields = makeUniq.filter(
+    item => !item.id === criteriaKey
+  )
+
+  const removeFromErrorArray = hasError.filter(
+    item => !item.id.includes(criteriaKey)
+  )
+
+  isEmpty(dateValues) && setHasError(removeFromErrorArray)
+
+  isEmpty(dateValues)
+    ? setHandler(removeFromRequiredFields)
+    : setHandler(makeUniq)
 }
 
 export const handleCheckForRequiredValues = async (
@@ -64,7 +114,7 @@ export const handleCheckForRequiredValues = async (
 }
 
 export const handleInvalid = ({
-  required,
+  // required,
   hasError,
   criteriaKey,
   fieldSetId,
@@ -85,11 +135,12 @@ export const handleInvalid = ({
     return errorItem.id !== undefined && errorItem.id.includes(fieldSetId)
   })
 
-  return required && useFilter === true ? hanldeFilter : handleMap
+  return useFilter === true ? hanldeFilter : handleMap
 }
 
 export default {
   getRequiredFieldsets,
+  getNonRequiredFieldsets,
   handleCheckForRequiredValues,
   handleInvalid,
 }

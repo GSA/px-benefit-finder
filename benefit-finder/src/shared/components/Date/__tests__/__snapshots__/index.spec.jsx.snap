@@ -34,7 +34,6 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
         name="applicant_date_of_birth_0_month"
       >
         <option
-          disabled=""
           value=""
         >
           -Select-

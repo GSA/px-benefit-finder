@@ -103,7 +103,7 @@ const Date = ({
             aria-errormessage={`month-error-description-${id}`}
             data-datetype="month"
           >
-            <option value="" key="default" disabled>
+            <option value="" key="default">
               {dateDefaultValue}
             </option>
             {monthOptions.map((option, i) => (
@@ -165,7 +165,7 @@ Date.propTypes = {
   value: PropTypes.object,
   ui: PropTypes.object,
   id: PropTypes.string,
-  invalid: PropTypes.array,
+  invalid: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
 }
 
 export default Date

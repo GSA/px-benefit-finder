@@ -21,8 +21,9 @@ const dateInputValidation = event => {
     }
   }
 
+  // always return true for month values so we can select default options
   if (event.target.id.includes('month')) {
-    return event.target.value.length >= 1
+    return true
   }
 }
 

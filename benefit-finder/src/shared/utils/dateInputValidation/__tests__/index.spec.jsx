@@ -23,13 +23,13 @@ test('month value should be determined if valid', async () => {
       id: monthElement.id,
     },
   }
+
+  expect(dateInputValidation(customEvent)).toBe(true)
 })
 
 test('day value should be determined if valid', async () => {
   render(<IndexHTML />)
   const dayElement = screen.getByTestId('input-day')
-
-  expect(dateInputValidation(customEvent)).toBe(false)
 
   customEvent = {
     target: {
@@ -46,6 +46,8 @@ test('day value should be determined if valid', async () => {
       id: dayElement.id,
     },
   }
+
+  expect(dateInputValidation(customEvent)).toBe(true)
 })
 
 test('year value should be determined if valid', async () => {

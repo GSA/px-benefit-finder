@@ -165,7 +165,7 @@ Date.propTypes = {
   value: PropTypes.object,
   ui: PropTypes.object,
   id: PropTypes.string,
-  invalid: PropTypes.bool || PropTypes.array,
+  invalid: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
 }
 
 export default Date

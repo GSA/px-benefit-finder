@@ -7,12 +7,18 @@
   .bf-usa-accordion {
     margin-bottom: space.$space-sm-plus;
 
+    .bf-usa-detail-title {
+      margin-bottom: space.$space-sm;
+    }
+
     .bf-usa-detail-summary {
       p {
-        @include p;
-
         margin-bottom: space.$space-md-plus;
       }
+    }
+
+    .bf-key-eligibility-criteria-heading {
+      @include h5($font-family: 'sans');
     }
 
     .bf-usa-accordion-group-cta-wrapper {
@@ -28,6 +34,5 @@
 
   .bf-expand-all {
     margin-bottom: space.$space-lg;
-    margin-top: space.$space-lg;
   }
 }

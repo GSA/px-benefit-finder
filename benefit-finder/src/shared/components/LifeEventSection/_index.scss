@@ -35,19 +35,32 @@
     min-width: rem(120px);
   }
 
-  .bf-usa-button:first-of-type {
-    margin-right: space.$space-lg-plus;
+  .bf-usa-modal-group {
+    width: 100%;
   }
 
   button,
   .bf-usa-modal-group a {
-    margin-bottom: space.$space-md;
+    margin: 0;
+  }
+
+  @media (width >= $tablet) {
+    .bf-usa-button:first-of-type {
+      margin-right: space.$space-lg-plus;
+    }
+
+    .bf-usa-modal-group {
+      width: auto;
+    }
+
+    button,
+    .bf-usa-modal-group a {
+      margin-bottom: space.$space-md;
+    }
   }
 }
 
 .bf-section-heading {
-  @include h0;
-
   background-color: color.$officer-navy;
   color: color.$white;
   margin: 0;
@@ -60,21 +73,17 @@
   padding-bottom: space.$padding-bottom-lg;
   margin-bottom: space.$space-lg-plus;
 
-  h2.bf-usa-section-heading {
-    @include h1;
-  }
-
   .bf-form-heading-group {
     padding-bottom: space.$space-lg;
 
     h2.bf-form-heading {
-      @include h1;
-
       margin-bottom: 0;
       padding-bottom: space.$padding-bottom-sm;
     }
 
     .bf-section-sub-heading p {
+      @include subheadings;
+
       margin: 0;
     }
   }

@@ -1,5 +1,8 @@
 @use '../../styles/colors/_index.scss' as color;
+@use '../../styles/mixins/_index.scss' as *;
 
 .bf-step-back-button {
+  @include p;
+
   padding: 0;
 }

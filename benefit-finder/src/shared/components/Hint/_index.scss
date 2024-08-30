@@ -3,19 +3,11 @@
 @use '../../styles/mixins/_index.scss' as *;
 
 .bf-usa-hint--required {
-  @include p;
-
   color: color.$dark-medium-grey;
 }
 
 .bf-required {
-  @include p;
-
   color: color.$dark-medium-grey;
   font-weight: 400;
   margin-left: space.$space-sm;
-}
-
-.bf-usa-hint {
-  @include p;
 }

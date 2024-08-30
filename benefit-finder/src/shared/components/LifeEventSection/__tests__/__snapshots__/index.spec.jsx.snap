@@ -4,7 +4,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <h1
     aria-level="1"
-    class="bf-section-heading font-family-sans"
+    class="bf-section-heading "
     id="skip-to-h1"
     role="heading"
   >
@@ -79,7 +79,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           >
             <h2
               aria-level="2"
-              class="bf-usa-alert__heading usa-alert__heading font-family-sans"
+              class="bf-usa-alert__heading usa-alert__heading "
               data-testid="bf-alert-heading"
               role="heading"
             >
@@ -100,7 +100,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <h2
             aria-level="2"
-            class="bf-form-heading bf-usa-form-heading font-family-sans"
+            class="bf-form-heading bf-usa-form-heading "
             role="heading"
           >
             About the applicant
@@ -175,7 +175,6 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                     name="applicant_date_of_birth_0_month"
                   >
                     <option
-                      disabled=""
                       value=""
                     >
                       -Select-
@@ -338,7 +337,6 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 name="applicant_relationship_to_the_deceased_0"
               >
                 <option
-                  disabled=""
                   value=""
                 >
                   -Select-
@@ -408,7 +406,6 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 name="applicant_marital_status_0"
               >
                 <option
-                  disabled=""
                   value=""
                 >
                   -Select-

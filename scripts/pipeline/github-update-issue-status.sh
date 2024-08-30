@@ -61,7 +61,7 @@ gh_issue_id=$(gh api graphql -f query="
         }
       }
     }
-  }" jq -r ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
+  }" -q ".data.node.items.nodes[] | select(.content.number == ${ISSUE_NUMBER}).id"
 )
 
 echo "Looking up field values..."

@@ -44,19 +44,23 @@
     }
   }
 
-  h3.bf-usa-card__heading {
-    @include h6;
+  .bf-usa-card__header {
+    padding-bottom: 0;
+  }
 
+  h3.bf-usa-card__heading {
+    @include subheadings($font-family: 'sans');
+
+    font-weight: 700;
     text-decoration: underline;
   }
 
   .bf-usa-card__body {
-    @include p;
-
     display: none;
   }
 
-  .bf-usa-card__cta {
+  .bf-usa-card__cta,
+  .bf-usa-card__body {
     padding: space.$padding-bottom-md-plus;
     padding-top: 0;
     margin-top: 0;

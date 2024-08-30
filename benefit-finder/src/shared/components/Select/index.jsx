@@ -69,7 +69,7 @@ function Select({
         data-errormessage={errorMessageValue}
         aria-errormessage={`error-description-${htmlFor}`}
       >
-        <option value="" key="default" disabled>
+        <option value="" key="default">
           {select?.defaultValue}
         </option>
         <Options options={options} />

@@ -86,6 +86,7 @@ const Results = ({
       // we don't step back on toggle view
       <Button
         className="bf-step-back-button"
+        data-testid="bf-step-back-button"
         onClick={() => handleViewToggle()}
         unstyled
       >

@@ -94,6 +94,7 @@ const BenefitAccordionGroup = ({
       expandAll && (
         <Button
           className="bf-expand-all"
+          data-testid="bf-expand-all"
           aria-label={handleExpandIcon}
           outline
           onClick={() => handleExpandAll(isExpandAll)}

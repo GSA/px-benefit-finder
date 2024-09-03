@@ -30,7 +30,7 @@ const Radio = ({
   const utilityClasses = handleRequired
   return (
     <>
-      <div className="bf-usa-radio usa-radio">
+      <div className="bf-usa-radio usa-radio" data-testid="radio">
         <input
           className={useHandleClassName({
             className,

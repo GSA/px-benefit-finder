@@ -13,6 +13,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
     >
       <h4
         class="bf-usa-accordion__heading usa-accordion__heading"
+        data-testid="accordion-heading"
       >
         <button
           aria-controls="covid-19-funeral-assistance"
@@ -93,6 +94,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
             </h5>
             <ul
               class="bf-key-eligibility-criteria-list"
+              data-testid="bf-key-eligibility-criteria-list"
             />
           </div>
           <div

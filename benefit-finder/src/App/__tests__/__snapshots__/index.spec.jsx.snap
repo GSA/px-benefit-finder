@@ -244,6 +244,7 @@ exports[`loads intro 1`] = `
           >
             <button
               class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
+              data-test="button"
               type="button"
             >
               Start
@@ -314,6 +315,8 @@ exports[`loads window query scenario 1 1`] = `
           >
             <button
               class=""
+              data-test="button"
+              data-testid="bf-step-back-button"
               type="button"
             >
               Back
@@ -385,6 +388,8 @@ exports[`loads window query scenario 1 1`] = `
               >
                 <button
                   class=""
+                  data-test="button"
+                  data-testid="bf-expand-all"
                   type="button"
                 >
                   Open all +
@@ -397,6 +402,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="covid-19-funeral-assistance"
@@ -477,6 +483,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -658,6 +665,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="coal-mine-workers'-compensation-(black-lung-benefits)-for-surviving-spouse"
@@ -738,6 +746,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -817,6 +826,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="presidential-memorial-certificate"
@@ -897,6 +907,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -999,6 +1010,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="veterans-burial-allowance"
@@ -1079,6 +1091,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1216,6 +1229,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-pension-for-spouse"
@@ -1296,6 +1310,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1423,6 +1438,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-pension-for-child-with-disabilities"
@@ -1503,6 +1519,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1610,6 +1627,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="veterans-medallions"
@@ -1690,6 +1708,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1792,6 +1811,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="veterans-headstone-and-grave-marker"
@@ -1872,6 +1892,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1974,6 +1995,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="life-insurance-for-survivors-of-veterans"
@@ -2054,6 +2076,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2151,6 +2174,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="dependency-and-indemnity-compensation-(dic)"
@@ -2231,6 +2255,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2333,6 +2358,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="civilian-health-and-medical-program-of-the-va-(champva)"
@@ -2413,6 +2439,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2545,6 +2572,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="burial-benefits"
@@ -2625,6 +2653,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2727,6 +2756,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="lump-sum-death-benefit"
@@ -2807,6 +2837,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2946,6 +2977,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="financial-assistance-and-social-services-(fass)-for-deceased"
@@ -3026,6 +3058,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         />
                       </div>
                       <div
@@ -3073,6 +3106,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-mothers/fathers-with-a-child"
@@ -3153,6 +3187,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -3304,6 +3339,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="annuity-for-certain-military-surviving-spouses"
@@ -3384,6 +3420,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -3486,6 +3523,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="education-benefits-(gi-bill)-for-survivors"
@@ -3566,6 +3604,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -3668,6 +3707,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-child-with-disabilities"
@@ -3748,6 +3788,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -3866,6 +3907,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-spouse-with-disabilities"
@@ -3946,6 +3988,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4127,6 +4170,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="public-safety-officers'-educational-assistance-program"
@@ -4207,6 +4251,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4286,6 +4331,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="public-safety-officers'-death-benefits"
@@ -4366,6 +4412,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4445,6 +4492,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="burial-flag"
@@ -4525,6 +4573,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4622,6 +4671,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="home-loan-program-for-survivors"
@@ -4702,6 +4752,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4834,6 +4885,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-child"
@@ -4914,6 +4966,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -5033,6 +5086,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivor-benefit-plan"
@@ -5113,6 +5167,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -5215,6 +5270,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="burial-in-va-national-cemetery"
@@ -5295,6 +5351,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         />
                       </div>
                       <div
@@ -5366,6 +5423,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="death-gratuity"
@@ -5446,6 +5504,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -5548,6 +5607,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-pension-for-child"
@@ -5628,6 +5688,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         />
                       </div>
                       <div
@@ -5709,6 +5770,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-parents"
@@ -5789,6 +5851,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -5927,6 +5990,7 @@ exports[`loads window query scenario 1 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-spouse"
@@ -6007,6 +6071,7 @@ exports[`loads window query scenario 1 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -6204,6 +6269,7 @@ exports[`loads window query scenario 1 1`] = `
               >
                 <button
                   class=""
+                  data-test="button"
                   data-testid="bf-result-view-unmet-button"
                   type="button"
                 >
@@ -6582,6 +6648,8 @@ exports[`loads window query scenario 2 1`] = `
           >
             <button
               class=""
+              data-test="button"
+              data-testid="bf-step-back-button"
               type="button"
             >
               Back
@@ -6653,6 +6721,8 @@ exports[`loads window query scenario 2 1`] = `
               >
                 <button
                   class=""
+                  data-test="button"
+                  data-testid="bf-expand-all"
                   type="button"
                 >
                   Open all +
@@ -6665,6 +6735,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="covid-19-funeral-assistance"
@@ -6745,6 +6816,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -6925,6 +6997,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="coal-mine-workers'-compensation-(black-lung-benefits)-for-surviving-spouse"
@@ -7005,6 +7078,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7096,6 +7170,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="presidential-memorial-certificate"
@@ -7176,6 +7251,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7278,6 +7354,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="veterans-burial-allowance"
@@ -7358,6 +7435,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7520,6 +7598,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-pension-for-spouse"
@@ -7600,6 +7679,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7727,6 +7807,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-pension-for-child-with-disabilities"
@@ -7807,6 +7888,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7914,6 +7996,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="veterans-medallions"
@@ -7994,6 +8077,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8096,6 +8180,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="veterans-headstone-and-grave-marker"
@@ -8176,6 +8261,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8278,6 +8364,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="life-insurance-for-survivors-of-veterans"
@@ -8358,6 +8445,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8455,6 +8543,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="dependency-and-indemnity-compensation-(dic)"
@@ -8535,6 +8624,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8637,6 +8727,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="civilian-health-and-medical-program-of-the-va-(champva)"
@@ -8717,6 +8808,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8849,6 +8941,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="burial-benefits"
@@ -8929,6 +9022,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9030,6 +9124,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="lump-sum-death-benefit"
@@ -9110,6 +9205,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9260,6 +9356,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="financial-assistance-and-social-services-(fass)-for-deceased"
@@ -9340,6 +9437,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9400,6 +9498,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-mothers/fathers-with-a-child"
@@ -9480,6 +9579,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9631,6 +9731,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="annuity-for-certain-military-surviving-spouses"
@@ -9711,6 +9812,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9813,6 +9915,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="education-benefits-(gi-bill)-for-survivors"
@@ -9893,6 +9996,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9995,6 +10099,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-child-with-disabilities"
@@ -10075,6 +10180,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10194,6 +10300,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-spouse-with-disabilities"
@@ -10274,6 +10381,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10443,6 +10551,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="public-safety-officers'-educational-assistance-program"
@@ -10523,6 +10632,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10602,6 +10712,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="public-safety-officers'-death-benefits"
@@ -10682,6 +10793,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10761,6 +10873,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="burial-flag"
@@ -10841,6 +10954,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10938,6 +11052,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="home-loan-program-for-survivors"
@@ -11018,6 +11133,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -11150,6 +11266,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-child"
@@ -11230,6 +11347,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -11349,6 +11467,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivor-benefit-plan"
@@ -11429,6 +11548,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -11531,6 +11651,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="burial-in-va-national-cemetery"
@@ -11611,6 +11732,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         />
                       </div>
                       <div
@@ -11682,6 +11804,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="death-gratuity"
@@ -11762,6 +11885,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -11864,6 +11988,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-pension-for-child"
@@ -11944,6 +12069,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         />
                       </div>
                       <div
@@ -12025,6 +12151,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-parents"
@@ -12105,6 +12232,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -12219,6 +12347,7 @@ exports[`loads window query scenario 2 1`] = `
                 >
                   <h4
                     class="bf-usa-accordion__heading usa-accordion__heading"
+                    data-testid="accordion-heading"
                   >
                     <button
                       aria-controls="survivors-benefits-for-spouse"
@@ -12299,6 +12428,7 @@ exports[`loads window query scenario 2 1`] = `
                         </h5>
                         <ul
                           class="bf-key-eligibility-criteria-list"
+                          data-testid="bf-key-eligibility-criteria-list"
                         >
                           <li
                             class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -12484,6 +12614,7 @@ exports[`loads window query scenario 2 1`] = `
               >
                 <button
                   class=""
+                  data-test="button"
                   data-testid="bf-result-view-unmet-button"
                   type="button"
                 >

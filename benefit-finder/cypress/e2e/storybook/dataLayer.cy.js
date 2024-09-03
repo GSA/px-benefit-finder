@@ -395,7 +395,7 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .benefitsAccordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
@@ -426,14 +426,16 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .benefitsAccordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          pageObjects.accordion(enResults.eligible.eligible_benefits[0]).click()
+          pageObjects
+            .accordionByTitle(enResults.eligible.eligible_benefits[0])
+            .click()
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(wait).then(() => {
@@ -458,14 +460,16 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .benefitsAccordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          pageObjects.accordion(enResults.eligible.eligible_benefits[0]).click()
+          pageObjects
+            .accordionByTitle(enResults.eligible.eligible_benefits[0])
+            .click()
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(wait).then(() => {
@@ -515,7 +519,7 @@ describe('Calls to Google Analytics Object', function () {
           .click()
           .then(() => {
             pageObjects
-              .benefitsAccordion()
+              .accordionHeading()
               .filter(':visible')
               .should(
                 'have.length',
@@ -650,6 +654,7 @@ describe('Calls to Google Analytics Object', function () {
 
   it('clicking open all on results page has a bf_open_all_accordions event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
+    pageObjects.accordionHeading().should('exist')
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
@@ -1003,7 +1008,7 @@ describe('Calls to Google Analytics Object', function () {
                                   )
 
                                   pageObjects
-                                    .accordion(
+                                    .accordionByTitle(
                                       enResults.eligible.eligible_benefits[0]
                                     )
                                     .click()

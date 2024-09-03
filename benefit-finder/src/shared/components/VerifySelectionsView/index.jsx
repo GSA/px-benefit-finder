@@ -129,6 +129,7 @@ const VerifySelectionsView = ({
           <div className="bf-section-info">
             <Button
               className="bf-step-back-button"
+              data-testid="bf-step-back-button"
               onClick={handleStepBack}
               unstyled
             >

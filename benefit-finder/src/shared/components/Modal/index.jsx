@@ -181,7 +181,10 @@ const Modal = ({
       handleKeyValidation(e) && handleCloseModal(triggerRef) && navFunction()
     }
     return (
-      <ul className="bf-modal bf-usa-button-group usa-button-group width-full">
+      <ul
+        className="bf-modal bf-usa-button-group usa-button-group width-full"
+        data-testid="button-group"
+      >
         <li
           className="bf-usa-button-group__item usa-button-group__item width-full"
           key="bf-nav-item-one"
@@ -238,6 +241,7 @@ const Modal = ({
           type="button"
           aria-label="Close"
           className="bf-modal-button"
+          data-testid="button"
           onClick={() => handleCloseModal(triggerRef)}
         >
           <Icon type="modal-close" color="black" aria-hidden="true" />

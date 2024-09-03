@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { parseDate, dataLayerUtils } from '../../utils'
+import { useCrazyEggUpdate } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import { Heading, Button } from '../index'
 
@@ -22,6 +23,7 @@ const VerifySelectionsView = ({
   data,
 }) => {
   const { stepIndicator, verifySelectionsView, buttonGroup } = ui
+  const { verifySelections } = dataLayerUtils.dataLayerStructure
   const local = apiCalls.GET.Language()
   const dateFormatOptions = {
     year: 'numeric',
@@ -107,9 +109,11 @@ const VerifySelectionsView = ({
     window.scrollTo(0, 0)
   }, [])
 
+  // handle crazyEgg
+  useCrazyEggUpdate({ pageView: verifySelections.bfData.pageView })
+
   // handle dataLayer
   useEffect(() => {
-    const { verifySelections } = dataLayerUtils.dataLayerStructure
     dataLayerUtils.dataLayerPush(window, {
       event: verifySelections.event,
       bfData: {

@@ -7,7 +7,11 @@ import {
   errorHandling,
   handleSurvey,
 } from '../../utils'
-import { useHandleUnload, useResetElement } from '../../hooks'
+import {
+  useHandleUnload,
+  useResetElement,
+  useCrazyEggUpdate,
+} from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import {
   Alert,
@@ -53,6 +57,7 @@ const LifeEventSection = ({
   const [hasError, setHasError] = useState([])
   const [hasData, setHasData] = useState(false)
   const [submissionCount, setSubmissionCount] = useState(0)
+  const { lifeEventSection } = dataLayerUtils.dataLayerStructure
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
 
@@ -249,7 +254,6 @@ const LifeEventSection = ({
 
   // handle dataLayer
   useEffect(() => {
-    const { lifeEventSection } = dataLayerUtils.dataLayerStructure
     modalOpen === false &&
       dataLayerUtils.dataLayerPush(window, {
         event: lifeEventSection.event,
@@ -259,6 +263,13 @@ const LifeEventSection = ({
         },
       })
   }, [])
+
+  // handle crazyEgg
+  data.length > 0 &&
+    modalOpen === false &&
+    useCrazyEggUpdate({
+      pageView: `${lifeEventSection?.bfData.pageView}-${step}`,
+    })
 
   useEffect(() => {
     // hide the survey

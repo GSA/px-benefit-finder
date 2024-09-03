@@ -10,7 +10,7 @@ const useCrazyEggUpdate = ({ pageView, notEligibleView }) => {
     const lifeEventId = document.querySelector('[data-testid="app"]')
 
     const device = isDesktop ? 'desktop' : 'mobile'
-    const newContent = `var CE_SNAPSHOT_NAME = '${pageView}-${lifeEventId?.id}-${device}'`
+    const newContent = `var CE_SNAPSHOT_NAME = "${pageView}-${lifeEventId?.id}-${device}";`
 
     if (crazyeggEl !== null) {
       crazyeggEl.innerHTML = newContent

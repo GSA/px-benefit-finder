@@ -126,7 +126,7 @@ exports[`loads view 1`] = `
                 class="bf-expand-all bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
-                Open all +
+                Expand all +
               </button>
               <div
                 class="bf-usa-accordion usa-accordion"
@@ -6156,7 +6156,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 class="bf-expand-all bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
                 type="button"
               >
-                Open all +
+                Expand all +
               </button>
               <div
                 class="bf-usa-accordion usa-accordion"

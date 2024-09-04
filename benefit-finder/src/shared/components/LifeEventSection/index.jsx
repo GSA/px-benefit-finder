@@ -558,23 +558,21 @@ const LifeEventSection = ({
                   {buttonGroup[1].value}
                 </Button>
               ) : (
-                <div>
-                  <Modal
-                    id="nav-modal"
-                    dataLayerValue={{ viewTitle: currentData.section.heading }}
-                    modalHeading={reviewSelectionModal.heading}
-                    navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
-                    navItemOneFunction={setVerifyStep}
-                    navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
-                    navItemTwoFunction={setViewResults}
-                    triggerLabel={buttonGroup[1].value}
-                    handleCheckRequriedFields={handleCheckRequriedFields}
-                    modalOpen={modalOpen}
-                    setModalOpen={setModalOpen}
-                    completed={currentData.completed}
-                    alertElement={alertFieldRef}
-                  />
-                </div>
+                <Modal
+                  id="nav-modal"
+                  dataLayerValue={{ viewTitle: currentData.section.heading }}
+                  modalHeading={reviewSelectionModal.heading}
+                  navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
+                  navItemOneFunction={setVerifyStep}
+                  navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
+                  navItemTwoFunction={setViewResults}
+                  triggerLabel={buttonGroup[1].value}
+                  handleCheckRequriedFields={handleCheckRequriedFields}
+                  modalOpen={modalOpen}
+                  setModalOpen={setModalOpen}
+                  completed={currentData.completed}
+                  alertElement={alertFieldRef}
+                />
               )}
             </div>
           </div>

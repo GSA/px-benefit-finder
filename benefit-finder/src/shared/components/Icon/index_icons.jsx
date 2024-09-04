@@ -291,7 +291,7 @@ export const ModalClose = () => (
 )
 
 // open
-export const Open = ({ color }) => (
+export const Open = () => (
   <svg
     className="bf-open"
     xmlns="http://www.w3.org/2000/svg"
@@ -300,10 +300,7 @@ export const Open = ({ color }) => (
     width="24"
   >
     <path d="M0 0h24v24H0z" fill="none" />
-    <path
-      fill={color || Colors.marine}
-      d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-    />
+    <path fill="none" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
   </svg>
 )
 

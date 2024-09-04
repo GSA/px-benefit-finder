@@ -98,6 +98,7 @@ function App({ testAppContent, testQuery }) {
       <LanguageContext.Provider value={t}>
         {isDraftMode === true && <Alert>Draft Mode</Alert>}
         <div
+          id={content?.lifeEventForm.id}
           className={`benefit-finder ${
             step !== 0 && viewResults !== true ? 'form' : ''
           }`}

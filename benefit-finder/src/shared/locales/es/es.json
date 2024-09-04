@@ -30,7 +30,7 @@
         }
       ]
     },
-    "button": "Comenzar"
+    "button": "Encuentre sus beneficios"
   },
   "stepIndicator": {
     "stepBackButton": "Volver"
@@ -51,17 +51,17 @@
       "value": "Volver"
     },
     {
-      "value": "Continuar"
+      "value": "Siguiente"
     }
   ],
   "reviewSelectionModal": {
     "heading": "Seleccione una opción:",
     "buttonGroup": [
       {
-        "value": "Revise su información"
+        "value": "Revise sus respuestas"
       },
       {
-        "value": "Ver resultados"
+        "value": "Obtenga sus resultados"
       }
     ]
   },
@@ -152,7 +152,7 @@
     "notEligibleResults": {
       "heading": "Beneficios a los que no calificó",
       "description": "<div>Según sus respuestas no es elegible para estos beneficios. <strong>Podría calificar si tiene información adicional o si su situación cambia.</strong></div>",
-      "cta": "Vea los beneficios a los que no calificó"
+      "cta": "Explore otros beneficios"
     },
     "relativeBenefits": {
       "heading": "Más beneficios"

@@ -232,7 +232,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
           class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
           type="button"
         >
-          Start
+          Start finding benefits
         </button>
       </div>
     </div>

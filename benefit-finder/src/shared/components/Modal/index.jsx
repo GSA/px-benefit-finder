@@ -3,6 +3,7 @@ import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
 import { Button, ObfuscatedLink, Icon, Heading } from '../index'
 import { scrollLock, dataLayerUtils } from '../../utils'
+import { useCrazyEggUpdate } from '../../hooks'
 
 import './_index.scss'
 
@@ -59,6 +60,7 @@ const Modal = ({
 }) => {
   // state
   const triggerRef = useRef(null)
+  const { modal, errors } = dataLayerUtils.dataLayerStructure
 
   /**
    * a function that triggers the modal to an open state
@@ -108,9 +110,11 @@ const Modal = ({
     return cleanUp()
   }, [])
 
+  // handle crazyEgg
+  modalOpen === true && useCrazyEggUpdate({ pageView: modal.bfData.pageView })
+
   // handle dataLayer
   useEffect(() => {
-    const { modal } = dataLayerUtils.dataLayerStructure
     modalOpen === true &&
       dataLayerUtils.dataLayerPush(window, {
         event: modal.event,
@@ -120,7 +124,6 @@ const Modal = ({
         },
       })
     // handle dataLayer
-    const { errors } = dataLayerUtils.dataLayerStructure
     modalOpen === true &&
       dataLayerUtils.dataLayerPush(window, {
         event: errors.event,

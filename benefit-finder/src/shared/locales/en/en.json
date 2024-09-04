@@ -30,7 +30,7 @@
         }
       ]
     },
-    "button": "Start"
+    "button": "Start finding benefits"
   },
   "stepIndicator": {
     "stepBackButton": "Back"
@@ -51,17 +51,17 @@
       "value": "Back"
     },
     {
-      "value": "Continue"
+      "value": "Next"
     }
   ],
   "reviewSelectionModal": {
     "heading": "Select an option:",
     "buttonGroup": [
       {
-        "value": "Review selections"
+        "value": "Review your selections"
       },
       {
-        "value": "See results"
+        "value": "Get your results"
       }
     ]
   },
@@ -132,7 +132,7 @@
       "description": "You may be eligible for these benefits."
     },
     "benefitAccordionGroup": {
-      "closedState": "Open all",
+      "closedState": "Expand all",
       "openState": "Close all"
     },
     "benefitAccordion": {
@@ -151,7 +151,7 @@
     "notEligibleResults": {
       "heading": "Benefits you did not qualify for",
       "description": "<div>Based on your answers you are not eligible for these benefits. <strong>You may become eligible if you enter additional information or your situation changes.</strong></div>",
-      "cta": "See benefits you did not qualify for"
+      "cta": "Explore other potential benefits"
     },
     "resultsRelativeBenefits": {
       "heading": "More benefits"

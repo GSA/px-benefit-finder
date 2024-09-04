@@ -685,7 +685,7 @@ describe('Calls to Google Analytics Object', function () {
             ),
           ]
           removeID(ev[1])
-
+          cy.wait(1000)
           expect(ev[1].bfData.accordionsOpen).to.equal(
             !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
           )

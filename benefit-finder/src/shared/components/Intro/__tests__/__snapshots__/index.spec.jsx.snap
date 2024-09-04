@@ -233,7 +233,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
           data-test="button"
           type="button"
         >
-          Start
+          Start finding benefits
         </button>
       </div>
     </div>

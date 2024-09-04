@@ -130,7 +130,7 @@ exports[`loads view 1`] = `
                 data-testid="bf-expand-all"
                 type="button"
               >
-                Open all +
+                Expand all +
               </button>
               <div
                 class="bf-usa-accordion usa-accordion"
@@ -176,7 +176,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -439,7 +439,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -600,7 +600,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -784,7 +784,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -1028,7 +1028,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -1237,7 +1237,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -1426,7 +1426,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -1610,7 +1610,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -1794,7 +1794,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -1973,7 +1973,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -2157,7 +2157,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -2371,7 +2371,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -2554,7 +2554,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -2787,7 +2787,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -2916,7 +2916,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -3149,7 +3149,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -3333,7 +3333,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -3517,7 +3517,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -3717,7 +3717,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -3980,7 +3980,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -4141,7 +4141,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -4302,7 +4302,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -4481,7 +4481,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -4695,7 +4695,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -4896,7 +4896,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -5080,7 +5080,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -5233,7 +5233,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -5417,7 +5417,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -5580,7 +5580,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -5800,7 +5800,7 @@ exports[`loads view 1`] = `
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -6047,7 +6047,7 @@ exports[`loads view 1`] = `
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
-                See benefits you did not qualify for
+                Explore other potential benefits
               </button>
             </div>
           </div>
@@ -6225,7 +6225,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="bf-expand-all"
                 type="button"
               >
-                Open all +
+                Expand all +
               </button>
               <div
                 class="bf-usa-accordion usa-accordion"
@@ -6271,7 +6271,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -6534,7 +6534,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -6695,7 +6695,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -6879,7 +6879,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -7123,7 +7123,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -7332,7 +7332,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -7521,7 +7521,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -7705,7 +7705,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -7889,7 +7889,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -8068,7 +8068,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -8252,7 +8252,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -8466,7 +8466,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -8649,7 +8649,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -8882,7 +8882,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -9011,7 +9011,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -9244,7 +9244,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -9428,7 +9428,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -9612,7 +9612,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -9812,7 +9812,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -10075,7 +10075,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -10236,7 +10236,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -10397,7 +10397,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -10576,7 +10576,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -10790,7 +10790,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -10991,7 +10991,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -11175,7 +11175,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -11328,7 +11328,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -11512,7 +11512,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -11675,7 +11675,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -11895,7 +11895,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         />
                         <path
                           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                          fill="#1a4480"
+                          fill="none"
                         />
                       </svg>
                     </i>
@@ -12142,7 +12142,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
-                See benefits you did not qualify for
+                Explore other potential benefits
               </button>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useResetElement } from '../../hooks'
+import { useResetElement, useCrazyEggUpdate } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
@@ -27,6 +27,7 @@ const ResultsView = ({
 }) => {
   const [notEligibleView, setnotEligibleView] = useState(false)
   const [eligibilityCount, setEligibilityCount] = useState(null)
+  const { resultsView } = dataLayerUtils.dataLayerStructure
 
   /**
    * a hook that hanldes our open state of the accordions in our group
@@ -90,9 +91,17 @@ const ResultsView = ({
     })
   }, [])
 
+  // handle CrazyEgg
+  useCrazyEggUpdate({
+    pageView:
+      notEligibleView === true
+        ? resultsView.bfData.pageView[1]
+        : resultsView.bfData.pageView[0],
+    notEligibleView,
+  })
+
   // handle dataLayer
   useEffect(() => {
-    const { resultsView } = dataLayerUtils.dataLayerStructure
     eligibilityCount !== null &&
       dataLayerUtils.dataLayerPush(window, {
         event: resultsView.event,

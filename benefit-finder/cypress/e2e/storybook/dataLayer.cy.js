@@ -631,7 +631,7 @@ describe('Calls to Google Analytics Object', function () {
 
                   pageObjects
                     .button()
-                    .contains('Review selections')
+                    .contains('Review your selections')
                     .click()
                     .then(() => {
                       // get all the events in our layer that matches the event value
@@ -772,7 +772,7 @@ describe('Calls to Google Analytics Object', function () {
 
                   pageObjects
                     .button()
-                    .contains('Review selections')
+                    .contains('Review your selections')
                     .click()
                     .then(() => {
                       // get all the events in our layer that matches the event value
@@ -916,7 +916,7 @@ describe('Calls to Google Analytics Object', function () {
 
                   pageObjects
                     .button()
-                    .contains('Review selections')
+                    .contains('Review your selections')
                     .click()
                     .then(() => {
                       const ev = [

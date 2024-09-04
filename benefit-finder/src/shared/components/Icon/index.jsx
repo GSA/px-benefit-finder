@@ -24,7 +24,7 @@ const Icon = ({ type, color, ...props }) => {
       icon = <Icons.Carrot color={color} />
       break
     case 'close':
-      icon = <Icons.Close color={color} />
+      icon = <Icons.Close />
       break
     case 'death':
       icon = <Icons.Death />
@@ -42,7 +42,7 @@ const Icon = ({ type, color, ...props }) => {
       icon = <Icons.Info color={color} />
       break
     case 'open':
-      icon = <Icons.Open color={color} />
+      icon = <Icons.Open />
       break
     case 'modal-close':
       icon = <Icons.ModalClose color={color} />

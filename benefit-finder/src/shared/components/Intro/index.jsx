@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { dataLayerUtils } from '../../utils'
-import { useResetElement } from '../../hooks'
+import { useResetElement, useCrazyEggUpdate } from '../../hooks'
 import PropTypes from 'prop-types'
 import {
   Button,
@@ -25,6 +25,7 @@ import './_index.scss'
 const Intro = ({ data, ui, setStep, step }) => {
   const { timeEstimate, title, summary } = data
   const { heading, timeIndicator, steps, notices, button } = ui
+  const { intro } = dataLayerUtils.dataLayerStructure
   const resetElement = useResetElement()
 
   const handleStep = () => {
@@ -32,9 +33,12 @@ const Intro = ({ data, ui, setStep, step }) => {
     resetElement.current.focus()
   }
 
+  // handle crazyEgg
+  useCrazyEggUpdate({ pageView: intro.bfData.pageView })
+
   // handle dataLayer
   useEffect(() => {
-    const { intro } = dataLayerUtils.dataLayerStructure
+    // gtm
     dataLayerUtils.dataLayerPush(window, {
       event: intro.event,
       bfData: { pageView: intro.bfData.pageView, viewTitle: title },

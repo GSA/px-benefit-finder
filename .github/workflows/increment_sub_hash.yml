@@ -1,0 +1,27 @@
+name: Update Submodule Hash
+
+on:
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Checkout the submodule
+
+      - name: Fetch latest commit in the submodule
+        run: |
+          cd usagov-2021/
+          git fetch origin  # Fetch the latest changes
+          git checkout origin/main  # Checkout the latest commit from submodule (replace 'main' with the submodule's branch)
+
+      - name: Push submodule update
+        run: |
+          cd usagov-2021/
+          git push origin HEAD:main  # Push the new commit of the submodule
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }} # Use GitHub token for authentication

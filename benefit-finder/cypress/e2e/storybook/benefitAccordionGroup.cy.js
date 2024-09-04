@@ -55,7 +55,7 @@ describe('BenefitAccordionGroup component tests', () => {
   it('Validate clicking Collapse all closes all accordions', () => {
     cy.get('.bf-expand-all').click()
     cy.get('.bf-expand-all').click()
-    cy.get('.bf-expand-all').should('contain.text', 'Open all')
+    cy.get('.bf-expand-all').should('contain.text', 'Expand all')
     cy.get('.bf-usa-accordion:visible').each(accordion => {
       cy.wrap(accordion)
         .find('.bf-usa-accordion__button')

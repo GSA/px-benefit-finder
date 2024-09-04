@@ -635,7 +635,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           data-test="button"
           type="button"
         >
-          Continue
+          Next
         </button>
       </div>
     </div>

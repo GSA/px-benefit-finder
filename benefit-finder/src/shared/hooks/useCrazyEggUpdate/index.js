@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
-import { useWindowSize } from '../index'
+import { windowSize } from '../../utils'
 
 const useCrazyEggUpdate = ({ pageView, notEligibleView }) => {
-  const isDesktop = useWindowSize(window).desktop
+  const isDesktop = windowSize(window).desktop
   // handle dataLayer
   useEffect(() => {
     // crazyegg

@@ -13,6 +13,8 @@ jobs:
         with:
           submodules: false # Do not checkout submodules
           fetch-depth: 0 # Necessary to fetch all history for branch creation
+
+      - name: Make PR Branch
         run: |
           git checkout -b update-submodule-hash-${{ github.run_id }}
 

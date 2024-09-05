@@ -10,9 +10,9 @@ jobs:
     steps:
       - name: Checkout repository with submodules
         uses: actions/checkout@v4
-        with:
-          submodules: true # Checkout the submodule
-
+        # with:
+        #   submodules: true # Checkout the submodule
+        #
       - name: Fetch latest commit in the submodule
         continue-on-error: true
         run: |

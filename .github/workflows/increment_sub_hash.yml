@@ -14,6 +14,7 @@ jobs:
           submodules: true # Checkout the submodule
 
       - name: Fetch latest commit in the submodule
+        continue-on-error: true
         run: |
           cd usagov-2021/
           git fetch origin  # Fetch the latest changes

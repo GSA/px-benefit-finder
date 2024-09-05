@@ -1,0 +1,49 @@
+name: Update Submodule Hash
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository without submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: false # Do not checkout submodules initially
+          fetch-depth: 0 # Necessary to fetch all history for branch creation
+
+      - name: Make PR Branch
+        run: git checkout -b update-submodule-hash-${{ github.run_id }}
+
+      - name: Initialize and update submodule
+        run: |
+          git submodule update --init --recursive usagov-2021
+          cd usagov-2021/
+          git checkout origin/main
+
+      - name: Checkout submodule to latest main
+        run: |
+          cd usagov-2021
+          git config user.name "Hash Pipeline"
+          git config user.email "hash@pipeline.com"
+          git fetch
+          latest_commit=$(git rev-parse origin/main)
+          git checkout $latest_commit
+
+      - name: Commit changes if there are any
+        run: |
+          cd ..
+          git add usagov-2021
+          git commit -m "Updated submodule to latest commit $latest_commit" || echo "No changes to commit"
+          git push --set-upstream origin update-submodule-hash-${{ github.run_id }}
+
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          github_token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          pr_title: "Update Submodule to Latest Commit"
+          pr_body: "This pull request updates the submodule to the latest commit on main."
+          pr_label: "automated-pr"
+          destination_branch: ${{ github.ref_name }}

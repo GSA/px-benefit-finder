@@ -21,6 +21,8 @@ jobs:
       - name: Update submodule to latest commit
         run: |
           cd usagov-2021/
+          git config --global user.name "Hash Pipeline"
+          git config --global user.email "hash@pipeline.com"
           git fetch
           latest_commit=$(git rev-parse origin/main)  # Get latest commit hash of the submodule
           git config -f .gitmodules submodule.usagov-2021.branch main

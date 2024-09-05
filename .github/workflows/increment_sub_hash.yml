@@ -8,21 +8,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository with submodules
+      - name: Checkout repository without submodules
         uses: actions/checkout@v4
         with:
-          submodules: true # Checkout the submodule
+          submodules: false # Do not checkout submodules
+          fetch-depth: 0 # Necessary to fetch all history for branch creation
 
-      - name: Fetch latest commit in the submodule
-        continue-on-error: true
+      - name: Create new branch
+        run: |
+          git checkout -b update-submodule-hash-${{ github.run_id }}
+
+      - name: Update submodule to latest commit
         run: |
           cd usagov-2021/
-          git fetch origin  # Fetch the latest changes
-          git checkout origin/main  # Checkout the latest commit from submodule (replace 'main' with the submodule's branch)
+          git fetch
+          latest_commit=$(git rev-parse origin/main)  # Get latest commit hash of the submodule
+          git config -f .gitmodules submodule.usagov-2021.branch main
+          cd ..
+          git submodule update --remote usagov-2021
+          git add usagov-2021
+          git commit -m "Updated submodule to latest commit $latest_commit"
+          git push origin HEAD:update-submodule-${{ github.run_id }}
 
-      - name: Push submodule update
-        run: |
-          cd usagov-2021/
-          git push origin HEAD:main  # Push the new commit of the submodule
-        env:
-          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }} # Use GitHub token for authentication
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          github_token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          pr_title: "Update Submodule to Latest Commit"
+          pr_body: "This pull request updates the submodule to the latest commit."
+          pr_label: "automated-pr"
+          destination_branch: ${{ github.ref_name }} # Target the branch this workflow runs against
+

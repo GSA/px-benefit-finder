@@ -11,12 +11,16 @@ jobs:
       - name: Checkout repository without submodules
         uses: actions/checkout@v4
         with:
-          submodules: false # Do not checkout submodules
+          submodules: false # Do not checkout submodules initially
           fetch-depth: 0 # Necessary to fetch all history for branch creation
 
       - name: Make PR Branch
         run: |
           git checkout -b update-submodule-hash-${{ github.run_id }}
+
+      - name: Initialize and update submodule
+        run: |
+          git submodule update --init --recursive usagov-2021
 
       - name: Update submodule to latest commit
         run: |
@@ -25,9 +29,8 @@ jobs:
           git config --global user.email "hash@pipeline.com"
           git fetch
           latest_commit=$(git rev-parse origin/main)  # Get latest commit hash of the submodule
-          git config -f .gitmodules submodule.usagov-2021.branch main
+          git checkout $latest_commit
           cd ..
-          git submodule update --remote usagov-2021
           git add usagov-2021
           git commit -m "Updated submodule to latest commit $latest_commit"
           git push origin HEAD:update-submodule-${{ github.run_id }}

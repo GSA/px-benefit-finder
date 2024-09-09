@@ -672,23 +672,23 @@ describe('Calls to Google Analytics Object', function () {
           removeID(ev[0])
           cy.wait(2500)
           expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
-        })
 
-      pageObjects
-        .expandAll()
-        .click()
-        .then(() => {
-          // get all the events in our layer that matches the event value
-          const ev = [
-            ...window.dataLayer.filter(
-              x => x?.event === dataLayerValueOpenAllAccordions.event
-            ),
-          ]
-          removeID(ev[1])
-          cy.wait(2500)
-          expect(ev[1].bfData.accordionsOpen).to.equal(
-            !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
-          )
+          pageObjects
+            .expandAll()
+            .click()
+            .then(() => {
+              // get all the events in our layer that matches the event value
+              const ev = [
+                ...window.dataLayer.filter(
+                  x => x?.event === dataLayerValueOpenAllAccordions.event
+                ),
+              ]
+              removeID(ev[1])
+              cy.wait(2500)
+              expect(ev[1].bfData.accordionsOpen).to.equal(
+                !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
+              )
+            })
         })
     })
   })

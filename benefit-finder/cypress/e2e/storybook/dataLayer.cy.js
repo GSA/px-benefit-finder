@@ -660,34 +660,55 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .expandAll()
-        .click()
+        .accordionHeading()
+        .filter(':visible')
+        .should('have.length.greaterThan', 0)
         .then(() => {
-          // check last page change event
-          const ev = [
-            ...window.dataLayer.filter(
-              x => x?.event === dataLayerValueOpenAllAccordions.event
-            ),
-          ]
-          removeID(ev[0])
-          cy.wait(2500)
-          expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
-
           pageObjects
             .expandAll()
             .click()
             .then(() => {
-              // get all the events in our layer that matches the event value
+              // check last page change event
               const ev = [
                 ...window.dataLayer.filter(
                   x => x?.event === dataLayerValueOpenAllAccordions.event
                 ),
               ]
-              removeID(ev[1])
-              cy.wait(2500)
-              expect(ev[1].bfData.accordionsOpen).to.equal(
-                !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
-              )
+              // console.log(ev[0])
+              removeID(ev[0])
+              // cy.wait(2500)
+              // console.log(ev[0])
+              expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
+
+              pageObjects
+                .accordionHeading()
+                .filter(':visible')
+                .should('have.length.greaterThan', 0)
+                .then(() => {
+                  pageObjects
+                    .expandAll()
+                    .click()
+                    .then(() => {
+                      // get all the events in our layer that matches the event value
+                      const ev = [
+                        ...window.dataLayer.filter(
+                          x =>
+                            x?.event === dataLayerValueOpenAllAccordions.event
+                        ),
+                      ]
+                      removeID(ev, ev[1])
+                      // cy.wait(2500)
+                      console.log(ev[1])
+
+                      //               event: 'bf_open_all_accordions',
+                      // bfData: {
+                      //   accordionsOpen: true,
+                      // },
+                      expect(ev[1].bfData.accordionsOpen).to.equal(
+                        !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
+                      )
+                    })
+                })
             })
         })
     })

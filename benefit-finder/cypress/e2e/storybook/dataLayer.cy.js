@@ -652,7 +652,7 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it.only('clicking open all on results page has a bf_open_all_accordions event', function () {
+  it('clicking open all on results page has a bf_open_all_accordions event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
     pageObjects.accordionHeading().should('exist')
 

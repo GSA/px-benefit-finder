@@ -26,11 +26,19 @@
 
 import { pageObjects } from './pageObjects'
 
-Cypress.Commands.add('enterDateOfBirth', (month, day, year) => {
-  pageObjects.applicantDateOfBirthMonth().select(month)
-  pageObjects.applicantDateOfBirthDay().type(day)
-  pageObjects.applicantDateOfBirthYear().type(year)
-})
+Cypress.Commands.add(
+  'enterDateOfBirth',
+  (id = 'applicant_date_of_birth', month, day, year) => {
+    pageObjects
+      .applicantDateOfBirth()
+      .find('[data-testid="month"]')
+      .select(month)
+
+    pageObjects.applicantDateOfBirth().find('[data-testid="day"]').select(day)
+
+    pageObjects.applicantDateOfBirth().find('[data-testid="year"]').select(year)
+  }
+)
 
 Cypress.Commands.add('enterDateOfDeath', (month, day, year) => {
   pageObjects.applicantDateOfDeathMonth().select(month)

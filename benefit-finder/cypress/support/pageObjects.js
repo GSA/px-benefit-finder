@@ -5,42 +5,6 @@ class PageObjects {
     return cy.get('.usa-button')
   }
 
-  applicantDateOfBirthMonth() {
-    return cy.get('[data-testid="applicant_date_of_birth_0_month"]')
-  }
-
-  applicantDateOfBirthDay() {
-    return cy.get('[data-testid="applicant_date_of_birth_0_day"]')
-  }
-
-  applicantDateOfBirthYear() {
-    return cy.get('[data-testid="applicant_date_of_birth_0_year"]')
-  }
-
-  applicantDateOfDeathMonth() {
-    return cy.get('[data-testid="deceased_date_of_death_0_month"]')
-  }
-
-  applicantDateOfDeathDay() {
-    return cy.get('[data-testid="deceased_date_of_death_0_day"]')
-  }
-
-  applicantDateOfDeathYear() {
-    return cy.get('[data-testid="deceased_date_of_death_0_year"]')
-  }
-
-  applicantDateOfFuneralMonth() {
-    return cy.get('[data-testid="deceased_date_of_funeral_0_month"]')
-  }
-
-  applicantDateOfFuneralDay() {
-    return cy.get('[data-testid="deceased_date_of_funeral_0_day"]')
-  }
-
-  applicantDateOfFuneralYear() {
-    return cy.get('[data-testid="deceased_date_of_funeral_0_year"]')
-  }
-
   benefitSectionAlert() {
     return cy.get('[data-testid="alert"]')
   }
@@ -57,13 +21,13 @@ class PageObjects {
     return cy.get('[data-testid="bf-errors-list-item"]')
   }
 
-  applicantRelationshipToDeceased() {
-    return cy.get('[data-testid="applicant_relationship_to_the_deceased_0"]')
-  }
+  // benefitMemorableDate() {
+  //   return cy.get('[data-testid="bf-usa-memorable-date"]')
+  // }
 
-  applicantMaritalStatus() {
-    return cy.get('[data-testid="applicant_marital_status_0"]')
-  }
+  // benefitMemorableDateById(id) {
+  //   return this.benefitMemorableDate().filter(`#${id}`)
+  // }
 
   benefitSectionFieldset() {
     return cy.get('[data-testid="fieldset"]')
@@ -73,6 +37,7 @@ class PageObjects {
     return this.benefitSectionFieldset().filter(`#${id}`)
   }
 
+  // ??
   radioButtonById(id) {
     return this.benefitSectionFieldsetById(id).find('[data-testid="radio"]')
   }
@@ -130,6 +95,70 @@ class PageObjects {
     return cy.get('[data-testid="bf-step-back-button"]')
   }
 
+  zeroBenefitsViewHeading() {
+    return cy.get('[data-testid="zero-benefits-view-heading"]')
+  }
+
+  seeAllBenefitsButton() {
+    return cy.get('[data-testid="zero-benefits-view-cta-button"]')
+  }
+
+  /// could be handled by benefitSectionFieldsetById
+
+  applicantDateOfBirth() {
+    return this.benefitSectionFieldsetById('applicant_date_of_birth')
+  }
+
+  applicantDateOfDeath() {
+    return this.benefitSectionFieldsetById('applicant_date_of_death')
+  }
+
+  // applicantDateOfBirthMonth() {
+  //   return this.benefitSectionFieldsetById('applicant_date_of_birth')
+  //     .find('[data-testid="month"]')
+  //     .select(month)
+  // }
+
+  // applicantDateOfBirthDay() {
+  //   return cy.get('[data-testid="applicant_date_of_birth_0_day"]')
+  // }
+
+  // applicantDateOfBirthYear() {
+  //   return cy.get('[data-testid="applicant_date_of_birth_0_year"]')
+  // }
+
+  applicantDateOfDeathMonth() {
+    return cy.get('[data-testid="deceased_date_of_death_0_month"]')
+  }
+
+  applicantDateOfDeathDay() {
+    return cy.get('[data-testid="deceased_date_of_death_0_day"]')
+  }
+
+  applicantDateOfDeathYear() {
+    return cy.get('[data-testid="deceased_date_of_death_0_year"]')
+  }
+
+  applicantDateOfFuneralMonth() {
+    return cy.get('[data-testid="deceased_date_of_funeral_0_month"]')
+  }
+
+  applicantDateOfFuneralDay() {
+    return cy.get('[data-testid="deceased_date_of_funeral_0_day"]')
+  }
+
+  applicantDateOfFuneralYear() {
+    return cy.get('[data-testid="deceased_date_of_funeral_0_year"]')
+  }
+
+  applicantRelationshipToDeceased() {
+    return cy.get('[data-testid="applicant_relationship_to_the_deceased_0"]')
+  }
+
+  applicantMaritalStatus() {
+    return cy.get('[data-testid="applicant_marital_status_0"]')
+  }
+
   dateOfBirthError() {
     return cy.get('[data-testid="error-description-applicant_date_of_birth"]')
   }
@@ -156,14 +185,6 @@ class PageObjects {
     return cy.get(
       '[data-testid="error-description-applicant_relationship_to_the_deceased"]'
     )
-  }
-
-  zeroBenefitsViewHeading() {
-    return cy.get('[data-testid="zero-benefits-view-heading"]')
-  }
-
-  seeAllBenefitsButton() {
-    return cy.get('[data-testid="zero-benefits-view-cta-button"]')
   }
 }
 

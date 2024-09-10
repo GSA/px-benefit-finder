@@ -21,9 +21,11 @@ describe('Validate state of aria-invalid attribute', () => {
 
   it('Should have default state of "false" for select, input, and radio', () => {
     pageObjects
-      .applicantDateOfBirthMonth()
+      .applicantDateOfBirthDay()
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
+
+    // pageObjects.applicantDateOfBirth().find('[data-testid="day"]').select(month)
 
     pageObjects
       .applicantDateOfBirthDay()

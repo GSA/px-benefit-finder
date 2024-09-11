@@ -28,7 +28,7 @@ jobs:
           cd usagov-2021/
           git config --global user.name "Hash Pipeline"
           git config --global user.email "hash@pipeline.com"
-          git fetch
+          git fetch origin
           latest_commit=$(git rev-parse origin/main)  # Get latest commit hash of the submodule
           git checkout $latest_commit
           cd ..

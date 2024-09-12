@@ -1,5 +1,5 @@
 import Date from './index.jsx'
-import * as en from '../../locales/en/en.json'
+import * as en from '@locales/en/en.json'
 
 export default {
   component: Date,

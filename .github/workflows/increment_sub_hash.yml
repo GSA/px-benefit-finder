@@ -53,4 +53,4 @@ jobs:
           --assignee scottqueen-bixal \
           --reviewer scottqueen-bixal \
           --label "stale" \
-          --project "PX Benefits Finder"
+          --project "PX Benefit Finder"

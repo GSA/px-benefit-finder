@@ -52,5 +52,5 @@ jobs:
           --repo ${{ github.repository }} \
           --assignee scottqueen-bixal \
           --reviewer scottqueen-bixal \
-          --label "stale"
+          --label "stale" \
           --project "PX Benefits Finder"

@@ -33,7 +33,7 @@ jobs:
           git checkout $latest_commit
           cd ..
           git add usagov-2021
-          git commit -m "Updated submodule to latest commit $latest_commit"
+          git commit --allow-empty -m "Updated submodule to latest commit $latest_commit"
           git push origin HEAD:update-submodule-hash-${{ github.run_id }}
 
       - name: Create Pull Request

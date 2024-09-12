@@ -1,4 +1,11 @@
-export { default as useCrazyEggUpdate } from './useCrazyEggUpdate'
-export { default as useHandleClassName } from './useHandleClassName'
-export { default as useHandleUnload } from './useHandleUnload'
-export { default as useResetElement } from './useResetElement'
+import useCrazyEggUpdate from './useCrazyEggUpdate'
+import useHandleClassName from './useHandleClassName'
+import useHandleUnload from './useHandleUnload'
+import useResetElement from './useResetElement'
+
+export {
+  useCrazyEggUpdate,
+  useHandleClassName,
+  useHandleUnload,
+  useResetElement,
+}

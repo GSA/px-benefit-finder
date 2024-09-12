@@ -46,8 +46,11 @@ jobs:
         run: |
           gh pr create \
           --title "Automated PR from update-submodule-hash-${{ github.run_id }} to ${{ github.ref_name }}" \
-          --body "This PR was automatically created by GitHub Actions." \
+          --body "This PR is the update the hash on the usagov-2021 submodule on branch ${{ github.ref_name }}." \
           --base ${{ github.ref_name }} \
           --head update-submodule-hash-${{ github.run_id }} \
           --repo ${{ github.repository }} \
-          --assignee scottqueen-bixal
+          --assignee scottqueen-bixal \
+          --reviewer scottqueen-bixal \
+          --label "stale"
+          --project "PX Benefits Finder"

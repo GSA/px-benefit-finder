@@ -43,20 +43,22 @@ const server = test ? testServer : devServer
 
 const INPUT_DIR = './src'
 
+const aliasConfig = {
+  '@': path.resolve(INPUT_DIR),
+  '@api': path.resolve(INPUT_DIR, './shared/api'),
+  '@components': path.resolve(INPUT_DIR, './shared/components'),
+  '@hooks': path.resolve(INPUT_DIR, './shared/hooks'),
+  '@locales': path.resolve(INPUT_DIR, './shared/locales'),
+  '@styles': path.resolve(INPUT_DIR, './shared/styles'),
+  '@utils': path.resolve(INPUT_DIR, './shared/utils'),
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
   plugins: [react(), eslint(), copy(copyConfig)],
   resolve: {
-    alias: {
-      '@': path.resolve(INPUT_DIR),
-      '@api': path.resolve(INPUT_DIR, './shared/api'),
-      '@components': path.resolve(INPUT_DIR, './shared/components'),
-      '@hooks': path.resolve(INPUT_DIR, './shared/hooks'),
-      '@locales': path.resolve(INPUT_DIR, './shared/locales'),
-      '@styles': path.resolve(INPUT_DIR, './shared/styles'),
-      '@utils': path.resolve(INPUT_DIR, './shared/utils'),
-    },
+    alias: aliasConfig,
   },
   optimizeDeps: {
     exclude: ['@storybook/blocks'],

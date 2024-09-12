@@ -18,13 +18,6 @@ jobs:
       - name: Set up GitHub CLI
         run: sudo apt-get install gh -y
 
-      # Authenticate GitHub CLI
-      - name: Authenticate GitHub CLI
-        env:
-          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
-        run: |
-          gh auth login --with-token <<< $GITHUB_TOKEN
-
       - name: Make PR Branch
         run: |
           git checkout -b update-submodule-hash-${{ github.run_id }}

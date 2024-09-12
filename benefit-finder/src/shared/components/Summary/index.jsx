@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Heading } from '../index'
+import { Heading } from '@components'
 import './_index.scss'
 
 const Summary = ({ heading, listItems, cta }) => {

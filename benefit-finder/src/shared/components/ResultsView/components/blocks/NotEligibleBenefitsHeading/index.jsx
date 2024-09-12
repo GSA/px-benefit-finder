@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Summary, Heading } from '../../../../index'
+import { Summary, Heading } from '@components'
 import { createMarkup } from '../../../../../utils'
 import './_index.scss'
 

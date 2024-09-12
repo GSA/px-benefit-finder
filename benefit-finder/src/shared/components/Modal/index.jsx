@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
-import { Button, ObfuscatedLink, Icon, Heading } from '../index'
+import { Button, ObfuscatedLink, Icon, Heading } from '@components'
 import { scrollLock, dataLayerUtils } from '../../utils'
 import { useCrazyEggUpdate } from '../../hooks'
 

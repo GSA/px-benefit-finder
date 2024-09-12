@@ -23,7 +23,7 @@ import {
   Select,
   StepIndicator,
   Modal,
-} from '../index'
+} from '@components'
 import './_index.scss'
 
 /**

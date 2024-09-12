@@ -9,7 +9,7 @@ import {
   NoticesList,
   ProcessList,
   TimeIndicator,
-} from '../index'
+} from '@components'
 
 import './_index.scss'
 

@@ -9,7 +9,7 @@ import {
   VerifySelectionsView,
   Form,
   Alert,
-} from '../shared/components'
+} from '@components'
 
 import './_index.scss'
 

@@ -1,4 +1,4 @@
-import { Hint, Legend } from '../index'
+import { Hint, Legend } from '@components'
 import PropTypes from 'prop-types'
 import { useHandleClassName } from '../../hooks'
 

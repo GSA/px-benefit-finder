@@ -7,7 +7,7 @@ import {
   Heading,
   KeyElegibilityCrieriaList,
   ObfuscatedLink,
-} from '../index'
+} from '@components'
 import './_index.scss'
 
 /**

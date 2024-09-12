@@ -1,5 +1,5 @@
 import { useHandleClassName } from '../../hooks'
-import { Icon } from '../index'
+import { Icon } from '@components'
 import PropTypes from 'prop-types'
 import './_index.scss'
 

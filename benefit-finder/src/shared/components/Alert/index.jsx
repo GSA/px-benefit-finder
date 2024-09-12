@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Heading } from '../index'
+import { Heading } from '@components'
 import { useHandleClassName } from '../../hooks'
 import { dataLayerUtils } from '../../utils'
 import './_index.scss'

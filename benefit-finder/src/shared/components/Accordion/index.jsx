@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import accordion from '@uswds/uswds/js/usa-accordion'
-import { Icon } from '../index'
+import { Icon } from '@components'
 import { dataLayerUtils } from '../../utils'
 import PropTypes from 'prop-types'
 import './_index.scss'

@@ -8,7 +8,7 @@ import {
   Chevron,
   ShareTrigger,
   RelativeBenefitList,
-} from '../../../index'
+} from '@components'
 import {
   ZeroBenefitsHeading,
   EligibleBenefitsHeading,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { parseDate, dataLayerUtils } from '../../utils'
 import { useCrazyEggUpdate } from '../../hooks'
 import * as apiCalls from '../../api/apiCalls'
-import { Heading, Button } from '../index'
+import { Heading, Button } from '@components'
 
 import './_index.scss'
 

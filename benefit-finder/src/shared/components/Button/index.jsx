@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useHandleClassName } from '../../hooks'
-import { Icon } from '../index'
+import { Icon } from '@components'
 import Colors from '../../styles/colors/_index.js'
 import PropTypes from 'prop-types'
 import './_index.scss'

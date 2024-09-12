@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { createMarkup } from '../../utils'
-import { Icon } from '../index'
+import { Icon } from '@components'
 
 import './_index.scss'
 

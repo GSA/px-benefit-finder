@@ -15,6 +15,7 @@ const customStyles = {
     right: 0,
     bottom: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 999,
   },
   content: {
     top: '50%',
@@ -26,7 +27,7 @@ const customStyles = {
     width: '80%',
     borderRadius: '8px',
     borderColor: '#005ea2',
-    padding: '4rem 1.5rem',
+    padding: '5% 10%',
     maxWidth: '32.5rem',
   },
 }

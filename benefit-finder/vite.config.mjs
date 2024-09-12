@@ -1,3 +1,4 @@
+import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
@@ -40,10 +41,23 @@ const poscssConfig = {
 
 const server = test ? testServer : devServer
 
+const INPUT_DIR = './src'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
   plugins: [react(), eslint(), copy(copyConfig)],
+  resolve: {
+    alias: {
+      '@': path.resolve(INPUT_DIR),
+      '@api': path.resolve(INPUT_DIR, './shared/api'),
+      '@components': path.resolve(INPUT_DIR, './shared/components'),
+      '@hooks': path.resolve(INPUT_DIR, './shared/hooks'),
+      '@locales': path.resolve(INPUT_DIR, './shared/locales'),
+      '@styles': path.resolve(INPUT_DIR, './shared/styles'),
+      '@utils': path.resolve(INPUT_DIR, './shared/utils'),
+    },
+  },
   optimizeDeps: {
     exclude: ['@storybook/blocks'],
   },

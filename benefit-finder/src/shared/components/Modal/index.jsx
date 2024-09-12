@@ -115,27 +115,33 @@ const Modal = ({
 
   // handle dataLayer
   useEffect(() => {
-    modalOpen === true &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: modal.event,
-        bfData: {
-          pageView: modal.bfData.pageView,
-          viewTitle: `${dataLayerValue.viewTitle} modal`,
-        },
-      })
-    // handle dataLayer
-    modalOpen === true &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: errors.event,
-        bfData: {
-          errors: '',
-          errorCount: {
-            number: 0,
-            string: `0`,
+    const handleModalData = async () => {
+      modalOpen === true &&
+        dataLayerUtils.dataLayerPush(window, {
+          event: modal.event,
+          bfData: {
+            pageView: modal.bfData.pageView,
+            viewTitle: `${dataLayerValue.viewTitle} modal`,
           },
-          formSuccess: true,
-        },
-      })
+        })
+    }
+
+    // async so we can handle duplicates if needed
+    handleModalData().then(() => {
+      // handle dataLayer
+      modalOpen === true &&
+        dataLayerUtils.dataLayerPush(window, {
+          event: errors.event,
+          bfData: {
+            errors: '',
+            errorCount: {
+              number: 0,
+              string: `0`,
+            },
+            formSuccess: true,
+          },
+        })
+    })
   }, [])
 
   /**

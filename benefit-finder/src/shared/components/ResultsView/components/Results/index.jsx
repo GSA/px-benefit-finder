@@ -14,8 +14,8 @@ import {
   EligibleBenefitsHeading,
   NotEligibleBenefitsHeading,
 } from '../blocks/index'
-import * as apiCalls from '../../../../api/apiCalls'
-import { createMarkup } from '../../../../utils'
+import * as apiCalls from '@api/apiCalls'
+import { createMarkup } from '@utils'
 
 import './_index.scss'
 

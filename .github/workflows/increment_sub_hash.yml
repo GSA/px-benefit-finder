@@ -18,16 +18,13 @@ jobs:
       - name: Set up GitHub CLI
         run: sudo apt-get install gh -y
 
-      - name: Make PR Branch
-        run: |
-          git checkout -b update-submodule-hash-${{ github.run_id }}
-
       - name: Initialize and update submodule
         continue-on-error: true # This step won't fail the workflow if an error occurs
         run: |
           git submodule update --init --recursive usagov-2021
 
-      - name: Update submodule to latest commit
+      - name: Update submodule to latest commit and capture latest_commit
+        id: update-submodule
         run: |
           cd usagov-2021/
           git config --global user.name "Hash Pipeline"
@@ -38,17 +35,25 @@ jobs:
           cd ..
           git add usagov-2021
           git commit --allow-empty -m "Updated submodule to latest commit $latest_commit"
-          git push origin HEAD:update-submodule-hash-$(echo ${{ github.sha }} | cut -c1-7)
+          echo "::set-output name=latest_commit::$latest_commit"  # Set the output variable
+
+      - name: Make PR Branch using submodule's SHA
+        run: |
+          git checkout -b update-submodule-hash-$(echo ${{ steps.update-submodule.outputs.latest_commit }} | cut -c1-7)
+
+      - name: Push the updated branch
+        run: |
+          git push origin HEAD:update-submodule-hash-$(echo ${{ steps.update-submodule.outputs.latest_commit }} | cut -c1-7)
 
       - name: Create Pull Request
         env:
           GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
         run: |
           gh pr create \
-          --title "Automated PR from update-submodule-hash-${{ github.run_id }} to ${{ github.ref_name }}" \
-          --body "This PR is to update the hash on the usagov-2021 submodule on branch ${{ github.ref_name }}." \
+          --title "Automated PR from update-submodule-hash-$(echo ${{ steps.update-submodule.outputs.latest_commit }} | cut -c1-7) to ${{ github.ref_name }}" \
+          --body "This PR is to update the hash on the usagov-2021 submodule to ${{ steps.update-submodule.outputs.latest_commit }} on branch ${{ github.ref_name }}." \
           --base ${{ github.ref_name }} \
-          --head update-submodule-hash-$(echo ${{ github.sha }} | cut -c1-7)\
+          --head "update-submodule-hash-$(echo ${{ steps.update-submodule.outputs.latest_commit }} | cut -c1-7)" \
           --repo ${{ github.repository }} \
           --assignee scottqueen-bixal \
           --reviewer scottqueen-bixal \

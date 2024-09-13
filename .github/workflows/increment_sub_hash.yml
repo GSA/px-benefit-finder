@@ -48,7 +48,7 @@ jobs:
           --title "Automated PR from update-submodule-hash-${{ github.run_id }} to ${{ github.ref_name }}" \
           --body "This PR is to update the hash on the usagov-2021 submodule on branch ${{ github.ref_name }}." \
           --base ${{ github.ref_name }} \
-          --head update-submodule-hash-${{ github.run_id }} \
+          --head update-submodule-hash-$(echo ${{ github.sha }} | cut -c1-7)\
           --repo ${{ github.repository }} \
           --assignee scottqueen-bixal \
           --reviewer scottqueen-bixal \

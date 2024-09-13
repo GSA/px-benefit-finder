@@ -38,7 +38,7 @@ jobs:
           cd ..
           git add usagov-2021
           git commit --allow-empty -m "Updated submodule to latest commit $latest_commit"
-          git push origin HEAD:update-submodule-hash-${{ github.run_id }}
+          git push origin HEAD:update-submodule-hash-$(echo ${{ github.sha }} | cut -c1-7)
 
       - name: Create Pull Request
         env:
@@ -46,11 +46,11 @@ jobs:
         run: |
           gh pr create \
           --title "Automated PR from update-submodule-hash-${{ github.run_id }} to ${{ github.ref_name }}" \
-          --body "This PR is the update the hash on the usagov-2021 submodule on branch ${{ github.ref_name }}." \
+          --body "This PR is to update the hash on the usagov-2021 submodule on branch ${{ github.ref_name }}." \
           --base ${{ github.ref_name }} \
           --head update-submodule-hash-${{ github.run_id }} \
           --repo ${{ github.repository }} \
           --assignee scottqueen-bixal \
           --reviewer scottqueen-bixal \
-          --label "stale" \
+          --label "stale" "maintenance" \
           --project "PX Benefit Finder"

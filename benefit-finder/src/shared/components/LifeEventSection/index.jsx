@@ -6,13 +6,9 @@ import {
   dataLayerUtils,
   errorHandling,
   handleSurvey,
-} from '../../utils'
-import {
-  useHandleUnload,
-  useResetElement,
-  useCrazyEggUpdate,
-} from '../../hooks'
-import * as apiCalls from '../../api/apiCalls'
+} from '@utils'
+import { useHandleUnload, useResetElement, useCrazyEggUpdate } from '@hooks'
+import * as apiCalls from '@api/apiCalls'
 import {
   Alert,
   Button,
@@ -23,7 +19,7 @@ import {
   Select,
   StepIndicator,
   Modal,
-} from '../index'
+} from '@components'
 import './_index.scss'
 
 /**

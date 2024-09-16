@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { windowSize } from '../../utils'
+import { windowSize } from '@utils'
 
 const useCrazyEggUpdate = ({ pageView, notEligibleView }) => {
   const isDesktop = windowSize(window).desktop

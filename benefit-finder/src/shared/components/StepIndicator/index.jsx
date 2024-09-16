@@ -1,4 +1,4 @@
-import { StepBackButton } from '../index'
+import { StepBackButton } from '@components'
 import PropTypes from 'prop-types'
 
 import './_index.scss'

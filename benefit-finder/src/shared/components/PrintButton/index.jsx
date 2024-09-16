@@ -1,4 +1,4 @@
-import { Button } from '../index'
+import { Button } from '@components'
 
 /**
  * a functional component that renders a button with window print functionality

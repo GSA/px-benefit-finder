@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { dataLayerUtils } from '../../utils'
-import { useResetElement, useCrazyEggUpdate } from '../../hooks'
+import { dataLayerUtils } from '@utils'
+import { useResetElement, useCrazyEggUpdate } from '@hooks'
 import PropTypes from 'prop-types'
 import {
   Button,
@@ -9,7 +9,7 @@ import {
   NoticesList,
   ProcessList,
   TimeIndicator,
-} from '../index'
+} from '@components'
 
 import './_index.scss'
 

@@ -1,7 +1,7 @@
 import { useState, createContext, useEffect } from 'react'
 import { version } from '../../package.json'
-import { useResetElement } from '../shared/hooks'
-import * as apiCalls from '../shared/api/apiCalls'
+import { useResetElement } from '@hooks'
+import * as apiCalls from '@api/apiCalls'
 import {
   Intro,
   LifeEventSection,
@@ -9,13 +9,13 @@ import {
   VerifySelectionsView,
   Form,
   Alert,
-} from '../shared/components'
+} from '@components'
 
 import './_index.scss'
 
 // data and ui content
-import * as en from '../shared/locales/en/en.json'
-import * as es from '../shared/locales/es/es.json'
+import * as en from '@locales/en/en.json'
+import * as es from '@locales/es/es.json'
 
 /**
  * a functional component that renders our application.

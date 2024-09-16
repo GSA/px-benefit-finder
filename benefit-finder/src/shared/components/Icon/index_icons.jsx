@@ -1,4 +1,4 @@
-import Colors from '../../styles/colors/_index.js'
+import Colors from '@styles/colors/_index.js'
 
 // export svg components in alpha order
 

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { useResetElement, useCrazyEggUpdate } from '../../hooks'
-import * as apiCalls from '../../api/apiCalls'
+import { useResetElement, useCrazyEggUpdate } from '@hooks'
+import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
-import { dataLayerUtils, handleSurvey } from '../../utils'
+import { dataLayerUtils, handleSurvey } from '@utils'
 // import './_index.scss'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits

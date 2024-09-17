@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.b_levent_elg_criteria
   module:
     - paragraphs
+    - text
 id: paragraph.b_levent_elg_criteria.default
 targetEntityType: paragraph
 bundle: b_levent_elg_criteria
@@ -19,7 +20,7 @@ mode: default
 content:
   field_b_children:
     type: paragraphs
-    weight: 6
+    weight: 5
     region: content
     settings:
       title: Paragraph
@@ -51,11 +52,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_b_hint:
-    type: string_textfield
+    type: text_textarea
     weight: 3
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_b_legend:

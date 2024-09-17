@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.b_levent_elg_criteria
   module:
     - entity_reference_revisions
+    - text
 id: paragraph.b_levent_elg_criteria.default
 targetEntityType: paragraph
 bundle: b_levent_elg_criteria
@@ -24,7 +25,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 4
     region: content
   field_b_criteria_key:
     type: entity_reference_label
@@ -40,13 +41,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 5
     region: content
   field_b_hint:
-    type: string
+    type: text_default
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content

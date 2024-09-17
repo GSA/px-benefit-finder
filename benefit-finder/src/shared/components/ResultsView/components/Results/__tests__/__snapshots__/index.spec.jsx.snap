@@ -21,7 +21,7 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
       >
         <div>
           <p>
-            According to your answers you are not eligible for these benefits./p&gt;
+            According to your answers you are not eligible for these benefits.
           </p>
         </div>
       </div>

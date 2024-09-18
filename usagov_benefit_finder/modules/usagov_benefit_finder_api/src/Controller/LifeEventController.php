@@ -320,6 +320,7 @@ class LifeEventController extends ControllerBase {
       "benefits" => $benefits,
     ];
     $json = json_encode($result, JSON_PRETTY_PRINT);
+    $json = htmlspecialchars($json);
 
     if ($this->displayData) {
       print_r("<p>JSON Data<pre>");

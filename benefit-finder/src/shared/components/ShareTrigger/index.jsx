@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { buildURIParameter } from '../../utils'
+import { buildURIParameter } from '@utils'
 
 /**
  * a functional component that renders a button with copy-to-cipboard functionality

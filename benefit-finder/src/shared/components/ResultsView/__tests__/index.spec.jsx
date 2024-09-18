@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import ResultsView from '../index.jsx'
-import * as apiCalls from '../../../api/apiCalls.js'
-import * as en from '../../../locales/en/en.json'
-import content from '../../../api/mock-data/current.js'
+import * as apiCalls from '@api/apiCalls.js'
+import * as en from '@locales/en/en.json'
+import content from '@api/mock-data/current.js'
 const { data } = JSON.parse(content)
 
 // get current data - subtract two years

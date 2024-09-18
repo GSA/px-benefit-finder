@@ -1,6 +1,6 @@
-import { useResetElement } from '../../hooks'
+import { useResetElement } from '@hooks'
 import PropTypes from 'prop-types'
-import { Button } from '../index'
+import { Button } from '@components'
 
 import './_index.scss'
 

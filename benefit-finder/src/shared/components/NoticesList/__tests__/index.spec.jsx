@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import NoticesList from '../index.jsx'
-import * as en from '../../../locales/en/en.json'
+import * as en from '@locales/en/en.json'
 
 describe('NoticesList', () => {
   const t = en

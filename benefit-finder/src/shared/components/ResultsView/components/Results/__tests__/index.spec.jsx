@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import Results from '../index.jsx'
-import * as en from '../../../../../locales/en/en.json'
+import * as en from '@locales/en/en.json'
 
 const { resultsView } = en
 

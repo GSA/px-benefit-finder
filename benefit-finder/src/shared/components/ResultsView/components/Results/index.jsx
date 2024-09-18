@@ -8,14 +8,14 @@ import {
   Chevron,
   ShareTrigger,
   RelativeBenefitList,
-} from '../../../index'
+} from '@components'
 import {
   ZeroBenefitsHeading,
   EligibleBenefitsHeading,
   NotEligibleBenefitsHeading,
 } from '../blocks/index'
-import * as apiCalls from '../../../../api/apiCalls'
-import { createMarkup } from '../../../../utils'
+import * as apiCalls from '@api/apiCalls'
+import { createMarkup } from '@utils'
 
 import './_index.scss'
 

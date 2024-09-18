@@ -6,13 +6,9 @@ import {
   dataLayerUtils,
   errorHandling,
   handleSurvey,
-} from '../../utils'
-import {
-  useHandleUnload,
-  useResetElement,
-  useCrazyEggUpdate,
-} from '../../hooks'
-import * as apiCalls from '../../api/apiCalls'
+} from '@utils'
+import { useHandleUnload, useResetElement, useCrazyEggUpdate } from '@hooks'
+import * as apiCalls from '@api/apiCalls'
 import {
   Alert,
   Button,
@@ -23,7 +19,7 @@ import {
   Select,
   StepIndicator,
   Modal,
-} from '../index'
+} from '@components'
 import './_index.scss'
 
 /**
@@ -55,7 +51,9 @@ const LifeEventSection = ({
   const [currentData, setCurrentData] = useState(() => data && data[step - 1])
   const [requiredFieldsets, setRequiredFieldsets] = useState([])
   const [hasError, setHasError] = useState([])
-  const [hasData, setHasData] = useState(false)
+  const [hasData, setHasData] = useState(
+    () => apiCalls.GET.SelectedValueAll(data).length > 0
+  )
   const [submissionCount, setSubmissionCount] = useState(0)
   const { lifeEventSection } = dataLayerUtils.dataLayerStructure
   useHandleUnload(hasData) // alert the user if they try to go back in browser
@@ -189,8 +187,8 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleChanged = (event, criteriaKey) => {
-    event.target.value.length > 0 && setHasData(true)
     window.history.replaceState({}, '', window.location.pathname)
+
     apiCalls.PUT.Data(
       criteriaKey,
       currentData,
@@ -199,6 +197,7 @@ const LifeEventSection = ({
     )
     hasError.length > 0 &&
       errorHandling.handleCheckForRequiredValues(requiredFieldsets, setHasError)
+    setHasData(apiCalls.GET.SelectedValueAll(data).length > 0)
   }
 
   /**
@@ -209,7 +208,6 @@ const LifeEventSection = ({
    */
   const handleDateChanged = (event, criteriaKey) => {
     // if event target is empty check if all values in date are empty
-    event.target.value.length > 0 && setHasData(true)
     window.history.replaceState({}, '', window.location.pathname)
 
     async function validUpdate() {
@@ -238,6 +236,7 @@ const LifeEventSection = ({
         hasError,
         apiCalls.GET.SelectedValueAll(data)
       )
+      setHasData(apiCalls.GET.SelectedValueAll(data).length > 0)
     })
   }
 

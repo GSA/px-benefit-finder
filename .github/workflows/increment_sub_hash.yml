@@ -1,7 +1,7 @@
 name: Update Submodule Hash
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   update-submodule:
@@ -14,36 +14,49 @@ jobs:
           submodules: false # Do not checkout submodules initially
           fetch-depth: 0 # Necessary to fetch all history for branch creation
 
-      - name: Make PR Branch
-        run: git checkout -b update-submodule-hash-${{ github.run_id }}
+      # Set up GitHub CLI
+      - name: Set up GitHub CLI
+        run: sudo apt-get install gh -y
 
       - name: Initialize and update submodule
+        continue-on-error: true # This step won't fail the workflow if an error occurs
         run: |
           git submodule update --init --recursive usagov-2021
+
+      - name: Update submodule to latest commit and capture latest_commit
+        id: update-submodule
+        run: |
           cd usagov-2021/
-          git checkout origin/main
-
-      - name: Checkout submodule to latest main
-        run: |
-          cd usagov-2021
-          git config user.name "Hash Pipeline"
-          git config user.email "hash@pipeline.com"
-          git fetch
-          latest_commit=$(git rev-parse origin/main)
+          git config --global user.name "Hash Pipeline"
+          git config --global user.email "hash@pipeline.com"
+          git fetch origin
+          latest_commit=$(git rev-parse origin/prod)  # Get latest commit hash of the submodule
           git checkout $latest_commit
-
-      - name: Commit changes if there are any
-        run: |
           cd ..
           git add usagov-2021
-          git commit -m "Updated submodule to latest commit $latest_commit" || echo "No changes to commit"
-          git push --set-upstream origin update-submodule-hash-${{ github.run_id }}
+          git commit --allow-empty -m "Updated submodule to latest commit $latest_commit"
+          echo "::set-output name=latest_commit::$latest_commit"  # Set the output variable
+
+      - name: Make PR Branch using submodule's SHA
+        run: |
+          git checkout -b update-submodule-hash-$(echo ${{ steps.update-submodule.outputs.latest_commit }} | cut -c1-7)
+
+      - name: Push the updated branch
+        run: |
+          git push origin HEAD:update-submodule-hash-$(echo ${{ steps.update-submodule.outputs.latest_commit }} | cut -c1-7)
 
       - name: Create Pull Request
-        uses: repo-sync/pull-request@v2
-        with:
-          github_token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          pr_title: "Update Submodule to Latest Commit"
-          pr_body: "This pull request updates the submodule to the latest commit on main."
-          pr_label: "automated-pr"
-          destination_branch: ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        run: |
+          gh pr create \
+          --title "Automated PR from update-submodule-hash-$(echo ${{ steps.update-submodule.outputs.latest_commit }} | cut -c1-7) to ${{ github.ref_name }}" \
+          --body "This PR is to update the hash on the usagov-2021 submodule to ${{ steps.update-submodule.outputs.latest_commit }} on branch ${{ github.ref_name }}." \
+          --base ${{ github.ref_name }} \
+          --head "update-submodule-hash-$(echo ${{ steps.update-submodule.outputs.latest_commit }} | cut -c1-7)" \
+          --repo ${{ github.repository }} \
+          --assignee scottqueen-bixal \
+          --reviewer scottqueen-bixal \
+          --label "stale" \
+          --label "maintenance" \
+          --project "PX Benefit Finder"

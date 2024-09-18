@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import Fieldset from '../index.jsx'
-import * as en from '../../../locales/en/en.json'
+import * as en from '@locales/en/en.json'
 
 const fieldSetId = 'applicant_date_of_birth_0'
 

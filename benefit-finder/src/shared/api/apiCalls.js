@@ -424,7 +424,26 @@ export async function DataDate(
         } else {
           inputValues[0].value = eventTargetValue
         }
-        inputValues[0].selected = true
+
+        const dateHasValues = obj => {
+          for (const key in obj) {
+            if (
+              obj[key] !== null &&
+              obj[key] !== undefined &&
+              obj[key] !== ''
+            ) {
+              return true
+            }
+          }
+          return false
+        }
+
+        if (dateHasValues(inputValues[0].value) === false) {
+          inputValues[0].selected = false
+        } else {
+          inputValues[0].selected = true
+        }
+
         return setCurrentData(newData)
       }
     })

@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import BenefitAccordionGroup from '../index.jsx'
-import content from '../../../api/mock-data/current.js'
-import * as en from '../../../locales/en/en.json'
-import * as es from '../../../locales/es/es.json'
+import content from '@api/mock-data/current.js'
+import * as en from '@locales/en/en.json'
+import * as es from '@locales/es/es.json'
 
 const { data } = JSON.parse(content)
 const { benefits } = data

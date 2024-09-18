@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import Intro from '../index.jsx'
-import * as en from '../../../locales/en/en.json'
-import content from '../../../api/mock-data/current.js'
+import * as en from '@locales/en/en.json'
+import content from '@api/mock-data/current.js'
 
 const t = en
 const { data } = JSON.parse(content)

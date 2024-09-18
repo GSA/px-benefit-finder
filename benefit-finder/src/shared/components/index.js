@@ -1,38 +1,77 @@
-// order exports in alphabetical list
-export { default as Alert } from './Alert'
-export { default as Accordion } from './Accordion'
-export { default as BenefitAccordionGroup } from './BenefitAccordionGroup'
-export { default as Button } from './Button'
-export { default as ButtonGroup } from './ButtonGroup'
-export { default as Card } from './Card'
-export { default as Chevron } from './Chevron'
-export { default as Date } from './Date'
-export { default as EmailTrigger } from './EmailTrigger'
-export { default as Fieldset } from './Fieldset'
-export { default as Form } from './Form'
-export { default as Heading } from './Heading'
-export { default as Hint } from './Hint'
-export { default as Icon } from './Icon'
-export { default as Intro } from './Intro'
-export { default as KeyElegibilityCrieriaList } from './KeyElegibilityCrieriaList'
-export { default as Legend } from './Legend'
-export { default as Label } from './Label'
-export { default as LifeEventSection } from './LifeEventSection'
-export { default as Modal } from './Modal'
-export { default as NoticesList } from './NoticesList'
-export { default as ObfuscatedLink } from './ObfuscatedLink'
-export { default as Paragraph } from './Paragraph'
-export { default as PrintButton } from './PrintButton'
-export { default as ProcessList } from './ProcessList'
-export { default as Radio } from './Radio'
-export { default as RadioGroup } from './RadioGroup'
-export { default as RelativeBenefitList } from './RelativeBenefitList'
-export { default as ResultsView } from './ResultsView'
-export { default as ShareTrigger } from './ShareTrigger'
-export { default as StepIndicator } from './StepIndicator'
-export { default as StepBackButton } from './StepBackButton'
-export { default as Select } from './Select'
-export { default as Summary } from './Summary'
-export { default as TextInput } from './TextInput'
-export { default as TimeIndicator } from './TimeIndicator'
-export { default as VerifySelectionsView } from './VerifySelectionsView'
+import Alert from './Alert'
+import Accordion from './Accordion'
+import BenefitAccordionGroup from './BenefitAccordionGroup'
+import Button from './Button'
+import ButtonGroup from './ButtonGroup'
+import Card from './Card'
+import Chevron from './Chevron'
+import Date from './Date'
+import EmailTrigger from './EmailTrigger'
+import Fieldset from './Fieldset'
+import Form from './Form'
+import Heading from './Heading'
+import Hint from './Hint'
+import Icon from './Icon'
+import Intro from './Intro'
+import KeyElegibilityCrieriaList from './KeyElegibilityCrieriaList'
+import Legend from './Legend'
+import Label from './Label'
+import LifeEventSection from './LifeEventSection'
+import Modal from './Modal'
+import NoticesList from './NoticesList'
+import ObfuscatedLink from './ObfuscatedLink'
+import Paragraph from './Paragraph'
+import PrintButton from './PrintButton'
+import ProcessList from './ProcessList'
+import Radio from './Radio'
+import RadioGroup from './RadioGroup'
+import RelativeBenefitList from './RelativeBenefitList'
+import ResultsView from './ResultsView'
+import ShareTrigger from './ShareTrigger'
+import StepIndicator from './StepIndicator'
+import StepBackButton from './StepBackButton'
+import Select from './Select'
+import Summary from './Summary'
+import TextInput from './TextInput'
+import TimeIndicator from './TimeIndicator'
+import VerifySelectionsView from './VerifySelectionsView'
+
+export {
+  Alert,
+  Accordion,
+  BenefitAccordionGroup,
+  Button,
+  ButtonGroup,
+  Card,
+  Chevron,
+  Date,
+  EmailTrigger,
+  Fieldset,
+  Form,
+  Heading,
+  Hint,
+  Icon,
+  Intro,
+  KeyElegibilityCrieriaList,
+  Legend,
+  Label,
+  LifeEventSection,
+  Modal,
+  NoticesList,
+  ObfuscatedLink,
+  Paragraph,
+  PrintButton,
+  ProcessList,
+  Radio,
+  RadioGroup,
+  RelativeBenefitList,
+  ResultsView,
+  ShareTrigger,
+  StepIndicator,
+  StepBackButton,
+  Select,
+  Summary,
+  TextInput,
+  TimeIndicator,
+  VerifySelectionsView,
+}

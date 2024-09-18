@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
-import { Button, ObfuscatedLink, Icon, Heading } from '../index'
-import { scrollLock, dataLayerUtils } from '../../utils'
-import { useCrazyEggUpdate } from '../../hooks'
+import { Button, ObfuscatedLink, Icon, Heading } from '@components'
+import { scrollLock, dataLayerUtils } from '@utils'
+import { useCrazyEggUpdate } from '@hooks'
 
 import './_index.scss'
 
@@ -15,6 +15,7 @@ const customStyles = {
     right: 0,
     bottom: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 999,
   },
   content: {
     top: '50%',
@@ -26,7 +27,7 @@ const customStyles = {
     width: '80%',
     borderRadius: '8px',
     borderColor: '#005ea2',
-    padding: '4rem 1.5rem',
+    padding: '5% 10%',
     maxWidth: '32.5rem',
   },
 }
@@ -115,27 +116,33 @@ const Modal = ({
 
   // handle dataLayer
   useEffect(() => {
-    modalOpen === true &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: modal.event,
-        bfData: {
-          pageView: modal.bfData.pageView,
-          viewTitle: `${dataLayerValue.viewTitle} modal`,
-        },
-      })
-    // handle dataLayer
-    modalOpen === true &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: errors.event,
-        bfData: {
-          errors: '',
-          errorCount: {
-            number: 0,
-            string: `0`,
+    const handleModalData = async () => {
+      modalOpen === true &&
+        dataLayerUtils.dataLayerPush(window, {
+          event: modal.event,
+          bfData: {
+            pageView: modal.bfData.pageView,
+            viewTitle: `${dataLayerValue.viewTitle} modal`,
           },
-          formSuccess: true,
-        },
-      })
+        })
+    }
+
+    // async so we can handle duplicates if needed
+    handleModalData().then(() => {
+      // handle dataLayer
+      modalOpen === true &&
+        dataLayerUtils.dataLayerPush(window, {
+          event: errors.event,
+          bfData: {
+            errors: '',
+            errorCount: {
+              number: 0,
+              string: `0`,
+            },
+            formSuccess: true,
+          },
+        })
+    })
   }, [])
 
   /**

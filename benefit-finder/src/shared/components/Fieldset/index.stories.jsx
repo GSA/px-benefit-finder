@@ -1,6 +1,6 @@
 import Fieldset from './index.jsx'
-import { TextInput } from '../index'
-import * as en from '../../locales/en/en.json'
+import TextInput from '@components/TextInput'
+import * as en from '@locales/en/en.json'
 
 const ui = en.errorText
 

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Card } from '../index'
+import { Card } from '@components'
 
 /**
  * a functional component that renders a list of usa-card component(s)

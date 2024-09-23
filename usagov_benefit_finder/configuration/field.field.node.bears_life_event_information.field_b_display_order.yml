@@ -1,0 +1,23 @@
+uuid: a96e59bc-7ce3-4c86-b01d-0f89a6c80f11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_b_display_order
+    - node.type.bears_life_event_information
+id: node.bears_life_event_information.field_b_display_order
+field_name: field_b_display_order
+entity_type: node
+bundle: bears_life_event_information
+label: 'Display Order'
+description: 'The display order in benefit finder tool box of benefit finder landing page (https://www.usa.gov/benefit-finder)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

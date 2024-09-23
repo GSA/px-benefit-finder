@@ -1,0 +1,29 @@
+uuid: 3e5034e9-28d0-405e-b7e4-8266faef62b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_menus
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  node_menus:
+    enabled: 0
+    languages:
+      en:
+        available_menus:
+          - main
+        parent: 'main:'
+      es:
+        available_menus:
+          - main
+        parent: 'main:'
+name: 'Life Event Information'
+type: bears_life_event_information
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

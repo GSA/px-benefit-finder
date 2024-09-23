@@ -1,0 +1,24 @@
+uuid: 57685f4a-b9e6-4178-9026-209da43813e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_html
+    - filter.format.html
+    - node.type.bears_life_event_information
+  module:
+    - text
+id: node.bears_life_event_information.field_header_html
+field_name: field_header_html
+entity_type: node
+bundle: bears_life_event_information
+label: 'Header HTML'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 29a9bed5-e836-43e8-aaf9-46da0a11cd99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_b_search_title
+    - node.type.bears_life_event_information
+id: node.bears_life_event_information.field_b_search_title
+field_name: field_b_search_title
+entity_type: node
+bundle: bears_life_event_information
+label: 'Search Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

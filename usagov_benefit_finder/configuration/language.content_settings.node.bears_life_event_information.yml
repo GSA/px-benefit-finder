@@ -1,0 +1,11 @@
+uuid: 401c5d5c-b39d-4b3e-8aee-9c6eb8c7dff2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bears_life_event_information
+id: node.bears_life_event_information
+target_entity_type_id: node
+target_bundle: bears_life_event_information
+default_langcode: site_default
+language_alterable: true

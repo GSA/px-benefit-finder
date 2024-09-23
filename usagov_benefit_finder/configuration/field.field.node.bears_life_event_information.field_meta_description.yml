@@ -1,0 +1,19 @@
+uuid: 5bbc0cf1-9100-45d7-b81e-778247e3d6ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_description
+    - node.type.bears_life_event_information
+id: node.bears_life_event_information.field_meta_description
+field_name: field_meta_description
+entity_type: node
+bundle: bears_life_event_information
+label: 'Meta Description'
+description: 'Text to place in a "meta description" tag on this page. If this field is empty, the Page Intro will be used for the meta description. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

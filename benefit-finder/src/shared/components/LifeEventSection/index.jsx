@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, Fragment } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {
   dateInputValidation,
@@ -40,6 +41,7 @@ const LifeEventSection = ({
   data,
   handleData,
   setStepData,
+  indexPath,
   setVerifyStep,
   setViewResults,
   ui,
@@ -58,6 +60,7 @@ const LifeEventSection = ({
   const { lifeEventSection } = dataLayerUtils.dataLayerStructure
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
+  const navigate = useNavigate()
 
   useEffect(() => {
     resetElement.current?.focus()
@@ -164,6 +167,12 @@ const LifeEventSection = ({
           })
           setStep(step + updateIndex)
           setStepData(updateIndex)
+
+          const nextPath = data[step].section.heading
+            .toLowerCase()
+            .replace(/ /g, '-')
+
+          navigate(`${indexPath}/${nextPath}`)
           resetElement && resetElement.current.focus()
         }
       })
@@ -177,6 +186,7 @@ const LifeEventSection = ({
    */
   const handleBackUpdate = updateIndex => {
     setStep(step + updateIndex)
+    navigate(-1)
     resetElement.current.focus()
   }
 
@@ -251,17 +261,29 @@ const LifeEventSection = ({
     errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
   }, [])
 
+  /* eslint-disable */
+  let location = useLocation() // ignore prefer-const
+  /* eslint-enable */
+
   // handle dataLayer
   useEffect(() => {
-    modalOpen === false &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: lifeEventSection.event,
-        bfData: {
-          pageView: `${lifeEventSection.bfData.pageView}-${step}`,
-          viewTitle: currentData.section.heading,
-        },
-      })
-  }, [])
+    // use location change to manage data layer values
+    const index = data.findIndex(obj => {
+      const title = obj.section.heading.toLowerCase().replace(/ /g, '-')
+      return location.pathname.includes(title)
+    })
+    setStep(index + 1)
+    dataLayerUtils.dataLayerPush(window, {
+      event: lifeEventSection.event,
+      location: location.pathname,
+      bfData: {
+        pageView: `${lifeEventSection.bfData.pageView}-${index + 1}`,
+        viewTitle: data[index].section.heading,
+      },
+    })
+    resetElement.current.focus()
+    window.scrollTo(0, 0)
+  }, [location])
 
   // handle crazyEgg
   data.length > 0 &&
@@ -269,6 +291,16 @@ const LifeEventSection = ({
     useCrazyEggUpdate({
       pageView: `${lifeEventSection?.bfData.pageView}-${step}`,
     })
+
+  const handleViewSelections = () => {
+    setVerifyStep()
+    navigate(`${indexPath}/verify-selections`)
+  }
+
+  const handleViewResults = () => {
+    setViewResults()
+    navigate(`${indexPath}/results`)
+  }
 
   useEffect(() => {
     // hide the survey
@@ -562,9 +594,9 @@ const LifeEventSection = ({
                   dataLayerValue={{ viewTitle: currentData.section.heading }}
                   modalHeading={reviewSelectionModal.heading}
                   navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
-                  navItemOneFunction={setVerifyStep}
+                  navItemOneFunction={handleViewSelections}
                   navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
-                  navItemTwoFunction={setViewResults}
+                  navItemTwoFunction={handleViewResults}
                   triggerLabel={buttonGroup[1].value}
                   handleCheckRequriedFields={handleCheckRequriedFields}
                   modalOpen={modalOpen}

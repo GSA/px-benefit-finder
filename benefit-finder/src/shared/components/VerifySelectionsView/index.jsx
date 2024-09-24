@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router'
 import PropTypes from 'prop-types'
-import { parseDate, dataLayerUtils } from '@utils'
+import { parseDate, dataLayerUtils, handleSurvey } from '@utils'
 import { useCrazyEggUpdate } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import { Heading, Button } from '@components'
@@ -19,6 +20,7 @@ import './_index.scss'
 const VerifySelectionsView = ({
   handleStepForward,
   handleStepBack,
+  indexPath,
   ui,
   data,
 }) => {
@@ -30,6 +32,7 @@ const VerifySelectionsView = ({
     month: 'long',
     day: 'numeric',
   }
+  const navigate = useNavigate()
 
   /**
    * afunctional component that renders markup when no value has been given
@@ -123,6 +126,21 @@ const VerifySelectionsView = ({
     })
   }, [])
 
+  const handleViewForm = () => {
+    handleStepBack()
+    navigate(-1)
+  }
+
+  const handleViewResults = () => {
+    handleStepForward()
+    navigate(`/${indexPath}/results`)
+  }
+
+  useEffect(() => {
+    // hide the survey
+    handleSurvey({ hide: true })
+  }, [])
+
   return (
     <div className="bf-verify-selections-view">
       <div className="bf-grid-container grid-container">
@@ -178,10 +196,10 @@ const VerifySelectionsView = ({
                 })}
             </div>
             <div className="bf-section-nav-btn-group">
-              <Button outline onClick={handleStepBack}>
+              <Button outline onClick={handleViewForm}>
                 {buttonGroup[0].value}
               </Button>
-              <Button secondary onClick={handleStepForward}>
+              <Button secondary onClick={handleViewResults}>
                 {buttonGroup[1].value}
               </Button>
             </div>

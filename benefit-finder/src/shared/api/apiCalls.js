@@ -195,7 +195,7 @@ export async function LifeEvent(lifeEvent) {
     params = new URLSearchParams(windowQuery)
     mode = params.get('mode') === 'draft' ? `${params.get('mode')}/` : ''
     const location = window.location.pathname
-    lifeEvent = location.substring(location.lastIndexOf('/') + 1)
+    lifeEvent = location.split('/benefit-finder/')[1].split('/')[0]
   }
 
   let fetchPath

@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { dataLayerUtils } from '@utils'
 import { useResetElement, useCrazyEggUpdate } from '@hooks'
 import PropTypes from 'prop-types'
@@ -16,20 +17,24 @@ import './_index.scss'
 /**
  * a compound component that renders the introductional start of the form process
  * @component
- * @param {object} data - inherited life event content
+ * @param {object} content - inherited life event content
  * @param {object} ui - life event form ui translations
  * @param {function} setStep - incrments step count for initial form entry
- * @param {number} step - indicates which section of the form we are on
  * @return {html} returns information page view if data exist
  */
-const Intro = ({ data, ui, setStep, step }) => {
-  const { timeEstimate, title, summary } = data
+const Intro = ({ content, ui, setStep, stepDataArray, indexPath }) => {
+  const { timeEstimate, title, summary } = content
   const { heading, timeIndicator, steps, notices, button } = ui
   const { intro } = dataLayerUtils.dataLayerStructure
   const resetElement = useResetElement()
+  const navigate = useNavigate()
+  const nextPath = stepDataArray[0]?.section.heading
+    .toLowerCase()
+    .replace(/ /g, '-')
 
   const handleStep = () => {
-    setStep(step + 1)
+    setStep(1)
+    navigate(`/${indexPath}/${nextPath}`)
     resetElement.current.focus()
   }
 
@@ -46,7 +51,7 @@ const Intro = ({ data, ui, setStep, step }) => {
   }, [])
 
   return (
-    data && (
+    content && (
       <div className="bf-intro">
         <Chevron heading={title} description={summary} />
         <div className="bf-grid-container grid-container">

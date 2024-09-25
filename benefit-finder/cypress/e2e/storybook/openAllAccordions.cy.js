@@ -6,6 +6,7 @@ beforeEach(() => {
   const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
   const scenario = utils.encodeURIFromObject(selectedData)
   cy.visit(`${utils.storybookUri}${scenario}`)
+  pageObjects.accordionHeading().should('exist')
 })
 
 describe('open all interaction tests', () => {
@@ -67,7 +68,6 @@ describe('open all interaction tests', () => {
   it('from the not eligible view, validate clicking open all expands the accordions, then toggling eligible view, sets them back to close', () => {
     // make sure all the accordions on not eligible view are closed
     // eslint-disable-next-line cypress/no-unnecessary-waiting
-    cy.wait(1000) // TODO: figure out why we have to wait here
     pageObjects
       .notEligibleResultsButton()
       .click()

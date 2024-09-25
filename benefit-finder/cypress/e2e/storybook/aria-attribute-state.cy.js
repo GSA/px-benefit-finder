@@ -21,12 +21,12 @@ describe('Validate state of aria-invalid attribute', () => {
 
   it('Should have default state of "false" for select, input, and radio', () => {
     pageObjects
-      .selectField()
+      .applicantDateOfBirthMonth()
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
 
     pageObjects
-      .inputField()
+      .applicantDateOfBirthDay()
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
 
@@ -40,31 +40,37 @@ describe('Validate state of aria-invalid attribute', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
     pageObjects
-      .selectField()
+      .applicantDateOfBirthMonth()
       .invoke('attr', 'aria-invalid')
       .should('eq', 'true')
 
-    pageObjects.inputField().invoke('attr', 'aria-invalid').should('eq', 'true')
+    pageObjects
+      .applicantDateOfBirthYear()
+      .invoke('attr', 'aria-invalid')
+      .should('eq', 'true')
   })
 
   it('Should have state of "false" when previous was true but error has been resolved', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
     pageObjects
-      .selectField()
+      .applicantRelationshipToDeceased()
       .invoke('attr', 'aria-invalid')
       .should('eq', 'true')
-    pageObjects.inputField().invoke('attr', 'aria-invalid').should('eq', 'true')
+    pageObjects
+      .applicantDateOfBirthDay()
+      .invoke('attr', 'aria-invalid')
+      .should('eq', 'true')
 
     utils.dataInputs({ dob, relation, status })
 
     pageObjects
-      .selectField()
+      .applicantMaritalStatus()
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
 
     pageObjects
-      .inputField()
+      .applicantDateOfBirthYear()
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
   })

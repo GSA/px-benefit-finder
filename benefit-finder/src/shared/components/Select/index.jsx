@@ -63,6 +63,7 @@ function Select({
         })}
         name={htmlFor}
         id={htmlFor}
+        data-testid={htmlFor}
         onChange={onChange}
         value={selected || ''}
         aria-invalid={invalid === true}

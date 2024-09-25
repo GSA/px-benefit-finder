@@ -230,6 +230,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
       >
         <button
           class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
+          data-test="button"
           type="button"
         >
           Start finding benefits

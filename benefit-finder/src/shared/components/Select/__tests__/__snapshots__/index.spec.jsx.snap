@@ -13,6 +13,7 @@ exports[`Select > renders a match to the previous snapshot 1`] = `
     aria-invalid="false"
     class="bf-usa-select usa-select "
     data-errormessage="undefined legend undefined"
+    data-testid="applicant_relationship_to_the_deceased"
     id="applicant_relationship_to_the_deceased"
     name="applicant_relationship_to_the_deceased"
   >

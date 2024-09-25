@@ -245,6 +245,7 @@ exports[`loads intro 1`] = `
           >
             <button
               class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
+              data-test="button"
               type="button"
             >
               Start finding benefits

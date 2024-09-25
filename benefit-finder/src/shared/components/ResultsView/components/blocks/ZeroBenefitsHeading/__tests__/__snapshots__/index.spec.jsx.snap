@@ -18,6 +18,7 @@ exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
   >
     <button
       class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
+      data-test="button"
       data-testid="zero-benefits-view-cta-button"
       type="button"
     />

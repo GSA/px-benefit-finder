@@ -31,13 +31,10 @@ describe('Validate correct eligibility benefits display based on selected criter
       )
 
     pageObjects
-      .benefitSectionFieldset()
-      .contains(
+      .radioButtonById(
         EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
-          .section.fieldsets[3].fieldset.inputs[0].inputCriteria.label
+          .section.fieldsets[3].fieldset.inputs[0].inputCriteria.id
       )
-      .parent()
-      .find('.usa-radio__label')
       .contains('Yes')
       .click()
 
@@ -48,24 +45,18 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.enterDateOfDeath(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
 
     pageObjects
-      .benefitSectionFieldset()
-      .contains(
+      .radioButtonById(
         EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1]
-          .section.fieldsets[2].fieldset.legend
+          .section.fieldsets[2].fieldset.inputs[0].inputCriteria.id
       )
-      .parent()
-      .find('.usa-radio__label')
       .contains('Yes')
       .click()
 
     pageObjects
-      .benefitSectionFieldset()
-      .contains(
+      .radioButtonById(
         EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1]
-          .section.fieldsets[3].fieldset.legend
+          .section.fieldsets[3].fieldset.inputs[0].inputCriteria.id
       )
-      .parent()
-      .find('.usa-radio__label')
       .contains('Yes')
       .click()
 
@@ -76,9 +67,12 @@ describe('Validate correct eligibility benefits display based on selected criter
       .contains(EN_LOCALE_DATA.reviewSelectionModal.buttonGroup[1].value)
       .click()
     pageObjects
-      .accordion(EN_DOLO_MOCK_DATA.data.benefits[23].benefit.title)
+      .accordionByTitle(EN_DOLO_MOCK_DATA.data.benefits[23].benefit.title)
       .click()
-      .find('.bf-key-eligibility-criteria-list li')
+      .parent()
+      .parent()
+      .parent()
+      .find('[data-testid="bf-key-eligibility-criteria-list"] li')
       .should(
         'contain',
         EN_DOLO_MOCK_DATA.data.benefits[23].benefit.eligibility[0].label
@@ -112,7 +106,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .benefitsAccordion()
+      .accordionHeading()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -170,7 +164,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .benefitsAccordion()
+      .accordionHeading()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -188,7 +182,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .benefitsAccordion()
+      .accordionHeading()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -203,9 +197,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     const scenario = utils.encodeURIFromObject(selectedData)
     cy.visit(`${utils.storybookUri}${scenario}`)
     pageObjects.expandAll().click()
-    pageObjects
-      .keyEligibilityCriteriaListIcon()
-      .should('have.class', 'bf-checkmark--green')
+    pageObjects.iconGreenCheck().should('exist')
   })
 
   it('Should display Zero benefit view when no benefit are eligible', () => {
@@ -219,7 +211,7 @@ describe('Validate correct eligibility benefits display based on selected criter
       .should('contain', EN_LOCALE_DATA.resultsView.zeroBenefits.heading)
 
     pageObjects
-      .benefitsAccordion()
+      .accordionHeading()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
 

@@ -67,13 +67,8 @@ const LifeEventSection = ({
   }, [resetElement])
 
   // desctructure data
-  const {
-    stepIndicator,
-    buttonGroup,
-    reviewSelectionModal,
-    requiredLabel,
-    sectionHeadings,
-  } = ui
+  const { buttonGroup, reviewSelectionModal, requiredLabel, sectionHeadings } =
+    ui
 
   /**
    * a function that updates our current data state
@@ -323,7 +318,6 @@ const LifeEventSection = ({
               current={step - 1}
               setCurrent={setStep}
               data={data}
-              backLinkLabel={stepIndicator.StepBackButton}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (

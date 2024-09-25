@@ -1,4 +1,3 @@
-import { StepBackButton } from '@components'
 import PropTypes from 'prop-types'
 
 import './_index.scss'
@@ -102,9 +101,6 @@ const StepIndicator = ({
           </ol>
         </div>
       )}
-      <StepBackButton currentIndex={current} setCurrent={setCurrent}>
-        {backLinkLabel}
-      </StepBackButton>
     </div>
   )
 }

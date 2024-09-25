@@ -24,7 +24,7 @@ const VerifySelectionsView = ({
   ui,
   data,
 }) => {
-  const { stepIndicator, verifySelectionsView, buttonGroup } = ui
+  const { verifySelectionsView, buttonGroup } = ui
   const { verifySelections } = dataLayerUtils.dataLayerStructure
   const local = apiCalls.GET.Language()
   const dateFormatOptions = {
@@ -149,13 +149,6 @@ const VerifySelectionsView = ({
         </Heading>
         <div className="bf-section-wrapper">
           <div className="bf-section-info">
-            <Button
-              className="bf-step-back-button"
-              onClick={handleStepBack}
-              unstyled
-            >
-              {stepIndicator?.stepBackButton}
-            </Button>
             <div>
               {data &&
                 data.map((item, i) => {

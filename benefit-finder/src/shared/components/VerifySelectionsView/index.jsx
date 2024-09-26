@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import PropTypes from 'prop-types'
 import { parseDate, dataLayerUtils, handleSurvey } from '@utils'
-import { useCrazyEggUpdate } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import { Heading, Button } from '@components'
 
@@ -11,19 +10,11 @@ import './_index.scss'
 /**
  * afunctional component that renders a view of the form input state values
  * @component
- * @param {function} handleStepForward - an array of sections
- * @param {function} handleStepBack - determinate to render headings or not
  * @param {object} ui - translations
  * @param {array} data - inherited state of data in current session
  * @return {html} returns semantic html view for current input values
  */
-const VerifySelectionsView = ({
-  handleStepForward,
-  handleStepBack,
-  indexPath,
-  ui,
-  data,
-}) => {
+const VerifySelectionsView = ({ indexPath, ui, data }) => {
   const { verifySelectionsView, buttonGroup } = ui
   const { verifySelections } = dataLayerUtils.dataLayerStructure
   const local = apiCalls.GET.Language()
@@ -112,9 +103,6 @@ const VerifySelectionsView = ({
     window.scrollTo(0, 0)
   }, [])
 
-  // handle crazyEgg
-  useCrazyEggUpdate({ pageView: verifySelections.bfData.pageView })
-
   // handle dataLayer
   useEffect(() => {
     dataLayerUtils.dataLayerPush(window, {
@@ -125,16 +113,6 @@ const VerifySelectionsView = ({
       },
     })
   }, [])
-
-  const handleViewForm = () => {
-    handleStepBack()
-    navigate(-1)
-  }
-
-  const handleViewResults = () => {
-    handleStepForward()
-    navigate(`/${indexPath}/results`)
-  }
 
   useEffect(() => {
     // hide the survey
@@ -189,10 +167,13 @@ const VerifySelectionsView = ({
                 })}
             </div>
             <div className="bf-section-nav-btn-group">
-              <Button outline onClick={handleViewForm}>
+              <Button outline onClick={() => navigate(-1)}>
                 {buttonGroup[0].value}
               </Button>
-              <Button secondary onClick={handleViewResults}>
+              <Button
+                secondary
+                onClick={() => navigate(`/${indexPath}/results`)}
+              >
                 {buttonGroup[1].value}
               </Button>
             </div>
@@ -204,8 +185,6 @@ const VerifySelectionsView = ({
 }
 
 VerifySelectionsView.propTypes = {
-  handleStepForward: PropTypes.func,
-  handleStepBck: PropTypes.func,
   ui: PropTypes.object,
   data: PropTypes.array,
 }

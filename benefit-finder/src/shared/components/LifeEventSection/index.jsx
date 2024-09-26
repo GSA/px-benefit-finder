@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef, Fragment } from 'react'
+import { useState, useEffect, useRef, useContext, Fragment } from 'react'
+import { RouteContext } from '@/App'
 import { useNavigate, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {
@@ -8,7 +9,7 @@ import {
   errorHandling,
   handleSurvey,
 } from '@utils'
-import { useHandleUnload, useResetElement, useCrazyEggUpdate } from '@hooks'
+import { useHandleUnload, useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import {
   Alert,
@@ -30,8 +31,6 @@ import './_index.scss'
  * @param {function} setStep - inherited function to inc/dec step value
  * @param {object} data - inherieted life event step data
  * @param {function} setStepData - inherited function to set index of step data
- * @param {function} setVerifyStep - inherit view handler
- * @param {function} setViewResults - inherited view handler
  * @param {object} ui - inherited ui translations
  * @return {html} returns a semantic html component that displays a form step
  */
@@ -41,15 +40,10 @@ const LifeEventSection = ({
   data,
   handleData,
   setStepData,
-  indexPath,
-  setVerifyStep,
-  setViewResults,
   ui,
-  modalOpen,
-  setModalOpen,
 }) => {
   // state
-  const [modal, setModal] = useState(false)
+  const [modalStep, setModalStep] = useState(false)
   const [currentData, setCurrentData] = useState(() => data && data[step - 1])
   const [requiredFieldsets, setRequiredFieldsets] = useState([])
   const [hasError, setHasError] = useState([])
@@ -60,7 +54,11 @@ const LifeEventSection = ({
   const { lifeEventSection } = dataLayerUtils.dataLayerStructure
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
+  const ROUTES = useContext(RouteContext)
   const navigate = useNavigate()
+  /* eslint-disable */
+  let location = useLocation() // ignore prefer-const
+  /* eslint-enable */
 
   useEffect(() => {
     resetElement.current?.focus()
@@ -142,35 +140,33 @@ const LifeEventSection = ({
    * @return {null} only executes inherited functions
    */
   const handleForwardUpdate = updateIndex => {
-    handleCheckRequriedFields()
-    errorHandling
-      .handleCheckForRequiredValues(requiredFieldsets, setHasError)
-      .then(valid => {
-        if (valid === true) {
-          // handle dataLayer
-          const { errors } = dataLayerUtils.dataLayerStructure
-          dataLayerUtils.dataLayerPush(window, {
-            event: errors.event,
-            bfData: {
-              errors: '',
-              errorCount: {
-                number: 0,
-                string: `0`,
-              },
-              formSuccess: true,
+    handleCheckRequriedFields().then(valid => {
+      if (valid === true) {
+        // handle dataLayer
+        const { errors } = dataLayerUtils.dataLayerStructure
+        dataLayerUtils.dataLayerPush(window, {
+          event: errors.event,
+          bfData: {
+            errors: '',
+            errorCount: {
+              number: 0,
+              string: `0`,
             },
-          })
-          setStep(step + updateIndex)
+            formSuccess: true,
+          },
+        })
+
+        const stepIndex = step + updateIndex
+        console.log(stepIndex)
+        if (stepIndex <= data.length) {
+          navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[step]}`)
+          setStep(stepIndex)
           setStepData(updateIndex)
-
-          const nextPath = data[step].section.heading
-            .toLowerCase()
-            .replace(/ /g, '-')
-
-          navigate(`${indexPath}/${nextPath}`)
-          resetElement && resetElement.current.focus()
+          setCurrentData(data[step])
         }
-      })
+        resetElement && resetElement.current.focus()
+      }
+    })
   }
 
   /**
@@ -193,7 +189,6 @@ const LifeEventSection = ({
    */
   const handleChanged = (event, criteriaKey) => {
     window.history.replaceState({}, '', window.location.pathname)
-
     apiCalls.PUT.Data(
       criteriaKey,
       currentData,
@@ -247,27 +242,18 @@ const LifeEventSection = ({
 
   // manage the display of our modal initializer
   useEffect(() => {
-    data && step === data.length ? setModal(true) : setModal(false)
-  }, [currentData, data, modal, step])
+    data && step === data.length ? setModalStep(true) : setModalStep(false)
+  }, [data, step])
 
-  // check for all required fields and scroll to top on mount
+  // handle dataLayer, based on location change
   useEffect(() => {
-    window.scrollTo(0, 0)
     errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
-  }, [])
-
-  /* eslint-disable */
-  let location = useLocation() // ignore prefer-const
-  /* eslint-enable */
-
-  // handle dataLayer
-  useEffect(() => {
     // use location change to manage data layer values
     const index = data.findIndex(obj => {
       const title = obj.section.heading.toLowerCase().replace(/ /g, '-')
       return location.pathname.includes(title)
     })
-    setStep(index + 1)
+    setCurrentData(data[index])
     dataLayerUtils.dataLayerPush(window, {
       event: lifeEventSection.event,
       location: location.pathname,
@@ -280,27 +266,10 @@ const LifeEventSection = ({
     window.scrollTo(0, 0)
   }, [location])
 
-  // handle crazyEgg
-  data.length > 0 &&
-    modalOpen === false &&
-    useCrazyEggUpdate({
-      pageView: `${lifeEventSection?.bfData.pageView}-${step}`,
-    })
-
-  const handleViewSelections = () => {
-    setVerifyStep()
-    navigate(`${indexPath}/verify-selections`)
-  }
-
-  const handleViewResults = () => {
-    setViewResults()
-    navigate(`${indexPath}/results`)
-  }
-
   useEffect(() => {
     // hide the survey
     handleSurvey({ hide: true })
-  }, [])
+  })
 
   return (
     data && (
@@ -578,7 +547,7 @@ const LifeEventSection = ({
               <Button outline onClick={() => handleBackUpdate(-1)}>
                 {buttonGroup[0].value}
               </Button>
-              {modal === false ? (
+              {modalStep === false ? (
                 <Button secondary onClick={() => handleForwardUpdate(1)}>
                   {buttonGroup[1].value}
                 </Button>
@@ -588,15 +557,16 @@ const LifeEventSection = ({
                   dataLayerValue={{ viewTitle: currentData.section.heading }}
                   modalHeading={reviewSelectionModal.heading}
                   navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
-                  navItemOneFunction={handleViewSelections}
+                  navItemOneFunction={() =>
+                    navigate(`/${ROUTES.indexPath}/${ROUTES.verifySelections}`)
+                  }
                   navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
-                  navItemTwoFunction={handleViewResults}
+                  navItemTwoFunction={() =>
+                    navigate(`/${ROUTES.indexPath}/${ROUTES.results}`)
+                  }
                   triggerLabel={buttonGroup[1].value}
                   handleCheckRequriedFields={handleCheckRequriedFields}
-                  modalOpen={modalOpen}
-                  setModalOpen={setModalOpen}
                   completed={currentData.completed}
-                  alertElement={alertFieldRef}
                 />
               )}
             </div>
@@ -613,8 +583,6 @@ LifeEventSection.propTypes = {
   setStep: PropTypes.func,
   data: PropTypes.array,
   setStepData: PropTypes.func,
-  setVerifyStep: PropTypes.func,
-  setViewResults: PropTypes.func,
   ui: PropTypes.object,
 }
 

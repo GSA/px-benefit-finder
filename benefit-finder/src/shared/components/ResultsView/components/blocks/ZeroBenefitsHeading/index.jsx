@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types'
-import { Button, Heading } from '@components'
+import { useContext } from 'react'
+import { RouteContext } from '@/App'
+import { useNavigate } from 'react-router-dom'
+import { Button, Heading, StepBackButton } from '@components'
 import { createMarkup } from '@utils'
 
 import './_index.scss'
@@ -9,6 +12,8 @@ const ZeroBenefitsHeadingBlock = ({
   notEligibleView,
   ui,
 }) => {
+  const ROUTES = useContext(RouteContext)
+  const navigate = useNavigate()
   return (
     <>
       <Heading
@@ -34,6 +39,11 @@ const ZeroBenefitsHeadingBlock = ({
           </Button>
         </div>
       )}
+      <StepBackButton
+        onClick={() => navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)}
+      >
+        Go back to form
+      </StepBackButton>
     </>
   )
 }

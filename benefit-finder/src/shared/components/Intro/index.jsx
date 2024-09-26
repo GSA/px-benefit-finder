@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { RouteContext } from '@/App'
 import { dataLayerUtils } from '@utils'
-import { useResetElement, useCrazyEggUpdate } from '@hooks'
+import { useResetElement } from '@hooks'
 import PropTypes from 'prop-types'
 import {
   Button,
@@ -27,19 +28,14 @@ const Intro = ({ content, ui, setStep, stepDataArray, indexPath }) => {
   const { heading, timeIndicator, steps, notices, button } = ui
   const { intro } = dataLayerUtils.dataLayerStructure
   const resetElement = useResetElement()
+  const ROUTES = useContext(RouteContext)
   const navigate = useNavigate()
-  const nextPath = stepDataArray[0]?.section.heading
-    .toLowerCase()
-    .replace(/ /g, '-')
 
   const handleStep = () => {
     setStep(1)
-    navigate(`/${indexPath}/${nextPath}`)
+    navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
     resetElement.current.focus()
   }
-
-  // handle crazyEgg
-  useCrazyEggUpdate({ pageView: intro.bfData.pageView })
 
   // handle dataLayer
   useEffect(() => {

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useResetElement, useCrazyEggUpdate } from '@hooks'
+import { useNavigate, useLocation } from 'react-router'
+import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
@@ -11,7 +12,6 @@ import { dataLayerUtils, handleSurvey } from '@utils'
 /**
  * a functional component that renders a view of the form benefit state values
  * @component
- * @param {function} handlStepBack inherited ui translations
  * @param {func} setBenefitsArray inherited state handler
  * @param {array} stepDataArray inherited state of inupt values from form entry
  * @param {object} ui inherited ui translations
@@ -19,15 +19,21 @@ import { dataLayerUtils, handleSurvey } from '@utils'
  * @return {html} returns a view page of filtered benefits
  */
 const ResultsView = ({
-  handleStepBack,
   stepDataArray,
   relevantBenefits,
+  setViewResults,
   ui,
   data,
+  notEligibleView,
 }) => {
-  const [notEligibleView, setnotEligibleView] = useState(false)
+  // const [notEligibleView, setnotEligibleView] = useState(false)
   const [eligibilityCount, setEligibilityCount] = useState(null)
   const { resultsView } = dataLayerUtils.dataLayerStructure
+  const navigate = useNavigate()
+  const location = useLocation()
+  useEffect(() => {
+    setViewResults(true)
+  })
 
   /**
    * a hook that hanldes our open state of the accordions in our group
@@ -67,15 +73,24 @@ const ResultsView = ({
     return { number: matches.length, string: `${matches.length}` }
   }
 
+  const resultsPath = location.pathname
+  console.log(notEligibleView)
+
   const handleViewToggle = () => {
-    setExpandAll(false)
-    setnotEligibleView(!notEligibleView)
-    window.scrollTo(0, 0)
-    resetElement.current.focus()
+    location.pathname === `${resultsPath}/not-eligible`
+      ? navigate(-1)
+      : navigate(`${resultsPath}/not-eligible`)
   }
+
+  // handle location change
+  useEffect(() => {
+    resetElement.current.focus()
+    window.scrollTo(0, 0)
+  }, [location])
 
   const zeroBenefitsResult = eligibilityCount?.eligibleBenefitCount.number === 0
 
+  // handle dataLayer
   useEffect(() => {
     window.scrollTo(0, 0)
     setEligibilityCount({
@@ -90,15 +105,6 @@ const ResultsView = ({
       ),
     })
   }, [])
-
-  // handle CrazyEgg
-  useCrazyEggUpdate({
-    pageView:
-      notEligibleView === true
-        ? resultsView.bfData.pageView[1]
-        : resultsView.bfData.pageView[0],
-    notEligibleView,
-  })
 
   // handle dataLayer
   useEffect(() => {
@@ -150,7 +156,6 @@ const ResultsView = ({
       }
     >
       <Results
-        handleStepBack={handleStepBack}
         notEligibleView={notEligibleView}
         zeroBenefitsResult={zeroBenefitsResult}
         stepDataArray={stepDataArray}
@@ -167,7 +172,6 @@ const ResultsView = ({
 }
 
 ResultsView.propTypes = {
-  handleStepBack: PropTypes.func,
   ui: PropTypes.object,
   data: PropTypes.array,
 }

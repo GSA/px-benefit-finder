@@ -53,17 +53,15 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   let location = useLocation() // ignore prefer-const
   /* eslint-enable */
 
-  useEffect(() => {
-    resetElement.current?.focus()
-  }, [resetElement])
-
-  useEffect(() => {
-    const index = data.findIndex(obj => {
+  const getFormStepIndex = () =>
+    data.findIndex(obj => {
       const title = obj.section.heading.toLowerCase().replace(/ /g, '-')
       return location.pathname.includes(title)
     })
-    setFormStep(index)
-  }, [location])
+
+  useEffect(() => {
+    resetElement.current?.focus()
+  }, [resetElement])
 
   /**
    * a function that updates our current data state
@@ -235,10 +233,6 @@ const LifeEventSection = ({ data, handleData, ui }) => {
 
   // manage the display of our modal initializer
   useEffect(() => {
-    console.log(
-      location.pathname,
-      ROUTES.formPaths[ROUTES.formPaths.length - 1]
-    )
     location.pathname.includes(ROUTES.formPaths[ROUTES.formPaths.length - 1])
       ? setModalStep(true)
       : setModalStep(false)
@@ -248,10 +242,8 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   useEffect(() => {
     errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
     // use location change to manage data layer values
-    const index = data.findIndex(obj => {
-      const title = obj.section.heading.toLowerCase().replace(/ /g, '-')
-      return location.pathname.includes(title)
-    })
+    const index = getFormStepIndex()
+    setFormStep(index)
     setCurrentData(data[index])
     dataLayerUtils.dataLayerPush(window, {
       event: lifeEventSection.event,

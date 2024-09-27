@@ -39,11 +39,15 @@ const ZeroBenefitsHeadingBlock = ({
           </Button>
         </div>
       )}
-      <StepBackButton
-        onClick={() => navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)}
-      >
-        Go back to form
-      </StepBackButton>
+      <div className="bf-back-to-form-cta">
+        <StepBackButton
+          onClick={() =>
+            navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
+          }
+        >
+          Go back to form
+        </StepBackButton>
+      </div>
     </>
   )
 }

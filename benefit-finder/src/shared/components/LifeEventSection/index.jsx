@@ -274,7 +274,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
     data && (
       <>
         <Heading className="bf-section-heading" headingLevel={1}>
-          {formStep === data.length
+          {formStep === data.length - 1
             ? `${sectionHeadings.final}`
             : formStep === 0
               ? `${sectionHeadings.start}`

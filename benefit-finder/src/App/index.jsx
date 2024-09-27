@@ -66,7 +66,6 @@ function App({ testAppContent, testQuery }) {
   // set data state
   const [stepDataArray, setStepDataArray] = useState()
   const [benfitsArray, setBenefitsArray] = useState()
-  // const [modalOpen, setModalOpen] = useState(false)
 
   useEffect(() => {
     content && setBenefitsArray([...content.benefits])
@@ -181,8 +180,6 @@ function App({ testAppContent, testQuery }) {
                                 stepData={stepData}
                                 setStepData={setStepData}
                                 ui={t}
-                                // modalOpen={modalOpen}
-                                // setModalOpen={setModalOpen}
                               />
                             </Form>
                           </div>

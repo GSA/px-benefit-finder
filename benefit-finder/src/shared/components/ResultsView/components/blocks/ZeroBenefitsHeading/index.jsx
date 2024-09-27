@@ -28,6 +28,15 @@ const ZeroBenefitsHeadingBlock = ({
         headingLevel={3}
         dangerouslySetInnerHTML={createMarkup(ui?.description)}
       />
+      <div className="bf-back-to-form-cta">
+        <StepBackButton
+          onClick={() =>
+            navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
+          }
+        >
+          Go back to form
+        </StepBackButton>
+      </div>
       {!notEligibleView && (
         <div className="bf-zero-benefits-view-cta">
           <Button
@@ -39,15 +48,6 @@ const ZeroBenefitsHeadingBlock = ({
           </Button>
         </div>
       )}
-      <div className="bf-back-to-form-cta">
-        <StepBackButton
-          onClick={() =>
-            navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
-          }
-        >
-          Go back to form
-        </StepBackButton>
-      </div>
     </>
   )
 }

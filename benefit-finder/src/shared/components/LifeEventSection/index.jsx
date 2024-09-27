@@ -242,8 +242,14 @@ const LifeEventSection = ({
 
   // manage the display of our modal initializer
   useEffect(() => {
-    data && step === data.length ? setModalStep(true) : setModalStep(false)
-  }, [data, step])
+    console.log(
+      location.pathname,
+      ROUTES.formPaths[ROUTES.formPaths.length - 1]
+    )
+    location.pathname.includes(ROUTES.formPaths[ROUTES.formPaths.length - 1])
+      ? setModalStep(true)
+      : setModalStep(false)
+  }, [data, step, location])
 
   // handle dataLayer, based on location change
   useEffect(() => {

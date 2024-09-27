@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router'
+import { RouteContext } from '@/App'
 import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
@@ -21,7 +22,7 @@ import { dataLayerUtils, handleSurvey } from '@utils'
 const ResultsView = ({
   stepDataArray,
   relevantBenefits,
-  setViewResults,
+  // setViewResults,
   ui,
   data,
   notEligibleView,
@@ -31,9 +32,10 @@ const ResultsView = ({
   const { resultsView } = dataLayerUtils.dataLayerStructure
   const navigate = useNavigate()
   const location = useLocation()
-  useEffect(() => {
-    setViewResults(true)
-  })
+  const ROUTES = useContext(RouteContext)
+  // useEffect(() => {
+  //   setViewResults(true)
+  // })
 
   /**
    * a hook that hanldes our open state of the accordions in our group
@@ -73,13 +75,10 @@ const ResultsView = ({
     return { number: matches.length, string: `${matches.length}` }
   }
 
-  const resultsPath = location.pathname
-  console.log(notEligibleView)
-
   const handleViewToggle = () => {
-    location.pathname === `${resultsPath}/not-eligible`
+    location.pathname === `${ROUTES.indexPath}/${ROUTES.notEligible}`
       ? navigate(-1)
-      : navigate(`${resultsPath}/not-eligible`)
+      : navigate(`/${ROUTES.indexPath}/${ROUTES.results}/${ROUTES.notEligible}`)
   }
 
   // handle location change

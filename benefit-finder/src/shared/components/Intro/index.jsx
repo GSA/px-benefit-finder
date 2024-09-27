@@ -20,10 +20,9 @@ import './_index.scss'
  * @component
  * @param {object} content - inherited life event content
  * @param {object} ui - life event form ui translations
- * @param {function} setStep - incrments step count for initial form entry
  * @return {html} returns information page view if data exist
  */
-const Intro = ({ content, ui, setStep, stepDataArray, indexPath }) => {
+const Intro = ({ content, ui }) => {
   const { timeEstimate, title, summary } = content
   const { heading, timeIndicator, steps, notices, button } = ui
   const { intro } = dataLayerUtils.dataLayerStructure
@@ -32,7 +31,6 @@ const Intro = ({ content, ui, setStep, stepDataArray, indexPath }) => {
   const navigate = useNavigate()
 
   const handleStep = () => {
-    setStep(1)
     navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
     resetElement.current.focus()
   }
@@ -94,7 +92,6 @@ const Intro = ({ content, ui, setStep, stepDataArray, indexPath }) => {
 Intro.propTypes = {
   data: PropTypes.object,
   ui: PropTypes.object,
-  setStep: PropTypes.func,
   step: PropTypes.number,
 }
 

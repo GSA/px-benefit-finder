@@ -76,12 +76,6 @@ function App({ testAppContent, testQuery }) {
   // state
   const [t] = useState(apiCalls.GET.Language() === 'es' ? es : en) // tranlations
 
-  // handle step, stepData, and stepVerification
-  const [step, setStep] = useState(hasQueryParams ? null : 0) // steps indicator
-  const [stepData, setStepData] = useState(
-    () => stepDataArray && stepDataArray[step]
-  ) // content
-
   // // handle new view layout for results
   const [viewResults, setViewResults] = useState(hasQueryParams) // resuts view
 
@@ -125,10 +119,9 @@ function App({ testAppContent, testQuery }) {
         apiCalls.PUT.DataFromParams(
           windowQuery,
           stepDataArray,
-          setStepData,
+          setStepDataArray,
           sharedToken
         )
-      stepDataArray && setStep(stepDataArray.length)
     }
   }, [windowQuery, hasQueryParams, stepDataArray])
 
@@ -140,9 +133,7 @@ function App({ testAppContent, testQuery }) {
           {isDraftMode === true && <Alert>Draft Mode</Alert>}
           <div
             id={content?.lifeEventForm.id}
-            className={`benefit-finder ${
-              step !== 0 && viewResults !== true ? 'form' : ''
-            }`}
+            className={`benefit-finder ${viewResults !== true ? 'form' : ''}`}
             data-testid="app"
             data-version={version}
           >
@@ -155,8 +146,6 @@ function App({ testAppContent, testQuery }) {
                       <Intro
                         content={content.lifeEventForm}
                         ui={t.intro}
-                        setStep={setStep}
-                        step={step}
                         stepDataArray={stepDataArray}
                         indexPath={`/${indexPath}/`}
                       />
@@ -173,12 +162,8 @@ function App({ testAppContent, testQuery }) {
                           <div>
                             <Form>
                               <LifeEventSection
-                                step={step}
-                                setStep={setStep}
                                 data={stepDataArray}
                                 handleData={setStepDataArray}
-                                stepData={stepData}
-                                setStepData={setStepData}
                                 ui={t}
                               />
                             </Form>
@@ -193,8 +178,6 @@ function App({ testAppContent, testQuery }) {
                     <VerifySelectionsView
                       ui={t}
                       data={stepDataArray}
-                      step={step}
-                      setStep={setStep}
                       indexPath={indexPath}
                     />
                   }

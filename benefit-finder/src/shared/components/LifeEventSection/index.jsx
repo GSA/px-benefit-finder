@@ -27,24 +27,15 @@ import './_index.scss'
 /**
  * a compound component that renders the main conditional view of the form
  * @component
- * @param {number} step - inherited current step value
- * @param {function} setStep - inherited function to inc/dec step value
  * @param {object} data - inherieted life event step data
- * @param {function} setStepData - inherited function to set index of step data
  * @param {object} ui - inherited ui translations
  * @return {html} returns a semantic html component that displays a form step
  */
-const LifeEventSection = ({
-  step,
-  setStep,
-  data,
-  handleData,
-  setStepData,
-  ui,
-}) => {
+const LifeEventSection = ({ data, handleData, ui }) => {
   // state
+  const [formStep, setFormStep] = useState(0)
   const [modalStep, setModalStep] = useState(false)
-  const [currentData, setCurrentData] = useState(() => data && data[step - 1])
+  const [currentData, setCurrentData] = useState(() => data && data[formStep])
   const [requiredFieldsets, setRequiredFieldsets] = useState([])
   const [hasError, setHasError] = useState([])
   const [hasData, setHasData] = useState(
@@ -52,6 +43,8 @@ const LifeEventSection = ({
   )
   const [submissionCount, setSubmissionCount] = useState(0)
   const { lifeEventSection } = dataLayerUtils.dataLayerStructure
+  const { buttonGroup, reviewSelectionModal, requiredLabel, sectionHeadings } =
+    ui // desctructure data
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
   const ROUTES = useContext(RouteContext)
@@ -64,9 +57,13 @@ const LifeEventSection = ({
     resetElement.current?.focus()
   }, [resetElement])
 
-  // desctructure data
-  const { buttonGroup, reviewSelectionModal, requiredLabel, sectionHeadings } =
-    ui
+  useEffect(() => {
+    const index = data.findIndex(obj => {
+      const title = obj.section.heading.toLowerCase().replace(/ /g, '-')
+      return location.pathname.includes(title)
+    })
+    setFormStep(index)
+  }, [location])
 
   /**
    * a function that updates our current data state
@@ -74,7 +71,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleUpdateData = () => {
-    data[step - 1] = { ...currentData }
+    data[formStep] = { ...currentData }
     handleData([...data])
   }
 
@@ -156,13 +153,10 @@ const LifeEventSection = ({
           },
         })
 
-        const stepIndex = step + updateIndex
-        console.log(stepIndex)
-        if (stepIndex <= data.length) {
-          navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[step]}`)
-          setStep(stepIndex)
-          setStepData(updateIndex)
-          setCurrentData(data[step])
+        const stepIndex = formStep + updateIndex
+        if (formStep <= data.length) {
+          navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[stepIndex]}`)
+          setCurrentData(data[stepIndex])
         }
         resetElement && resetElement.current.focus()
       }
@@ -176,8 +170,7 @@ const LifeEventSection = ({
    * @return {null} only executes inherited functions
    */
   const handleBackUpdate = updateIndex => {
-    setStep(step + updateIndex)
-    navigate(-1)
+    navigate(updateIndex)
     resetElement.current.focus()
   }
 
@@ -249,7 +242,7 @@ const LifeEventSection = ({
     location.pathname.includes(ROUTES.formPaths[ROUTES.formPaths.length - 1])
       ? setModalStep(true)
       : setModalStep(false)
-  }, [data, step, location])
+  }, [location])
 
   // handle dataLayer, based on location change
   useEffect(() => {
@@ -281,17 +274,17 @@ const LifeEventSection = ({
     data && (
       <>
         <Heading className="bf-section-heading" headingLevel={1}>
-          {step === data.length
+          {formStep === data.length
             ? `${sectionHeadings.final}`
-            : step - 1 === 0
+            : formStep === 0
               ? `${sectionHeadings.start}`
               : `${sectionHeadings.continue}`}
         </Heading>
         <div className="bf-section-wrapper">
           <div className="bf-section-info">
             <StepIndicator
-              current={step - 1}
-              setCurrent={setStep}
+              current={formStep}
+              setCurrent={setFormStep}
               data={data}
               key={`step-indicator-${sectionHeadings}`}
             />
@@ -585,10 +578,8 @@ const LifeEventSection = ({
 
 LifeEventSection.propTypes = {
   props: PropTypes.any,
-  step: PropTypes.number,
-  setStep: PropTypes.func,
+  formStep: PropTypes.number,
   data: PropTypes.array,
-  setStepData: PropTypes.func,
   ui: PropTypes.object,
 }
 

@@ -22,7 +22,6 @@ import { dataLayerUtils, handleSurvey } from '@utils'
 const ResultsView = ({
   stepDataArray,
   relevantBenefits,
-  // setViewResults,
   ui,
   data,
   notEligibleView,
@@ -33,9 +32,6 @@ const ResultsView = ({
   const navigate = useNavigate()
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
-  // useEffect(() => {
-  //   setViewResults(true)
-  // })
 
   /**
    * a hook that hanldes our open state of the accordions in our group

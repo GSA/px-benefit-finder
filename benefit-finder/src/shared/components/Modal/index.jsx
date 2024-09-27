@@ -135,7 +135,7 @@ const Modal = ({
           },
         })
     })
-  }, [])
+  }, [modalOpen])
 
   /**
    * a functional component that renders a link as a button for launching our dialog

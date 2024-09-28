@@ -87,7 +87,6 @@ const ResultsView = ({
 
   // handle dataLayer
   useEffect(() => {
-    window.scrollTo(0, 0)
     setEligibilityCount({
       eligibleBenefitCount: handleEligibilityLength(
         ui.benefitAccordion.eligibleStatusLabels[0]

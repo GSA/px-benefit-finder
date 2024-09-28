@@ -53,10 +53,20 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   let location = useLocation() // ignore prefer-const
   /* eslint-enable */
 
+  /**
+   * Finds the index of the current form step in the data array.
+   *
+   * @param {Object[]} data - The array of form step objects.
+   * @param {Object} location - The current location object.
+   * @param {string} location.pathname - The current URL path.
+   * @param {string} ROUTES.indexPath - The base path for the form steps.
+   *
+   * @returns {number} The index of the current form step, or -1 if not found.
+   */
   const getFormStepIndex = () =>
     data.findIndex(obj => {
       const title = obj.section.heading.toLowerCase().replace(/ /g, '-')
-      return location.pathname.includes(title)
+      return location.pathname.match(`${ROUTES.indexPath}/${title}`)
     })
 
   useEffect(() => {
@@ -240,7 +250,6 @@ const LifeEventSection = ({ data, handleData, ui }) => {
 
   // handle dataLayer, based on location change
   useEffect(() => {
-    errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
     // use location change to manage data layer values
     const index = getFormStepIndex()
     setFormStep(index)
@@ -256,6 +265,16 @@ const LifeEventSection = ({ data, handleData, ui }) => {
     resetElement.current.focus()
     window.scrollTo(0, 0)
   }, [location])
+
+  useEffect(() => {
+    errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
+    resetElement.current.focus()
+    window.scrollTo(0, 0)
+  }, [formStep])
+
+  useEffect(() => {
+    errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
+  }, [])
 
   useEffect(() => {
     // hide the survey

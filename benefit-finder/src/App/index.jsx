@@ -103,17 +103,6 @@ function App({ testAppContent, testQuery }) {
   }
 
   useEffect(() => {
-    // catch and redirect traffic
-    if (
-      indexPath &&
-      !hasQueryParams &&
-      window.location.pathname !== `${basePath}${indexPath}`
-    ) {
-      window.location = `${basePath}${indexPath}`
-    }
-  }, [indexPath])
-
-  useEffect(() => {
     if (hasQueryParams) {
       stepDataArray &&
         apiCalls.PUT.DataFromParams(

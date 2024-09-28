@@ -178,7 +178,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
    * @return {null} only executes inherited functions
    */
   const handleBackUpdate = updateIndex => {
-    navigate(updateIndex)
+    formStep === 0 ? navigate(`/${ROUTES.indexPath}`) : navigate(updateIndex)
     resetElement.current.focus()
   }
 

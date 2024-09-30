@@ -180,6 +180,87 @@ export const Language = () => {
 }
 
 /**
+ * An async fetch to get dynamic route data.
+ *
+ * @function Routes
+ * @param {object} w - The window object.
+ * @param {string} language - The language code (e.g. "en" or "es").
+ * @param {array} stepDataArray - An array of objects containing form step data.
+ * @returns {object} An object containing dynamic route data.
+ */
+export const Routes = (w, language, stepDataArray) => {
+  /**
+   * Extract the path components from the current URL.
+   */
+  const locationArray = w.location.pathname.split('/')
+
+  /**
+   * trim empty item from split
+   */
+  locationArray.slice(1)
+
+  /**
+   * Get the last part of the path for the LifeEvent.
+   */
+  const indexPath = locationArray.pop()
+
+  /**
+   * Join the remaining path components to form the base path.
+   */
+  const basePath = locationArray.join('/')
+
+  /**
+   * Map the form step data to an array of path strings.
+   */
+  const formPaths = stepDataArray?.map(item => {
+    /**
+     * Clean and transform the section heading to a URL-friendly string.
+     */
+    const cleanStr = item.section.heading
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9\s]/g, '')
+    const path = cleanStr.replace(/ /g, '-')
+    return path
+  })
+
+  /**
+   * Determine the path for the verify selcttions page based on the language.
+   */
+  const verifySelectionsPath =
+    language === 'es' ? 'revisar-selecciónes' : 'verify-selections'
+
+  /**
+   * Determine the path for the results page based on the language.
+   */
+  const resultsPath = language === 'es' ? 'resultados' : 'results'
+
+  /**
+   * Determine the path for the not eligible page based on the language.
+   */
+  const notEligiblePath =
+    language === 'es'
+      ? `${resultsPath}/no-es-elegible`
+      : `${resultsPath}/not-eligible`
+
+  /**
+   * Assemble the dynamic route data object.
+   * The base path of the current URL.
+   * An array of path strings for the form steps.
+   * The path for the verify selections page based on the language.
+   * An object containing the paths for the results and not eligible pages.
+   */
+  const ROUTES = {
+    basePath,
+    indexPath,
+    formPaths,
+    verifySelectionsPath,
+    resultsPaths: { resultsPath, notEligiblePath },
+  }
+
+  return ROUTES
+}
+
+/**
  * an async fetch to get life-event data.
  * @function
  * @param {string} lifeEvent - The inherited class from
@@ -195,7 +276,7 @@ export async function LifeEvent(lifeEvent) {
     params = new URLSearchParams(windowQuery)
     mode = params.get('mode') === 'draft' ? `${params.get('mode')}/` : ''
     const location = window.location.pathname
-    lifeEvent = location.split('/benefit-finder/')[1].split('/')[0]
+    lifeEvent = location.split('/').pop()
   }
 
   let fetchPath
@@ -489,6 +570,7 @@ export const GET = {
   ElegibilityByCriteria,
   LifeEvent,
   Language,
+  Routes,
   SelectedValue,
   SelectedValueAll,
 }

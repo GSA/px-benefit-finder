@@ -105,7 +105,7 @@ const VerifySelectionsView = ({ indexPath, ui, data }) => {
   }
 
   useEffect(() => {
-    resetElement.current.focus()
+    resetElement.current?.focus()
     window.scrollTo(0, 0)
   }, [location])
 

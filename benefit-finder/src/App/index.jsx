@@ -77,8 +77,16 @@ function App({ testAppContent, testQuery }) {
   // state
   const [t] = useState(language === 'es' ? es : en) // tranlations
 
-  // // handle new view layout for results
+  // handle new view layout for results
   const [viewResults, setViewResults] = useState(hasQueryParams) // resuts view
+
+  // update data basd on passed query paramaters
+  useEffect(() => {
+    if (hasQueryParams) {
+      stepDataArray &&
+        apiCalls.PUT.DataFromParams(windowQuery, stepDataArray, sharedToken)
+    }
+  }, [windowQuery, hasQueryParams, stepDataArray])
 
   /**
    * Memoized base paths.
@@ -117,18 +125,6 @@ function App({ testAppContent, testQuery }) {
    */
   const ROUTES = { ...BASE_ROUTES, formPaths: FORM_ROUTES.formPaths }
 
-  useEffect(() => {
-    if (hasQueryParams) {
-      stepDataArray &&
-        apiCalls.PUT.DataFromParams(
-          windowQuery,
-          stepDataArray,
-          setStepDataArray,
-          sharedToken
-        )
-    }
-  }, [windowQuery, hasQueryParams, stepDataArray])
-
   return (
     content &&
     ROUTES.formPaths && (
@@ -152,6 +148,7 @@ function App({ testAppContent, testQuery }) {
                         ui={t.intro}
                         stepDataArray={stepDataArray}
                         indexPath={`/${ROUTES.indexPath}/`}
+                        hasQueryParams={hasQueryParams}
                       />
                     )
                   }
@@ -186,7 +183,6 @@ function App({ testAppContent, testQuery }) {
                   }
                 />
                 {Object.keys(ROUTES.resultsPaths).map((route, i) => {
-                  console.log('route', route)
                   return (
                     <Route
                       path={`/${ROUTES.indexPath}/${ROUTES.resultsPaths[route]}`}

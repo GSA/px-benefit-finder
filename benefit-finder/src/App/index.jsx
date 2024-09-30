@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect } from 'react'
+import { useState, createContext, useEffect, useMemo } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { version } from '../../package.json'
 import { useResetElement } from '@hooks'
@@ -33,6 +33,7 @@ function App({ testAppContent, testQuery }) {
   const windowQuery = testQuery || window.location.search
   const hasQueryParams = windowQuery.includes(sharedToken)
   const isDraftMode = windowQuery.includes(draftToken)
+  const language = apiCalls.GET.Language()
   // create our reset element
   useResetElement()
 
@@ -74,33 +75,47 @@ function App({ testAppContent, testQuery }) {
   }, [content])
 
   // state
-  const [t] = useState(apiCalls.GET.Language() === 'es' ? es : en) // tranlations
+  const [t] = useState(language === 'es' ? es : en) // tranlations
 
   // // handle new view layout for results
   const [viewResults, setViewResults] = useState(hasQueryParams) // resuts view
 
-  // set up defualts for route
-  const basePath = '/benefit-finder/'
-  const indexPath = content?.lifeEventForm.id
-  const formPaths = () => {
-    const formSteps = []
+  /**
+   * Memoized base paths.
+   *
+   * @type {Object} An object containing base routes.
+   *
+   * @description This value is memoized to prevent unnecessary recalculations.
+   */
+  const BASE_ROUTES = useMemo(() => {
+    /**
+     * Retrieve routes from the application API based on the current window, language, and step data array.
+     *
+     * @param {Object} window - The current window object.
+     * @param {string} language - The current language.
+     * @param {Array} stepDataArray - An array of step data.
+     *
+     * @returns {Object} An object containing routes.
+     */
+    return apiCalls.GET.Routes(window, language, stepDataArray)
+  }, [])
 
-    stepDataArray &&
-      stepDataArray.forEach((item, i) => {
-        const path = item.section.heading.toLowerCase().replace(/ /g, '-')
-        formSteps.push(path)
-      })
-    return formSteps
-  }
+  /**
+   * Retrieve routes for the form steps based on content.
+   *
+   * @type {Object} An object containing routes for the form steps.
+   */
+  const FORM_ROUTES = apiCalls.GET.Routes(window, language, stepDataArray)
 
-  const ROUTES = {
-    basePath,
-    indexPath,
-    formPaths: formPaths(),
-    verifySelections: 'verify-selections',
-    results: 'results',
-    notEligible: 'not-eligible',
-  }
+  /**
+   * A composite object containing both base routes and form paths.
+   *
+   * @type {Object} An object containing both base routes and form paths.
+   *
+   * @property {Object} The base routes.
+   * @property {Object} formPaths - The form paths.
+   */
+  const ROUTES = { ...BASE_ROUTES, formPaths: FORM_ROUTES.formPaths }
 
   useEffect(() => {
     if (hasQueryParams) {
@@ -116,7 +131,7 @@ function App({ testAppContent, testQuery }) {
 
   return (
     content &&
-    stepDataArray && (
+    ROUTES.formPaths && (
       <RouteContext.Provider value={ROUTES}>
         <LanguageContext.Provider value={t}>
           {isDraftMode === true && <Alert>Draft Mode</Alert>}
@@ -126,7 +141,7 @@ function App({ testAppContent, testQuery }) {
             data-testid="app"
             data-version={version}
           >
-            <BrowserRouter basename={ROUTES.basePath}>
+            <BrowserRouter basename={`/${ROUTES.basePath}`}>
               <Routes>
                 <Route
                   path={`/${ROUTES.indexPath}`}
@@ -136,73 +151,62 @@ function App({ testAppContent, testQuery }) {
                         content={content.lifeEventForm}
                         ui={t.intro}
                         stepDataArray={stepDataArray}
-                        indexPath={`/${indexPath}/`}
+                        indexPath={`/${ROUTES.indexPath}/`}
                       />
                     )
                   }
                 />
-                {stepDataArray &&
-                  ROUTES.formPaths.map((path, i) => {
-                    return (
-                      <Route
-                        path={`/${ROUTES.indexPath}/${path}`}
-                        key={i}
-                        element={
-                          <div>
-                            <Form>
-                              <LifeEventSection
-                                data={stepDataArray}
-                                handleData={setStepDataArray}
-                                ui={t}
-                              />
-                            </Form>
-                          </div>
-                        }
-                      />
-                    )
-                  })}
+                {ROUTES.formPaths.map((path, i) => {
+                  return (
+                    <Route
+                      path={`/${ROUTES.indexPath}/${path}`}
+                      key={i}
+                      element={
+                        <div>
+                          <Form>
+                            <LifeEventSection
+                              data={stepDataArray}
+                              handleData={setStepDataArray}
+                              ui={t}
+                            />
+                          </Form>
+                        </div>
+                      }
+                    />
+                  )
+                })}
                 <Route
-                  path={`/${ROUTES.indexPath}/${ROUTES.verifySelections}`}
+                  path={`/${ROUTES.indexPath}/${ROUTES.verifySelectionsPath}`}
                   element={
                     <VerifySelectionsView
                       ui={t}
                       data={stepDataArray}
-                      indexPath={indexPath}
+                      indexPath={ROUTES.indexPath}
                     />
                   }
                 />
-                <Route
-                  path={`/${ROUTES.indexPath}/${ROUTES.results}`}
-                  element={
-                    <ResultsView
-                      stepDataArray={stepDataArray}
-                      relevantBenefits={
-                        content?.lifeEventForm?.relevantBenefits
+                {Object.keys(ROUTES.resultsPaths).map((route, i) => {
+                  console.log('route', route)
+                  return (
+                    <Route
+                      path={`/${ROUTES.indexPath}/${ROUTES.resultsPaths[route]}`}
+                      key={i}
+                      element={
+                        <ResultsView
+                          stepDataArray={stepDataArray}
+                          relevantBenefits={
+                            content?.lifeEventForm?.relevantBenefits
+                          }
+                          data={benfitsArray}
+                          setBenefitsArray={() => setBenefitsArray()}
+                          setViewResults={setViewResults}
+                          ui={t.resultsView}
+                          notEligibleView={i !== 0}
+                        />
                       }
-                      data={benfitsArray}
-                      setBenefitsArray={() => setBenefitsArray()}
-                      setViewResults={setViewResults}
-                      ui={t.resultsView}
-                      notEligibleView={false}
                     />
-                  }
-                />
-                <Route
-                  path={`/${ROUTES.indexPath}/${ROUTES.results}/${ROUTES.notEligible}`}
-                  element={
-                    <ResultsView
-                      stepDataArray={stepDataArray}
-                      relevantBenefits={
-                        content?.lifeEventForm?.relevantBenefits
-                      }
-                      data={benfitsArray}
-                      setBenefitsArray={() => setBenefitsArray()}
-                      setViewResults={setViewResults}
-                      ui={t.resultsView}
-                      notEligibleView={true}
-                    />
-                  }
-                />
+                  )
+                })}
               </Routes>
             </BrowserRouter>
           </div>

@@ -77,9 +77,6 @@ function App({ testAppContent, testQuery }) {
   // state
   const [t] = useState(language === 'es' ? es : en) // tranlations
 
-  // handle new view layout for results
-  const [viewResults, setViewResults] = useState(hasQueryParams) // resuts view
-
   // update data basd on passed query paramaters
   useEffect(() => {
     if (hasQueryParams) {
@@ -133,7 +130,7 @@ function App({ testAppContent, testQuery }) {
           {isDraftMode === true && <Alert>Draft Mode</Alert>}
           <div
             id={content?.lifeEventForm.id}
-            className={`benefit-finder ${viewResults !== true ? 'form' : ''}`}
+            className="benefit-finder"
             data-testid="app"
             data-version={version}
           >
@@ -195,7 +192,6 @@ function App({ testAppContent, testQuery }) {
                           }
                           data={benfitsArray}
                           setBenefitsArray={() => setBenefitsArray()}
-                          setViewResults={setViewResults}
                           ui={t.resultsView}
                           notEligibleView={i !== 0}
                         />

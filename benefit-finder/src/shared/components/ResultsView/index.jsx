@@ -72,9 +72,10 @@ const ResultsView = ({
   }
 
   const handleViewToggle = () => {
-    location.pathname === `${ROUTES.indexPath}/${ROUTES.notEligible}`
+    location.pathname ===
+    `${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}`
       ? navigate(-1)
-      : navigate(`/${ROUTES.indexPath}/${ROUTES.results}/${ROUTES.notEligible}`)
+      : navigate(`/${ROUTES.indexPath}/${ROUTES.resultsPaths.notEligiblePath}`)
   }
 
   // handle location change

@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react'
+import { BrowserRouter } from 'react-router-dom'
 import Intro from '../index.jsx'
 import * as en from '@locales/en/en.json'
 import content from '@api/mock-data/current.js'
@@ -9,7 +10,12 @@ const { lifeEventForm } = data
 
 describe('Intro', () => {
   it('renders a match to the previous snapshot', () => {
-    const { asFragment } = render(<Intro data={lifeEventForm} ui={t.intro} />)
+    const { asFragment } = render(
+      <Intro content={lifeEventForm} ui={t.intro} />,
+      {
+        wrapper: BrowserRouter,
+      }
+    )
     expect(asFragment()).toMatchSnapshot()
   })
 })

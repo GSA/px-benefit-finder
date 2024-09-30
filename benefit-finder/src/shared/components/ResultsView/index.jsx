@@ -80,7 +80,7 @@ const ResultsView = ({
 
   // handle location change
   useEffect(() => {
-    resetElement.current.focus()
+    resetElement.current?.focus()
     window.scrollTo(0, 0)
   }, [location])
 

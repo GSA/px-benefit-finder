@@ -259,7 +259,6 @@ const LifeEventSection = ({ data, handleData, ui }) => {
     setCurrentData(data[index])
     dataLayerUtils.dataLayerPush(window, {
       event: lifeEventSection.event,
-      location: location.pathname,
       bfData: {
         pageView: `${lifeEventSection.bfData.pageView}-${index + 1}`,
         viewTitle: data[index].section.heading,

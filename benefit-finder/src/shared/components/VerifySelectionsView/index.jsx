@@ -1,7 +1,9 @@
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router'
+import { useEffect, useContext } from 'react'
+import { useNavigate, useLocation } from 'react-router'
 import PropTypes from 'prop-types'
+import { RouteContext } from '@/App'
 import { parseDate, dataLayerUtils, handleSurvey } from '@utils'
+import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import { Heading, Button } from '@components'
 
@@ -24,6 +26,9 @@ const VerifySelectionsView = ({ indexPath, ui, data }) => {
     day: 'numeric',
   }
   const navigate = useNavigate()
+  const location = useLocation()
+  const ROUTES = useContext(RouteContext)
+  const resetElement = useResetElement()
 
   /**
    * afunctional component that renders markup when no value has been given
@@ -100,8 +105,9 @@ const VerifySelectionsView = ({ indexPath, ui, data }) => {
   }
 
   useEffect(() => {
+    resetElement.current.focus()
     window.scrollTo(0, 0)
-  }, [])
+  }, [location])
 
   // handle dataLayer
   useEffect(() => {
@@ -172,7 +178,11 @@ const VerifySelectionsView = ({ indexPath, ui, data }) => {
               </Button>
               <Button
                 secondary
-                onClick={() => navigate(`/${indexPath}/results`)}
+                onClick={() =>
+                  navigate(
+                    `/${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}`
+                  )
+                }
               >
                 {buttonGroup[1].value}
               </Button>

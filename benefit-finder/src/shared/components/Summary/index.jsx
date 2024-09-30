@@ -9,7 +9,7 @@ const Summary = ({ heading, listItems, cta }) => {
 
   const handleReload = e => {
     e.preventDefault()
-    window.location.href = `${window.location.origin}${ROUTES.basePath}${ROUTES.indexPath}`
+    window.location.href = `${window.location.origin}${ROUTES.basePath}/${ROUTES.indexPath}`
   }
 
   return (

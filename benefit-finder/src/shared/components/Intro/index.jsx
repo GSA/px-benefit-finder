@@ -1,5 +1,5 @@
 import { useEffect, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { RouteContext } from '@/App'
 import { dataLayerUtils } from '@utils'
 import { useResetElement } from '@hooks'
@@ -22,18 +22,27 @@ import './_index.scss'
  * @param {object} ui - life event form ui translations
  * @return {html} returns information page view if data exist
  */
-const Intro = ({ content, ui }) => {
+const Intro = ({ content, ui, hasQueryParams }) => {
   const { timeEstimate, title, summary } = content
   const { heading, timeIndicator, steps, notices, button } = ui
   const { intro } = dataLayerUtils.dataLayerStructure
   const resetElement = useResetElement()
   const ROUTES = useContext(RouteContext)
   const navigate = useNavigate()
+  const location = useLocation()
 
   const handleStep = () => {
     navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
     resetElement.current.focus()
   }
+
+  // if we have query paramters direct user to the results page
+  useEffect(() => {
+    hasQueryParams &&
+      navigate(
+        `/${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}${location.search}`
+      )
+  }, [hasQueryParams])
 
   // handle dataLayer
   useEffect(() => {

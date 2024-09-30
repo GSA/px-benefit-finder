@@ -540,17 +540,13 @@ export async function DataDate(
  * @function
  * @param {string} windowQuery
  * @param {array} stepDataArray
- * @param {function} setCurrentData
  * @param {string} sharedToken
  */
-export const DataFromParams = (
-  windowQuery,
-  stepDataArray,
-  setCurrentData,
-  sharedToken
-) => {
+export const DataFromParams = (windowQuery, stepDataArray, sharedToken) => {
   const params = UTILS.GetQueryParams(decodeURI(windowQuery))
   params.filter(param => param.criteriaKey !== sharedToken)
+
+  const setCurrentData = (data, stepIndex) => data[stepIndex]
 
   stepDataArray.forEach(arr => {
     arr.completed = true

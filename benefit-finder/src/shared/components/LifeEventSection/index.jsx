@@ -65,7 +65,10 @@ const LifeEventSection = ({ data, handleData, ui }) => {
    */
   const getFormStepIndex = () =>
     data.findIndex(obj => {
-      const title = obj.section.heading.toLowerCase().replace(/ /g, '-')
+      const cleanStr = obj.section.heading
+        .toLowerCase()
+        .replace(/[^a-zA-Z0-9\s]/g, '')
+      const title = cleanStr.replace(/ /g, '-')
       return location.pathname.match(`${ROUTES.indexPath}/${title}`)
     })
 
@@ -568,11 +571,15 @@ const LifeEventSection = ({ data, handleData, ui }) => {
                   modalHeading={reviewSelectionModal.heading}
                   navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
                   navItemOneFunction={() =>
-                    navigate(`/${ROUTES.indexPath}/${ROUTES.verifySelections}`)
+                    navigate(
+                      `/${ROUTES.indexPath}/${ROUTES.verifySelectionsPath}`
+                    )
                   }
                   navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
                   navItemTwoFunction={() =>
-                    navigate(`/${ROUTES.indexPath}/${ROUTES.results}`)
+                    navigate(
+                      `/${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}`
+                    )
                   }
                   triggerLabel={buttonGroup[1].value}
                   handleCheckRequriedFields={handleCheckRequriedFields}

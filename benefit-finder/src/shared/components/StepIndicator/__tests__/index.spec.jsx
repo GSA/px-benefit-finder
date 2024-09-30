@@ -12,9 +12,7 @@ describe('StepIndicator', () => {
     const { asFragment } = render(
       <StepIndicator
         current={1}
-        // setCurrent={setFormStep}
         data={lifeEventForm.sectionsEligibilityCriteria}
-        // key={`step-indicator-${sectionHeadings}`}
       />,
       {
         wrapper: BrowserRouter,

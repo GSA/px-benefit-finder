@@ -14,6 +14,16 @@ exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
     role="heading"
   />
   <div
+    class="bf-back-to-form-cta"
+  >
+    <button
+      class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+      type="button"
+    >
+      Go back to form
+    </button>
+  </div>
+  <div
     class="bf-zero-benefits-view-cta"
   >
     <button

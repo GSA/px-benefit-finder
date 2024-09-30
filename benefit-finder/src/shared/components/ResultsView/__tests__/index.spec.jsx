@@ -112,7 +112,8 @@ test('scenario 1 loads in view with the correct amount of likely eligible items'
       stepDataArray={stepDataArray}
       data={benfitsArray}
       notEligibleView={false}
-    />
+    />,
+    { wrapper: BrowserRouter }
   )
 
   const eligibility = apiCalls.GET.ElegibilityByCriteria(

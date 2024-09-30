@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+import { BrowserRouter } from 'react-router-dom'
 import ResultsView from '../index.jsx'
 import * as apiCalls from '@api/apiCalls.js'
 import * as en from '@locales/en/en.json'
@@ -94,7 +95,9 @@ test('loads view', async () => {
       ui={en.resultsView}
       stepDataArray={stepDataArray}
       data={benfitsArray}
-    />
+      notEligibleView={false}
+    />,
+    { wrapper: BrowserRouter }
   )
   await screen.findByTestId('bf-result-view')
   expect(view.baseElement).toMatchSnapshot()
@@ -108,6 +111,7 @@ test('scenario 1 loads in view with the correct amount of likely eligible items'
       ui={en.resultsView}
       stepDataArray={stepDataArray}
       data={benfitsArray}
+      notEligibleView={false}
     />
   )
 

@@ -1,3 +1,5 @@
+import { cleanString } from '@utils'
+
 /**
  *
  * UTILS FUNCTIONS
@@ -216,10 +218,7 @@ export const Routes = (w, language, stepDataArray) => {
     /**
      * Clean and transform the section heading to a URL-friendly string.
      */
-    const cleanStr = item.section.heading
-      .toLowerCase()
-      .replace(/[^a-zA-Z0-9\s]/g, '')
-    const path = cleanStr.replace(/ /g, '-')
+    const path = cleanString(item.section.heading)
     return path
   })
 

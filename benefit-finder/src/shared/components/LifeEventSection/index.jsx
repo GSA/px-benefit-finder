@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {
   dateInputValidation,
+  cleanString,
   createMarkup,
   dataLayerUtils,
   errorHandling,
@@ -28,6 +29,7 @@ import './_index.scss'
  * a compound component that renders the main conditional view of the form
  * @component
  * @param {object} data - inherieted life event step data
+ * @param {func} handleData - inherited state manager
  * @param {object} ui - inherited ui translations
  * @return {html} returns a semantic html component that displays a form step
  */
@@ -65,10 +67,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
    */
   const getFormStepIndex = () =>
     data.findIndex(obj => {
-      const cleanStr = obj.section.heading
-        .toLowerCase()
-        .replace(/[^a-zA-Z0-9\s]/g, '')
-      const title = cleanStr.replace(/ /g, '-')
+      const title = cleanString(obj.section.heading)
       return location.pathname.match(`${ROUTES.indexPath}/${title}`)
     })
 
@@ -261,16 +260,16 @@ const LifeEventSection = ({ data, handleData, ui }) => {
       event: lifeEventSection.event,
       bfData: {
         pageView: `${lifeEventSection.bfData.pageView}-${index + 1}`,
-        viewTitle: data[index].section.heading,
+        viewTitle: data[index]?.section.heading,
       },
     })
-    resetElement.current.focus()
+    resetElement.current?.focus()
     window.scrollTo(0, 0)
   }, [location])
 
   useEffect(() => {
     errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
-    resetElement.current.focus()
+    resetElement.current?.focus()
     window.scrollTo(0, 0)
   }, [formStep])
 
@@ -302,7 +301,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
-              <div id="bf-section">
+              <div id="bf-section" data-testid="bf-section">
                 <Alert
                   alertFieldRef={alertFieldRef}
                   heading={ui.alertBanner.heading}

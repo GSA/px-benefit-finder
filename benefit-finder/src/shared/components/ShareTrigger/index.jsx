@@ -10,7 +10,6 @@ import { buildURIParameter } from '@utils'
 
 const ShareTrigger = ({ ui, data }) => {
   const ROUTES = useContext(RouteContext)
-  console.log(ROUTES)
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href

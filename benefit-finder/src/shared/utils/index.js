@@ -1,5 +1,6 @@
 import buildURIParameter from './buildURIParameter'
 import errorHandling from './errorHandling'
+import cleanString from './cleanString'
 import createMarkup from './createMarkup'
 import dataLayerUtils from './dataLayerUtils'
 import dateInputValidation from './dateInputValidation'
@@ -11,6 +12,7 @@ import windowSize from './windowSize'
 export {
   buildURIParameter,
   errorHandling,
+  cleanString,
   createMarkup,
   dataLayerUtils,
   dateInputValidation,

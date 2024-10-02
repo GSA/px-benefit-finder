@@ -8,8 +8,6 @@ const dataLayerPush = (w, dataLayerObj, dedup = true) => {
     const objKeys1 = Object.keys(object1)
     const objKeys2 = Object.keys(object2)
 
-    console.log(objKeys1, objKeys2)
-
     // if they have a different length we can return early
     if (objKeys1.length !== objKeys2.length) return false
 
@@ -33,13 +31,11 @@ const dataLayerPush = (w, dataLayerObj, dedup = true) => {
   if (w.dataLayer) {
     // get the last index of the dataLayer array
     const lastItem = { ...window.dataLayer[window.dataLayer.length - 1] }
-    console.log(lastItem, dataLayerObj)
     delete lastItem['gtm.uniqueEventId']
     delete lastItem.eventCallback
 
     if (dedup === true) {
       // to prevent pushing duplicate objects unecessarily, as long as our last item doesn't match our current data obj, we push
-      console.log(isDeepEqual(lastItem, dataLayerObj))
       isDeepEqual(lastItem, dataLayerObj) === false &&
         w.dataLayer.push(dataLayerObj)
     } else {

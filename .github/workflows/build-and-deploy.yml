@@ -137,10 +137,10 @@ jobs:
           git submodule update
           cd usagov-2021
           git checkout prod
-      - name: Update domain rewrites for deeper wildcard redirects
+      - name: Add redirects to internal_redirects.conf
         run: |
-          sed -i '/^    rewrite \\^\\/education-military-veterans$/i \    rewrite ^/life-event/([^/]+)/[^/]+$ /life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
-          sed -i '/^    rewrite \\^\\/espanol\\/jubilacion$/i \    rewrite ^/espanol/life-event/([^/]+)/[^/]+$ /es/life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
+          sed -i '/rewrite ^\/libraries$/a rewrite ^/life-event/([^/]+)/[^/]+$ /life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
+          sed -i '/rewrite ^\/espanol\/libraries$/a rewrite ^/espanol/life-event/([^/]+)/[^/]+$ /espanol/life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
           cat ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
       - name: Merge files into module
         run: |
@@ -174,7 +174,7 @@ jobs:
         with:
           images: ghcr.io/${{ vars.CR_REPOSITORY }}
           tags: |
-            type=sha,enable=true,priority=100,prefix=,suffix=,format=short
+            type=sha,enable=true,priority=100,prefix=,suffifx=,format=short
       - name: Build and push Docker image
         # uses: docker/build-push-action@v5.3.0
         uses: docker/build-push-action@v6.5.0

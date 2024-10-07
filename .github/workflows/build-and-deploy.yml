@@ -36,12 +36,10 @@ jobs:
           cd usagov-2021
           git checkout prod
           cd ..
-      - name:  Update domain reqrites for testing
+      - name: Update domain rewrites for testing
         run: |
-        sed -i '/rewrite \^\/retirement/a \
-        rewrite ^/life-event/(.*) https://benefits-tool.usa.gov/life-event permanent;\
-        rewrite ^/es/life-event/(.*) https://benefits-tool.usa.gov/es/life-event permanent;' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
-        cat ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf 
+          sed -i '/rewrite \^\/retirement/a rewrite ^/life-event/(.*) https://benefits-tool.usa.gov/life-event permanent; rewrite ^/es/life-event/(.*) https://benefits-tool.usa.gov/es/life-event permanent;' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
+          cat ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
       - name: Install Linters and Sniffers
         run: |
           composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer false

@@ -139,7 +139,7 @@ jobs:
           git checkout prod
       - name: Update domain rewrites for testing
         run: |
-          sed -i '/rewrite \^\/retirement/a \\\n\trewrite ^/life-event/(.*) https://benefits-tool.usa.gov/life-event permanent;\\\n\trewrite ^/es/life-event/(.*) https://benefits-tool.usa.gov/es/life-event permanent;' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
+          sed -i '/rewrite \^\/retirement/a \ \ \ \ rewrite ^/life-event/(.*) https://benefits-tool.usa.gov/life-event permanent;\n\ \ \ \ rewrite ^/es/life-event/(.*) https://benefits-tool.usa.gov/es/life-event permanent;' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
           cat ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
       - name: Merge files into module
         run: |

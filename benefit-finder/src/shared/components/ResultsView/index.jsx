@@ -26,12 +26,14 @@ const ResultsView = ({
   data,
   notEligibleView,
 }) => {
-  // const [notEligibleView, setnotEligibleView] = useState(false)
   const [eligibilityCount, setEligibilityCount] = useState(null)
   const { resultsView } = dataLayerUtils.dataLayerStructure
   const navigate = useNavigate()
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
+  const [elibigleState] = useState(
+    location.search.length > 0 ? false : notEligibleView
+  )
 
   /**
    * a hook that hanldes our open state of the accordions in our group
@@ -108,11 +110,11 @@ const ResultsView = ({
         event: resultsView.event,
         bfData: {
           pageView:
-            notEligibleView === true
+            elibigleState === true
               ? resultsView.bfData.pageView[1]
               : resultsView.bfData.pageView[0],
           viewTitle:
-            notEligibleView === false
+            elibigleState === false
               ? (zeroBenefitsResult &&
                   ui.zeroBenefits.eligible.chevron.heading) ||
                 ui?.eligible.chevron.heading
@@ -122,7 +124,7 @@ const ResultsView = ({
           ...eligibilityCount,
         },
       })
-  }, [notEligibleView, eligibilityCount])
+  }, [elibigleState, eligibilityCount])
 
   useEffect(() => {
     // show the survey
@@ -136,7 +138,7 @@ const ResultsView = ({
       data-testid="bf-result-view"
       data-analytics="bf-result-view"
       data-analytics-content={
-        notEligibleView === true ? 'bf-not-eligible-view' : 'bf-eligible-view'
+        elibigleState === true ? 'bf-not-eligible-view' : 'bf-eligible-view'
       }
       data-analytics-content-criteria-values={criteriaValues}
       data-analytics-content-benefits={benefitsLength}
@@ -151,7 +153,7 @@ const ResultsView = ({
       }
     >
       <Results
-        notEligibleView={notEligibleView}
+        notEligibleView={elibigleState}
         zeroBenefitsResult={zeroBenefitsResult}
         stepDataArray={stepDataArray}
         handleViewToggle={handleViewToggle}

@@ -137,10 +137,11 @@ jobs:
           git submodule update
           cd usagov-2021
           git checkout prod
-      - name: Update domain rewrites for testing
+      - name: Update domain rewrites for deeper wildcard redirects
         run: |
-          sed -i '/rewrite \^\/retirement/a \ \ \ \ rewrite ^/life-event/(.*) https://benefits-tool.usa.gov/life-event permanent;\n\ \ \ \ rewrite ^/es/life-event/(.*) https://benefits-tool.usa.gov/es/life-event permanent;' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
-          cat ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
+          sed -i '/^    rewrite \\^\\/education-military-veterans$/i \    rewrite ^/life-event/([^/]+)/[^/]+$ /life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
+          sed -i '/^    rewrite \\^\\/espanol\\/jubilacion$/i \    rewrite ^/espanol/life-event/([^/]+)/[^/]+$ /es/life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
+          cat ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
       - name: Merge files into module
         run: |
           bash ./scripts/pipeline/mv-benefit-finder-app.sh

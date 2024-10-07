@@ -139,8 +139,8 @@ jobs:
           git checkout prod
       - name: Add redirects to internal_redirects.conf
         run: |
-          sed -i '/rewrite ^\/libraries$/a rewrite ^/life-event/([^/]+)/[^/]+$ /life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
-          sed -i '/rewrite ^\/espanol\/libraries$/a rewrite ^/espanol/life-event/([^/]+)/[^/]+$ /espanol/life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
+          sed -i '/^[[:space:]]*rewrite[[:space:]]\^\/libraries\$/a \    rewrite ^/life-event/([^/]+)/[^/]+$ /life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
+          sed -i '/^[[:space:]]*rewrite[[:space:]]\^\/espanol\/libraries\$/a \    rewrite ^/espanol/life-event/([^/]+)/[^/]+$ /espanol/life-event/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
           cat ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
       - name: Merge files into module
         run: |

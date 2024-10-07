@@ -63,7 +63,7 @@ const Results = ({
         notEligibleView={notEligibleView}
         ui={zeroBenefits}
       />
-    ) : notEligibleView ? (
+    ) : notEligibleView === true ? (
       <NotEligibleBenefitsHeading ui={{ notEligible, summaryBox }} />
     ) : (
       <EligibleBenefitsHeading ui={{ eligible, summaryBox }} />

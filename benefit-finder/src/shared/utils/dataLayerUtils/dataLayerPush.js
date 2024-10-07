@@ -32,6 +32,7 @@ const dataLayerPush = (w, dataLayerObj, dedup = true) => {
     // get the last index of the dataLayer array
     const lastItem = { ...window.dataLayer[window.dataLayer.length - 1] }
     delete lastItem['gtm.uniqueEventId']
+    delete lastItem.eventCallback
 
     if (dedup === true) {
       // to prevent pushing duplicate objects unecessarily, as long as our last item doesn't match our current data obj, we push

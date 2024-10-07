@@ -12,7 +12,7 @@ exports[`loads intro 1`] = `
     <div
       class="benefit-finder"
       data-testid="app"
-      data-version="0.6.2.beta.1"
+      data-version="0.7.0.beta.1"
       id="death"
     >
       <div

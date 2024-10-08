@@ -142,18 +142,12 @@ jobs:
           sed -i '/^    rewrite \^\/benefits-grants-loans/a\    rewrite ^/benefit-finder/([^/]+)/[^/]+$ /benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
           sed -i '/^    rewrite \^\/espanol\/beneficios-familias-militares/a\    rewrite ^/espanol/benefit-finder/([^/]+)/[^/]+$ /espanol/benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
           cat ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
-      - name: Insert rewrite rules with correct formatting and alphabetical order
-        run: |
-          sed -i '/# Individual PERMANENT redirects (all exact match):/a\    rewrite ^/benefit-finder/([^/]+)/[^/]+$ /benefit-finder/$1 permanent;\n    rewrite ^/espanol/benefit-finder/([^/]+)/[^/]+$ /espanol/benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
-          awk 'NR==1; NR>1 {print $0 | "sort"}' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf > temp.conf && mv temp.conf ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
       - name: Merge files into module
         run: |
           bash ./scripts/pipeline/mv-benefit-finder-app.sh
           rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
           mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
           mv ./scripts/application/* usagov-2021/scripts/
-
-          sed -i '2a\\' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
       - name: Configure application
         run: |
           cd usagov-2021

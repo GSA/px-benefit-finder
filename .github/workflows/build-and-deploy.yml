@@ -139,9 +139,9 @@ jobs:
           git checkout prod
       - name:
         run: |
-          sed -i '1a\\' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
           sed -i '/# Rewrites for requests for Host: benefits-tool.usa.gov/ a\    rewrite ^/benefit-finder/([^/]+)/[^/]+$ /benefit-finder/$1 permanent;\n    rewrite ^/espanol/benefit-finder/([^/]+)/[^/]+$ /espanol/benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
           sed -i '/^    rewrite ^\/espanol\/benefit-finder\/([^\/]+)\/[^\/]+$/N;s/\n$//' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
+          sed -i '1a\\' ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
           cat ./usagov-2021/.docker/src-waf/etc/nginx/snippets/domain-rewrites-benefits-tool.conf
       - name: Merge files into module
         run: |

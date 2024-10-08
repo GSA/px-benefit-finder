@@ -9,7 +9,6 @@ module.exports = defineConfig({
   },
   e2e: {
     baseUrl: 'http://localhost:6006',
-    specPattern: 'cypress/e2e/storybook/dataLayer.cy.js',
     excludeSpecPattern: 'cypress/e2e/usagov-public-site/*.cy.js',
     setupNodeEvents(on, config) {
       on('task', {

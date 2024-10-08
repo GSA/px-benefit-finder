@@ -192,23 +192,57 @@ const dataLayerValues = [
 const removeID = item => delete item['gtm.uniqueEventId']
 
 // check to make sure our data layer exists
-describe('Basic Data Layer Checks', () => {
+// describe('Basic Data Layer Checks', () => {
+//   it('has a dataLayer and loads GTM', () => {
+//     cy.visit(utils.storybookUri)
+//     cy.window().then(window => {
+//       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+//       assert.isDefined(
+//         window.dataLayer.find(x => x.event === 'gtm.js'),
+//         'GTM is loaded'
+//       )
+//     })
+//   })
+// })
+
+beforeEach(function () {
+  cy.visit(utils.storybookUri)
+  cy.window().then(window => {
+    assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+  })
+
+  assert.isDefined(
+    window.dataLayer.find(x => x.event === 'gtm.js'),
+    'GTM is loading'
+  )
+
+  assert.isDefined(
+    window.dataLayer.find(x => x.event === 'gtm.load'),
+    'GTM is loaded '
+  )
+})
+
+describe('Calls to Google Analytics Object', function () {
   it('has a dataLayer and loads GTM', () => {
-    cy.visit(utils.storybookUri)
+    // cy.visit(utils.storybookUri)
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       assert.isDefined(
         window.dataLayer.find(x => x.event === 'gtm.js'),
-        'GTM is loaded'
+        'GTM is loading'
+      )
+
+      assert.isDefined(
+        window.dataLayer.find(x => x.event === 'gtm.load'),
+        'GTM is loaded '
       )
     })
   })
-})
 
-describe('Calls to Google Analytics Object', function () {
-  it.only('homepage has a bf_page_change event', function () {
-    cy.visit(utils.storybookUri)
+  it('homepage has a bf_page_change event', function () {
+    // cy.visit(utils.storybookUri)
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
@@ -218,10 +252,6 @@ describe('Calls to Google Analytics Object', function () {
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
           cy.wait(wait).then(() => {
-            assert.isDefined(
-              window.dataLayer.find(x => x.event === 'gtm.load'),
-              'bf_page_change is loaded'
-            )
             assert.isDefined(
               window.dataLayer.find(x => x.event === 'bf_page_change'),
               'bf_page_change is loaded'
@@ -240,7 +270,7 @@ describe('Calls to Google Analytics Object', function () {
   })
 
   it('first form step bf_page_change event', function () {
-    cy.visit(utils.storybookUri)
+    // cy.visit(utils.storybookUri)
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
 
     cy.window().then(window => {
@@ -260,7 +290,7 @@ describe('Calls to Google Analytics Object', function () {
   })
 
   it('second form step bf_page_change event, asserts incrmenting values', function () {
-    cy.visit(utils.storybookUri)
+    // cy.visit(utils.storybookUri)
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
 
     cy.window().then(window => {
@@ -319,7 +349,7 @@ describe('Calls to Google Analytics Object', function () {
   })
 
   it('clicking Continue on the final form step opens a modal and triggers the modal event', function () {
-    cy.visit(utils.storybookUri)
+    // cy.visit(utils.storybookUri)
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
 
     cy.window().then(window => {

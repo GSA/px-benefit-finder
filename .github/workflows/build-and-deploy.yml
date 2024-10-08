@@ -139,9 +139,11 @@ jobs:
           git checkout prod
       - name: Insert rewrite rules in alphabetical order
         run: |
-          sed -i '/^    rewrite \^\/benefits-grants-loans/a\    rewrite ^/benefit-finder/([^/]+)/[^/]+$ /benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
-          sed -i '/^    rewrite \^\/espanol\/beneficios-familias-militares/a\    rewrite ^/espanol/benefit-finder/([^/]+)/[^/]+$ /espanol/benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
-          cat ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
+          sed -i '/^    rewrite \^\/benefits-grants-loans/a\    rewrite ^/benefit-finder/([^/]+)/[^/]+$ /benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-src/etc/nginx/partials/internal_redirects.conf
+          sed -i '/^    rewrite \^\/espanol\/beneficios-familias-militares/a\    rewrite ^/espanol/benefit-finder/([^/]+)/[^/]+$ /espanol/benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
+          cat ./usagov-2021/.docker/src-cms/etc/nginx/partials/internal_redirects.conf
+          sed -i '/# include partials\/internal_redirects.conf;/s/^# //' ./usagov-2021/.docker/src-cms/etc/nginx/partials/cms.conf.tmpl
+          cat ./usagov-2021/.docker/src-cms/etc/nginx/partials/cms.conf.tmpl
       - name: Merge files into module
         run: |
           bash ./scripts/pipeline/mv-benefit-finder-app.sh

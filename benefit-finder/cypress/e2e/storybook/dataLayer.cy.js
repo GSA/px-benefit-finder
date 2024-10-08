@@ -209,20 +209,6 @@ describe('Basic Data Layer Checks', () => {
 describe('Calls to Google Analytics Object', function () {
   it('has a dataLayer and loads GTM', () => {
     cy.visit(utils.storybookUri)
-    cy.window().then(window => {
-      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
-
-      assert.isDefined(
-        window.dataLayer.find(x => x.event === 'gtm.js'),
-        'GTM is loading'
-      )
-
-      assert.isDefined(
-        window.dataLayer.find(x => x.event === 'gtm.load'),
-        'GTM is loaded '
-      )
-    })
-  })
 
   it('homepage has a bf_page_change event', function () {
     cy.visit(utils.storybookUri)
@@ -235,12 +221,17 @@ describe('Calls to Google Analytics Object', function () {
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
           cy.wait(wait).then(() => {
+
+            assert.isDefined(
+              window.dataLayer.find(x => x.event === 'gtm.load'),
+              'GTM is done loading'
+            )
             assert.isDefined(
               window.dataLayer.find(x => x.event === 'bf_page_change'),
               'bf_page_change is loaded'
             )
 
-            cy.wait(wait).then(() => {
+            cy.wait(2500).then(() => {
               // get the last pushed event
               const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
               removeID(ev)

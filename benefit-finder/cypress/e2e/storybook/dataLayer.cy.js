@@ -213,7 +213,6 @@ describe('Calls to Google Analytics Object', function () {
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
-      // .then(() => {
       pageObjects
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
@@ -237,7 +236,6 @@ describe('Calls to Google Analytics Object', function () {
             })
           })
         })
-      // })
     })
   })
 

@@ -212,17 +212,18 @@ describe('Calls to Google Analytics Object', function () {
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+      cy.wait(wait).then(() => {
+        pageObjects
+          .button()
+          .contains(EN_LOCALE_DATA.intro.button)
+          .then(() => {
+            // get the last pushed event
+            const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+            removeID(ev)
 
-      pageObjects
-        .button()
-        .contains(EN_LOCALE_DATA.intro.button)
-        .then(() => {
-          // get the last pushed event
-          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          removeID(ev)
-
-          expect(ev).to.deep.equal(dataLayerValueIntro)
-        })
+            expect(ev).to.deep.equal(dataLayerValueIntro)
+          })
+      })
     })
   })
 

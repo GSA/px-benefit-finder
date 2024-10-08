@@ -137,9 +137,10 @@ jobs:
           git submodule update
           cd usagov-2021
           git checkout prod
-      - name: Routing Testing
+      - name: Insert rewrite rules in alphabetical order
         run: |
-          sed -i '/# Individual PERMANENT redirects (all exact match):/a rewrite ^\/\*\*\*\/([^\/]+)\/[^\/]+$ \/\/\*\*\*\/$1 permanent;\nrewrite ^\/espanol\/\*\*\*\/([^\/]+)\/[^\/]+$ \/espanol\/\*\*\*\/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
+          sed -i '/^    rewrite \^\/benefits-grants-loans/a\    rewrite ^/benefit-finder/([^/]+)/[^/]+$ /benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
+          sed -i '/^    rewrite \^\/espanol\/beneficios-familias-militares/a\    rewrite ^/espanol/benefit-finder/([^/]+)/[^/]+$ /espanol/benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
           cat ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
       - name: Insert rewrite rules with correct formatting and alphabetical order
         run: |
@@ -151,6 +152,8 @@ jobs:
           rm -r usagov-2021/web/modules/custom/usagov_benefit_finder/*
           mv usagov_benefit_finder/* usagov-2021/web/modules/custom/usagov_benefit_finder/
           mv ./scripts/application/* usagov-2021/scripts/
+
+          sed -i '2a\\' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
       - name: Configure application
         run: |
           cd usagov-2021

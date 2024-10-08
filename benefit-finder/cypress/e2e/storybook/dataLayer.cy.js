@@ -207,9 +207,6 @@ describe('Basic Data Layer Checks', () => {
 })
 
 describe('Calls to Google Analytics Object', function () {
-  it('has a dataLayer and loads GTM', () => {
-    cy.visit(utils.storybookUri)
-
   it('homepage has a bf_page_change event', function () {
     cy.visit(utils.storybookUri)
 
@@ -221,7 +218,6 @@ describe('Calls to Google Analytics Object', function () {
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
           cy.wait(wait).then(() => {
-
             assert.isDefined(
               window.dataLayer.find(x => x.event === 'gtm.load'),
               'GTM is done loading'

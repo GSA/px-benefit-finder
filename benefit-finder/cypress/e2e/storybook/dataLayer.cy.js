@@ -213,20 +213,24 @@ describe('Calls to Google Analytics Object', function () {
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
-      assert.isDefined(
-        window.dataLayer.find(x => x.event === 'bf_page_change'),
-        'bf_page_change is loaded'
-      )
       // .then(() => {
       pageObjects
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
-          // get the last pushed event
-          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          removeID(ev)
+          cy.wait(wait).then(() => {
+            assert.isDefined(
+              window.dataLayer.find(x => x.event === 'bf_page_change'),
+              'bf_page_change is loaded'
+            )
+            // get the last pushed event
+            const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+            removeID(ev)
 
-          expect(ev).to.deep.equal(dataLayerValueIntro)
+            console.log(ev)
+
+            expect(ev).to.deep.equal(dataLayerValueIntro)
+          })
         })
       // })
     })

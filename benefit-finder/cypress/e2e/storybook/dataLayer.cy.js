@@ -217,11 +217,28 @@ describe('Calls to Google Analytics Object', function () {
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
-          // get the last pushed event
-          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          removeID(ev)
+          cy.wait(wait).then(() => {
+            assert.isDefined(
+              window.dataLayer.find(x => x.event === 'gtm.load'),
+              'GTM is done loading'
+            )
+            assert.isDefined(
+              window.dataLayer.find(x => x.event === 'bf_page_change'),
+              'bf_page_change is loaded'
+            )
 
-          expect(ev).to.deep.equal(dataLayerValueIntro)
+            cy.wait(500).then(() => {
+              console.log(window.dataLayer)
+              // get the last pushed event
+              const bfEventIndex = window.dataLayer.findIndex(
+                x => x.event === 'bf_page_change'
+              )
+              const ev = { ...window.dataLayer[bfEventIndex] }
+              removeID(ev)
+
+              expect(ev).to.deep.equal(dataLayerValueIntro)
+            })
+          })
         })
     })
   })

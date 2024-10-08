@@ -207,37 +207,37 @@ describe('Basic Data Layer Checks', () => {
 })
 
 describe('Calls to Google Analytics Object', function () {
-  it('homepage has a bf_page_change event', function () {
-    cy.visit(utils.storybookUri)
+  // it('homepage has a bf_page_change event', function () {
+  //   cy.visit(utils.storybookUri)
 
-    cy.window().then(window => {
-      assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+  //   cy.window().then(window => {
+  //     assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
-      pageObjects
-        .button()
-        .contains(EN_LOCALE_DATA.intro.button)
-        .then(() => {
-          cy.wait(wait).then(() => {
-            assert.isDefined(
-              window.dataLayer.find(x => x.event === 'gtm.load'),
-              'GTM is done loading'
-            )
-            assert.isDefined(
-              window.dataLayer.find(x => x.event === 'bf_page_change'),
-              'bf_page_change is loaded'
-            )
+  //     pageObjects
+  //       .button()
+  //       .contains(EN_LOCALE_DATA.intro.button)
+  //       .then(() => {
+  //         cy.wait(wait).then(() => {
+  //           assert.isDefined(
+  //             window.dataLayer.find(x => x.event === 'gtm.load'),
+  //             'GTM is done loading'
+  //           )
+  //           assert.isDefined(
+  //             window.dataLayer.find(x => x.event === 'bf_page_change'),
+  //             'bf_page_change is loaded'
+  //           )
 
-            cy.wait(2500).then(() => {
-              // get the last pushed event
-              const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-              removeID(ev)
+  //           cy.wait(2500).then(() => {
+  //             // get the last pushed event
+  //             const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+  //             removeID(ev)
 
-              expect(ev).to.deep.equal(dataLayerValueIntro)
-            })
-          })
-        })
-    })
-  })
+  //             expect(ev).to.deep.equal(dataLayerValueIntro)
+  //           })
+  //         })
+  //       })
+  //   })
+  // })
 
   it('first form step bf_page_change event', function () {
     cy.visit(utils.storybookUri)

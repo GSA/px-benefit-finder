@@ -218,7 +218,7 @@ describe('Calls to Google Analytics Object', function () {
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
-          cy.wait(wait).then(() => {
+          cy.wait(5500).then(() => {
             assert.isDefined(
               window.dataLayer.find(x => x.event === 'bf_page_change'),
               'bf_page_change is loaded'

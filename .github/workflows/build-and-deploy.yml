@@ -159,7 +159,7 @@ jobs:
           sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
           sed -i 's/\["s3"\]\[\]?/s3\[\]/g' scripts/tome-run.sh scripts/tome-sync.sh
           sed -i "s|/var/www/scripts/tome-run.sh \$URI \$@||" .docker/src-cms/etc/periodic/1min/generate-static-site
-          # sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
+          sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
           sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
           sed -i "s/\$settings\['hash_salt'\] = \$service\['credentials'\]\['HASH_SALT'\]/\$settings\['hash_salt'\] = \$service\['credentials'\]\['hash_salt'\]/"  web/sites/default/settings.php
           sed -i "s/\$service\['name'\] === 'storage'/stristr(\$service\['name'\], 'storage')/"  web/sites/default/settings.php

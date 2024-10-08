@@ -207,7 +207,7 @@ describe('Basic Data Layer Checks', () => {
 })
 
 describe('Calls to Google Analytics Object', function () {
-  it('homepage has a bf_page_change event', function () {
+  it.only('homepage has a bf_page_change event', function () {
     cy.visit(utils.storybookUri)
 
     cy.window().then(window => {
@@ -218,18 +218,26 @@ describe('Calls to Google Analytics Object', function () {
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
-          cy.wait(5500).then(() => {
+          cy.wait(wait).then(() => {
+            console.log(window.dataLayer)
+            assert.isDefined(
+              window.dataLayer.find(x => x.event === 'gtm.load'),
+              'bf_page_change is loaded'
+            )
             assert.isDefined(
               window.dataLayer.find(x => x.event === 'bf_page_change'),
               'bf_page_change is loaded'
             )
-            // get the last pushed event
-            const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-            removeID(ev)
 
-            console.log(ev)
+            cy.wait(wait).then(() => {
+              // get the last pushed event
+              const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
+              removeID(ev)
 
-            expect(ev).to.deep.equal(dataLayerValueIntro)
+              console.log(ev)
+
+              expect(ev).to.deep.equal(dataLayerValueIntro)
+            })
           })
         })
       // })

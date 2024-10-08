@@ -139,8 +139,7 @@ jobs:
           git checkout prod
       - name: Routing Testing
         run: |
-          sed -i '/# Individual PERMANENT redirects (all exact match):/a rewrite ^/benefit-finder/([^/]+)/[^/]+$ /benefit-finder/$1 permanent;\rewrite ^/espanol/benefit-finder/([^/]+)/[^/]+$ /espanol/benefit-finder/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
-          sed -i '/# Individual PERMANENT redirects (all exact match):/!b;n;:a;n;/^rewrite/s/^rewrite \\^\\/benefit-finder/\\/benefit-finder rewrite \\^\\/benefit-finder/;ta' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
+          sed -i '/# Individual PERMANENT redirects (all exact match):/a rewrite ^\/\*\*\*\/([^\/]+)\/[^\/]+$ \/\/\*\*\*\/$1 permanent;\nrewrite ^\/espanol\/\*\*\*\/([^\/]+)\/[^\/]+$ \/espanol\/\*\*\*\/$1 permanent;' ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
           cat ./usagov-2021/.docker/src-www/etc/nginx/partials/internal_redirects.conf
       - name: Merge files into module
         run: |

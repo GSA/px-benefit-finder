@@ -207,7 +207,7 @@ describe('Basic Data Layer Checks', () => {
 })
 
 describe('Calls to Google Analytics Object', function () {
-  it.only('homepage has a bf_page_change event', function () {
+  it('homepage has a bf_page_change event', function () {
     cy.visit(utils.storybookUri)
 
     cy.window().then(window => {

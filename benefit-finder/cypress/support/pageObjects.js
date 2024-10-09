@@ -9,44 +9,48 @@ class PageObjects {
     return cy.get('.usa-step-indicator')
   }
 
+  benefitMemorableDate() {
+    return cy.get('[data-testid="bf-usa-memorable-date"]')
+  }
+
   applicantDateOfBirthMonth() {
-    return cy.get('#applicant_date_of_birth_0_month')
+    return this.benefitMemorableDate().find('[data-testid="month"]')
   }
 
   applicantDateOfBirthDay() {
-    return cy.get('#applicant_date_of_birth_0_day')
+    return this.benefitMemorableDate().find('[data-testid="day"]')
   }
 
   applicantDateOfBirthYear() {
-    return cy.get('#applicant_date_of_birth_0_year')
+    return this.benefitMemorableDate().find('[data-testid="year"]')
   }
 
   applicantDateOfDeathMonth() {
-    return cy.get('#deceased_date_of_death_0_month')
+    return this.benefitMemorableDate().find('[data-testid="month"]')
   }
 
   applicantDateOfDeathDay() {
-    return cy.get('#deceased_date_of_death_0_day')
+    return this.benefitMemorableDate().find('[data-testid="day"]')
   }
 
   applicantDateOfDeathYear() {
-    return cy.get('#deceased_date_of_death_0_year')
+    return this.benefitMemorableDate().find('[data-testid="year"]')
   }
 
   applicantDateOfFuneralMonth() {
-    return cy.get('#deceased_date_of_funeral_0_month')
+    return this.benefitMemorableDate().find('[data-testid="month"]')
   }
 
   applicantDateOfFuneralDay() {
-    return cy.get('#deceased_date_of_funeral_0_day')
+    return this.benefitMemorableDate().find('[data-testid="day"]')
   }
 
   applicantDateOfFuneralYear() {
-    return cy.get('#deceased_date_of_funeral_0_year')
+    return this.benefitMemorableDate().find('[data-testid="year"]')
   }
 
   benefitSectionAlert() {
-    return cy.get('div#bf-section > div[role="alert"]')
+    return cy.get('[data-testid="alert"]')
   }
 
   alertHeading() {
@@ -61,34 +65,41 @@ class PageObjects {
     return cy.get('[data-testid="bf-errors-list-item"]')
   }
 
-  applicantRelationshipToDeceased() {
-    return cy.get('#applicant_relationship_to_the_deceased_0')
+  fieldset() {
+    return cy.get('[data-testid="fieldset"]')
   }
 
-  applicantMaritalStatus() {
-    return cy.get('#applicant_marital_status_0')
+  fieldsetById(id) {
+    return this.fieldset().find(`[id*="${id}"]`)
   }
 
-  benefitSectionFieldset() {
-    return cy.get('#bf-section .usa-fieldset')
+  radioButtonById(id) {
+    return this.fieldset().find(`[id*="${id}"]`)
   }
 
-  buttonGroup() {
-    return cy.get('.usa-button-group li')
+  modalButtonGroup() {
+    return cy.get('[data-testid="modal-button-group"]')
   }
 
-  accordion(heading) {
-    return cy.get(`[data-analytics-content="${heading}"]`)
+  accordionHeading() {
+    return cy.get('[data-testid="accordion-heading"]')
   }
 
-  benefitsAccordion() {
-    return cy.get('.usa-accordion__button')
+  accordion() {
+    return cy.get('[data-testid="benefit"]')
   }
 
-  benefitsAccordionLink(accordionHeading) {
-    return cy.get(
-      `[data-analytics-content="${accordionHeading}"] a[data-testid="bf-benefit-link"]`
-    )
+  accordionByTitle(title) {
+    return this.accordionHeading().contains(new RegExp(`^${title}$`))
+  }
+
+  benefitsAccordionLink(title) {
+    return this.accordionHeading()
+      .contains(new RegExp(`^${title}$`))
+      .parent()
+      .parent()
+      .parent()
+      .find('a[data-testid="bf-benefit-link"]')
   }
 
   menuButton() {
@@ -116,19 +127,19 @@ class PageObjects {
   }
 
   radioGroup() {
-    return cy.get('main .radio-group')
+    return cy.get('[data-testid="radio-group"]')
   }
 
   expandAll() {
-    return cy.get('.bf-expand-all')
+    return cy.get('[data-testid="bf-expand-all"]')
   }
 
-  keyEligibilityCriteriaListIcon() {
-    return cy.get('.usa-accordion .bf-usa-list svg')
+  iconGreenCheck() {
+    return cy.get('[data-testid="icon-green-check"]')
   }
 
   benefitResultsView() {
-    return cy.get('.bf-result-view')
+    return cy.get('[data-testid="bf-result-view"]')
   }
 
   notEligibleResultsButton() {
@@ -136,7 +147,7 @@ class PageObjects {
   }
 
   stepBackLink() {
-    return cy.get('.bf-step-back-button')
+    return cy.get('[data-testid="bf-step-back-button"]')
   }
 
   dateOfBirthError() {

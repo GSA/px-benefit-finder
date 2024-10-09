@@ -83,6 +83,7 @@ const Date = ({
       <div
         id={`bf-usa-memorable-date-${id}`}
         className="bf-usa-memorable-date usa-memorable-date"
+        data-testid="bf-usa-memorable-date"
       >
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select">
           <label className="bf-usa-label usa-label" htmlFor={`${id}_month`}>
@@ -102,6 +103,7 @@ const Date = ({
             data-errormessage={errorMessages.month}
             aria-errormessage={`month-error-description-${id}`}
             data-datetype="month"
+            data-testid="month"
           >
             <option value="" key="default">
               {dateDefaultValue}
@@ -132,6 +134,7 @@ const Date = ({
             data-errormessage={errorMessages.day}
             aria-errormessage={`day-error-description-${id}`}
             data-datetype="day"
+            data-testid="day"
           />
         </div>
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--year usa-form-group--year">
@@ -153,6 +156,7 @@ const Date = ({
             data-errormessage={errorMessages.year}
             aria-errormessage={`year-error-description-${id}`}
             data-datetype="year"
+            data-testid="year"
           />
         </div>
       </div>

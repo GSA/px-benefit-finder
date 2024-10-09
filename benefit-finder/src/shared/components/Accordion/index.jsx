@@ -81,7 +81,10 @@ const Accordion = ({
 
   return (
     <div className="bf-usa-accordion usa-accordion" {...props} hidden={hidden}>
-      <h4 className="bf-usa-accordion__heading usa-accordion__heading">
+      <h4
+        className="bf-usa-accordion__heading usa-accordion__heading"
+        data-testid="accordion-heading"
+      >
         <button
           type="button"
           className="bf-usa-accordion__button usa-accordion__button"

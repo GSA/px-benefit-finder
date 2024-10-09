@@ -80,6 +80,7 @@ const Fieldset = ({
         data-errormessage={handleErrorMessage}
         hidden={hidden}
         aria-hidden={hidden}
+        data-testid="fieldset"
       >
         {legend && handleRequired}
         {invalid === true && (

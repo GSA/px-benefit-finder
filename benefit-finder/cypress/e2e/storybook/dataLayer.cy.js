@@ -5,6 +5,7 @@ import { pageObjects } from '../../support/pageObjects'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import content from '../../../src/shared/api/mock-data/current.json'
+import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 
 // establish some common data points from our mock values and scenarios
 const {
@@ -273,14 +274,24 @@ describe('Calls to Google Analytics Object', function () {
             dateOfBirth.day,
             dateOfBirth.year
           )
+          // Applicant relationship to the deceased
           pageObjects
-            .applicantRelationshipToDeceased()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[1].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
                 .fieldset.inputs[0].inputCriteria.values[1].value
             )
+          // Applicant marital status
           pageObjects
-            .applicantMaritalStatus()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[2].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
                 .fieldset.inputs[0].inputCriteria.values[1].value
@@ -332,14 +343,24 @@ describe('Calls to Google Analytics Object', function () {
             dateOfBirth.day,
             dateOfBirth.year
           )
+          // Applicant Relationship to Deceased
           pageObjects
-            .applicantRelationshipToDeceased()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[1].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
                 .fieldset.inputs[0].inputCriteria.values[1].value
             )
+          // Applicant marital status
           pageObjects
-            .applicantMaritalStatus()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[2].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
                 .fieldset.inputs[0].inputCriteria.values[1].value
@@ -395,7 +416,7 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .benefitsAccordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
@@ -426,14 +447,16 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .benefitsAccordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          pageObjects.accordion(enResults.eligible.eligible_benefits[0]).click()
+          pageObjects
+            .accordionByTitle(enResults.eligible.eligible_benefits[0])
+            .click()
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(wait).then(() => {
@@ -458,14 +481,16 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .benefitsAccordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          pageObjects.accordion(enResults.eligible.eligible_benefits[0]).click()
+          pageObjects
+            .accordionByTitle(enResults.eligible.eligible_benefits[0])
+            .click()
           // we wait for the last event to fire
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(wait).then(() => {
@@ -515,7 +540,7 @@ describe('Calls to Google Analytics Object', function () {
           .click()
           .then(() => {
             pageObjects
-              .benefitsAccordion()
+              .accordionHeading()
               .filter(':visible')
               .should(
                 'have.length',
@@ -574,14 +599,24 @@ describe('Calls to Google Analytics Object', function () {
             dateOfBirth.day,
             dateOfBirth.year
           )
+          // Applicant relationship to deceased
           pageObjects
-            .applicantRelationshipToDeceased()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[1].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
                 .fieldset.inputs[0].inputCriteria.values[1].value
             )
+          // Applicant marital status
           pageObjects
-            .applicantMaritalStatus()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[2].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
                 .fieldset.inputs[0].inputCriteria.values[1].value
@@ -650,9 +685,15 @@ describe('Calls to Google Analytics Object', function () {
 
   it('clicking open all on results page has a bf_open_all_accordions event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
+    pageObjects.accordionHeading().should('exist')
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
+
+      pageObjects
+        .accordionHeading()
+        .filter(':visible')
+        .should('have.length.greaterThan', 0)
 
       pageObjects
         .expandAll()
@@ -668,6 +709,11 @@ describe('Calls to Google Analytics Object', function () {
 
           expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
         })
+
+      pageObjects
+        .accordionHeading()
+        .filter(':visible')
+        .should('have.length.greaterThan', 0)
 
       pageObjects
         .expandAll()
@@ -715,14 +761,24 @@ describe('Calls to Google Analytics Object', function () {
             dateOfBirth.day,
             dateOfBirth.year
           )
+          // Applicant relationship to deceased
           pageObjects
-            .applicantRelationshipToDeceased()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[1].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
                 .fieldset.inputs[0].inputCriteria.values[1].value
             )
+          // Applicant marital status
           pageObjects
-            .applicantMaritalStatus()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[2].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
                 .fieldset.inputs[0].inputCriteria.values[1].value
@@ -856,13 +912,21 @@ describe('Calls to Google Analytics Object', function () {
             dateOfBirth.year
           )
           pageObjects
-            .applicantRelationshipToDeceased()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[1].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
                 .fieldset.inputs[0].inputCriteria.values[1].value
             )
           pageObjects
-            .applicantMaritalStatus()
+            .fieldsetById(
+              EN_DOLO_MOCK_DATA.data.lifeEventForm
+                .sectionsEligibilityCriteria[0].section.fieldsets[2].fieldset
+                .inputs[0].inputCriteria.id
+            )
             .select(
               lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
                 .fieldset.inputs[0].inputCriteria.values[1].value
@@ -1003,7 +1067,7 @@ describe('Calls to Google Analytics Object', function () {
                                   )
 
                                   pageObjects
-                                    .accordion(
+                                    .accordionByTitle(
                                       enResults.eligible.eligible_benefits[0]
                                     )
                                     .click()

@@ -47,11 +47,12 @@ const Intro = ({ content, ui, hasQueryParams }) => {
   // handle dataLayer
   useEffect(() => {
     // gtm
-    dataLayerUtils.dataLayerPush(window, {
-      event: intro.event,
-      bfData: { pageView: intro.bfData.pageView, viewTitle: title },
-    })
-  }, [])
+    !hasQueryParams &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: intro.event,
+        bfData: { pageView: intro.bfData.pageView, viewTitle: title },
+      })
+  }, [hasQueryParams])
 
   return (
     content && (

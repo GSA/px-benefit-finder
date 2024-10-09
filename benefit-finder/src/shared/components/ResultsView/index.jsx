@@ -6,7 +6,6 @@ import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
 import { dataLayerUtils, handleSurvey } from '@utils'
-// import './_index.scss'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
 
@@ -27,13 +26,11 @@ const ResultsView = ({
   notEligibleView,
 }) => {
   const [eligibilityCount, setEligibilityCount] = useState(null)
+  const [zeroBenefitsResult, setZeroBenefitsResult] = useState(null)
   const { resultsView } = dataLayerUtils.dataLayerStructure
   const navigate = useNavigate()
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
-  const [elibigleState] = useState(
-    location.search.length > 0 ? false : notEligibleView
-  )
 
   /**
    * a hook that hanldes our open state of the accordions in our group
@@ -60,19 +57,6 @@ const ResultsView = ({
       data
     ).length
 
-  // filter results by eligiblity status/label
-  const handleEligibilityLength = text => {
-    const matches = []
-    const benefits = document.querySelectorAll('.bf-accordion-sub-heading')
-    // match eligibility with label values
-    for (const div of benefits) {
-      if (div.textContent.includes(text)) {
-        matches.push(div)
-      }
-    }
-    return { number: matches.length, string: `${matches.length}` }
-  }
-
   const handleViewToggle = () => {
     location.pathname ===
     `${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}`
@@ -84,24 +68,19 @@ const ResultsView = ({
   useEffect(() => {
     resetElement.current?.focus()
     window.scrollTo(0, 0)
+    setExpandAll(false)
   }, [location])
 
-  const zeroBenefitsResult = eligibilityCount?.eligibleBenefitCount.number === 0
-
-  // handle dataLayer
+  // collect benefit eligibility counts and set state
   useEffect(() => {
-    setEligibilityCount({
-      eligibleBenefitCount: handleEligibilityLength(
-        ui.benefitAccordion.eligibleStatusLabels[0]
-      ),
-      moreInfoBenefitCount: handleEligibilityLength(
-        ui.benefitAccordion.eligibleStatusLabels[1]
-      ),
-      notEligibleBenefitCount: handleEligibilityLength(
-        ui.benefitAccordion.eligibleStatusLabels[2]
-      ),
+    apiCalls.GET.BenefitsEligibilityCounts(
+      data,
+      ui.benefitAccordion.eligibleStatusLabels
+    ).then(response => {
+      setEligibilityCount(response)
+      setZeroBenefitsResult(response?.eligibleBenefitCount.number === 0)
     })
-  }, [])
+  }, [data])
 
   // handle dataLayer
   useEffect(() => {
@@ -110,11 +89,11 @@ const ResultsView = ({
         event: resultsView.event,
         bfData: {
           pageView:
-            elibigleState === true
+            notEligibleView === true
               ? resultsView.bfData.pageView[1]
               : resultsView.bfData.pageView[0],
           viewTitle:
-            elibigleState === false
+            notEligibleView === false
               ? (zeroBenefitsResult &&
                   ui.zeroBenefits.eligible.chevron.heading) ||
                 ui?.eligible.chevron.heading
@@ -124,7 +103,7 @@ const ResultsView = ({
           ...eligibilityCount,
         },
       })
-  }, [elibigleState, eligibilityCount])
+  }, [notEligibleView, eligibilityCount])
 
   useEffect(() => {
     // show the survey
@@ -138,7 +117,7 @@ const ResultsView = ({
       data-testid="bf-result-view"
       data-analytics="bf-result-view"
       data-analytics-content={
-        elibigleState === true ? 'bf-not-eligible-view' : 'bf-eligible-view'
+        notEligibleView === true ? 'bf-not-eligible-view' : 'bf-eligible-view'
       }
       data-analytics-content-criteria-values={criteriaValues}
       data-analytics-content-benefits={benefitsLength}
@@ -153,7 +132,7 @@ const ResultsView = ({
       }
     >
       <Results
-        notEligibleView={elibigleState}
+        notEligibleView={notEligibleView}
         zeroBenefitsResult={zeroBenefitsResult}
         stepDataArray={stepDataArray}
         handleViewToggle={handleViewToggle}

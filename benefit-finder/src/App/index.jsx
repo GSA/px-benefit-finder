@@ -81,7 +81,13 @@ function App({ testAppContent, testQuery }) {
   useEffect(() => {
     if (hasQueryParams) {
       stepDataArray &&
-        apiCalls.PUT.DataFromParams(windowQuery, stepDataArray, sharedToken)
+        apiCalls.PUT.DataFromParams(
+          windowQuery,
+          stepDataArray,
+          setBenefitsArray,
+          benfitsArray,
+          sharedToken
+        )
     }
   }, [windowQuery, hasQueryParams, stepDataArray])
 

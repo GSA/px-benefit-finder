@@ -5,7 +5,7 @@ import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
-import { dataLayerUtils, handleSurvey } from '@utils'
+import { dataLayerUtils, handleSurvey, domReady } from '@utils'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
 
@@ -25,12 +25,17 @@ const ResultsView = ({
   data,
   notEligibleView,
 }) => {
+  const [loading, setLoading] = useState(true)
   const [eligibilityCount, setEligibilityCount] = useState(null)
   const [zeroBenefitsResult, setZeroBenefitsResult] = useState(null)
   const { resultsView } = dataLayerUtils.dataLayerStructure
   const navigate = useNavigate()
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
+  // const domReadyIndicator = useDomReady({
+  //   loading,
+  //   parentElementID: 'bf-results-view',
+  // })
 
   /**
    * a hook that hanldes our open state of the accordions in our group
@@ -79,6 +84,7 @@ const ResultsView = ({
     ).then(response => {
       setEligibilityCount(response)
       setZeroBenefitsResult(response?.eligibleBenefitCount.number === 0)
+      setLoading(false)
     })
   }, [data])
 
@@ -143,6 +149,10 @@ const ResultsView = ({
         data={data}
         ui={ui}
       />
+      {domReady({
+        loading,
+        parentElementID: 'bf-results-view',
+      })}
     </div>
   )
 }

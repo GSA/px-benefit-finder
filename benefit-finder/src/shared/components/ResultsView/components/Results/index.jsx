@@ -189,7 +189,10 @@ const Results = ({
         zeroBenefitsResult={zeroBenefitsResult}
         ui={ui}
       />
-      <div className="bf-grid-container grid-container">
+      <div
+        className="bf-grid-container grid-container"
+        data-testid="bf-results-view"
+      >
         <div className="bf-result-view-details">
           <ResultsHeadingBlock
             zeroBenefitsResult={zeroBenefitsResult}

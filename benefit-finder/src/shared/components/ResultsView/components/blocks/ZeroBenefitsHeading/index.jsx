@@ -34,7 +34,7 @@ const ZeroBenefitsHeadingBlock = ({
             navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
           }
         >
-          Go back to form
+          {ui?.backcta.link}
         </StepBackButton>
       </div>
       {!notEligibleView && (

@@ -7,12 +7,16 @@ exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
     class="bf-zero-benefits-view-heading "
     data-testid="zero-benefits-view-heading"
     role="heading"
-  />
+  >
+    No eligible results.
+  </h2>
   <h3
     aria-level="3"
     class="bf-zero-benefits-view-description "
     role="heading"
-  />
+  >
+    Based on your answers you are likely not eligible for benefits. You may become eligible if you enter more information or your situation changes.
+  </h3>
   <div
     class="bf-back-to-form-cta"
   >
@@ -20,7 +24,7 @@ exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
       class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
       type="button"
     >
-      Go back to form
+      Go back to start
     </button>
   </div>
   <div
@@ -30,7 +34,9 @@ exports[`ZeroBenefitsHeading > renders a match to the previous snapshot 1`] = `
       class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
       data-testid="zero-benefits-view-cta-button"
       type="button"
-    />
+    >
+      See all benefits
+    </button>
   </div>
 </DocumentFragment>
 `;

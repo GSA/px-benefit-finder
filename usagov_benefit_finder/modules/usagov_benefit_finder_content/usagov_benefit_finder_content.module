@@ -133,19 +133,62 @@ function usagov_benefit_finder_content_node_bears_benefit_edit_form_validate(arr
 /**
  * Implements hook_form_FORM_ID_alter().
  */
+function usagov_benefit_finder_content_form_node_bears_agency_edit_form_alter(array &$form, FormStateInterface $form_state) {
+  $form['#validate'][] = '_usagov_benefit_finder_content_agency_archived';
+}
+
+/**
+ * It checks agency usage in benefits when an agency to be archived.
+ * If still used, it lists the benefits and prevents the agency to be archived.
+ *
+ * @param array $form
+ *   Form array.
+ * @param FormStateInterface $form_state
+ *   Form state object.
+ */
+function _usagov_benefit_finder_content_agency_archived(array &$form, FormStateInterface $form_state) {
+  $line = 0;
+  $moderation_state = $form_state->getValue('moderation_state');
+  $state_value = $moderation_state[0]['value'];
+  if ($state_value == 'archived') {
+    $result = _usagov_benefit_finder_content_check_agency_usage();
+    if (!empty($result)) {
+      $form_state->setErrorByName(++$line, t("This agency cannot be archived as it is still used in following benefits:"));
+      foreach ($result as $row) {
+        $form_state->setErrorByName(++$line, "$row[title] ($row[nid])");
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function usagov_benefit_finder_content_form_node_bears_agency_delete_form_alter(array &$form, FormStateInterface $form_state) {
-  _usagov_benefit_finder_content_check_agency_usage($form);
+  $return = _usagov_benefit_finder_content_check_agency_usage();
+  if (!empty($return)) {
+    $description = '';
+    foreach ($return as $row) {
+      $description .= "<li>$row[title] ($row[nid])</li>";
+    }
+    $description = '<div class="entity-skip">'
+      . '<span>This agency cannot be deleted as it is still used in following benefits:</span>'
+      . "<ul>$description</ul>"
+      . '</div>';
+    $form['description']['#markup'] = $description;
+    $form['actions']['submit']['#access'] = FALSE;
+  }
 }
 
 /**
  * It checks agency usage in benefits.
- * If still used, it lists the benefits and disables the agency delete button.
+ * If still used, it returns array of node ID and title of these benefits.
  *
- * @param array $form
- *   Form array.
+ * @return array
+ *   An array containing node ID and title.
  */
-function _usagov_benefit_finder_content_check_agency_usage(array &$form) {
-  $description = '';
+function _usagov_benefit_finder_content_check_agency_usage() {
+  $return = [];
 
   $node = \Drupal::routeMatch()->getParameter('node');
   $nid = $node->id();
@@ -159,17 +202,13 @@ function _usagov_benefit_finder_content_check_agency_usage(array &$form) {
   $result = $query->execute();
 
   foreach ($result as $row) {
-    $description .= "<li>$row->title ($row->nid)</li>";
+    $return[] = [
+      'nid' => $row->nid,
+      'title' => $row->title,
+    ];
   }
 
-  if (!empty($description)) {
-    $description = '<div class="entity-skip">'
-      . '<span>This agency cannot be deleted as it is still used in following benefits:</span>'
-      . "<ul>$description</ul>"
-      . '</div>';
-    $form['description']['#markup'] = $description;
-    $form['actions']['submit']['#access'] = FALSE;
-  }
+  return $return;
 }
 
 /**

@@ -8,15 +8,14 @@ import './_index.scss'
  * a functional component that supports backwards navigation in the step indicator component
  * @component
  * @param {React.ReactNode} children - inhertied child react nodes for label
- * @param {function} setCurrent - inherited state function
- * @param {number} currentIndex - inherited current index state
+ * @param {function} onClick - inherited click function
  * @return {html} returns markup for a usa unstyled button
  */
-const StepBackButton = ({ children, setCurrent, currentIndex }) => {
+const StepBackButton = ({ children, onClick }) => {
   const resetElement = useResetElement()
 
   const handleStep = () => {
-    setCurrent(currentIndex)
+    onClick()
     resetElement.current.focus()
   }
 
@@ -33,7 +32,6 @@ const StepBackButton = ({ children, setCurrent, currentIndex }) => {
 
 StepBackButton.propTypes = {
   children: PropTypes.node,
-  setCurrent: PropTypes.func,
   currentIndex: PropTypes.number,
 }
 

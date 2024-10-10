@@ -1,9 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import NavModal from 'react-modal'
 import PropTypes from 'prop-types'
 import { Button, ObfuscatedLink, Icon, Heading } from '@components'
 import { scrollLock, dataLayerUtils } from '@utils'
-import { useCrazyEggUpdate } from '@hooks'
 
 import './_index.scss'
 
@@ -54,25 +53,20 @@ const Modal = ({
   navItemTwoLabel,
   navItemTwoFunction,
   handleCheckRequriedFields,
-  modalOpen,
-  setModalOpen,
-  alertElement,
   dataLayerValue,
 }) => {
   // state
   const triggerRef = useRef(null)
   const { modal, errors } = dataLayerUtils.dataLayerStructure
+  const [modalOpen, setModalOpen] = useState(false)
 
   /**
    * a function that triggers the modal to an open state
    * @function
    */
   const handleOpenModal = () => {
-    handleCheckRequriedFields().then(valid =>
-      valid === true
-        ? setModalOpen(true)
-        : window.scrollTo(0, 0) && alertElement.current.focus()
-    )
+    handleCheckRequriedFields().then(valid => valid && setModalOpen(valid))
+    window.scrollTo(0, 0)
   }
 
   /**
@@ -85,6 +79,7 @@ const Modal = ({
     triggerRef && triggerRef.current.focus()
     // clear the hash
     window.location.hash = ''
+    window.scrollTo(0, 0)
     scrollLock.disableScroll()
     setModalOpen(false)
     return true
@@ -110,9 +105,6 @@ const Modal = ({
     NavModal.setAppElement('#benefit-finder')
     return cleanUp()
   }, [])
-
-  // handle crazyEgg
-  modalOpen === true && useCrazyEggUpdate({ pageView: modal.bfData.pageView })
 
   // handle dataLayer
   useEffect(() => {
@@ -143,7 +135,7 @@ const Modal = ({
           },
         })
     })
-  }, [])
+  }, [modalOpen])
 
   /**
    * a functional component that renders a link as a button for launching our dialog

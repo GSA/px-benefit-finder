@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+import { BrowserRouter } from 'react-router-dom'
 import ResultsView from '../index.jsx'
 import * as apiCalls from '@api/apiCalls.js'
 import * as en from '@locales/en/en.json'
@@ -59,44 +60,53 @@ const scenarios = {
 }
 
 const windowQuery = scenarios.death[0].windowQuery // Returns:'?q=123'
-const benfitsArray = [...data.benefits]
 const sharedToken = 'shared'
 let stepDataArray
-let currentData
+let benefitsArray
 let expectedUpdate
 // mock useState Function
-function setCurrentData(updatedData) {
-  currentData = updatedData
+function setBenefitsArray(updatedData) {
+  benefitsArray = updatedData
 }
 
 beforeAll(() => {
   // handle window.scrollTo
   const noop = () => {}
   Object.defineProperty(window, 'scrollTo', { value: noop, writable: true })
-
   stepDataArray = [...data.lifeEventForm.sectionsEligibilityCriteria]
-  setCurrentData(stepDataArray[0])
-
+  benefitsArray = [...data.benefits]
+  setBenefitsArray(benefitsArray)
   apiCalls.PUT.DataFromParams(
     windowQuery,
     stepDataArray,
-    setCurrentData,
+    setBenefitsArray,
+    benefitsArray,
     sharedToken
   )
+
   expectedUpdate =
-    currentData.section.fieldsets[1].fieldset.inputs[0].inputCriteria.values
+    stepDataArray[0].section.fieldsets[1].fieldset.inputs[0].inputCriteria
+      .values
 })
 
 // render view without data
 test('loads view', async () => {
   const view = render(
     <ResultsView
-      ui={en.resultsView}
       stepDataArray={stepDataArray}
-      data={benfitsArray}
-    />
+      relevantBenefits={data.lifeEventForm?.relevantBenefits}
+      data={benefitsArray}
+      notEligibleView={false}
+      ui={en.resultsView}
+    />,
+    { wrapper: BrowserRouter }
   )
+
   await screen.findByTestId('bf-result-view')
+  await screen.findByTestId('bf-share-trigger')
+  await screen.findAllByTestId('benefit')
+  await screen.findByTestId('dom-ready')
+
   expect(view.baseElement).toMatchSnapshot()
 })
 
@@ -105,15 +115,21 @@ test('scenario 1 loads in view with the correct amount of likely eligible items'
   expect(expectedUpdate[0]).toHaveProperty('selected', true)
   const view = render(
     <ResultsView
-      ui={en.resultsView}
       stepDataArray={stepDataArray}
-      data={benfitsArray}
-    />
+      relevantBenefits={data.lifeEventForm?.relevantBenefits}
+      data={benefitsArray}
+      notEligibleView={false}
+      ui={en.resultsView}
+    />,
+    { wrapper: BrowserRouter }
   )
+
+  await screen.findByTestId('bf-result-view')
+  await screen.findByTestId('bf-share-trigger')
 
   const eligibility = apiCalls.GET.ElegibilityByCriteria(
     stepDataArray,
-    benfitsArray
+    benefitsArray
   )
 
   const e = eligibility.filter(item => {
@@ -136,5 +152,7 @@ test('scenario 1 loads in view with the correct amount of likely eligible items'
   expect(m.length - e.length - n.length).toBe(1)
 
   await screen.findAllByTestId('benefit')
+  await screen.findByTestId('dom-ready')
+
   expect(view.baseElement).toMatchSnapshot()
 })

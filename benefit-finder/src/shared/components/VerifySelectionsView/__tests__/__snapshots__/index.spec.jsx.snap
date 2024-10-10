@@ -20,10 +20,6 @@ exports[`VerifySelectionsView > renders a match to the previous snapshot 1`] = `
         <div
           class="bf-section-info"
         >
-          <button
-            class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
-            type="button"
-          />
           <div />
           <div
             class="bf-section-nav-btn-group"

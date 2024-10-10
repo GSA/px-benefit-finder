@@ -4,7 +4,6 @@ import {
   Button,
   EmailTrigger,
   Heading,
-  StepBackButton,
   Chevron,
   ShareTrigger,
   RelativeBenefitList,
@@ -25,11 +24,9 @@ const Results = ({
   stepDataArray,
   isExpandAll,
   setExpandAll,
-  handleStepBack,
   handleViewToggle,
   data,
   relevantBenefits,
-  resetElement,
   ui,
 }) => {
   // Results view components
@@ -66,31 +63,10 @@ const Results = ({
         notEligibleView={notEligibleView}
         ui={zeroBenefits}
       />
-    ) : notEligibleView ? (
+    ) : notEligibleView === true ? (
       <NotEligibleBenefitsHeading ui={{ notEligible, summaryBox }} />
     ) : (
       <EligibleBenefitsHeading ui={{ eligible, summaryBox }} />
-    )
-  }
-
-  const ResultsStepBackButton = ({ notEligibleView, handleStepBack, ui }) => {
-    const { stepBackButton } = ui
-    return notEligibleView === false ? (
-      <StepBackButton
-        onClick={() => resetElement.current.focus()}
-        setCurrent={handleStepBack}
-      >
-        {stepBackButton}
-      </StepBackButton>
-    ) : (
-      // we don't step back on toggle view
-      <Button
-        className="bf-step-back-button"
-        onClick={() => handleViewToggle()}
-        unstyled
-      >
-        {stepBackButton}
-      </Button>
     )
   }
 
@@ -213,14 +189,11 @@ const Results = ({
         zeroBenefitsResult={zeroBenefitsResult}
         ui={ui}
       />
-      <div className="bf-grid-container grid-container">
+      <div
+        className="bf-grid-container grid-container"
+        data-testid="bf-results-view"
+      >
         <div className="bf-result-view-details">
-          <ResultsStepBackButton
-            notEligibleView={notEligibleView}
-            ui={ui}
-            handleStepBack={handleStepBack}
-          />
-
           <ResultsHeadingBlock
             zeroBenefitsResult={zeroBenefitsResult}
             notEligibleView={notEligibleView}

@@ -1,6 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useContext } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { RouteContext } from '@/App'
 import { dataLayerUtils } from '@utils'
-import { useResetElement, useCrazyEggUpdate } from '@hooks'
+import { useResetElement } from '@hooks'
 import PropTypes from 'prop-types'
 import {
   Button,
@@ -16,37 +18,44 @@ import './_index.scss'
 /**
  * a compound component that renders the introductional start of the form process
  * @component
- * @param {object} data - inherited life event content
+ * @param {object} content - inherited life event content
  * @param {object} ui - life event form ui translations
- * @param {function} setStep - incrments step count for initial form entry
- * @param {number} step - indicates which section of the form we are on
  * @return {html} returns information page view if data exist
  */
-const Intro = ({ data, ui, setStep, step }) => {
-  const { timeEstimate, title, summary } = data
+const Intro = ({ content, ui, hasQueryParams }) => {
+  const { timeEstimate, title, summary } = content
   const { heading, timeIndicator, steps, notices, button } = ui
   const { intro } = dataLayerUtils.dataLayerStructure
   const resetElement = useResetElement()
+  const ROUTES = useContext(RouteContext)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const handleStep = () => {
-    setStep(step + 1)
+    navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
     resetElement.current.focus()
   }
 
-  // handle crazyEgg
-  useCrazyEggUpdate({ pageView: intro.bfData.pageView })
+  // if we have query paramters direct user to the results page
+  useEffect(() => {
+    hasQueryParams &&
+      navigate(
+        `/${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}${location.search}`
+      )
+  }, [hasQueryParams])
 
   // handle dataLayer
   useEffect(() => {
     // gtm
-    dataLayerUtils.dataLayerPush(window, {
-      event: intro.event,
-      bfData: { pageView: intro.bfData.pageView, viewTitle: title },
-    })
-  }, [])
+    !hasQueryParams &&
+      dataLayerUtils.dataLayerPush(window, {
+        event: intro.event,
+        bfData: { pageView: intro.bfData.pageView, viewTitle: title },
+      })
+  }, [hasQueryParams])
 
   return (
-    data && (
+    content && (
       <div className="bf-intro">
         <Chevron heading={title} description={summary} />
         <div className="bf-grid-container grid-container">
@@ -93,7 +102,6 @@ const Intro = ({ data, ui, setStep, step }) => {
 Intro.propTypes = {
   data: PropTypes.object,
   ui: PropTypes.object,
-  setStep: PropTypes.func,
   step: PropTypes.number,
 }
 

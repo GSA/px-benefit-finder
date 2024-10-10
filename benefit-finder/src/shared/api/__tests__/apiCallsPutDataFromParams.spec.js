@@ -15,25 +15,29 @@ const scenarios = {
 
 const sharedToken = 'shared'
 let stepDataArray
-let currentData
 let expectedUpdate
+let benefitsArray
 
 // mock useState Function
-function setCurrentData(updatedData) {
-  currentData = updatedData
+function setBenefitsArray(updatedData) {
+  benefitsArray = updatedData
 }
 
 beforeAll(() => {
   stepDataArray = [...data.lifeEventForm.sectionsEligibilityCriteria]
-  setCurrentData(stepDataArray[0])
+  benefitsArray = [...data.benefits]
+  setBenefitsArray(benefitsArray)
   apiCalls.PUT.DataFromParams(
     scenarios.death[0].windowQuery,
     stepDataArray,
-    setCurrentData,
+    setBenefitsArray,
+    benefitsArray,
     sharedToken
   )
+
   expectedUpdate =
-    currentData.section.fieldsets[1].fieldset.inputs[0].inputCriteria.values
+    stepDataArray[0].section.fieldsets[1].fieldset.inputs[0].inputCriteria
+      .values
 })
 
 // confirm updated data return

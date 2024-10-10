@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 
-import './_index.scss'
 /**
  * a functional component that wraps form elements in a form element
  * @component

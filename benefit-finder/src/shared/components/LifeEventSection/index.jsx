@@ -1,13 +1,16 @@
-import { useState, useEffect, useRef, Fragment } from 'react'
+import { useState, useEffect, useRef, useContext, Fragment } from 'react'
+import { RouteContext } from '@/App'
+import { useNavigate, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {
   dateInputValidation,
+  cleanString,
   createMarkup,
   dataLayerUtils,
   errorHandling,
   handleSurvey,
 } from '@utils'
-import { useHandleUnload, useResetElement, useCrazyEggUpdate } from '@hooks'
+import { useHandleUnload, useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import {
   Alert,
@@ -25,30 +28,16 @@ import './_index.scss'
 /**
  * a compound component that renders the main conditional view of the form
  * @component
- * @param {number} step - inherited current step value
- * @param {function} setStep - inherited function to inc/dec step value
  * @param {object} data - inherieted life event step data
- * @param {function} setStepData - inherited function to set index of step data
- * @param {function} setVerifyStep - inherit view handler
- * @param {function} setViewResults - inherited view handler
+ * @param {func} handleData - inherited state manager
  * @param {object} ui - inherited ui translations
  * @return {html} returns a semantic html component that displays a form step
  */
-const LifeEventSection = ({
-  step,
-  setStep,
-  data,
-  handleData,
-  setStepData,
-  setVerifyStep,
-  setViewResults,
-  ui,
-  modalOpen,
-  setModalOpen,
-}) => {
+const LifeEventSection = ({ data, handleData, ui }) => {
   // state
-  const [modal, setModal] = useState(false)
-  const [currentData, setCurrentData] = useState(() => data && data[step - 1])
+  const [formStep, setFormStep] = useState(0)
+  const [modalStep, setModalStep] = useState(false)
+  const [currentData, setCurrentData] = useState(() => data && data[formStep])
   const [requiredFieldsets, setRequiredFieldsets] = useState([])
   const [hasError, setHasError] = useState([])
   const [hasData, setHasData] = useState(
@@ -56,21 +45,35 @@ const LifeEventSection = ({
   )
   const [submissionCount, setSubmissionCount] = useState(0)
   const { lifeEventSection } = dataLayerUtils.dataLayerStructure
+  const { buttonGroup, reviewSelectionModal, requiredLabel, sectionHeadings } =
+    ui // desctructure data
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
+  const ROUTES = useContext(RouteContext)
+  const navigate = useNavigate()
+  /* eslint-disable */
+  let location = useLocation() // ignore prefer-const
+  /* eslint-enable */
+
+  /**
+   * Finds the index of the current form step in the data array.
+   *
+   * @param {Object[]} data - The array of form step objects.
+   * @param {Object} location - The current location object.
+   * @param {string} location.pathname - The current URL path.
+   * @param {string} ROUTES.indexPath - The base path for the form steps.
+   *
+   * @returns {number} The index of the current form step, or -1 if not found.
+   */
+  const getFormStepIndex = () =>
+    data.findIndex(obj => {
+      const title = cleanString(obj.section.heading)
+      return location.pathname.match(`${ROUTES.indexPath}/${title}`)
+    })
 
   useEffect(() => {
     resetElement.current?.focus()
   }, [resetElement])
-
-  // desctructure data
-  const {
-    stepIndicator,
-    buttonGroup,
-    reviewSelectionModal,
-    requiredLabel,
-    sectionHeadings,
-  } = ui
 
   /**
    * a function that updates our current data state
@@ -78,7 +81,7 @@ const LifeEventSection = ({
    * @return {object} object as state
    */
   const handleUpdateData = () => {
-    data[step - 1] = { ...currentData }
+    data[formStep] = { ...currentData }
     handleData([...data])
   }
 
@@ -144,29 +147,30 @@ const LifeEventSection = ({
    * @return {null} only executes inherited functions
    */
   const handleForwardUpdate = updateIndex => {
-    handleCheckRequriedFields()
-    errorHandling
-      .handleCheckForRequiredValues(requiredFieldsets, setHasError)
-      .then(valid => {
-        if (valid === true) {
-          // handle dataLayer
-          const { errors } = dataLayerUtils.dataLayerStructure
-          dataLayerUtils.dataLayerPush(window, {
-            event: errors.event,
-            bfData: {
-              errors: '',
-              errorCount: {
-                number: 0,
-                string: `0`,
-              },
-              formSuccess: true,
+    handleCheckRequriedFields().then(valid => {
+      if (valid === true) {
+        // handle dataLayer
+        const { errors } = dataLayerUtils.dataLayerStructure
+        dataLayerUtils.dataLayerPush(window, {
+          event: errors.event,
+          bfData: {
+            errors: '',
+            errorCount: {
+              number: 0,
+              string: `0`,
             },
-          })
-          setStep(step + updateIndex)
-          setStepData(updateIndex)
-          resetElement && resetElement.current.focus()
+            formSuccess: true,
+          },
+        })
+
+        const stepIndex = formStep + updateIndex
+        if (formStep <= data.length) {
+          navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[stepIndex]}`)
+          setCurrentData(data[stepIndex])
         }
-      })
+        resetElement && resetElement.current.focus()
+      }
+    })
   }
 
   /**
@@ -176,7 +180,7 @@ const LifeEventSection = ({
    * @return {null} only executes inherited functions
    */
   const handleBackUpdate = updateIndex => {
-    setStep(step + updateIndex)
+    formStep === 0 ? navigate(`/${ROUTES.indexPath}`) : navigate(updateIndex)
     resetElement.current.focus()
   }
 
@@ -188,7 +192,6 @@ const LifeEventSection = ({
    */
   const handleChanged = (event, criteriaKey) => {
     window.history.replaceState({}, '', window.location.pathname)
-
     apiCalls.PUT.Data(
       criteriaKey,
       currentData,
@@ -242,60 +245,63 @@ const LifeEventSection = ({
 
   // manage the display of our modal initializer
   useEffect(() => {
-    data && step === data.length ? setModal(true) : setModal(false)
-  }, [currentData, data, modal, step])
+    location.pathname.includes(ROUTES.formPaths[ROUTES.formPaths.length - 1])
+      ? setModalStep(true)
+      : setModalStep(false)
+  }, [location])
 
-  // check for all required fields and scroll to top on mount
+  // handle dataLayer, based on location change
   useEffect(() => {
+    // use location change to manage data layer values
+    const index = getFormStepIndex()
+    setFormStep(index)
+    setCurrentData(data[index])
+    dataLayerUtils.dataLayerPush(window, {
+      event: lifeEventSection.event,
+      bfData: {
+        pageView: `${lifeEventSection.bfData.pageView}-${index + 1}`,
+        viewTitle: data[index]?.section.heading,
+      },
+    })
+    resetElement.current?.focus()
     window.scrollTo(0, 0)
+  }, [location])
+
+  useEffect(() => {
+    errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
+    resetElement.current?.focus()
+    window.scrollTo(0, 0)
+  }, [formStep])
+
+  useEffect(() => {
     errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
   }, [])
-
-  // handle dataLayer
-  useEffect(() => {
-    modalOpen === false &&
-      dataLayerUtils.dataLayerPush(window, {
-        event: lifeEventSection.event,
-        bfData: {
-          pageView: `${lifeEventSection.bfData.pageView}-${step}`,
-          viewTitle: currentData.section.heading,
-        },
-      })
-  }, [])
-
-  // handle crazyEgg
-  data.length > 0 &&
-    modalOpen === false &&
-    useCrazyEggUpdate({
-      pageView: `${lifeEventSection?.bfData.pageView}-${step}`,
-    })
 
   useEffect(() => {
     // hide the survey
     handleSurvey({ hide: true })
-  }, [])
+  })
 
   return (
     data && (
       <>
         <Heading className="bf-section-heading" headingLevel={1}>
-          {step === data.length
+          {formStep === data.length - 1
             ? `${sectionHeadings.final}`
-            : step - 1 === 0
+            : formStep === 0
               ? `${sectionHeadings.start}`
               : `${sectionHeadings.continue}`}
         </Heading>
         <div className="bf-section-wrapper">
           <div className="bf-section-info">
             <StepIndicator
-              current={step - 1}
-              setCurrent={setStep}
+              current={formStep}
+              setCurrent={setFormStep}
               data={data}
-              backLinkLabel={stepIndicator.StepBackButton}
               key={`step-indicator-${sectionHeadings}`}
             />
             {currentData && (
-              <div id="bf-section">
+              <div id="bf-section" data-testid="bf-section">
                 <Alert
                   alertFieldRef={alertFieldRef}
                   heading={ui.alertBanner.heading}
@@ -552,7 +558,7 @@ const LifeEventSection = ({
               <Button outline onClick={() => handleBackUpdate(-1)}>
                 {buttonGroup[0].value}
               </Button>
-              {modal === false ? (
+              {modalStep === false ? (
                 <Button secondary onClick={() => handleForwardUpdate(1)}>
                   {buttonGroup[1].value}
                 </Button>
@@ -562,15 +568,20 @@ const LifeEventSection = ({
                   dataLayerValue={{ viewTitle: currentData.section.heading }}
                   modalHeading={reviewSelectionModal.heading}
                   navItemOneLabel={reviewSelectionModal.buttonGroup[0].value}
-                  navItemOneFunction={setVerifyStep}
+                  navItemOneFunction={() =>
+                    navigate(
+                      `/${ROUTES.indexPath}/${ROUTES.verifySelectionsPath}`
+                    )
+                  }
                   navItemTwoLabel={reviewSelectionModal.buttonGroup[1].value}
-                  navItemTwoFunction={setViewResults}
+                  navItemTwoFunction={() =>
+                    navigate(
+                      `/${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}`
+                    )
+                  }
                   triggerLabel={buttonGroup[1].value}
                   handleCheckRequriedFields={handleCheckRequriedFields}
-                  modalOpen={modalOpen}
-                  setModalOpen={setModalOpen}
                   completed={currentData.completed}
-                  alertElement={alertFieldRef}
                 />
               )}
             </div>
@@ -583,12 +594,8 @@ const LifeEventSection = ({
 
 LifeEventSection.propTypes = {
   props: PropTypes.any,
-  step: PropTypes.number,
-  setStep: PropTypes.func,
+  formStep: PropTypes.number,
   data: PropTypes.array,
-  setStepData: PropTypes.func,
-  setVerifyStep: PropTypes.func,
-  setViewResults: PropTypes.func,
   ui: PropTypes.object,
 }
 

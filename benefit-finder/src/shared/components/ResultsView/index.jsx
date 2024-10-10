@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
-import { useResetElement, useCrazyEggUpdate } from '@hooks'
+import { useEffect, useState, useContext } from 'react'
+import { useNavigate, useLocation } from 'react-router'
+import { RouteContext } from '@/App'
+import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
-import { dataLayerUtils, handleSurvey } from '@utils'
-// import './_index.scss'
+import { dataLayerUtils, handleSurvey, domReady } from '@utils'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
 
 /**
  * a functional component that renders a view of the form benefit state values
  * @component
- * @param {function} handlStepBack inherited ui translations
  * @param {func} setBenefitsArray inherited state handler
  * @param {array} stepDataArray inherited state of inupt values from form entry
  * @param {object} ui inherited ui translations
@@ -19,15 +19,23 @@ import { dataLayerUtils, handleSurvey } from '@utils'
  * @return {html} returns a view page of filtered benefits
  */
 const ResultsView = ({
-  handleStepBack,
   stepDataArray,
   relevantBenefits,
   ui,
   data,
+  notEligibleView,
 }) => {
-  const [notEligibleView, setnotEligibleView] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [eligibilityCount, setEligibilityCount] = useState(null)
+  const [zeroBenefitsResult, setZeroBenefitsResult] = useState(null)
   const { resultsView } = dataLayerUtils.dataLayerStructure
+  const navigate = useNavigate()
+  const location = useLocation()
+  const ROUTES = useContext(RouteContext)
+  // const domReadyIndicator = useDomReady({
+  //   loading,
+  //   parentElementID: 'bf-results-view',
+  // })
 
   /**
    * a hook that hanldes our open state of the accordions in our group
@@ -54,51 +62,31 @@ const ResultsView = ({
       data
     ).length
 
-  // filter results by eligiblity status/label
-  const handleEligibilityLength = text => {
-    const matches = []
-    const benefits = document.querySelectorAll('.bf-accordion-sub-heading')
-    // match eligibility with label values
-    for (const div of benefits) {
-      if (div.textContent.includes(text)) {
-        matches.push(div)
-      }
-    }
-    return { number: matches.length, string: `${matches.length}` }
-  }
-
   const handleViewToggle = () => {
-    setExpandAll(false)
-    setnotEligibleView(!notEligibleView)
-    window.scrollTo(0, 0)
-    resetElement.current.focus()
+    location.pathname ===
+    `${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}`
+      ? navigate(-1)
+      : navigate(`/${ROUTES.indexPath}/${ROUTES.resultsPaths.notEligiblePath}`)
   }
 
-  const zeroBenefitsResult = eligibilityCount?.eligibleBenefitCount.number === 0
-
+  // handle location change
   useEffect(() => {
+    resetElement.current?.focus()
     window.scrollTo(0, 0)
-    setEligibilityCount({
-      eligibleBenefitCount: handleEligibilityLength(
-        ui.benefitAccordion.eligibleStatusLabels[0]
-      ),
-      moreInfoBenefitCount: handleEligibilityLength(
-        ui.benefitAccordion.eligibleStatusLabels[1]
-      ),
-      notEligibleBenefitCount: handleEligibilityLength(
-        ui.benefitAccordion.eligibleStatusLabels[2]
-      ),
-    })
-  }, [])
+    setExpandAll(false)
+  }, [location])
 
-  // handle CrazyEgg
-  useCrazyEggUpdate({
-    pageView:
-      notEligibleView === true
-        ? resultsView.bfData.pageView[1]
-        : resultsView.bfData.pageView[0],
-    notEligibleView,
-  })
+  // collect benefit eligibility counts and set state
+  useEffect(() => {
+    apiCalls.GET.BenefitsEligibilityCounts(
+      data,
+      ui.benefitAccordion.eligibleStatusLabels
+    ).then(response => {
+      setEligibilityCount(response)
+      setZeroBenefitsResult(response?.eligibleBenefitCount.number === 0)
+      setLoading(false)
+    })
+  }, [data])
 
   // handle dataLayer
   useEffect(() => {
@@ -150,7 +138,6 @@ const ResultsView = ({
       }
     >
       <Results
-        handleStepBack={handleStepBack}
         notEligibleView={notEligibleView}
         zeroBenefitsResult={zeroBenefitsResult}
         stepDataArray={stepDataArray}
@@ -162,12 +149,15 @@ const ResultsView = ({
         data={data}
         ui={ui}
       />
+      {domReady({
+        loading,
+        parentElementID: 'bf-results-view',
+      })}
     </div>
   )
 }
 
 ResultsView.propTypes = {
-  handleStepBack: PropTypes.func,
   ui: PropTypes.object,
   data: PropTypes.array,
 }

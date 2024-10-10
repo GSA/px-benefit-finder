@@ -1,7 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useContext } from 'react'
+import { useNavigate, useLocation } from 'react-router'
 import PropTypes from 'prop-types'
-import { parseDate, dataLayerUtils } from '@utils'
-import { useCrazyEggUpdate } from '@hooks'
+import { RouteContext } from '@/App'
+import { parseDate, dataLayerUtils, handleSurvey } from '@utils'
+import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import { Heading, Button } from '@components'
 
@@ -10,19 +12,12 @@ import './_index.scss'
 /**
  * afunctional component that renders a view of the form input state values
  * @component
- * @param {function} handleStepForward - an array of sections
- * @param {function} handleStepBack - determinate to render headings or not
  * @param {object} ui - translations
  * @param {array} data - inherited state of data in current session
  * @return {html} returns semantic html view for current input values
  */
-const VerifySelectionsView = ({
-  handleStepForward,
-  handleStepBack,
-  ui,
-  data,
-}) => {
-  const { stepIndicator, verifySelectionsView, buttonGroup } = ui
+const VerifySelectionsView = ({ indexPath, ui, data }) => {
+  const { verifySelectionsView, buttonGroup } = ui
   const { verifySelections } = dataLayerUtils.dataLayerStructure
   const local = apiCalls.GET.Language()
   const dateFormatOptions = {
@@ -30,6 +25,10 @@ const VerifySelectionsView = ({
     month: 'long',
     day: 'numeric',
   }
+  const navigate = useNavigate()
+  const location = useLocation()
+  const ROUTES = useContext(RouteContext)
+  const resetElement = useResetElement()
 
   /**
    * afunctional component that renders markup when no value has been given
@@ -106,11 +105,9 @@ const VerifySelectionsView = ({
   }
 
   useEffect(() => {
+    resetElement.current?.focus()
     window.scrollTo(0, 0)
-  }, [])
-
-  // handle crazyEgg
-  useCrazyEggUpdate({ pageView: verifySelections.bfData.pageView })
+  }, [location])
 
   // handle dataLayer
   useEffect(() => {
@@ -123,6 +120,11 @@ const VerifySelectionsView = ({
     })
   }, [])
 
+  useEffect(() => {
+    // hide the survey
+    handleSurvey({ hide: true })
+  }, [])
+
   return (
     <div className="bf-verify-selections-view">
       <div className="bf-grid-container grid-container">
@@ -131,13 +133,6 @@ const VerifySelectionsView = ({
         </Heading>
         <div className="bf-section-wrapper">
           <div className="bf-section-info">
-            <Button
-              className="bf-step-back-button"
-              onClick={handleStepBack}
-              unstyled
-            >
-              {stepIndicator?.stepBackButton}
-            </Button>
             <div>
               {data &&
                 data.map((item, i) => {
@@ -178,10 +173,17 @@ const VerifySelectionsView = ({
                 })}
             </div>
             <div className="bf-section-nav-btn-group">
-              <Button outline onClick={handleStepBack}>
+              <Button outline onClick={() => navigate(-1)}>
                 {buttonGroup[0].value}
               </Button>
-              <Button secondary onClick={handleStepForward}>
+              <Button
+                secondary
+                onClick={() =>
+                  navigate(
+                    `/${ROUTES.indexPath}/${ROUTES.resultsPaths.resultsPath}`
+                  )
+                }
+              >
                 {buttonGroup[1].value}
               </Button>
             </div>
@@ -193,8 +195,6 @@ const VerifySelectionsView = ({
 }
 
 VerifySelectionsView.propTypes = {
-  handleStepForward: PropTypes.func,
-  handleStepBck: PropTypes.func,
   ui: PropTypes.object,
   data: PropTypes.array,
 }

@@ -110,6 +110,10 @@
       "description": "<strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes."
     },
     "zeroBenefits": {
+      "backcta": {
+        "text": "",
+        "link": "Go back to start"
+      },
       "eligible": {
         "chevron": {
           "heading": "You are likely not eligible for these benefits.",

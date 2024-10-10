@@ -1,4 +1,5 @@
 import buildURIParameter from './buildURIParameter'
+import domReady from './domReady'
 import errorHandling from './errorHandling'
 import cleanString from './cleanString'
 import createMarkup from './createMarkup'
@@ -11,6 +12,7 @@ import windowSize from './windowSize'
 
 export {
   buildURIParameter,
+  domReady,
   errorHandling,
   cleanString,
   createMarkup,

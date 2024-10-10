@@ -558,9 +558,16 @@ describe('Calls to Google Analytics Object', function () {
                             dataLayerValueResultsViewNotEligible.event
                         ),
                       ]
-                      removeID(ev[1])
 
-                      expect(ev[1]).to.deep.equal(
+                      const bfEventIndex = ev.findIndex(
+                        x =>
+                          x.bfData.viewTitle ===
+                          dataLayerValueResultsViewNotEligible.bfData.viewTitle
+                      )
+
+                      removeID(ev[bfEventIndex])
+
+                      expect(ev[bfEventIndex]).to.deep.equal(
                         dataLayerValueResultsViewNotEligible
                       )
                     })

@@ -530,7 +530,7 @@ describe('Calls to Google Analytics Object', function () {
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          cy.wait(wait).then(() => {
+          cy.wait(2500).then(() => {
             // click not eligible benefits view
             pageObjects
               .notEligibleResultsButton()

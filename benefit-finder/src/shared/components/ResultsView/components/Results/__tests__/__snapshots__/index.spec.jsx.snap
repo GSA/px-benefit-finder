@@ -29,6 +29,7 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
   </div>
   <div
     class="bf-grid-container grid-container"
+    data-testid="bf-results-view"
   >
     <div
       class="bf-result-view-details"

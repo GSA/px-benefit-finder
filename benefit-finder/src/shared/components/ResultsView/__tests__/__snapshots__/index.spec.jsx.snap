@@ -47,6 +47,7 @@ exports[`loads view 1`] = `
       </div>
       <div
         class="bf-grid-container grid-container"
+        data-testid="bf-results-view"
       >
         <div
           class="bf-result-view-details"
@@ -6286,6 +6287,9 @@ exports[`loads view 1`] = `
             </ul>
           </div>
         </div>
+        <div
+          data-testid="dom-ready"
+        />
       </div>
     </div>
   </div>
@@ -6339,6 +6343,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
       </div>
       <div
         class="bf-grid-container grid-container"
+        data-testid="bf-results-view"
       >
         <div
           class="bf-result-view-details"
@@ -12578,6 +12583,9 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             </ul>
           </div>
         </div>
+        <div
+          data-testid="dom-ready"
+        />
       </div>
     </div>
   </div>

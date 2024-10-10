@@ -105,6 +105,7 @@ test('loads view', async () => {
   await screen.findByTestId('bf-result-view')
   await screen.findByTestId('bf-share-trigger')
   await screen.findAllByTestId('benefit')
+  await screen.findByTestId('dom-ready')
 
   expect(view.baseElement).toMatchSnapshot()
 })
@@ -151,5 +152,7 @@ test('scenario 1 loads in view with the correct amount of likely eligible items'
   expect(m.length - e.length - n.length).toBe(1)
 
   await screen.findAllByTestId('benefit')
+  await screen.findByTestId('dom-ready')
+
   expect(view.baseElement).toMatchSnapshot()
 })

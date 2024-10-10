@@ -549,7 +549,7 @@ describe('Calls to Google Analytics Object', function () {
                   .then(() => {
                     // we wait for the last event to fire
                     // eslint-disable-next-line cypress/no-unnecessary-waiting
-                    cy.wait(wait).then(() => {
+                    cy.wait(2500).then(() => {
                       // get all the events in our layer that matches the event value
                       const ev = [
                         ...window.dataLayer.filter(

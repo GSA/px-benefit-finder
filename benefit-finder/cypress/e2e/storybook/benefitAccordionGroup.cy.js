@@ -17,6 +17,7 @@ describe('BenefitAccordionGroup component tests', () => {
   })
 
   it('Validate opening individual accordion expands the clicked accordion and clicking it again closes it', () => {
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(2500).then(() => {
       // get the first visible accordion and check if it is expanded
       cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')

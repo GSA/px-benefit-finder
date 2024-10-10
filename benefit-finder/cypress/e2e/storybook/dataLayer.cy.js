@@ -521,43 +521,51 @@ describe('Calls to Google Analytics Object', function () {
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
-      // eslint-disable-next-line cypress/no-unnecessary-waiting
-      cy.wait(2500).then(() => {
-        // click not eligible benefits view
-        pageObjects
-          .notEligibleResultsButton()
-          .click()
-          .then(() => {
-            pageObjects
-              .benefitsAccordion()
-              .filter(':visible')
-              .should(
-                'have.length',
-                dataLayerValueResultsViewNotEligible.bfData
-                  .notEligibleBenefitCount.number +
+      // get visible benfits results
+      pageObjects
+        .benefitsAccordion()
+        .filter(':visible')
+        .should(
+          'have.length',
+          dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
+        )
+        .then(() => {
+          // click not eligible benefits view
+          pageObjects
+            .notEligibleResultsButton()
+            .click()
+            .then(() => {
+              pageObjects
+                .benefitsAccordion()
+                .filter(':visible')
+                .should(
+                  'have.length',
                   dataLayerValueResultsViewNotEligible.bfData
-                    .moreInfoBenefitCount.number
-              )
-              .then(() => {
-                // we wait for the last event to fire
-                // eslint-disable-next-line cypress/no-unnecessary-waiting
-                cy.wait(wait).then(() => {
-                  // get all the events in our layer that matches the event value
-                  const ev = [
-                    ...window.dataLayer.filter(
-                      x =>
-                        x?.event === dataLayerValueResultsViewNotEligible.event
-                    ),
-                  ]
-                  removeID(ev[1])
+                    .notEligibleBenefitCount.number +
+                    dataLayerValueResultsViewNotEligible.bfData
+                      .moreInfoBenefitCount.number
+                )
+                .then(() => {
+                  // we wait for the last event to fire
+                  // eslint-disable-next-line cypress/no-unnecessary-waiting
+                  cy.wait(wait).then(() => {
+                    // get all the events in our layer that matches the event value
+                    const ev = [
+                      ...window.dataLayer.filter(
+                        x =>
+                          x?.event ===
+                          dataLayerValueResultsViewNotEligible.event
+                      ),
+                    ]
+                    removeID(ev[1])
 
-                  expect(ev[1]).to.deep.equal(
-                    dataLayerValueResultsViewNotEligible
-                  )
+                    expect(ev[1]).to.deep.equal(
+                      dataLayerValueResultsViewNotEligible
+                    )
+                  })
                 })
-              })
-          })
-      })
+            })
+        })
     })
   })
 

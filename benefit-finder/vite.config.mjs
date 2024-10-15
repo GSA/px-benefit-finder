@@ -62,6 +62,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['@storybook/blocks'],
+    include: ['jsdoc-type-pratt-parser'],
   },
   css: {
     postcss: poscssConfig,

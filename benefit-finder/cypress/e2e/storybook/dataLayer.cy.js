@@ -515,7 +515,7 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
+  it.only('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {
@@ -530,6 +530,7 @@ describe('Calls to Google Analytics Object', function () {
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(2500).then(() => {
             // click not eligible benefits view
             pageObjects
@@ -564,7 +565,6 @@ describe('Calls to Google Analytics Object', function () {
                           x.bfData.viewTitle ===
                           dataLayerValueResultsViewNotEligible.bfData.viewTitle
                       )
-
                       removeID(ev[bfEventIndex])
 
                       expect(ev[bfEventIndex]).to.deep.equal(

@@ -8,9 +8,8 @@ import {
   LifeEventSection,
   ResultsView,
   VerifySelectionsView,
-  Form,
-  Alert,
-} from '@components'
+} from '@routes'
+import { Form, Alert } from '@components'
 
 import './_index.scss'
 

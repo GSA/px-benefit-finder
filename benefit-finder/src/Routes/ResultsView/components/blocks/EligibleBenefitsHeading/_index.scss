@@ -1,4 +1,4 @@
-@use '../../../../../styles/mixins/_index.scss' as *;
+@use '../../../../../shared/styles/mixins/_index.scss' as *;
 
 .bf-eligible-view-heading {
   @include h2;

@@ -1,5 +1,5 @@
-@use '../../../../../styles/mixins/_index.scss' as *;
-@use '../../../../../styles/space/_index.scss' as space;
+@use '../../../../../shared/styles/mixins/_index.scss' as *;
+@use '../../../../../shared/styles/space/_index.scss' as space;
 
 .bf-zero-benefits-view-heading {
   @include h2;

@@ -1,8 +1,8 @@
-@use '../../../../styles/colors/_index.scss' as color;
-@use '../../../../styles/breakpoints/_index.scss' as *;
-@use '../../../../styles/space/_index.scss' as space;
-@use '../../../../styles/mixins/_index.scss' as *;
-@use '../../../../styles/functions/_index.scss' as *;
+@use '../../../../shared/styles/colors/_index.scss' as color;
+@use '../../../../shared/styles/breakpoints/_index.scss' as *;
+@use '../../../../shared/styles/space/_index.scss' as space;
+@use '../../../../shared/styles/mixins/_index.scss' as *;
+@use '../../../../shared/styles/functions/_index.scss' as *;
 
 .bf-result-view-details {
   padding: space.$space-lg;

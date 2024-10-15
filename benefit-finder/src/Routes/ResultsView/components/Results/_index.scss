@@ -1,0 +1,50 @@
+@use '../../../../shared/styles/colors/_index.scss' as color;
+@use '../../../../shared/styles/breakpoints/_index.scss' as *;
+@use '../../../../shared/styles/space/_index.scss' as space;
+@use '../../../../shared/styles/mixins/_index.scss' as *;
+@use '../../../../shared/styles/functions/_index.scss' as *;
+
+.bf-result-view-details {
+  padding: space.$space-lg;
+}
+
+.bf-result-view-benefits,
+.bf-result-view-unmet,
+.bf-result-view-relvant-benefits,
+.bf-result-view-share-results {
+  padding: space.$space-md 0;
+  text-align: left;
+
+  .bf-result-view-unmet-heading,
+  .bf-result-view-relvant-benefits-heading,
+  .bf-result-view-share-results-heading {
+    @include h3;
+  }
+}
+
+.bf-result-view-unmet {
+  p {
+    padding-bottom: space.$padding-bottom-md;
+  }
+
+  .bf-result-view-cta-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.bf-result-view-share-results-trigger-group {
+  button {
+    margin-bottom: space.$space-sm;
+  }
+}
+
+.bf-result-view-share-results {
+  text-align: left;
+}
+
+@media (width >= $desktop) {
+  .bf-result-view-details {
+    padding: space.$space-md-plus 5.4rem;
+  }
+}

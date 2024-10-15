@@ -47,6 +47,7 @@ const INPUT_DIR = './src'
 const aliasConfig = {
   '@': path.resolve(INPUT_DIR),
   '@api': path.resolve(INPUT_DIR, './shared/api'),
+  '@routes': path.resolve(INPUT_DIR, './Routes'),
   '@components': path.resolve(INPUT_DIR, './shared/components'),
   '@hooks': path.resolve(INPUT_DIR, './shared/hooks'),
   '@locales': path.resolve(INPUT_DIR, './shared/locales'),

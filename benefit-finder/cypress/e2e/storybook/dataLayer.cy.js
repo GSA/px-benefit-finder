@@ -217,6 +217,7 @@ describe('Calls to Google Analytics Object', function () {
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(wait).then(() => {
             assert.isDefined(
               window.dataLayer.find(x => x.event === 'gtm.load'),
@@ -227,17 +228,13 @@ describe('Calls to Google Analytics Object', function () {
               'bf_page_change is loaded'
             )
 
-            cy.wait(500).then(() => {
-              console.log(window.dataLayer)
-              // get the last pushed event
-              const bfEventIndex = window.dataLayer.findIndex(
-                x => x.event === 'bf_page_change'
-              )
-              const ev = { ...window.dataLayer[bfEventIndex] }
-              removeID(ev)
+            const bfEventIndex = window.dataLayer.findIndex(
+              x => x.event === 'bf_page_change'
+            )
+            const ev = { ...window.dataLayer[bfEventIndex] }
+            removeID(ev)
 
-              expect(ev).to.deep.equal(dataLayerValueIntro)
-            })
+            expect(ev).to.deep.equal(dataLayerValueIntro)
           })
         })
     })
@@ -518,49 +515,66 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
+  it.only('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
-      // eslint-disable-next-line cypress/no-unnecessary-waiting
-      cy.wait(2500).then(() => {
-        // click not eligible benefits view
-        pageObjects
-          .notEligibleResultsButton()
-          .click()
-          .then(() => {
+      // get visible benfits results
+      pageObjects
+        .benefitsAccordion()
+        .filter(':visible')
+        .should(
+          'have.length',
+          dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
+        )
+        .then(() => {
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(2500).then(() => {
+            // click not eligible benefits view
             pageObjects
-              .benefitsAccordion()
-              .filter(':visible')
-              .should(
-                'have.length',
-                dataLayerValueResultsViewNotEligible.bfData
-                  .notEligibleBenefitCount.number +
-                  dataLayerValueResultsViewNotEligible.bfData
-                    .moreInfoBenefitCount.number
-              )
+              .notEligibleResultsButton()
+              .click()
               .then(() => {
-                // we wait for the last event to fire
-                // eslint-disable-next-line cypress/no-unnecessary-waiting
-                cy.wait(wait).then(() => {
-                  // get all the events in our layer that matches the event value
-                  const ev = [
-                    ...window.dataLayer.filter(
-                      x =>
-                        x?.event === dataLayerValueResultsViewNotEligible.event
-                    ),
-                  ]
-                  removeID(ev[1])
-
-                  expect(ev[1]).to.deep.equal(
-                    dataLayerValueResultsViewNotEligible
+                pageObjects
+                  .benefitsAccordion()
+                  .filter(':visible')
+                  .should(
+                    'have.length',
+                    dataLayerValueResultsViewNotEligible.bfData
+                      .notEligibleBenefitCount.number +
+                      dataLayerValueResultsViewNotEligible.bfData
+                        .moreInfoBenefitCount.number
                   )
-                })
+                  .then(() => {
+                    // we wait for the last event to fire
+                    // eslint-disable-next-line cypress/no-unnecessary-waiting
+                    cy.wait(2500).then(() => {
+                      // get all the events in our layer that matches the event value
+                      const ev = [
+                        ...window.dataLayer.filter(
+                          x =>
+                            x?.event ===
+                            dataLayerValueResultsViewNotEligible.event
+                        ),
+                      ]
+
+                      const bfEventIndex = ev.findIndex(
+                        x =>
+                          x.bfData.viewTitle ===
+                          dataLayerValueResultsViewNotEligible.bfData.viewTitle
+                      )
+                      removeID(ev[bfEventIndex])
+
+                      expect(ev[bfEventIndex]).to.deep.equal(
+                        dataLayerValueResultsViewNotEligible
+                      )
+                    })
+                  })
               })
           })
-      })
+        })
     })
   })
 

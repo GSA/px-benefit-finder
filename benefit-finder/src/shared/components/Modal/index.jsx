@@ -106,6 +106,10 @@ const Modal = ({
   //   return cleanUp()
   // }, [])
 
+  useEffect(() => {
+    NavModal.setAppElement('#benefit-finder')
+  })
+
   // handle dataLayer
   useEffect(() => {
     const handleModalData = async () => {
@@ -235,6 +239,7 @@ const Modal = ({
         aria={{
           label: modalHeading,
         }}
+        ariaHideApp={false}
       >
         <button
           type="button"

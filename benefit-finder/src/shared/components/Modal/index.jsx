@@ -107,8 +107,13 @@ const Modal = ({
   // }, [])
 
   useEffect(() => {
-    NavModal.setAppElement('#benefit-finder')
-  })
+    const timeoutId = setTimeout(() => {
+      NavModal.setAppElement('#benefit-finder')
+    }, 0) // run after document loaded
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [])
 
   // handle dataLayer
   useEffect(() => {

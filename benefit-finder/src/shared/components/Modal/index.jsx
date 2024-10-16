@@ -91,20 +91,20 @@ const Modal = ({
     modalOpen && scrollLock.enableScroll()
   }, [modalOpen])
 
-  // effects
-  useEffect(() => {
-    const cleanUp = () => {
-      const root = document.getElementById('benefit-finder')
+  // // effects
+  // useEffect(() => {
+  //   const cleanUp = () => {
+  //     const root = document.getElementById('benefit-finder')
 
-      root &&
-        root.hasAttribute('aria-hidden') &&
-        root.removeAttribute('aria-hidden')
-    }
+  //     root &&
+  //       root.hasAttribute('aria-hidden') &&
+  //       root.removeAttribute('aria-hidden')
+  //   }
 
-    // set our application root id here
-    NavModal.setAppElement('#benefit-finder')
-    return cleanUp()
-  }, [])
+  //   // set our application root id here
+  //   NavModal.setAppElement('#benefit-finder')
+  //   return cleanUp()
+  // }, [])
 
   // handle dataLayer
   useEffect(() => {

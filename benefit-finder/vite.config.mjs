@@ -1,6 +1,7 @@
 import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
+import sassEmbedded from 'sass-embedded'
 import eslint from 'vite-plugin-eslint'
 import copy from 'rollup-plugin-copy'
 import { distTargets, testConfig, transformers } from './vite-config'
@@ -63,9 +64,16 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['@storybook/blocks'],
+    include: ['jsdoc-type-pratt-parser'],
   },
   css: {
     postcss: poscssConfig,
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+        implementation: sassEmbedded,
+      },
+    },
   },
   server: { ...server },
   test: testConfig,

@@ -164,7 +164,7 @@ trait BenefitFinderTrait {
     if ($node->hasField('moderation_state')) {
       $moderation_state = $node->get('moderation_state')->value;
       if ($moderation_state == 'archived') {
-          return NULL;
+        return NULL;
       }
     }
 

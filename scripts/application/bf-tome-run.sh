@@ -4,7 +4,8 @@ SCRIPT_PATH=$(dirname "$0")
 SCRIPT_NAME=$(basename "$0")
 SCRIPT_PID=$$
 
-URI=${1:-https://bf-static-main.bxdev.net}
+# URI=${1:-https://bf-static-main.bxdev.net}
+URI=https://bf-static-main.bxdev.net
 # URI=https://bf-static-dev.bxdev.net
 FORCE=${2:-0}
 RETRY_SEMAPHORE_FILE=/tmp/tome-log/retry-on-next-run
@@ -14,19 +15,19 @@ YMDHMS=$(date +"%Y_%m_%d_%H_%M_%S")
 TR_START_TIME=$(date -u +"%s")
 
 
-export BUCKET_NAME=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.bucket')
-export AWS_DEFAULT_REGION=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.region')
-export AWS_ACCESS_KEY_ID=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.access_key_id')
-export AWS_ENDPOINT=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.endpoint')
+# export BUCKET_NAME=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.bucket')
+# export AWS_DEFAULT_REGION=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.region')
+# export AWS_ACCESS_KEY_ID=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.access_key_id')
+# export AWS_ENDPOINT=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.endpoint')
 
-# export BUCKET_NAME=$(echo "$VCAP_SERVICES" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
-# export AWS_DEFAULT_REGION=$(echo "$VCAP_SERVICES" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
-# export AWS_ACCESS_KEY_ID=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.access_key_id')
-# export AWS_SECRET_ACCESS_KEY=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.secret_access_key')
-# export AWS_ENDPOINT=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.hostname')
-# if [ -z "$AWS_ENDPOINT" ] || [ "$AWS_ENDPOINT" == "null" ]; then
-#   export AWS_ENDPOINT=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint');
-# fi
+export BUCKET_NAME=$(echo "$VCAP_SERVICES" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
+export AWS_DEFAULT_REGION=$(echo "$VCAP_SERVICES" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
+export AWS_ACCESS_KEY_ID=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.access_key_id')
+export AWS_SECRET_ACCESS_KEY=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.secret_access_key')
+export AWS_ENDPOINT=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.hostname')
+if [ -z "$AWS_ENDPOINT" ] || [ "$AWS_ENDPOINT" == "null" ]; then
+  export AWS_ENDPOINT=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint');
+ fi
 
 S3_EXTRA_PARAMS=""
 if [ "${APP_SPACE}" = "local" ]; then

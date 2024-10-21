@@ -1,5 +1,5 @@
-@use '../../styles/space/_index.scss' as space;
-@use '../../styles/breakpoints/_index.scss' as *;
+@use '@styles/space' as space;
+@use '@styles/breakpoints' as *;
 
 @media (width >= $desktop) {
   .bf-radio-group > .bf-usa-radio:first-of-type {

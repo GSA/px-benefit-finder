@@ -1,9 +1,9 @@
-@use '../../shared/styles/colors/_index.scss' as color;
-@use '../../shared/styles/breakpoints/_index.scss' as *;
-@use '../../shared/styles/space/_index.scss' as space;
-@use '../../shared/styles/sizes/_index.scss' as *;
-@use '../../shared/styles/mixins/_index.scss' as *;
-@use '../../shared/styles/functions/_index.scss' as *;
+@use '@styles/colors' as color;
+@use '@styles/breakpoints' as *;
+@use '@styles/space' as space;
+@use '@styles/sizes' as *;
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
 
 .bf-usa-form,
 .bf-verify-selections-view {

@@ -1,0 +1,14 @@
+@use '../../../../../shared/styles/mixins/_index.scss' as *;
+@use '../../../../../shared/styles/space/_index.scss' as space;
+
+.bf-zero-benefits-view-heading {
+  @include h2;
+}
+
+h3.bf-zero-benefits-view-description {
+  @include p;
+}
+
+.bf-back-to-form-cta {
+  margin: space.$space-md 0 space.$space-lg;
+}

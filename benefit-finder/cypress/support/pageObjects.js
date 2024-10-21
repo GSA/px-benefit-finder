@@ -135,10 +135,6 @@ class PageObjects {
     return cy.get('[data-testid="bf-result-view-unmet-button"]')
   }
 
-  stepBackLink() {
-    return cy.get('.bf-step-back-button')
-  }
-
   dateOfBirthError() {
     return cy.get('[data-testid="error-description-applicant_date_of_birth"]')
   }

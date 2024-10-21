@@ -110,6 +110,10 @@
       "description": "<strong>Según sus respuestas no es elegible para estos beneficios.<strong/> Podría calificar si tiene información adicional o si su situación cambia."
     },
     "zeroBenefits": {
+      "backcta": {
+        "text": "",
+        "link": "Volver al inicio"
+      },
       "eligible": {
         "chevron": {
           "heading": "Usted parece no ser elegible para estos beneficios",

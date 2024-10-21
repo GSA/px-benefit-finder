@@ -4,7 +4,7 @@ SCRIPT_PATH=$(dirname "$0")
 SCRIPT_NAME=$(basename "$0")
 SCRIPT_PID=$$
 
-URI=${1:-https://bf-static-main.bxdev.net}
+# URI=${1:-https://bf-static-main.bxdev.net}
 URI=https://bf-static-main.bxdev.net
 # URI=https://bf-static-dev.bxdev.net
 FORCE=${2:-0}

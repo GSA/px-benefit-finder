@@ -50,7 +50,7 @@ const ResultsView = ({
     resetElement.current?.focus()
   }, [resetElement])
 
-  // some data-analytics numbers
+  // some data-test values
   // how many questions were values provided for
   const criteriaValues =
     stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray).length
@@ -121,19 +121,18 @@ const ResultsView = ({
     <div
       className="bf-result-view"
       data-testid="bf-result-view"
-      data-analytics="bf-result-view"
-      data-analytics-content={
+      data-test-results-view={
         notEligibleView === true ? 'bf-not-eligible-view' : 'bf-eligible-view'
       }
-      data-analytics-content-criteria-values={criteriaValues}
-      data-analytics-content-benefits={benefitsLength}
-      data-analytics-content-eligible={
+      data-test-results-view-criteria-values={criteriaValues}
+      data-test-results-view-benefits={benefitsLength}
+      data-test-results-view-eligible={
         eligibilityCount?.eligibleBenefitCount.number
       }
-      data-analytics-content-not-eligible={
+      data-test-results-view-not-eligible={
         eligibilityCount?.notEligibleBenefitCount.number
       }
-      data-analytics-content-more-info={
+      data-test-results-view-more-info={
         eligibilityCount?.moreInfoBenefitCount.number
       }
     >

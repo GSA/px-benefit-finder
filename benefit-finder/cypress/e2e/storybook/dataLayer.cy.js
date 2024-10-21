@@ -515,7 +515,7 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it.only('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
+  it('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     cy.window().then(window => {

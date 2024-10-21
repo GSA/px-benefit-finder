@@ -2,7 +2,8 @@
 set -x
 
 # URI=https://bf-static-dev.bxdev.net
-URI=${1:-https://bf-static-main.bxdev.net}
+# URI=${1:-https://bf-static-main.bxdev.net}
+URI=https://bf-static-main.bxdev.net
 
 TOME_PROCESS_COUNT=${TOME_PROCESS_COUNT:-1}
 

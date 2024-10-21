@@ -11,13 +11,12 @@ exports[`loads view 1`] = `
   <div>
     <div
       class="bf-result-view"
-      data-analytics="bf-result-view"
-      data-analytics-content="bf-eligible-view"
-      data-analytics-content-benefits="30"
-      data-analytics-content-criteria-values="13"
-      data-analytics-content-eligible="5"
-      data-analytics-content-more-info="1"
-      data-analytics-content-not-eligible="24"
+      data-test-results-view="bf-eligible-view"
+      data-test-results-view-benefits="30"
+      data-test-results-view-criteria-values="13"
+      data-test-results-view-eligible="5"
+      data-test-results-view-more-info="1"
+      data-test-results-view-not-eligible="24"
       data-testid="bf-result-view"
     >
       <div
@@ -125,9 +124,8 @@ exports[`loads view 1`] = `
               </button>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="COVID-19 funeral assistance"
-                data-testid="benefit"
+                data-test-accordion-title="COVID-19 funeral assistance"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -385,9 +383,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Coal mine workers' compensation (black lung benefits) for surviving spouse"
-                data-testid="benefit"
+                data-test-accordion-title="Coal mine workers' compensation (black lung benefits) for surviving spouse"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -544,9 +541,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Presidential Memorial Certificate"
-                data-testid="benefit"
+                data-test-accordion-title="Presidential Memorial Certificate"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -726,9 +722,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Veterans burial allowance"
-                data-testid="benefit"
+                data-test-accordion-title="Veterans burial allowance"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -968,9 +963,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors pension for spouse"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors pension for spouse"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -1175,9 +1169,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors pension for child with disabilities"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors pension for child with disabilities"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -1362,9 +1355,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Veterans medallions"
-                data-testid="benefit"
+                data-test-accordion-title="Veterans medallions"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -1544,9 +1536,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Veterans headstone and grave marker"
-                data-testid="benefit"
+                data-test-accordion-title="Veterans headstone and grave marker"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -1726,9 +1717,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Life insurance for survivors of veterans"
-                data-testid="benefit"
+                data-test-accordion-title="Life insurance for survivors of veterans"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -1903,9 +1893,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Dependency and Indemnity Compensation (DIC)"
-                data-testid="benefit"
+                data-test-accordion-title="Dependency and Indemnity Compensation (DIC)"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -2085,9 +2074,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Civilian Health and Medical Program of the VA (CHAMPVA)"
-                data-testid="benefit"
+                data-test-accordion-title="Civilian Health and Medical Program of the VA (CHAMPVA)"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -2297,9 +2285,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Burial benefits"
-                data-testid="benefit"
+                data-test-accordion-title="Burial benefits"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -2479,9 +2466,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Lump-sum death benefit"
-                data-testid="benefit"
+                data-test-accordion-title="Lump-sum death benefit"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -2709,9 +2695,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Financial Assistance and Social Services (FASS) for deceased"
-                data-testid="benefit"
+                data-test-accordion-title="Financial Assistance and Social Services (FASS) for deceased"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -2837,9 +2822,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for mothers/fathers with a child"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for mothers/fathers with a child"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -3067,9 +3051,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Annuity for certain military surviving spouses"
-                data-testid="benefit"
+                data-test-accordion-title="Annuity for certain military surviving spouses"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -3249,9 +3232,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Education benefits (GI Bill) for survivors"
-                data-testid="benefit"
+                data-test-accordion-title="Education benefits (GI Bill) for survivors"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -3431,9 +3413,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for child with disabilities"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for child with disabilities"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -3630,9 +3611,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for spouse with disabilities"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for spouse with disabilities"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -3890,9 +3870,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Public safety officers' Educational Assistance Program"
-                data-testid="benefit"
+                data-test-accordion-title="Public safety officers' Educational Assistance Program"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -4049,9 +4028,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Public safety officers' death benefits"
-                data-testid="benefit"
+                data-test-accordion-title="Public safety officers' death benefits"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -4208,9 +4186,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Burial flag"
-                data-testid="benefit"
+                data-test-accordion-title="Burial flag"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -4385,9 +4362,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Home loan program for survivors"
-                data-testid="benefit"
+                data-test-accordion-title="Home loan program for survivors"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -4597,9 +4573,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for child"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for child"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -4796,9 +4771,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivor benefit plan"
-                data-testid="benefit"
+                data-test-accordion-title="Survivor benefit plan"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -4978,9 +4952,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Burial in VA national cemetery"
-                data-testid="benefit"
+                data-test-accordion-title="Burial in VA national cemetery"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -5129,9 +5102,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Death gratuity"
-                data-testid="benefit"
+                data-test-accordion-title="Death gratuity"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -5311,9 +5283,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors pension for child"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors pension for child"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -5472,9 +5443,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for parents"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for parents"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -5691,9 +5661,8 @@ exports[`loads view 1`] = `
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for spouse"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for spouse"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -6307,13 +6276,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
   <div>
     <div
       class="bf-result-view"
-      data-analytics="bf-result-view"
-      data-analytics-content="bf-eligible-view"
-      data-analytics-content-benefits="30"
-      data-analytics-content-criteria-values="13"
-      data-analytics-content-eligible="5"
-      data-analytics-content-more-info="1"
-      data-analytics-content-not-eligible="24"
+      data-test-results-view="bf-eligible-view"
+      data-test-results-view-benefits="30"
+      data-test-results-view-criteria-values="13"
+      data-test-results-view-eligible="5"
+      data-test-results-view-more-info="1"
+      data-test-results-view-not-eligible="24"
       data-testid="bf-result-view"
     >
       <div
@@ -6421,9 +6389,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </button>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="COVID-19 funeral assistance"
-                data-testid="benefit"
+                data-test-accordion-title="COVID-19 funeral assistance"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -6681,9 +6648,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Coal mine workers' compensation (black lung benefits) for surviving spouse"
-                data-testid="benefit"
+                data-test-accordion-title="Coal mine workers' compensation (black lung benefits) for surviving spouse"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -6840,9 +6806,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Presidential Memorial Certificate"
-                data-testid="benefit"
+                data-test-accordion-title="Presidential Memorial Certificate"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -7022,9 +6987,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Veterans burial allowance"
-                data-testid="benefit"
+                data-test-accordion-title="Veterans burial allowance"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -7264,9 +7228,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors pension for spouse"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors pension for spouse"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -7471,9 +7434,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors pension for child with disabilities"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors pension for child with disabilities"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -7658,9 +7620,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Veterans medallions"
-                data-testid="benefit"
+                data-test-accordion-title="Veterans medallions"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -7840,9 +7801,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Veterans headstone and grave marker"
-                data-testid="benefit"
+                data-test-accordion-title="Veterans headstone and grave marker"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -8022,9 +7982,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Life insurance for survivors of veterans"
-                data-testid="benefit"
+                data-test-accordion-title="Life insurance for survivors of veterans"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -8199,9 +8158,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Dependency and Indemnity Compensation (DIC)"
-                data-testid="benefit"
+                data-test-accordion-title="Dependency and Indemnity Compensation (DIC)"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -8381,9 +8339,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Civilian Health and Medical Program of the VA (CHAMPVA)"
-                data-testid="benefit"
+                data-test-accordion-title="Civilian Health and Medical Program of the VA (CHAMPVA)"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -8593,9 +8550,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Burial benefits"
-                data-testid="benefit"
+                data-test-accordion-title="Burial benefits"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -8775,9 +8731,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Lump-sum death benefit"
-                data-testid="benefit"
+                data-test-accordion-title="Lump-sum death benefit"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -9005,9 +8960,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Financial Assistance and Social Services (FASS) for deceased"
-                data-testid="benefit"
+                data-test-accordion-title="Financial Assistance and Social Services (FASS) for deceased"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -9133,9 +9087,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for mothers/fathers with a child"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for mothers/fathers with a child"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -9363,9 +9316,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Annuity for certain military surviving spouses"
-                data-testid="benefit"
+                data-test-accordion-title="Annuity for certain military surviving spouses"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -9545,9 +9497,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Education benefits (GI Bill) for survivors"
-                data-testid="benefit"
+                data-test-accordion-title="Education benefits (GI Bill) for survivors"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -9727,9 +9678,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for child with disabilities"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for child with disabilities"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -9926,9 +9876,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for spouse with disabilities"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for spouse with disabilities"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
@@ -10186,9 +10135,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Public safety officers' Educational Assistance Program"
-                data-testid="benefit"
+                data-test-accordion-title="Public safety officers' Educational Assistance Program"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -10345,9 +10293,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Public safety officers' death benefits"
-                data-testid="benefit"
+                data-test-accordion-title="Public safety officers' death benefits"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -10504,9 +10451,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Burial flag"
-                data-testid="benefit"
+                data-test-accordion-title="Burial flag"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -10681,9 +10627,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Home loan program for survivors"
-                data-testid="benefit"
+                data-test-accordion-title="Home loan program for survivors"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -10893,9 +10838,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for child"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for child"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -11092,9 +11036,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivor benefit plan"
-                data-testid="benefit"
+                data-test-accordion-title="Survivor benefit plan"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -11274,9 +11217,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Burial in VA national cemetery"
-                data-testid="benefit"
+                data-test-accordion-title="Burial in VA national cemetery"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -11425,9 +11367,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Death gratuity"
-                data-testid="benefit"
+                data-test-accordion-title="Death gratuity"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -11607,9 +11548,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors pension for child"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors pension for child"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -11768,9 +11708,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for parents"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for parents"
+                data-testid="bf-usa-accordion"
                 hidden=""
               >
                 <h4
@@ -11987,9 +11926,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               </div>
               <div
                 class="bf-usa-accordion usa-accordion"
-                data-analytics="bf-usa-accordion"
-                data-analytics-content="Survivors benefits for spouse"
-                data-testid="benefit"
+                data-test-accordion-title="Survivors benefits for spouse"
+                data-testid="bf-usa-accordion"
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"

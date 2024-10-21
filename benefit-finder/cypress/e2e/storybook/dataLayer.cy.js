@@ -217,6 +217,7 @@ describe('Calls to Google Analytics Object', function () {
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
+
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(wait).then(() => {
             assert.isDefined(
@@ -228,13 +229,16 @@ describe('Calls to Google Analytics Object', function () {
               'bf_page_change is loaded'
             )
 
-            const bfEventIndex = window.dataLayer.findIndex(
-              x => x.event === 'bf_page_change'
-            )
-            const ev = { ...window.dataLayer[bfEventIndex] }
-            removeID(ev)
+            cy.wait(500).then(() => {
+              // get the last pushed event
+              const bfEventIndex = window.dataLayer.findIndex(
+                x => x.event === 'bf_page_change'
+              )
+              const ev = { ...window.dataLayer[bfEventIndex] }
+              removeID(ev)
 
-            expect(ev).to.deep.equal(dataLayerValueIntro)
+              expect(ev).to.deep.equal(dataLayerValueIntro)
+            })
           })
         })
     })

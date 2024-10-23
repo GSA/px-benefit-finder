@@ -7,9 +7,8 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
   >
     <div
       class="bf-usa-accordion usa-accordion"
-      data-analytics="bf-usa-accordion"
-      data-analytics-content="COVID-19 funeral assistance"
-      data-testid="benefit"
+      data-test-accordion-title="COVID-19 funeral assistance"
+      data-testid="bf-usa-accordion"
     >
       <h4
         class="bf-usa-accordion__heading usa-accordion__heading"

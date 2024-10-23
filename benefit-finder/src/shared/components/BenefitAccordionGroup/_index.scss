@@ -1,7 +1,7 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/mixins/_index.scss' as *;
-@use '../../styles/functions/_index.scss' as *;
-@use '../../styles/space/_index.scss' as space;
+@use '@styles/colors' as color;
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/space' as space;
 
 .bf-usa-accordion-group {
   .bf-usa-accordion {

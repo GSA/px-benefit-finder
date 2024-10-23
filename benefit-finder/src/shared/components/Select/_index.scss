@@ -1,6 +1,6 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/mixins/_index.scss' as *;
-@use '../../styles/functions/_index.scss' as *;
+@use '@styles/colors' as color;
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
 
 .bf-usa-select {
   &.usa-input--error {

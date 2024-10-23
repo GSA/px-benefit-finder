@@ -1,5 +1,5 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/functions/_index.scss' as *;
+@use '@styles/colors' as color;
+@use '@styles/functions' as *;
 
 .bf-obfuscated-link {
   position: relative;

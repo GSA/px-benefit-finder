@@ -202,7 +202,7 @@ jobs:
           sed -i "s#^    - database#    - ${PROJECT}-mysql-${BRANCH}#" manifest.yml
           sed -i "s#^    - secrets#    - ${PROJECT}-secrets-${BRANCH}#" manifest.yml
           # sed -i "s#^    - storage#    - ${PROJECT}-storage-${BRANCH}#" manifest.yml
-          sed -i "/^    - storage/{s#^    - storage#    - ${PROJECT}-storage-${BRANCH}#;a\\    - ${PROJECT}-static-${BRANCH}}" manifest.yml
+          sed -i "/^    - storage/s#^    - storage#    - ${PROJECT}-storage-${BRANCH}#/; /^    - ${PROJECT}-storage-${BRANCH}/a\\    - ${PROJECT}-static-${BRANCH}" manifest.yml
           sed -i "s#^    - dbstorage#    - ${PROJECT}-static-${BRANCH}#" manifest.yml
           sed -i '16i\  command: /var/www/scripts/entrypoint.sh' manifest.yml
       - name: Deploy application

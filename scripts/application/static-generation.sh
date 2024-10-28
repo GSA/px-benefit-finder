@@ -12,35 +12,26 @@ mkdir -p "${html_path}"
 
 export PYTHONWARNINGS="ignore:Unverified HTTPS request"
 
-echo "VCAP_APPLICATION: ${VCAP_APPLICATION}"
 application_uri=$(echo "${VCAP_APPLICATION}" | jq -r '.application_uris[]')
 export application_uri
-echo "application_uri: ${application_uri}"
 
-echo "VCAP_SERVICES: ${VCAP_SERVICES}"
 AWS_ACCESS_KEY_ID=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.access_key_id')
 export AWS_ACCESS_KEY_ID
-echo "AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}"
 
 AWS_SECRET_ACCESS_KEY=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.secret_access_key')
 export AWS_SECRET_ACCESS_KEY
-echo "AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}"
 
 AWS_DEFAULT_REGION=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
 export AWS_DEFAULT_REGION
-echo "AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}"
 
 bucket_name=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).name')
 export bucket_name
-echo "bucket_name: ${bucket_name}"
 
 bucket=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
 export bucket
-echo "bucket: ${bucket}"
 
 bucket_endpoint=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 export bucket_endpoint
-echo "bucket_endpoint: ${bucket_endpoint}"
 
 # export ssg_endpoint="http://benefit-finder-cms-dev.app.cloud.gov"
 # [ "${environment}" = "prod" ] && export ssg_endpoint="https://ssg.vote.gov"

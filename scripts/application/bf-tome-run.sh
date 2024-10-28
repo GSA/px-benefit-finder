@@ -4,9 +4,7 @@ SCRIPT_PATH=$(dirname "$0")
 SCRIPT_NAME=$(basename "$0")
 SCRIPT_PID=$$
 
-# URI=${1:-https://bf-static-main.bxdev.net}
-URI=https://bf-static-main.bxdev.net
-# URI=https://bf-static-dev.bxdev.net
+URI=${1:-https://bf-static-main.bxdev.net}
 FORCE=${2:-0}
 RETRY_SEMAPHORE_FILE=/tmp/tome-log/retry-on-next-run
 
@@ -14,11 +12,6 @@ YMD=$(date +"%Y/%m/%d")
 YMDHMS=$(date +"%Y_%m_%d_%H_%M_%S")
 TR_START_TIME=$(date -u +"%s")
 
-
-# export BUCKET_NAME=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.bucket')
-# export AWS_DEFAULT_REGION=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.region')
-# export AWS_ACCESS_KEY_ID=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.access_key_id')
-# export AWS_ENDPOINT=$(echo "$VCAP_SERVICES" | jq -r '.s3[0].credentials.endpoint')
 
 export BUCKET_NAME=$(echo "$VCAP_SERVICES" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
 export AWS_DEFAULT_REGION=$(echo "$VCAP_SERVICES" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
@@ -30,19 +23,11 @@ if [ -z "$AWS_ENDPOINT" ] || [ "$AWS_ENDPOINT" == "null" ]; then
 fi
 
 
-echo "BUCKET_NAME: $BUCKET_NAME"
-echo "AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION"
-echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
-echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
-echo "AWS_ENDPOINT: $AWS_ENDPOINT"
-
 
 S3_EXTRA_PARAMS=""
 if [ "${APP_SPACE}" = "local" ]; then
   S3_EXTRA_PARAMS="--endpoint-url https://$AWS_ENDPOINT --no-verify-ssl"
 fi
-
-echo "AWS_ENDPOINT 2: $AWS_ENDPOINT"
 
 # grab the cloudgov space we are hosted in
 APP_SPACE=$(echo "$VCAP_APPLICATION" | jq -r '.space_name')

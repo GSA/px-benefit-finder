@@ -158,7 +158,7 @@ jobs:
           sed -i 's/80/8080/g' Dockerfile-cms
           sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
           sed -i 's/\["s3"\]\[\]?/s3\[\]/g' scripts/tome-run.sh scripts/tome-sync.sh
-          # sed -i "s|/var/www/scripts/tome-run.sh \$URI \$@||" .docker/src-cms/etc/periodic/1min/generate-static-site
+          sed -i "s|/var/www/scripts/tome-run.sh \$URI \$@||" .docker/src-cms/etc/periodic/1min/generate-static-site
           sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
           sed -i '/listen 8080 default_server;/a\    port_in_redirect off;' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
           sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php
@@ -202,7 +202,6 @@ jobs:
           sed -i "s#^    - database#    - ${PROJECT}-mysql-${BRANCH}#" manifest.yml
           sed -i "s#^    - secrets#    - ${PROJECT}-secrets-${BRANCH}#" manifest.yml
           sed -i "s#^    - storage#    - ${PROJECT}-storage-${BRANCH}#" manifest.yml
-          sed -i "/${PROJECT}-storage-${BRANCH}/a\    - ${PROJECT}-static-${BRANCH}" manifest.yml
           sed -i "s#^    - dbstorage#    - ${PROJECT}-static-${BRANCH}#" manifest.yml
           sed -i '16i\  command: /var/www/scripts/entrypoint.sh' manifest.yml
       - name: Deploy application

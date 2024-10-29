@@ -86,7 +86,7 @@ class PageObjects {
   }
 
   accordion() {
-    return cy.get('[data-testid="benefit"]')
+    return cy.get('[data-testid="accordion-heading"]')
   }
 
   benefitsAccordionLink(title) {

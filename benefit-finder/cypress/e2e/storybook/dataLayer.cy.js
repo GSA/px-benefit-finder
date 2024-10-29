@@ -217,11 +217,28 @@ describe('Calls to Google Analytics Object', function () {
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
-          // get the last pushed event
-          const ev = { ...window.dataLayer[window.dataLayer.length - 1] }
-          removeID(ev)
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(wait).then(() => {
+            assert.isDefined(
+              window.dataLayer.find(x => x.event === 'gtm.load'),
+              'GTM is done loading'
+            )
+            assert.isDefined(
+              window.dataLayer.find(x => x.event === 'bf_page_change'),
+              'bf_page_change is loaded'
+            )
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            cy.wait(500).then(() => {
+              // get the last pushed event
+              const bfEventIndex = window.dataLayer.findIndex(
+                x => x.event === 'bf_page_change'
+              )
+              const ev = { ...window.dataLayer[bfEventIndex] }
+              removeID(ev)
 
-          expect(ev).to.deep.equal(dataLayerValueIntro)
+              expect(ev).to.deep.equal(dataLayerValueIntro)
+            })
+          })
         })
     })
   })
@@ -511,43 +528,60 @@ describe('Calls to Google Analytics Object', function () {
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
-      // eslint-disable-next-line cypress/no-unnecessary-waiting
-      cy.wait(2500).then(() => {
-        // click not eligible benefits view
-        pageObjects
-          .notEligibleResultsButton()
-          .click()
-          .then(() => {
+      // get visible benfits results
+      pageObjects
+        .benefitsAccordion()
+        .filter(':visible')
+        .should(
+          'have.length',
+          dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
+        )
+        .then(() => {
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(2500).then(() => {
+            // click not eligible benefits view
             pageObjects
-              .accordionHeading()
-              .filter(':visible')
-              .should(
-                'have.length',
-                dataLayerValueResultsViewNotEligible.bfData
-                  .notEligibleBenefitCount.number +
-                  dataLayerValueResultsViewNotEligible.bfData
-                    .moreInfoBenefitCount.number
-              )
+              .notEligibleResultsButton()
+              .click()
               .then(() => {
-                // we wait for the last event to fire
-                // eslint-disable-next-line cypress/no-unnecessary-waiting
-                cy.wait(wait).then(() => {
-                  // get all the events in our layer that matches the event value
-                  const ev = [
-                    ...window.dataLayer.filter(
-                      x =>
-                        x?.event === dataLayerValueResultsViewNotEligible.event
-                    ),
-                  ]
-                  removeID(ev[1])
-
-                  expect(ev[1]).to.deep.equal(
-                    dataLayerValueResultsViewNotEligible
+                pageObjects
+                  .benefitsAccordion()
+                  .filter(':visible')
+                  .should(
+                    'have.length',
+                    dataLayerValueResultsViewNotEligible.bfData
+                      .notEligibleBenefitCount.number +
+                      dataLayerValueResultsViewNotEligible.bfData
+                        .moreInfoBenefitCount.number
                   )
-                })
+                  .then(() => {
+                    // we wait for the last event to fire
+                    // eslint-disable-next-line cypress/no-unnecessary-waiting
+                    cy.wait(2500).then(() => {
+                      // get all the events in our layer that matches the event value
+                      const ev = [
+                        ...window.dataLayer.filter(
+                          x =>
+                            x?.event ===
+                            dataLayerValueResultsViewNotEligible.event
+                        ),
+                      ]
+
+                      const bfEventIndex = ev.findIndex(
+                        x =>
+                          x.bfData.viewTitle ===
+                          dataLayerValueResultsViewNotEligible.bfData.viewTitle
+                      )
+                      removeID(ev[bfEventIndex])
+
+                      expect(ev[bfEventIndex]).to.deep.equal(
+                        dataLayerValueResultsViewNotEligible
+                      )
+                    })
+                  })
               })
           })
-      })
+        })
     })
   })
 
@@ -674,10 +708,7 @@ describe('Calls to Google Analytics Object', function () {
                   x => x?.event === dataLayerValueOpenAllAccordions.event
                 ),
               ]
-              // console.log(ev[0])
               removeID(ev[0])
-              // cy.wait(2500)
-              // console.log(ev[0])
               expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
 
               pageObjects
@@ -697,13 +728,6 @@ describe('Calls to Google Analytics Object', function () {
                         ),
                       ]
                       removeID(ev, ev[1])
-                      // cy.wait(2500)
-                      console.log(ev[1])
-
-                      //               event: 'bf_open_all_accordions',
-                      // bfData: {
-                      //   accordionsOpen: true,
-                      // },
                       expect(ev[1].bfData.accordionsOpen).to.equal(
                         !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
                       )

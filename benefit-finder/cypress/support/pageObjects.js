@@ -81,16 +81,12 @@ class PageObjects {
     return cy.get('[data-testid="button-group"] li')
   }
 
-  accordionHeading() {
-    return cy.get('[data-testid="accordion-heading"]')
+  accordionByTitle(heading) {
+    return cy.get(`[data-test-accordion-title="${heading}"]`)
   }
 
   accordion() {
     return cy.get('[data-testid="benefit"]')
-  }
-
-  accordionByTitle(title) {
-    return this.accordionHeading().contains(new RegExp(`^${title}$`))
   }
 
   benefitsAccordionLink(title) {
@@ -124,10 +120,6 @@ class PageObjects {
 
   notEligibleResultsButton() {
     return cy.get('[data-testid="bf-result-view-unmet-button"]')
-  }
-
-  stepBackLink() {
-    return cy.get('[data-testid="bf-step-back-button"]')
   }
 
   dateOfBirthError() {

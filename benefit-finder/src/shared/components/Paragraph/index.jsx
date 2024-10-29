@@ -1,4 +1,4 @@
-import { useHandleClassName } from '../../hooks'
+import { useHandleClassName } from '@hooks'
 import PropTypes from 'prop-types'
 import './_index.scss'
 

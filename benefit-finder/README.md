@@ -9,6 +9,7 @@
   |-nginx
   |-src
     |-App
+    |-Routes
     |-shared
       |-api
       |-components
@@ -45,6 +46,7 @@
 | `src/index.jsx`         | Entry file.                                                |
 | `index.html`            | All scripts and styles injected here                       |
 | `src/App`               | Main application routes, global / ancestor of all modules. |
+| `src/Routes`            | Route components                                           |
 | `src/shared/api`        | dev utils for interacting with data                        |
 | `src/shared/components` | Components, constants, machines, hooks, styles, utils etc; |
 | `src/shared/hooks`      | Custom Hooks                                               |

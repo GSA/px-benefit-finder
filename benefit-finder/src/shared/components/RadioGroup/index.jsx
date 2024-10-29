@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Radio } from '../index'
+import { Radio } from '@components'
 
 import './_index.scss'
 

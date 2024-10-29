@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { buildURIParameter } from '../../utils'
+import { useState, useContext } from 'react'
+import { RouteContext } from '@/App'
+import { buildURIParameter } from '@utils'
 
 /**
  * a functional component that renders a button with copy-to-cipboard functionality
@@ -8,12 +9,16 @@ import { buildURIParameter } from '../../utils'
  */
 
 const ShareTrigger = ({ ui, data }) => {
+  const ROUTES = useContext(RouteContext)
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href
    */
   const [shareLink, setShareLink] = useState(() =>
-    buildURIParameter(window.location.href, data)
+    buildURIParameter(
+      `${window.location.origin}${ROUTES.basePath}/${ROUTES.indexPath}`,
+      data
+    )
   )
 
   /**
@@ -21,7 +26,12 @@ const ShareTrigger = ({ ui, data }) => {
    */
   const handleClick = e => {
     e.preventDefault()
-    setShareLink(buildURIParameter(window.location.href, data))
+    setShareLink(
+      buildURIParameter(
+        `${window.location.origin}${ROUTES.basePath}/${ROUTES.indexPath}`,
+        data
+      )
+    )
     navigator.clipboard.writeText(shareLink).then(
       () => alert(`${ui?.shareLinkContent} ${shareLink}`),
       err => alert('Failed to copy', err)

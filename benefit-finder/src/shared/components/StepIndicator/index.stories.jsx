@@ -1,5 +1,5 @@
 import StepIndicator from './index.jsx'
-import content from '../../api/mock-data/current.js'
+import content from '@api/mock-data/current.js'
 
 const { data } = JSON.parse(content)
 const { lifeEventForm } = data

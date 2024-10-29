@@ -90,20 +90,17 @@ describe('open all interaction tests', () => {
             )
 
             // click step back and they should all be closed again
-            pageObjects
-              .stepBackLink()
-              .click()
-              .then(() => {
-                cy.get('.bf-usa-accordion__button.usa-accordion__button').each(
-                  accordion => {
-                    cy.wrap(accordion).should(
-                      'have.attr',
-                      'aria-expanded',
-                      'false'
-                    )
-                  }
-                )
-              })
+            cy.go('back').then(() => {
+              cy.get('.bf-usa-accordion__button.usa-accordion__button').each(
+                accordion => {
+                  cy.wrap(accordion).should(
+                    'have.attr',
+                    'aria-expanded',
+                    'false'
+                  )
+                }
+              )
+            })
           })
       })
   })

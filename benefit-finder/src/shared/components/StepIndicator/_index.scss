@@ -1,7 +1,7 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/space/_index.scss' as space;
-@use '../../styles/functions/_index.scss' as *;
-@use '../../styles/mixins/_index.scss' as *;
+@use '@styles/colors' as color;
+@use '@styles/space' as space;
+@use '@styles/functions' as *;
+@use '@styles/mixins' as *;
 
 // default
 

@@ -1,13 +1,12 @@
-// import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { createMarkup, dataLayerUtils } from '../../utils'
+import { createMarkup, dataLayerUtils } from '@utils'
 import {
   Accordion,
   Button,
   Heading,
   KeyElegibilityCrieriaList,
   ObfuscatedLink,
-} from '../index'
+} from '@components'
 import './_index.scss'
 
 /**
@@ -216,10 +215,9 @@ const BenefitAccordionGroup = ({
               heading={title}
               subHeading={eligibleStatus}
               isExpanded={isExpandAll}
-              data-analytics="bf-usa-accordion"
-              data-analytics-content={title}
+              data-testid="bf-usa-accordion"
+              data-test-accordion-title={title}
               hidden={handleHidden}
-              data-testid="benefit"
             >
               <Heading className="bf-usa-detail-title" headingLevel={4}>
                 {`${agencyPrefix} ${agency.title}`}

@@ -28,36 +28,40 @@ export const getNonRequiredFieldsets = (
 ) => {
   const node = document.getElementById(`${criteriaKey}`)
 
-  const dateDataObj = data.filter(item => item.criteriaKey === criteriaKey)
+  const notRequired = !node.attributes.required
 
-  const dateValues = dateDataObj[0].values.value
+  if (notRequired) {
+    const dateDataObj = data.filter(item => item.criteriaKey === criteriaKey)
 
-  const isEmpty = obj => {
-    for (const key in obj) {
-      if (obj[key] !== '') {
-        return false // returns false if object has a non-empty string value
+    const dateValues = dateDataObj[0].values.value
+
+    const isEmpty = obj => {
+      for (const key in obj) {
+        if (obj[key] !== '') {
+          return false // returns false if object has a non-empty string value
+        }
       }
+      return true // returns true if all values are empty strings
     }
-    return true // returns true if all values are empty strings
+
+    const addToRequiredFields = [...requiredFieldsets, node]
+
+    const makeUniq = [...new Set(addToRequiredFields)]
+
+    const removeFromRequiredFields = makeUniq.filter(
+      item => !item.id === criteriaKey
+    )
+
+    const removeFromErrorArray = hasError.filter(
+      item => !item.id.includes(criteriaKey)
+    )
+
+    isEmpty(dateValues) && setHasError(removeFromErrorArray)
+
+    isEmpty(dateValues)
+      ? setHandler(removeFromRequiredFields)
+      : setHandler(makeUniq)
   }
-
-  const addToRequiredFields = [...requiredFieldsets, node]
-
-  const makeUniq = [...new Set(addToRequiredFields)]
-
-  const removeFromRequiredFields = makeUniq.filter(
-    item => !item.id === criteriaKey
-  )
-
-  const removeFromErrorArray = hasError.filter(
-    item => !item.id.includes(criteriaKey)
-  )
-
-  isEmpty(dateValues) && setHasError(removeFromErrorArray)
-
-  isEmpty(dateValues)
-    ? setHandler(removeFromRequiredFields)
-    : setHandler(makeUniq)
 }
 
 export const handleCheckForRequiredValues = async (

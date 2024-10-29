@@ -1,3 +1,5 @@
+import { cleanString } from '@utils'
+
 /**
  *
  * UTILS FUNCTIONS
@@ -180,6 +182,84 @@ export const Language = () => {
 }
 
 /**
+ * An async fetch to get dynamic route data.
+ *
+ * @function Routes
+ * @param {object} w - The window object.
+ * @param {string} language - The language code (e.g. "en" or "es").
+ * @param {array} stepDataArray - An array of objects containing form step data.
+ * @returns {object} An object containing dynamic route data.
+ */
+export const Routes = (w, language, stepDataArray) => {
+  /**
+   * Extract the path components from the current URL.
+   */
+  const locationArray = w.location.pathname.split('/')
+
+  /**
+   * trim empty item from split
+   */
+  locationArray.slice(1)
+
+  /**
+   * Get the last part of the path for the LifeEvent.
+   */
+  const indexPath = locationArray.pop()
+
+  /**
+   * Join the remaining path components to form the base path.
+   */
+  const basePath = locationArray.join('/')
+
+  /**
+   * Map the form step data to an array of path strings.
+   */
+  const formPaths = stepDataArray?.map(item => {
+    /**
+     * Clean and transform the section heading to a URL-friendly string.
+     */
+    const path = cleanString(item.section.heading)
+    return path
+  })
+
+  /**
+   * Determine the path for the verify selcttions page based on the language.
+   */
+  const verifySelectionsPath =
+    language === 'es' ? 'revisar-selecciónes' : 'verify-selections'
+
+  /**
+   * Determine the path for the results page based on the language.
+   */
+  const resultsPath = language === 'es' ? 'resultados' : 'results'
+
+  /**
+   * Determine the path for the not eligible page based on the language.
+   */
+  const notEligiblePath =
+    language === 'es'
+      ? `${resultsPath}/no-es-elegible`
+      : `${resultsPath}/not-eligible`
+
+  /**
+   * Assemble the dynamic route data object.
+   * The base path of the current URL.
+   * An array of path strings for the form steps.
+   * The path for the verify selections page based on the language.
+   * An object containing the paths for the results and not eligible pages.
+   */
+  const ROUTES = {
+    basePath,
+    indexPath,
+    formPaths,
+    verifySelectionsPath,
+    resultsPaths: { resultsPath, notEligiblePath },
+  }
+
+  return ROUTES
+}
+
+/**
  * an async fetch to get life-event data.
  * @function
  * @param {string} lifeEvent - The inherited class from
@@ -195,7 +275,7 @@ export async function LifeEvent(lifeEvent) {
     params = new URLSearchParams(windowQuery)
     mode = params.get('mode') === 'draft' ? `${params.get('mode')}/` : ''
     const location = window.location.pathname
-    lifeEvent = location.substring(location.lastIndexOf('/') + 1)
+    lifeEvent = location.split('/').pop()
   }
 
   let fetchPath
@@ -224,7 +304,7 @@ export async function LifeEvent(lifeEvent) {
       })
       .catch(error => {
         // eslint-disable-next-line no-console
-        console.log(error)
+        console.error(error)
         return 'Something went wrong.'
       })
     return response
@@ -293,9 +373,10 @@ export const SelectedValueAll = data =>
  * @return {array} returns the selected values
  */
 export const ElegibilityByCriteria = (selectedCriteria, data) => {
+  // console.log(data)
   // return all eligible items
   const eligibleItems =
-    data &&
+    data.length > 0 &&
     data.map(item => {
       // find all eligibility items that are matches to criteria key
       selectedCriteria.forEach(selected => {
@@ -378,7 +459,7 @@ export async function Data(
     })
     .catch(error => {
       // eslint-disable-next-line no-console
-      console.log(error)
+      console.error(error)
       return 'Something went wrong.'
     })
 }
@@ -424,52 +505,183 @@ export async function DataDate(
         } else {
           inputValues[0].value = eventTargetValue
         }
-        inputValues[0].selected = true
+
+        const dateHasValues = obj => {
+          for (const key in obj) {
+            if (
+              obj[key] !== null &&
+              obj[key] !== undefined &&
+              obj[key] !== ''
+            ) {
+              return true
+            }
+          }
+          return false
+        }
+
+        if (dateHasValues(inputValues[0].value) === false) {
+          inputValues[0].selected = false
+        } else {
+          inputValues[0].selected = true
+        }
+
         return setCurrentData(newData)
       }
     })
     .catch(error => {
       // eslint-disable-next-line no-console
-      console.log(error)
+      console.error(error)
       return 'Something went wrong.'
     })
 }
 
 /**
- * updates our data based on the window.location.search value
- * @function
- * @param {string} windowQuery
- * @param {array} stepDataArray
- * @param {function} setCurrentData
- * @param {string} sharedToken
+ * Updates the application data based on the query parameters in the current URL.
+ *
+ * @param {string} windowQuery - The query string from the current URL.
+ * @param {array} stepDataArray - An array of step data objects.
+ * @param {function} setBenefitsArray - A function to update the benefits array.
+ * @param {array} benefitsArray - The current benefits array.
+ * @param {string} sharedToken - A shared token from shared link.
  */
 export const DataFromParams = (
   windowQuery,
   stepDataArray,
-  setCurrentData,
+  setBenefitsArray,
+  benefitsArray,
   sharedToken
 ) => {
+  /**
+   * Extracts query parameters from the URL query string.
+   */
   const params = UTILS.GetQueryParams(decodeURI(windowQuery))
   params.filter(param => param.criteriaKey !== sharedToken)
 
-  stepDataArray.forEach(arr => {
-    arr.completed = true
-    params.forEach(param => {
-      const v = param.value.includes('{')
-        ? JSON.parse(param.value)
-        : param.value
-      v !== undefined && typeof v === 'object'
-        ? PUT.DataDate(param.criteriaKey, arr, setCurrentData, v)
-        : PUT.Data(param.criteriaKey, arr, setCurrentData, v)
+  /**
+   * Returns the current data for a given step index.
+   *
+   * @private
+   * @param {array} data - The step data array.
+   * @param {number} stepIndex - The current step index.
+   * @returns {*} The current data for the given step index.
+   */
+  const setCurrentData = (data, stepIndex) => data[stepIndex]
+
+  /**
+   * Updates the step data array based on the query parameters.
+   * @async
+   */
+  async function updateStepDataArray() {
+    /**
+     * Updates each step data object in the array.
+     */
+    await Promise.all(
+      stepDataArray.map(async arr => {
+        arr.completed = true
+
+        /**
+         * Updates each parameter in the query parameters array.
+         */
+        await Promise.all(
+          params.map(async param => {
+            const v = param.value.includes('{')
+              ? JSON.parse(param.value)
+              : param.value
+            if (v !== undefined && typeof v === 'object') {
+              PUT.DataDate(param.criteriaKey, arr, setCurrentData, v)
+            } else {
+              PUT.Data(param.criteriaKey, arr, setCurrentData, v)
+            }
+          })
+        )
+      })
+    )
+
+    /**
+     * Updates the benefits array based on the updated step data array.
+     */
+    setBenefitsArray(
+      GET.ElegibilityByCriteria(
+        GET.SelectedValueAll(stepDataArray),
+        benefitsArray
+      )
+    )
+  }
+
+  updateStepDataArray()
+}
+
+/**
+ * Collects benefits eligibility from the provided data and updates
+ * the eligibility count state.
+ * @returns {Object} An object containing the eligibility counts for eligible, more information needed, and not eligible benefits.
+ */
+export const BenefitsEligibilityCounts = async (data, eligibleStatusLabels) => {
+  const determineEligibilityStatus = data =>
+    data.map(item => {
+      const eligibleBenefits = item.benefit.eligibility.filter(
+        x => x.isEligible === true
+      )
+      const notEligibleBenefits = item.benefit.eligibility.filter(
+        x => x.isEligible === false
+      )
+      const moreInformationNeeded = item.benefit.eligibility.filter(
+        x => x.isEligible === undefined
+      )
+
+      const eligibleStatus =
+        eligibleBenefits.length === item.benefit.eligibility.length
+          ? eligibleStatusLabels[0]
+          : notEligibleBenefits.length === 0 && moreInformationNeeded.length > 0
+            ? eligibleStatusLabels[1]
+            : eligibleStatusLabels[2]
+
+      return eligibleStatus
     })
-  })
+
+  try {
+    const benefitsEligibility = await determineEligibilityStatus(data)
+
+    /**
+     * Handles the length of benefits eligibility and returns an object with the count and string representation.
+     * @param {Array} benefitsEligibility - An array of benefits eligibility statuses.
+     * @param {string} text - The text to filter the benefits eligibility by.
+     * @returns {Object} An object containing the count and string representation of the benefits eligibility.
+     */
+    const handleEligibilityLength = (benefitsEligibility, text) => {
+      const matches = benefitsEligibility.filter(
+        eligibility => eligibility === text
+      )
+      return { number: matches.length, string: `${matches.length}` }
+    }
+    const elCount = {
+      eligibleBenefitCount: handleEligibilityLength(
+        benefitsEligibility,
+        eligibleStatusLabels[0]
+      ),
+      moreInfoBenefitCount: handleEligibilityLength(
+        benefitsEligibility,
+        eligibleStatusLabels[1]
+      ),
+      notEligibleBenefitCount: handleEligibilityLength(
+        benefitsEligibility,
+        eligibleStatusLabels[2]
+      ),
+    }
+    return elCount
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(error)
+  }
 }
 
 export const GET = {
+  BenefitsEligibilityCounts,
   Children,
   ElegibilityByCriteria,
   LifeEvent,
   Language,
+  Routes,
   SelectedValue,
   SelectedValueAll,
 }

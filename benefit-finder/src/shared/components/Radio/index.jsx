@@ -1,5 +1,5 @@
-import { useHandleClassName } from '../../hooks'
-import { Label } from '../index'
+import { useHandleClassName } from '@hooks'
+import { Label } from '@components'
 import PropTypes from 'prop-types'
 
 import './_index.scss'

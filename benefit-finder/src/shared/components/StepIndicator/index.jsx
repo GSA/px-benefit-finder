@@ -1,4 +1,3 @@
-import { StepBackButton } from '../index'
 import PropTypes from 'prop-types'
 
 import './_index.scss'
@@ -10,7 +9,6 @@ import './_index.scss'
  * @param {boolean} noHeadings - determinate to render headings or not
  * @param {number} current - inherited state, indicates index value
  * @param {boolean} setCurrent - inherited function to mangae index value
- * @param {string} backLinkLabel - inherited value for back link value
  * @param {func} handleCheckRequiredFields - inherited handler
  * @return {html} returns markup for a usa step indicator
  */
@@ -19,7 +17,6 @@ const StepIndicator = ({
   noHeadings,
   current,
   setCurrent,
-  backLinkLabel,
   handleCheckRequriedFields,
 }) => {
   /**
@@ -102,9 +99,6 @@ const StepIndicator = ({
           </ol>
         </div>
       )}
-      <StepBackButton currentIndex={current} setCurrent={setCurrent}>
-        {backLinkLabel}
-      </StepBackButton>
     </div>
   )
 }
@@ -113,7 +107,6 @@ StepIndicator.propTypes = {
   data: PropTypes.array,
   noHeadings: PropTypes.bool,
   current: PropTypes.number,
-  backLinkLabel: PropTypes.string,
 }
 
 export default StepIndicator

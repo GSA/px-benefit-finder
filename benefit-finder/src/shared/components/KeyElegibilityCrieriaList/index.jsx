@@ -1,6 +1,6 @@
-import { Heading, Icon } from '../index'
+import { Heading, Icon } from '@components'
 import PropTypes from 'prop-types'
-import { useHandleClassName } from '../../hooks'
+import { useHandleClassName } from '@hooks'
 import './_index.scss'
 
 /**

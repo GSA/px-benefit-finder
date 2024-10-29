@@ -1,5 +1,5 @@
-@use '../../styles/functions/_index.scss' as *;
-@use '../../styles/mixins/_index.scss' as *;
+@use '@styles/functions' as *;
+@use '@styles/mixins' as *;
 
 .bf-usa-process-list {
   margin-left: rem(70px);

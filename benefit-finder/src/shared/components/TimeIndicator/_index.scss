@@ -1,6 +1,6 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/mixins/_index.scss' as *;
-@use '../../styles/space/_index.scss' as space;
+@use '@styles/colors' as color;
+@use '@styles/mixins' as *;
+@use '@styles/space' as space;
 
 .time-indicator {
   color: color.$dark-medium-grey;

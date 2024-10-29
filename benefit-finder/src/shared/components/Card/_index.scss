@@ -1,8 +1,8 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/space/_index.scss' as space;
-@use '../../styles/mixins/_index.scss' as *;
-@use '../../styles/functions/_index.scss' as *;
-@use '../../styles/breakpoints/_index.scss' as *;
+@use '@styles/colors' as color;
+@use '@styles/space' as space;
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/breakpoints' as *;
 
 .bf-usa-card--relative-benefit {
   margin-bottom: space.$space-md;

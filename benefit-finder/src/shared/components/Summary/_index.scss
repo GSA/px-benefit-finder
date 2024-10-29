@@ -1,6 +1,6 @@
-@use '../../styles/mixins/_index.scss' as *;
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/space/_index.scss' as space;
+@use '@styles/mixins' as *;
+@use '@styles/colors' as color;
+@use '@styles/space' as space;
 
 .bf-usa-summary-box {
   @include h5($font-family: 'sans');

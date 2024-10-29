@@ -1,11 +1,15 @@
+import { useContext } from 'react'
 import PropTypes from 'prop-types'
-import { Heading } from '../index'
+import { RouteContext } from '@/App'
+import { Heading } from '@components'
 import './_index.scss'
 
 const Summary = ({ heading, listItems, cta }) => {
+  const ROUTES = useContext(RouteContext)
+
   const handleReload = e => {
     e.preventDefault()
-    window.location.href = `${window.location.origin}${window.location.pathname}`
+    window.location.href = `${window.location.origin}${ROUTES.basePath}/${ROUTES.indexPath}`
   }
 
   return (

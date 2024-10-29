@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { buildURIParameter } from '../../utils'
+import { useState, useContext } from 'react'
+import { RouteContext } from '@/App'
+import { buildURIParameter } from '@utils'
 
 /**
  * a functional component that renders a anchor with mailto email context
@@ -7,12 +8,16 @@ import { buildURIParameter } from '../../utils'
  * @return {html} returns a semantic html anchor element with a custom function onClick event
  */
 const EmailTrigger = ({ ui, data }) => {
+  const ROUTES = useContext(RouteContext)
   /**
    * a state hook that contains the window location href
    * @return {string} current state of window location href
    */
   const [shareLink, setShareLink] = useState(() =>
-    buildURIParameter(window.location.href, data)
+    buildURIParameter(
+      `${window.location.origin}${ROUTES.basePath}${ROUTES.indexPath}`,
+      data
+    )
   )
 
   const emailBody = `${encodeURIComponent(shareLink)}`
@@ -22,7 +27,12 @@ const EmailTrigger = ({ ui, data }) => {
    */
   const handleClick = e => {
     e.preventDefault()
-    setShareLink(buildURIParameter(window.location.href, data))
+    setShareLink(
+      buildURIParameter(
+        `${window.location.origin}${ROUTES.basePath}${ROUTES.indexPath}`,
+        data
+      )
+    )
     window.location = `mailto:?subject=${ui?.emailSubject}&body=${emailBody}`
   }
 

@@ -1,0 +1,84 @@
+uuid: d8ae2079-7547-46f2-9b73-b10cb68bfff4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+    - node.type.bears_agency
+    - node.type.bears_benefit
+    - node.type.bears_criteria
+    - node.type.bears_life_event
+    - node.type.bears_life_event_form
+  module:
+    - content_moderation
+id: basic_workflow
+label: 'Basic Workflow'
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: 'Archived (Unpublish)'
+      weight: 2
+      published: false
+      default_revision: true
+    draft:
+      label: Draft
+      weight: -2
+      published: false
+      default_revision: false
+    needs_review:
+      label: 'Needs Review'
+      weight: -1
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 1
+      published: true
+      default_revision: true
+  transitions:
+    archive:
+      label: Archive
+      from:
+        - published
+      to: archived
+      weight: 2
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - needs_review
+        - published
+      to: draft
+      weight: -3
+    move_to_review:
+      label: 'Move to Review'
+      from:
+        - draft
+        - needs_review
+        - published
+      to: needs_review
+      weight: -2
+    publish:
+      label: Publish
+      from:
+        - draft
+        - needs_review
+        - published
+      to: published
+      weight: 1
+    restore:
+      label: Restore
+      from:
+        - archived
+      to: draft
+      weight: 3
+  entity_types:
+    node:
+      - basic_page
+      - bears_agency
+      - bears_benefit
+      - bears_criteria
+      - bears_life_event
+      - bears_life_event_form
+  default_moderation_state: draft

@@ -1,0 +1,25 @@
+@use '@styles/colors' as color;
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
+@use '@styles/space' as space;
+
+.bf-verify-criteria-value {
+  @include important-bold($font-family: 'sans');
+
+  padding-bottom: space.$padding-bottom-lg-plus;
+}
+
+.bf-verify-criteria-legend {
+  @include p;
+
+  padding-bottom: space.$padding-bottom-sm;
+}
+
+.bf-verify-criteria-section-heading {
+  border-bottom: rem(2px) solid color.$dark-teal;
+  padding-bottom: space.$padding-bottom-sm;
+}
+
+.bf-verify-criteria-section:last-of-type {
+  padding-bottom: space.$padding-bottom-xl;
+}

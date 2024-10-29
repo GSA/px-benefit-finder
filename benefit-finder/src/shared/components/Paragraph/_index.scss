@@ -1,5 +1,5 @@
 // ['regular', 'bold', 'extrabold', 'light', 'thin']
-@use '../../styles/mixins/_index.scss' as *;
+@use '@styles/mixins' as *;
 
 p,
 p.regular {

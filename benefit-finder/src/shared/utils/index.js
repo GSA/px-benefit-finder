@@ -1,9 +1,25 @@
-export { default as buildURIParameter } from './buildURIParameter'
-export { default as errorHandling } from './errorHandling'
-export { default as createMarkup } from './createMarkup'
-export { default as dataLayerUtils } from './dataLayerUtils'
-export { default as dateInputValidation } from './dateInputValidation'
-export { default as handleSurvey } from './handleSurvey'
-export { default as parseDate } from './parseDate'
-export { default as scrollLock } from './scrollLock'
-export { default as windowSize } from './windowSize'
+import buildURIParameter from './buildURIParameter'
+import domReady from './domReady'
+import errorHandling from './errorHandling'
+import cleanString from './cleanString'
+import createMarkup from './createMarkup'
+import dataLayerUtils from './dataLayerUtils'
+import dateInputValidation from './dateInputValidation'
+import handleSurvey from './handleSurvey'
+import parseDate from './parseDate'
+import scrollLock from './scrollLock'
+import windowSize from './windowSize'
+
+export {
+  buildURIParameter,
+  domReady,
+  errorHandling,
+  cleanString,
+  createMarkup,
+  dataLayerUtils,
+  dateInputValidation,
+  handleSurvey,
+  parseDate,
+  scrollLock,
+  windowSize,
+}

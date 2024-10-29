@@ -6,7 +6,7 @@ beforeEach(() => {
   const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
   const scenario = utils.encodeURIFromObject(selectedData)
   cy.visit(`${utils.storybookUri}${scenario}`)
-  pageObjects.accordionHeading().should('exist')
+  pageObjects.accordion().should('exist')
 })
 
 describe('open all interaction tests', () => {

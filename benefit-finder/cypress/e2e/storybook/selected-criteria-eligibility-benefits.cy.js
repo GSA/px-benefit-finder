@@ -106,7 +106,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .accordionHeading()
+      .accordion()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -164,7 +164,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .accordionHeading()
+      .accordion()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -182,7 +182,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .accordionHeading()
+      .accordion()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -211,7 +211,7 @@ describe('Validate correct eligibility benefits display based on selected criter
       .should('contain', EN_LOCALE_DATA.resultsView.zeroBenefits.heading)
 
     pageObjects
-      .accordionHeading()
+      .accordion()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
 

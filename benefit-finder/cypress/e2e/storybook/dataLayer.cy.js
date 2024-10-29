@@ -412,7 +412,7 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .accordionHeading()
+        .accordion()
         .filter(':visible')
         .should(
           'have.length',
@@ -443,7 +443,7 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .accordionHeading()
+        .accordion()
         .filter(':visible')
         .should(
           'have.length',
@@ -477,7 +477,7 @@ describe('Calls to Google Analytics Object', function () {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .accordionHeading()
+        .accordion()
         .filter(':visible')
         .should(
           'have.length',
@@ -688,13 +688,13 @@ describe('Calls to Google Analytics Object', function () {
 
   it('clicking open all on results page has a bf_open_all_accordions event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
-    pageObjects.accordionHeading().should('exist')
+    pageObjects.accordion().should('exist')
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .accordionHeading()
+        .accordion()
         .filter(':visible')
         .should('have.length.greaterThan', 0)
         .then(() => {
@@ -712,7 +712,7 @@ describe('Calls to Google Analytics Object', function () {
               expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
 
               pageObjects
-                .accordionHeading()
+                .accordion()
                 .filter(':visible')
                 .should('have.length.greaterThan', 0)
                 .then(() => {

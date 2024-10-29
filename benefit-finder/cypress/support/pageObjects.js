@@ -81,8 +81,8 @@ class PageObjects {
     return cy.get('[data-testid="button-group"] li')
   }
 
-  accordionByTitle(heading) {
-    return cy.get(`[data-test-accordion-title="${heading}"]`)
+  accordionByTitle(title) {
+    return cy.get(`[data-test-accordion-title="${title}"]`)
   }
 
   accordion() {
@@ -90,8 +90,7 @@ class PageObjects {
   }
 
   benefitsAccordionLink(title) {
-    return this.accordionHeading()
-      .contains(new RegExp(`^${title}$`))
+    return this.accordionByTitle(title)
       .parent()
       .parent()
       .parent()

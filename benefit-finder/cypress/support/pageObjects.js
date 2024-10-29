@@ -90,11 +90,7 @@ class PageObjects {
   }
 
   benefitsAccordionLink(title) {
-    return this.accordionByTitle(title)
-      .parent()
-      .parent()
-      .parent()
-      .find('a[data-testid="bf-benefit-link"]')
+    return this.accordionByTitle(title).find('a[data-testid="bf-benefit-link"]')
   }
 
   keyEligibilityCriteriaList() {

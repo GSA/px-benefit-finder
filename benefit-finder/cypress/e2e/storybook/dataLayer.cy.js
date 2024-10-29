@@ -530,7 +530,7 @@ describe('Calls to Google Analytics Object', function () {
 
       // get visible benfits results
       pageObjects
-        .benefitsAccordion()
+        .accordion()
         .filter(':visible')
         .should(
           'have.length',
@@ -545,7 +545,7 @@ describe('Calls to Google Analytics Object', function () {
               .click()
               .then(() => {
                 pageObjects
-                  .benefitsAccordion()
+                  .accordion()
                   .filter(':visible')
                   .should(
                     'have.length',

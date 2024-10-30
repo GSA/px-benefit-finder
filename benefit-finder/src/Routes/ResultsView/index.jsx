@@ -32,10 +32,6 @@ const ResultsView = ({
   const navigate = useNavigate()
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
-  // const domReadyIndicator = useDomReady({
-  //   loading,
-  //   parentElementID: 'bf-results-view',
-  // })
 
   /**
    * a hook that hanldes our open state of the accordions in our group
@@ -50,7 +46,7 @@ const ResultsView = ({
     resetElement.current?.focus()
   }, [resetElement])
 
-  // some data-analytics numbers
+  // some data-test values
   // how many questions were values provided for
   const criteriaValues =
     stepDataArray && apiCalls.GET.SelectedValueAll(stepDataArray).length
@@ -116,26 +112,26 @@ const ResultsView = ({
     handleSurvey({ hide: false })
   }, [])
 
+  // a few assignments to support e2e testing and debugging
+  const testAttributes = {
+    'data-test-results-view':
+      notEligibleView === true ? 'bf-not-eligible-view' : 'bf-eligible-view',
+    'data-test-results-view-criteria-values': criteriaValues,
+    'data-test-results-view-benefits': benefitsLength,
+    'data-test-results-view-eligible':
+      eligibilityCount?.eligibleBenefitCount.number,
+    'data-test-results-view-not-eligible':
+      eligibilityCount?.notEligibleBenefitCount.number,
+    'data-test-results-view-more-info':
+      eligibilityCount?.moreInfoBenefitCount.number,
+  }
+
   // compare the selected criteria array with benefits and render our view
   return (
     <div
       className="bf-result-view"
       data-testid="bf-result-view"
-      data-analytics="bf-result-view"
-      data-analytics-content={
-        notEligibleView === true ? 'bf-not-eligible-view' : 'bf-eligible-view'
-      }
-      data-analytics-content-criteria-values={criteriaValues}
-      data-analytics-content-benefits={benefitsLength}
-      data-analytics-content-eligible={
-        eligibilityCount?.eligibleBenefitCount.number
-      }
-      data-analytics-content-not-eligible={
-        eligibilityCount?.notEligibleBenefitCount.number
-      }
-      data-analytics-content-more-info={
-        eligibilityCount?.moreInfoBenefitCount.number
-      }
+      {...testAttributes}
     >
       <Results
         notEligibleView={notEligibleView}

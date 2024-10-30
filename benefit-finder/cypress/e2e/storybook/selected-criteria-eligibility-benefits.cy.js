@@ -125,37 +125,37 @@ describe('Validate correct eligibility benefits display based on selected criter
 
     pageObjects
       .benefitResultsView()
-      .invoke('attr', 'data-analytics')
+      .invoke('attr', 'data-testid')
       .should('eq', 'bf-result-view')
 
     pageObjects
       .benefitResultsView()
-      .invoke('attr', 'data-analytics-content')
+      .invoke('attr', 'data-test-results-view')
       .should('eq', 'bf-eligible-view')
 
     pageObjects
       .benefitResultsView()
-      .invoke('attr', 'data-analytics-content-criteria-values')
+      .invoke('attr', 'data-test-results-view-criteria-values')
       .should('eq', `${selectDataLength}`)
 
     pageObjects
       .benefitResultsView()
-      .invoke('attr', 'data-analytics-content-benefits')
+      .invoke('attr', 'data-test-results-view-benefits')
       .should('eq', `${benefitsCount}`)
 
     pageObjects
       .benefitResultsView()
-      .invoke('attr', 'data-analytics-content-eligible')
+      .invoke('attr', 'data-test-results-view-eligible')
       .should('eq', `${enResults.eligible.length}`)
 
     pageObjects
       .benefitResultsView()
-      .invoke('attr', 'data-analytics-content-more-info')
+      .invoke('attr', 'data-test-results-view-more-info')
       .should('eq', `${enResults.moreInformationNeeded.length}`)
 
     pageObjects
       .benefitResultsView()
-      .invoke('attr', 'data-analytics-content-not-eligible')
+      .invoke('attr', 'data-test-results-view-not-eligible')
       .should(
         'eq',
         `${benefitsCount - enResults.eligible.length - enResults.moreInformationNeeded.length}`

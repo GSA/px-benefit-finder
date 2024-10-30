@@ -90,14 +90,7 @@ function App({ testAppContent, testQuery }) {
     }
   }, [windowQuery, hasQueryParams, stepDataArray])
 
-  /**
-   * Memoized base paths.
-   *
-   * @type {Object} An object containing base routes.
-   *
-   * @description This value is memoized to prevent unnecessary recalculations.
-   */
-  const BASE_ROUTES = useMemo(() => {
+  const ROUTES = useMemo(() => {
     /**
      * Retrieve routes from the application API based on the current window, language, and step data array.
      *
@@ -108,28 +101,10 @@ function App({ testAppContent, testQuery }) {
      * @returns {Object} An object containing routes.
      */
     return apiCalls.GET.Routes(window, language, stepDataArray)
-  }, [])
-
-  /**
-   * Retrieve routes for the form steps based on content.
-   *
-   * @type {Object} An object containing routes for the form steps.
-   */
-  const FORM_ROUTES = apiCalls.GET.Routes(window, language, stepDataArray)
-
-  /**
-   * A composite object containing both base routes and form paths.
-   *
-   * @type {Object} An object containing both base routes and form paths.
-   *
-   * @property {Object} The base routes.
-   * @property {Object} formPaths - The form paths.
-   */
-  const ROUTES = { ...BASE_ROUTES, formPaths: FORM_ROUTES.formPaths }
+  }, [stepDataArray && stepDataArray.length])
 
   return (
-    content &&
-    ROUTES.formPaths && (
+    ROUTES?.formPaths && (
       <RouteContext.Provider value={ROUTES}>
         <LanguageContext.Provider value={t}>
           {isDraftMode === true && <Alert>Draft Mode</Alert>}

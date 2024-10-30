@@ -214,10 +214,9 @@ const BenefitAccordionGroup = ({
               heading={title}
               subHeading={eligibleStatus}
               isExpanded={isExpandAll}
-              data-analytics="bf-usa-accordion"
-              data-analytics-content={title}
+              data-testid="bf-usa-accordion"
+              data-test-accordion-title={title}
               hidden={handleHidden}
-              data-testid="benefit"
             >
               <Heading className="bf-usa-detail-title" headingLevel={4}>
                 {`${agencyPrefix} ${agency.title}`}

@@ -20,9 +20,8 @@ export AWS_SECRET_ACCESS_KEY=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.
 export AWS_ENDPOINT=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.hostname')
 if [ -z "$AWS_ENDPOINT" ] || [ "$AWS_ENDPOINT" == "null" ]; then
   export AWS_ENDPOINT=$(echo "${VCAP_SERVICES}" | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint');
+
 fi
-
-
 
 S3_EXTRA_PARAMS=""
 if [ "${APP_SPACE}" = "local" ]; then

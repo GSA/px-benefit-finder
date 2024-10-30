@@ -1,8 +1,8 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/breakpoints/_index.scss' as *;
-@use '../../styles/functions/_index.scss' as *;
-@use '../../styles/space/_index.scss' as space;
-@use '../../styles/mixins/_index.scss' as *;
+@use '@styles/colors' as color;
+@use '@styles/breakpoints' as *;
+@use '@styles/functions' as *;
+@use '@styles/space' as space;
+@use '@styles/mixins' as *;
 
 h1.bf-chevron-heading {
   @include h1;

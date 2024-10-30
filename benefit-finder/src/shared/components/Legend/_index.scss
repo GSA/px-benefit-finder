@@ -1,5 +1,5 @@
-@use '../../styles/mixins/_index.scss' as *;
-@use '../../styles/space/_index.scss' as space;
+@use '@styles/mixins' as *;
+@use '@styles/space' as space;
 
 .bf-legend {
   @include subheadings;

@@ -158,7 +158,7 @@ jobs:
           sed -i 's/80/8080/g' Dockerfile-cms
           sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms
           sed -i 's/\["s3"\]\[\]?/s3\[\]/g' scripts/tome-run.sh scripts/tome-sync.sh
-          # sed -i "s|/var/www/scripts/tome-run.sh \$URI \$@||" .docker/src-cms/etc/periodic/1min/generate-static-site
+          sed -i "s|/var/www/scripts/tome-run.sh \$URI \$@||" .docker/src-cms/etc/periodic/1min/generate-static-site
           sed -i 's/80/8080/g' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
           sed -i '/listen 8080 default_server;/a\    port_in_redirect off;' .docker/src-cms/etc/nginx/partials/cms.conf.tmpl
           sed -i "s/\$service\['name'\] === 'database'/stristr(\$service\['name'\], 'mysql')/"  web/sites/default/settings.php

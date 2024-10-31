@@ -22,6 +22,7 @@ const StepBackButton = ({ children, onClick }) => {
   return (
     <Button
       className="bf-step-back-button"
+      data-testid="bf-step-back-button"
       unstyled
       onClick={() => handleStep()}
     >

@@ -555,11 +555,19 @@ const LifeEventSection = ({ data, handleData, ui }) => {
               </div>
             )}
             <div className="bf-section-nav-btn-group">
-              <Button outline onClick={() => handleBackUpdate(-1)}>
+              <Button
+                outline
+                onClick={() => handleBackUpdate(-1)}
+                data-test="button"
+              >
                 {buttonGroup[0].value}
               </Button>
               {modalStep === false ? (
-                <Button secondary onClick={() => handleForwardUpdate(1)}>
+                <Button
+                  secondary
+                  onClick={() => handleForwardUpdate(1)}
+                  data-test="button"
+                >
                   {buttonGroup[1].value}
                 </Button>
               ) : (

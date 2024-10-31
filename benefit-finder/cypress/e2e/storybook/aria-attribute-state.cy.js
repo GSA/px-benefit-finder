@@ -48,7 +48,7 @@ describe('Validate state of aria-invalid attribute', () => {
       .should('eq', 'true')
 
     pageObjects
-      .benefitMemorableDateById('day')
+      .applicantDateOfBirthYear()
       .invoke('attr', 'aria-invalid')
       .should('eq', 'true')
   })

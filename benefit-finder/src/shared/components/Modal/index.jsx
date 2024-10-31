@@ -238,6 +238,7 @@ const Modal = ({
           type="button"
           aria-label="Close"
           className="bf-modal-button"
+          data-testid="button"
           onClick={() => handleCloseModal(triggerRef)}
         >
           <Icon type="modal-close" color="black" aria-hidden="true" />

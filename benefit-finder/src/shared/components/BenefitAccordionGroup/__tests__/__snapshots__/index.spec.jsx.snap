@@ -93,6 +93,7 @@ exports[`BenefitAccordionGroup > renders a match to the previous snapshot 1`] = 
             </h5>
             <ul
               class="bf-key-eligibility-criteria-list"
+              data-testid="bf-key-eligibility-criteria-list"
             />
           </div>
           <div

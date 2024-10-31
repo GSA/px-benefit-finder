@@ -79,6 +79,7 @@ const Alert = ({
     <div
       className={useHandleClassName({ className, defaultClasses })}
       role="alert"
+      data-testid="alert"
       ref={alertFieldRef}
       tabIndex={tabIndex || 0}
       aria-live={hasError === true ? 'assertive' : 'polite'}

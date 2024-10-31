@@ -1,9 +1,10 @@
 name: Update Dev WAF
 
 on:
-  schedule:
-    - cron: "0 5 * * 4"
-
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "0 5 * * 4"
+  #
 jobs:
   checkVersion:
     name: Check versions

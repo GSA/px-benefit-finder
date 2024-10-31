@@ -118,6 +118,8 @@ exports[`loads view 1`] = `
             >
               <button
                 class="bf-expand-all bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                data-test="button"
+                data-testid="bf-expand-all"
                 type="button"
               >
                 Expand all +
@@ -129,6 +131,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="covid-19-funeral-assistance"
@@ -223,6 +226,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -253,6 +257,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -283,6 +288,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -313,6 +319,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -343,6 +350,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -389,6 +397,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="coal-mine-workers'-compensation-(black-lung-benefits)-for-surviving-spouse"
@@ -483,6 +492,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -547,6 +557,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="presidential-memorial-certificate"
@@ -641,6 +652,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -728,6 +740,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="veterans-burial-allowance"
@@ -822,6 +835,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -852,6 +866,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -882,6 +897,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -969,6 +985,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-pension-for-spouse"
@@ -1063,6 +1080,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -1093,6 +1111,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -1175,6 +1194,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-pension-for-child-with-disabilities"
@@ -1269,6 +1289,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -1361,6 +1382,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="veterans-medallions"
@@ -1455,6 +1477,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -1542,6 +1565,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="veterans-headstone-and-grave-marker"
@@ -1636,6 +1660,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -1723,6 +1748,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="life-insurance-for-survivors-of-veterans"
@@ -1817,6 +1843,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -1899,6 +1926,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="dependency-and-indemnity-compensation-(dic)"
@@ -1993,6 +2021,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2080,6 +2109,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="civilian-health-and-medical-program-of-the-va-(champva)"
@@ -2174,6 +2204,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2204,6 +2235,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2291,6 +2323,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="burial-benefits"
@@ -2385,6 +2418,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2471,6 +2505,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="lump-sum-death-benefit"
@@ -2565,6 +2600,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2595,6 +2631,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2625,6 +2662,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2655,6 +2693,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2701,6 +2740,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="financial-assistance-and-social-services-(fass)-for-deceased"
@@ -2827,6 +2867,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-mothers/fathers-with-a-child"
@@ -2921,6 +2962,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2951,6 +2993,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -2981,6 +3024,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3011,6 +3055,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3057,6 +3102,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="annuity-for-certain-military-surviving-spouses"
@@ -3151,6 +3197,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3238,6 +3285,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="education-benefits-(gi-bill)-for-survivors"
@@ -3332,6 +3380,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3419,6 +3468,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-child-with-disabilities"
@@ -3513,6 +3563,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3543,6 +3594,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3616,6 +3668,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-spouse-with-disabilities"
@@ -3710,6 +3763,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3740,6 +3794,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3770,6 +3825,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3800,6 +3856,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3830,6 +3887,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -3876,6 +3934,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="public-safety-officers'-educational-assistance-program"
@@ -3970,6 +4029,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -4034,6 +4094,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="public-safety-officers'-death-benefits"
@@ -4128,6 +4189,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -4192,6 +4254,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="burial-flag"
@@ -4286,6 +4349,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -4368,6 +4432,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="home-loan-program-for-survivors"
@@ -4462,6 +4527,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -4492,6 +4558,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -4579,6 +4646,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-child"
@@ -4673,6 +4741,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -4703,6 +4772,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -4777,6 +4847,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivor-benefit-plan"
@@ -4871,6 +4942,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -4958,6 +5030,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="burial-in-va-national-cemetery"
@@ -5108,6 +5181,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="death-gratuity"
@@ -5202,6 +5276,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5289,6 +5364,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-pension-for-child"
@@ -5449,6 +5525,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-parents"
@@ -5543,6 +5620,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5573,6 +5651,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5603,6 +5682,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5666,6 +5746,7 @@ exports[`loads view 1`] = `
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-spouse"
@@ -5760,6 +5841,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5790,6 +5872,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5820,6 +5903,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5850,6 +5934,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5880,6 +5965,7 @@ exports[`loads view 1`] = `
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -5943,6 +6029,7 @@ exports[`loads view 1`] = `
             >
               <button
                 class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
+                data-test="button"
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
@@ -6383,6 +6470,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             >
               <button
                 class="bf-expand-all bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+                data-test="button"
+                data-testid="bf-expand-all"
                 type="button"
               >
                 Expand all +
@@ -6394,6 +6483,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="covid-19-funeral-assistance"
@@ -6488,6 +6578,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -6518,6 +6609,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -6548,6 +6640,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -6578,6 +6671,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -6608,6 +6702,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -6654,6 +6749,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="coal-mine-workers'-compensation-(black-lung-benefits)-for-surviving-spouse"
@@ -6748,6 +6844,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -6812,6 +6909,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="presidential-memorial-certificate"
@@ -6906,6 +7004,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -6993,6 +7092,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="veterans-burial-allowance"
@@ -7087,6 +7187,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -7117,6 +7218,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -7147,6 +7249,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -7234,6 +7337,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-pension-for-spouse"
@@ -7328,6 +7432,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -7358,6 +7463,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -7440,6 +7546,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-pension-for-child-with-disabilities"
@@ -7534,6 +7641,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -7626,6 +7734,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="veterans-medallions"
@@ -7720,6 +7829,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -7807,6 +7917,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="veterans-headstone-and-grave-marker"
@@ -7901,6 +8012,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -7988,6 +8100,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="life-insurance-for-survivors-of-veterans"
@@ -8082,6 +8195,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8164,6 +8278,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="dependency-and-indemnity-compensation-(dic)"
@@ -8258,6 +8373,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8345,6 +8461,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="civilian-health-and-medical-program-of-the-va-(champva)"
@@ -8439,6 +8556,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8469,6 +8587,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8556,6 +8675,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="burial-benefits"
@@ -8650,6 +8770,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8736,6 +8857,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="lump-sum-death-benefit"
@@ -8830,6 +8952,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8860,6 +8983,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8890,6 +9014,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8920,6 +9045,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -8966,6 +9092,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="financial-assistance-and-social-services-(fass)-for-deceased"
@@ -9092,6 +9219,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-mothers/fathers-with-a-child"
@@ -9186,6 +9314,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -9216,6 +9345,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -9246,6 +9376,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -9276,6 +9407,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -9322,6 +9454,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="annuity-for-certain-military-surviving-spouses"
@@ -9416,6 +9549,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -9503,6 +9637,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="education-benefits-(gi-bill)-for-survivors"
@@ -9597,6 +9732,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -9684,6 +9820,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-child-with-disabilities"
@@ -9778,6 +9915,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -9808,6 +9946,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -9881,6 +10020,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-spouse-with-disabilities"
@@ -9975,6 +10115,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10005,6 +10146,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10035,6 +10177,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10065,6 +10208,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10095,6 +10239,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10141,6 +10286,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="public-safety-officers'-educational-assistance-program"
@@ -10235,6 +10381,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10299,6 +10446,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="public-safety-officers'-death-benefits"
@@ -10393,6 +10541,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10457,6 +10606,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="burial-flag"
@@ -10551,6 +10701,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10633,6 +10784,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="home-loan-program-for-survivors"
@@ -10727,6 +10879,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10757,6 +10910,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10844,6 +10998,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-child"
@@ -10938,6 +11093,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -10968,6 +11124,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -11042,6 +11199,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivor-benefit-plan"
@@ -11136,6 +11294,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -11223,6 +11382,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="burial-in-va-national-cemetery"
@@ -11373,6 +11533,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="death-gratuity"
@@ -11467,6 +11628,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -11554,6 +11716,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-pension-for-child"
@@ -11714,6 +11877,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-parents"
@@ -11808,6 +11972,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -11838,6 +12003,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -11868,6 +12034,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -11931,6 +12098,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               >
                 <h4
                   class="bf-usa-accordion__heading usa-accordion__heading"
+                  data-testid="accordion-heading"
                 >
                   <button
                     aria-controls="survivors-benefits-for-spouse"
@@ -12025,6 +12193,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -12055,6 +12224,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -12085,6 +12255,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -12115,6 +12286,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -12145,6 +12317,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                             >
                               <svg
                                 class="bf-checkmark--green"
+                                data-testid="icon-green-check"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 24 20"
@@ -12208,6 +12381,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             >
               <button
                 class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
+                data-test="button"
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >

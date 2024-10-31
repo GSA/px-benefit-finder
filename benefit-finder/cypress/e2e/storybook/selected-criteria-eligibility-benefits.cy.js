@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 import { pageObjects } from '../../support/pageObjects'
 import * as utils from '../../support/utils'
@@ -8,6 +8,28 @@ import content from '../../../../benefit-finder/src/shared/api/mock-data/current
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 const { data } = JSON.parse(content)
 
+const relationshipId =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[1].fieldset.inputs[0].inputCriteria.id
+const relationshipValue =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
+const maritalStatusId =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[2].fieldset.inputs[0].inputCriteria.id
+const maritalStatusValue =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
+const citizenshipStatusId =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[3].fieldset.inputs[0].inputCriteria.id
+const paidIntoSocialSecurityId =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1].section
+    .fieldsets[2].fieldset.inputs[0].inputCriteria.id
+const publicSafetyOfficerId =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1].section
+    .fieldsets[3].fieldset.inputs[0].inputCriteria.id
+
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
   it('Should render Survivor Benefits for Child benefit accordion correctly based on selected cretiria options', () => {
     // 18 years ago minus one day - applicant under 18 years old
@@ -16,68 +38,38 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
 
     pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    cy.enterDateOfBirth(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
-    pageObjects
-      .applicantRelationshipToDeceased()
-      .select(
-        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
-          .section.fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
-      )
-    pageObjects
-      .applicantMaritalStatus()
-      .select(
-        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
-          .section.fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
-      )
+    cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
+    pageObjects.fieldsetById(relationshipId).select(relationshipValue)
+    pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
 
-    pageObjects
-      .benefitSectionFieldset()
-      .contains(
-        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
-          .section.fieldsets[3].fieldset.inputs[0].inputCriteria.label
-      )
-      .parent()
-      .find('.usa-radio__label')
-      .contains('Yes')
-      .click()
+    pageObjects.fieldsetById(citizenshipStatusId).eq(0).click({ force: true })
 
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
     // Date of death - 30 days ago
     const dateOfDeath = utils.getDateByOffset(-30)
-    cy.enterDateOfDeath(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
+    cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
 
     pageObjects
-      .benefitSectionFieldset()
-      .contains(
-        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1]
-          .section.fieldsets[2].fieldset.legend
-      )
-      .parent()
-      .find('.usa-radio__label')
-      .contains('Yes')
-      .click()
+      .fieldsetById(paidIntoSocialSecurityId)
+      .eq(0)
+      .click({ force: true })
 
-    pageObjects
-      .benefitSectionFieldset()
-      .contains(
-        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[1]
-          .section.fieldsets[3].fieldset.legend
-      )
-      .parent()
-      .find('.usa-radio__label')
-      .contains('Yes')
-      .click()
+    pageObjects.fieldsetById(publicSafetyOfficerId).eq(0).click({ force: true })
 
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
     pageObjects
-      .buttonGroup()
+      .modalButtonGroup()
       .contains(EN_LOCALE_DATA.reviewSelectionModal.buttonGroup[1].value)
       .click()
+
     pageObjects
-      .accordion(EN_DOLO_MOCK_DATA.data.benefits[23].benefit.title)
+      .accordionByTitle(EN_DOLO_MOCK_DATA.data.benefits[23].benefit.title)
       .click()
+      .parent()
+      .parent()
+      .parent()
       .find('.bf-key-eligibility-criteria-list li')
       .should(
         'contain',
@@ -112,7 +104,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .benefitsAccordion()
+      .accordionHeading()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -170,7 +162,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .benefitsAccordion()
+      .accordionHeading()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -188,7 +180,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     cy.visit(`${utils.storybookUri}${scenario}`)
 
     pageObjects
-      .benefitsAccordion()
+      .accordionHeading()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
       .and(
@@ -203,9 +195,7 @@ describe('Validate correct eligibility benefits display based on selected criter
     const scenario = utils.encodeURIFromObject(selectedData)
     cy.visit(`${utils.storybookUri}${scenario}`)
     pageObjects.expandAll().click()
-    pageObjects
-      .keyEligibilityCriteriaListIcon()
-      .should('have.class', 'bf-checkmark--green')
+    pageObjects.iconGreenCheck().should('exist')
   })
 
   it('Should display Zero benefit view when no benefit are eligible', () => {
@@ -219,7 +209,7 @@ describe('Validate correct eligibility benefits display based on selected criter
       .should('contain', EN_LOCALE_DATA.resultsView.zeroBenefits.heading)
 
     pageObjects
-      .benefitsAccordion()
+      .accordionHeading()
       .filter(':visible')
       .should('have.length', enResults.eligible.length)
 

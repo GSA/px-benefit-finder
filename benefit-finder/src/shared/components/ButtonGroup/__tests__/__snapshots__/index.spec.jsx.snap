@@ -10,6 +10,7 @@ exports[`ButtonGroup > renders a match to the previous snapshot 1`] = `
     >
       <button
         class="bf-usa-button usa-button"
+        data-test="button"
         type="button"
       />
     </li>
@@ -18,6 +19,7 @@ exports[`ButtonGroup > renders a match to the previous snapshot 1`] = `
     >
       <button
         class="bf-usa-button usa-button"
+        data-test="button"
         type="button"
       />
     </li>

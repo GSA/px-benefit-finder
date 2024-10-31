@@ -66,6 +66,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           aria-hidden="true"
           aria-live="polite"
           class="bf-usa-alert usa-alert bf-usa-alert--error usa-alert--error display-none"
+          data-testid="alert"
           role="alert"
           tabindex="0"
         >
@@ -117,6 +118,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
             data-errormessage="Fill out the date of birth field"
+            data-testid="fieldset"
             id="applicant_date_of_birth"
             required=""
           >
@@ -142,6 +144,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               />
               <div
                 class="bf-usa-memorable-date usa-memorable-date"
+                data-testid="bf-usa-memorable-date"
                 id="bf-usa-memorable-date-applicant_date_of_birth_0"
               >
                 <div
@@ -302,6 +305,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
             data-errormessage="Test overide error label"
+            data-testid="fieldset"
             id="applicant_relationship_to_the_deceased"
             required=""
           >
@@ -371,6 +375,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
             data-errormessage="Fill out the marital status field"
+            data-testid="fieldset"
             id="applicant_marital_status"
             required=""
           >
@@ -435,6 +440,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <fieldset
             class="bf-usa-fieldset usa-fieldset   "
             data-errormessage="Fill out the are you a u.s. citizen or eligible non-citizen field"
+            data-testid="fieldset"
             id="applicant_citizen_status"
           >
             <legend
@@ -445,6 +451,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             <div
               aria-invalid="false"
               class="bf-radio-group radio-group"
+              data-testid="radio-group"
             >
               <div
                 class="bf-usa-radio usa-radio"
@@ -489,6 +496,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <fieldset
             class="bf-usa-fieldset usa-fieldset   "
             data-errormessage="Fill out the are you caring for the deceased's child who is under age 16 or has a disability field"
+            data-testid="fieldset"
             id="applicant_care_for_child"
           >
             <legend
@@ -499,6 +507,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             <div
               aria-invalid="false"
               class="bf-radio-group radio-group"
+              data-testid="radio-group"
             >
               <div
                 class="bf-usa-radio usa-radio"
@@ -543,6 +552,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           <fieldset
             class="bf-usa-fieldset usa-fieldset   "
             data-errormessage="Fill out the did you pay for funeral or burial expenses field"
+            data-testid="fieldset"
             id="applicant_paid_funeral_expenses"
           >
             <legend
@@ -553,6 +563,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             <div
               aria-invalid="false"
               class="bf-radio-group radio-group"
+              data-testid="radio-group"
             >
               <div
                 class="bf-usa-radio usa-radio"
@@ -597,12 +608,14 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
       >
         <button
           class="bf-usa-button usa-button bf-usa-button--outline usa-button--outline"
+          data-test="button"
           type="button"
         >
           Back
         </button>
         <button
           class="bf-usa-button usa-button bf-usa-button--secondary usa-button--secondary"
+          data-test="button"
           type="button"
         >
           Next

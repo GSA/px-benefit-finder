@@ -26,20 +26,8 @@
 
 import { pageObjects } from './pageObjects'
 
-Cypress.Commands.add('enterDateOfBirth', (month, day, year) => {
-  pageObjects.applicantDateOfBirthMonth().select(month)
-  pageObjects.applicantDateOfBirthDay().type(day)
-  pageObjects.applicantDateOfBirthYear().type(year)
-})
-
-Cypress.Commands.add('enterDateOfDeath', (month, day, year) => {
-  pageObjects.applicantDateOfDeathMonth().select(month)
-  pageObjects.applicantDateOfDeathDay().type(day)
-  pageObjects.applicantDateOfDeathYear().type(year)
-})
-
-Cypress.Commands.add('enterDateOfFuneral', (month, day, year) => {
-  pageObjects.applicantDateOfFuneralMonth().select(month)
-  pageObjects.applicantDateOfFuneralDay().type(day)
-  pageObjects.applicantDateOfFuneralYear().type(year)
+Cypress.Commands.add('enterDate', (month, day, year) => {
+  pageObjects.benefitMemorableDateById('month').select(month)
+  pageObjects.benefitMemorableDateById('day').type(day)
+  pageObjects.benefitMemorableDateById('year').type(year)
 })

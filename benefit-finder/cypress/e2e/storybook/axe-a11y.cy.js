@@ -123,7 +123,7 @@ describe(`Validate code passes axe scanning`, () => {
         .should('eq', 'bf-result-view')
 
       pageObjects
-        .accordion(
+        .accordionByTitle(
           `${accordionItems[0].getAttribute('data-test-accordion-title')}`
         )
         .click()
@@ -149,7 +149,7 @@ describe(`Validate code passes axe scanning`, () => {
     // get the heading of the first in the list
     cy.get(`[data-testid="bf-usa-accordion"]`).then(accordionItems => {
       pageObjects
-        .accordion(
+        .accordionByTitle(
           `${accordionItems[0].getAttribute('data-test-accordion-title')}`
         )
         .click()

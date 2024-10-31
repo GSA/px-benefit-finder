@@ -96,6 +96,7 @@ const BenefitAccordionGroup = ({
           aria-label={handleExpandIcon}
           outline
           onClick={() => handleExpandAll(isExpandAll)}
+          data-testid="bf-expand-all"
         >
           {handleExpandIcon}
         </Button>

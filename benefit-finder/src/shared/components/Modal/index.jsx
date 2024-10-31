@@ -177,7 +177,10 @@ const Modal = ({
       handleKeyValidation(e) && handleCloseModal(triggerRef) && navFunction()
     }
     return (
-      <ul className="bf-modal bf-usa-button-group usa-button-group width-full">
+      <ul
+        className="bf-modal bf-usa-button-group usa-button-group width-full"
+        data-testid="modal-button-group"
+      >
         <li
           className="bf-usa-button-group__item usa-button-group__item width-full"
           key="bf-nav-item-one"

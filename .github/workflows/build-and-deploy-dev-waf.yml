@@ -68,7 +68,7 @@ jobs:
         env:
           TF_BASTION: "${{ secrets.TF_BASTION }}"
         run: |
-          cf start "${TF_BASTION}"  #>/dev/null 2>&1
+          cf start "${TF_BASTION}"  >/dev/null 2>&1
           ./scripts/pipeline/cloud-gov-wait-for-app-start.sh "${TF_BASTION}"
       - name: Cloud.gov bastion git checkout
         env:
@@ -168,12 +168,12 @@ jobs:
             </details>
 
             #### Terraform Apply &#x1f680;`${{ steps.apply.outcome }}`
-      - name: Update Project Status
-        env:
-          GH_PROJECT_NUMBER: ${{ secrets.GH_PROJECT_NUMBER }}
-          GH_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
-        run: source ./scripts/pipeline/github-update-issue-status.sh
+  #     - name: Update Project Status
+  #       env:
+  #         GH_PROJECT_NUMBER: ${{ secrets.GH_PROJECT_NUMBER }}
+  #         GH_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+  #         ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
+  #       run: source ./scripts/pipeline/github-update-issue-status.sh
   stopBastion:
     name: Stop Bastion
     runs-on: ubuntu-latest

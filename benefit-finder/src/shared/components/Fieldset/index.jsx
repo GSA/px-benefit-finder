@@ -77,7 +77,6 @@ const Fieldset = ({
         ref={alertRef}
         required={required === true}
         id={id}
-        data-testid="fieldset"
         data-errormessage={handleErrorMessage}
         hidden={hidden}
         aria-hidden={hidden}

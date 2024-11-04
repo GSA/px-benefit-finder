@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 import * as utils from '../../support/utils.js'
 import * as EN_LOCALE_DATA from '../../../src/shared/locales/en/en.json'

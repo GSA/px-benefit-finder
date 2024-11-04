@@ -212,6 +212,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -478,6 +479,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -638,6 +640,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -821,6 +824,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1066,6 +1070,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1275,6 +1280,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1463,6 +1469,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1646,6 +1653,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -1829,6 +1837,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2007,6 +2016,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2190,6 +2200,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2404,6 +2415,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2586,6 +2598,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -2821,6 +2834,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -2948,6 +2962,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -3183,6 +3198,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -3366,6 +3382,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -3549,6 +3566,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -3749,6 +3767,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4015,6 +4034,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4175,6 +4195,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4335,6 +4356,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4513,6 +4535,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4727,6 +4750,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -4928,6 +4952,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -5111,6 +5136,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -5262,6 +5288,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -5445,6 +5472,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -5606,6 +5634,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -5827,6 +5856,7 @@ exports[`loads view 1`] = `
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -6564,6 +6594,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -6830,6 +6861,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -6990,6 +7022,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7173,6 +7206,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7418,6 +7452,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7627,6 +7662,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7815,6 +7851,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -7998,6 +8035,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8181,6 +8219,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8359,6 +8398,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8542,6 +8582,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8756,6 +8797,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -8938,6 +8980,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9173,6 +9216,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -9300,6 +9344,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9535,6 +9580,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9718,6 +9764,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -9901,6 +9948,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10101,6 +10149,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10367,6 +10416,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10527,6 +10577,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10687,6 +10738,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -10865,6 +10917,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -11079,6 +11132,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -11280,6 +11334,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -11463,6 +11518,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -11614,6 +11670,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -11797,6 +11854,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       />
                     </div>
                     <div
@@ -11958,6 +12016,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"
@@ -12179,6 +12238,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       </h5>
                       <ul
                         class="bf-key-eligibility-criteria-list"
+                        data-testid="bf-key-eligibility-criteria-list"
                       >
                         <li
                           class="bf-usa-list usa-list usa-list--unstyled  bf-usa-list--unstyled bf-key-eligibility-criteria-list-item"

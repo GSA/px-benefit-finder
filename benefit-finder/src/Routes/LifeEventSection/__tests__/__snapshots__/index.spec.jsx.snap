@@ -169,6 +169,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                     class="bf-usa-select usa-select "
                     data-datetype="month"
                     data-errormessage="Fill out the date of birth month field"
+                    data-testid="applicant_date_of_birth_0_month"
                     id="applicant_date_of_birth_0_month"
                     name="applicant_date_of_birth_0_month"
                   >
@@ -261,6 +262,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                     class="bf-usa-input usa-input "
                     data-datetype="day"
                     data-errormessage="Fill out the date of birth day field"
+                    data-testid="applicant_date_of_birth_0_day"
                     id="applicant_date_of_birth_0_day"
                     inputmode="numeric"
                     name="applicant_date_of_birth_0_day"
@@ -289,6 +291,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                     class="bf-usa-input usa-input "
                     data-datetype="year"
                     data-errormessage="Fill out the date of birth year field"
+                    data-testid="applicant_date_of_birth_0_year"
                     id="applicant_date_of_birth_0_year"
                     inputmode="numeric"
                     name="applicant_date_of_birth_0_year"
@@ -332,6 +335,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 aria-invalid="false"
                 class="bf-usa-select usa-select "
                 data-errormessage="Test overide error label"
+                data-testid="applicant_relationship_to_the_deceased_0"
                 id="applicant_relationship_to_the_deceased_0"
                 name="applicant_relationship_to_the_deceased_0"
               >
@@ -402,6 +406,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 aria-invalid="false"
                 class="bf-usa-select usa-select "
                 data-errormessage="Fill out the marital status field"
+                data-testid="applicant_marital_status_0"
                 id="applicant_marital_status_0"
                 name="applicant_marital_status_0"
               >
@@ -455,6 +460,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             >
               <div
                 class="bf-usa-radio usa-radio"
+                data-testid="radio"
               >
                 <input
                   class="bf-usa-radio__input usa-radio__input "
@@ -472,6 +478,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               </div>
               <div
                 class="bf-usa-radio usa-radio"
+                data-testid="radio"
               >
                 <input
                   class="bf-usa-radio__input usa-radio__input "
@@ -511,6 +518,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             >
               <div
                 class="bf-usa-radio usa-radio"
+                data-testid="radio"
               >
                 <input
                   class="bf-usa-radio__input usa-radio__input "
@@ -528,6 +536,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               </div>
               <div
                 class="bf-usa-radio usa-radio"
+                data-testid="radio"
               >
                 <input
                   class="bf-usa-radio__input usa-radio__input "
@@ -567,6 +576,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
             >
               <div
                 class="bf-usa-radio usa-radio"
+                data-testid="radio"
               >
                 <input
                   class="bf-usa-radio__input usa-radio__input "
@@ -584,6 +594,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               </div>
               <div
                 class="bf-usa-radio usa-radio"
+                data-testid="radio"
               >
                 <input
                   class="bf-usa-radio__input usa-radio__input "

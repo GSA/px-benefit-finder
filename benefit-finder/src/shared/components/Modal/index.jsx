@@ -26,7 +26,7 @@ const customStyles = {
     width: '80%',
     borderRadius: '8px',
     borderColor: '#005ea2',
-    padding: '5% 10%',
+    padding: '5% 0',
     maxWidth: '32.5rem',
   },
 }

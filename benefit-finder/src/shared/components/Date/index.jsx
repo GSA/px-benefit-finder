@@ -52,7 +52,7 @@ const Date = ({
         {handleInvalid(invalid, `${id}_month`) && (
           <li
             id={`month-error-description-${id}`}
-            data-testid={`month-error-description-${id}`}
+            data-testid="month-error-description"
             className="bf-error-detail"
             aria-live="assertive"
           >
@@ -62,7 +62,7 @@ const Date = ({
         {handleInvalid(invalid, `${id}_day`) && (
           <li
             id={`day-error-description-${id}`}
-            data-testid={`day-error-description-${id}`}
+            data-testid="day-error-description"
             className="bf-error-detail"
             aria-live="assertive"
           >
@@ -72,7 +72,7 @@ const Date = ({
         {handleInvalid(invalid, `${id}_year`) && (
           <li
             id={`year-error-description-${id}`}
-            data-testid={`year-error-description-${id}`}
+            data-testid="year-error-description"
             className="bf-error-detail"
             aria-live="assertive"
           >
@@ -83,6 +83,7 @@ const Date = ({
       <div
         id={`bf-usa-memorable-date-${id}`}
         className="bf-usa-memorable-date usa-memorable-date"
+        data-testid="bf-usa-memorable-date"
       >
         <div className="bf-usa-form-group usa-form-group bf-usa-form-group--month usa-form-group--month bf-usa-form-group--select usa-form-group--select">
           <label className="bf-usa-label usa-label" htmlFor={`${id}_month`}>
@@ -94,6 +95,7 @@ const Date = ({
           <select
             className={`bf-usa-select usa-select ${handleInvalid(invalid, `${id}_month`) ? 'usa-input--error' : ''}`}
             id={`${id}_month`}
+            data-testid={`${id}_month`}
             name={`${id}_month`}
             aria-describedby={`${id}-month-description`}
             value={(value && value.month) || ''}
@@ -124,6 +126,7 @@ const Date = ({
             className={`bf-usa-input usa-input ${handleInvalid(invalid, `${id}_day`) ? 'usa-input--error' : ''}`}
             aria-describedby={`${id}-day-description`}
             id={`${id}_day`}
+            data-testid={`${id}_day`}
             name={`${id}_day`}
             inputMode="numeric"
             value={(value && value.day) || ''}
@@ -145,6 +148,7 @@ const Date = ({
             className={`bf-usa-input usa-input ${handleInvalid(invalid, `${id}_year`) ? 'usa-input--error' : ''}`}
             aria-describedby={`${id}-year-description`}
             id={`${id}_year`}
+            data-testid={`${id}_year`}
             name={`${id}_year`}
             inputMode="numeric"
             value={(value && value.year) || ''}

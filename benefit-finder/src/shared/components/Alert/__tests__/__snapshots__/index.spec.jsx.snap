@@ -6,6 +6,7 @@ exports[`Alert > renders a match to the previous snapshot when it has an error 1
     aria-hidden="false"
     aria-live="assertive"
     class="bf-usa-alert usa-alert bf-usa-alert--error usa-alert--error "
+    data-testid="alert"
     role="alert"
     tabindex="0"
   >
@@ -37,6 +38,7 @@ exports[`Alert > renders a match to the previous snapshot, default 1`] = `
     aria-hidden="false"
     aria-live="polite"
     class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
+    data-testid="alert"
     role="alert"
     tabindex="0"
   >
@@ -68,6 +70,7 @@ exports[`Alert > renders a match to the previous snapshot, error type with no er
     aria-hidden="true"
     aria-live="polite"
     class="bf-usa-alert usa-alert bf-usa-alert--error usa-alert--error display-none"
+    data-testid="alert"
     role="alert"
     tabindex="0"
   >

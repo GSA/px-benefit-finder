@@ -8,7 +8,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
     id="skip-to-h1"
     role="heading"
   >
-    Answer these questions
+    Answer the following questions
   </h1>
   <div
     class="bf-section-wrapper"

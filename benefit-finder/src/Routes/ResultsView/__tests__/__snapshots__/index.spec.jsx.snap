@@ -91,10 +91,10 @@ exports[`loads view 1`] = `
                     class="bf-usa-list usa-list"
                   >
                     <li>
-                      Visit each agency’s website to find full eligibility requirements.
+                      You need to visit each agency’s website to find full eligibility requirements and apply.
                     </li>
                     <li>
-                      Your results may change if you answer more questions or modify your answers.
+                      Your results may vary if your situation or answers change.
                     </li>
                     <li>
                        
@@ -102,7 +102,7 @@ exports[`loads view 1`] = `
                         class="bf-usa-summary-box__link usa-summary-box__link"
                         href="#"
                       >
-                        Clear my answers and restart the form.
+                        Clear your answers and restart the form.
                       </a>
                     </li>
                   </ul>
@@ -6063,7 +6063,7 @@ exports[`loads view 1`] = `
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
-                Explore other potential benefits
+                Explore benefits you did not qualify for
               </button>
             </div>
           </div>
@@ -6473,10 +6473,10 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                     class="bf-usa-list usa-list"
                   >
                     <li>
-                      Visit each agency’s website to find full eligibility requirements.
+                      You need to visit each agency’s website to find full eligibility requirements and apply.
                     </li>
                     <li>
-                      Your results may change if you answer more questions or modify your answers.
+                      Your results may vary if your situation or answers change.
                     </li>
                     <li>
                        
@@ -6484,7 +6484,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                         class="bf-usa-summary-box__link usa-summary-box__link"
                         href="#"
                       >
-                        Clear my answers and restart the form.
+                        Clear your answers and restart the form.
                       </a>
                     </li>
                   </ul>
@@ -12445,7 +12445,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
-                Explore other potential benefits
+                Explore benefits you did not qualify for
               </button>
             </div>
           </div>

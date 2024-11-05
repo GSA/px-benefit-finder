@@ -179,7 +179,7 @@ const Modal = ({
     return (
       <ul
         className="bf-modal bf-usa-button-group usa-button-group width-full"
-        data-testid="button-group"
+        data-testid="modal-button-group"
       >
         <li
           className="bf-usa-button-group__item usa-button-group__item width-full"

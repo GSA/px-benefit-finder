@@ -144,6 +144,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
               />
               <div
                 class="bf-usa-memorable-date usa-memorable-date"
+                data-testid="bf-usa-memorable-date"
                 id="bf-usa-memorable-date-applicant_date_of_birth_0"
               >
                 <div

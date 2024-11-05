@@ -79,11 +79,11 @@ const Alert = ({
     <div
       className={useHandleClassName({ className, defaultClasses })}
       role="alert"
-      data-testid="alert"
       ref={alertFieldRef}
       tabIndex={tabIndex || 0}
       aria-live={hasError === true ? 'assertive' : 'polite'}
       aria-hidden={hasError === undefined ? false : !hasError}
+      data-testid="alert"
     >
       {children ? (
         <div className="bf-usa-alert__body usa-alert__body">

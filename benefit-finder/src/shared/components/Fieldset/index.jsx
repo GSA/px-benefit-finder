@@ -77,16 +77,16 @@ const Fieldset = ({
         ref={alertRef}
         required={required === true}
         id={id}
-        data-testid="fieldset"
         data-errormessage={handleErrorMessage}
         hidden={hidden}
         aria-hidden={hidden}
+        data-testid="fieldset"
       >
         {legend && handleRequired}
         {invalid === true && (
           <div
             id={`error-description-${id}`}
-            data-testid={`error-description-${id}`}
+            data-testid="error-description"
             className="bf-error-detail"
             aria-live="assertive"
           >

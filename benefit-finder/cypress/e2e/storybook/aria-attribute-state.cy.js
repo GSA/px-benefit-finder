@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 import * as utils from '../../support/utils.js'
 import * as EN_LOCALE_DATA from '../../../src/shared/locales/en/en.json'
@@ -9,6 +9,9 @@ const dob = utils.getDateByOffset(-(18 * 365.2425 - 1))
 const relation =
   EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
     .fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
+const relationshipId =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[1].fieldset.inputs[0].inputCriteria.id
 const status =
   EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
     .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
@@ -21,12 +24,12 @@ describe('Validate state of aria-invalid attribute', () => {
 
   it('Should have default state of "false" for select, input, and radio', () => {
     pageObjects
-      .applicantDateOfBirthMonth()
+      .fieldsetById(relationshipId)
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
 
     pageObjects
-      .applicantDateOfBirthDay()
+      .benefitMemorableDateById('day')
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
 
@@ -40,12 +43,12 @@ describe('Validate state of aria-invalid attribute', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
     pageObjects
-      .applicantDateOfBirthMonth()
+      .fieldsetById(relationshipId)
       .invoke('attr', 'aria-invalid')
       .should('eq', 'true')
 
     pageObjects
-      .applicantDateOfBirthYear()
+      .benefitMemorableDateById('day')
       .invoke('attr', 'aria-invalid')
       .should('eq', 'true')
   })
@@ -54,23 +57,23 @@ describe('Validate state of aria-invalid attribute', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
     pageObjects
-      .applicantRelationshipToDeceased()
+      .fieldsetById(relationshipId)
       .invoke('attr', 'aria-invalid')
       .should('eq', 'true')
     pageObjects
-      .applicantDateOfBirthDay()
+      .benefitMemorableDateById('day')
       .invoke('attr', 'aria-invalid')
       .should('eq', 'true')
 
     utils.dataInputs({ dob, relation, status })
 
     pageObjects
-      .applicantMaritalStatus()
+      .fieldsetById(relationshipId)
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
 
     pageObjects
-      .applicantDateOfBirthYear()
+      .benefitMemorableDateById('day')
       .invoke('attr', 'aria-invalid')
       .should('eq', 'false')
   })

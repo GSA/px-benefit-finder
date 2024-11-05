@@ -1,44 +1,16 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 class PageObjects {
   button() {
     return cy.get('.usa-button')
   }
 
-  applicantDateOfBirthMonth() {
-    return cy.get('[data-testid="applicant_date_of_birth_0_month"]')
+  benefitMemorableDate() {
+    return cy.get('[data-testid="bf-usa-memorable-date"]')
   }
 
-  applicantDateOfBirthDay() {
-    return cy.get('[data-testid="applicant_date_of_birth_0_day"]')
-  }
-
-  applicantDateOfBirthYear() {
-    return cy.get('[data-testid="applicant_date_of_birth_0_year"]')
-  }
-
-  applicantDateOfDeathMonth() {
-    return cy.get('[data-testid="deceased_date_of_death_0_month"]')
-  }
-
-  applicantDateOfDeathDay() {
-    return cy.get('[data-testid="deceased_date_of_death_0_day"]')
-  }
-
-  applicantDateOfDeathYear() {
-    return cy.get('[data-testid="deceased_date_of_death_0_year"]')
-  }
-
-  applicantDateOfFuneralMonth() {
-    return cy.get('[data-testid="deceased_date_of_funeral_0_month"]')
-  }
-
-  applicantDateOfFuneralDay() {
-    return cy.get('[data-testid="deceased_date_of_funeral_0_day"]')
-  }
-
-  applicantDateOfFuneralYear() {
-    return cy.get('[data-testid="deceased_date_of_funeral_0_year"]')
+  benefitMemorableDateById(id) {
+    return this.benefitMemorableDate().find(`[id$="${id}"]`)
   }
 
   benefitSectionAlert() {
@@ -57,44 +29,49 @@ class PageObjects {
     return cy.get('[data-testid="bf-errors-list-item"]')
   }
 
-  applicantRelationshipToDeceased() {
-    return cy.get('[data-testid="applicant_relationship_to_the_deceased_0"]')
-  }
-
-  applicantMaritalStatus() {
-    return cy.get('[data-testid="applicant_marital_status_0"]')
-  }
-
-  benefitSectionFieldset() {
+  fieldset() {
     return cy.get('[data-testid="fieldset"]')
   }
 
-  benefitSectionFieldsetById(id) {
-    return this.benefitSectionFieldset().filter(`#${id}`)
+  fieldsetById(id) {
+    return this.fieldset().find(`[id^="${id}"]`)
   }
 
-  radioButtonById(id) {
-    return this.benefitSectionFieldsetById(id).find('[data-testid="radio"]')
+  modalButtonGroup() {
+    return cy.get('[data-testid="modal-button-group"]')
   }
 
-  buttonGroup() {
-    return cy.get('[data-testid="button-group"] li')
-  }
-
-  accordionByTitle(title) {
-    return cy.get(`[data-test-accordion-title="${title}"]`)
-  }
-
-  accordion() {
+  accordionHeading() {
     return cy.get('[data-testid="accordion-heading"]')
   }
 
-  benefitsAccordionLink(title) {
-    return this.accordionByTitle(title).find('a[data-testid="bf-benefit-link"]')
+  accordionByTitle(title) {
+    return this.accordionHeading().contains(new RegExp(`^${title}$`))
   }
 
-  keyEligibilityCriteriaList() {
-    return cy.get('[data-testid="bf-key-eligibility-criteria-list"] li')
+  benefitsAccordionLink(title) {
+    return this.accordionHeading()
+      .contains(new RegExp(`^${title}$`))
+      .parent()
+      .parent()
+      .parent()
+      .find('a[data-testid="bf-benefit-link"]')
+  }
+
+  menuButton() {
+    return cy.get('.usa-menu-btn')
+  }
+
+  mobileMenu() {
+    return cy.get('.usagov-mobile-menu')
+  }
+
+  breadCrumbList() {
+    return cy.get('.usa-breadcrumb__list')
+  }
+
+  cardGroup() {
+    return cy.get('.usa-card-group li')
   }
 
   radioGroup() {
@@ -117,32 +94,20 @@ class PageObjects {
     return cy.get('[data-testid="bf-result-view-unmet-button"]')
   }
 
-  dateOfBirthError() {
-    return cy.get('[data-testid="error-description-applicant_date_of_birth"]')
+  errorDescription() {
+    return cy.get('[data-testid="error-description"]')
   }
 
   dateOfBirthMonthError() {
-    return cy.get(
-      '[data-testid="month-error-description-applicant_date_of_birth_0"]'
-    )
+    return cy.get('[data-testid="month-error-description"]')
   }
 
   dateOfBirthDayError() {
-    return cy.get(
-      '[data-testid="day-error-description-applicant_date_of_birth_0"]'
-    )
+    return cy.get('[data-testid="day-error-description"]')
   }
 
   dateOfBirthYearError() {
-    return cy.get(
-      '[data-testid="year-error-description-applicant_date_of_birth_0"]'
-    )
-  }
-
-  relationshipToDeceasedError() {
-    return cy.get(
-      '[data-testid="error-description-applicant_relationship_to_the_deceased"]'
-    )
+    return cy.get('[data-testid="year-error-description"]')
   }
 
   zeroBenefitsViewHeading() {

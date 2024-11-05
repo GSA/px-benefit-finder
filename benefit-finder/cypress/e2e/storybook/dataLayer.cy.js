@@ -5,6 +5,7 @@ import { pageObjects } from '../../support/pageObjects'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import content from '../../../src/shared/api/mock-data/current.json'
+import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 
 // establish some common data points from our mock values and scenarios
 const {
@@ -191,6 +192,19 @@ const dataLayerValues = [
 
 const removeID = item => delete item['gtm.uniqueEventId']
 
+const relationshipId =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[1].fieldset.inputs[0].inputCriteria.id
+const relationshipValue =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
+const maritalStatusId =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[2].fieldset.inputs[0].inputCriteria.id
+const maritalStatusValue =
+  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
+    .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
+
 // check to make sure our data layer exists
 describe('Basic Data Layer Checks', () => {
   it('has a dataLayer and loads GTM', () => {
@@ -285,23 +299,9 @@ describe('Calls to Google Analytics Object', function () {
           cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
 
           pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDateOfBirth(
-            dateOfBirth.month,
-            dateOfBirth.day,
-            dateOfBirth.year
-          )
-          pageObjects
-            .applicantRelationshipToDeceased()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
-          pageObjects
-            .applicantMaritalStatus()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
+          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
+          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
+          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
 
           pageObjects
             .button()
@@ -344,23 +344,9 @@ describe('Calls to Google Analytics Object', function () {
           cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
 
           pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDateOfBirth(
-            dateOfBirth.month,
-            dateOfBirth.day,
-            dateOfBirth.year
-          )
-          pageObjects
-            .applicantRelationshipToDeceased()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
-          pageObjects
-            .applicantMaritalStatus()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
+          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
+          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
+          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
 
           pageObjects
             .button()
@@ -379,11 +365,7 @@ describe('Calls to Google Analytics Object', function () {
 
               // Date of death - 30 days ago
               const dateOfDeath = utils.getDateByOffset(-30)
-              cy.enterDateOfDeath(
-                dateOfDeath.month,
-                dateOfDeath.day,
-                dateOfDeath.year
-              )
+              cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
 
               pageObjects
                 .button()
@@ -407,12 +389,13 @@ describe('Calls to Google Analytics Object', function () {
 
   it('results page with eligible benefits has a bf_page_change and bf_count events', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
+    pageObjects.accordionHeading().should('exist')
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .accordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
@@ -438,12 +421,13 @@ describe('Calls to Google Analytics Object', function () {
 
   it('clicking an accordion on the results page with eligible benefits has a bf_accordion_open event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
+    pageObjects.accordionHeading().should('exist')
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .accordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
@@ -472,12 +456,13 @@ describe('Calls to Google Analytics Object', function () {
 
   it('clicking a obfuscated link in an open accordion on the results page with eligible benefits has a bf_benefit_link event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
+    pageObjects.accordionHeading().should('exist')
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .accordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
@@ -499,9 +484,7 @@ describe('Calls to Google Analytics Object', function () {
             removeID(ev[0])
 
             expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
-            // we wait for the last event to fire
-            // eslint-disable-next-line cypress/no-unnecessary-waiting
-            cy.wait(2500)
+            pageObjects.accordionHeading().should('exist')
             pageObjects
               .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
               .invoke('removeAttr', 'href')
@@ -524,13 +507,14 @@ describe('Calls to Google Analytics Object', function () {
 
   it('results page with not eligible benefits has a bf_page_change and bf_count events', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
+    pageObjects.accordionHeading().should('exist')
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       // get visible benfits results
       pageObjects
-        .accordion()
+        .accordionHeading()
         .filter(':visible')
         .should(
           'have.length',
@@ -545,7 +529,7 @@ describe('Calls to Google Analytics Object', function () {
               .click()
               .then(() => {
                 pageObjects
-                  .accordion()
+                  .accordionHeading()
                   .filter(':visible')
                   .should(
                     'have.length',
@@ -607,23 +591,9 @@ describe('Calls to Google Analytics Object', function () {
           cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
 
           pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDateOfBirth(
-            dateOfBirth.month,
-            dateOfBirth.day,
-            dateOfBirth.year
-          )
-          pageObjects
-            .applicantRelationshipToDeceased()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
-          pageObjects
-            .applicantMaritalStatus()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
+          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
+          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
+          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
 
           pageObjects
             .button()
@@ -642,11 +612,7 @@ describe('Calls to Google Analytics Object', function () {
 
               // Date of death - 30 days ago
               const dateOfDeath = utils.getDateByOffset(-30)
-              cy.enterDateOfDeath(
-                dateOfDeath.month,
-                dateOfDeath.day,
-                dateOfDeath.year
-              )
+              cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
 
               pageObjects
                 .button()
@@ -688,52 +654,40 @@ describe('Calls to Google Analytics Object', function () {
 
   it('clicking open all on results page has a bf_open_all_accordions event', function () {
     cy.visit(`${utils.storybookUri}${scenario}`)
-    pageObjects.accordion().should('exist')
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
       pageObjects
-        .accordion()
-        .filter(':visible')
-        .should('have.length.greaterThan', 0)
+        .expandAll()
+        .click()
         .then(() => {
-          pageObjects
-            .expandAll()
-            .click()
-            .then(() => {
-              // check last page change event
-              const ev = [
-                ...window.dataLayer.filter(
-                  x => x?.event === dataLayerValueOpenAllAccordions.event
-                ),
-              ]
-              removeID(ev[0])
-              expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
+          // check last page change event
+          const ev = [
+            ...window.dataLayer.filter(
+              x => x?.event === dataLayerValueOpenAllAccordions.event
+            ),
+          ]
+          removeID(ev[0])
 
-              pageObjects
-                .accordion()
-                .filter(':visible')
-                .should('have.length.greaterThan', 0)
-                .then(() => {
-                  pageObjects
-                    .expandAll()
-                    .click()
-                    .then(() => {
-                      // get all the events in our layer that matches the event value
-                      const ev = [
-                        ...window.dataLayer.filter(
-                          x =>
-                            x?.event === dataLayerValueOpenAllAccordions.event
-                        ),
-                      ]
-                      removeID(ev, ev[1])
-                      expect(ev[1].bfData.accordionsOpen).to.equal(
-                        !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
-                      )
-                    })
-                })
-            })
+          expect(ev[0]).to.deep.equal(dataLayerValueOpenAllAccordions)
+        })
+
+      pageObjects
+        .expandAll()
+        .click()
+        .then(() => {
+          // get all the events in our layer that matches the event value
+          const ev = [
+            ...window.dataLayer.filter(
+              x => x?.event === dataLayerValueOpenAllAccordions.event
+            ),
+          ]
+          removeID(ev[1])
+
+          expect(ev[1].bfData.accordionsOpen).to.equal(
+            !dataLayerValueOpenAllAccordions.bfData.accordionsOpen
+          )
         })
     })
   })
@@ -760,23 +714,9 @@ describe('Calls to Google Analytics Object', function () {
           cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
 
           pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDateOfBirth(
-            dateOfBirth.month,
-            dateOfBirth.day,
-            dateOfBirth.year
-          )
-          pageObjects
-            .applicantRelationshipToDeceased()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
-          pageObjects
-            .applicantMaritalStatus()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
+          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
+          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
+          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
 
           pageObjects
             .button()
@@ -795,11 +735,7 @@ describe('Calls to Google Analytics Object', function () {
 
               // Date of death - 30 days ago
               const dateOfDeath = utils.getDateByOffset(-30)
-              cy.enterDateOfDeath(
-                dateOfDeath.month,
-                dateOfDeath.day,
-                dateOfDeath.year
-              )
+              cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
 
               pageObjects
                 .button()
@@ -900,23 +836,9 @@ describe('Calls to Google Analytics Object', function () {
           cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
 
           pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDateOfBirth(
-            dateOfBirth.month,
-            dateOfBirth.day,
-            dateOfBirth.year
-          )
-          pageObjects
-            .applicantRelationshipToDeceased()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[1]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
-          pageObjects
-            .applicantMaritalStatus()
-            .select(
-              lifeEventForm.sectionsEligibilityCriteria[0].section.fieldsets[2]
-                .fieldset.inputs[0].inputCriteria.values[1].value
-            )
+          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
+          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
+          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
 
           pageObjects
             .button()
@@ -937,11 +859,7 @@ describe('Calls to Google Analytics Object', function () {
 
               // Date of death - 30 days ago
               const dateOfDeath = utils.getDateByOffset(-30)
-              cy.enterDateOfDeath(
-                dateOfDeath.month,
-                dateOfDeath.day,
-                dateOfDeath.year
-              )
+              cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
 
               pageObjects
                 .button()

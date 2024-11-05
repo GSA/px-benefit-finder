@@ -416,6 +416,7 @@ export const Disability = () => (
 export const GreenCheck = ({ color }) => (
   <svg
     className="bf-checkmark--green"
+    data-testid="icon-green-check"
     width="24"
     height="20"
     viewBox="0 0 24 20"

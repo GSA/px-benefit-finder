@@ -26,7 +26,7 @@ exports[`Fieldset > renders a match to the previous error snapshot 1`] = `
       <div
         aria-live="assertive"
         class="bf-error-detail"
-        data-testid="error-description-applicant_date_of_birth_0"
+        data-testid="error-description"
         id="error-description-applicant_date_of_birth_0"
       >
         Fill out the legend field

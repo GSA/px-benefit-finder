@@ -161,6 +161,10 @@ trait BenefitFinderTrait {
   public function getNode($nid, $mode) {
     $node = Node::load($nid);
 
+    if (!$node) {
+      return NULL;
+    }
+
     if ($node->hasField('moderation_state')) {
       $moderation_state = $node->get('moderation_state')->value;
       if ($moderation_state == 'archived') {

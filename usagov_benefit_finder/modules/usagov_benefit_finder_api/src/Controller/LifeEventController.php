@@ -226,9 +226,11 @@ class LifeEventController extends ControllerBase {
     if (empty($life_event_form_node)) {
       $result = [];
       $json = json_encode($result, JSON_PRETTY_PRINT);
-      print_r("<p>JSON Data<pre>");
-      print_r($json);
-      print_r("</pre>");
+      if ($this->displayData) {
+        print_r("<p>JSON Data<pre>");
+        print_r($json);
+        print_r("</pre>");
+      }
       return $result;
     }
 

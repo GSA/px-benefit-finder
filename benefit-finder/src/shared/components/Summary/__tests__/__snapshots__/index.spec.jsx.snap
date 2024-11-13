@@ -25,10 +25,10 @@ exports[`Summary > renders a match to the previous snapshot 1`] = `
           class="bf-usa-list usa-list"
         >
           <li>
-            Visit each agency’s website to find full eligibility requirements.
+            You need to visit each agency’s website to find full eligibility requirements and apply.
           </li>
           <li>
-            Your results may change if you answer more questions or modify your answers.
+            Your results may vary if your situation or answers change.
           </li>
           <li>
              
@@ -36,7 +36,7 @@ exports[`Summary > renders a match to the previous snapshot 1`] = `
               class="bf-usa-summary-box__link usa-summary-box__link"
               href="#"
             >
-              Clear my answers and restart the form.
+              Clear your answers and restart the form.
             </a>
           </li>
         </ul>

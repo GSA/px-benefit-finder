@@ -7,6 +7,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
   />
   <div
     class="bf-usa-memorable-date usa-memorable-date"
+    data-testid="bf-usa-memorable-date"
     id="bf-usa-memorable-date-applicant_date_of_birth_0"
   >
     <div
@@ -30,6 +31,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
         class="bf-usa-select usa-select "
         data-datetype="month"
         data-errormessage="Fill out the undefined month field"
+        data-testid="applicant_date_of_birth_0_month"
         id="applicant_date_of_birth_0_month"
         name="applicant_date_of_birth_0_month"
       >
@@ -121,6 +123,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
         class="bf-usa-input usa-input "
         data-datetype="day"
         data-errormessage="Fill out the undefined day field"
+        data-testid="applicant_date_of_birth_0_day"
         id="applicant_date_of_birth_0_day"
         inputmode="numeric"
         name="applicant_date_of_birth_0_day"
@@ -148,6 +151,7 @@ exports[`Date > renders a match to the previous snapshot 1`] = `
         class="bf-usa-input usa-input "
         data-datetype="year"
         data-errormessage="Fill out the undefined year field"
+        data-testid="applicant_date_of_birth_0_year"
         id="applicant_date_of_birth_0_year"
         inputmode="numeric"
         name="applicant_date_of_birth_0_year"

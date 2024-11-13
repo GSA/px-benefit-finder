@@ -1,4 +1,5 @@
 import { pageObjects } from '../support/pageObjects'
+import * as EN_DOLO_MOCK_DATA from '../../../benefit-finder/src/shared/api/mock-data/current.json'
 
 export function getDateByOffset(offset) {
   const date = new Date(Date.now())
@@ -32,11 +33,23 @@ export const storybookUri = `/iframe.html?args=&id=app--primary&viewMode=story&`
 
 export const dataInputs = ({ dob, relation, status, dod }) => {
   // input date of birth
-  dob && cy.enterDateOfBirth(dob.month, dob.day, dob.year)
-  // input relation to deceaseed
-  relation && pageObjects.applicantRelationshipToDeceased().select(relation)
-  // input relation to deceaseed
-  status && pageObjects.applicantMaritalStatus().select(status)
+  dob && cy.enterDate(dob.month, dob.day, dob.year)
+  // input relation to deceased
+  relation &&
+    pageObjects
+      .fieldsetById(
+        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
+          .section.fieldsets[1].fieldset.inputs[0].inputCriteria.id
+      )
+      .select(relation)
+  // input marital status
+  status &&
+    pageObjects
+      .fieldsetById(
+        EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
+          .section.fieldsets[2].fieldset.inputs[0].inputCriteria.id
+      )
+      .select(status)
   // input date of death
-  dod && cy.enterDateOfDeath(dod.month, dod.day, dod.year)
+  dod && cy.enterDate(dod.month, dod.day, dod.year)
 }

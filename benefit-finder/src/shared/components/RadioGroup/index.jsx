@@ -30,7 +30,11 @@ const RadioGroup = ({
     : `${errorText?.prefix} ${legend && legend.toLowerCase()} ${errorText?.suffix}`
 
   return (
-    <div className="bf-radio-group radio-group" aria-invalid={invalid}>
+    <div
+      className="bf-radio-group radio-group"
+      aria-invalid={invalid}
+      data-testid="radio-group"
+    >
       {/* map the options */}
       {values &&
         values.map((option, index) => {

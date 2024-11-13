@@ -82,15 +82,15 @@
       "heading": "Important",
       "list": [
         {
-          "item": "Visit each agency’s website to find full eligibility requirements."
+          "item": "You need to visit each agency’s website to find full eligibility requirements and apply."
         },
         {
-          "item": "Your results may change if you answer more questions or modify your answers."
+          "item": "Your results may vary if your situation or answers change."
         }
       ],
       "cta": {
         "text": "",
-        "link": "Clear my answers and restart the form."
+        "link": "Clear your answers and restart the form."
       }
     },
     "eligible": {
@@ -110,10 +110,14 @@
       "description": "<strong>Based on your answers you are not eligible for these benefits.</strong>You may become eligible if you enter additional information or your situation changes."
     },
     "zeroBenefits": {
+      "backcta": {
+        "text": "",
+        "link": "Go back to start"
+      },
       "eligible": {
         "chevron": {
           "heading": "You are likely not eligible for these benefits.",
-          "description": "<div><p>If you reached these results by mistake, please go back to review your answers.</p></div>"
+          "description": "<div><p>If you think you reached these results by mistake, please go back to review and edit your answers.</p></div>"
         }
       },
       "notEligible": {
@@ -123,7 +127,7 @@
         }
       },
       "heading": "No eligible results.",
-      "description": "Based on your answers you are likely not eligible for benefits. You may become eligible if you enter more information or your situation changes.",
+      "description": "Based on your answers, you are currently not eligible for this life event’s benefits. You may become eligible if your situation or answers change in the future. Visit your city, state, or employer for other potential benefits.",
       "cta": "See all benefits"
     },
     "stepBackButton": "Back",
@@ -151,7 +155,7 @@
     "notEligibleResults": {
       "heading": "Benefits you did not qualify for",
       "description": "<div>Based on your answers you are not eligible for these benefits. <strong>You may become eligible if you enter additional information or your situation changes.</strong></div>",
-      "cta": "Explore other potential benefits"
+      "cta": "Explore benefits you did not qualify for"
     },
     "resultsRelativeBenefits": {
       "heading": "More benefits"
@@ -178,7 +182,7 @@
     ]
   },
   "sectionHeadings": {
-    "start": "Answer these questions",
+    "start": "Answer the following questions",
     "continue": "Questions continued",
     "final": "Final questions"
   },

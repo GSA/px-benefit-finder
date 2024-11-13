@@ -116,15 +116,15 @@ describe(`Validate code passes axe scanning`, () => {
     cy.injectAxe() // we inject axe again because of the reload -> visit
     // get a node list of all accordions
     // get the heading of the first in the list
-    cy.get(`[data-analytics="bf-usa-accordion"]`).then(accordionItems => {
+    cy.get(`[data-testid="bf-usa-accordion"]`).then(accordionItems => {
       pageObjects
         .benefitResultsView()
-        .invoke('attr', 'data-analytics')
+        .invoke('attr', 'data-testid')
         .should('eq', 'bf-result-view')
 
       pageObjects
-        .accordion(
-          `${accordionItems[0].getAttribute('data-analytics-content')}`
+        .accordionByTitle(
+          `${accordionItems[0].getAttribute('data-test-accordion-title')}`
         )
         .click()
       runA11y()
@@ -147,10 +147,10 @@ describe(`Validate code passes axe scanning`, () => {
       .click()
     // get a node list of all accordions
     // get the heading of the first in the list
-    cy.get(`[data-analytics="bf-usa-accordion"]`).then(accordionItems => {
+    cy.get(`[data-testid="bf-usa-accordion"]`).then(accordionItems => {
       pageObjects
-        .accordion(
-          `${accordionItems[0].getAttribute('data-analytics-content')}`
+        .accordionByTitle(
+          `${accordionItems[0].getAttribute('data-test-accordion-title')}`
         )
         .click()
       runA11y()

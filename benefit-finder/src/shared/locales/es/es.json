@@ -20,13 +20,13 @@
       "iconAlt": "Importante",
       "list": [
         {
-          "notice": "<div><strong>Esto no es una aplicación.</strong></div>"
+          "notice": "<div>Esto <strong>no es</strong>una aplicación.</div>"
         },
         {
-          "notice": "Sus respuestas <strong>no serán</strong> guardadas o presentadas."
+          "notice": "Sus respuestas <strong>no serán</strong> guardadas o compartidas con ninguna agencia."
         },
         {
-          "notice": "<div>Responda todas las preguntas<strong> para mejores resultados</strong>.</div>"
+          "notice": "<div><strong>Necesitará</strong> presentar una solicitud con cada agencia..</div>"
         }
       ]
     },
@@ -82,15 +82,15 @@
       "heading": "Importante",
       "list": [
         {
-          "item": "Visite el sitio web de cada agencia para confirmar su elegibilidad y requisitos."
+          "item": "Necesita ir al sitio web de cada agencia para confirmar su elegibilidad y aplicar."
         },
         {
-          "item": "Sus resultados podrían cambiar si responde más preguntas o modifica sus respuestas."
+          "item": "Sus resultados podrían variar si sus respuestas cambian."
         }
       ],
       "cta": {
         "text": "",
-        "link": "Borrar mis respuestas y empezar el formulario de nuevo."
+        "link": "Borre sus respuestas y empiece el formulario de nuevo."
       }
     },
     "eligible": {
@@ -110,10 +110,14 @@
       "description": "<strong>Según sus respuestas no es elegible para estos beneficios.<strong/> Podría calificar si tiene información adicional o si su situación cambia."
     },
     "zeroBenefits": {
+      "backcta": {
+        "text": "",
+        "link": "Volver al inicio"
+      },
       "eligible": {
         "chevron": {
-          "heading": "Usted parece no ser elegible para estos beneficios",
-          "description": "<div><p>Si cree que cometió un error, por favor regrese para corregir sus respuestas.</p></div>"
+          "heading": "Usted parece no ser elegible para los beneficios en este buscador",
+          "description": "<div><p>Si cree que cometió un error en sus respuestas, por favor regrese atrás para corregirlas.</p></div>"
         }
       },
       "notEligible": {
@@ -123,8 +127,8 @@
         }
       },
       "heading": "No tiene resultados elegibles.",
-      "description": "Basado en sus respuestas usted no es elegible para estos beneficios. Podría ser elegible si ingresa más información o si su situación cambia.",
-      "cta": "Ver todos los beneficios"
+      "description": "Según sus respuestas, usted no es elegible para los beneficios actualmente en este buscador. Usted podría ser elegible si su situación o respuestas cambian en el futuro. Consulte a su ciudad, estado o empleador para encontrar otros beneficios.",
+      "cta": "Ver los beneficios a los que no calificó"
     },
     "stepBackButton": "Volver",
     "eligibleResults": {
@@ -151,23 +155,23 @@
     },
     "notEligibleResults": {
       "heading": "Beneficios a los que no calificó",
-      "description": "<div>Según sus respuestas no es elegible para estos beneficios. <strong>Podría calificar si tiene información adicional o si su situación cambia.</strong></div>",
-      "cta": "Explore otros beneficios"
+      "description": "<div>Según sus respuestas, usted no es elegible para los siguientes beneficios. Podría calificar si ingresa más información o si su situación o respuestas cambian.</div>",
+      "cta": "Vea los beneficios a los no calificó"
     },
     "relativeBenefits": {
       "heading": "Más beneficios"
     },
     "shareResults": {
       "heading": "Imprima y comparta",
-      "shareTrigger": "Compartir resultados",
-      "emailTrigger": "Enviar resultados",
+      "shareTrigger": "Copie sus resultados en un enlace",
+      "emailTrigger": "Envie sus resultados por correo electrónico",
       "shareLinkContent": "Copiado",
       "emailSubject": "Resultados del buscador de beneficios de USAGov",
-      "description": "Copie o envíe sus resultados por correo. Sus respuestas serán visibles. Solo comparta con quienes confíe."
+      "description": "Copie o envíe sus resultados. Sus respuestas serán visibles. Solo comparta con quienes usted confíe."
     }
   },
   "shareResults": {
-    "heading": "Imprima y comparta",
+    "heading": "Comparta sus resultados",
     "description": "Sus respuestas serán visibles. Solo comparta con quienes confíe.",
     "buttonGroup": [
       {
@@ -179,9 +183,9 @@
     ]
   },
   "sectionHeadings": {
-    "start": "Responda las preguntas",
-    "continue": "Preguntas continuadas",
-    "final": "Preguntas finales"
+    "start": "Por favor, responda las siguientes preguntas",
+    "continue": "Siguientes preguntas",
+    "final": "Últimas preguntas"
   },
   "select": {
     "labelSelect": "Seleccione una opción",

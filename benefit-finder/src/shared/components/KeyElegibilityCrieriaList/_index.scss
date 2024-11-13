@@ -1,7 +1,7 @@
-@use '../../styles/colors/_index.scss' as color;
-@use '../../styles/space/_index.scss' as space;
-@use '../../styles/mixins/_index.scss' as *;
-@use '../../styles/functions/_index.scss' as *;
+@use '@styles/colors/_index.scss' as color;
+@use '@styles/space/_index.scss' as space;
+@use '@styles/mixins/_index.scss' as *;
+@use '@styles/functions/_index.scss' as *;
 
 .bf-key-eligibility-criteria-group {
   .bf-key-eligibility-criteria-heading {

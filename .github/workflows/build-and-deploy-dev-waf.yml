@@ -167,12 +167,12 @@ jobs:
             </details>
 
             #### Terraform Apply &#x1f680;`${{ steps.apply.outcome }}`
-      - name: Update Project Status
-        env:
-          GH_PROJECT_NUMBER: ${{ secrets.GH_PROJECT_NUMBER }}
-          GH_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
-        run: source ./scripts/pipeline/github-update-issue-status.sh
+  #     - name: Update Project Status
+  #       env:
+  #         GH_PROJECT_NUMBER: ${{ secrets.GH_PROJECT_NUMBER }}
+  #         GH_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+  #         ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
+  #       run: source ./scripts/pipeline/github-update-issue-status.sh
   stopBastion:
     name: Stop Bastion
     runs-on: ubuntu-latest

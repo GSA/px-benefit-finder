@@ -57,7 +57,8 @@ jobs:
           git checkout dev
 
           # Pull changes from release into dev
-          git pull origin release
+          # git pull origin release
+          git pull origin main
 
           # Push updated dev branch
           git push origin dev

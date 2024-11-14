@@ -25,7 +25,10 @@ jobs:
           git checkout release
 
           # Update and initialize submodules
-          git submodule update --init --recursive
+          # git submodule update --init --recursive
+
+          git submodule deinit -f --all
+          git submodule update --init --recursive --remote
 
           # Commit the changes
           git add .

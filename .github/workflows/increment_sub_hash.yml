@@ -10,9 +10,9 @@ jobs:
     steps:
       - name: Checkout repository without submodules
         uses: actions/checkout@v4
-        with:
-          submodules: false # Do not checkout submodules initially
-          fetch-depth: 0 # Fetch all history
+        # with:
+        #   submodules: false # Do not checkout submodules initially
+        #   fetch-depth: 0 # Fetch all history
 
       - name: Set up Git
         run: |
@@ -25,10 +25,7 @@ jobs:
           git checkout release
 
           # Update and initialize submodules
-          # git submodule update --init --recursive
-
-          git submodule deinit -f --all
-          git submodule update --init --recursive --remote
+          git submodule update --init --recursive
 
           # Commit the changes
           git add .

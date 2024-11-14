@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --global user.name "Hash Pipeline"
           git config --global user.email "hash@pipeline.com"
-          git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/owner/repo.git
+          git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
 
       - name: List all branches
         run: git branch -a
@@ -30,7 +30,8 @@ jobs:
           git checkout release
 
           # Update and initialize submodules
-          git submodule update --init --recursive
+          # git submodule update --init --recursive
+          git pull --recurse-submodules
 
           # Commit the changes
           git add .

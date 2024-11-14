@@ -10,14 +10,18 @@ jobs:
     steps:
       - name: Checkout repository without submodules
         uses: actions/checkout@v4
-        # with:
-        #   submodules: false # Do not checkout submodules initially
-        #   fetch-depth: 0 # Fetch all history
+        with:
+          submodules: false # Do not checkout submodules initially
+          fetch-depth: 0 # Fetch all history
 
       - name: Set up Git
         run: |
           git config --global user.name "Hash Pipeline"
           git config --global user.email "hash@pipeline.com"
+          git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/owner/repo.git
+
+      - name: List all branches
+        run: git branch -a
 
       - name: Update submodules on release branch
         continue-on-error: true

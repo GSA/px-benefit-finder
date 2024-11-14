@@ -20,6 +20,7 @@ jobs:
           git config --global user.email "hash@pipeline.com"
 
       - name: Update submodules on release branch
+        continue-on-error: true
         run: |
           # Checkout the release branch
           git checkout release

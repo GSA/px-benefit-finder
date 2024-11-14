@@ -18,6 +18,7 @@ jobs:
         run: |
           git config --global user.name "Xavier Metichecchia"
           git config --global user.email "Xavier.Metichecchia@gsa.gov"
+          git config --global pull.rebase false  # Ensure merge strategy
           git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
 
       - name: List all branches
@@ -58,7 +59,7 @@ jobs:
 
           # Pull changes from release into dev
           # git pull origin release
-          git pull origin main
+          git pull origin release
 
           # Push updated dev branch
           git push origin dev

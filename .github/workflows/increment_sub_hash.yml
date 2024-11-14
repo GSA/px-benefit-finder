@@ -16,8 +16,8 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config --global user.name "Hash Pipeline"
-          git config --global user.email "hash@pipeline.com"
+          git config --global user.name "Xavier Metichecchia"
+          git config --global user.email "Xavier.Metichecchia@gsa.gov"
           git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
 
       - name: List all branches

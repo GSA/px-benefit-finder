@@ -1,4 +1,5 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
+
 import * as utils from '../../support/utils.js'
 import { dataLayerUtils } from '../../../src/shared/utils'
 import { pageObjects } from '../../support/pageObjects'

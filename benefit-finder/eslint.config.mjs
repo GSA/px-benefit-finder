@@ -5,6 +5,7 @@ import pluginCypress from 'eslint-plugin-cypress/flat'
 import storybook from 'eslint-plugin-storybook'
 import reactPlugin from 'eslint-plugin-react'
 import eslintConfigPrettier from 'eslint-config-prettier'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
 
 // error when starting dev server:
 // Error: Key "languageOptions": Key "globals": Global "AudioWorkletGlobalScope " has leading or trailing whitespace.
@@ -99,6 +100,17 @@ export default [
       'react/jsx-curly-newline': 'off',
       'react/jsx-curly-brace-presence': 'off',
     },
+  },
+  {
+    files: ['**/*.jsx'],
+    ...jsxA11y.flatConfigs.recommended,
+    languageOptions: {
+      ...jsxA11y.flatConfigs.recommended.languageOptions,
+      globals: {
+        ...GLOBALS_BROWSER_FIX,
+      },
+    },
+    rules: {},
   },
   {
     ignores: [

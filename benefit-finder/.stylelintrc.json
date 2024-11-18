@@ -5,17 +5,6 @@
     "scss/load-no-partial-leading-underscore": null,
     "no-descending-specificity": null,
     "no-duplicate-selectors": null,
-    "selector-class-pattern": null,
-    "font-family-no-missing-generic-family-keyword": [
-      true,
-      {
-        "ignoreFontFamilies": [
-          "PublicSans-ExtraBold",
-          "PublicSans-Bold",
-          "PublicSans-Regular",
-          "PublicSans-ExtraLight"
-        ]
-      }
-    ]
+    "selector-class-pattern": null
   }
 }

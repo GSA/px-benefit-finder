@@ -2,8 +2,10 @@ import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import sassEmbedded from 'sass-embedded'
-import eslint from 'vite-plugin-eslint'
+import eslint from 'vite-plugin-eslint2'
+import stylelint from 'vite-plugin-stylelint'
 import copy from 'rollup-plugin-copy'
+import autoprefixer from 'autoprefixer'
 import { distTargets, testConfig, transformers } from './vite-config'
 
 const envLocal = loadEnv('all', process.cwd())
@@ -58,7 +60,12 @@ const aliasConfig = {
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [react(), eslint(), copy(copyConfig)],
+  plugins: [
+    react(),
+    eslint({ cache: true, lintOnStart: true, lintInWorker: true }),
+    stylelint({ cache: true, lintOnStart: true, lintInWorker: true }),
+    copy(copyConfig),
+  ],
   resolve: {
     alias: aliasConfig,
   },
@@ -74,6 +81,9 @@ export default defineConfig({
         implementation: sassEmbedded,
       },
     },
+  },
+  postcss: {
+    plugins: [autoprefixer()],
   },
   server: { ...server },
   test: testConfig,

@@ -22,7 +22,7 @@ export default [
   pluginCypress.configs.recommended,
   reactPlugin.configs.flat.all,
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.mjs'],
     languageOptions: {
       parserOptions: {
         ecmaVersion: 'latest',
@@ -51,7 +51,9 @@ export default [
     files: ['**/*.jsx'],
     ...reactPlugin.configs.flat.recommended,
     settings: {
-      react: { version: '18.3' },
+      react: {
+        version: 'detect',
+      },
     },
     languageOptions: {
       ...reactPlugin.configs.flat.recommended.languageOptions,
@@ -72,13 +74,7 @@ export default [
       'react/jsx-max-props-per-line': 'off',
       'react/jsx-no-bind': 'off',
       'react/prop-types': 'off',
-      'react/function-component-definition': [
-        'error',
-        {
-          namedComponents: 'arrow-function',
-          unnamedComponents: 'arrow-function',
-        },
-      ],
+      'react/function-component-definition': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-sort-props': 'off',
       'react/button-has-type': 'off',
@@ -97,7 +93,6 @@ export default [
       'react/jsx-max-depth': 'off',
       'react/jsx-no-leaked-render': 'off',
       'react/no-array-index-key': 'off',
-      'react/function-component-definition': 'off',
       'react/jsx-no-useless-fragment': 'off',
       'react/no-danger': 'off',
       'react/hook-use-state': 'off',

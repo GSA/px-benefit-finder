@@ -22,6 +22,7 @@ export default [
   ...storybook.configs['flat/recommended'],
   pluginCypress.configs.recommended,
   reactPlugin.configs.flat.all,
+  jsxA11y.flatConfigs.recommended,
   {
     files: ['**/*.js', '**/*.mjs'],
     languageOptions: {
@@ -110,7 +111,11 @@ export default [
         ...GLOBALS_BROWSER_FIX,
       },
     },
-    rules: {},
+    rules: {
+      'jsx-a11y/no-noninteractive-tabindex': 'off',
+      'jsx-a11y/anchor-is-valid': 'off',
+      'jsx-a11y/mouse-events-have-key-events': 'off',
+    },
   },
   {
     ignores: [

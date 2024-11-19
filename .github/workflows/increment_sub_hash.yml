@@ -21,9 +21,6 @@ jobs:
           git config --global pull.rebase false  # Ensure merge strategy
           git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
 
-      - name: List all branches
-        run: git branch -a
-
       - name: Update submodules on release branch
         continue-on-error: true
         run: |
@@ -31,7 +28,6 @@ jobs:
           git checkout release
 
           # Update and initialize submodules
-          # git submodule update --init --recursive
           git pull --recurse-submodules
 
           # Commit the changes
@@ -58,7 +54,6 @@ jobs:
           git checkout dev
 
           # Pull changes from release into dev
-          # git pull origin release
           git pull origin release
 
           # Push updated dev branch

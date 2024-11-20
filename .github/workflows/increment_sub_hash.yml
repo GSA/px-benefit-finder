@@ -39,11 +39,11 @@ jobs:
           git status
           git --no-pager diff
 
-      #     # Push changes to release branch
-      #     git push origin release
-      #
+          # Push changes to release branch
+          git push origin release
+
       # - name: Sync release to main
-      #   run: |
+      #    run: |
       #     # Switch to the main branch
       #     git checkout main
       #

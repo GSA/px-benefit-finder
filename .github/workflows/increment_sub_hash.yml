@@ -28,11 +28,8 @@ jobs:
           git checkout release
 
           # Update and initialize submodules
-          # git pull --recurse-submodules
-          git submodule update --init --recursive || echo "Expected error: Failed to update all submodules."
-
-           # Fetch the latest commit in each submodule
-          git submodule foreach 'git fetch && git checkout origin/prod'
+          git submodule set-branch --branch prod usagov-2021
+          git submodule update --remote || echo "Expected error: Failed to update all submodules."
 
           # Check Git Status
           git status

@@ -31,6 +31,9 @@ jobs:
           # git pull --recurse-submodules
           git submodule update --init --recursive || echo "Expected error: Failed to update all submodules."
 
+           # Fetch the latest commit in each submodule
+          git submodule foreach 'git fetch && git checkout origin/main'
+
           # Check Git Status
           git status
 

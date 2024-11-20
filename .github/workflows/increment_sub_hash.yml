@@ -29,7 +29,7 @@ jobs:
 
           # Update and initialize submodules
           # git pull --recurse-submodules
-          git submodule update --init --recursive
+          git submodule update --init --recursive || echo "Expected error: Failed to update all submodules."
 
           # Check Git Status
           git status

@@ -28,33 +28,37 @@ jobs:
           git checkout release
 
           # Update and initialize submodules
-          git pull --recurse-submodules
+          # git pull --recurse-submodules
+          git submodule update --init --recursive
 
-          # Commit the changes
-          git add .
-          git commit --allow-empty -m "Updated submodule to the latest commit on release branch"
+          # Check Git Status
+          git status
 
-          # Push changes to release branch
-          git push origin release
-
-      - name: Sync release to main
-        run: |
-          # Switch to the main branch
-          git checkout main
-
-          # Pull changes from release into main
-          git pull origin release
-
-          # Push updated main branch
-          git push origin main
-
-      - name: Sync release to dev
-        run: |
-          # Switch to the dev branch
-          git checkout dev
-
-          # Pull changes from release into dev
-          git pull origin release
-
-          # Push updated dev branch
-          git push origin dev
+      #     # Commit the changes
+      #     git add .
+      #     git commit --allow-empty -m "Updated submodule to the latest commit on release branch"
+      #
+      #     # Push changes to release branch
+      #     git push origin release
+      #
+      # - name: Sync release to main
+      #   run: |
+      #     # Switch to the main branch
+      #     git checkout main
+      #
+      #     # Pull changes from release into main
+      #     git pull origin release
+      #
+      #     # Push updated main branch
+      #     git push origin main
+      #
+      # - name: Sync release to dev
+      #   run: |
+      #     # Switch to the dev branch
+      #     git checkout dev
+      #
+      #     # Pull changes from release into dev
+      #     git pull origin release
+      #
+      #     # Push updated dev branch
+      #     git push origin dev

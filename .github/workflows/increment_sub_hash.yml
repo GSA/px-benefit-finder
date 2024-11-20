@@ -32,12 +32,13 @@ jobs:
           git submodule update --remote || echo "Expected error: Failed to update all submodules."
 
           # Check Git Status
-          git status
+          git add .
+          git commit --allow-empty -m "Updated submodule to the latest commit on release branch"
 
-      #     # Commit the changes
-      #     git add .
-      #     git commit --allow-empty -m "Updated submodule to the latest commit on release branch"
-      #
+          # Commit the changes
+          git status
+          git commit --allow-empty -m "Updated submodule to the latest commit on release branch"
+
       #     # Push changes to release branch
       #     git push origin release
       #

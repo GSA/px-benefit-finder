@@ -37,7 +37,7 @@ exports[`Alert > renders a match to the previous snapshot, default 1`] = `
   <div
     aria-hidden="false"
     aria-live="polite"
-    class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info "
+    class="bf-usa-alert usa-alert bf-usa-alert--info usa-alert--info"
     data-testid="alert"
     role="alert"
     tabindex="0"

@@ -1,10 +1,6 @@
 @use '@styles/colors' as color;
 @use '@styles/mixins' as *;
 
-.no-background {
-  background-color: color.$white;
-  border-left-color: color.$white;
-}
 
 h2.bf-usa-alert__heading {
   @include h5($font-family: 'sans');

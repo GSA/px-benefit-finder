@@ -1,9 +1,12 @@
 @use '../../styles/colors/index.scss' as color;
+@use '@styles/functions' as *;
 
 form.bf-usa-form {
-  font-family: 'Public Sans', sans-serif;
-  background-color: color.$officer-navy;
   height: 100%;
   min-height: 100vh;
   margin: 0;
+
+  .bf-grid-container.grid-container {
+    max-width: rem(1234px)
+  }
 }

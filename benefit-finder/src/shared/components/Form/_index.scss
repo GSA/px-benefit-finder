@@ -1,4 +1,6 @@
 @use '../../styles/colors/index.scss' as color;
+@use '@styles/sizes' as size;
+@use '@styles/breakpoints' as *;
 @use '@styles/functions' as *;
 
 form.bf-usa-form {
@@ -7,6 +9,10 @@ form.bf-usa-form {
   margin: 0;
 
   .bf-grid-container.grid-container {
-    max-width: rem(1234px)
+    max-width: size.$form-container-max-width;
+
+    @media (width >= $desktop) {
+      padding: 0;
+    }
   }
 }

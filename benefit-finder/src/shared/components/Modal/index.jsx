@@ -26,8 +26,13 @@ const customStyles = {
     width: '80%',
     borderRadius: '8px',
     borderColor: '#005ea2',
-    padding: '5% 0',
-    maxWidth: '32.5rem',
+    maxWidth: '41.375rem',
+    height: '100%',
+    maxHeight: '24.625rem',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
   },
 }
 
@@ -234,26 +239,28 @@ const Modal = ({
         }}
         ariaHideApp={false}
       >
-        <button
-          type="button"
-          aria-label="Close"
-          className="bf-modal-button"
-          data-testid="button"
-          onClick={() => handleCloseModal(triggerRef)}
-        >
-          <Icon type="modal-close" color="black" aria-hidden="true" />
-        </button>
-        <Heading headingLevel={1} className="bf-modal-heading">
-          {modalHeading}
-        </Heading>
-        {children || (
-          <GroupNavigation
-            navItemOneLabel={navItemOneLabel}
-            navItemOneFunction={navItemOneFunction}
-            navItemTwoLabel={navItemTwoLabel}
-            navItemTwoFunction={navItemTwoFunction}
-          />
-        )}
+        <div>
+          <button
+            type="button"
+            aria-label="Close"
+            className="bf-modal-button"
+            data-testid="button"
+            onClick={() => handleCloseModal(triggerRef)}
+          >
+            <Icon type="modal-close" color="black" aria-hidden="true" />
+          </button>
+          <Heading headingLevel={1} className="bf-modal-heading">
+            {modalHeading}
+          </Heading>
+          {children || (
+            <GroupNavigation
+              navItemOneLabel={navItemOneLabel}
+              navItemOneFunction={navItemOneFunction}
+              navItemTwoLabel={navItemTwoLabel}
+              navItemTwoFunction={navItemTwoFunction}
+            />
+          )}
+        </div>
       </NavModal>
     </div>
   )

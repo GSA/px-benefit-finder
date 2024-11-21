@@ -1,4 +1,5 @@
 @use '@styles/functions/index.scss' as *;
+@use '@styles/breakpoints/index.scss' as *;
 
 @mixin font-family($font-family) {
   @if $font-family == 'sans' {
@@ -31,55 +32,80 @@
 @mixin h1($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(39px);
+  font-size: rem(32px);
   font-style: normal;
   font-weight: 900;
   line-height: 117.4%;
-  letter-spacing: -0.39px;
+  letter-spacing: -0.32px;
+
+   @media (width >= $desktop) {
+    font-size: rem(39px);
+    letter-spacing: -0.39px;
+  }
 }
 
 @mixin h2($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(32px);
+  font-size: rem(21px);
   font-style: normal;
   font-weight: 900;
   line-height: 117.4%;
+
+  @media (width >= $desktop) {
+    font-size: rem(32px);
+  }
 }
 
 @mixin h3($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(26px);
+  font-size: rem(18px);
   font-style: normal;
   font-weight: 900;
   line-height: 117.4%;
+
+  @media (width >= $desktop) {
+    font-size: rem(26px);
+  }
 }
 
 @mixin h4($font-family: 'sans') {
   @include font-family($font-family);
 
-  font-size: rem(21px);
+  font-size: rem(17px);
   font-style: normal;
   font-weight: 700;
   line-height: 117.4%;
+
+  @media (width >= $desktop) {
+    font-size: rem(21px);
+  }
 }
 
 @mixin h5($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(21px);
+  font-size: rem(17px);
   font-style: normal;
   font-weight: 700;
   line-height: 117.4%;
+
+  @media (width >= $desktop) {
+    font-size: rem(21px);
+  }
 }
 
 @mixin h6($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(20px);
+  font-size: rem(16px);
   font-weight: 700;
   line-height: 134.09%;
+
+  @media (width >= $desktop) {
+    font-size: rem(20px);
+  }
 }
 
 // Body Text Regular
@@ -87,10 +113,14 @@
 @mixin p($font-family: 'sans') {
   @include font-family($font-family);
 
-  font-size: rem(17px);
+  font-size: rem(16px);
   font-style: normal;
   font-weight: 400;
   line-height: 132%;
+
+  @media (width >= $desktop) {
+    font-size: rem(17px);
+  }
 }
 
 // Body Text Bold
@@ -121,18 +151,28 @@
 @mixin subheadings($font-family: 'sans') {
   @include font-family($font-family);
 
-  font-size: rem(21px);
+  font-size: rem(17px);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 145.4%;
+
+  @media (width >= $desktop) {
+    font-size: rem(21px);
+    font-weight: 400;
+  }
 }
 
 // Intro Text Bold
 @mixin intro-text($font-family: 'serif') {
   @include font-family($font-family);
 
-  font-size: rem(21px);
+  font-size: rem(17px);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 164%;
+
+  @media (width >= $desktop) {
+    font-size: rem(21px);
+    font-weight: 400;
+  }
 }

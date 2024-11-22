@@ -9,13 +9,15 @@ form.bf-usa-form {
   min-height: 100vh;
   margin: 0;
   background-color: color.$officer-navy;
+  padding-bottom: space.$padding-bottom-xl;
 
   .bf-grid-container.grid-container {
     max-width: $form-container-max-width;
-    padding: 0 space.$space-md-gap;
+    padding: space.$space-md-gap;
 
     @media (width >= calc($form-container-max-width + space.$space-md-plus)) {
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

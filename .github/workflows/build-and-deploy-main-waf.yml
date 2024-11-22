@@ -124,17 +124,6 @@ jobs:
           stdout=$(echo $stdout | sed '$ d')
           echo ${stdout}
           echo "stdout=${stdout}" >> $GITHUB_OUTPUT
-      # - name: Terraform Apply
-      #   env:
-      #     TF_BASTION: "${{ secrets.TF_BASTION }}"
-      #   id: apply
-      #   run: |
-      #     set -x
-      #     echo "Running: ./scripts/pipeline/cloud-gov-remote-command.sh ${TF_BASTION} \"TF_WORKSPACE=${BRANCH} tofu -chdir=px-benefit-finder/terraform/infra apply -auto-approve\" 1"
-      #     stdout=$(./scripts/pipeline/cloud-gov-remote-command.sh "${TF_BASTION}" "TF_WORKSPACE=${BRANCH} tofu -chdir=px-benefit-finder/terraform/infra apply -auto-approve" 1 2>&1)
-      #     echo "Raw Output: $stdout"
-      #     echo "stdout=${stdout}" >> $GITHUB_OUTPUT
-      # set +x
       - name: Terraform Apply
         env:
           TF_BASTION: "${{ secrets.TF_BASTION }}"

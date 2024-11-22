@@ -1,12 +1,12 @@
 name: Update Main WAF
 
-on:
-  schedule:
-    - cron: "0 5 * * 4"
-
 # on:
-#   workflow_dispatch:
+#   schedule:
+#     - cron: "0 5 * * 4"
 #
+on:
+  workflow_dispatch:
+
 jobs:
   checkVersion:
     name: Check versions
@@ -129,10 +129,20 @@ jobs:
           TF_BASTION: "${{ secrets.TF_BASTION }}"
         id: apply
         run: |
+          # Add a debug echo for the full command being executed
+          echo "Running: ./scripts/pipeline/cloud-gov-remote-command.sh ${TF_BASTION} \"TF_WORKSPACE=${BRANCH} tofu -chdir=px-benefit-finder/terraform/infra apply -auto-approve\" 1"
           stdout=$(./scripts/pipeline/cloud-gov-remote-command.sh "${TF_BASTION}" "TF_WORKSPACE=${BRANCH} tofu -chdir=px-benefit-finder/terraform/infra apply -auto-approve" 1)
-          stdout=$(echo $stdout | sed '$ d')
-          echo ${stdout}
+          echo "Raw Output: $stdout"
           echo "stdout=${stdout}" >> $GITHUB_OUTPUT
+      # - name: Terraform Apply
+      #   env:
+      #     TF_BASTION: "${{ secrets.TF_BASTION }}"
+      #   id: apply
+      #   run: |
+      #     stdout=$(./scripts/pipeline/cloud-gov-remote-command.sh "${TF_BASTION}" "TF_WORKSPACE=${BRANCH} tofu -chdir=px-benefit-finder/terraform/infra apply -auto-approve" 1)
+      #     stdout=$(echo $stdout | sed '$ d')
+      #     echo ${stdout}
+      #     echo "stdout=${stdout}" >> $GITHUB_OUTPUT
       - name: Create Issue For Review
         id: issue
         uses: dacbd/create-issue-action@main

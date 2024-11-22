@@ -52,26 +52,30 @@ exports[`loads intro 1`] = `
         <div
           class="bf-grid-container grid-container"
         >
-          <h2
-            aria-level="2"
-            class=""
-            role="heading"
-          >
-            Steps
-          </h2>
-          <div
-            class="time-indicator"
-          >
-            Estimated time
-             
-            2-5 minutes
-          </div>
           <div
             class="bf-intro-process-group"
           >
             <div
               class="bf-intro-process-list"
             >
+              <div
+                class="bf-intro-process-heading"
+              >
+                <h2
+                  aria-level="2"
+                  class=""
+                  role="heading"
+                >
+                  Steps to find benefits
+                </h2>
+                <div
+                  class="time-indicator"
+                >
+                  Estimated time to complete
+                   
+                  2-5 minutes
+                </div>
+              </div>
               <ol
                 class="bf-usa-process-list usa-process-list"
               >
@@ -81,7 +85,7 @@ exports[`loads intro 1`] = `
                   <h3
                     class="bf-usa-process-list__heading usa-process-list__heading"
                   >
-                    Answer questions
+                    Answer a few questions
                   </h3>
                 </li>
                 <li
@@ -105,10 +109,10 @@ exports[`loads intro 1`] = `
               </ol>
             </div>
             <div
-              class="bf-line-sperator-wrapper--vertical"
+              class="bf-line-separator-wrapper--vertical"
             >
               <div
-                class="bf-line-sperator--vertical"
+                class="bf-line-separator--vertical"
               />
             </div>
             <div
@@ -155,77 +159,15 @@ exports[`loads intro 1`] = `
                       class="bf-notice-item"
                     >
                       <div>
-                        <strong>
-                          This is not an application.
-                        </strong>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="bf-notice"
-                  >
-                    <i
-                      aria-label="Important"
-                      data-testid="icon-info"
-                      role="img"
-                    >
-                      <svg
-                        class="bf-info"
-                        fill="none"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        width="14"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M6.33594 3.66732H7.66927V5.00065H6.33594V3.66732ZM6.33594 6.33398H7.66927V10.334H6.33594V6.33398ZM7.0026 0.333984C3.3226 0.333984 0.335938 3.32065 0.335938 7.00065C0.335938 10.6807 3.3226 13.6673 7.0026 13.6673C10.6826 13.6673 13.6693 10.6807 13.6693 7.00065C13.6693 3.32065 10.6826 0.333984 7.0026 0.333984ZM7.0026 12.334C4.0626 12.334 1.66927 9.94065 1.66927 7.00065C1.66927 4.06065 4.0626 1.66732 7.0026 1.66732C9.9426 1.66732 12.3359 4.06065 12.3359 7.00065C12.3359 9.94065 9.9426 12.334 7.0026 12.334Z"
-                          fill="#1B1B1B"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </i>
-                    <div
-                      class="bf-notice-item"
-                    >
-                      <strong>
-                        You'll need to apply
-                      </strong>
-                       for benefits with each agency.
-                    </div>
-                  </li>
-                  <li
-                    class="bf-notice"
-                  >
-                    <i
-                      aria-label="Important"
-                      data-testid="icon-info"
-                      role="img"
-                    >
-                      <svg
-                        class="bf-info"
-                        fill="none"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        width="14"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M6.33594 3.66732H7.66927V5.00065H6.33594V3.66732ZM6.33594 6.33398H7.66927V10.334H6.33594V6.33398ZM7.0026 0.333984C3.3226 0.333984 0.335938 3.32065 0.335938 7.00065C0.335938 10.6807 3.3226 13.6673 7.0026 13.6673C10.6826 13.6673 13.6693 10.6807 13.6693 7.00065C13.6693 3.32065 10.6826 0.333984 7.0026 0.333984ZM7.0026 12.334C4.0626 12.334 1.66927 9.94065 1.66927 7.00065C1.66927 4.06065 4.0626 1.66732 7.0026 1.66732C9.9426 1.66732 12.3359 4.06065 12.3359 7.00065C12.3359 9.94065 9.9426 12.334 7.0026 12.334Z"
-                          fill="#1B1B1B"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </i>
-                    <div
-                      class="bf-notice-item"
-                    >
-                      <div>
-                        <strong>
-                          We don't share, save, or submit
-                        </strong>
-                         your information.
+                        <p>
+                          <strong>
+                            This is not an application. You will need to apply for benefits
+                          </strong>
+                           with each agency.
+                        </p>
+                        <p>
+                          We don't share, save, or submit your information.
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -234,10 +176,10 @@ exports[`loads intro 1`] = `
             </div>
           </div>
           <div
-            class="bf-line-sperator-wrapper"
+            class="bf-line-separator-wrapper"
           >
             <div
-              class="bf-line-sperator"
+              class="bf-line-separator"
             />
           </div>
           <div

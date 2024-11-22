@@ -1,11 +1,11 @@
 {
   "intro": {
-    "heading": "Steps",
-    "timeIndicator": "Estimated time",
+    "heading": "Steps to find benefits",
+    "timeIndicator": "Estimated time to complete",
     "steps": {
       "list": [
         {
-          "title": "Answer questions"
+          "title": "Answer a few questions"
         },
         {
           "title": "Get your list of benefits"
@@ -20,13 +20,7 @@
       "iconAlt": "Important",
       "list": [
         {
-          "notice": "<div><strong>This is not an application.</strong></div>"
-        },
-        {
-          "notice": "<strong>You'll need to apply</strong> for benefits with each agency."
-        },
-        {
-          "notice": "<div><strong>We don't share, save, or submit</strong> your information.</div>"
+          "notice": "<div><p><strong>This is not an application. You will need to apply for benefits</strong> with each agency.</p><p>We don't share, save, or submit your information.</p></div>"
         }
       ]
     },

@@ -34,17 +34,27 @@ echo "Fetching SSH code..." ### Remove Line after testing
 cf ssh-code > ${ssh_passwd}
 
 ### Start Remove After Testing
-
-# Always show output for debugging
+# Enhanced troubleshooting: Always show detailed output
 echo "Executing command via SSH: ${command}"
-sshpass -f "${ssh_passwd}" ssh -F "${ssh_config}" "ssh.fr.cloud.gov" "touch ~/.bashrc && source ~/.bashrc && PATH=\$PATH:${bin_path} ${command}"
+output=$(sshpass -f "${ssh_passwd}" ssh -F "${ssh_config}" "ssh.fr.cloud.gov" "touch ~/.bashrc && source ~/.bashrc && PATH=\$PATH:${bin_path} ${command}" 2>&1)
 
-# Capture and display the exit code for debugging
+# Capture the exit code
 exit_code=$?
-echo "Command exit code: ${exit_code}"
-exit $exit_code
 
-### End Remove after testing
+# Log output and errors
+if [ $exit_code -ne 0 ]; then
+  echo "Error encountered during SSH command execution."
+  echo "Command: ${command}"
+  echo "Output:"
+  echo "${output}"
+  echo "Exit Code: ${exit_code}"
+else
+  echo "Command executed successfully. Output:"
+  echo "${output}"
+fi
+
+exit $exit_code
+### End Remove After Testing
 
 ###Uncomment after testing
 #

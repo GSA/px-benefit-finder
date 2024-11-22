@@ -4,19 +4,15 @@
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
 
-.bf-result-view-details {
-  padding: space.$space-lg;
-}
-
 .bf-result-view-benefits,
 .bf-result-view-unmet,
-.bf-result-view-relvant-benefits,
+.bf-result-view-relevant-benefits,
 .bf-result-view-share-results {
   padding: space.$space-md 0;
   text-align: left;
 
   .bf-result-view-unmet-heading,
-  .bf-result-view-relvant-benefits-heading,
+  .bf-result-view-relevant-benefits-heading,
   .bf-result-view-share-results-heading {
     @include h3;
   }

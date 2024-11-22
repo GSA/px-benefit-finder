@@ -11,10 +11,14 @@ h1.bf-chevron-heading {
 .bf-chevron {
   position: relative;
   background-color: color.$officer-navy;
-  padding: space.$space-xl space.$space-lg rem(38px);
+  padding: space.$space-xl 0 rem(38px);
   margin: 0 auto;
   color: color.$white;
   margin-bottom: rem(140px);
+
+  @media (width >= $desktop) {
+    padding: space.$space-xl space.$space-lg rem(38px);
+  }
 }
 
 .bf-chevron-description p {

@@ -1,20 +1,20 @@
 @use '@styles/colors' as color;
 @use '@styles/breakpoints' as *;
 @use '@styles/space' as space;
-@use '@styles/sizes' as size;
+@use '@styles/sizes' as *;
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
 
-.bf-usa-form,
 .bf-verify-selections-view {
   background-color: color.$officer-navy;
   margin: 0;
   padding-bottom: space.$padding-bottom-xl;
 
   .bf-grid-container.grid-container {
-    max-width: size.$form-container-max-width;
+    max-width: $form-container-max-width;
+    padding: 0 space.$space-md-gap;
 
-    @media (width >= $desktop) {
+    @media (width >= calc($form-container-max-width + space.$space-md-plus)) {
       padding: 0;
     }
   }
@@ -31,7 +31,7 @@
 }
 
 .bf-section-info {
-  margin: rem(50px) rem(20px);
+  margin: rem(50px) space.$space-md-gap;
 }
 
 .bf-section-nav-btn-group {

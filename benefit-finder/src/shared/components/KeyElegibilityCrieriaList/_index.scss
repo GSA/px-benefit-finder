@@ -2,6 +2,7 @@
 @use '@styles/space/_index.scss' as space;
 @use '@styles/mixins/_index.scss' as *;
 @use '@styles/functions/_index.scss' as *;
+@use '@styles/breakpoints' as *;
 
 .bf-key-eligibility-criteria-group {
   .bf-key-eligibility-criteria-heading {
@@ -49,12 +50,21 @@
 }
 
 .bf-unmet-criteria-group {
-  padding: space.$space-md-plus 0 0 space.$space-md-plus;
+  padding: space.$space-md-gap-sm 0 0 space.$space-md-plus;
+
+    @media (width >= $desktop) {
+      padding-top: space.$space-md-plus;
+    }
 
   .bf-unmet-criteria-title {
     @include h5($font-family: 'sans');
 
     margin-bottom: space.$space-sm-plus;
+  }
+
+  ul.bf-unmet-criteria-list {
+    margin-bottom: space.$space-md-gap-sm;
+    padding-left: space.$space-lg;
   }
 
   li.bf-unmet-criteria-item {

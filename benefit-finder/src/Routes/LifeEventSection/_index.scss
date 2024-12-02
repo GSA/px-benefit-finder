@@ -31,7 +31,7 @@
 }
 
 .bf-section-info {
-  margin: rem(50px) rem(20px);
+  margin: rem(48px) rem(20px);
 }
 
 .bf-section-nav-btn-group {
@@ -72,20 +72,25 @@
   background-color: color.$officer-navy;
   color: color.$white;
   margin: 0;
-  padding: rem(64px) rem(16px);
+  padding: rem(48px) 0 rem(30rem);
+
+  @media (width >= $desktop) {
+    padding: rem(64px) rem(16px);
+  }
 }
 
 #bf-section {
-  padding-left: rem(16px);
-  padding-right: rem(16px);
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: rem(32px);
   margin-bottom: rem(40px);
 
   .bf-form-heading-group {
-    padding-bottom: rem(32px);
+    padding-bottom: rem(30px);
 
     h2.bf-form-heading {
       margin-bottom: 0;
+      margin-top: rem(30px);
       padding-bottom: rem(8px);
     }
 
@@ -99,6 +104,7 @@
 
 .bf-radio-group {
   display: flex;
+  margin-left: rem(20px);
 
   .bf-usa-radio__label {
     margin-right: rem(32px);
@@ -108,11 +114,6 @@
 @media (width >= $desktop) {
   .bf-section-info {
     margin: rem(64px);
-  }
-
-  #bf-section {
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .bf-radio-group {

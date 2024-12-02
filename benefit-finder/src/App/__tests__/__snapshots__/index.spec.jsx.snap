@@ -176,13 +176,6 @@ exports[`loads intro 1`] = `
             </div>
           </div>
           <div
-            class="bf-line-separator-wrapper"
-          >
-            <div
-              class="bf-line-separator"
-            />
-          </div>
-          <div
             class="bf-cta-wrapper"
           >
             <button

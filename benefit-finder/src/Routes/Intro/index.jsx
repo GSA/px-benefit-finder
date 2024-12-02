@@ -87,9 +87,6 @@ const Intro = ({ content, ui, hasQueryParams }) => {
               />
             </div>
           </div>
-          <div className="bf-line-separator-wrapper">
-            <div className="bf-line-separator" />
-          </div>
           <div className="bf-cta-wrapper">
             <Button secondary onClick={() => handleStep()} data-test="button">
               {button}

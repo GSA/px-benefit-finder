@@ -5,17 +5,26 @@
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
 
-.bf-usa-form,
 .bf-verify-selections-view {
   background-color: color.$officer-navy;
   margin: 0;
   padding-bottom: space.$padding-bottom-xl;
+
+  .bf-grid-container.grid-container {
+    max-width: $form-container-max-width;
+    padding: space.$space-md-gap;
+
+    @media (width >= calc($form-container-max-width + space.$space-md-plus)) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .bf-section-wrapper {
   background-color: color.$white;
   border: rem(1px) solid color.$white;
-  border-radius: rem(8px);
+  border-radius: rem(12px);
 
   .bf-usa-button {
     margin-bottom: space.$space-md;
@@ -23,7 +32,7 @@
 }
 
 .bf-section-info {
-  margin: rem(50px) rem(20px);
+  margin: rem(50px) space.$space-md-gap;
 }
 
 .bf-section-nav-btn-group {

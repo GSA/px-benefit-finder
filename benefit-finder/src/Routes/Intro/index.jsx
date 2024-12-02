@@ -59,17 +59,24 @@ const Intro = ({ content, ui, hasQueryParams }) => {
       <div className="bf-intro">
         <Chevron heading={title} description={summary} />
         <div className="bf-grid-container grid-container">
-          <Heading headingLevel={2}>{heading}</Heading>
+          {/* <Heading headingLevel={2}>{heading}</Heading>
           <TimeIndicator
             description={timeIndicator}
             timeEstimate={timeEstimate}
-          />
+          /> */}
           <div className="bf-intro-process-group">
             <div className="bf-intro-process-list">
+              <div className="bf-intro-process-heading">
+                <Heading headingLevel={2}>{heading}</Heading>
+                <TimeIndicator
+                  description={timeIndicator}
+                  timeEstimate={timeEstimate}
+                />
+              </div>
               <ProcessList steps={steps.list} description={steps.title} />
             </div>
-            <div className="bf-line-sperator-wrapper--vertical">
-              <div className="bf-line-sperator--vertical" />
+            <div className="bf-line-separator-wrapper--vertical">
+              <div className="bf-line-separator--vertical" />
             </div>
             <div className="bf-intro-process-notices">
               <Heading
@@ -85,8 +92,8 @@ const Intro = ({ content, ui, hasQueryParams }) => {
               />
             </div>
           </div>
-          <div className="bf-line-sperator-wrapper">
-            <div className="bf-line-sperator" />
+          <div className="bf-line-separator-wrapper">
+            <div className="bf-line-separator" />
           </div>
           <div className="bf-cta-wrapper">
             <Button secondary onClick={() => handleStep()} data-test="button">

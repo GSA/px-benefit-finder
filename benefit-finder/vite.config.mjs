@@ -79,6 +79,7 @@ export default defineConfig({
       scss: {
         api: 'modern-compiler',
         implementation: sassEmbedded,
+        silenceDeprecations: ['mixed-decls'],
       },
     },
   },

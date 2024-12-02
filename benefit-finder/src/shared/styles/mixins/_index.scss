@@ -1,5 +1,5 @@
-@use '@styles/functions/index.scss' as *;
-@use '@styles/breakpoints/index.scss' as *;
+@use '@styles/functions' as *;
+@use '@styles/breakpoints' as *;
 
 @mixin font-family($font-family) {
   @if $font-family == 'sans' {

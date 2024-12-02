@@ -1,20 +1,22 @@
 @use '@styles/breakpoints' as *;
 @use '@styles/sizes' as *;
-@use '@styles/space' as *;
 @use '@styles/functions' as *;
 
 .bf-intro {
   padding-bottom: rem(32px);
 
-  .bf-grid-container.grid-container {
-    // padding: 0 0 0 rem(36px);
-    padding: $space-intro-grid-container-mobile;
+  > .bf-grid-container.grid-container {
+    padding: 0 rem(36px);
   }
 
   .bf-cta-wrapper {
     display: flex;
     justify-content: center;
-    margin: rem(32px) rem(32px) rem(64px);
+    margin: rem(20px) 0 rem(56px);
+
+    @media (width >= $desktop) {
+      margin: rem(32px) rem(32px) rem(64px);
+    }
   }
 
   .bf-cta-wrapper button {
@@ -24,11 +26,15 @@
   .bf-intro-process-notices {
     display: flex;
     flex-direction: column;
-    margin-left: rem(16px);
     text-align: left;
 
-    .bf-intro-process-notices-heading {
+    @media (width >= $desktop) {
+      margin-left: rem(16px);
+    }
+
+    .bf-intro-process-notices-heading  {
       width: 100;
+      margin-bottom: rem(30px);
     }
 
     p {
@@ -43,7 +49,7 @@
 
     .bf-intro-process-heading h2 {
       text-align: left;
-      margin-bottom: rem(32px);
+      margin-bottom: rem(30px);
 
       @media (width >= $desktop) {
         margin-bottom: rem(16px);
@@ -54,6 +60,14 @@
       margin-left: 0;
       margin-right: 0;
       padding-top:rem(8px);
+
+      .bf-usa-process-list__heading {
+        font-size: rem(16px);
+
+          @media (width >= $desktop) {
+           font-size: rem(21px);
+          }
+      }
     }
   }
 

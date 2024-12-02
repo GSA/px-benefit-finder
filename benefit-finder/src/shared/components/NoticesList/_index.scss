@@ -4,32 +4,23 @@
 @use '@styles/functions' as *;
 
 .bf-notices-list {
-  margin-top: rem(36px);
-  margin-bottom: rem(64px);
+  @media (width >= $desktop) {
+    margin-top: rem(36px);
+    margin-bottom: rem(64px);
+  }
 }
 
 .bf-notice {
   display: flex;
-  padding-bottom: rem(32px);
+
+  @media (width >= $desktop) {
+    padding-bottom: rem(32px);
+  }
 
   .bf-info {
     margin-top: rem(4px);
     margin-right: rem(12px);
   }
-}
-
-.bf-line-separator-wrapper {
-  display: block;
-  padding-top: rem(32px);
-  padding-bottom: rem(32px);
-  margin: rem(32px);
-}
-
-.bf-line-separator {
-  display: block;
-  border-top: rem(2px) solid color.$base-light-grey;
-  width: 100%;
-  height: 100%;
 }
 
 .bf-line-separator-wrapper--vertical {
@@ -41,14 +32,6 @@
 }
 
 @media (width >= $desktop) {
-  .bf-intro .bf-line-separator-wrapper {
-    display: none;
-  }
-
-  .bf-intro .bf-line-separator {
-    display: none;
-  }
-
   .bf-line-separator-wrapper--vertical {
     display: block;
     padding-top: rem(128px);

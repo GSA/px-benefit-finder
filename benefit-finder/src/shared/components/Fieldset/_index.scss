@@ -1,5 +1,6 @@
 @use '@styles/colors' as color;
 @use '@styles/mixins' as *;
+@use '@styles/functions' as *;
 
 .bf-usa-fieldset {
   position: relative;
@@ -16,7 +17,7 @@
     font-weight: 600;
   }
 
-  // list errors need a differnt margin spacing
+  // list errors need a different margin spacing
   li.bf-error-detail {
     margin: 0 0 rem(4px);
   }

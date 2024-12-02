@@ -7,6 +7,7 @@ show_output=$3
 APP_GUID=$(cf app "${APP_NAME}" --guid)
 bin_path="/var/www/vendor/bin/:/home/vcap/deps/0/bin/"
 
+
 [ -z "${APP_NAME}" ] || [ -z "${command}" ] && echo "Command error! Valid format: ${0} <application_name> <command>" && exit 1
 
 ssh_config=/tmp/ssh_config

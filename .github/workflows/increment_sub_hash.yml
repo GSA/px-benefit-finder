@@ -21,9 +21,6 @@ jobs:
           git config --global pull.rebase false  # Ensure merge strategy
           git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
 
-      - name: List all branches
-        run: git branch -a
-
       - name: Update submodules on release branch
         continue-on-error: true
         run: |
@@ -31,12 +28,17 @@ jobs:
           git checkout release
 
           # Update and initialize submodules
-          # git submodule update --init --recursive
-          git pull --recurse-submodules
+          git submodule update --init
+          git submodule set-branch --branch prod usagov-2021
+          git submodule update --remote || echo "Expected error: Failed to update all submodules."
 
-          # Commit the changes
+          # Check Git Status
           git add .
           git commit --allow-empty -m "Updated submodule to the latest commit on release branch"
+
+          # Commit the changes
+          git status
+          git --no-pager diff
 
           # Push changes to release branch
           git push origin release
@@ -58,7 +60,6 @@ jobs:
           git checkout dev
 
           # Pull changes from release into dev
-          # git pull origin release
           git pull origin release
 
           # Push updated dev branch

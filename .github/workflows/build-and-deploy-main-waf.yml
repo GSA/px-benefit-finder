@@ -5,8 +5,8 @@ on:
     - cron: "0 5 * * 4"
 
 # on:
-#   workflow_dispatch:
-#
+# workflow_dispatch:
+
 jobs:
   checkVersion:
     name: Check versions

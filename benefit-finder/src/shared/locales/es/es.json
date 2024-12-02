@@ -1,17 +1,17 @@
 {
   "intro": {
-    "heading": "Pasos",
-    "timeIndicator": "Tiempo estimado",
+    "heading": "Pasos para encontrar beneficios",
+    "timeIndicator": "Tiempo para completar",
     "steps": {
       "list": [
         {
           "title": "Responda unas preguntas"
         },
         {
-          "title": "Obtenga su lista de posibles beneficios"
+          "title": "Obtenga su lista de beneficios"
         },
         {
-          "title": "Aplique en los sitios web de cada agencia"
+          "title": "Presente su soliticud a cada agencia"
         }
       ]
     },
@@ -20,13 +20,7 @@
       "iconAlt": "Importante",
       "list": [
         {
-          "notice": "<div>Esto <strong>no es</strong>una aplicación.</div>"
-        },
-        {
-          "notice": "Sus respuestas <strong>no serán</strong> guardadas o compartidas con ninguna agencia."
-        },
-        {
-          "notice": "<div><strong>Necesitará</strong> presentar una solicitud con cada agencia..</div>"
+          "notice": "<div><p><strong>Esto no es una aplicación. Necesita presentar una solicitud</strong> con cada agencia.</p><p>No guardamos ni compartimos sus respuestas con ninguna agencia.</p></div>"
         }
       ]
     },

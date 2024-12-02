@@ -151,7 +151,7 @@ exports[`Intro > renders a match to the previous snapshot 1`] = `
                        with each agency.
                     </p>
                     <p>
-                      We don't share, save, or submit your information.
+                      We do not share, save, or submit your information.
                     </p>
                   </div>
                 </div>

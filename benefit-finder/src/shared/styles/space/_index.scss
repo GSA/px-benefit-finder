@@ -1,22 +1,30 @@
 @use '@styles/functions/index.scss' as *;
 
-$space-xs: rem(4px);
-$space-sm: rem(8px);
-$space-sm-plus: rem(12px);
-$space-md: rem(16px);
-$space-md-gap-sm: rem(18px);
-$space-md-gap: rem(20px);
-$space-md-plus: rem(24px);
-$space-lg: rem(32px);
-$space-lg-gap: rem(36px);
-$space-lg-plus: rem(40px);
-$space-xl: rem(64px);
-$space-xl-plus: rem(86px);
+// banner containers
+$space-banner-grid-container-mobile: 0 0 0 rem(36px);
+$space-banner-grid-container-desktop: 0 0 0 rem(36px);
+
+// intro containers
+$space-intro-grid-container-mobile: 0 0 0 rem(36px);
+$space-intro-grid-container-desktop: 0 0 0 rem(36px);
+
+// $space-xs: rem(4px);
+// $space-sm: rem(8px);
+// $space-sm-plus: rem(12px);
+// $space-md: rem(16px);
+// $space-md-gap-sm: rem(18px);
+// $space-md-gap: rem(20px);
+// $space-md-plus: rem(24px);
+// $space-lg: rem(32px);
+// $space-lg-gap: rem(36px);
+// $space-lg-plus: rem(40px);
+// $space-xl: rem(64px);
+// $space-xl-plus: rem(86px);
 
 // $space-xxl: rem(86px);
-$padding-bottom-sm: $space-sm;
-$padding-bottom-md: $space-md;
-$padding-bottom-md-plus: $space-md-plus;
-$padding-bottom-lg: $space-lg;
-$padding-bottom-lg-plus: $space-lg-plus;
-$padding-bottom-xl: $space-xl;
+// $padding-bottom-sm: $space-sm;
+// $padding-bottom-md: $space-md;
+// $padding-bottom-md-plus: $space-md-plus;
+// $padding-bottom-lg: $space-lg;
+// $padding-bottom-lg-plus: $space-lg-plus;
+// $padding-bottom-xl: $space-xl;

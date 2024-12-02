@@ -1,7 +1,6 @@
 @use '@styles/colors' as color;
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
-@use '@styles/space' as space;
 
 .bf-usa-accordion {
   .bf-usa-accordion__button {
@@ -29,6 +28,6 @@
   }
 
   .bf-usa-accordion__content {
-    padding: 0 space.$space-md-gap-sm space.$space-lg-plus space.$space-md-gap-sm;
+    padding: 0 rem(18px) rem(40px);
   }
 }

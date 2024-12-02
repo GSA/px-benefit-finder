@@ -1,7 +1,6 @@
 @use '@styles/colors' as color;
 @use '@styles/breakpoints' as *;
 @use '@styles/functions' as *;
-@use '@styles/space' as space;
 @use '@styles/mixins' as *;
 
 h1.bf-banner-heading {
@@ -12,20 +11,20 @@ h1.bf-banner-heading {
   position: relative;
   background-color: color.$officer-navy;
   padding: rem(45px) 0 rem(60px);
-  margin: 0 auto space.$space-md-plus;
+  margin: 0 auto rem(24px);
   color: color.$white;
 
   .bf-grid-container.grid-container {
-    padding: 0 space.$space-md-gap;
+    padding: 0 rem(20px);
   }
 
   .bf-banner-heading  {
-    margin: 0 0 space.$space-md;
+    margin: 0 0 rem(16px);
   }
 
   @media (width >= $desktop) {
-    margin-bottom: space.$space-xl;
-    padding: space.$space-xl space.$space-lg rem(38px);
+    margin-bottom: rem(64px);
+    padding: rem(64px) rem(32px) rem(38px);
   }
 }
 
@@ -37,7 +36,7 @@ h1.bf-banner-heading {
 
 @media (width >= $desktop) {
   .bf-banner {
-    padding-bottom: space.$space-xl;
-    margin-bottom: space.$space-xl;
+    padding-bottom: rem(64px);
+    margin-bottom: rem(64px);
   }
 }

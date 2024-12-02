@@ -1,6 +1,5 @@
 @use '@styles/colors' as color;
 @use '@styles/breakpoints' as *;
-@use '@styles/space' as space;
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
 
@@ -8,7 +7,7 @@
 .bf-result-view-unmet,
 .bf-result-view-relevant-benefits,
 .bf-result-view-share-results {
-  padding: space.$space-md 0;
+  padding: rem(16px) 0;
   text-align: left;
 
   .bf-result-view-unmet-heading,
@@ -20,7 +19,7 @@
 
 .bf-result-view-unmet {
   p {
-    padding-bottom: space.$padding-bottom-md;
+    padding-bottom: rem(16px);
   }
 
   .bf-result-view-cta-wrapper {
@@ -31,7 +30,7 @@
 
 .bf-result-view-share-results-trigger-group {
   button {
-    margin-bottom: space.$space-sm;
+    margin-bottom: rem(8px);
   }
 }
 
@@ -41,6 +40,6 @@
 
 @media (width >= $desktop) {
   .bf-result-view-details {
-    padding: space.$space-md-plus 5.4rem;
+    padding: rem(24px) 5.4rem;
   }
 }

@@ -1,6 +1,5 @@
 @use '../../styles/colors/index.scss' as color;
 @use '@styles/sizes' as *;
-@use '@styles/space' as space;
 @use '@styles/breakpoints' as *;
 @use '@styles/functions' as *;
 
@@ -9,13 +8,13 @@ form.bf-usa-form {
   min-height: 100vh;
   margin: 0;
   background-color: color.$officer-navy;
-  padding-bottom: space.$padding-bottom-xl;
+  padding-bottom: rem(64px);
 
   .bf-grid-container.grid-container {
     max-width: $form-container-max-width;
-    padding: 0 space.$space-md-gap;
+    padding: rem(20px);
 
-    @media (width >= calc($form-container-max-width + space.$space-md-plus)) {
+    @media (width >= calc($form-container-max-width + rem(24px))) {
       padding-left: 0;
       padding-right: 0;
     }

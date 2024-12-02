@@ -1,7 +1,6 @@
-@use '@styles/colors/_index.scss' as color;
-@use '@styles/space/_index.scss' as space;
-@use '@styles/mixins/_index.scss' as *;
-@use '@styles/functions/_index.scss' as *;
+@use '@styles/colors' as color;
+@use '@styles/mixins' as *;
+@use '@styles/functions' as *;
 @use '@styles/breakpoints' as *;
 
 .bf-key-eligibility-criteria-group {
@@ -9,7 +8,7 @@
     @include h6;
 
     background-color: color.$base-light-grey;
-    padding: space.$space-md space.$space-lg;
+    padding: rem(16px) rem(32px);
     margin: 0;
   }
 
@@ -25,7 +24,7 @@
       @include list-items;
 
       margin: 0;
-      padding: space.$space-md space.$space-lg;
+      padding: rem(16px) rem(32px);
       border: rem(2px) solid color.$base-light-grey;
       border-bottom: 0;
       display: flex;
@@ -33,7 +32,7 @@
 
       .bf-checkmark--green {
         height: 100%;
-        margin-right: space.$space-lg;
+        margin-right: rem(32px);
       }
     }
 
@@ -50,21 +49,21 @@
 }
 
 .bf-unmet-criteria-group {
-  padding: space.$space-md-gap-sm 0 0 space.$space-md-plus;
+  padding: rem(18px) 0 0 rem(24px);
 
     @media (width >= $desktop) {
-      padding-top: space.$space-md-plus;
+      padding-top: rem(24px);
     }
 
   .bf-unmet-criteria-title {
     @include h5($font-family: 'sans');
 
-    margin-bottom: space.$space-sm-plus;
+    margin-bottom: rem(12px);
   }
 
   ul.bf-unmet-criteria-list {
-    margin-bottom: space.$space-md-gap-sm;
-    padding-left: space.$space-lg;
+    margin-bottom: rem(18px);
+    padding-left: rem(32px);
   }
 
   li.bf-unmet-criteria-item {

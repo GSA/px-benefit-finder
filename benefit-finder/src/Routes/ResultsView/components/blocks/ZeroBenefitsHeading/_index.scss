@@ -1,5 +1,4 @@
 @use '@styles/mixins' as *;
-@use '@styles/space' as space;
 
 .bf-zero-benefits-view-heading {
   @include h2;
@@ -10,5 +9,5 @@ h3.bf-zero-benefits-view-description {
 }
 
 .bf-back-to-form-cta {
-  margin: space.$space-md 0 space.$space-lg;
+  margin: rem(16px) 0 rem(32px);
 }

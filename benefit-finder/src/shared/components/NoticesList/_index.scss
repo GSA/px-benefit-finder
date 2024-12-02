@@ -1,29 +1,28 @@
 @use '@styles/colors' as color;
-@use '@styles/space' as space;
 @use '@styles/mixins' as *;
 @use '@styles/breakpoints' as *;
 @use '@styles/functions' as *;
 
 .bf-notices-list {
-  margin-top: space.$space-lg-gap;
-  margin-bottom: space.$space-xl;
+  margin-top: rem(36px);
+  margin-bottom: rem(64px);
 }
 
 .bf-notice {
   display: flex;
-  padding-bottom: space.$padding-bottom-lg;
+  padding-bottom: rem(32px);
 
   .bf-info {
-    margin-top: space.$space-xs;
-    margin-right: space.$space-sm-plus;
+    margin-top: rem(4px);
+    margin-right: rem(12px);
   }
 }
 
 .bf-line-separator-wrapper {
   display: block;
-  padding-top: space.$space-lg;
-  padding-bottom: space.$padding-bottom-lg;
-  margin: space.$space-lg;
+  padding-top: rem(32px);
+  padding-bottom: rem(32px);
+  margin: rem(32px);
 }
 
 .bf-line-separator {
@@ -53,9 +52,9 @@
   .bf-line-separator-wrapper--vertical {
     display: block;
     padding-top: rem(128px);
-    padding-bottom: space.$padding-bottom-lg;
+    padding-bottom: rem(32px);
     margin: 0;
-    margin-right: space.$space-lg;
+    margin-right: rem(32px);
   }
 
   .bf-line-separator--vertical {

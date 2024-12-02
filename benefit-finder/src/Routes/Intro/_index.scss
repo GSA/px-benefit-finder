@@ -1,18 +1,20 @@
 @use '@styles/breakpoints' as *;
 @use '@styles/sizes' as *;
-@use '@styles/space' as space;
+@use '@styles/space' as *;
+@use '@styles/functions' as *;
 
 .bf-intro {
-  padding-bottom: space.$padding-bottom-lg;
+  padding-bottom: rem(32px);
 
   .bf-grid-container.grid-container {
-    padding: 0  0 0 space.$space-lg-gap;
+    // padding: 0 0 0 rem(36px);
+    padding: $space-intro-grid-container-mobile;
   }
 
   .bf-cta-wrapper {
     display: flex;
     justify-content: center;
-    margin: space.$space-lg space.$space-lg space.$space-xl;
+    margin: rem(32px) rem(32px) rem(64px);
   }
 
   .bf-cta-wrapper button {
@@ -22,7 +24,7 @@
   .bf-intro-process-notices {
     display: flex;
     flex-direction: column;
-    margin-left: space.$space-md;
+    margin-left: rem(16px);
     text-align: left;
 
     .bf-intro-process-notices-heading {
@@ -41,17 +43,17 @@
 
     .bf-intro-process-heading h2 {
       text-align: left;
-      margin-bottom: space.$space-lg;
+      margin-bottom: rem(32px);
 
       @media (width >= $desktop) {
-        margin-bottom: space.$space-md;
+        margin-bottom: rem(16px);
       }
     }
 
     .bf-usa-process-list {
       margin-left: 0;
       margin-right: 0;
-      padding-top:space.$space-sm;
+      padding-top:rem(8px);
     }
   }
 

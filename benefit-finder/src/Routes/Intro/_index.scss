@@ -5,6 +5,10 @@
 .bf-intro {
   padding-bottom: space.$padding-bottom-lg;
 
+  .bf-grid-container.grid-container {
+    padding: 0  0 0 space.$space-lg-gap;
+  }
+
   .bf-cta-wrapper {
     display: flex;
     justify-content: center;
@@ -37,7 +41,11 @@
 
     .bf-intro-process-heading h2 {
       text-align: left;
-      margin-bottom: space.$space-md;
+      margin-bottom: space.$space-lg;
+
+      @media (width >= $desktop) {
+        margin-bottom: space.$space-md;
+      }
     }
 
     .bf-usa-process-list {

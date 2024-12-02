@@ -12,12 +12,11 @@ h1.bf-banner-heading {
   position: relative;
   background-color: color.$officer-navy;
   padding: rem(45px) 0 rem(60px);
-  margin: 0 auto;
+  margin: 0 auto space.$space-md-plus;
   color: color.$white;
-  margin-bottom: space.$space-xl;
 
   .bf-grid-container.grid-container {
-    padding:  0 space.$space-md-gap;
+    padding: 0 space.$space-md-gap;
   }
 
   .bf-banner-heading  {
@@ -25,6 +24,7 @@ h1.bf-banner-heading {
   }
 
   @media (width >= $desktop) {
+    margin-bottom: space.$space-xl;
     padding: space.$space-xl space.$space-lg rem(38px);
   }
 }

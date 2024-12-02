@@ -13,7 +13,7 @@ form.bf-usa-form {
 
   .bf-grid-container.grid-container {
     max-width: $form-container-max-width;
-    padding: space.$space-md-gap;
+    padding: 0 space.$space-md-gap;
 
     @media (width >= calc($form-container-max-width + space.$space-md-plus)) {
       padding-left: 0;

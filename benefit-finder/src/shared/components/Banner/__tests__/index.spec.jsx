@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
-import Chevron from '../index.jsx'
+import Banner from '../index.jsx'
 
-describe('Chevron', () => {
+describe('Banner', () => {
   it('renders a match to the previous snapshot', () => {
-    const { asFragment } = render(<Chevron />)
+    const { asFragment } = render(<Banner />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

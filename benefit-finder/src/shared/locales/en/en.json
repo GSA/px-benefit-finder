@@ -88,7 +88,7 @@
       }
     },
     "eligible": {
-      "chevron": {
+      "banner": {
         "heading": "Your potential benefits",
         "description": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>"
       },
@@ -96,7 +96,7 @@
       "description": "<strong>You may be eligible for these benefits:</strong>"
     },
     "notEligible": {
-      "chevron": {
+      "banner": {
         "heading": "Benefits you did not qualify for",
         "description": "<div><p>According to your answers you are not eligible for these benefits.</p></div>"
       },
@@ -109,13 +109,13 @@
         "link": "Go back to start"
       },
       "eligible": {
-        "chevron": {
+        "banner": {
           "heading": "You are likely not eligible for these benefits.",
           "description": "<div><p>If you think you reached these results by mistake, please go back to review and edit your answers.</p></div>"
         }
       },
       "notEligible": {
-        "chevron": {
+        "banner": {
           "heading": "Benefits you did not qualify for",
           "description": "<div><p>According to your answers you are not eligible for these benefits.</p></div>"
         }

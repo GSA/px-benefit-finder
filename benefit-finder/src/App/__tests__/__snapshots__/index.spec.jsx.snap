@@ -19,21 +19,21 @@ exports[`loads intro 1`] = `
         class="bf-intro"
       >
         <div
-          class="bf-chevron"
+          class="bf-heading-banner"
         >
           <div
             class="bf-grid-container grid-container"
           >
             <h1
               aria-level="1"
-              class="bf-chevron-heading "
+              class="bf-banner-heading "
               id="skip-to-h1"
               role="heading"
             >
               Benefit finder: death of a loved one
             </h1>
             <div
-              class="bf-chevron-description"
+              class="bf-banner-description"
             >
               <p>
                 <strong>

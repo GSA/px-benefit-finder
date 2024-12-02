@@ -88,7 +88,7 @@
       }
     },
     "eligible": {
-      "chevron": {
+      "banner": {
         "heading": "Sus beneficios potenciales",
         "description": "<div><p>Visite la página de cada agencia para verificar los requisitos y aplicar. Para conocer otros beneficios, consulte a su ciudad, estado, o trabajo.</p></div>"
       },
@@ -96,7 +96,7 @@
       "description": "<strong>Podría ser elegible para estos beneficios:<strong/>"
     },
     "notEligible": {
-      "chevron": {
+      "banner": {
         "heading": "Beneficios a los que no calificó",
         "description": "<div><p>Según sus respuestas usted no es elegible para estos beneficios.</p></div>"
       },
@@ -109,13 +109,13 @@
         "link": "Volver al inicio"
       },
       "eligible": {
-        "chevron": {
+        "banner": {
           "heading": "Usted parece no ser elegible para los beneficios en este buscador",
           "description": "<div><p>Si cree que cometió un error en sus respuestas, por favor regrese atrás para corregirlas.</p></div>"
         }
       },
       "notEligible": {
-        "chevron": {
+        "banner": {
           "heading": "Beneficios a los que no calificó",
           "description": "<div><p>Según sus respuestas usted no es elegible para estos beneficios.</p></div>"
         }

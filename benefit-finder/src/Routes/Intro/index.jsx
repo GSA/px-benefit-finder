@@ -6,7 +6,7 @@ import { useResetElement } from '@hooks'
 import PropTypes from 'prop-types'
 import {
   Button,
-  Chevron,
+  Banner,
   Heading,
   NoticesList,
   ProcessList,
@@ -57,13 +57,8 @@ const Intro = ({ content, ui, hasQueryParams }) => {
   return (
     content && (
       <div className="bf-intro">
-        <Chevron heading={title} description={summary} />
+        <Banner heading={title} description={summary} />
         <div className="bf-grid-container grid-container">
-          {/* <Heading headingLevel={2}>{heading}</Heading>
-          <TimeIndicator
-            description={timeIndicator}
-            timeEstimate={timeEstimate}
-          /> */}
           <div className="bf-intro-process-group">
             <div className="bf-intro-process-list">
               <div className="bf-intro-process-heading">

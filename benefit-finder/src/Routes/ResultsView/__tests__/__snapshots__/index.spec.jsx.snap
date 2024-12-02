@@ -20,7 +20,7 @@ exports[`loads view 1`] = `
       data-testid="bf-result-view"
     >
       <div
-        class="bf-heading-banner"
+        class="bf-banner"
       >
         <div
           class="bf-grid-container grid-container"
@@ -6402,7 +6402,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
       data-testid="bf-result-view"
     >
       <div
-        class="bf-heading-banner"
+        class="bf-banner"
       >
         <div
           class="bf-grid-container grid-container"

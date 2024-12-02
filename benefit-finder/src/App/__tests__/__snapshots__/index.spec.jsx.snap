@@ -19,7 +19,7 @@ exports[`loads intro 1`] = `
         class="bf-intro"
       >
         <div
-          class="bf-heading-banner"
+          class="bf-banner"
         >
           <div
             class="bf-grid-container grid-container"

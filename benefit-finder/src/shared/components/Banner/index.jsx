@@ -12,7 +12,7 @@ import './_index.scss'
  */
 const Banner = ({ heading, description }) => {
   return (
-    <div className="bf-heading-banner">
+    <div className="bf-banner">
       <div className="bf-grid-container grid-container">
         <Heading className="bf-banner-heading" headingLevel={1}>
           {heading}

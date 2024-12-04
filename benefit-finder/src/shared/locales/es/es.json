@@ -20,7 +20,7 @@
       "iconAlt": "Importante",
       "list": [
         {
-          "notice": "<div>Esto <strong>no es</strong>una aplicación.</div>"
+          "notice": "<div>Esto <strong>no es</strong> una aplicación.</div>"
         },
         {
           "notice": "Sus respuestas <strong>no serán</strong> guardadas o compartidas con ninguna agencia."

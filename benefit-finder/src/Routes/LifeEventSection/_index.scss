@@ -103,10 +103,11 @@
 
 .bf-radio-group {
   display: flex;
+  flex-wrap: wrap;
   margin-left: rem(20px);
 
   .bf-usa-radio__label {
-    margin-right: rem(32px);
+    margin-right: rem(14px);
   }
 }
 

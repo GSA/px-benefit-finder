@@ -6,10 +6,16 @@
 
 h2.bf-usa-alert__heading {
   @include h5($font-family: 'sans');
+
+  padding-left: rem(16px);
 }
 
 .bf-usa-alert {
   padding: rem(25px) 0;
+
+  p {
+    padding-left: rem(16px);
+  }
 
   ul a {
     font-size: rem(15px);
@@ -22,7 +28,7 @@ h2.bf-usa-alert__heading {
 
 @media (width<= $desktop) {
   .bf-usa-alert__body {
-    padding-left: rem(40px);
+    padding-left: rem(32px);
   }
 
   ul {
@@ -31,6 +37,6 @@ h2.bf-usa-alert__heading {
 
   .bf-usa-alert::before {
     width: rem(15px);
-    height: rem(62px);
+    height: rem(68px);
   }
 }

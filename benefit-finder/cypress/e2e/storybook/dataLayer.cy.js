@@ -400,22 +400,17 @@ describe('Calls to Google Analytics Object', function () {
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          // Wait dynamically for the bf_page_change and bf_count events
           cy.wrap(window.dataLayer).should(dataLayer => {
             const matchingEvents = dataLayer.filter(
               x => x?.event === dataLayerValueResultsViewEligible.event
             )
+
             assert.isNotEmpty(
               matchingEvents,
               'bf_page_change and bf_count events are triggered'
             )
-          })
 
-          // Validate the details of the first matching event
-          cy.wrap(window.dataLayer).then(dataLayer => {
-            const ev = dataLayer.filter(
-              x => x?.event === dataLayerValueResultsViewEligible.event
-            )[0]
+            const ev = { ...matchingEvents[0] }
             removeID(ev)
 
             expect(ev).to.deep.equal(dataLayerValueResultsViewEligible)
@@ -452,13 +447,8 @@ describe('Calls to Google Analytics Object', function () {
               matchingEvents,
               'bf_accordion_open event is triggered'
             )
-          })
-          // Validate the last event details
-          cy.wrap(window.dataLayer).then(dataLayer => {
-            const ev = dataLayer.filter(
-              x => x?.event === dataLayerValueAccordionOpen.event
-            )[0]
 
+            const ev = { ...matchingEvents[0] }
             removeID(ev)
 
             expect(ev).to.deep.equal(dataLayerValueAccordionOpen)
@@ -482,55 +472,51 @@ describe('Calls to Google Analytics Object', function () {
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          // Open accordion
+          // Open accordion and validate bf_accordion_open event
           pageObjects
             .accordionByTitle(enResults.eligible.eligible_benefits[0])
             .click()
 
-          // Wait dynamically for the bf_accordion_open event
           cy.wrap(window.dataLayer).should(dataLayer => {
+            // Find matching bf_accordion_open events
             const matchingEvents = dataLayer.filter(
               x => x?.event === dataLayerValueAccordionOpen.event
             )
+
+            // Assert the event is triggered
             assert.isNotEmpty(
               matchingEvents,
               'bf_accordion_open event is triggered'
             )
-          })
 
-          // Validate bf_accordion_open event
-          cy.wrap(window.dataLayer).then(dataLayer => {
-            const ev = dataLayer.filter(
-              x => x?.event === dataLayerValueAccordionOpen.event
-            )[0]
+            // Validate the details of the first matching event
+            const ev = { ...matchingEvents[0] }
             removeID(ev)
-
             expect(ev).to.deep.equal(dataLayerValueAccordionOpen)
           })
 
+          // Open link and validate bf_benefit_link event
           pageObjects.accordionHeading().should('exist')
           pageObjects
             .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
             .invoke('removeAttr', 'href')
             .click({ force: true })
 
-          // Wait dynamically for the bf_benefit_link event
           cy.wrap(window.dataLayer).should(dataLayer => {
+            // Find matching bf_benefit_link events
             const matchingEvents = dataLayer.filter(
               x => x?.event === dataLayerValueBenefitLink.event
             )
+
+            // Assert the event is triggered
             assert.isNotEmpty(
               matchingEvents,
               'bf_benefit_link event is triggered'
             )
-          })
-          // Validate bf_benefit_link event
-          cy.wrap(window.dataLayer).then(dataLayer => {
-            const ev = dataLayer.filter(
-              x => x?.event === dataLayerValueBenefitLink.event
-            )[0]
-            removeID(ev)
 
+            // Validate the details of the first matching event
+            const ev = { ...matchingEvents[0] }
+            removeID(ev)
             expect(ev).to.deep.equal(dataLayerValueBenefitLink)
           })
         })

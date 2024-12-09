@@ -1,5 +1,6 @@
 @use '@styles/colors' as color;
 @use '@styles/mixins' as *;
+@use '@styles/breakpoints' as *;
 @use '@styles/functions' as *;
 
 .bf-usa-accordion {
@@ -28,6 +29,10 @@
   }
 
   .bf-usa-accordion__content {
-    padding: 0 rem(18px) rem(40px);
+    padding: 0 rem(16px) rem(24px);
+
+    @media(width >= $desktop) {
+      padding: 0 rem(18px) rem(40px);
+    }
   }
 }

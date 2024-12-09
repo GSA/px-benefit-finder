@@ -8,8 +8,12 @@
     @include h6;
 
     background-color: color.$base-light-grey;
-    padding: rem(16px) rem(32px);
+    padding: rem(27px) rem(18px);
     margin: 0;
+
+    @media (width >= $desktop) {
+      padding: rem(16px) rem(32px);
+    }
   }
 
   .bf-key-eligibility-criteria-sub-heading {
@@ -24,11 +28,15 @@
       @include list-items;
 
       margin: 0;
-      padding: rem(16px) rem(32px);
+      padding: rem(16px) rem(23px);
       border: rem(2px) solid color.$base-light-grey;
       border-bottom: 0;
       display: flex;
       flex-wrap: nowrap;
+
+      @media (width >= $desktop) {
+        padding: rem(16px) rem(32px);
+      }
 
       .bf-checkmark--green {
         height: 100%;
@@ -49,10 +57,11 @@
 }
 
 .bf-unmet-criteria-group {
-  padding: rem(18px) 0 0 rem(24px);
+  padding: rem(18px) 0 0 rem(10px);
 
     @media (width >= $desktop) {
       padding-top: rem(24px);
+      padding-left: rem(24px);
     }
 
   .bf-unmet-criteria-title {

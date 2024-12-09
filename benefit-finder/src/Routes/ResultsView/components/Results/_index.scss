@@ -3,6 +3,12 @@
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
 
+.bf-result-view {
+ .bf-grid-container.grid-container {
+  padding: rem(20px);
+ }
+}
+
 .bf-result-view-benefits,
 .bf-result-view-unmet,
 .bf-result-view-relevant-benefits,

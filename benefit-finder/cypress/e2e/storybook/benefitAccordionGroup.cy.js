@@ -1,10 +1,12 @@
 import * as utils from '../../support/utils'
 import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
+import { pageObjects } from '../../support/pageObjects'
 
 beforeEach(() => {
   const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
   const scenario = utils.encodeURIFromObject(selectedData)
   cy.visit(`${utils.storybookUri}${scenario}`)
+  pageObjects.accordionHeading().should('exist')
 })
 
 describe('BenefitAccordionGroup component tests', () => {
@@ -17,33 +19,26 @@ describe('BenefitAccordionGroup component tests', () => {
   })
 
   it('Validate opening individual accordion expands the clicked accordion and clicking it again closes it', () => {
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
-    cy.wait(2500).then(() => {
-      // get the first visible accordion and check if it is expanded
-      cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
-        .eq(0)
-        .should('have.attr', 'aria-expanded', 'false')
-      // get the first visible accordion and click it
-      cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
-        .eq(0)
-        .click()
-      // get the first visible accordion and check if it is expanded
-      cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
-        .eq(0)
-        .should('have.attr', 'aria-expanded', 'true')
-      // get the second visible accordion and check if it is expanded
-      cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
-        .eq(1)
-        .should('have.attr', 'aria-expanded', 'false')
-      // get the first visible accordion and click it
-      cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
-        .eq(0)
-        .click()
-      // get the first visible accordion and check if it is expanded
-      cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
-        .eq(0)
-        .should('have.attr', 'aria-expanded', 'false')
-    })
+    // get the first visible accordion and check if it is expanded
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
+      .eq(0)
+      .should('have.attr', 'aria-expanded', 'false')
+    // get the first visible accordion and click it
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button').eq(0).click()
+    // get the first visible accordion and check if it is expanded
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
+      .eq(0)
+      .should('have.attr', 'aria-expanded', 'true')
+    // get the second visible accordion and check if it is expanded
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
+      .eq(1)
+      .should('have.attr', 'aria-expanded', 'false')
+    // get the first visible accordion and click it
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button').eq(0).click()
+    // get the first visible accordion and check if it is expanded
+    cy.get('.bf-usa-accordion:visible .bf-usa-accordion__button')
+      .eq(0)
+      .should('have.attr', 'aria-expanded', 'false')
   })
 
   it('Validate clicking Expand all opens all accordions', () => {

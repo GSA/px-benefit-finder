@@ -6077,263 +6077,68 @@ exports[`loads view 1`] = `
             >
               More benefits
             </h3>
-            <ul
-              class="bf-usa-card-group usa-card-group"
+            <div
+              class="benefit-finder__main"
+              id="benefit-finder__main"
             >
-              <li
-                class="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12 bf-card-icon add-list-reset"
-                data-testid="retirement"
+              <div
+                class="life-events-grid"
               >
-                <a
-                  class="bf-usa-card__container usa-card__container"
-                  href="/benefit-finder/retirement"
+                <div
+                  class="life-events-item benefit-finder-icon--retirement"
+                  data-testid="benefit-finder-icon--retirement"
                 >
-                  <i
-                    aria-hidden="true"
-                    class="bf-relative-icon"
-                    data-testid="icon-retirement"
-                  >
-                    <svg
-                      fill="none"
-                      height="45"
-                      viewBox="0 0 45 45"
-                      width="45"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M40.2696 1.60693H6.37598V43.3926H40.2696V1.60693Z"
-                        fill="#DFEFF4"
-                        stroke="#191919"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M19.2757 9.08496H12.9048C12.4714 9.08496 12.1201 9.43563 12.1201 9.86819V14.6747C12.1201 15.1073 12.4714 15.4579 12.9048 15.4579H19.2757C19.7091 15.4579 20.0604 15.1073 20.0604 14.6747V9.86819C20.0604 9.43563 19.7091 9.08496 19.2757 9.08496Z"
-                        fill="#05BBE2"
-                      />
-                      <path
-                        d="M19.2757 19.314H12.9048C12.4714 19.314 12.1201 19.6646 12.1201 20.0972V24.9037C12.1201 25.3363 12.4714 25.6869 12.9048 25.6869H19.2757C19.7091 25.6869 20.0604 25.3363 20.0604 24.9037V20.0972C20.0604 19.6646 19.7091 19.314 19.2757 19.314Z"
-                        fill="#05BBE2"
-                      />
-                      <path
-                        d="M19.2757 29.5415H12.9048C12.4714 29.5415 12.1201 29.8922 12.1201 30.3247V35.1312C12.1201 35.5638 12.4714 35.9145 12.9048 35.9145H19.2757C19.7091 35.9145 20.0604 35.5638 20.0604 35.1312V30.3247C20.0604 29.8922 19.7091 29.5415 19.2757 29.5415Z"
-                        fill="#05BBE2"
-                      />
-                      <path
-                        d="M14.8369 11.9099L16.1581 13.2287L21.1878 9.08496"
-                        stroke="#191919"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 11.0723H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 13.4648H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 21.3071H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 23.6904H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 31.5381H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 33.9214H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                    </svg>
-                  </i>
                   <div
-                    class="bf-usa-card__header usa-card__header"
+                    class="life-events-item-content"
                   >
-                    <h3
-                      aria-level="3"
-                      class="bf-usa-card__heading usa-card__heading "
-                      role="heading"
-                    >
-                      Benefit finder: retirement
+                    <h3>
+                      <a
+                        data-testid="retirement"
+                        href="/benefit-finder/retirement"
+                        hreflang="en"
+                      >
+                        Benefit finder: retirement
+                      </a>
                     </h3>
+                    <div>
+                      <p>
+                        <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
+                        <strong>
+                          Find retirement benefits
+                        </strong>
+                         including financial and health assistance.
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    class="bf-usa-card__body usa-card__body"
-                  >
-                    <p>
-                      <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
-                      <strong>
-                        Find retirement benefits
-                      </strong>
-                       including financial and health assistance.
-                    </p>
-                  </div>
-                  <div
-                    class="bf-usa-card__cta usa-card__cta"
-                  >
-                    Find retirement benefits including financial and health assistance.
-                  </div>
-                  <i
-                    aria-hidden="true"
-                    data-testid="icon-carrot"
-                  >
-                    <svg
-                      class="bf-carrot"
-                      fill="none"
-                      height="19"
-                      viewBox="0 0 12 19"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M3.78013 1.73698C3.33373 1.29058 2.60998 1.29059 2.16359 1.73698L1.74049 2.16007C1.29444 2.60612 1.29405 3.32919 1.73961 3.77573L6.7498 8.79686C7.19502 9.24305 7.19502 9.96544 6.7498 10.4116L1.73961 15.4328C1.29405 15.8793 1.29444 16.6024 1.7405 17.0484L2.16359 17.4715C2.60998 17.9179 3.33373 17.9179 3.78013 17.4715L10.8391 10.4125C11.2855 9.96612 11.2855 9.24237 10.8391 8.79597L3.78013 1.73698Z"
-                        fill="#162E51"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </i>
-                </a>
-              </li>
-              <li
-                class="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12 bf-card-icon add-list-reset"
-                data-testid="disability"
-              >
-                <a
-                  class="bf-usa-card__container usa-card__container"
-                  href="/benefit-finder/disability"
+                </div>
+                <div
+                  class="life-events-item benefit-finder-icon--disability"
+                  data-testid="benefit-finder-icon--disability"
                 >
-                  <i
-                    aria-hidden="true"
-                    class="bf-relative-icon"
-                    data-testid="icon-disability"
-                  >
-                    <svg
-                      fill="none"
-                      height="45"
-                      viewBox="0 0 45 45"
-                      width="45"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M29.2857 9.5335C31.4805 9.5335 33.2598 7.75908 33.2598 5.57022C33.2598 3.38136 31.4805 1.60693 29.2857 1.60693C27.0908 1.60693 25.3115 3.38136 25.3115 5.57022C25.3115 7.75908 27.0908 9.5335 29.2857 9.5335Z"
-                        fill="#E9F6FB"
-                        stroke="#1A1A1A"
-                        stroke-miterlimit="10"
-                        stroke-width="1.34304"
-                      />
-                      <path
-                        d="M31.1129 34.0346C31.1129 33.6064 30.7661 33.2593 30.3382 33.2593C29.9103 33.2593 29.5635 33.6064 29.5635 34.0346V42.3786C29.5635 42.8068 29.9103 43.1539 30.3382 43.1539C30.7661 43.1539 31.1129 42.8068 31.1129 42.3786V34.0346Z"
-                        fill="#1A1A1A"
-                      />
-                      <path
-                        d="M29.8281 42.2474V42.5131C29.8281 42.8664 30.1153 43.1528 30.4696 43.1528H35.1777C35.532 43.1528 35.8193 42.8664 35.8193 42.5131V42.2474C35.8193 41.8941 35.532 41.6076 35.1777 41.6076H30.4696C30.1153 41.6076 29.8281 41.8941 29.8281 42.2474Z"
-                        fill="#1A1A1A"
-                      />
-                      <path
-                        d="M19.0432 44.1969C26.0392 44.1969 31.7105 38.5411 31.7105 31.5643C31.7105 24.5875 26.0392 18.9316 19.0432 18.9316C12.0473 18.9316 6.37598 24.5875 6.37598 31.5643C6.37598 38.5411 12.0473 44.1969 19.0432 44.1969Z"
-                        fill="#010101"
-                      />
-                      <path
-                        d="M36.3958 22.9921L29.7469 22.4553L31.8835 14.827C32.1988 13.6938 31.6497 12.5173 30.6385 12.0077C30.5026 11.9318 30.3558 11.8667 30.1927 11.8233L21.1027 9.29139C20.7276 9.18838 20.347 9.19922 19.9936 9.29681C19.6892 9.34561 19.3956 9.46488 19.1401 9.67091L12.8934 14.6535C12.1051 15.2824 11.9801 16.4372 12.6053 17.218C13.2359 18.0041 14.3939 18.1288 15.1768 17.5053L20.0045 13.6505L21.8693 14.1709L17.857 21.7559C17.2318 22.9379 17.6885 24.4126 18.8737 25.0361L22.5488 26.9662C23.3154 27.3674 24.207 27.3186 24.9083 26.912L25.3867 27.0421C25.7673 27.5463 26.349 27.8933 27.0286 27.9475L33.1991 28.4463L32.4326 37.8801C32.3184 39.2573 33.3568 40.4772 34.7431 40.5856C36.124 40.6994 37.3472 39.6639 37.456 38.2814L38.44 26.1801C38.44 26.1313 38.44 26.0771 38.44 26.0283L38.4889 25.4319C38.5922 24.1794 37.6463 23.0734 36.3904 22.9704L36.3958 22.9921Z"
-                        fill="#E9F6FB"
-                        stroke="#1A1A1A"
-                        stroke-miterlimit="10"
-                        stroke-width="1.34304"
-                      />
-                      <path
-                        d="M19.0442 41.7672C24.695 41.7672 29.2758 37.1989 29.2758 31.5636C29.2758 25.9282 24.695 21.3599 19.0442 21.3599C13.3934 21.3599 8.8125 25.9282 8.8125 31.5636C8.8125 37.1989 13.3934 41.7672 19.0442 41.7672Z"
-                        fill="#E9F6FB"
-                      />
-                      <path
-                        d="M19.0425 42.3136C24.9965 42.3136 29.8233 37.5001 29.8233 31.5623C29.8233 25.6245 24.9965 20.811 19.0425 20.811C13.0884 20.811 8.26172 25.6245 8.26172 31.5623C8.26172 37.5001 13.0884 42.3136 19.0425 42.3136Z"
-                        stroke="#00C0E4"
-                        stroke-miterlimit="10"
-                        stroke-width="1.03146"
-                      />
-                      <path
-                        d="M19.0426 39.4948C23.4353 39.4948 26.9963 35.9436 26.9963 31.5628C26.9963 27.1821 23.4353 23.6309 19.0426 23.6309C14.6499 23.6309 11.0889 27.1821 11.0889 31.5628C11.0889 35.9436 14.6499 39.4948 19.0426 39.4948Z"
-                        fill="white"
-                        stroke="#1A1A1A"
-                        stroke-miterlimit="10"
-                        stroke-width="1.07443"
-                      />
-                    </svg>
-                  </i>
                   <div
-                    class="bf-usa-card__header usa-card__header"
+                    class="life-events-item-content"
                   >
-                    <h3
-                      aria-level="3"
-                      class="bf-usa-card__heading usa-card__heading "
-                      role="heading"
-                    >
-                      Benefit finder: disability
+                    <h3>
+                      <a
+                        data-testid="disability"
+                        href="/benefit-finder/disability"
+                        hreflang="en"
+                      >
+                        Benefit finder: disability
+                      </a>
                     </h3>
+                    <div>
+                      <p>
+                        <strong>
+                          Find disability benefits
+                        </strong>
+                         to help with bills, education, jobs, and more.
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    class="bf-usa-card__body usa-card__body"
-                  >
-                    <p>
-                      <strong>
-                        Find disability benefits
-                      </strong>
-                       to help with bills, education, jobs, and more.
-                    </p>
-                  </div>
-                  <div
-                    class="bf-usa-card__cta usa-card__cta"
-                  >
-                    Find disability benefits to help with bills, education, jobs, and more.
-                  </div>
-                  <i
-                    aria-hidden="true"
-                    data-testid="icon-carrot"
-                  >
-                    <svg
-                      class="bf-carrot"
-                      fill="none"
-                      height="19"
-                      viewBox="0 0 12 19"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M3.78013 1.73698C3.33373 1.29058 2.60998 1.29059 2.16359 1.73698L1.74049 2.16007C1.29444 2.60612 1.29405 3.32919 1.73961 3.77573L6.7498 8.79686C7.19502 9.24305 7.19502 9.96544 6.7498 10.4116L1.73961 15.4328C1.29405 15.8793 1.29444 16.6024 1.7405 17.0484L2.16359 17.4715C2.60998 17.9179 3.33373 17.9179 3.78013 17.4715L10.8391 10.4125C11.2855 9.96612 11.2855 9.24237 10.8391 8.79597L3.78013 1.73698Z"
-                        fill="#162E51"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </i>
-                </a>
-              </li>
-            </ul>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="bf-result-view-share-results"
@@ -12459,263 +12264,68 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             >
               More benefits
             </h3>
-            <ul
-              class="bf-usa-card-group usa-card-group"
+            <div
+              class="benefit-finder__main"
+              id="benefit-finder__main"
             >
-              <li
-                class="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12 bf-card-icon add-list-reset"
-                data-testid="retirement"
+              <div
+                class="life-events-grid"
               >
-                <a
-                  class="bf-usa-card__container usa-card__container"
-                  href="/benefit-finder/retirement"
+                <div
+                  class="life-events-item benefit-finder-icon--retirement"
+                  data-testid="benefit-finder-icon--retirement"
                 >
-                  <i
-                    aria-hidden="true"
-                    class="bf-relative-icon"
-                    data-testid="icon-retirement"
-                  >
-                    <svg
-                      fill="none"
-                      height="45"
-                      viewBox="0 0 45 45"
-                      width="45"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M40.2696 1.60693H6.37598V43.3926H40.2696V1.60693Z"
-                        fill="#DFEFF4"
-                        stroke="#191919"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M19.2757 9.08496H12.9048C12.4714 9.08496 12.1201 9.43563 12.1201 9.86819V14.6747C12.1201 15.1073 12.4714 15.4579 12.9048 15.4579H19.2757C19.7091 15.4579 20.0604 15.1073 20.0604 14.6747V9.86819C20.0604 9.43563 19.7091 9.08496 19.2757 9.08496Z"
-                        fill="#05BBE2"
-                      />
-                      <path
-                        d="M19.2757 19.314H12.9048C12.4714 19.314 12.1201 19.6646 12.1201 20.0972V24.9037C12.1201 25.3363 12.4714 25.6869 12.9048 25.6869H19.2757C19.7091 25.6869 20.0604 25.3363 20.0604 24.9037V20.0972C20.0604 19.6646 19.7091 19.314 19.2757 19.314Z"
-                        fill="#05BBE2"
-                      />
-                      <path
-                        d="M19.2757 29.5415H12.9048C12.4714 29.5415 12.1201 29.8922 12.1201 30.3247V35.1312C12.1201 35.5638 12.4714 35.9145 12.9048 35.9145H19.2757C19.7091 35.9145 20.0604 35.5638 20.0604 35.1312V30.3247C20.0604 29.8922 19.7091 29.5415 19.2757 29.5415Z"
-                        fill="#05BBE2"
-                      />
-                      <path
-                        d="M14.8369 11.9099L16.1581 13.2287L21.1878 9.08496"
-                        stroke="#191919"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 11.0723H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 13.4648H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 21.3071H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 23.6904H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 31.5381H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                      <path
-                        d="M23.5391 33.9214H34.5307"
-                        stroke="#05BBE2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.1566"
-                      />
-                    </svg>
-                  </i>
                   <div
-                    class="bf-usa-card__header usa-card__header"
+                    class="life-events-item-content"
                   >
-                    <h3
-                      aria-level="3"
-                      class="bf-usa-card__heading usa-card__heading "
-                      role="heading"
-                    >
-                      Benefit finder: retirement
+                    <h3>
+                      <a
+                        data-testid="retirement"
+                        href="/benefit-finder/retirement"
+                        hreflang="en"
+                      >
+                        Benefit finder: retirement
+                      </a>
                     </h3>
+                    <div>
+                      <p>
+                        <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
+                        <strong>
+                          Find retirement benefits
+                        </strong>
+                         including financial and health assistance.
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    class="bf-usa-card__body usa-card__body"
-                  >
-                    <p>
-                      <!--td {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}-->
-                      <strong>
-                        Find retirement benefits
-                      </strong>
-                       including financial and health assistance.
-                    </p>
-                  </div>
-                  <div
-                    class="bf-usa-card__cta usa-card__cta"
-                  >
-                    Find retirement benefits including financial and health assistance.
-                  </div>
-                  <i
-                    aria-hidden="true"
-                    data-testid="icon-carrot"
-                  >
-                    <svg
-                      class="bf-carrot"
-                      fill="none"
-                      height="19"
-                      viewBox="0 0 12 19"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M3.78013 1.73698C3.33373 1.29058 2.60998 1.29059 2.16359 1.73698L1.74049 2.16007C1.29444 2.60612 1.29405 3.32919 1.73961 3.77573L6.7498 8.79686C7.19502 9.24305 7.19502 9.96544 6.7498 10.4116L1.73961 15.4328C1.29405 15.8793 1.29444 16.6024 1.7405 17.0484L2.16359 17.4715C2.60998 17.9179 3.33373 17.9179 3.78013 17.4715L10.8391 10.4125C11.2855 9.96612 11.2855 9.24237 10.8391 8.79597L3.78013 1.73698Z"
-                        fill="#162E51"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </i>
-                </a>
-              </li>
-              <li
-                class="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12 bf-card-icon add-list-reset"
-                data-testid="disability"
-              >
-                <a
-                  class="bf-usa-card__container usa-card__container"
-                  href="/benefit-finder/disability"
+                </div>
+                <div
+                  class="life-events-item benefit-finder-icon--disability"
+                  data-testid="benefit-finder-icon--disability"
                 >
-                  <i
-                    aria-hidden="true"
-                    class="bf-relative-icon"
-                    data-testid="icon-disability"
-                  >
-                    <svg
-                      fill="none"
-                      height="45"
-                      viewBox="0 0 45 45"
-                      width="45"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M29.2857 9.5335C31.4805 9.5335 33.2598 7.75908 33.2598 5.57022C33.2598 3.38136 31.4805 1.60693 29.2857 1.60693C27.0908 1.60693 25.3115 3.38136 25.3115 5.57022C25.3115 7.75908 27.0908 9.5335 29.2857 9.5335Z"
-                        fill="#E9F6FB"
-                        stroke="#1A1A1A"
-                        stroke-miterlimit="10"
-                        stroke-width="1.34304"
-                      />
-                      <path
-                        d="M31.1129 34.0346C31.1129 33.6064 30.7661 33.2593 30.3382 33.2593C29.9103 33.2593 29.5635 33.6064 29.5635 34.0346V42.3786C29.5635 42.8068 29.9103 43.1539 30.3382 43.1539C30.7661 43.1539 31.1129 42.8068 31.1129 42.3786V34.0346Z"
-                        fill="#1A1A1A"
-                      />
-                      <path
-                        d="M29.8281 42.2474V42.5131C29.8281 42.8664 30.1153 43.1528 30.4696 43.1528H35.1777C35.532 43.1528 35.8193 42.8664 35.8193 42.5131V42.2474C35.8193 41.8941 35.532 41.6076 35.1777 41.6076H30.4696C30.1153 41.6076 29.8281 41.8941 29.8281 42.2474Z"
-                        fill="#1A1A1A"
-                      />
-                      <path
-                        d="M19.0432 44.1969C26.0392 44.1969 31.7105 38.5411 31.7105 31.5643C31.7105 24.5875 26.0392 18.9316 19.0432 18.9316C12.0473 18.9316 6.37598 24.5875 6.37598 31.5643C6.37598 38.5411 12.0473 44.1969 19.0432 44.1969Z"
-                        fill="#010101"
-                      />
-                      <path
-                        d="M36.3958 22.9921L29.7469 22.4553L31.8835 14.827C32.1988 13.6938 31.6497 12.5173 30.6385 12.0077C30.5026 11.9318 30.3558 11.8667 30.1927 11.8233L21.1027 9.29139C20.7276 9.18838 20.347 9.19922 19.9936 9.29681C19.6892 9.34561 19.3956 9.46488 19.1401 9.67091L12.8934 14.6535C12.1051 15.2824 11.9801 16.4372 12.6053 17.218C13.2359 18.0041 14.3939 18.1288 15.1768 17.5053L20.0045 13.6505L21.8693 14.1709L17.857 21.7559C17.2318 22.9379 17.6885 24.4126 18.8737 25.0361L22.5488 26.9662C23.3154 27.3674 24.207 27.3186 24.9083 26.912L25.3867 27.0421C25.7673 27.5463 26.349 27.8933 27.0286 27.9475L33.1991 28.4463L32.4326 37.8801C32.3184 39.2573 33.3568 40.4772 34.7431 40.5856C36.124 40.6994 37.3472 39.6639 37.456 38.2814L38.44 26.1801C38.44 26.1313 38.44 26.0771 38.44 26.0283L38.4889 25.4319C38.5922 24.1794 37.6463 23.0734 36.3904 22.9704L36.3958 22.9921Z"
-                        fill="#E9F6FB"
-                        stroke="#1A1A1A"
-                        stroke-miterlimit="10"
-                        stroke-width="1.34304"
-                      />
-                      <path
-                        d="M19.0442 41.7672C24.695 41.7672 29.2758 37.1989 29.2758 31.5636C29.2758 25.9282 24.695 21.3599 19.0442 21.3599C13.3934 21.3599 8.8125 25.9282 8.8125 31.5636C8.8125 37.1989 13.3934 41.7672 19.0442 41.7672Z"
-                        fill="#E9F6FB"
-                      />
-                      <path
-                        d="M19.0425 42.3136C24.9965 42.3136 29.8233 37.5001 29.8233 31.5623C29.8233 25.6245 24.9965 20.811 19.0425 20.811C13.0884 20.811 8.26172 25.6245 8.26172 31.5623C8.26172 37.5001 13.0884 42.3136 19.0425 42.3136Z"
-                        stroke="#00C0E4"
-                        stroke-miterlimit="10"
-                        stroke-width="1.03146"
-                      />
-                      <path
-                        d="M19.0426 39.4948C23.4353 39.4948 26.9963 35.9436 26.9963 31.5628C26.9963 27.1821 23.4353 23.6309 19.0426 23.6309C14.6499 23.6309 11.0889 27.1821 11.0889 31.5628C11.0889 35.9436 14.6499 39.4948 19.0426 39.4948Z"
-                        fill="white"
-                        stroke="#1A1A1A"
-                        stroke-miterlimit="10"
-                        stroke-width="1.07443"
-                      />
-                    </svg>
-                  </i>
                   <div
-                    class="bf-usa-card__header usa-card__header"
+                    class="life-events-item-content"
                   >
-                    <h3
-                      aria-level="3"
-                      class="bf-usa-card__heading usa-card__heading "
-                      role="heading"
-                    >
-                      Benefit finder: disability
+                    <h3>
+                      <a
+                        data-testid="disability"
+                        href="/benefit-finder/disability"
+                        hreflang="en"
+                      >
+                        Benefit finder: disability
+                      </a>
                     </h3>
+                    <div>
+                      <p>
+                        <strong>
+                          Find disability benefits
+                        </strong>
+                         to help with bills, education, jobs, and more.
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    class="bf-usa-card__body usa-card__body"
-                  >
-                    <p>
-                      <strong>
-                        Find disability benefits
-                      </strong>
-                       to help with bills, education, jobs, and more.
-                    </p>
-                  </div>
-                  <div
-                    class="bf-usa-card__cta usa-card__cta"
-                  >
-                    Find disability benefits to help with bills, education, jobs, and more.
-                  </div>
-                  <i
-                    aria-hidden="true"
-                    data-testid="icon-carrot"
-                  >
-                    <svg
-                      class="bf-carrot"
-                      fill="none"
-                      height="19"
-                      viewBox="0 0 12 19"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M3.78013 1.73698C3.33373 1.29058 2.60998 1.29059 2.16359 1.73698L1.74049 2.16007C1.29444 2.60612 1.29405 3.32919 1.73961 3.77573L6.7498 8.79686C7.19502 9.24305 7.19502 9.96544 6.7498 10.4116L1.73961 15.4328C1.29405 15.8793 1.29444 16.6024 1.7405 17.0484L2.16359 17.4715C2.60998 17.9179 3.33373 17.9179 3.78013 17.4715L10.8391 10.4125C11.2855 9.96612 11.2855 9.24237 10.8391 8.79597L3.78013 1.73698Z"
-                        fill="#162E51"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </i>
-                </a>
-              </li>
-            </ul>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="bf-result-view-share-results"

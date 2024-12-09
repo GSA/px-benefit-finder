@@ -212,6 +212,7 @@ jobs:
           CR_PAT: "${{ secrets.CR_PAT }}"
           CR_USERNAME: "${{ secrets.CR_USERNAME }}"
           PROJECT: "${{ secrets.PROJECT }}"
+          TEST_USER_PASS: "{{ secrets.TEST_USER_PASS }}"
         run: |
           source ./scripts/pipeline/cloud-gov-login.sh
           cd usagov-2021
@@ -221,4 +222,5 @@ jobs:
           cf add-network-policy ${PROJECT}-waf-${BRANCH} ${PROJECT}-cms-${BRANCH} -s ${PROJECT}-${BRANCH} -o ${CF_ORG} --protocol tcp --port 61443
           cf map-route benefit-finder-cms-${BRANCH} apps.internal --hostname benefit-finder-cms-${BRANCH} --app-protocol http1
           cd ..
+          sed -i "sed -i "s/TU_PASS/${TEST_USER_PASS}/g" ./scripts/drush-post-deploy.sh"
           source ./scripts/pipeline/cloud-gov-post-deploy.sh

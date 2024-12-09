@@ -21,7 +21,6 @@ const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
 const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
 const zero_benefit_view = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.results
 const scenario = utils.encodeURIFromObject(selectedData)
-const wait = 1000
 
 // calculate out elibibility counts we expect for our event values
 const eligibilityCount = {
@@ -232,27 +231,25 @@ describe('Calls to Google Analytics Object', function () {
         .button()
         .contains(EN_LOCALE_DATA.intro.button)
         .then(() => {
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(wait).then(() => {
-            assert.isDefined(
-              window.dataLayer.find(x => x.event === 'gtm.load'),
-              'GTM is done loading'
+          // Check for GTM load event
+          cy.wrap(window.dataLayer).then(dataLayer => {
+            const gtmEvent = dataLayer.find(x => x.event === 'gtm.load')
+            assert.isDefined(gtmEvent, 'GTM is done loading')
+          })
+          cy.wrap(window.dataLayer).then(dataLayer => {
+            const bfPageChangeEvent = dataLayer.find(
+              x => x.event === 'bf_page_change'
             )
-            assert.isDefined(
-              window.dataLayer.find(x => x.event === 'bf_page_change'),
-              'bf_page_change is loaded'
-            )
-            // eslint-disable-next-line cypress/no-unnecessary-waiting
-            cy.wait(500).then(() => {
-              // get the last pushed event
-              const bfEventIndex = window.dataLayer.findIndex(
-                x => x.event === 'bf_page_change'
-              )
-              const ev = { ...window.dataLayer[bfEventIndex] }
-              removeID(ev)
+            assert.isDefined(bfPageChangeEvent, 'bf_page_change is loaded')
 
-              expect(ev).to.deep.equal(dataLayerValueIntro)
-            })
+            // get the last pushed event
+            const bfEventIndex = window.dataLayer.findIndex(
+              x => x.event === 'bf_page_change'
+            )
+            const ev = { ...window.dataLayer[bfEventIndex] }
+            removeID(ev)
+
+            expect(ev).to.deep.equal(dataLayerValueIntro)
           })
         })
     })
@@ -403,18 +400,20 @@ describe('Calls to Google Analytics Object', function () {
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          // we wait for the last event to fire
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(wait).then(() => {
-            // get all the events in our layer that matches the event value
-            const ev = {
-              ...window.dataLayer.filter(
-                x => x?.event === dataLayerValueResultsViewEligible.event
-              ),
-            }
-            removeID(ev[0])
+          cy.wrap(window.dataLayer).should(dataLayer => {
+            const matchingEvents = dataLayer.filter(
+              x => x?.event === dataLayerValueResultsViewEligible.event
+            )
 
-            expect(ev[0]).to.deep.equal(dataLayerValueResultsViewEligible)
+            assert.isNotEmpty(
+              matchingEvents,
+              'bf_page_change and bf_count events are triggered'
+            )
+
+            const ev = { ...matchingEvents[0] }
+            removeID(ev)
+
+            expect(ev).to.deep.equal(dataLayerValueResultsViewEligible)
           })
         })
     })
@@ -438,18 +437,21 @@ describe('Calls to Google Analytics Object', function () {
           pageObjects
             .accordionByTitle(enResults.eligible.eligible_benefits[0])
             .click()
-          // we wait for the last event to fire
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(wait).then(() => {
+          // Wait for the bf_accordion_open event dynamically
+          cy.wrap(window.dataLayer).should(dataLayer => {
             // get all the events in our layer that matches the event value
-            const ev = [
-              ...window.dataLayer.filter(
-                x => x?.event === dataLayerValueAccordionOpen.event
-              ),
-            ]
-            removeID(ev[0])
+            const matchingEvents = dataLayer.filter(
+              x => x?.event === dataLayerValueAccordionOpen.event
+            )
+            assert.isNotEmpty(
+              matchingEvents,
+              'bf_accordion_open event is triggered'
+            )
 
-            expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
+            const ev = { ...matchingEvents[0] }
+            removeID(ev)
+
+            expect(ev).to.deep.equal(dataLayerValueAccordionOpen)
           })
         })
     })
@@ -470,37 +472,52 @@ describe('Calls to Google Analytics Object', function () {
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
+          // Open accordion and validate bf_accordion_open event
           pageObjects
             .accordionByTitle(enResults.eligible.eligible_benefits[0])
             .click()
-          // we wait for the last event to fire
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(wait).then(() => {
-            // get all the events in our layer that matches the event value
-            const ev = [
-              ...window.dataLayer.filter(
-                x => x?.event === dataLayerValueAccordionOpen.event
-              ),
-            ]
-            removeID(ev[0])
 
-            expect(ev[0]).to.deep.equal(dataLayerValueAccordionOpen)
-            pageObjects.accordionHeading().should('exist')
-            pageObjects
-              .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
-              .invoke('removeAttr', 'href')
-              .click({ force: true })
-              .then(() => {
-                // get all the events in our layer that matches the event value
-                const ev = [
-                  ...window.dataLayer.filter(
-                    x => x?.event === dataLayerValueBenefitLink.event
-                  ),
-                ]
-                removeID(ev[0])
+          cy.wrap(window.dataLayer).should(dataLayer => {
+            // Find matching bf_accordion_open events
+            const matchingEvents = dataLayer.filter(
+              x => x?.event === dataLayerValueAccordionOpen.event
+            )
 
-                expect(ev[0]).to.deep.equal(dataLayerValueBenefitLink)
-              })
+            // Assert the event is triggered
+            assert.isNotEmpty(
+              matchingEvents,
+              'bf_accordion_open event is triggered'
+            )
+
+            // Validate the details of the first matching event
+            const ev = { ...matchingEvents[0] }
+            removeID(ev)
+            expect(ev).to.deep.equal(dataLayerValueAccordionOpen)
+          })
+
+          // Open link and validate bf_benefit_link event
+          pageObjects.accordionHeading().should('exist')
+          pageObjects
+            .benefitsAccordionLink(enResults.eligible.eligible_benefits[0])
+            .invoke('removeAttr', 'href')
+            .click({ force: true })
+
+          cy.wrap(window.dataLayer).should(dataLayer => {
+            // Find matching bf_benefit_link events
+            const matchingEvents = dataLayer.filter(
+              x => x?.event === dataLayerValueBenefitLink.event
+            )
+
+            // Assert the event is triggered
+            assert.isNotEmpty(
+              matchingEvents,
+              'bf_benefit_link event is triggered'
+            )
+
+            // Validate the details of the first matching event
+            const ev = { ...matchingEvents[0] }
+            removeID(ev)
+            expect(ev).to.deep.equal(dataLayerValueBenefitLink)
           })
         })
     })
@@ -513,7 +530,7 @@ describe('Calls to Google Analytics Object', function () {
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
 
-      // get visible benfits results
+      // get visible benefits results
       pageObjects
         .accordionHeading()
         .filter(':visible')
@@ -522,49 +539,40 @@ describe('Calls to Google Analytics Object', function () {
           dataLayerValueResultsViewEligible.bfData.eligibleBenefitCount.number
         )
         .then(() => {
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(2500).then(() => {
-            // click not eligible benefits view
-            pageObjects
-              .notEligibleResultsButton()
-              .click()
-              .then(() => {
-                pageObjects
-                  .accordionHeading()
-                  .filter(':visible')
-                  .should(
-                    'have.length',
-                    dataLayerValueResultsViewNotEligible.bfData
-                      .notEligibleBenefitCount.number +
-                      dataLayerValueResultsViewNotEligible.bfData
-                        .moreInfoBenefitCount.number
-                  )
-                  .then(() => {
-                    // we wait for the last event to fire
-                    // eslint-disable-next-line cypress/no-unnecessary-waiting
-                    cy.wait(2500).then(() => {
-                      // get all the events in our layer that matches the event value
-                      const ev = [
-                        ...window.dataLayer.filter(
-                          x =>
-                            x?.event ===
-                            dataLayerValueResultsViewNotEligible.event
-                        ),
-                      ]
+          // click not eligible benefits view
+          pageObjects.notEligibleResultsButton().click()
+          // Validate updated accordion count for "Not Eligible Benefits"
+          pageObjects
+            .accordionHeading()
+            .filter(':visible')
+            .should(
+              'have.length',
+              dataLayerValueResultsViewNotEligible.bfData
+                .notEligibleBenefitCount.number +
+                dataLayerValueResultsViewNotEligible.bfData.moreInfoBenefitCount
+                  .number
+            )
 
-                      const bfEventIndex = ev.findIndex(
-                        x =>
-                          x.bfData.viewTitle ===
-                          dataLayerValueResultsViewNotEligible.bfData.viewTitle
-                      )
-                      removeID(ev[bfEventIndex])
+          // get all the events in our layer that matches the event value
+          cy.wrap(window.dataLayer).should(dataLayer => {
+            const matchingEvents = dataLayer.filter(
+              x => x?.event === dataLayerValueResultsViewNotEligible.event
+            )
+            assert.isNotEmpty(
+              matchingEvents,
+              'bf_page_change and bf_count events are triggered'
+            )
 
-                      expect(ev[bfEventIndex]).to.deep.equal(
-                        dataLayerValueResultsViewNotEligible
-                      )
-                    })
-                  })
-              })
+            const bfEventIndex = matchingEvents.findIndex(
+              x =>
+                x.bfData.viewTitle ===
+                dataLayerValueResultsViewNotEligible.bfData.viewTitle
+            )
+            removeID(matchingEvents[bfEventIndex])
+
+            expect(matchingEvents[bfEventIndex]).to.deep.equal(
+              dataLayerValueResultsViewNotEligible
+            )
           })
         })
     })
@@ -976,61 +984,73 @@ describe('Calls to Google Analytics Object', function () {
                                       enResults.eligible.eligible_benefits[0]
                                     )
                                     .click()
-                                  // we wait for the last event to fire
-                                  // eslint-disable-next-line cypress/no-unnecessary-waiting
-                                  cy.wait(wait).then(() => {
-                                    // check last page change event
-                                    const ev = [
-                                      ...window.dataLayer.filter(
+                                  cy.wrap(window.dataLayer).should(
+                                    dataLayer => {
+                                      const matchingEvents = dataLayer.filter(
                                         x =>
                                           x?.event ===
                                           dataLayerValueAccordionOpen.event
-                                      ),
-                                    ]
-                                    removeID(ev[0])
+                                      )
+                                      assert.isNotEmpty(
+                                        matchingEvents,
+                                        'bf_accordion_open event is triggered'
+                                      )
+                                    }
+                                  )
 
-                                    expect(ev[0]).to.deep.equal(
+                                  // check last page change event
+                                  cy.wrap(window.dataLayer).then(dataLayer => {
+                                    const ev = dataLayer.filter(
+                                      x =>
+                                        x?.event ===
+                                        dataLayerValueAccordionOpen.event
+                                    )[0]
+
+                                    removeID(ev)
+
+                                    expect(ev).to.deep.equal(
                                       dataLayerValueAccordionOpen
                                     )
-
-                                    pageObjects
-                                      .benefitsAccordionLink(
-                                        enResults.eligible.eligible_benefits[0]
-                                      )
-                                      .invoke('removeAttr', 'href')
-                                      .click()
-                                      .then(() => {
-                                        const ev = [
-                                          ...window.dataLayer.filter(
-                                            x =>
-                                              x?.event ===
-                                              dataLayerValueBenefitLink.event
-                                          ),
-                                        ]
-                                        // delete ev[0]['gtm.uniqueEventId']
-                                        removeID(ev[0])
-                                        expect(ev[0]).to.deep.equal(
-                                          dataLayerValueBenefitLink
-                                        )
-
-                                        // loop through the data layer and remove any events that are gtm
-
-                                        const bfDataLayer =
-                                          window.dataLayer.filter(
-                                            item => !item.event.includes('gtm')
-                                          )
-
-                                        const cleanBfDataLayer =
-                                          bfDataLayer.map(item => {
-                                            removeID(item)
-                                            return item
-                                          })
-
-                                        expect(cleanBfDataLayer).to.deep.equal(
-                                          dataLayerValues
-                                        )
-                                      })
                                   })
+
+                                  pageObjects
+                                    .benefitsAccordionLink(
+                                      enResults.eligible.eligible_benefits[0]
+                                    )
+                                    .invoke('removeAttr', 'href')
+                                    .click()
+                                    .then(() => {
+                                      const ev = [
+                                        ...window.dataLayer.filter(
+                                          x =>
+                                            x?.event ===
+                                            dataLayerValueBenefitLink.event
+                                        ),
+                                      ]
+                                      // delete ev[0]['gtm.uniqueEventId']
+                                      removeID(ev[0])
+                                      expect(ev[0]).to.deep.equal(
+                                        dataLayerValueBenefitLink
+                                      )
+
+                                      // loop through the data layer and remove any events that are gtm
+
+                                      const bfDataLayer =
+                                        window.dataLayer.filter(
+                                          item => !item.event.includes('gtm')
+                                        )
+
+                                      const cleanBfDataLayer = bfDataLayer.map(
+                                        item => {
+                                          removeID(item)
+                                          return item
+                                        }
+                                      )
+
+                                      expect(cleanBfDataLayer).to.deep.equal(
+                                        dataLayerValues
+                                      )
+                                    })
                                 })
                             })
                         })

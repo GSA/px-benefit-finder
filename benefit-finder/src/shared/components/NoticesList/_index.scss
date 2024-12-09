@@ -1,67 +1,49 @@
 @use '@styles/colors' as color;
-@use '@styles/space' as space;
 @use '@styles/mixins' as *;
 @use '@styles/breakpoints' as *;
 @use '@styles/functions' as *;
 
 .bf-notices-list {
-  margin-top: space.$space-md-plus;
-  margin-bottom: space.$space-xl;
+  @media (width >= $desktop) {
+    margin-top: rem(36px);
+    margin-bottom: rem(64px);
+  }
 }
 
 .bf-notice {
   display: flex;
-  padding-bottom: space.$padding-bottom-lg;
+
+  @media (width >= $desktop) {
+    padding-bottom: rem(32px);
+  }
 
   .bf-info {
-    margin-top: space.$space-xs;
-    margin-right: space.$space-sm-plus;
+    margin-top: rem(4px);
+    margin-right: rem(12px);
   }
 }
 
-.bf-line-sperator-wrapper {
-  display: block;
-  padding-top: space.$space-lg;
-  padding-bottom: space.$padding-bottom-lg;
-  margin: space.$space-lg;
-}
-
-.bf-line-sperator {
-  display: block;
-  border-top: rem(2px) solid color.$base-light-grey;
-  width: 100%;
-  height: 100%;
-}
-
-.bf-line-sperator-wrapper--vertical {
+.bf-line-separator-wrapper--vertical {
   display: none;
 }
 
-.bf-line-sperator--vertical {
+.bf-line-separator--vertical {
   display: none;
 }
 
 @media (width >= $desktop) {
-  .bf-intro .bf-line-sperator-wrapper {
-    display: none;
-  }
-
-  .bf-intro .bf-line-sperator {
-    display: none;
-  }
-
-  .bf-line-sperator-wrapper--vertical {
+  .bf-line-separator-wrapper--vertical {
     display: block;
-    padding-top: space.$space-lg;
-    padding-bottom: space.$padding-bottom-lg;
+    padding-top: rem(128px);
+    padding-bottom: rem(32px);
     margin: 0;
-    margin-right: space.$space-lg;
+    margin-right: rem(32px);
   }
 
-  .bf-line-sperator--vertical {
+  .bf-line-separator--vertical {
     display: block;
     border-left: rem(2px) solid color.$base-light-grey;
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
 }

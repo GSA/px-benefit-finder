@@ -1,15 +1,42 @@
 @use '@styles/colors' as color;
 @use '@styles/mixins' as *;
+@use '@styles/breakpoints' as *;
+@use '@styles/functions' as *;
 
-.no-background {
-  background-color: color.$white;
-  border-left-color: color.$white;
-}
 
 h2.bf-usa-alert__heading {
   @include h5($font-family: 'sans');
+
+  padding-left: rem(16px);
 }
 
-.bf-errors-list-item a {
-  @include p;
+.bf-usa-alert {
+  padding: rem(25px) 0;
+
+  p {
+    padding-left: rem(16px);
+  }
+
+  ul a {
+    font-size: rem(15px);
+
+    @media (width>= $desktop) {
+      @include p;
+    }
+  }
+}
+
+@media (width<= $desktop) {
+  .bf-usa-alert__body {
+    padding-left: rem(32px);
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  .bf-usa-alert::before {
+    width: rem(15px);
+    height: rem(68px);
+  }
 }

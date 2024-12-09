@@ -1,4 +1,3 @@
-@use '@styles/space' as space;
 @use '@styles/functions' as *;
 @use '@styles/mixins' as *;
 @use '@styles/colors' as colors;
@@ -6,7 +5,7 @@
 .bf-usa-button {
   @include important-bold($font-family: 'sans');
 
-  padding: space.$space-md space.$space-md-gap;
+  padding: rem(16px) rem(20px);
   font-size: rem(17.6px);
 }
 

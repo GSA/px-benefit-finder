@@ -17,7 +17,6 @@ import { useEffect } from 'react'
  * @param {bool}  hasError - checks for current error state of parent value
  * @param {number} errorCount - number of errors in the view
  * @param {array} errorList - array of error ids and label values
- * @param {bool} noBackground - style variant
  * @param {number} tabIndex - index value of tab order
  * @return {html} returns a wrapped paragraph styled as usa-alert
  */
@@ -30,7 +29,6 @@ const Alert = ({
   description,
   type,
   hasError,
-  noBackground,
   tabIndex,
   errorCount,
   errorList,
@@ -45,13 +43,7 @@ const Alert = ({
           'usa-alert--error',
           `${hasError === false ? 'display-none' : ''}`,
         ]
-      : [
-          'bf-usa-alert',
-          'usa-alert',
-          'bf-usa-alert--info',
-          'usa-alert--info',
-          `${noBackground ? 'no-background' : ''}`,
-        ]
+      : ['bf-usa-alert', 'usa-alert', 'bf-usa-alert--info', 'usa-alert--info']
 
   useEffect(() => {
     // we use a submission count to force the effect on each submission
@@ -125,7 +117,6 @@ Alert.propTypes = {
   description: PropTypes.string,
   type: PropTypes.string,
   hasError: PropTypes.bool,
-  noBackground: PropTypes.bool,
   tabIndex: PropTypes.number,
   errorCount: PropTypes.number,
 }

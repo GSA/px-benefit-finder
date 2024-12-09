@@ -103,7 +103,7 @@ const dataLayerValueResultsViewEligible = {
   event: resultsView.event,
   bfData: {
     pageView: resultsView.bfData.pageView[0],
-    viewTitle: EN_LOCALE_DATA.resultsView.eligible.chevron.heading,
+    viewTitle: EN_LOCALE_DATA.resultsView.eligible.banner.heading,
     ...eligibilityCount,
   },
 }
@@ -112,7 +112,7 @@ const dataLayerValueResultsViewNotEligible = {
   event: resultsView.event,
   bfData: {
     pageView: resultsView.bfData.pageView[1],
-    viewTitle: EN_LOCALE_DATA.resultsView.notEligible.chevron.heading,
+    viewTitle: EN_LOCALE_DATA.resultsView.notEligible.banner.heading,
     ...eligibilityCount,
   },
 }
@@ -158,7 +158,7 @@ const dataLayerValueZeroResultsViewEligible = {
   event: resultsView.event,
   bfData: {
     pageView: resultsView.bfData.pageView[0],
-    viewTitle: EN_LOCALE_DATA.resultsView.zeroBenefits.eligible.chevron.heading,
+    viewTitle: EN_LOCALE_DATA.resultsView.zeroBenefits.eligible.banner.heading,
     ...zeroBenefitsEligibilityCount,
   },
 }
@@ -168,7 +168,7 @@ const dataLayerValueZeroResultsViewNotEligible = {
   bfData: {
     pageView: resultsView.bfData.pageView[1],
     viewTitle:
-      EN_LOCALE_DATA.resultsView.zeroBenefits.notEligible.chevron.heading,
+      EN_LOCALE_DATA.resultsView.zeroBenefits.notEligible.banner.heading,
     ...zeroBenefitsEligibilityCount,
   },
 }

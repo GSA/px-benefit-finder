@@ -531,6 +531,14 @@ exports[`loads view 1`] = `
                           The deceased worked in the coal mines and their death was due to black lung disease (pneumoconiosis)
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -715,6 +723,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -961,6 +977,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -1171,6 +1195,14 @@ exports[`loads view 1`] = `
                           The service status of the deceased is: discharged under conditions other than dishonorable
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -1360,6 +1392,14 @@ exports[`loads view 1`] = `
                           The service status of the deceased is: discharged under conditions other than dishonorable
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -1544,6 +1584,14 @@ exports[`loads view 1`] = `
                           The person is buried in a grave with a privately purchased headstone or an unmarked grave
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -1728,6 +1776,14 @@ exports[`loads view 1`] = `
                           The person is buried in a grave with a privately purchased headstone or an unmarked grave
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -1907,6 +1963,14 @@ exports[`loads view 1`] = `
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, retired from the service, or member of the National Guard/Reserves
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -2091,6 +2155,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -2306,6 +2378,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -2490,6 +2570,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died on active duty
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -3273,6 +3361,14 @@ exports[`loads view 1`] = `
                           The service status of the deceased is: retired from the service
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -3457,6 +3553,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -4426,6 +4530,14 @@ exports[`loads view 1`] = `
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -4641,6 +4753,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, Died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -5027,6 +5147,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died while on active duty or died while on inactive-duty service training
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -5179,6 +5307,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -5363,6 +5499,14 @@ exports[`loads view 1`] = `
                           One of the following applies to the deceased: died while on active duty or Died while on inactive-duty service training
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -5525,6 +5669,14 @@ exports[`loads view 1`] = `
                           Your service status is: discharged under conditions other than dishonorable
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -6718,6 +6870,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           The deceased worked in the coal mines and their death was due to black lung disease (pneumoconiosis)
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -6902,6 +7062,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -7148,6 +7316,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -7358,6 +7534,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           The service status of the deceased is: discharged under conditions other than dishonorable
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -7547,6 +7731,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           The service status of the deceased is: discharged under conditions other than dishonorable
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -7731,6 +7923,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           The person is buried in a grave with a privately purchased headstone or an unmarked grave
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -7915,6 +8115,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           The person is buried in a grave with a privately purchased headstone or an unmarked grave
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -8094,6 +8302,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, retired from the service, or member of the National Guard/Reserves
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -8278,6 +8494,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -8493,6 +8717,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -8677,6 +8909,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died on active duty
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -9460,6 +9700,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           The service status of the deceased is: retired from the service
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -9644,6 +9892,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died while on active duty or died as a result of a service-related disability/illness
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -10613,6 +10869,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           The service status of the deceased is: active-duty service member, discharged under conditions other than dishonorable, or member of the National Guard/Reserves
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -10828,6 +11092,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, Died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -11214,6 +11486,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died while on active duty or died while on inactive-duty service training
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -11366,6 +11646,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died while on active duty, died as a result of a service-related disability/illness, died while receiving/traveling to VA care, or died while receiving/eligible for VA compensation
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -11550,6 +11838,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           One of the following applies to the deceased: died while on active duty or Died while on inactive-duty service training
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"
@@ -11712,6 +12008,14 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                           Your service status is: discharged under conditions other than dishonorable
                         </li>
                       </ul>
+                      <button
+                        class="bf-step-back-button bf-usa-button usa-button bf-usa-button--unstyled usa-button--unstyled"
+                        data-test="button"
+                        data-testid="bf-step-back-button"
+                        type="button"
+                      >
+                        Go back to start
+                      </button>
                     </div>
                     <div
                       class="bf-usa-accordion-group-cta-wrapper"

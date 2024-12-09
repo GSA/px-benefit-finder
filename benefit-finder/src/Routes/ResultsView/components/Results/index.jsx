@@ -1,4 +1,7 @@
+import { useContext } from 'react'
 import PropTypes from 'prop-types'
+import { RouteContext } from '@/App'
+import { useNavigate } from 'react-router-dom'
 import {
   BenefitAccordionGroup,
   Button,
@@ -29,6 +32,8 @@ const Results = ({
   relevantBenefits,
   ui,
 }) => {
+  const ROUTES = useContext(RouteContext)
+  const navigate = useNavigate()
   // Results view components
   const ResultsBannerBlock = ({ notEligibleView, zeroBenefitsResult, ui }) => {
     const { eligible, notEligible, zeroBenefits } = ui
@@ -140,12 +145,7 @@ const Results = ({
         >
           {resultsRelativeBenefits?.heading}
         </Heading>
-        {relevantBenefits && (
-          <RelativeBenefitList
-            data={relevantBenefits}
-            carrotType="carrot"
-          ></RelativeBenefitList>
-        )}
+        {relevantBenefits && <RelativeBenefitList data={relevantBenefits} />}
       </div>
     )
   }
@@ -176,6 +176,9 @@ const Results = ({
           }
           isExpandAll={isExpandAll}
           setExpandAll={setExpandAll}
+          returnToForm={() =>
+            navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
+          }
           ui={ui}
         />
       </div>

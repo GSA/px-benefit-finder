@@ -139,6 +139,10 @@
         "More information needed",
         "Not eligible"
       ],
+      "backcta": {
+        "text": "",
+        "link": "Go back to start"
+      },
       "agencyPrefix": "By",
       "benefitSummary": "Key eligibility criteria",
       "benefitSummaryPrefix": "Met ",

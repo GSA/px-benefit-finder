@@ -139,6 +139,10 @@
         "Más información requerida",
         "No elegible"
       ],
+      "backcta": {
+        "text": "",
+        "link": "Volver al inicio"
+      },
       "agencyPrefix": "",
       "benefitSummary": "Criterios de elegibilidad",
       "benefitSummaryPrefix": "Cumple ",

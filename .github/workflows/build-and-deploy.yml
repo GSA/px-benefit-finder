@@ -222,7 +222,7 @@ jobs:
           cf add-network-policy ${PROJECT}-waf-${BRANCH} ${PROJECT}-cms-${BRANCH} -s ${PROJECT}-${BRANCH} -o ${CF_ORG} --protocol tcp --port 61443
           cf map-route benefit-finder-cms-${BRANCH} apps.internal --hostname benefit-finder-cms-${BRANCH} --app-protocol http1
           cd ..
-          echo "${TEST_USER_PASS}"
+          echo "The value of the test user is: ${TEST_USER_PASS}"
           sed -i "s#TU_PASS#${TEST_USER_PASS}#" ./scripts/drush-post-deploy.sh
           cat ./scripts/drush-post-deploy.sh
           source ./scripts/pipeline/cloud-gov-post-deploy.sh

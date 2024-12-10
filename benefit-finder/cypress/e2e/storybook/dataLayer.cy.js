@@ -192,16 +192,13 @@ const dataLayerValues = [
 
 const removeID = item => delete item['gtm.uniqueEventId']
 
-const relationshipId =
-  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
-    .fieldsets[1].fieldset.inputs[0].inputCriteria.id
-const relationshipValue =
+const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
+const dateOfDeath = utils.getDateByOffset(-30)
+
+const relationship =
   EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
     .fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
-const maritalStatusId =
-  EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
-    .fieldsets[2].fieldset.inputs[0].inputCriteria.id
-const maritalStatusValue =
+const maritalStatus =
   EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
     .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
 
@@ -257,7 +254,8 @@ describe('Calls to Google Analytics Object', function () {
 
   it('first form step bf_page_change event', function () {
     cy.visit(utils.storybookUri)
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.navigateToAboutTheApplicantPage()
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
@@ -277,7 +275,8 @@ describe('Calls to Google Analytics Object', function () {
 
   it('second form step bf_page_change event, asserts incrmenting values', function () {
     cy.visit(utils.storybookUri)
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.navigateToAboutTheApplicantPage()
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
@@ -292,37 +291,31 @@ describe('Calls to Google Analytics Object', function () {
 
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
 
-          // fill out required fields
-          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
-          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+          cy.fillDetailsAboutTheApplicant({
+            dateOfBirth,
+            relationship,
+            maritalStatus,
+          })
 
-          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
-          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
-          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
+          cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
+            // get all the events in our layer that matches the event value
+            const ev = [
+              ...window.dataLayer.filter(
+                x => x?.event === dataLayerValueFormStepTwo.event
+              ),
+            ]
+            removeID(ev[2])
 
-          pageObjects
-            .button()
-            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-            .click()
-            .then(() => {
-              // get all the events in our layer that matches the event value
-              const ev = [
-                ...window.dataLayer.filter(
-                  x => x?.event === dataLayerValueFormStepTwo.event
-                ),
-              ]
-              removeID(ev[2])
-
-              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
-            })
+            expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+          })
         })
     })
   })
 
   it('clicking Continue on the final form step opens a modal and triggers the modal event', function () {
     cy.visit(utils.storybookUri)
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.navigateToAboutTheApplicantPage()
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
@@ -338,49 +331,37 @@ describe('Calls to Google Analytics Object', function () {
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
 
           // fill out required fields
-          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
-          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+          cy.fillDetailsAboutTheApplicant({
+            dateOfBirth,
+            relationship,
+            maritalStatus,
+          })
 
-          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
-          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
-          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
+          cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
+            // get all the events in our layer that matches the event value
+            const ev = [
+              ...window.dataLayer.filter(
+                x => x?.event === dataLayerValueFormStepTwo.event
+              ),
+            ]
+            removeID(ev[2])
 
-          pageObjects
-            .button()
-            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-            .click()
-            .then(() => {
+            expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+
+            cy.fillDetailsAboutTheDeceased({ dateOfDeath })
+
+            cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
               // get all the events in our layer that matches the event value
               const ev = [
                 ...window.dataLayer.filter(
-                  x => x?.event === dataLayerValueFormStepTwo.event
+                  x => x?.event === dataLayerValueFormCompletionModal.event
                 ),
               ]
-              removeID(ev[2])
+              removeID(ev[3])
 
-              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
-
-              // Date of death - 30 days ago
-              const dateOfDeath = utils.getDateByOffset(-30)
-              cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
-
-              pageObjects
-                .button()
-                .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-                .click()
-                .then(() => {
-                  // get all the events in our layer that matches the event value
-                  const ev = [
-                    ...window.dataLayer.filter(
-                      x => x?.event === dataLayerValueFormCompletionModal.event
-                    ),
-                  ]
-                  removeID(ev[3])
-
-                  expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
-                })
+              expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
             })
+          })
         })
     })
   })
@@ -580,7 +561,8 @@ describe('Calls to Google Analytics Object', function () {
 
   it('clicking Continue on the final form step opens a modal, clicking Review selections loads the verification view and a bf_page_change event', function () {
     cy.visit(utils.storybookUri)
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.navigateToAboutTheApplicantPage()
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
@@ -596,67 +578,50 @@ describe('Calls to Google Analytics Object', function () {
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
 
           // fill out required fields
-          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
-          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+          cy.fillDetailsAboutTheApplicant({
+            dateOfBirth,
+            relationship,
+            maritalStatus,
+          })
 
-          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
-          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
-          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
+          cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
+            // get all the events in our layer that matches the event value
+            const ev = [
+              ...window.dataLayer.filter(
+                x => x?.event === dataLayerValueFormStepTwo.event
+              ),
+            ]
+            removeID(ev[2])
 
-          pageObjects
-            .button()
-            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-            .click()
-            .then(() => {
+            expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+
+            // Date of death - 30 days ago
+            cy.fillDetailsAboutTheDeceased({ dateOfDeath })
+
+            cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
               // get all the events in our layer that matches the event value
               const ev = [
                 ...window.dataLayer.filter(
-                  x => x?.event === dataLayerValueFormStepTwo.event
+                  x => x?.event === dataLayerValueFormCompletionModal.event
                 ),
               ]
-              removeID(ev[2])
+              removeID(ev[3])
 
-              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+              expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
 
-              // Date of death - 30 days ago
-              const dateOfDeath = utils.getDateByOffset(-30)
-              cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
+              cy.clickButton('Review your selections').then(() => {
+                // get all the events in our layer that matches the event value
+                const ev = [
+                  ...window.dataLayer.filter(
+                    x => x?.event === dataLayerValueVerifySecletions.event
+                  ),
+                ]
+                removeID(ev[4])
 
-              pageObjects
-                .button()
-                .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-                .click()
-                .then(() => {
-                  // get all the events in our layer that matches the event value
-                  const ev = [
-                    ...window.dataLayer.filter(
-                      x => x?.event === dataLayerValueFormCompletionModal.event
-                    ),
-                  ]
-                  removeID(ev[3])
-
-                  expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
-
-                  pageObjects
-                    .button()
-                    .contains('Review your selections')
-                    .click()
-                    .then(() => {
-                      // get all the events in our layer that matches the event value
-                      const ev = [
-                        ...window.dataLayer.filter(
-                          x => x?.event === dataLayerValueVerifySecletions.event
-                        ),
-                      ]
-                      removeID(ev[4])
-
-                      expect(ev[4]).to.deep.equal(
-                        dataLayerValueVerifySecletions
-                      )
-                    })
-                })
+                expect(ev[4]).to.deep.equal(dataLayerValueVerifySecletions)
+              })
             })
+          })
         })
     })
   })
@@ -703,7 +668,8 @@ describe('Calls to Google Analytics Object', function () {
 
   it('navigating through all the form results in zeroBenefits views', function () {
     cy.visit(utils.storybookUri)
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.navigateToAboutTheApplicantPage()
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
@@ -719,112 +685,90 @@ describe('Calls to Google Analytics Object', function () {
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
 
           // fill out required fields
-          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
-          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+          cy.fillDetailsAboutTheApplicant({
+            dateOfBirth,
+            relationship,
+            maritalStatus,
+          })
 
-          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
-          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
-          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
+          cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
+            // get all the events in our layer that matches the event value
+            const ev = [
+              ...window.dataLayer.filter(
+                x => x?.event === dataLayerValueFormStepTwo.event
+              ),
+            ]
+            removeID(ev[2])
 
-          pageObjects
-            .button()
-            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-            .click()
-            .then(() => {
-              // get all the events in our layer that matches the event value
+            expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+
+            cy.fillDetailsAboutTheDeceased({ dateOfDeath })
+
+            cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
               const ev = [
                 ...window.dataLayer.filter(
-                  x => x?.event === dataLayerValueFormStepTwo.event
+                  x => x?.event === dataLayerValueFormCompletionModal.event
                 ),
               ]
-              removeID(ev[2])
+              removeID(ev[3])
 
-              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+              expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
 
-              // Date of death - 30 days ago
-              const dateOfDeath = utils.getDateByOffset(-30)
-              cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
+              cy.clickButton('Review your selections').then(() => {
+                // get all the events in our layer that matches the event value
+                const ev = [
+                  ...window.dataLayer.filter(
+                    x => x?.event === dataLayerValueVerifySecletions.event
+                  ),
+                ]
+                removeID(ev[4])
 
-              pageObjects
-                .button()
-                .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-                .click()
-                .then(() => {
+                expect(ev[4]).to.deep.equal(dataLayerValueVerifySecletions)
+
+                cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
+                  // get all the events in our layer that matches the event value
                   const ev = [
                     ...window.dataLayer.filter(
-                      x => x?.event === dataLayerValueFormCompletionModal.event
+                      x =>
+                        x?.event === dataLayerValueZeroResultsViewEligible.event
                     ),
                   ]
-                  removeID(ev[3])
+                  removeID(ev[5])
 
-                  expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
+                  expect(ev[5]).to.deep.equal(
+                    dataLayerValueZeroResultsViewEligible
+                  )
 
                   pageObjects
-                    .button()
-                    .contains('Review your selections')
+                    .seeAllBenefitsButton()
                     .click()
                     .then(() => {
                       // get all the events in our layer that matches the event value
                       const ev = [
                         ...window.dataLayer.filter(
-                          x => x?.event === dataLayerValueVerifySecletions.event
+                          x =>
+                            x?.event ===
+                            dataLayerValueZeroResultsViewNotEligible.event
                         ),
                       ]
-                      removeID(ev[4])
+                      removeID(ev[6])
 
-                      expect(ev[4]).to.deep.equal(
-                        dataLayerValueVerifySecletions
+                      expect(ev[6]).to.deep.equal(
+                        dataLayerValueZeroResultsViewNotEligible
                       )
-
-                      pageObjects
-                        .button()
-                        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-                        .click()
-                        .then(() => {
-                          // get all the events in our layer that matches the event value
-                          const ev = [
-                            ...window.dataLayer.filter(
-                              x =>
-                                x?.event ===
-                                dataLayerValueZeroResultsViewEligible.event
-                            ),
-                          ]
-                          removeID(ev[5])
-
-                          expect(ev[5]).to.deep.equal(
-                            dataLayerValueZeroResultsViewEligible
-                          )
-
-                          pageObjects
-                            .seeAllBenefitsButton()
-                            .click()
-                            .then(() => {
-                              // get all the events in our layer that matches the event value
-                              const ev = [
-                                ...window.dataLayer.filter(
-                                  x =>
-                                    x?.event ===
-                                    dataLayerValueZeroResultsViewNotEligible.event
-                                ),
-                              ]
-                              removeID(ev[6])
-
-                              expect(ev[6]).to.deep.equal(
-                                dataLayerValueZeroResultsViewNotEligible
-                              )
-                            })
-                        })
                     })
                 })
+              })
             })
+          })
         })
     })
   })
 
   it('navigating through all the test steps produces a deep equal comparison to our expected dataLayer array values', function () {
     cy.visit(utils.storybookUri)
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+
+    cy.navigateToAboutTheApplicantPage()
 
     cy.window().then(window => {
       assert.isDefined(window.dataLayer, 'window.dataLayer is defined')
@@ -841,222 +785,190 @@ describe('Calls to Google Analytics Object', function () {
           expect(ev).to.deep.equal(dataLayerValueFormStepOne)
 
           // fill out required fields
-          const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
-          cy.visit('/iframe.html?args=&id=app--primary&viewMode=story')
+          cy.fillDetailsAboutTheApplicant({
+            dateOfBirth,
+            relationship,
+            maritalStatus,
+          })
 
-          pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-          cy.enterDate(dateOfBirth.month, dateOfBirth.day, dateOfBirth.year)
-          pageObjects.fieldsetById(relationshipId).select(relationshipValue)
-          pageObjects.fieldsetById(maritalStatusId).select(maritalStatusValue)
+          cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
+            // get the last pushed event
+            const ev = [
+              ...window.dataLayer.filter(
+                x => x?.event === dataLayerValueFormStepTwo.event
+              ),
+            ]
 
-          pageObjects
-            .button()
-            .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-            .click()
-            .then(() => {
-              // get the last pushed event
+            // delete ev[2]['gtm.uniqueEventId']
+            removeID(ev[2])
+
+            expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+
+            cy.fillDetailsAboutTheDeceased({ dateOfDeath })
+
+            cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
               const ev = [
                 ...window.dataLayer.filter(
-                  x => x?.event === dataLayerValueFormStepTwo.event
+                  x => x?.event === dataLayerValueFormCompletionModal.event
                 ),
               ]
 
-              // delete ev[2]['gtm.uniqueEventId']
-              removeID(ev[2])
+              // delete ev[3]['gtm.uniqueEventId']
+              removeID(ev[3])
 
-              expect(ev[2]).to.deep.equal(dataLayerValueFormStepTwo)
+              expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
 
-              // Date of death - 30 days ago
-              const dateOfDeath = utils.getDateByOffset(-30)
-              cy.enterDate(dateOfDeath.month, dateOfDeath.day, dateOfDeath.year)
+              cy.clickButton('Review your selections').then(() => {
+                const ev = [
+                  ...window.dataLayer.filter(
+                    x => x?.event === dataLayerValueVerifySecletions.event
+                  ),
+                ]
 
-              pageObjects
-                .button()
-                .contains(EN_LOCALE_DATA.buttonGroup[1].value)
-                .click()
-                .then(() => {
+                // delete ev[4]['gtm.uniqueEventId']
+                removeID(ev[4])
+
+                expect(ev[4]).to.deep.equal(dataLayerValueVerifySecletions)
+
+                cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
                   const ev = [
                     ...window.dataLayer.filter(
-                      x => x?.event === dataLayerValueFormCompletionModal.event
+                      x =>
+                        x?.event === dataLayerValueZeroResultsViewEligible.event
                     ),
                   ]
+                  removeID(ev[5])
 
-                  // delete ev[3]['gtm.uniqueEventId']
-                  removeID(ev[3])
-
-                  expect(ev[3]).to.deep.equal(dataLayerValueFormCompletionModal)
+                  expect(ev[5]).to.deep.equal(
+                    dataLayerValueZeroResultsViewEligible
+                  )
 
                   pageObjects
-                    .button()
-                    .contains('Review your selections')
+                    .seeAllBenefitsButton()
                     .click()
                     .then(() => {
                       const ev = [
                         ...window.dataLayer.filter(
-                          x => x?.event === dataLayerValueVerifySecletions.event
+                          x =>
+                            x?.event ===
+                            dataLayerValueZeroResultsViewNotEligible.event
                         ),
                       ]
+                      removeID(ev[6])
 
-                      // delete ev[4]['gtm.uniqueEventId']
-                      removeID(ev[4])
-
-                      expect(ev[4]).to.deep.equal(
-                        dataLayerValueVerifySecletions
+                      expect(ev[6]).to.deep.equal(
+                        dataLayerValueZeroResultsViewNotEligible
                       )
+                    })
+                  // confirm zero benefits event and view
+                  // click see all benefits
+                  pageObjects
+                    .expandAll()
+                    .click()
+                    .then(() => {
+                      // check last page change event
+                      const ev = [
+                        ...window.dataLayer.filter(
+                          x =>
+                            x?.event === dataLayerValueOpenAllAccordions.event
+                        ),
+                      ]
+                      removeID(ev[0])
 
+                      expect(ev[0]).to.deep.equal(
+                        dataLayerValueOpenAllAccordions
+                      )
                       pageObjects
-                        .button()
-                        .contains(EN_LOCALE_DATA.buttonGroup[1].value)
+                        .expandAll()
                         .click()
                         .then(() => {
+                          // check last page change event
                           const ev = [
                             ...window.dataLayer.filter(
                               x =>
                                 x?.event ===
-                                dataLayerValueZeroResultsViewEligible.event
+                                dataLayerValueOpenAllAccordions.event
                             ),
                           ]
-                          removeID(ev[5])
 
-                          expect(ev[5]).to.deep.equal(
-                            dataLayerValueZeroResultsViewEligible
+                          // we ignore dedup here so there can be multiple fires
+                          removeID(ev[1])
+
+                          expect(ev[1].bfData.accordionsOpen).to.equal(
+                            !dataLayerValueOpenAllAccordions.bfData
+                              .accordionsOpen
                           )
 
                           pageObjects
-                            .seeAllBenefitsButton()
+                            .accordionByTitle(
+                              enResults.eligible.eligible_benefits[0]
+                            )
                             .click()
-                            .then(() => {
-                              const ev = [
-                                ...window.dataLayer.filter(
-                                  x =>
-                                    x?.event ===
-                                    dataLayerValueZeroResultsViewNotEligible.event
-                                ),
-                              ]
-                              removeID(ev[6])
+                          cy.wrap(window.dataLayer).should(dataLayer => {
+                            const matchingEvents = dataLayer.filter(
+                              x =>
+                                x?.event === dataLayerValueAccordionOpen.event
+                            )
+                            assert.isNotEmpty(
+                              matchingEvents,
+                              'bf_accordion_open event is triggered'
+                            )
+                          })
 
-                              expect(ev[6]).to.deep.equal(
-                                dataLayerValueZeroResultsViewNotEligible
-                              )
-                            })
-                          // confirm zero benefits event and view
-                          // click see all benefits
+                          // check last page change event
+                          cy.wrap(window.dataLayer).then(dataLayer => {
+                            const ev = dataLayer.filter(
+                              x =>
+                                x?.event === dataLayerValueAccordionOpen.event
+                            )[0]
+
+                            removeID(ev)
+
+                            expect(ev).to.deep.equal(
+                              dataLayerValueAccordionOpen
+                            )
+                          })
+
                           pageObjects
-                            .expandAll()
+                            .benefitsAccordionLink(
+                              enResults.eligible.eligible_benefits[0]
+                            )
+                            .invoke('removeAttr', 'href')
                             .click()
                             .then(() => {
-                              // check last page change event
                               const ev = [
                                 ...window.dataLayer.filter(
                                   x =>
-                                    x?.event ===
-                                    dataLayerValueOpenAllAccordions.event
+                                    x?.event === dataLayerValueBenefitLink.event
                                 ),
                               ]
+                              // delete ev[0]['gtm.uniqueEventId']
                               removeID(ev[0])
-
                               expect(ev[0]).to.deep.equal(
-                                dataLayerValueOpenAllAccordions
+                                dataLayerValueBenefitLink
                               )
-                              pageObjects
-                                .expandAll()
-                                .click()
-                                .then(() => {
-                                  // check last page change event
-                                  const ev = [
-                                    ...window.dataLayer.filter(
-                                      x =>
-                                        x?.event ===
-                                        dataLayerValueOpenAllAccordions.event
-                                    ),
-                                  ]
 
-                                  // we ignore dedup here so there can be multiple fires
-                                  removeID(ev[1])
+                              // loop through the data layer and remove any events that are gtm
 
-                                  expect(ev[1].bfData.accordionsOpen).to.equal(
-                                    !dataLayerValueOpenAllAccordions.bfData
-                                      .accordionsOpen
-                                  )
+                              const bfDataLayer = window.dataLayer.filter(
+                                item => !item.event.includes('gtm')
+                              )
 
-                                  pageObjects
-                                    .accordionByTitle(
-                                      enResults.eligible.eligible_benefits[0]
-                                    )
-                                    .click()
-                                  cy.wrap(window.dataLayer).should(
-                                    dataLayer => {
-                                      const matchingEvents = dataLayer.filter(
-                                        x =>
-                                          x?.event ===
-                                          dataLayerValueAccordionOpen.event
-                                      )
-                                      assert.isNotEmpty(
-                                        matchingEvents,
-                                        'bf_accordion_open event is triggered'
-                                      )
-                                    }
-                                  )
+                              const cleanBfDataLayer = bfDataLayer.map(item => {
+                                removeID(item)
+                                return item
+                              })
 
-                                  // check last page change event
-                                  cy.wrap(window.dataLayer).then(dataLayer => {
-                                    const ev = dataLayer.filter(
-                                      x =>
-                                        x?.event ===
-                                        dataLayerValueAccordionOpen.event
-                                    )[0]
-
-                                    removeID(ev)
-
-                                    expect(ev).to.deep.equal(
-                                      dataLayerValueAccordionOpen
-                                    )
-                                  })
-
-                                  pageObjects
-                                    .benefitsAccordionLink(
-                                      enResults.eligible.eligible_benefits[0]
-                                    )
-                                    .invoke('removeAttr', 'href')
-                                    .click()
-                                    .then(() => {
-                                      const ev = [
-                                        ...window.dataLayer.filter(
-                                          x =>
-                                            x?.event ===
-                                            dataLayerValueBenefitLink.event
-                                        ),
-                                      ]
-                                      // delete ev[0]['gtm.uniqueEventId']
-                                      removeID(ev[0])
-                                      expect(ev[0]).to.deep.equal(
-                                        dataLayerValueBenefitLink
-                                      )
-
-                                      // loop through the data layer and remove any events that are gtm
-
-                                      const bfDataLayer =
-                                        window.dataLayer.filter(
-                                          item => !item.event.includes('gtm')
-                                        )
-
-                                      const cleanBfDataLayer = bfDataLayer.map(
-                                        item => {
-                                          removeID(item)
-                                          return item
-                                        }
-                                      )
-
-                                      expect(cleanBfDataLayer).to.deep.equal(
-                                        dataLayerValues
-                                      )
-                                    })
-                                })
+                              expect(cleanBfDataLayer).to.deep.equal(
+                                dataLayerValues
+                              )
                             })
                         })
                     })
                 })
+              })
             })
+          })
         })
     })
   })

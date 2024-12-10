@@ -1,30 +1,30 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 import * as utils from '../../support/utils.js'
 import * as EN_LOCALE_DATA from '../../../src/shared/locales/en/en.json'
 import * as EN_DOLO_MOCK_DATA from '../../../src/shared/api/mock-data/current.json'
 import { pageObjects } from '../../support/pageObjects.js'
 
-const dob = utils.getDateByOffset(-(18 * 365.2425 - 1))
-const dod = utils.getDateByOffset(-30)
+const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
+const dateOfDeath = utils.getDateByOffset(-30)
 
-const relation =
+const relationship =
   EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
     .fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
-const status =
+const maritalStatus =
   EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
     .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
 
 describe('Validate scrolling when modal is open', () => {
   it('Should disable body from scrolling when model is open', () => {
     cy.visit(utils.storybookUri)
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    utils.dataInputs({ dod })
 
-    // open modal
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    cy.navigateToModal({
+      dateOfBirth,
+      relationship,
+      maritalStatus,
+      dateOfDeath,
+    })
 
     // close when clicked off modal
     cy.get('.ReactModal__Overlay').click('topRight')
@@ -35,7 +35,7 @@ describe('Validate scrolling when modal is open', () => {
     ) // these types run successfully but do not trigger movement in the window
 
     // open modal
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value)
 
     // confirm type works for modal
     cy.get('#benefit-finder-modal').type(
@@ -77,7 +77,7 @@ describe('Validate scrolling when modal is open', () => {
       expect($w.scrollY).to.be.greaterThan(scrollYPosition)
     })
 
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value)
 
     // confirm we are back at the top
     cy.window().then($w => {

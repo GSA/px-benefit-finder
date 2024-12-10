@@ -1,5 +1,4 @@
- 
-const { defineConfig } = require('cypress')
+const { defineConfig } = require('Cypress')
 
 module.exports = defineConfig({
   experimentalWebKitSupport: true,

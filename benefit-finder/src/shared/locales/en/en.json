@@ -1,11 +1,11 @@
 {
   "intro": {
-    "heading": "Steps",
-    "timeIndicator": "Estimated time",
+    "heading": "Steps to find benefits",
+    "timeIndicator": "Estimated time to complete",
     "steps": {
       "list": [
         {
-          "title": "Answer questions"
+          "title": "Answer a few questions"
         },
         {
           "title": "Get your list of benefits"
@@ -20,13 +20,7 @@
       "iconAlt": "Important",
       "list": [
         {
-          "notice": "<div><strong>This is not an application.</strong></div>"
-        },
-        {
-          "notice": "<strong>You'll need to apply</strong> for benefits with each agency."
-        },
-        {
-          "notice": "<div><strong>We don't share, save, or submit</strong> your information.</div>"
+          "notice": "<div><p><strong>This is not an application. You will need to apply for benefits</strong> with each agency.</p><p>We do not share, save, or submit your information.</p></div>"
         }
       ]
     },
@@ -94,7 +88,7 @@
       }
     },
     "eligible": {
-      "chevron": {
+      "banner": {
         "heading": "Your potential benefits",
         "description": "<div><p>Visit each agency to find true eligibility and to apply. Check with your city, state, or employer for other benefits.</p></div>"
       },
@@ -102,7 +96,7 @@
       "description": "<strong>You may be eligible for these benefits:</strong>"
     },
     "notEligible": {
-      "chevron": {
+      "banner": {
         "heading": "Benefits you did not qualify for",
         "description": "<div><p>According to your answers you are not eligible for these benefits.</p></div>"
       },
@@ -115,13 +109,13 @@
         "link": "Go back to start"
       },
       "eligible": {
-        "chevron": {
+        "banner": {
           "heading": "You are likely not eligible for these benefits.",
           "description": "<div><p>If you think you reached these results by mistake, please go back to review and edit your answers.</p></div>"
         }
       },
       "notEligible": {
-        "chevron": {
+        "banner": {
           "heading": "Benefits you did not qualify for",
           "description": "<div><p>According to your answers you are not eligible for these benefits.</p></div>"
         }
@@ -145,6 +139,10 @@
         "More information needed",
         "Not eligible"
       ],
+      "backcta": {
+        "text": "",
+        "link": "Go back to start"
+      },
       "agencyPrefix": "By",
       "benefitSummary": "Key eligibility criteria",
       "benefitSummaryPrefix": "Met ",

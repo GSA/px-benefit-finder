@@ -4,7 +4,7 @@ import BenefitAccordionGroup from './BenefitAccordionGroup'
 import Button from './Button'
 import ButtonGroup from './ButtonGroup'
 import Card from './Card'
-import Chevron from './Chevron'
+import Banner from './Banner'
 import Date from './Date'
 import EmailTrigger from './EmailTrigger'
 import Fieldset from './Fieldset'
@@ -39,7 +39,7 @@ export {
   Button,
   ButtonGroup,
   Card,
-  Chevron,
+  Banner,
   Date,
   EmailTrigger,
   Fieldset,

@@ -1,5 +1,4 @@
 @use '@styles/colors' as color;
-@use '@styles/space' as space;
 @use '@styles/breakpoints' as *;
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
@@ -23,17 +22,17 @@
 
 .bf-usa-form-group--month {
   width: rem(242px);
-  margin-top: space.$space-sm;
+  margin-top: rem(8px);
 }
 
 .bf-usa-form-group--day {
   width: rem(64px);
-  margin-top: space.$space-sm;
+  margin-top: rem(8px);
 }
 
 .bf-usa-form-group--year {
   width: rem(95px);
-  margin-top: space.$space-sm;
+  margin-top: rem(8px);
 }
 
 @media (width >= $desktop) {

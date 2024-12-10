@@ -1,11 +1,11 @@
 @use '@styles/mixins' as *;
 @use '@styles/colors' as color;
-@use '@styles/space' as space;
+@use '@styles/functions' as *;
 
 .bf-usa-summary-box {
   @include h5($font-family: 'sans');
 
-  margin-bottom: space.$space-md;
+  margin-bottom: rem(16px);
   border-color: color.$teal;
 
   .bf-usa-list {

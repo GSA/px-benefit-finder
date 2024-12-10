@@ -1,10 +1,13 @@
+import { useContext } from 'react'
 import PropTypes from 'prop-types'
+import { RouteContext } from '@/App'
+import { useNavigate } from 'react-router-dom'
 import {
   BenefitAccordionGroup,
   Button,
   EmailTrigger,
   Heading,
-  Chevron,
+  Banner,
   ShareTrigger,
   RelativeBenefitList,
 } from '@components'
@@ -29,27 +32,29 @@ const Results = ({
   relevantBenefits,
   ui,
 }) => {
+  const ROUTES = useContext(RouteContext)
+  const navigate = useNavigate()
   // Results view components
-  const ResultsChevronBlock = ({ notEligibleView, zeroBenefitsResult, ui }) => {
+  const ResultsBannerBlock = ({ notEligibleView, zeroBenefitsResult, ui }) => {
     const { eligible, notEligible, zeroBenefits } = ui
     return (
-      <Chevron
+      <Banner
         heading={
           notEligibleView === false
-            ? (zeroBenefitsResult && zeroBenefits?.eligible.chevron.heading) ||
-              eligible?.chevron.heading
+            ? (zeroBenefitsResult && zeroBenefits?.eligible.banner.heading) ||
+              eligible?.banner.heading
             : (zeroBenefitsResult &&
-                zeroBenefits?.notEligible.chevron.heading) ||
-              notEligible?.chevron.heading
+                zeroBenefits?.notEligible.banner.heading) ||
+              notEligible?.banner.heading
         }
         description={
           notEligibleView === false
             ? (zeroBenefitsResult &&
-                zeroBenefits?.eligible.chevron.description) ||
-              eligible?.chevron.description
+                zeroBenefits?.eligible.banner.description) ||
+              eligible?.banner.description
             : (zeroBenefitsResult &&
-                zeroBenefits?.notEligible.chevron.description) ||
-              notEligible?.chevron.description
+                zeroBenefits?.notEligible.banner.description) ||
+              notEligible?.banner.description
         }
       />
     )
@@ -140,12 +145,7 @@ const Results = ({
         >
           {resultsRelativeBenefits?.heading}
         </Heading>
-        {relevantBenefits && (
-          <RelativeBenefitList
-            data={relevantBenefits}
-            carrotType="carrot"
-          ></RelativeBenefitList>
-        )}
+        {relevantBenefits && <RelativeBenefitList data={relevantBenefits} />}
       </div>
     )
   }
@@ -176,6 +176,9 @@ const Results = ({
           }
           isExpandAll={isExpandAll}
           setExpandAll={setExpandAll}
+          returnToForm={() =>
+            navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
+          }
           ui={ui}
         />
       </div>
@@ -184,7 +187,7 @@ const Results = ({
 
   return (
     <>
-      <ResultsChevronBlock
+      <ResultsBannerBlock
         notEligibleView={notEligibleView}
         zeroBenefitsResult={zeroBenefitsResult}
         ui={ui}

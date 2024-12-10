@@ -51,9 +51,8 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   const resetElement = useResetElement()
   const ROUTES = useContext(RouteContext)
   const navigate = useNavigate()
-  /* eslint-disable */
+
   let location = useLocation() // ignore prefer-const
-  /* eslint-enable */
 
   /**
    * Finds the index of the current form step in the data array.
@@ -518,7 +517,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
                       item,
                       index: i,
                       children: item.fieldset.children.map(
-                        (child, i) =>
+                        child =>
                           child.fieldsets.length &&
                           child.fieldsets.map((childItem, childItemIndex) => {
                             // if a parent determines the children inputs are hidden, we expect that the seleted values in child items are de-selected

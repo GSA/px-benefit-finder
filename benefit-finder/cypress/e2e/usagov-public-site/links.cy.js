@@ -36,7 +36,7 @@ const handlerequest = ({ testLink, link }) => {
     })
 }
 
-const validateErrorCodes = test => {
+const validateErrorCodes = () => {
   // we verify site is alive and fail on 404 || 503
   cy.get('#benefit-finder a[href]').each(link => {
     handlerequest({ link })
@@ -50,16 +50,15 @@ const validateLinks = ({ selectedData, path }) => {
 }
 
 // to be removed when uncaught exceptions are addressed
-// eslint-disable-next-line n/handle-callback-err
-Cypress.on('uncaught:exception', (error, runnable) => {
+Cypress.on('uncaught:exception', () => {
   return false
 })
 
 describe('Verify correct status code handling', () => {
   // negate validation on our functional code
-  Cypress.on('fail', (error, runnable) => {
+  Cypress.on('fail', error => {
     if (JSON.stringify(error).includes('httpstat')) {
-      // eslint-disable-next-line no-unused-expressions
+       
       expect(error).to.not.be.undefined
     } else {
       throw error

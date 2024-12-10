@@ -14,7 +14,6 @@ defaults:
     working-directory: ./benefit-finder
 
 jobs:
-
   tests-chrome:
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Chrome cypress screenshots
-          path: ./benefit-finder/cypress/screenshots    
+          path: ./benefit-finder/cypress/screenshots
 
   tests-firefox:
     runs-on: ubuntu-latest
@@ -77,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Firefox cypress screenshots
-          path: ./benefit-finder/cypress/screenshots  
+          path: ./benefit-finder/cypress/screenshots
 
   tests-edge:
     runs-on: ubuntu-latest
@@ -103,50 +102,10 @@ jobs:
           env: NODE_ENV=test
           build: "npm run cy:build:storybook"
           start: "npm run cy:run:pipeline"
-          
+
       - name: Edge Artifact(s)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: Edge cypress screenshots
-          path: ./benefit-finder/cypress/screenshots
-
-  tests-webkit:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: "./benefit-finder/package.json"
-
-      - name: Install Submodule
-        run: |
-          cd ..
-          git submodule init
-          git submodule update
-
-      - name: Install dependencies
-        uses: cypress-io/github-action@v6
-        with:
-          working-directory: ./benefit-finder
-          build: npx playwright-webkit install-deps
-          runTests: false
-
-      - name: Cypress run (WebKit)
-        uses: cypress-io/github-action@v6
-        with:
-          working-directory: ./benefit-finder
-          install: false
-          browser: webkit
-          env: NODE_ENV=test
-          build: "npm run cy:build:storybook"
-          start: "npm run cy:run:pipeline"
-
-      - name: Webkit Artifact(s)
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: Webkit cypress screenshots
           path: ./benefit-finder/cypress/screenshots

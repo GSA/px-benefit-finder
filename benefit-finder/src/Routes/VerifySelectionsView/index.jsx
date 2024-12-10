@@ -16,7 +16,7 @@ import './_index.scss'
  * @param {array} data - inherited state of data in current session
  * @return {html} returns semantic html view for current input values
  */
-const VerifySelectionsView = ({ indexPath, ui, data }) => {
+const VerifySelectionsView = ({ ui, data }) => {
   const { verifySelectionsView, buttonGroup } = ui
   const { verifySelections } = dataLayerUtils.dataLayerStructure
   const local = apiCalls.GET.Language()
@@ -135,7 +135,7 @@ const VerifySelectionsView = ({ indexPath, ui, data }) => {
           <div className="bf-section-info">
             <div>
               {data &&
-                data.map((item, i) => {
+                data.map(item => {
                   // get the sectional data
                   // map all the criteria input legends and values
                   const { section } = item

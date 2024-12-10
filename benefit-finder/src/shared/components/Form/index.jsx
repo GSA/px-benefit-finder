@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './_index.scss'
 
 /**
  * a functional component that wraps form elements in a form element
@@ -9,7 +10,7 @@ import PropTypes from 'prop-types'
 function Form({ children }) {
   return (
     <form className="bf-usa-form">
-      <div className="bf-grid-contianer grid-container">{children}</div>
+      <div className="bf-grid-container grid-container">{children}</div>
     </form>
   )
 }

@@ -1,11 +1,10 @@
 @use '@styles/colors' as color;
-@use '@styles/space' as space;
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
 @use '@styles/breakpoints' as *;
 
 .bf-usa-card--relative-benefit {
-  margin-bottom: space.$space-md;
+  margin-bottom: rem(16px);
 
   .bf-usa-card__container {
     border-radius: 0;
@@ -33,14 +32,14 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: space.$space-md;
+      left: rem(16px);
       width: rem(70px);
       height: rem(70px);
-      padding: space.$space-sm-plus;
+      padding: rem(12px);
     }
 
     .bf-usa-card__container {
-      padding: 0 space.$space-lg-plus 0 space.$space-xl-plus;
+      padding: 0 rem(40px) 0 rem(64px)-plus;
     }
   }
 
@@ -61,7 +60,7 @@
 
   .bf-usa-card__cta,
   .bf-usa-card__body {
-    padding: space.$padding-bottom-md-plus;
+    padding: rem(24px);
     padding-top: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -71,7 +70,7 @@
     .bf-usa-card__body {
       display: block;
       padding-top: 0;
-      padding-bottom: space.$padding-bottom-md-plus;
+      padding-bottom: rem(24px);
       margin-top: 0;
       margin-bottom: 0;
 

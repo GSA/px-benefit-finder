@@ -1,7 +1,7 @@
-import Chevron from './index.jsx'
+import Banner from './index.jsx'
 
 export default {
-  component: Chevron,
+  component: Banner,
   parameters: {
     layout: 'fullscreen',
   },

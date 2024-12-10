@@ -303,7 +303,6 @@ export async function LifeEvent(lifeEvent) {
         return responseJson?.data ? responseJson : 'Something went wrong.'
       })
       .catch(error => {
-        // eslint-disable-next-line no-console
         console.error(error)
         return 'Something went wrong.'
       })
@@ -339,7 +338,7 @@ export const Children = item =>
 export const SelectedValueAll = data =>
   data &&
   data
-    .flatMap((item, i) =>
+    .flatMap(item =>
       item.section.fieldsets.flatMap(item => {
         const selected = GET.SelectedValue(item)
         return (
@@ -458,7 +457,6 @@ export async function Data(
       }
     })
     .catch(error => {
-      // eslint-disable-next-line no-console
       console.error(error)
       return 'Something went wrong.'
     })
@@ -529,7 +527,6 @@ export async function DataDate(
       }
     })
     .catch(error => {
-      // eslint-disable-next-line no-console
       console.error(error)
       return 'Something went wrong.'
     })
@@ -670,7 +667,6 @@ export const BenefitsEligibilityCounts = async (data, eligibleStatusLabels) => {
     }
     return elCount
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error(error)
   }
 }

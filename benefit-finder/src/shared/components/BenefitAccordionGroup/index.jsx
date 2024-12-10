@@ -5,6 +5,7 @@ import {
   Button,
   Heading,
   KeyElegibilityCrieriaList,
+  StepBackButton,
   ObfuscatedLink,
 } from '@components'
 import './_index.scss'
@@ -18,6 +19,7 @@ import './_index.scss'
  * @param {bool} isExpandAll - determines if all the accordions in the group are expanded
  * @param {function} setExpandAll - inherited useState function
  * @param {function} notEligibleView - inherited bolean state
+ * @param {object} returnToForm - inherited object for more info cta
  * @param {object} ui - inherited ui content
  * @return {html} returns html
  */
@@ -28,6 +30,7 @@ const BenefitAccordionGroup = ({
   isExpandAll,
   setExpandAll,
   notEligibleView,
+  returnToForm,
   ui,
 }) => {
   const { benefitAccordion, benefitAccordionGroup } = ui
@@ -37,6 +40,7 @@ const BenefitAccordionGroup = ({
     visitLabel,
     unmetLabel,
     sourceIsEnglish,
+    backcta,
   } = benefitAccordion
   const { closedState, openState } = benefitAccordionGroup
   const { benefitLink, openAllBenefitAccordions } =
@@ -151,6 +155,9 @@ const BenefitAccordionGroup = ({
             )
           })}
         </ul>
+        <StepBackButton onClick={() => returnToForm()}>
+          {backcta?.link}
+        </StepBackButton>
       </div>
     )
   }
@@ -236,7 +243,9 @@ const BenefitAccordionGroup = ({
                 <NotEligibleList items={notEligibleBenefits} />
               )}
               {moreInformationNeeded.length > 0 && (
-                <MoreInfoList items={moreInformationNeeded} />
+                <>
+                  <MoreInfoList items={moreInformationNeeded} />
+                </>
               )}
               <div className="bf-usa-accordion-group-cta-wrapper">
                 <ObfuscatedLink

@@ -1,19 +1,24 @@
 @use '@styles/colors' as color;
 @use '@styles/mixins' as *;
 @use '@styles/functions' as *;
-@use '@styles/space' as space;
+@use '@styles/breakpoints' as *;
 
 .bf-usa-accordion-group {
   .bf-usa-accordion {
-    margin-bottom: space.$space-sm-plus;
+    margin-bottom: rem(12px);
 
     .bf-usa-detail-title {
-      margin-bottom: space.$space-sm;
+      margin-top: rem(24px);
+      margin-bottom: rem(8px);
     }
 
     .bf-usa-detail-summary {
       p {
-        margin-bottom: space.$space-md-plus;
+        margin-bottom: rem(18px);
+
+        @media (width >= $desktop) {
+          margin-bottom: rem(24px);
+        }
       }
     }
 
@@ -24,15 +29,19 @@
     .bf-usa-accordion-group-cta-wrapper {
       display: flex;
       justify-content: center;
-      margin-top: space.$space-lg;
+      margin-top: rem(18px);
+
+      @media (width >= $desktop) {
+              margin-top: rem(32px);
+      }
 
       .bf-usa-link {
-        margin-bottom: space.$space-md;
+        margin-bottom: rem(16px);
       }
     }
   }
 
   .bf-expand-all {
-    margin-bottom: space.$space-lg;
+    margin-bottom: rem(32px);
   }
 }

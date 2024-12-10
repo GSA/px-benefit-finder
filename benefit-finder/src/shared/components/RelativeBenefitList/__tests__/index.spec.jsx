@@ -32,11 +32,16 @@ describe('RelativeBenefitList', () => {
     expect(links[0].href).toContain(relativeBenefits[0].lifeEvent.lifeEventId)
     expect(links[1].href).toContain(relativeBenefits[1].lifeEvent.lifeEventId)
     // ensure the icons that contain values from the lifeEventId are in the dom
+    console.log(relativeBenefits[0].lifeEvent.lifeEventId)
     expect(
-      screen.getByTestId(`icon-${relativeBenefits[0].lifeEvent.lifeEventId}`)
+      screen.getByTestId(
+        `benefit-finder-icon--${relativeBenefits[0].lifeEvent.lifeEventId}`
+      )
     ).toBeInTheDocument()
     expect(
-      screen.getByTestId(`icon-${relativeBenefits[1].lifeEvent.lifeEventId}`)
+      screen.getByTestId(
+        `benefit-finder-icon--${relativeBenefits[1].lifeEvent.lifeEventId}`
+      )
     ).toBeInTheDocument()
   })
 })

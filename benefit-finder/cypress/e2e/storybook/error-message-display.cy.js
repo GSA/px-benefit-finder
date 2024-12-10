@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 import { pageObjects } from '../../support/pageObjects'
 import * as utils from '../../support/utils'

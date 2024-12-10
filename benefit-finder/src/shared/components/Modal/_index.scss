@@ -2,7 +2,6 @@
 @use '@styles/mixins' as *;
 @use '@styles/sizes' as *;
 @use '@styles/functions' as *;
-@use '@styles/space' as space;
 
 #benefit-finder-modal {
   .bf-modal-button {
@@ -11,8 +10,8 @@
     background-color: transparent;
     border: 0;
     position: absolute;
-    top: space.$space-md-plus;
-    right: space.$space-md-plus;
+    top: rem(24px);
+    right: rem(24px);
     cursor: pointer;
   }
 
@@ -23,12 +22,13 @@
     color: color.$pure-black;
     text-align: center;
     font-style: normal;
-    margin: space.$space-md-plus 0;
+    margin: rem(24px) 0;
   }
 
   .bf-modal.bf-usa-button-group.width-full {
     margin: 0 auto;
     text-align: center;
+    flex-direction: row;
 
     .bf-usa-button-group__item {
       margin-left: 0;
@@ -36,7 +36,7 @@
     }
 
     .bf-usa-button {
-      width: rem(232px);
+      width: 100%;
       padding: rem(16px) rem(20px);
     }
   }

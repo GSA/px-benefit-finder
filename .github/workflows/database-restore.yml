@@ -50,7 +50,6 @@ jobs:
           TEST_USER_PASS: "{{ secrets.TEST_USER_PASS }}"
         run: |
           export S3_FILE_PATH=${{ github.event.inputs.database_file_override }}
-          sed -i "sed -i "s/TU_PASS/${TEST_USER_PASS}/g" ./scripts/drush-post-deploy.sh"
           source ./scripts/pipeline/s3-backup-download.sh
           source ./scripts/pipeline/database-restore.sh
           source ./scripts/pipeline/cloud-gov-post-deploy.sh

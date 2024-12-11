@@ -1,37 +1,49 @@
 import PropTypes from 'prop-types'
-import { Card } from '@components'
+import { createMarkup } from '@utils'
+
+import './_index.scss'
 
 /**
- * a functional component that renders a list of usa-card component(s)
+ * a functional component that renders a group of linked elements
  * @component
  * @param {array} data - passed benefits data
- * @param {string} carrotType - determines display type
- * @return {html} returns a semantic html unorderd list element
+ * @return {html} returns a grid of linked elements
  */
-const RelativeBenefitList = ({ data, carrotType }) => {
+const RelativeBenefitList = ({ data }) => {
   return (
-    <ul className="bf-usa-card-group usa-card-group">
-      {data &&
-        data.map((item, i) => {
-          const { title, searchTitle, link, cta, body, lifeEventId } =
-            item.lifeEvent
-          const trimedLifeEventId = lifeEventId.replace('es_', '')
+    // markup is cloned from usagov, styles are inherited
+    <div id="benefit-finder__main" className="benefit-finder__main">
+      <div className="life-events-grid">
+        {data &&
+          data.map((item, i) => {
+            const { title, searchTitle, link, body, lifeEventId } =
+              item.lifeEvent
+            const trimmedLifeEventId = lifeEventId.replace('es_', '')
+            const lang = lifeEventId.includes('es_') ? 'es' : 'en'
 
-          return (
-            <Card
-              className="bf-usa-card--relative-benefit bf-usa-card usa-card tablet:grid-col-12"
-              title={searchTitle || title}
-              cta={cta}
-              href={link}
-              body={body}
-              key={`${title}-${i}`}
-              carrotType={carrotType}
-              icon={trimedLifeEventId}
-              data-testid={trimedLifeEventId}
-            />
-          )
-        })}
-    </ul>
+            return (
+              <div
+                data-testid={`benefit-finder-icon--${trimmedLifeEventId}`}
+                className={`life-events-item benefit-finder-icon--${trimmedLifeEventId}`}
+                key={`${title}-${i}`}
+              >
+                <div className="life-events-item-content">
+                  <h3>
+                    <a
+                      href={link}
+                      data-testid={trimmedLifeEventId}
+                      hrefLang={lang}
+                    >
+                      {searchTitle || title}
+                    </a>
+                  </h3>
+                  <div dangerouslySetInnerHTML={createMarkup(body)} />
+                </div>
+              </div>
+            )
+          })}
+      </div>
+    </div>
   )
 }
 

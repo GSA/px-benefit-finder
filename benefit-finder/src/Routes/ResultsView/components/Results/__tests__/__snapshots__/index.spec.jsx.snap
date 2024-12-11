@@ -3,21 +3,21 @@
 exports[`Results > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="bf-chevron"
+    class="bf-banner"
   >
     <div
       class="bf-grid-container grid-container"
     >
       <h1
         aria-level="1"
-        class="bf-chevron-heading "
+        class="bf-banner-heading "
         id="skip-to-h1"
         role="heading"
       >
         Benefits you did not qualify for
       </h1>
       <div
-        class="bf-chevron-description"
+        class="bf-banner-description"
       >
         <div>
           <p>

@@ -4,7 +4,6 @@
 ## It reads lines based on new lines.
 
 echo  "Updating drupal ... "
-drush cr
 drush state:set system.maintenance_mode 1 -y
 drush cr
 drush updatedb --no-cache-clear -y

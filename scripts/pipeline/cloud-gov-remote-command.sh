@@ -7,6 +7,7 @@ show_output=$3
 APP_GUID=$(cf app "${APP_NAME}" --guid)
 bin_path="/var/www/vendor/bin/:/home/vcap/deps/0/bin/"
 
+
 [ -z "${APP_NAME}" ] || [ -z "${command}" ] && echo "Command error! Valid format: ${0} <application_name> <command>" && exit 1
 
 ssh_config=/tmp/ssh_config
@@ -27,7 +28,7 @@ if [ -z "${show_output}" ]; then
   echo "Running command: '$(echo "${command}" | cut -d' ' -f1,2)'..."
   {
     sshpass -f "${ssh_passwd}" ssh -F "${ssh_config}" "ssh.fr.cloud.gov" "touch ~/.bashrc && source ~/.bashrc && PATH=\$PATH:${bin_path} ${command}"
-  } >/dev/null 2>&1
+  } #>/dev/null 2>&1
 else
   sshpass -f "${ssh_passwd}" ssh -F "${ssh_config}" "ssh.fr.cloud.gov" "touch ~/.bashrc && source ~/.bashrc && PATH=\$PATH:${bin_path} ${command}"
 fi

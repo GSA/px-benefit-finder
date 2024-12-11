@@ -97,11 +97,11 @@ const ResultsView = ({
           viewTitle:
             notEligibleView === false
               ? (zeroBenefitsResult &&
-                  ui.zeroBenefits.eligible.chevron.heading) ||
-                ui?.eligible.chevron.heading
+                  ui.zeroBenefits.eligible.banner.heading) ||
+                ui?.eligible.banner.heading
               : (zeroBenefitsResult &&
-                  ui?.zeroBenefits.notEligible.chevron.heading) ||
-                ui?.notEligible.chevron.heading,
+                  ui?.zeroBenefits.notEligible.banner.heading) ||
+                ui?.notEligible.banner.heading,
           ...eligibilityCount,
         },
       })

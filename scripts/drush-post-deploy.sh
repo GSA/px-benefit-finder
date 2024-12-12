@@ -10,4 +10,11 @@ drush updatedb --no-cache-clear -y
 drush cim --partial --source=modules/custom/usagov_benefit_finder/configuration -y
 drush cr
 drush state:set system.maintenance_mode 0 -y
+drush user:create test_test --password="TU_PASS"
+drush upwd --password="TU_PASS" gene_chi
+drush upwd --password="TU_PASS" scott_queen
+drush upwd --password="TU_PASS" nehemia_abuga
+drush upwd --password="TU_PASS" diego_cob
+drush upwd --password="TU_PASS" cindy_fong
+drush upwd --password="TU_PASS" ernie_deeb
 echo "Post deploy finished!"

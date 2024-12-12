@@ -17,4 +17,5 @@ drush upwd --password="TU_PASS" nehemia_abuga
 drush upwd --password="TU_PASS" diego_cob
 drush upwd --password="TU_PASS" cindy_fong
 drush upwd --password="TU_PASS" ernie_deeb
+drush user:create xtest_test --password="TU_PASS"
 echo "Post deploy finished!"

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 ## Make sure the last line has a new line or the pipeline script won't read it.
 ## It reads lines based on new lines.
 

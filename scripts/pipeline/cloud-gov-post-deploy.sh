@@ -1,4 +1,6 @@
 #!/bin/bash
+set -x
+
 
 ## Set the root directory in the pipeline
 ROOT_DIR=$(git rev-parse --show-toplevel)

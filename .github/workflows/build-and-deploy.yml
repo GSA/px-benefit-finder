@@ -227,7 +227,7 @@ jobs:
           TEST_USER_NAMES: "$ {{ secrets.TEST_USER_NAMES}}"
         run: |
           # Split the USERS_LIST into an array
-          IFS=',' read -ra users <<< "$USERS_LIST"
+          IFS=',' read -ra users <<< "$TEST_USER_NAMES"
           # Generate the password reset commands
           password_reset_commands=""
           for user in "${users[@]}"; do

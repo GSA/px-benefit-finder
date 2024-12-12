@@ -11,8 +11,7 @@ drush cim --partial --source=modules/custom/usagov_benefit_finder/configuration 
 drush cr
 ### USER_PASSWORD_RESET_PLACEHOLDER ###
 drush state:set system.maintenance_mode 0 -y
-drush user:create test_test --password="TU_PASS" || true
-drush user:create xtest_test --password="TU_PASS" || true
+drush user:create test_test --password="TU_PASS"
 echo "Post deploy finished!"
 
 

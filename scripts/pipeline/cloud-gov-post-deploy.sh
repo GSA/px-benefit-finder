@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+
 
 
 ## Set the root directory in the pipeline

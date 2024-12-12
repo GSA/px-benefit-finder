@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+
 
 APP_NAME=$1
 command=$2

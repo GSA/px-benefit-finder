@@ -4,7 +4,7 @@ import {
   Accordion,
   Button,
   Heading,
-  KeyElegibilityCrieriaList,
+  KeyEligibilityCriteriaList,
   StepBackButton,
   ObfuscatedLink,
 } from '@components'
@@ -15,10 +15,10 @@ import './_index.scss'
  * @component
  * @param {array} data - our benefits data
  * @param {string} entryKey - which key in the array to target
- * @param {bool} expandAll - determnines if we include ExpandAll component
+ * @param {bool} expandAll - determines if we include ExpandAll component
  * @param {bool} isExpandAll - determines if all the accordions in the group are expanded
  * @param {function} setExpandAll - inherited useState function
- * @param {function} notEligibleView - inherited bolean state
+ * @param {function} notEligibleView - inherited boolean state
  * @param {object} returnToForm - inherited object for more info cta
  * @param {object} ui - inherited ui content
  * @return {html} returns html
@@ -112,7 +112,7 @@ const BenefitAccordionGroup = ({
    * a functional component that list unmet criteria
    * @component
    * @param {array} item - an array of unmet criteria
-   * @return {html} returns an unorderd list
+   * @return {html} returns an unordered list
    */
   const NotEligibleList = ({ items }) => {
     return (
@@ -139,7 +139,7 @@ const BenefitAccordionGroup = ({
    * a functional component that list unmet criteria
    * @component
    * @param {array} item - an array of unmet criteria
-   * @return {html} returns an unorderd list
+   * @return {html} returns an unordered list
    */
   const MoreInfoList = ({ items }) => {
     return (
@@ -233,7 +233,7 @@ const BenefitAccordionGroup = ({
                 className="bf-usa-detail-summary"
                 dangerouslySetInnerHTML={createMarkup(summary)}
               />
-              <KeyElegibilityCrieriaList
+              <KeyEligibilityCriteriaList
                 className="bf-usa-criteria-list"
                 data={eligibleBenefits}
                 initialEligibilityLength={eligibility.length}

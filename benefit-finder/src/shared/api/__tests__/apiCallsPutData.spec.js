@@ -78,7 +78,7 @@ test('correctly update data after updated selected state', async () => {
   })
 })
 
-test('does not update data if values dont match', async () => {
+test('does not update data if values do not match', async () => {
   delete expectedUpdate[0].selected
   expect(expectedUpdate[0].selected).toBe(undefined)
   eventTargetValue = badString
@@ -93,7 +93,7 @@ test('does not update data if values dont match', async () => {
   })
 })
 
-test('does not update data if keys dont match', async () => {
+test('does not update data if keys do not match', async () => {
   expect(expectedUpdate[0].selected).toBe(undefined)
   eventTargetValue = goodString
   criteriaKey = badCriteriaKey

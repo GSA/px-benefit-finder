@@ -240,7 +240,7 @@ We take a utility first approach. We do not have full control over our styles si
 
 1. we establish uswds components with `usa-<class>` classes.
 2. this inherits global `uswds` `css` and `js`
-3. IF we need to overide, we clone the uswds class `usa-` and prepend `bf-`.
+3. IF we need to override, we clone the uswds class `usa-` and prepend `bf-`.
 
 ```css
 .bf-usa-<class> .usa-<class>

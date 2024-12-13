@@ -1,9 +1,9 @@
 import * as utils from '../../support/utils'
-import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
+import * as BENEFITS_ELIGIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import { pageObjects } from '../../support/pageObjects'
 
 beforeEach(() => {
-  const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
+  const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_1_covid.en.param
   const scenario = utils.encodeURIFromObject(selectedData)
   cy.visit(`${utils.storybookUri}${scenario}`)
   pageObjects.accordionHeading().should('exist')

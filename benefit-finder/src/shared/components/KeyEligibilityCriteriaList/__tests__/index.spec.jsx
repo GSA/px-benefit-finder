@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
-import KeyElegibilityCrieriaList from '../index.jsx'
+import KeyEligibilityCriteriaList from '../index.jsx'
 import * as en from '@locales/en/en.json'
 
-describe('KeyElegibilityCrieriaList', () => {
+describe('KeyEligibilityCriteriaList', () => {
   it('renders a match to the previous snapshot', () => {
     const { asFragment } = render(
-      <KeyElegibilityCrieriaList ui={en.resultsView.benefitAccordion} />
+      <KeyEligibilityCriteriaList ui={en.resultsView.benefitAccordion} />
     )
     expect(asFragment()).toMatchSnapshot()
   })

@@ -138,9 +138,9 @@ const Results = ({
   const RelevantBenefits = ({ relevantBenefits, ui }) => {
     const { resultsRelativeBenefits } = ui
     return (
-      <div className="bf-result-view-relvant-benefits">
+      <div className="bf-result-view-relevant-benefits">
         <Heading
-          className="bf-result-view-relvant-benefits-heading"
+          className="bf-result-view-relevant-benefits-heading"
           headingLevel={3}
         >
           {resultsRelativeBenefits?.heading}
@@ -163,7 +163,7 @@ const Results = ({
         <BenefitAccordionGroup
           data={
             stepDataArray &&
-            apiCalls.GET.ElegibilityByCriteria(
+            apiCalls.GET.EligibilityByCriteria(
               apiCalls.GET.SelectedValueAll(stepDataArray),
               data
             )

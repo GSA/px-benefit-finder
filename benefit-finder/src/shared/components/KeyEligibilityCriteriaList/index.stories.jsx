@@ -1,4 +1,4 @@
-import KeyElegibilityCrieriaList from './index.jsx'
+import KeyEligibilityCriteriaList from './index.jsx'
 import content from '@api/mock-data/current.js'
 import * as en from '@locales/en/en.json'
 
@@ -10,7 +10,7 @@ const b = benefits[0].benefit.eligibility
 const initialEligibilityLength = benefits[0].benefit.initialEligibilityLength
 
 export default {
-  component: KeyElegibilityCrieriaList,
+  component: KeyEligibilityCriteriaList,
   tags: ['autodocs'],
   args: {
     data: b,

@@ -172,7 +172,7 @@ export function GetQueryParams(url) {
  */
 
 /**
- * a function that determines our langage state based on  the prefix of our URL
+ * a function that determines our language state based on  the prefix of our URL
  * based on a string match in the pathname of the window object
  * @function
  */
@@ -223,7 +223,7 @@ export const Routes = (w, language, stepDataArray) => {
   })
 
   /**
-   * Determine the path for the verify selcttions page based on the language.
+   * Determine the path for the verify selections page based on the language.
    */
   const verifySelectionsPath =
     language === 'es' ? 'revisar-selecciónes' : 'verify-selections'
@@ -263,7 +263,7 @@ export const Routes = (w, language, stepDataArray) => {
  * an async fetch to get life-event data.
  * @function
  * @param {string} lifeEvent - The inherited class from
- * @return {JSON} returns JSON data if succesfull
+ * @return {JSON} returns JSON data if successful
  */
 export async function LifeEvent(lifeEvent) {
   let language, params, mode
@@ -371,7 +371,7 @@ export const SelectedValueAll = data =>
  * @param {array} data - array of benefits
  * @return {array} returns the selected values
  */
-export const ElegibilityByCriteria = (selectedCriteria, data) => {
+export const EligibilityByCriteria = (selectedCriteria, data) => {
   // console.log(data)
   // return all eligible items
   const eligibleItems =
@@ -384,7 +384,7 @@ export const ElegibilityByCriteria = (selectedCriteria, data) => {
           criteria => criteria.criteriaKey === selected.criteriaKey
         )
 
-        // determine it's eligiblity
+        // determine it's eligibility
         if (criteriaEligibility !== undefined) {
           // look for eligible matches
           const isEligible = () => {
@@ -429,7 +429,7 @@ export const ElegibilityByCriteria = (selectedCriteria, data) => {
  * @param {object} currentData
  * @param {function} setCurrentData
  * @param {string} eventTargetValue
- * @return {JSON || String} returns JSON data if succesfull
+ * @return {JSON || String} returns JSON data if successful
  */
 export async function Data(
   criteriaKey,
@@ -470,7 +470,7 @@ export async function Data(
  * @param {function} setCurrentData
  * @param {string} eventTargetValue
  * @param {string} eventTargetID
- * @return {JSON || String} returns JSON data if succesfull
+ * @return {JSON || String} returns JSON data if successful
  */
 export async function DataDate(
   criteriaKey,
@@ -598,7 +598,7 @@ export const DataFromParams = (
      * Updates the benefits array based on the updated step data array.
      */
     setBenefitsArray(
-      GET.ElegibilityByCriteria(
+      GET.EligibilityByCriteria(
         GET.SelectedValueAll(stepDataArray),
         benefitsArray
       )
@@ -674,7 +674,7 @@ export const BenefitsEligibilityCounts = async (data, eligibleStatusLabels) => {
 export const GET = {
   BenefitsEligibilityCounts,
   Children,
-  ElegibilityByCriteria,
+  EligibilityByCriteria,
   LifeEvent,
   Language,
   Routes,

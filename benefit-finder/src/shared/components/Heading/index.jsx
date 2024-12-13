@@ -14,7 +14,7 @@ const Heading = ({ children, className, headingLevel, ...props }) => {
   // pass our default classes
   const defaultClasses = ['']
 
-  // return html as a tring for heading element values
+  // return html as a string for heading element values
   const Tag = `h${headingLevel}`
   return (
     <Tag

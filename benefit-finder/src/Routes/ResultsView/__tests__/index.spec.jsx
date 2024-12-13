@@ -127,7 +127,7 @@ test('scenario 1 loads in view with the correct amount of likely eligible items'
   await screen.findByTestId('bf-result-view')
   await screen.findByTestId('bf-share-trigger')
 
-  const eligibility = apiCalls.GET.ElegibilityByCriteria(
+  const eligibility = apiCalls.GET.EligibilityByCriteria(
     stepDataArray,
     benefitsArray
   )

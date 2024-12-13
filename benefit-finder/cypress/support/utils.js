@@ -28,7 +28,7 @@ export const encodeURIFromObject = obj => {
     .join('&')
 }
 
-// can be used by all the test that are visiting in storymode
+// can be used by all the test that are visiting in story mode
 export const storybookUri = `/iframe.html?args=&id=app--primary&viewMode=story&`
 
 export const dataInputs = ({ dob, relation, status, dod }) => {

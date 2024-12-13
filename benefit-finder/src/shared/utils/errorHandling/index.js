@@ -90,7 +90,7 @@ export const handleCheckForRequiredValues = async (
     })
     .flat()
 
-  // handle radios/checks seperately
+  // handle radios/checks separately
   const invalidRadioFieldSets = requiredFieldsets
     .map(fieldset => {
       if (
@@ -135,11 +135,11 @@ export const handleInvalid = ({
     })
     .includes(true)
 
-  const hanldeFilter = hasError.filter(errorItem => {
+  const handleFilter = hasError.filter(errorItem => {
     return errorItem.id !== undefined && errorItem.id.includes(fieldSetId)
   })
 
-  return useFilter === true ? hanldeFilter : handleMap
+  return useFilter === true ? handleFilter : handleMap
 }
 
 export default {

@@ -197,27 +197,27 @@ describe('Validate correct error messages display for negative scenarios', () =>
   it('Should validate error label content overrides', () => {
     pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
 
-    const relationErrorMessageOvveride =
+    const relationErrorMessageOverride =
       EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0]
         .section.fieldsets[1].fieldset.errorMessage
     pageObjects
       .errorDescription()
       .eq(1)
       .should('be.visible')
-      .and('contain.text', relationErrorMessageOvveride)
+      .and('contain.text', relationErrorMessageOverride)
 
     pageObjects
       .errorDescription()
       .eq(0)
-      .should('not.contain.text', relationErrorMessageOvveride)
+      .should('not.contain.text', relationErrorMessageOverride)
     pageObjects
       .dateOfBirthMonthError()
-      .should('not.contain.text', relationErrorMessageOvveride)
+      .should('not.contain.text', relationErrorMessageOverride)
     pageObjects
       .dateOfBirthDayError()
-      .should('not.contain.text', relationErrorMessageOvveride)
+      .should('not.contain.text', relationErrorMessageOverride)
     pageObjects
       .dateOfBirthYearError()
-      .should('not.contain.text', relationErrorMessageOvveride)
+      .should('not.contain.text', relationErrorMessageOverride)
   })
 })

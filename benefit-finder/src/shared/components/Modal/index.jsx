@@ -46,8 +46,8 @@ const customStyles = {
  * @param {string} modalHeading - heading value
  * @param {string} navItemOneLabel - passed to button for nav item in modal
  * @param {string} navItemTwoLabel - passed to button for nav item in modal
- * @param {function} handleCheckRequriedFields - inherited async function to check validity of fields
- * @return {html} returns html for seting up a usa-modal component
+ * @param {function} handleCheckRequiredFields - inherited async function to check validity of fields
+ * @return {html} returns html for setting up a usa-modal component
  */
 const Modal = ({
   id,
@@ -58,7 +58,7 @@ const Modal = ({
   navItemOneFunction,
   navItemTwoLabel,
   navItemTwoFunction,
-  handleCheckRequriedFields,
+  handleCheckRequiredFields,
   dataLayerValue,
 }) => {
   // state
@@ -71,7 +71,7 @@ const Modal = ({
    * @function
    */
   const handleOpenModal = () => {
-    handleCheckRequriedFields().then(valid => valid && setModalOpen(valid))
+    handleCheckRequiredFields().then(valid => valid && setModalOpen(valid))
     window.scrollTo(0, 0)
   }
 
@@ -142,7 +142,7 @@ const Modal = ({
    * @component
    * @param {string} id - matches to modal control
    * @param {string} triggerLabel - passed to button for triggering modal
-   * @return {html} returns an obfustacted anchor element
+   * @return {html} returns an obfuscated anchor element
    */
   const Trigger = ({ triggerLabel, onKeyDown, onClick }) => {
     return (
@@ -167,7 +167,7 @@ const Modal = ({
    * @param {func} navItemOneFunction - passed to button for nav item in modal
    * @param {string} navItemOneLabel - passed to button for nav item in modal
    * @param {func} navItemTwoFunction - passed to button for nav item in modal
-   * @return {html} returns an obfustacted anchor element
+   * @return {html} returns an obfuscated anchor element
    */
   // similar to ButtonGroup but we need links for uswds to close modal, this item is default and conditional
   const GroupNavigation = ({
@@ -276,7 +276,7 @@ Modal.propTypes = {
   navItemOneFunction: PropTypes.func,
   navItemTwoLabel: PropTypes.string,
   navItemTwoFunction: PropTypes.func,
-  handleCheckRequriedFields: PropTypes.func,
+  handleCheckRequiredFields: PropTypes.func,
 }
 
 export default Modal

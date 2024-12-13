@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 import * as utils from '../../support/utils.js'
-import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
+import * as BENEFITS_ELIGIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 import { pageObjects } from '../../support/pageObjects'
@@ -108,7 +108,7 @@ describe(`Validate code passes axe scanning`, () => {
   })
 
   it('Has no detectable a11y violations on see benefits', () => {
-    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
+    const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_1_covid.en.param
     const scenario = utils.encodeURIFromObject(selectedData)
     delete selectedData.shared // We don't want to include the "shared" param
 

@@ -16,7 +16,7 @@ import {
 import './_index.scss'
 
 /**
- * a compound component that renders the introductional start of the form process
+ * a compound component that renders the introduction start of the form process
  * @component
  * @param {object} content - inherited life event content
  * @param {object} ui - life event form ui translations
@@ -36,7 +36,7 @@ const Intro = ({ content, ui, hasQueryParams }) => {
     resetElement.current.focus()
   }
 
-  // if we have query paramters direct user to the results page
+  // if we have query parameters direct user to the results page
   useEffect(() => {
     hasQueryParams &&
       navigate(

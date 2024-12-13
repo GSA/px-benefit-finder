@@ -14,7 +14,7 @@ export default {
   },
   args: {
     children:
-      'Lorem ipsum dolor sit amet consectetur. Consectetur felis fermentum eu nunc elit imperdiet. Aenean porta sem sed nulla rutrum orci morbi non. Sollicitudin proin lorem magna ultrices gravida sem donec.',
+      'As we embarked on developing the Benefit Finder platform, our goal was to provide an intuitive and efficient way for users to explore their benefits options. Through meticulous planning, design, and development, we were able to create a user-friendly interface that not only meets but exceeds the expectations of our users.',
   },
 }
 

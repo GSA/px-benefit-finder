@@ -21,7 +21,7 @@ export default {
     navItemTwoLabel: 'View Results',
     navItemOneFunction: () => setModalOpen(!modalOpen),
     navItemTwoFunction: () => setModalOpen(!modalOpen),
-    handleCheckRequriedFields: () => true,
+    handleCheckRequiredFields: () => true,
     completed: true,
   },
 }

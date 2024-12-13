@@ -33,7 +33,7 @@ const copyConfig = test
       hook: 'writeBundle',
     }
 
-const poscssConfig = {
+const postcssConfig = {
   plugins: [
     transformers.prependID({
       id: 'benefit-finder',
@@ -74,7 +74,7 @@ export default defineConfig({
     include: ['jsdoc-type-pratt-parser'],
   },
   css: {
-    postcss: poscssConfig,
+    postcss: postcssConfig,
     preprocessorOptions: {
       scss: {
         api: 'modern-compiler',

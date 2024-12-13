@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
  * @function
  * @param {object} buttonOne - The object config for the first button element
  * @param {object} buttonTwo - The object config for the second button element
- * @return {html} returns a unorderd list of buttons
+ * @return {html} returns a unordered list of buttons
  */
 const ButtonGroup = ({ buttonOne, buttonTwo }) => {
   return (

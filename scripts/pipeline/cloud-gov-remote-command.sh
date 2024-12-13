@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 APP_NAME=$1
 command=$2
 show_output=$3
@@ -28,7 +30,7 @@ if [ -z "${show_output}" ]; then
   echo "Running command: '$(echo "${command}" | cut -d' ' -f1,2)'..."
   {
     sshpass -f "${ssh_passwd}" ssh -F "${ssh_config}" "ssh.fr.cloud.gov" "touch ~/.bashrc && source ~/.bashrc && PATH=\$PATH:${bin_path} ${command}"
-  } #>/dev/null 2>&1
+  } > /dev/null 2>&1
 else
   sshpass -f "${ssh_passwd}" ssh -F "${ssh_config}" "ssh.fr.cloud.gov" "touch ~/.bashrc && source ~/.bashrc && PATH=\$PATH:${bin_path} ${command}"
 fi

@@ -26,12 +26,12 @@ function terminalLog(violations) {
   cy.task('table', violationData)
 }
 
-const dob = utils.getDateByOffset(-(18 * 365.2425 - 1))
-const dod = utils.getDateByOffset(-(18 * 365.2425 - 1))
-const relation =
+const dateOfBirth = utils.getDateByOffset(-(18 * 365.2425 - 1))
+const dateOfDeath = utils.getDateByOffset(-30)
+const relationship =
   EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
     .fieldsets[1].fieldset.inputs[0].inputCriteria.values[1].value
-const status =
+const maritalStatus =
   EN_DOLO_MOCK_DATA.data.lifeEventForm.sectionsEligibilityCriteria[0].section
     .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
 
@@ -60,57 +60,62 @@ describe(`Validate code passes axe scanning`, () => {
 
   // go to first step
   it('Has no detectable a11y violations on step 1', () => {
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
+    cy.clickButton(EN_LOCALE_DATA.intro.button)
     runA11y()
   })
 
   // create an error
   it('Has no detectable a11y violations on error state', () => {
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    cy.clickButton(EN_LOCALE_DATA.intro.button)
+    cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value) // Click 'Next' without filling details about the applicant
     runA11y()
   })
 
   it('Has no detectable a11y violations on error state resolved', () => {
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status })
+    cy.clickButton(EN_LOCALE_DATA.intro.button)
+    cy.fillDetailsAboutTheApplicant({
+      dateOfBirth,
+      relationship,
+      maritalStatus,
+    })
     runA11y()
   })
 
   it('Has no detectable a11y violations on step 2', () => {
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    cy.navigateToAboutTheDeceasedPage({
+      dateOfBirth,
+      relationship,
+      maritalStatus,
+    })
+    cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value)
     runA11y()
   })
 
   it('Has no detectable a11y violations on modal launch', () => {
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    utils.dataInputs({ dod })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
+    cy.navigateToModal({
+      dateOfBirth,
+      relationship,
+      maritalStatus,
+      dateOfDeath,
+    })
     cy.injectAxe()
     cy.checkA11y('#benefit-finder-modal')
   })
 
   it('Has no detectable a11y violations on modal close review selections', () => {
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    utils.dataInputs({ dod })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    pageObjects
-      .button()
-      .contains(EN_LOCALE_DATA.reviewSelectionModal.buttonGroup[0].value)
-      .click()
+    cy.navigateToModal({
+      dateOfBirth,
+      relationship,
+      maritalStatus,
+      dateOfDeath,
+    })
+    cy.clickButton(EN_LOCALE_DATA.reviewSelectionModal.buttonGroup[0].value) // Close modal
     runA11y()
   })
 
   it('Has no detectable a11y violations on see benefits', () => {
     const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_1_covid.en.param
     const scenario = utils.encodeURIFromObject(selectedData)
-    delete selectedData.shared // We don't want to include the "shared" param
 
     cy.visit(`${utils.storybookUri}${scenario}`)
     cy.injectAxe() // we inject axe again because of the reload -> visit
@@ -132,19 +137,17 @@ describe(`Validate code passes axe scanning`, () => {
   })
 
   it('Has no detectable a11y violations on see benefits you did not qualify for', () => {
-    pageObjects.button().contains(EN_LOCALE_DATA.intro.button).click()
-    utils.dataInputs({ dob, relation, status })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    utils.dataInputs({ dod })
-    pageObjects.button().contains(EN_LOCALE_DATA.buttonGroup[1].value).click()
-    pageObjects
-      .button()
-      .contains(EN_LOCALE_DATA.reviewSelectionModal.buttonGroup[1].value)
-      .click()
-    pageObjects
-      .button()
-      .contains(EN_LOCALE_DATA.resultsView.zeroBenefits.cta)
-      .click()
+    cy.navigateToBenefitResultsPage({
+      dateOfBirth,
+      relationship,
+      maritalStatus,
+      dateOfDeath,
+    })
+    pageObjects.accordionHeading().should('exist')
+
+    cy.clickButton(EN_LOCALE_DATA.resultsView.zeroBenefits.cta)
+    pageObjects.accordionHeading().should('exist')
+
     // get a node list of all accordions
     // get the heading of the first in the list
     cy.get(`[data-testid="bf-usa-accordion"]`).then(accordionItems => {

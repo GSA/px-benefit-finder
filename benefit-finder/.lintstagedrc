@@ -9,5 +9,8 @@
   ],
   "src/**/*.scss": [
     "stylelint --fix"
+  ],
+  "**": [
+    "cspell lint"
   ]
 }

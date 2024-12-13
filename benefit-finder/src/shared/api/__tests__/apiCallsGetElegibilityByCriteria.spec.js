@@ -2,7 +2,7 @@ import * as apiCalls from '../apiCalls'
 import content from '../mock-data/current'
 const { data } = JSON.parse(content)
 
-// Our method ElegibilityByCriteria is a function that updates the data determined by eligibility of benefits from selected values
+// Our method EligibilityByCriteria is a function that updates the data determined by eligibility of benefits from selected values
 
 // Write a spec that takes in the following parameters
 
@@ -102,7 +102,7 @@ test('correctly returns eligibility state based on selected values', async () =>
   expect(selectedValues[1].values).toHaveProperty('value', selectedValue)
   expect(selectedValues[1].values).toHaveProperty('selected', true)
 
-  const eligibility = apiCalls.GET.ElegibilityByCriteria(
+  const eligibility = apiCalls.GET.EligibilityByCriteria(
     selectedValues,
     benefits
   )

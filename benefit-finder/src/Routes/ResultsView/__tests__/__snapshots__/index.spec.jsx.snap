@@ -457,7 +457,7 @@ exports[`loads view 1`] = `
                       class="bf-usa-detail-summary"
                     >
                       <p>
-                        Compensation to surviving spouses of coal minerstotally disabled by or whose deaths are attributable to pneumoconiosis.
+                        Compensation to surviving spouses of coal miners totally disabled by or whose deaths are attributable to pneumoconiosis.
                       </p>
                     </div>
                     <div
@@ -6220,11 +6220,11 @@ exports[`loads view 1`] = `
             </div>
           </div>
           <div
-            class="bf-result-view-relvant-benefits"
+            class="bf-result-view-relevant-benefits"
           >
             <h3
               aria-level="3"
-              class="bf-result-view-relvant-benefits-heading "
+              class="bf-result-view-relevant-benefits-heading "
               role="heading"
             >
               More benefits
@@ -6796,7 +6796,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                       class="bf-usa-detail-summary"
                     >
                       <p>
-                        Compensation to surviving spouses of coal minerstotally disabled by or whose deaths are attributable to pneumoconiosis.
+                        Compensation to surviving spouses of coal miners totally disabled by or whose deaths are attributable to pneumoconiosis.
                       </p>
                     </div>
                     <div
@@ -12559,11 +12559,11 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
             </div>
           </div>
           <div
-            class="bf-result-view-relvant-benefits"
+            class="bf-result-view-relevant-benefits"
           >
             <h3
               aria-level="3"
-              class="bf-result-view-relvant-benefits-heading "
+              class="bf-result-view-relevant-benefits-heading "
               role="heading"
             >
               More benefits

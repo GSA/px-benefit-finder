@@ -3,7 +3,7 @@ import { RouteContext } from '@/App'
 import { buildURIParameter } from '@utils'
 
 /**
- * a functional component that renders a button with copy-to-cipboard functionality
+ * a functional component that renders a button with copy-to-clipboard functionality
  * @component
  * @return {html} returns a semantic html button element with a custom function onClick event
  */

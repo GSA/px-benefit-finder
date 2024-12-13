@@ -4,14 +4,14 @@ import { useHandleClassName } from '@hooks'
 import './_index.scss'
 
 /**
- * a functional component that renders a list of criteria related to eligiblity
+ * a functional component that renders a list of criteria related to eligibility
  * @component
  * @param {string} className - inherited class names
  * @param {array} data - contains our criteria
  * @param {string} initialEligibilityLength - location
- * @return {html} returns a group with a heading and an unorderd list
+ * @return {html} returns a group with a heading and an unordered list
  */
-const KeyElegibilityCrieriaList = ({
+const KeyEligibilityCriteriaList = ({
   className,
   data,
   initialEligibilityLength,
@@ -59,10 +59,10 @@ const KeyElegibilityCrieriaList = ({
   )
 }
 
-KeyElegibilityCrieriaList.propTypes = {
+KeyEligibilityCriteriaList.propTypes = {
   className: PropTypes.string,
   data: PropTypes.array,
   initialEligibilityLength: PropTypes.number,
 }
 
-export default KeyElegibilityCrieriaList
+export default KeyEligibilityCriteriaList

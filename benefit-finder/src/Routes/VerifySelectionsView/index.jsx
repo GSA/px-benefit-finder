@@ -10,7 +10,7 @@ import { Heading, Button } from '@components'
 import './_index.scss'
 
 /**
- * afunctional component that renders a view of the form input state values
+ * a functional component that renders a view of the form input state values
  * @component
  * @param {object} ui - translations
  * @param {array} data - inherited state of data in current session
@@ -31,7 +31,7 @@ const VerifySelectionsView = ({ ui, data }) => {
   const resetElement = useResetElement()
 
   /**
-   * afunctional component that renders markup when no value has been given
+   * a functional component that renders markup when no value has been given
    * @component
    * @param {object} item - fieldset object with no selected value
    * @param {number} index - current index of mapped array

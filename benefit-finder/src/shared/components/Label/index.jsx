@@ -6,7 +6,7 @@ import './_index.scss'
 /**
  * a functional component to create a label for inputs.
  * @function
- * @param {string} label - The inherited lable value
+ * @param {string} label - The inherited label value
  * @param {string} htmlFor - The inherited component id that the label is related to
  * @return {html} returns a semantic html label
  */

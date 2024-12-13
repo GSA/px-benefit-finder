@@ -65,7 +65,7 @@ function App({ testAppContent, testQuery }) {
 
   // set data state
   const [stepDataArray, setStepDataArray] = useState()
-  const [benfitsArray, setBenefitsArray] = useState()
+  const [benefitsArray, setBenefitsArray] = useState()
 
   useEffect(() => {
     content && setBenefitsArray([...content.benefits])
@@ -74,9 +74,9 @@ function App({ testAppContent, testQuery }) {
   }, [content])
 
   // state
-  const [t] = useState(language === 'es' ? es : en) // tranlations
+  const [t] = useState(language === 'es' ? es : en) // translations
 
-  // update data basd on passed query paramaters
+  // update data based on passed query parameters
   useEffect(() => {
     if (hasQueryParams) {
       stepDataArray &&
@@ -84,7 +84,7 @@ function App({ testAppContent, testQuery }) {
           windowQuery,
           stepDataArray,
           setBenefitsArray,
-          benfitsArray,
+          benefitsArray,
           sharedToken
         )
     }
@@ -170,7 +170,7 @@ function App({ testAppContent, testQuery }) {
                           relevantBenefits={
                             content?.lifeEventForm?.relevantBenefits
                           }
-                          data={benfitsArray}
+                          data={benefitsArray}
                           setBenefitsArray={() => setBenefitsArray()}
                           ui={t.resultsView}
                           notEligibleView={i !== 0}

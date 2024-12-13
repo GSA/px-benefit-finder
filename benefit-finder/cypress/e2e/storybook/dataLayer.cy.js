@@ -4,7 +4,7 @@ import * as utils from '../../support/utils.js'
 import { dataLayerUtils } from '../../../src/shared/utils'
 import { pageObjects } from '../../support/pageObjects'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
-import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
+import * as BENEFITS_ELIGIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import content from '../../../src/shared/api/mock-data/current.json'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
 
@@ -17,12 +17,12 @@ const {
   openAllBenefitAccordions,
 } = dataLayerUtils.dataLayerStructure
 const { lifeEventForm } = content.data
-const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
-const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
-const zero_benefit_view = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.results
+const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_1_covid.en.param
+const enResults = BENEFITS_ELIGIBILITY_DATA.scenario_1_covid.en.results
+const zero_benefit_view = BENEFITS_ELIGIBILITY_DATA.zero_benefit_view.en.results
 const scenario = utils.encodeURIFromObject(selectedData)
 
-// calculate out elibibility counts we expect for our event values
+// calculate out eligibility counts we expect for our event values
 const eligibilityCount = {
   eligibleBenefitCount: {
     number: enResults.eligible.length,
@@ -146,7 +146,7 @@ const dataLayerValueFormCompletionModal = {
   },
 }
 
-const dataLayerValueVerifySecletions = {
+const dataLayerValueVerifySelections = {
   event: 'bf_page_change',
   bfData: {
     pageView: 'bf-verify-selections',
@@ -181,7 +181,7 @@ const dataLayerValues = [
   dataLayerValueFormStepTwo,
   dataLayerValueFormCompletionModal,
   dataLayerValueFormSubmitSuccess,
-  dataLayerValueVerifySecletions,
+  dataLayerValueVerifySelections,
   dataLayerValueZeroResultsViewEligible,
   dataLayerValueZeroResultsViewNotEligible,
   dataLayerValueOpenAllAccordions,
@@ -273,7 +273,7 @@ describe('Calls to Google Analytics Object', function () {
     })
   })
 
-  it('second form step bf_page_change event, asserts incrmenting values', function () {
+  it('second form step bf_page_change event, asserts incrementing values', function () {
     cy.visit(utils.storybookUri)
 
     cy.navigateToAboutTheApplicantPage()
@@ -613,12 +613,12 @@ describe('Calls to Google Analytics Object', function () {
                 // get all the events in our layer that matches the event value
                 const ev = [
                   ...window.dataLayer.filter(
-                    x => x?.event === dataLayerValueVerifySecletions.event
+                    x => x?.event === dataLayerValueVerifySelections.event
                   ),
                 ]
                 removeID(ev[4])
 
-                expect(ev[4]).to.deep.equal(dataLayerValueVerifySecletions)
+                expect(ev[4]).to.deep.equal(dataLayerValueVerifySelections)
               })
             })
           })
@@ -718,12 +718,12 @@ describe('Calls to Google Analytics Object', function () {
                 // get all the events in our layer that matches the event value
                 const ev = [
                   ...window.dataLayer.filter(
-                    x => x?.event === dataLayerValueVerifySecletions.event
+                    x => x?.event === dataLayerValueVerifySelections.event
                   ),
                 ]
                 removeID(ev[4])
 
-                expect(ev[4]).to.deep.equal(dataLayerValueVerifySecletions)
+                expect(ev[4]).to.deep.equal(dataLayerValueVerifySelections)
 
                 cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
                   // get all the events in our layer that matches the event value
@@ -821,14 +821,14 @@ describe('Calls to Google Analytics Object', function () {
               cy.clickButton('Review your selections').then(() => {
                 const ev = [
                   ...window.dataLayer.filter(
-                    x => x?.event === dataLayerValueVerifySecletions.event
+                    x => x?.event === dataLayerValueVerifySelections.event
                   ),
                 ]
 
                 // delete ev[4]['gtm.uniqueEventId']
                 removeID(ev[4])
 
-                expect(ev[4]).to.deep.equal(dataLayerValueVerifySecletions)
+                expect(ev[4]).to.deep.equal(dataLayerValueVerifySelections)
 
                 cy.clickButton(EN_LOCALE_DATA.buttonGroup[1].value).then(() => {
                   const ev = [
@@ -891,7 +891,7 @@ describe('Calls to Google Analytics Object', function () {
                             ),
                           ]
 
-                          // we ignore dedup here so there can be multiple fires
+                          // we ignore dedupe here so there can be multiple fires
                           removeID(ev[1])
 
                           expect(ev[1].bfData.accordionsOpen).to.equal(

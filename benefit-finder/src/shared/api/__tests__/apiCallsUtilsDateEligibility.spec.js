@@ -37,7 +37,7 @@ const sameDate = { year: 2023, month: 0, day: 1 }
 const closerDate = { year: 2023, month: 0, day: 2 } // younger
 const furtherDate = { year: 2022, month: 11, day: 30 } // older
 
-// dynamicly generate to -18 years from todays date
+// dynamically generate to -18 years from todays date
 const age18 = new window.Date(
   new Date().getFullYear() - 18,
   new Date().getMonth(),
@@ -280,7 +280,7 @@ test('correctly accepts and evaluates a date object compared to a length of time
   )
 })
 
-test('other correctly accepts and evaluates a date object compared to a length of time of the conditional where the conditional time values are diffr', () => {
+test('other correctly accepts and evaluates a date object compared to a length of time of the conditional where the conditional time values are different', () => {
   conditionalsOthers.forEach(conditional =>
     expect(
       apiCalls.UTILS.DateEligibility({

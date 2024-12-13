@@ -307,7 +307,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
         >
           <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
-            data-errormessage="Test overide error label"
+            data-errormessage="Test override error label"
             data-testid="fieldset"
             id="applicant_relationship_to_the_deceased"
             required=""
@@ -334,7 +334,7 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
                 aria-errormessage="error-description-applicant_relationship_to_the_deceased_0"
                 aria-invalid="false"
                 class="bf-usa-select usa-select "
-                data-errormessage="Test overide error label"
+                data-errormessage="Test override error label"
                 data-testid="applicant_relationship_to_the_deceased_0"
                 id="applicant_relationship_to_the_deceased_0"
                 name="applicant_relationship_to_the_deceased_0"

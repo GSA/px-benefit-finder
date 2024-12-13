@@ -28,7 +28,7 @@ import './_index.scss'
 /**
  * a compound component that renders the main conditional view of the form
  * @component
- * @param {object} data - inherieted life event step data
+ * @param {object} data - inherited life event step data
  * @param {func} handleData - inherited state manager
  * @param {object} ui - inherited ui translations
  * @return {html} returns a semantic html component that displays a form step
@@ -46,7 +46,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   const [submissionCount, setSubmissionCount] = useState(0)
   const { lifeEventSection } = dataLayerUtils.dataLayerStructure
   const { buttonGroup, reviewSelectionModal, requiredLabel, sectionHeadings } =
-    ui // desctructure data
+    ui // destructure data
   useHandleUnload(hasData) // alert the user if they try to go back in browser
   const resetElement = useResetElement()
   const ROUTES = useContext(RouteContext)
@@ -125,7 +125,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
    * @function
    * @return {func} either success or alert handler
    */
-  const handleCheckRequriedFields = () => {
+  const handleCheckRequiredFields = () => {
     // collect all the required fields in the current step
     return errorHandling
       .handleCheckForRequiredValues(requiredFieldsets, setHasError)
@@ -146,7 +146,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
    * @return {null} only executes inherited functions
    */
   const handleForwardUpdate = updateIndex => {
-    handleCheckRequriedFields().then(valid => {
+    handleCheckRequiredFields().then(valid => {
       if (valid === true) {
         // handle dataLayer
         const { errors } = dataLayerUtils.dataLayerStructure
@@ -520,7 +520,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
                         child =>
                           child.fieldsets.length &&
                           child.fieldsets.map((childItem, childItemIndex) => {
-                            // if a parent determines the children inputs are hidden, we expect that the seleted values in child items are de-selected
+                            // if a parent determines the children inputs are hidden, we expect that the selected values in child items are de-selected
                             const selectedValue =
                               childItem && apiCalls.GET.SelectedValue(childItem)
 
@@ -587,7 +587,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
                     )
                   }
                   triggerLabel={buttonGroup[1].value}
-                  handleCheckRequriedFields={handleCheckRequriedFields}
+                  handleCheckRequiredFields={handleCheckRequiredFields}
                   completed={currentData.completed}
                 />
               )}

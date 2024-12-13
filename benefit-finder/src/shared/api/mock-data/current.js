@@ -65,7 +65,7 @@ const content = `{
                   "legend": "Relationship to the deceased",
                   "required": true,
                   "hint": "",
-                  "errorMessage": "Test overide error label",
+                  "errorMessage": "Test override error label",
                   "inputs": [
                     {
                       "inputCriteria": {
@@ -675,7 +675,7 @@ const content = `{
       {
         "benefit": {
           "title": "Coal mine workers' compensation (black lung benefits) for surviving spouse",
-          "summary": "<p>Compensation to surviving spouses of coal minerstotally disabled by or whose deaths are attributable to pneumoconiosis.</p>",
+          "summary": "<p>Compensation to surviving spouses of coal miners totally disabled by or whose deaths are attributable to pneumoconiosis.</p>",
           "SourceLink": "https://www.dol.gov/agencies/owcp/dcmwc/filing_guide_survivor",
           "SourceIsEnglish": true,
           "agency": {

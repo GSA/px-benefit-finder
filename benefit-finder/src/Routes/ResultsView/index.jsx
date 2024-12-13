@@ -13,7 +13,7 @@ import { dataLayerUtils, handleSurvey, domReady } from '@utils'
  * a functional component that renders a view of the form benefit state values
  * @component
  * @param {func} setBenefitsArray inherited state handler
- * @param {array} stepDataArray inherited state of inupt values from form entry
+ * @param {array} stepDataArray inherited state of input values from form entry
  * @param {object} ui inherited ui translations
  * @param {array} data inherited benefits data
  * @return {html} returns a view page of filtered benefits
@@ -34,7 +34,7 @@ const ResultsView = ({
   const ROUTES = useContext(RouteContext)
 
   /**
-   * a hook that hanldes our open state of the accordions in our group
+   * a hook that handles our open state of the accordions in our group
    * @function
    * @return {boolean} returns true or false
    */
@@ -53,7 +53,7 @@ const ResultsView = ({
   // how many total questions were in the form
   const benefitsLength =
     stepDataArray &&
-    apiCalls.GET.ElegibilityByCriteria(
+    apiCalls.GET.EligibilityByCriteria(
       apiCalls.GET.SelectedValueAll(stepDataArray),
       data
     ).length

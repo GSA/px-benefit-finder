@@ -2,7 +2,7 @@
 
 import * as utils from '../../support/utils'
 import * as EN_DOLO_MOCK_DATA from '../../../../benefit-finder/src/shared/api/mock-data/current.json'
-import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
+import * as BENEFITS_ELIGIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 import content from '../../../../benefit-finder/src/shared/api/mock-data/current.js'
 import * as EN_LOCALE_DATA from '../../../../benefit-finder/src/shared/locales/en/en.json'
 const { data } = JSON.parse(content)
@@ -31,7 +31,7 @@ const publicSafetyOfficerId =
     .fieldsets[3].fieldset.inputs[0].inputCriteria.id
 
 describe('Validate correct eligibility benefits display based on selected criteria/options', () => {
-  it('Should render Survivor Benefits for Child benefit accordion correctly based on selected cretiria options', () => {
+  it('Should render Survivor Benefits for Child benefit accordion correctly based on selected criteria options', () => {
     cy.visit(utils.storybookUri)
 
     cy.navigateToBenefitResultsPage({
@@ -56,8 +56,8 @@ describe('Validate correct eligibility benefits display based on selected criter
   })
 
   it('qa scenario 1 Covid EN - Verify correct benefit results for query values that includes covid in search parameter of URL', () => {
-    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.param
-    const enResults = BENEFITS_ELIBILITY_DATA.scenario_1_covid.en.results
+    const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_1_covid.en.param
+    const enResults = BENEFITS_ELIGIBILITY_DATA.scenario_1_covid.en.results
     const scenario = utils.encodeURIFromObject(selectedData)
     delete selectedData.shared // We don't want to include the "shared" param
     const selectDataLength = Object.keys(selectedData).length
@@ -82,8 +82,8 @@ describe('Validate correct eligibility benefits display based on selected criter
   })
 
   it('QA scenario 2 Veteran EN - Verify correct benefit results for query values that includes veteran in search parameter of URL', () => {
-    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.param
-    const enResults = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.results
+    const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_2_veteran.en.param
+    const enResults = BENEFITS_ELIGIBILITY_DATA.scenario_2_veteran.en.results
     const scenario = utils.encodeURIFromObject(selectedData)
 
     cy.visit(`${utils.storybookUri}${scenario}`)
@@ -97,8 +97,8 @@ describe('Validate correct eligibility benefits display based on selected criter
   })
 
   it('QA scenario 3 Coal Miner EN - Verify correct benefit results for query values that includes Coal Miner in search parameter of URL', () => {
-    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.param
-    const enResults = BENEFITS_ELIBILITY_DATA.scenario_3_coal_miner.en.results
+    const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_3_coal_miner.en.param
+    const enResults = BENEFITS_ELIGIBILITY_DATA.scenario_3_coal_miner.en.results
     const scenario = utils.encodeURIFromObject(selectedData)
 
     cy.visit(`${utils.storybookUri}${scenario}`)
@@ -111,15 +111,15 @@ describe('Validate correct eligibility benefits display based on selected criter
   })
 
   it('Should display green check icons on eligible benefits', () => {
-    const selectedData = BENEFITS_ELIBILITY_DATA.scenario_2_veteran.en.param
+    const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_2_veteran.en.param
     const scenario = utils.encodeURIFromObject(selectedData)
     cy.visit(`${utils.storybookUri}${scenario}`)
     cy.validateGreenCheckIcons(selectedData)
   })
 
   it('Should display Zero benefit view when no benefit are eligible', () => {
-    const selectedData = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.param
-    const enResults = BENEFITS_ELIBILITY_DATA.zero_benefit_view.en.results
+    const selectedData = BENEFITS_ELIGIBILITY_DATA.zero_benefit_view.en.param
+    const enResults = BENEFITS_ELIGIBILITY_DATA.zero_benefit_view.en.results
     const scenario = utils.encodeURIFromObject(selectedData)
     cy.visit(`${utils.storybookUri}${scenario}`)
 

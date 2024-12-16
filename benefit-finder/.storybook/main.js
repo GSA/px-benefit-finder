@@ -20,15 +20,16 @@ const config = {
   viteFinal(config) {
     return mergeConfig(config, {
       build: {
-      chunkSizeWarningLimit: '1000',
-      rollupOptions: {
+        chunkSizeWarningLimit: '1000',
+        rollupOptions: {
           output: {
-            manualChunks: (id) => id.includes('src/App/index.jsx') ? 'app-chunk' : false,
+            manualChunks: id =>
+              id.includes('src/App/index.jsx') ? 'app-chunk' : false,
           },
         },
       },
-    });
+    })
   },
-};
+}
 
 export default config

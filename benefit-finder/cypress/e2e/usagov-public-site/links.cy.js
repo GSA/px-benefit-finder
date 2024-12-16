@@ -58,7 +58,6 @@ describe('Verify correct status code handling', () => {
   // negate validation on our functional code
   Cypress.on('fail', error => {
     if (JSON.stringify(error).includes('httpstat')) {
-
       expect(error).to.not.be.undefined
     } else {
       throw error

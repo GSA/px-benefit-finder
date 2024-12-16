@@ -5,6 +5,7 @@ import pluginCypress from 'eslint-plugin-cypress/flat'
 import storybook from 'eslint-plugin-storybook'
 import reactPlugin from 'eslint-plugin-react'
 import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 
 // error when starting dev server:
@@ -19,6 +20,7 @@ export default [
   js.configs.recommended,
   json.configs.recommended,
   eslintConfigPrettier,
+  eslintPluginPrettierRecommended,
   ...storybook.configs['flat/recommended'],
   pluginCypress.configs.recommended,
   reactPlugin.configs.flat.all,

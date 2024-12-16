@@ -97,7 +97,8 @@ describe('Validate correct eligibility benefits display based on selected criter
   })
 
   it('QA scenario 3 Coal Miner EN - Verify correct benefit results for query values that includes Coal Miner in search parameter of URL', () => {
-    const selectedData = BENEFITS_ELIGIBILITY_DATA.scenario_3_coal_miner.en.param
+    const selectedData =
+      BENEFITS_ELIGIBILITY_DATA.scenario_3_coal_miner.en.param
     const enResults = BENEFITS_ELIGIBILITY_DATA.scenario_3_coal_miner.en.results
     const scenario = utils.encodeURIFromObject(selectedData)
 

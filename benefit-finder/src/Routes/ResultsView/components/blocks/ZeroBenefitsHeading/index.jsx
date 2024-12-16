@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useContext } from 'react'
 import { RouteContext } from '@/App'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 import { Button, Heading, StepBackButton } from '@components'
 import { createMarkup } from '@utils'
 

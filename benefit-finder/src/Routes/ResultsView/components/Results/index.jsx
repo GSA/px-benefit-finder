@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { RouteContext } from '@/App'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 import {
   BenefitAccordionGroup,
   Button,

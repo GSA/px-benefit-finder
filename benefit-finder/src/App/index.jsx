@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect, useMemo } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router'
 import { version } from '../../package.json'
 import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'

@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect, useMemo } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router'
 import { version } from '../../package.json'
 import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
@@ -114,13 +114,7 @@ function App({ testAppContent, testQuery }) {
             data-testid="app"
             data-version={version}
           >
-            <BrowserRouter
-              basename={`/${ROUTES.basePath}`}
-              future={{
-                v7_startTransition: true,
-                v7_relativeSplatPath: true,
-              }}
-            >
+            <BrowserRouter basename={`/${ROUTES.basePath}`}>
               <Routes>
                 <Route
                   path={`/${ROUTES.indexPath}`}

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router'
 import Intro from '../index.jsx'
 import * as en from '@locales/en/en.json'
 import content from '@api/mock-data/current.js'

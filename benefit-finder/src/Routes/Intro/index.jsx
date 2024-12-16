@@ -1,5 +1,5 @@
 import { useEffect, useContext } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router'
 import { RouteContext } from '@/App'
 import { dataLayerUtils } from '@utils'
 import { useResetElement } from '@hooks'

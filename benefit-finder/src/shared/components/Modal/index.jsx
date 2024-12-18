@@ -138,29 +138,6 @@ const Modal = ({
   }, [modalOpen])
 
   /**
-   * a functional component that renders a link as a button for launching our dialog
-   * @component
-   * @param {string} id - matches to modal control
-   * @param {string} triggerLabel - passed to button for triggering modal
-   * @return {html} returns an obfuscated anchor element
-   */
-  const Trigger = ({ triggerLabel, onKeyDown, onClick }) => {
-    return (
-      <ObfuscatedLink
-        onClick={onClick}
-        onKeyDown={onKeyDown}
-        noCarrot
-        tabIndex="0"
-        triggerRef={triggerRef}
-        aria-label="Continue"
-        role="button"
-      >
-        {triggerLabel}
-      </ObfuscatedLink>
-    )
-  }
-
-  /**
    * a functional component that renders a two links as a buttons for navigating out of the dialog
    * @component
    * @param {string} navItemOneLabel - passed to button for nav item in modal
@@ -225,11 +202,17 @@ const Modal = ({
 
   return (
     <div id={id} className="bf-usa-modal-group">
-      <Trigger
-        triggerLabel={triggerLabel}
-        onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}
+      <ObfuscatedLink
         onClick={() => handleOpenModal()}
-      ></Trigger>
+        onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}
+        noCarrot
+        tabIndex="0"
+        triggerRef={triggerRef}
+        aria-label="Continue"
+        role="button"
+      >
+        {triggerLabel}
+      </ObfuscatedLink>
       <NavModal
         id="benefit-finder-modal"
         isOpen={modalOpen}

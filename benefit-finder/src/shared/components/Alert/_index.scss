@@ -3,7 +3,6 @@
 @use '@styles/breakpoints' as *;
 @use '@styles/functions' as *;
 
-
 h2.bf-usa-alert__heading {
   @include h5($font-family: 'sans');
 
@@ -31,7 +30,7 @@ h2.bf-usa-alert__heading {
     padding-left: rem(32px);
   }
 
-  ul {
+  .bf-usa-alert ul {
     padding-left: 0;
   }
 

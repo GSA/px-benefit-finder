@@ -20,6 +20,20 @@
   .bf-result-view-relevant-benefits-heading,
   .bf-result-view-share-results-heading {
     @include h3;
+
+    margin-left: rem(15px);
+
+    @media (width > $desktop) {
+      margin-left: 0;
+    }
+  }
+
+  p {
+    margin-left: rem(15px);
+
+    @media (width > $desktop) {
+      margin-left: 0;
+    }
   }
 
   .bf-expand-all {
@@ -35,6 +49,10 @@
   .bf-result-view-cta-wrapper {
     display: flex;
     justify-content: center;
+  }
+
+  @media (width > $desktop) {
+    margin-left: 0;
   }
 }
 

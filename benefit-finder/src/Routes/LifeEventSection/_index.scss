@@ -11,7 +11,7 @@
 
   .bf-grid-container.grid-container {
     max-width: $form-container-max-width;
-    padding: 0 rem(36px);
+    padding: 0 rem(20px);
 
     @media (width >= calc($form-container-max-width + rem(24px))) {
       padding-left: 0;

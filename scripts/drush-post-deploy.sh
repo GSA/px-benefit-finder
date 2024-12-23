@@ -11,7 +11,7 @@ drush cim --partial --source=modules/custom/usagov_benefit_finder/configuration 
 drush cr
 ### USER_PASSWORD_RESET_PLACEHOLDER ###
 drush state:set system.maintenance_mode 0 -y
-drush pm:uninstall usagov_login
+drush pm:uninstall usagov_login --strict=0
 echo "Post deploy finished!"
 
 

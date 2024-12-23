@@ -20,7 +20,7 @@
       "iconAlt": "Importante",
       "list": [
         {
-          "notice": "<div><p><strong>Esto no es una aplicación. Necesita presentar una solicitud</strong> con cada agencia.</p><p>No guardamos ni compartimos sus respuestas con ninguna agencia.</p></div>"
+          "notice": "<div><p><strong>Esto no es una aplicación. Necesita presentar una solicitud</strong> con cada agencia.</p><p><strong>No guardamos ni compartimos sus respuestas</strong> con ninguna agencia.</p></div>"
         }
       ]
     },

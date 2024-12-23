@@ -43,7 +43,10 @@ exports[`NoticesList > renders a match to the previous snapshot 1`] = `
                with each agency.
             </p>
             <p>
-              We do not share, save, or submit your information.
+              <strong>
+                We do not share, save, or submit
+              </strong>
+               your information.
             </p>
           </div>
         </div>

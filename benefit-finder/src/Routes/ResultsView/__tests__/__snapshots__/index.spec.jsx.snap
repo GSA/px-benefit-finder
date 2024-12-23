@@ -6318,7 +6318,8 @@ exports[`loads view 1`] = `
                 <a
                   class="bf-share-trigger bf-usa-link usa-link"
                   data-testid="bf-share-trigger"
-                  href=""
+                  role="link"
+                  tabindex="0"
                 >
                   Share link
                 </a>
@@ -6327,7 +6328,8 @@ exports[`loads view 1`] = `
                  
                 <a
                   class="bf-email-trigger bf-usa-link usa-link"
-                  href=""
+                  role="link"
+                  tabindex="0"
                 >
                   Email results
                 </a>
@@ -12662,7 +12664,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <a
                   class="bf-share-trigger bf-usa-link usa-link"
                   data-testid="bf-share-trigger"
-                  href=""
+                  role="link"
+                  tabindex="0"
                 >
                   Share link
                 </a>
@@ -12671,7 +12674,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                  
                 <a
                   class="bf-email-trigger bf-usa-link usa-link"
-                  href=""
+                  role="link"
+                  tabindex="0"
                 >
                   Email results
                 </a>

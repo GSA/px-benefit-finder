@@ -40,9 +40,11 @@ const ShareTrigger = ({ ui, data }) => {
 
   return (
     <a
-      href=""
+      tabIndex={0}
+      role="link"
       className="bf-share-trigger bf-usa-link usa-link"
       onClick={e => handleClick(e)}
+      onKeyDown={e => handleClick(e)}
       data-testid="bf-share-trigger"
     >
       {ui?.shareTrigger || 'Share'}

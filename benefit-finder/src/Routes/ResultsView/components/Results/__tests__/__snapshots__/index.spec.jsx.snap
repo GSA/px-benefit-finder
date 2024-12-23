@@ -126,7 +126,8 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
             <a
               class="bf-share-trigger bf-usa-link usa-link"
               data-testid="bf-share-trigger"
-              href=""
+              role="link"
+              tabindex="0"
             >
               Share link
             </a>
@@ -135,7 +136,8 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
              
             <a
               class="bf-email-trigger bf-usa-link usa-link"
-              href=""
+              role="link"
+              tabindex="0"
             >
               Email results
             </a>

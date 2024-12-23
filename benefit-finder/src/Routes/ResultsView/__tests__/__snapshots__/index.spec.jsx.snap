@@ -6215,7 +6215,7 @@ exports[`loads view 1`] = `
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
-                Explore benefits you did not qualify for
+                See benefits you didn't qualify for
               </button>
             </div>
           </div>
@@ -12554,7 +12554,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
-                Explore benefits you did not qualify for
+                See benefits you didn't qualify for
               </button>
             </div>
           </div>

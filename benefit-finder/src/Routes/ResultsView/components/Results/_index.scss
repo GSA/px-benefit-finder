@@ -28,7 +28,7 @@
     }
   }
 
-  p {
+  > p {
     margin-left: rem(15px);
 
     @media (width > $desktop) {

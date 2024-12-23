@@ -153,7 +153,7 @@
     "notEligibleResults": {
       "heading": "Benefits you did not qualify for",
       "description": "<div>Based on your answers you are not eligible for these benefits. <strong>You may become eligible if you enter additional information or your situation changes.</strong></div>",
-      "cta": "Explore benefits you did not qualify for"
+      "cta": "See benefits you didn't qualify for"
     },
     "resultsRelativeBenefits": {
       "heading": "More benefits"
@@ -164,7 +164,7 @@
       "shareLinkContent": "Copied",
       "emailTrigger": "Email results",
       "emailSubject": "Results from USAGov’s benefit finder",
-      "description": "Copy or email these results. Your answers will be visible. Only share with those you trust."
+      "description": "Copy or email these results. Your answers will be visible. <strong>Only share with those you trust</<strong>."
     }
   },
   "shareResults": {

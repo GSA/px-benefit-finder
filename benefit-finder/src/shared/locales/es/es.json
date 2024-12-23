@@ -165,7 +165,7 @@
       "emailTrigger": "Envie sus resultados por correo electrónico",
       "shareLinkContent": "Copiado",
       "emailSubject": "Resultados del buscador de beneficios de USAGov",
-      "description": "Copie o envíe sus resultados. Sus respuestas serán visibles. Solo comparta con quienes usted confíe."
+      "description": "Copie o envíe sus resultados. Sus respuestas serán visibles. <strong>Solo comparta con quienes usted confíe</strong>."
     }
   },
   "shareResults": {

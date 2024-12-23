@@ -111,7 +111,12 @@ exports[`Results > renders a match to the previous snapshot 1`] = `
           Share results
         </h3>
         <p>
-          Copy or email these results. Your answers will be visible. Only share with those you trust.
+          Copy or email these results. Your answers will be visible. 
+          <strong>
+            Only share with those you trust
+            <!--&lt;strong-->
+            .
+          </strong>
         </p>
         <ul
           class="bf-result-view-share-results-button-group"

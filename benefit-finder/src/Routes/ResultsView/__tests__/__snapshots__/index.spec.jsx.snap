@@ -6303,7 +6303,12 @@ exports[`loads view 1`] = `
               Share results
             </h3>
             <p>
-              Copy or email these results. Your answers will be visible. Only share with those you trust.
+              Copy or email these results. Your answers will be visible. 
+              <strong>
+                Only share with those you trust
+                <!--&lt;strong-->
+                .
+              </strong>
             </p>
             <ul
               class="bf-result-view-share-results-button-group"
@@ -12642,7 +12647,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               Share results
             </h3>
             <p>
-              Copy or email these results. Your answers will be visible. Only share with those you trust.
+              Copy or email these results. Your answers will be visible. 
+              <strong>
+                Only share with those you trust
+                <!--&lt;strong-->
+                .
+              </strong>
             </p>
             <ul
               class="bf-result-view-share-results-button-group"

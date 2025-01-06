@@ -52,6 +52,7 @@
       @include list-items;
 
       line-height: normal;
+      font-size: rem(16px);
     }
   }
 }
@@ -59,10 +60,10 @@
 .bf-unmet-criteria-group {
   padding: rem(18px) 0 0 rem(10px);
 
-    @media (width >= $desktop) {
-      padding-top: rem(24px);
-      padding-left: rem(24px);
-    }
+  @media (width >= $desktop) {
+    padding-top: rem(24px);
+    padding-left: rem(24px);
+  }
 
   .bf-unmet-criteria-title {
     @include h5($font-family: 'sans');

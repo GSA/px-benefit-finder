@@ -48,29 +48,21 @@ jobs:
           # Switch to the main branch
           git checkout main
 
-          # Update and initialize submodules
-          git submodule update --init
-          git submodule set-branch --branch prod usagov-2021
-          git submodule update --remote || echo "Expected error: Failed to update all submodules."
+          git status
 
-          # Pull changes from release into main
-          git pull origin release
-
-          # Push updated main branch
-          git push origin main
-
-      - name: Sync release to dev
-        run: |
-          # Switch to the dev branch
-          git checkout dev
-
-          # Update and initialize submodules
-          git submodule update --init
-          git submodule set-branch --branch prod usagov-2021
-          git submodule update --remote || echo "Expected error: Failed to update all submodules."
-
-          # Pull changes from release into dev
-          git pull origin release
-
-          # Push updated dev branch
-          git push origin dev
+      #     # Pull changes from release into main
+      #     git pull origin release
+      #
+      #     # Push updated main branch
+      #     git push origin main
+      #
+      # - name: Sync release to dev
+      #   run: |
+      #     # Switch to the dev branch
+      #     git checkout dev
+      #
+      #     # Pull changes from release into dev
+      #     git pull origin release
+      #
+      #     # Push updated dev branch
+      #     git push origin dcev

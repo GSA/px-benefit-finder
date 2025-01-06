@@ -52,7 +52,7 @@ jobs:
       - name: Checkout repository without submodules
         uses: actions/checkout@v4
         with:
-          submodules: false # Do not checkout submodules initially
+          # submodules: false # Do not checkout submodules initially
           fetch-depth: 0 # Fetch all history
 
       - name: Set up Git
@@ -81,7 +81,7 @@ jobs:
       - name: Checkout repository without submodules
         uses: actions/checkout@v4
         with:
-          submodules: false # Do not checkout submodules initially
+          # submodules: false # Do not checkout submodules initially
           fetch-depth: 0 # Fetch all history
 
       - name: Set up Git

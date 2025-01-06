@@ -67,7 +67,7 @@ jobs:
           # Switch to the main branch
           git checkout main
 
-          git submodule update --remote --merge
+          git submodule update --remote
 
           # Pull changes from release into main
           git pull origin release

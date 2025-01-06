@@ -5,6 +5,7 @@ on:
 
 jobs:
   # update-submodule-on-release:
+  #   name: update-submodule-on-release
   #   runs-on: ubuntu-latest
   #
   #   steps:
@@ -43,36 +44,38 @@ jobs:
   #         # Push changes to release branch
   #         git push origin release
 
-update-submodule-on-main:
-  runs-on: ubuntu-latest
+  update-submodule-on-main:
+    name: update-submodule-on-main
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout repository without submodules
-      uses: actions/checkout@v4
-      with:
-        submodules: false # Do not checkout submodules initially
-        fetch-depth: 0 # Fetch all history
+    steps:
+      - name: Checkout repository without submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: false # Do not checkout submodules initially
+          fetch-depth: 0 # Fetch all history
 
-    - name: Set up Git
-      run: |
-        git config --global user.name "Xavier Metichecchia"
-        git config --global user.email "Xavier.Metichecchia@gsa.gov"
-        git config --global pull.rebase false  # Ensure merge strategy
-        git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
+      - name: Set up Git
+        run: |
+          git config --global user.name "Xavier Metichecchia"
+          git config --global user.email "Xavier.Metichecchia@gsa.gov"
+          git config --global pull.rebase false  # Ensure merge strategy
+          git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
 
-    - name: Sync release to main
-      run: |
-        # Switch to the main branch
-        git checkout main
+      - name: Sync release to main
+        run: |
+          # Switch to the main branch
+          git checkout main
 
-        # Pull changes from release into main
-        git pull origin release
+          # Pull changes from release into main
+          git pull origin release
 
-        # Push updated main branch
-        git push origin main
+          # Push updated main branch
+          git push origin main
 
-update-submodule-on-dev:
-  runs-on: ubuntu-latest
+  update-submodule-on-dev:
+    name: update-submodule-on-dev
+    runs-on: ubuntu-latest
 
   steps:
     - name: Checkout repository without submodules

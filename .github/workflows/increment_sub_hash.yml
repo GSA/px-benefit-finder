@@ -67,37 +67,39 @@ jobs:
           # Switch to the main branch
           git checkout main
 
+          git submodule update --remote --merge
+
           # Pull changes from release into main
           git pull origin release
 
           # Push updated main branch
           git push origin main
 
-  update-submodule-on-dev:
-    name: update-submodule-on-dev
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository without submodules
-        uses: actions/checkout@v4
-        with:
-          # submodules: false # Do not checkout submodules initially
-          fetch-depth: 0 # Fetch all history
-
-      - name: Set up Git
-        run: |
-          git config --global user.name "Xavier Metichecchia"
-          git config --global user.email "Xavier.Metichecchia@gsa.gov"
-          git config --global pull.rebase false  # Ensure merge strategy
-          git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
-
-      - name: Sync release to dev
-        run: |
-          # Switch to the dev branch
-          git checkout dev
-
-          # Pull changes from release into dev
-          git pull origin release
-
-          # Push updated dev branch
-          git push origin dev
+  # update-submodule-on-dev:
+  #   name: update-submodule-on-dev
+  #   runs-on: ubuntu-latest
+  #
+  #   steps:
+  #     - name: Checkout repository without submodules
+  #       uses: actions/checkout@v4
+  #       with:
+  #         # submodules: false # Do not checkout submodules initially
+  #         fetch-depth: 0 # Fetch all history
+  #
+  #     - name: Set up Git
+  #       run: |
+  #         git config --global user.name "Xavier Metichecchia"
+  #         git config --global user.email "Xavier.Metichecchia@gsa.gov"
+  #         git config --global pull.rebase false  # Ensure merge strategy
+  #         git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
+  #
+  #     - name: Sync release to dev
+  #       run: |
+  #         # Switch to the dev branch
+  #         git checkout dev
+  #
+  #         # Pull changes from release into dev
+  #         git pull origin release
+  #
+  #         # Push updated dev branch
+  #         git push origin dev

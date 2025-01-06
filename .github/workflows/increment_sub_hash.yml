@@ -4,65 +4,97 @@ on:
   workflow_dispatch: # Allows manual trigger
 
 jobs:
-  update-submodule:
-    runs-on: ubuntu-latest
+  # update-submodule-on-release:
+  #   runs-on: ubuntu-latest
+  #
+  #   steps:
+  #     - name: Checkout repository without submodules
+  #       uses: actions/checkout@v4
+  #       with:
+  #         submodules: false # Do not checkout submodules initially
+  #         fetch-depth: 0 # Fetch all history
+  #
+  #     - name: Set up Git
+  #       run: |
+  #         git config --global user.name "Xavier Metichecchia"
+  #         git config --global user.email "Xavier.Metichecchia@gsa.gov"
+  #         git config --global pull.rebase false  # Ensure merge strategy
+  #         git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
+  #
+  #     - name: Update submodules on release branch
+  #       continue-on-error: true
+  #       run: |
+  #         # Checkout the release branch
+  #         git checkout release
+  #
+  #         # Update and initialize submodules
+  #         git submodule update --init
+  #         git submodule set-branch --branch prod usagov-2021
+  #         git submodule update --remote || echo "Expected error: Failed to update all submodules."
+  #
+  #         # Check Git Status
+  #         git add .
+  #         git commit --allow-empty -m "Updated submodule to the latest commit on release branch"
+  #
+  #         # Commit the changes
+  #         git status
+  #         git --no-pager diff
+  #
+  #         # Push changes to release branch
+  #         git push origin release
 
-    steps:
-      - name: Checkout repository without submodules
-        uses: actions/checkout@v4
-        with:
-          submodules: false # Do not checkout submodules initially
-          fetch-depth: 0 # Fetch all history
+update-submodule-on-main:
+  runs-on: ubuntu-latest
 
-      - name: Set up Git
-        run: |
-          git config --global user.name "Xavier Metichecchia"
-          git config --global user.email "Xavier.Metichecchia@gsa.gov"
-          git config --global pull.rebase false  # Ensure merge strategy
-          git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
+  steps:
+    - name: Checkout repository without submodules
+      uses: actions/checkout@v4
+      with:
+        submodules: false # Do not checkout submodules initially
+        fetch-depth: 0 # Fetch all history
 
-      - name: Update submodules on release branch
-        continue-on-error: true
-        run: |
-          # Checkout the release branch
-          git checkout release
+    - name: Set up Git
+      run: |
+        git config --global user.name "Xavier Metichecchia"
+        git config --global user.email "Xavier.Metichecchia@gsa.gov"
+        git config --global pull.rebase false  # Ensure merge strategy
+        git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
 
-          # Update and initialize submodules
-          git submodule update --init
-          git submodule set-branch --branch prod usagov-2021
-          git submodule update --remote || echo "Expected error: Failed to update all submodules."
+    - name: Sync release to main
+      run: |
+        # Switch to the main branch
+        git checkout main
 
-          # Check Git Status
-          git add .
-          git commit --allow-empty -m "Updated submodule to the latest commit on release branch"
+        # Pull changes from release into main
+        git pull origin release
 
-          # Commit the changes
-          git status
-          git --no-pager diff
+        # Push updated main branch
+        git push origin main
 
-          # Push changes to release branch
-          git push origin release
+update-submodule-on-dev:
+  runs-on: ubuntu-latest
 
-      - name: Sync release to main
-        run: |
-          # Switch to the main branch
-          git checkout main
+  steps:
+    - name: Checkout repository without submodules
+      uses: actions/checkout@v4
+      with:
+        submodules: false # Do not checkout submodules initially
+        fetch-depth: 0 # Fetch all history
 
-          git status
+    - name: Set up Git
+      run: |
+        git config --global user.name "Xavier Metichecchia"
+        git config --global user.email "Xavier.Metichecchia@gsa.gov"
+        git config --global pull.rebase false  # Ensure merge strategy
+        git remote set-url origin https://${{ secrets.HASH_PAT }}@github.com/GSA/px-benefit-finder.git
 
-      #     # Pull changes from release into main
-      #     git pull origin release
-      #
-      #     # Push updated main branch
-      #     git push origin main
-      #
-      # - name: Sync release to dev
-      #   run: |
-      #     # Switch to the dev branch
-      #     git checkout dev
-      #
-      #     # Pull changes from release into dev
-      #     git pull origin release
-      #
-      #     # Push updated dev branch
-      #     git push origin dcev
+    - name: Sync release to dev
+      run: |
+        # Switch to the dev branch
+        git checkout dev
+
+        # Pull changes from release into dev
+        git pull origin release
+
+        # Push updated dev branch
+        git push origin dev

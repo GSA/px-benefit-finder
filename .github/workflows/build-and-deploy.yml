@@ -153,7 +153,7 @@ jobs:
       - name: Configure application
         run: |
           cd usagov-2021
-          sed -i "s/memory_limit       = 1G/memory_limit       = 500M/g" .docker/src-cms/etc/php81/php.ini
+          sed -i "s/memory_limit       = 1G/memory_limit       = 500M/g" .docker/src-cms/etc/php83/php.ini
           mv .docker/Dockerfile-cms .
           sed -i 's/80/8080/g' Dockerfile-cms
           sed -i 's/ENTRYPOINT/CMD/' Dockerfile-cms

@@ -4,9 +4,9 @@
 @use '@styles/functions' as *;
 
 .bf-result-view {
- .bf-grid-container.grid-container {
-  padding: rem(20px);
- }
+  .bf-grid-container.grid-container {
+    padding: rem(20px);
+  }
 }
 
 .bf-result-view-benefits,
@@ -20,6 +20,24 @@
   .bf-result-view-relevant-benefits-heading,
   .bf-result-view-share-results-heading {
     @include h3;
+
+    margin-left: rem(15px);
+
+    @media (width > $desktop) {
+      margin-left: 0;
+    }
+  }
+
+  > p {
+    margin-left: rem(15px);
+
+    @media (width > $desktop) {
+      margin-left: 0;
+    }
+  }
+
+  .bf-expand-all {
+    display: none;
   }
 }
 
@@ -31,6 +49,10 @@
   .bf-result-view-cta-wrapper {
     display: flex;
     justify-content: center;
+  }
+
+  @media (width > $desktop) {
+    margin-left: 0;
   }
 }
 
@@ -47,5 +69,9 @@
 @media (width >= $desktop) {
   .bf-result-view-details {
     padding: rem(24px) 5.4rem;
+  }
+
+  .bf-result-view-benefits .bf-expand-all {
+    display: block;
   }
 }

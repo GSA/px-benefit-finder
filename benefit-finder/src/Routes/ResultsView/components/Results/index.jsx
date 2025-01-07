@@ -110,7 +110,7 @@ const Results = ({
         >
           {shareResults?.heading}
         </Heading>
-        <p>{shareResults?.description}</p>
+        <p dangerouslySetInnerHTML={createMarkup(shareResults?.description)} />
         <ul className="bf-result-view-share-results-button-group">
           <li>
             {' '}

@@ -6215,7 +6215,7 @@ exports[`loads view 1`] = `
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
-                Explore benefits you did not qualify for
+                See benefits you didn't qualify for
               </button>
             </div>
           </div>
@@ -6303,7 +6303,12 @@ exports[`loads view 1`] = `
               Share results
             </h3>
             <p>
-              Copy or email these results. Your answers will be visible. Only share with those you trust.
+              Copy or email these results. Your answers will be visible. 
+              <strong>
+                Only share with those you trust
+                <!--&lt;strong-->
+                .
+              </strong>
             </p>
             <ul
               class="bf-result-view-share-results-button-group"
@@ -6313,7 +6318,8 @@ exports[`loads view 1`] = `
                 <a
                   class="bf-share-trigger bf-usa-link usa-link"
                   data-testid="bf-share-trigger"
-                  href=""
+                  role="link"
+                  tabindex="0"
                 >
                   Share link
                 </a>
@@ -6322,7 +6328,8 @@ exports[`loads view 1`] = `
                  
                 <a
                   class="bf-email-trigger bf-usa-link usa-link"
-                  href=""
+                  role="link"
+                  tabindex="0"
                 >
                   Email results
                 </a>
@@ -12554,7 +12561,7 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 data-testid="bf-result-view-unmet-button"
                 type="button"
               >
-                Explore benefits you did not qualify for
+                See benefits you didn't qualify for
               </button>
             </div>
           </div>
@@ -12642,7 +12649,12 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
               Share results
             </h3>
             <p>
-              Copy or email these results. Your answers will be visible. Only share with those you trust.
+              Copy or email these results. Your answers will be visible. 
+              <strong>
+                Only share with those you trust
+                <!--&lt;strong-->
+                .
+              </strong>
             </p>
             <ul
               class="bf-result-view-share-results-button-group"
@@ -12652,7 +12664,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                 <a
                   class="bf-share-trigger bf-usa-link usa-link"
                   data-testid="bf-share-trigger"
-                  href=""
+                  role="link"
+                  tabindex="0"
                 >
                   Share link
                 </a>
@@ -12661,7 +12674,8 @@ exports[`scenario 1 loads in view with the correct amount of likely eligible ite
                  
                 <a
                   class="bf-email-trigger bf-usa-link usa-link"
-                  href=""
+                  role="link"
+                  tabindex="0"
                 >
                   Email results
                 </a>

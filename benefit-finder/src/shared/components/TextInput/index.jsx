@@ -6,7 +6,7 @@ import './_index.scss'
 /**
  * a functional component that renders a field for text input
  * @component
- * @param {string} id - unique identifire
+ * @param {string} id - unique Identifier
  * @param {string} className - inherited classes
  * @param {string} label - string value for input label
  * @param {boolean} textarea - conditional to render textarea as return

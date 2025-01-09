@@ -47,11 +47,25 @@ jobs:
           CF_ORG: "${{ secrets.CF_ORG }}"
           PROJECT: "${{ secrets.PROJECT }}"
           DATABASE_BACKUP_BASTION_NAME: "${{ secrets.DATABASE_BACKUP_BASTION_NAME }}"
-          TEST_USER_PASS: "{{ secrets.TEST_USER_PASS }}"
+          TEST_USER_PASS: "${{ secrets.TEST_USER_PASS }}"
+          TEST_USER_NAMES: "${{ secrets.TEST_USER_NAMES }}"
         run: |
           export S3_FILE_PATH=${{ github.event.inputs.database_file_override }}
           source ./scripts/pipeline/s3-backup-download.sh
           source ./scripts/pipeline/database-restore.sh
+          # Split the USERS_LIST into an array
+          IFS=',' read -ra users <<< "${TEST_USER_NAMES}"
+          # Generate the password reset commands
+          password_reset_commands=""
+          for user in "${users[@]}"; do
+            password_reset_commands+="drush user:password $user \"TU_PASS\"\n"
+          done
+          # Make replacement in the drush post deploy with user change password commands
+          sed -i "s|### USER_PASSWORD_RESET_PLACEHOLDER ###|$password_reset_commands|" ./scripts/drush-post-deploy.sh
+          # Set the test user's passwords to the value of the github secret value for TEST_USER_PASS.
+          sed -i "s#TU_PASS#${TEST_USER_PASS}#g" ./scripts/drush-post-deploy.sh
+          # Execute the drush command script
+          source ./scripts/pipeline/cloud-gov-post-deploy.sh
           source ./scripts/pipeline/cloud-gov-post-deploy.sh
           source ./scripts/pipeline/s3-backup-post-restore.sh
   stopBastion:

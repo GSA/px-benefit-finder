@@ -58,7 +58,7 @@ const Fieldset = ({
     </>
   )
 
-  // determine if we need to include a reqired hint
+  // determine if we need to include a required hint
   const handleRequired =
     required === false ? <Legend>{legend}</Legend> : RequiredFlag()
 

@@ -11,7 +11,7 @@ const dateInputValidation = event => {
       const currentYear = new Date().getFullYear().toString()
       const yearLimit = currentYear.substring(currentYear.length - 1)
       if (event.target.value.length === 4) {
-        // 1900 - currentyear
+        // 1900 - current year
         const range = new RegExp(
           `^(19[0-9][0-9]|20[0-1][0-9]|20[0-2][0-${yearLimit}])$`
         )

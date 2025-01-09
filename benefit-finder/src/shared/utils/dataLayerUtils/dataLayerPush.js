@@ -1,4 +1,4 @@
-const dataLayerPush = (w, dataLayerObj, dedup = true) => {
+const dataLayerPush = (w, dataLayerObj, dedupe = true) => {
   const isObject = object => {
     return object != null && typeof object === 'object'
   }
@@ -34,8 +34,8 @@ const dataLayerPush = (w, dataLayerObj, dedup = true) => {
     delete lastItem['gtm.uniqueEventId']
     delete lastItem.eventCallback
 
-    if (dedup === true) {
-      // to prevent pushing duplicate objects unecessarily, as long as our last item doesn't match our current data obj, we push
+    if (dedupe === true) {
+      // to prevent pushing duplicate objects unnecessarily, as long as our last item doesn't match our current data obj, we push
       isDeepEqual(lastItem, dataLayerObj) === false &&
         w.dataLayer.push(dataLayerObj)
     } else {

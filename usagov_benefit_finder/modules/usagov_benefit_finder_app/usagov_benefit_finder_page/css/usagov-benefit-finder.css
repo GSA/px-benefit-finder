@@ -1,0 +1,8 @@
+/* usa-gov overrides */
+#main-content {
+  padding-bottom: 0;
+}
+
+footer.usa-footer--big {
+  padding-top: 0;
+}

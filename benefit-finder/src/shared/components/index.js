@@ -12,7 +12,7 @@ import Form from './Form'
 import Heading from './Heading'
 import Hint from './Hint'
 import Icon from './Icon'
-import KeyElegibilityCrieriaList from './KeyElegibilityCrieriaList'
+import KeyEligibilityCriteriaList from './KeyEligibilityCriteriaList'
 import Legend from './Legend'
 import Label from './Label'
 import Modal from './Modal'
@@ -47,7 +47,7 @@ export {
   Heading,
   Hint,
   Icon,
-  KeyElegibilityCrieriaList,
+  KeyEligibilityCriteriaList,
   Legend,
   Label,
   Modal,

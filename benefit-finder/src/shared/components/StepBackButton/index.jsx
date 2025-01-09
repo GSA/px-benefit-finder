@@ -7,7 +7,7 @@ import './_index.scss'
 /**
  * a functional component that supports backwards navigation in the step indicator component
  * @component
- * @param {React.ReactNode} children - inhertied child react nodes for label
+ * @param {React.ReactNode} children - inherited child react nodes for label
  * @param {function} onClick - inherited click function
  * @return {html} returns markup for a usa unstyled button
  */

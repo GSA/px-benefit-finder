@@ -8,7 +8,7 @@ import './_index.scss'
  * @param {array} data - an array of sections
  * @param {boolean} noHeadings - determinate to render headings or not
  * @param {number} current - inherited state, indicates index value
- * @param {boolean} setCurrent - inherited function to mangae index value
+ * @param {boolean} setCurrent - inherited function to manage index value
  * @param {func} handleCheckRequiredFields - inherited handler
  * @return {html} returns markup for a usa step indicator
  */
@@ -17,7 +17,7 @@ const StepIndicator = ({
   noHeadings,
   current,
   setCurrent,
-  handleCheckRequriedFields,
+  handleCheckRequiredFields,
 }) => {
   /**
    * a functional component that supports a11y for completed steps
@@ -92,7 +92,7 @@ const StepIndicator = ({
                     current={current}
                     setCurrent={setCurrent}
                     completed={isCompleted}
-                    handleCheckRequriedFields={handleCheckRequriedFields}
+                    handleCheckRequiredFields={handleCheckRequiredFields}
                   />
                 )
               })}

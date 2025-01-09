@@ -33,7 +33,7 @@ const Accordion = ({
     }
   })
   /**
-   * a hook that hanldes our open state of the accordion
+   * a hook that handles our open state of the accordion
    * @function
    * @return {boolean} returns true or false
    */

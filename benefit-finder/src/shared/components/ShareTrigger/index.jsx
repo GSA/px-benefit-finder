@@ -3,7 +3,7 @@ import { RouteContext } from '@/App'
 import { buildURIParameter } from '@utils'
 
 /**
- * a functional component that renders a button with copy-to-cipboard functionality
+ * a functional component that renders a button with copy-to-clipboard functionality
  * @component
  * @return {html} returns a semantic html button element with a custom function onClick event
  */
@@ -40,9 +40,11 @@ const ShareTrigger = ({ ui, data }) => {
 
   return (
     <a
-      href=""
+      tabIndex={0}
+      role="link"
       className="bf-share-trigger bf-usa-link usa-link"
       onClick={e => handleClick(e)}
+      onKeyDown={e => handleClick(e)}
       data-testid="bf-share-trigger"
     >
       {ui?.shareTrigger || 'Share'}

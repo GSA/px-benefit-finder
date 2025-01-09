@@ -1,5 +1,5 @@
 import * as utils from '../../support/utils'
-import * as BENEFITS_ELIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
+import * as BENEFITS_ELIGIBILITY_DATA from '../../fixtures/benefits-eligibility.json'
 
 const localePaths = {
   en: [
@@ -14,7 +14,7 @@ const localePaths = {
   ],
 }
 
-const handlerequest = ({ testLink, link }) => {
+const handleRequest = ({ testLink, link }) => {
   const url = testLink || link.prop('href')
   return cy
     .request({
@@ -39,7 +39,7 @@ const handlerequest = ({ testLink, link }) => {
 const validateErrorCodes = () => {
   // we verify site is alive and fail on 404 || 503
   cy.get('#benefit-finder a[href]').each(link => {
-    handlerequest({ link })
+    handleRequest({ link })
   })
 }
 
@@ -58,7 +58,6 @@ describe('Verify correct status code handling', () => {
   // negate validation on our functional code
   Cypress.on('fail', error => {
     if (JSON.stringify(error).includes('httpstat')) {
-       
       expect(error).to.not.be.undefined
     } else {
       throw error
@@ -66,23 +65,23 @@ describe('Verify correct status code handling', () => {
   })
 
   it(`handles 404 with an error`, () => {
-    handlerequest({ testLink: 'https://httpstat.us/404' })
+    handleRequest({ testLink: 'https://httpstat.us/404' })
   })
 
   it(`handles 503 with an error`, () => {
-    handlerequest({ testLink: 'https://httpstat.us/503' })
+    handleRequest({ testLink: 'https://httpstat.us/503' })
   })
 
   it(`handles 200 successfully`, () => {
-    handlerequest({ testLink: 'https://httpstat.us/200' })
+    handleRequest({ testLink: 'https://httpstat.us/200' })
   })
 
   it(`handles any 403 successfully`, () => {
-    handlerequest({ testLink: 'https://httpstat.us/403' })
+    handleRequest({ testLink: 'https://httpstat.us/403' })
   })
 
   it(`handles any other request successfully`, () => {
-    handlerequest({ testLink: 'https://httpstat.us/201' })
+    handleRequest({ testLink: 'https://httpstat.us/201' })
   })
 })
 
@@ -90,7 +89,7 @@ describe('Verify correct status code when user navigates links in each locales',
   localePaths.en.forEach(location => {
     it(`Verify success status code response for links in ${location.key} en page`, () => {
       validateLinks({
-        selectedData: BENEFITS_ELIBILITY_DATA[`${location.key}`].en.param,
+        selectedData: BENEFITS_ELIGIBILITY_DATA[`${location.key}`].en.param,
         path: `benefit-finder/${location.path}`,
       })
     })
@@ -99,7 +98,7 @@ describe('Verify correct status code when user navigates links in each locales',
   localePaths.es.forEach(location => {
     it(`Verify success status code response for links in ${location.key} es page`, () => {
       validateLinks({
-        selectedData: BENEFITS_ELIBILITY_DATA[`${location.key}`].en.param,
+        selectedData: BENEFITS_ELIGIBILITY_DATA[`${location.key}`].en.param,
         path: `es/buscador-beneficios/${location.path}`,
       })
     })

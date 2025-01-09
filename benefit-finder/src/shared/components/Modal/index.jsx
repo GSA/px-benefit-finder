@@ -46,8 +46,8 @@ const customStyles = {
  * @param {string} modalHeading - heading value
  * @param {string} navItemOneLabel - passed to button for nav item in modal
  * @param {string} navItemTwoLabel - passed to button for nav item in modal
- * @param {function} handleCheckRequriedFields - inherited async function to check validity of fields
- * @return {html} returns html for seting up a usa-modal component
+ * @param {function} handleCheckRequiredFields - inherited async function to check validity of fields
+ * @return {html} returns html for setting up a usa-modal component
  */
 const Modal = ({
   id,
@@ -58,7 +58,7 @@ const Modal = ({
   navItemOneFunction,
   navItemTwoLabel,
   navItemTwoFunction,
-  handleCheckRequriedFields,
+  handleCheckRequiredFields,
   dataLayerValue,
 }) => {
   // state
@@ -71,7 +71,7 @@ const Modal = ({
    * @function
    */
   const handleOpenModal = () => {
-    handleCheckRequriedFields().then(valid => valid && setModalOpen(valid))
+    handleCheckRequiredFields().then(valid => valid && setModalOpen(valid))
     window.scrollTo(0, 0)
   }
 
@@ -138,36 +138,13 @@ const Modal = ({
   }, [modalOpen])
 
   /**
-   * a functional component that renders a link as a button for launching our dialog
-   * @component
-   * @param {string} id - matches to modal control
-   * @param {string} triggerLabel - passed to button for triggering modal
-   * @return {html} returns an obfustacted anchor element
-   */
-  const Trigger = ({ triggerLabel, onKeyDown, onClick }) => {
-    return (
-      <ObfuscatedLink
-        onClick={onClick}
-        onKeyDown={onKeyDown}
-        noCarrot
-        tabIndex="0"
-        triggerRef={triggerRef}
-        aria-label="Continue"
-        role="button"
-      >
-        {triggerLabel}
-      </ObfuscatedLink>
-    )
-  }
-
-  /**
    * a functional component that renders a two links as a buttons for navigating out of the dialog
    * @component
    * @param {string} navItemOneLabel - passed to button for nav item in modal
    * @param {func} navItemOneFunction - passed to button for nav item in modal
    * @param {string} navItemOneLabel - passed to button for nav item in modal
    * @param {func} navItemTwoFunction - passed to button for nav item in modal
-   * @return {html} returns an obfustacted anchor element
+   * @return {html} returns an obfuscated anchor element
    */
   // similar to ButtonGroup but we need links for uswds to close modal, this item is default and conditional
   const GroupNavigation = ({
@@ -225,11 +202,17 @@ const Modal = ({
 
   return (
     <div id={id} className="bf-usa-modal-group">
-      <Trigger
-        triggerLabel={triggerLabel}
-        onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}
+      <ObfuscatedLink
         onClick={() => handleOpenModal()}
-      ></Trigger>
+        onKeyDown={e => handleKeyValidation(e) && handleOpenModal()}
+        noCarrot
+        tabIndex="0"
+        triggerRef={triggerRef}
+        aria-label="Continue"
+        role="button"
+      >
+        {triggerLabel}
+      </ObfuscatedLink>
       <NavModal
         id="benefit-finder-modal"
         isOpen={modalOpen}
@@ -276,7 +259,7 @@ Modal.propTypes = {
   navItemOneFunction: PropTypes.func,
   navItemTwoLabel: PropTypes.string,
   navItemTwoFunction: PropTypes.func,
-  handleCheckRequriedFields: PropTypes.func,
+  handleCheckRequiredFields: PropTypes.func,
 }
 
 export default Modal

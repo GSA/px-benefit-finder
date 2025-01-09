@@ -7,12 +7,12 @@ const useResetElement = () => {
    * @return {React.ref} returns ref element
    */
 
-  // example useage
+  // example use
   // assign hook to const
 
   // const resetElement = useResetElement()
 
-  // foucus element as needed in an effect or synthetic event
+  // focus element as needed in an effect or synthetic event
 
   // useEffect(() => {
   //   resetElement.current?.focus()

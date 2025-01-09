@@ -20,7 +20,7 @@
       "iconAlt": "Importante",
       "list": [
         {
-          "notice": "<div><p><strong>Esto no es una aplicación. Necesita presentar una solicitud</strong> con cada agencia.</p><p>No guardamos ni compartimos sus respuestas con ninguna agencia.</p></div>"
+          "notice": "<div><p><strong>Esto no es una aplicación. Necesita presentar una solicitud</strong> con cada agencia.</p><p><strong>No guardamos ni compartimos sus respuestas</strong> con ninguna agencia.</p></div>"
         }
       ]
     },
@@ -165,7 +165,7 @@
       "emailTrigger": "Envie sus resultados por correo electrónico",
       "shareLinkContent": "Copiado",
       "emailSubject": "Resultados del buscador de beneficios de USAGov",
-      "description": "Copie o envíe sus resultados. Sus respuestas serán visibles. Solo comparta con quienes usted confíe."
+      "description": "Copie o envíe sus resultados. Sus respuestas serán visibles. <strong>Solo comparta con quienes usted confíe</strong>."
     }
   },
   "shareResults": {

@@ -12,7 +12,7 @@ import './_index.scss'
  * @param {string} id - inherited string value for id specificity
  * @param {array} invalid - inherited boolean value to manage error state
 
- * @return {Date} returns a tandard format Date ie 1995-12-17T03:24:00
+ * @return {Date} returns a standard format Date ie 1995-12-17T03:24:00
  */
 const Date = ({
   onChange,

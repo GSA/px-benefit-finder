@@ -28,7 +28,7 @@ function usagov_benefit_finder_content_form_alter(&$form, &$form_state, $form_id
           $form['field_b_eligibility']['widget'][$i]['subform']['field_b_criteria_key']['widget']['#options'];
       }
       $i++;
-    } while ($i > 0);
+    } while (TRUE);
   }
 }
 

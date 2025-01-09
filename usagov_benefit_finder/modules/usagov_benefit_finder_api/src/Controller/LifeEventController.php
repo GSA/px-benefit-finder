@@ -85,7 +85,7 @@ class LifeEventController extends ControllerBase {
    *   The entity type manager.
    * @param \Drupal\Core\File\FileSystemInterface $file_system
    *   The file system service.
-   * @param \Drupal\file\FileRepositoryInterface|null $file_repository
+   * @param \Drupal\file\FileRepositoryInterface $file_repository
    *   The file repository.
    * @param \Drupal\Core\File\FileUrlGeneratorInterface $file_url_generator
    *   The file URL generator.

@@ -11,8 +11,6 @@ drush cim --partial --source=modules/custom/usagov_benefit_finder/configuration 
 drush cr
 ### USER_PASSWORD_RESET_PLACEHOLDER ###
 drush state:set system.maintenance_mode 0 -y
-# drush pm:uninstall usagov_login --strict=0
-drush pm-list --type=module usagov_login --pipe | grep -q "^usagov_login " && drush pm-uninstall -y usagov_login || echo "Module 'usagov_login' does not exist. Skipping uninstallation."
+drush pm:uninstall usagov_login --strict=0 || true
+#drush pm-list --type=module --status=enabled | grep -q "usagov_login " && drush pm-uninstall -y usagov_login || echo "Module 'usagov_login' does not exist. Skipping uninstallation."
 echo "Post deploy finished!"
-
-

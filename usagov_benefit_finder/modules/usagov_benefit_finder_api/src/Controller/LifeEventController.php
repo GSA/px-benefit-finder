@@ -67,9 +67,9 @@ class LifeEventController extends ControllerBase {
   /**
    * The display data control variable.
    *
-   * @var string
+   * @var bool
    */
-  protected $displayData;
+  protected bool $displayData;
 
   /**
    * The benefit finder content mode.

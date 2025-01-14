@@ -6,6 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\File\FileExists;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\File\FileUrlGeneratorInterface;
 use Drupal\file\FileRepositoryInterface;
@@ -161,7 +162,7 @@ class LifeEventController extends ControllerBase {
 
     // Write JSON data file.
     $filename = "$directory/$id.json";
-    $this->fileRepository->writeData($data, $filename, FileSystemInterface::EXISTS_REPLACE);
+    $this->fileRepository->writeData($data, $filename, FileExists::Replace);
 
     $fileUrlString = $this->fileUrlGenerator->generate($filename)->toString();
 

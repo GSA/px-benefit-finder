@@ -83,8 +83,6 @@ const Modal = ({
   const handleCloseModal = triggerRef => {
     // focus the trigger if it is still in the DOM
     triggerRef && triggerRef.current.focus()
-    // clear the hash
-    window.location.hash = ''
     window.scrollTo(0, 0)
     scrollLock.disableScroll()
     setModalOpen(false)

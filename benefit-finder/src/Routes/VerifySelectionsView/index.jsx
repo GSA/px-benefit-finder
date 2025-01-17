@@ -126,7 +126,10 @@ const VerifySelectionsView = ({ ui, data }) => {
   }, [])
 
   return (
-    <div className="bf-verify-selections-view">
+    <div
+      className="bf-verify-selections-view"
+      data-testid="bf-verify-selections-view"
+    >
       <div className="bf-grid-container grid-container">
         <Heading className="bf-section-heading" headingLevel={1}>
           {verifySelectionsView?.heading}

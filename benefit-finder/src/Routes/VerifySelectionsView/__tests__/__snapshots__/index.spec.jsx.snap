@@ -4,6 +4,7 @@ exports[`VerifySelectionsView > renders a match to the previous snapshot 1`] = `
 <DocumentFragment>
   <div
     class="bf-verify-selections-view"
+    data-testid="bf-verify-selections-view"
   >
     <div
       class="bf-grid-container grid-container"

@@ -114,6 +114,10 @@ class PageObjects {
     return cy.get('[data-testid="zero-benefits-view-cta-button"]')
   }
 
+  verifySelectionsView() {
+    return cy.get('[data-testid="bf-verify-selections-view"]')
+  }
+
   zeroBenefitsViewHeading() {
     return cy.get('[data-testid="zero-benefits-view-heading"]')
   }

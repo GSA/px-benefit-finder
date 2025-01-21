@@ -25,7 +25,7 @@ trait BenefitFinderTrait {
    *   The Life Event ID.
    * @param string $mode
    *   The benefit finder content mode.
-   * @return NodeInterface
+   * @return NodeInterface|NULL
    *   The life event node.
    */
   public function getLifeEventById($id, $mode) {
@@ -49,7 +49,7 @@ trait BenefitFinderTrait {
    *   The Life Event form ID.
    * @param string $mode
    *   The benefit finder content mode.
-   * @return NodeInterface
+   * @return NodeInterface|NULL
    *   The life event form node.
    */
   public function getLifeEventFormById($id, $mode) {
@@ -99,7 +99,7 @@ trait BenefitFinderTrait {
    *   The agency node ID.
    * @param string $mode
    *   The benefit finder content mode.
-   * @return NodeInterface
+   * @return NodeInterface|NULL
    *   The agency node.
    */
   public function getAgency($nid, $mode) {
@@ -113,7 +113,7 @@ trait BenefitFinderTrait {
    *   The criteria node ID.
    * @param string $mode
    *   The benefit finder content mode.
-   * @return NodeInterface
+   * @return NodeInterface|NULL
    *   The criteria node.
    */
   public function getCriteria($nid, $mode) {
@@ -127,7 +127,7 @@ trait BenefitFinderTrait {
    *   The benefit node ID.
    * @param string $mode
    *   The benefit finder content mode.
-   * @return NodeInterface
+   * @return NodeInterface|NULL
    *   The benefit node.
    */
   public function getBenefit($nid, $mode) {
@@ -141,7 +141,7 @@ trait BenefitFinderTrait {
    *   The life event form node ID.
    * @param string $mode
    *   The benefit finder content mode.
-   * @return NodeInterface
+   * @return NodeInterface|NULL
    *   The life event form node.
    */
   public function getLifeEventForm($nid, $mode) {
@@ -155,7 +155,7 @@ trait BenefitFinderTrait {
    *   The node ID.
    * @param string $mode
    *   The benefit finder content mode.
-   * @return EntityInterface|NodeInterface
+   * @return EntityInterface|NodeInterface|NULL
    *   The node revision entity.
    */
   public function getNode($nid, $mode) {

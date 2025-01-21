@@ -312,9 +312,7 @@ class LifeEventController extends ControllerBase {
 
     // Build benefits.
     foreach ($benefit_nodes as $benefit_node) {
-      if (!empty($benefit_node)) {
-        $benefits[]["benefit"] = $this->buildBenefit($benefit_node);
-      }
+      $benefits[]["benefit"] = $this->buildBenefit($benefit_node);
     }
 
     // Encode JSON data.

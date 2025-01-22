@@ -304,11 +304,31 @@ function Value = ({ children }) => (<div className="wrapper">{children}</div>)
 
 #### **5. Testing**
 
+##### Vitest for unit/DOM testing
+
 We use [Vitest](https://vitest.dev/) for Unit/DOM testing
 
 ```sh
 npm run test
 ```
+
+##### Cypress for UI E2E Test
+
+```bash
+npm run cy:run:e2e
+```
+
+**Description:**
+Runs the end-to-end (E2E) tests in the test environment using the Chrome browser.
+
+```bash
+npm run cy:run:prod:links:e2e
+```
+
+**Description:**
+Runs the E2E tests using the production configuration for testing links, with the Chrome browser.
+
+For more information, refer to the [Cypress Documentation](https://docs.cypress.io).
 
 <br>
 

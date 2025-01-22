@@ -1,7 +1,7 @@
 import { useEffect, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router'
 import { RouteContext } from '@/App'
-import { dataLayerUtils, politeTitles } from '@utils'
+import { dataLayerUtils, a11yTitles } from '@utils'
 import { useScrollToAnchor } from '@hooks'
 import PropTypes from 'prop-types'
 import {
@@ -51,7 +51,7 @@ const Intro = ({ content, ui, hasQueryParams }) => {
         event: intro.event,
         bfData: { pageView: intro.bfData.pageView, viewTitle: title },
       })
-    politeTitles(title)
+    a11yTitles(title)
   }, [hasQueryParams])
 
   return (

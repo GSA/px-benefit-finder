@@ -1,4 +1,4 @@
-const politeTitles = (location, locale) => {
+const a11yTitles = (location, locale) => {
   // create a hidden liveRegion to announce titles to screen-readers
   const liveRegion = document.getElementById('live-region')
 
@@ -29,4 +29,4 @@ const politeTitles = (location, locale) => {
   return
 }
 
-export default politeTitles
+export default a11yTitles

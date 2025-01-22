@@ -1,6 +1,6 @@
 import parseDate from '../index'
 
-let mockLocal
+let mockLocale
 const dateFormatOptions = {
   year: 'numeric',
   month: 'long',
@@ -18,17 +18,17 @@ const expectedEnValue = 'January 22, 2022'
 const expectedEsValue = '22 de enero de 2022'
 
 describe('test parseDate utility', () => {
-  it('returns a localized string from a date value based on local', () => {
-    mockLocal = 'en'
+  it('returns a localized string from a date value based on locale', () => {
+    mockLocale = 'en'
 
     expect(
-      parseDate(selectedValue).toLocaleDateString(mockLocal, dateFormatOptions)
+      parseDate(selectedValue).toLocaleDateString(mockLocale, dateFormatOptions)
     ).toBe(expectedEnValue)
 
-    mockLocal = 'es'
+    mockLocale = 'es'
 
     expect(
-      parseDate(selectedValue).toLocaleDateString(mockLocal, dateFormatOptions)
+      parseDate(selectedValue).toLocaleDateString(mockLocale, dateFormatOptions)
     ).toBe(expectedEsValue)
   })
 })

@@ -5,7 +5,7 @@ import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
-import { dataLayerUtils, handleSurvey, domReady } from '@utils'
+import { dataLayerUtils, handleSurvey, domReady, politeTitles } from '@utils'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
 
@@ -32,6 +32,7 @@ const ResultsView = ({
   const navigate = useNavigate()
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
+  const locale = apiCalls.GET.Language()
 
   /**
    * a hook that handles our open state of the accordions in our group
@@ -105,6 +106,7 @@ const ResultsView = ({
           ...eligibilityCount,
         },
       })
+    politeTitles(location.pathname, locale)
   }, [notEligibleView, eligibilityCount])
 
   useEffect(() => {

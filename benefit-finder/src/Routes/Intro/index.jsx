@@ -1,7 +1,7 @@
 import { useEffect, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router'
 import { RouteContext } from '@/App'
-import { dataLayerUtils } from '@utils'
+import { dataLayerUtils, politeTitles } from '@utils'
 import { useResetElement } from '@hooks'
 import PropTypes from 'prop-types'
 import {
@@ -52,6 +52,7 @@ const Intro = ({ content, ui, hasQueryParams }) => {
         event: intro.event,
         bfData: { pageView: intro.bfData.pageView, viewTitle: title },
       })
+    politeTitles(title)
   }, [hasQueryParams])
 
   return (

@@ -2,7 +2,7 @@ import { useEffect, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router'
 import PropTypes from 'prop-types'
 import { RouteContext } from '@/App'
-import { parseDate, dataLayerUtils, handleSurvey } from '@utils'
+import { parseDate, dataLayerUtils, handleSurvey, politeTitles } from '@utils'
 import { useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import { Heading, Button } from '@components'
@@ -19,7 +19,7 @@ import './_index.scss'
 const VerifySelectionsView = ({ ui, data }) => {
   const { verifySelectionsView, buttonGroup } = ui
   const { verifySelections } = dataLayerUtils.dataLayerStructure
-  const local = apiCalls.GET.Language()
+  const locale = apiCalls.GET.Language()
   const dateFormatOptions = {
     year: 'numeric',
     month: 'long',
@@ -63,7 +63,7 @@ const VerifySelectionsView = ({ ui, data }) => {
         <div className="bf-verify-criteria-legend">{legend}</div>
         {typeof selected?.value === 'object'
           ? `${parseDate(selected.value).toLocaleDateString(
-              local,
+              locale,
               dateFormatOptions
             )}`
           : selected?.value}
@@ -118,6 +118,7 @@ const VerifySelectionsView = ({ ui, data }) => {
         viewTitle: verifySelectionsView?.heading,
       },
     })
+    politeTitles(location.pathname, locale)
   }, [])
 
   useEffect(() => {

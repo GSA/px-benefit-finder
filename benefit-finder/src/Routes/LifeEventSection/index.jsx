@@ -9,6 +9,7 @@ import {
   dataLayerUtils,
   errorHandling,
   handleSurvey,
+  politeTitles,
 } from '@utils'
 import { useHandleUnload, useResetElement } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
@@ -51,6 +52,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   const resetElement = useResetElement()
   const ROUTES = useContext(RouteContext)
   const navigate = useNavigate()
+  const locale = apiCalls.GET.Language()
 
   let location = useLocation() // ignore prefer-const
 
@@ -262,6 +264,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
         viewTitle: data[index]?.section.heading,
       },
     })
+    politeTitles(location.pathname, locale)
     resetElement.current?.focus()
     window.scrollTo(0, 0)
   }, [location])

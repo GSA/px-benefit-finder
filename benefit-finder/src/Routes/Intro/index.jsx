@@ -2,7 +2,7 @@ import { useEffect, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router'
 import { RouteContext } from '@/App'
 import { dataLayerUtils, politeTitles } from '@utils'
-import { useResetElement } from '@hooks'
+import { useScrollToAnchor } from '@hooks'
 import PropTypes from 'prop-types'
 import {
   Button,
@@ -26,14 +26,13 @@ const Intro = ({ content, ui, hasQueryParams }) => {
   const { timeEstimate, title, summary } = content
   const { heading, timeIndicator, steps, notices, button } = ui
   const { intro } = dataLayerUtils.dataLayerStructure
-  const resetElement = useResetElement()
   const ROUTES = useContext(RouteContext)
   const navigate = useNavigate()
   const location = useLocation()
+  useScrollToAnchor(location)
 
   const handleStep = () => {
     navigate(`/${ROUTES.indexPath}/${ROUTES.formPaths[0]}`)
-    resetElement.current.focus()
   }
 
   // if we have query parameters direct user to the results page

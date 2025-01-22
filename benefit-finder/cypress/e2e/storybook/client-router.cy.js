@@ -29,7 +29,7 @@ const reviewYourSelections =
   EN_LOCALE_DATA.reviewSelectionModal.buttonGroup[0].value
 
 describe('Client Router Tests', () => {
-  it("Should render the Intro component at '/death/' life event", () => {
+  it("Should render the Intro component at '/death' life event", () => {
     cy.visit(utils.storybookUri)
     pageObjects
       .button()

@@ -5,7 +5,7 @@ import { useResetElement, useScrollToAnchor } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
-import { dataLayerUtils, handleSurvey, domReady, politeTitles } from '@utils'
+import { dataLayerUtils, handleSurvey, domReady, a11yTitles } from '@utils'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
 
@@ -67,6 +67,7 @@ const ResultsView = ({
   useEffect(() => {
     !location.hash && resetElement.current?.focus()
     !location.hash && window.scrollTo(0, 0)
+    a11yTitles(location.pathname, locale)
     setExpandAll(false)
   }, [location])
 
@@ -103,7 +104,7 @@ const ResultsView = ({
           ...eligibilityCount,
         },
       })
-    politeTitles(location.pathname, locale)
+    a11yTitles(location.pathname, locale)
   }, [notEligibleView, eligibilityCount])
 
   useEffect(() => {

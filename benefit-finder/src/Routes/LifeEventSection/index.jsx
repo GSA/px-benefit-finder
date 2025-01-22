@@ -9,7 +9,7 @@ import {
   dataLayerUtils,
   errorHandling,
   handleSurvey,
-  politeTitles,
+  a11yTitles,
 } from '@utils'
 import { useHandleUnload, useResetElement, useScrollToAnchor } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
@@ -266,7 +266,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
         viewTitle: data[index]?.section.heading,
       },
     })
-    politeTitles(location.pathname, locale)
+    a11yTitles(location.pathname, locale)
     !location.hash && resetElement.current?.focus()
     !location.hash && window.scrollTo(0, 0)
   }, [location])

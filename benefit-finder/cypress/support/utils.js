@@ -1,5 +1,4 @@
 import { pageObjects } from './pageObjects'
-import * as EN_LOCALE_DATA from '../../../benefit-finder/src/shared/locales/en/en.json'
 
 export function filterDataLayerByEvent(eventName) {
   return cy.window().then(window => {

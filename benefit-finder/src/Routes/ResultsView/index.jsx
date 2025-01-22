@@ -6,6 +6,7 @@ import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
 import { dataLayerUtils, handleSurvey, domReady, a11yTitles } from '@utils'
+import { Banner } from '@components'
 
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
 
@@ -29,11 +30,11 @@ const ResultsView = ({
   const [eligibilityCount, setEligibilityCount] = useState(null)
   const [zeroBenefitsResult, setZeroBenefitsResult] = useState(null)
   const { resultsView } = dataLayerUtils.dataLayerStructure
+  const { eligible, notEligible, zeroBenefits } = ui
   const navigate = useNavigate()
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
   const locale = apiCalls.GET.Language()
-  useScrollToAnchor(location)
 
   /**
    * a hook that handles our open state of the accordions in our group
@@ -43,6 +44,7 @@ const ResultsView = ({
   const [isExpandAll, setExpandAll] = useState(false)
 
   const resetElement = useResetElement()
+  useScrollToAnchor(location)
 
   // some data-test values
   // how many questions were values provided for
@@ -62,6 +64,10 @@ const ResultsView = ({
       ? navigate(-1)
       : navigate(`/${ROUTES.indexPath}/${ROUTES.resultsPaths.notEligiblePath}`)
   }
+
+  useEffect(() => {
+    resetElement.current?.focus()
+  }, [resetElement])
 
   // handle location change
   useEffect(() => {
@@ -133,6 +139,25 @@ const ResultsView = ({
       data-testid="bf-result-view"
       {...testAttributes}
     >
+      <Banner
+        heading={
+          notEligibleView === false
+            ? (zeroBenefitsResult && zeroBenefits?.eligible.banner.heading) ||
+              eligible?.banner.heading
+            : (zeroBenefitsResult &&
+                zeroBenefits?.notEligible.banner.heading) ||
+              notEligible?.banner.heading
+        }
+        description={
+          notEligibleView === false
+            ? (zeroBenefitsResult &&
+                zeroBenefits?.eligible.banner.description) ||
+              eligible?.banner.description
+            : (zeroBenefitsResult &&
+                zeroBenefits?.notEligible.banner.description) ||
+              notEligible?.banner.description
+        }
+      />
       <Results
         notEligibleView={notEligibleView}
         zeroBenefitsResult={zeroBenefitsResult}
@@ -141,7 +166,6 @@ const ResultsView = ({
         isExpandAll={isExpandAll}
         setExpandAll={setExpandAll}
         relevantBenefits={relevantBenefits}
-        resetElement={resetElement}
         data={data}
         ui={ui}
       />

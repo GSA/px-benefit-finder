@@ -42,7 +42,7 @@ describe('Client Router Tests', () => {
     cy.navigateToAboutTheApplicantPage()
   })
 
-  it("should navigate to 'death/verify-selections' and render VerifySelectionsView", () => {
+  it("should navigate to '/death/verify-selections' and render VerifySelectionsView", () => {
     cy.visit(utils.storybookUri)
     cy.navigateToModal({
       dateOfBirth,

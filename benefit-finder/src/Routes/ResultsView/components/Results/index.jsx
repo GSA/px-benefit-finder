@@ -7,7 +7,6 @@ import {
   Button,
   EmailTrigger,
   Heading,
-  Banner,
   ShareTrigger,
   RelativeBenefitList,
 } from '@components'
@@ -35,30 +34,6 @@ const Results = ({
   const ROUTES = useContext(RouteContext)
   const navigate = useNavigate()
   // Results view components
-  const ResultsBannerBlock = ({ notEligibleView, zeroBenefitsResult, ui }) => {
-    const { eligible, notEligible, zeroBenefits } = ui
-    return (
-      <Banner
-        heading={
-          notEligibleView === false
-            ? (zeroBenefitsResult && zeroBenefits?.eligible.banner.heading) ||
-              eligible?.banner.heading
-            : (zeroBenefitsResult &&
-                zeroBenefits?.notEligible.banner.heading) ||
-              notEligible?.banner.heading
-        }
-        description={
-          notEligibleView === false
-            ? (zeroBenefitsResult &&
-                zeroBenefits?.eligible.banner.description) ||
-              eligible?.banner.description
-            : (zeroBenefitsResult &&
-                zeroBenefits?.notEligible.banner.description) ||
-              notEligible?.banner.description
-        }
-      />
-    )
-  }
 
   const ResultsHeadingBlock = ({ zeroBenefitsResult, notEligibleView, ui }) => {
     const { notEligible, eligible, summaryBox, zeroBenefits } = ui
@@ -187,11 +162,6 @@ const Results = ({
 
   return (
     <>
-      <ResultsBannerBlock
-        notEligibleView={notEligibleView}
-        zeroBenefitsResult={zeroBenefitsResult}
-        ui={ui}
-      />
       <div
         className="bf-grid-container grid-container"
         data-testid="bf-results-view"

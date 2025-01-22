@@ -11,7 +11,7 @@ import {
   handleSurvey,
   politeTitles,
 } from '@utils'
-import { useHandleUnload, useResetElement } from '@hooks'
+import { useHandleUnload, useResetElement, useScrollToAnchor } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import {
   Alert,
@@ -55,6 +55,8 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   const locale = apiCalls.GET.Language()
 
   let location = useLocation() // ignore prefer-const
+
+  useScrollToAnchor(location)
 
   /**
    * Finds the index of the current form step in the data array.
@@ -265,14 +267,14 @@ const LifeEventSection = ({ data, handleData, ui }) => {
       },
     })
     politeTitles(location.pathname, locale)
-    resetElement.current?.focus()
-    window.scrollTo(0, 0)
+    !location.hash && resetElement.current?.focus()
+    !location.hash && window.scrollTo(0, 0)
   }, [location])
 
   useEffect(() => {
     errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
-    resetElement.current?.focus()
-    window.scrollTo(0, 0)
+    !location.hash && resetElement.current?.focus()
+    !location.hash && window.scrollTo(0, 0)
   }, [formStep])
 
   useEffect(() => {

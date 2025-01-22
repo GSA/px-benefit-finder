@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router'
 import PropTypes from 'prop-types'
 import { RouteContext } from '@/App'
 import { parseDate, dataLayerUtils, handleSurvey, politeTitles } from '@utils'
-import { useResetElement } from '@hooks'
+import { useResetElement, useScrollToAnchor } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import { Heading, Button } from '@components'
 
@@ -29,6 +29,7 @@ const VerifySelectionsView = ({ ui, data }) => {
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
   const resetElement = useResetElement()
+  useScrollToAnchor(location)
 
   /**
    * a functional component that renders markup when no value has been given
@@ -105,8 +106,8 @@ const VerifySelectionsView = ({ ui, data }) => {
   }
 
   useEffect(() => {
-    resetElement.current?.focus()
-    window.scrollTo(0, 0)
+    !location.hash && resetElement.current?.focus()
+    !location.hash && window.scrollTo(0, 0)
   }, [location])
 
   // handle dataLayer

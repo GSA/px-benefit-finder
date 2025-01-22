@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router'
 import { RouteContext } from '@/App'
-import { useResetElement } from '@hooks'
+import { useResetElement, useScrollToAnchor } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import PropTypes from 'prop-types'
 import { Results } from './components/index'
@@ -33,6 +33,7 @@ const ResultsView = ({
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
   const locale = apiCalls.GET.Language()
+  useScrollToAnchor(location)
 
   /**
    * a hook that handles our open state of the accordions in our group
@@ -42,10 +43,6 @@ const ResultsView = ({
   const [isExpandAll, setExpandAll] = useState(false)
 
   const resetElement = useResetElement()
-
-  useEffect(() => {
-    resetElement.current?.focus()
-  }, [resetElement])
 
   // some data-test values
   // how many questions were values provided for
@@ -68,8 +65,8 @@ const ResultsView = ({
 
   // handle location change
   useEffect(() => {
-    resetElement.current?.focus()
-    window.scrollTo(0, 0)
+    !location.hash && resetElement.current?.focus()
+    !location.hash && window.scrollTo(0, 0)
     setExpandAll(false)
   }, [location])
 

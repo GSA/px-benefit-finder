@@ -7,7 +7,6 @@ import PropTypes from 'prop-types'
 import { Results } from './components/index'
 import { dataLayerUtils, handleSurvey, domReady, a11yTitles } from '@utils'
 import { Banner } from '@components'
-
 // Results View is a single view with three states, eligible, not eligible, and zero benefits
 
 /**

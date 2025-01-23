@@ -16,6 +16,12 @@ exports[`loads intro 1`] = `
       id="death"
     >
       <div
+        aria-live="assertive"
+        class="usa-sr-only"
+        id="a11y-titles"
+        tabindex="-1"
+      />
+      <div
         class="bf-intro"
       >
         <div

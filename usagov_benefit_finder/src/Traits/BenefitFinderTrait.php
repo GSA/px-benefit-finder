@@ -159,6 +159,9 @@ trait BenefitFinderTrait {
    *   The node revision entity.
    */
   public function getNode($nid, $mode) {
+    /** @var \Drupal\Core\Entity\Query\QueryInterface|null $query */
+    $query = NULL;
+
     $node = Node::load($nid);
 
     if (!$node) {

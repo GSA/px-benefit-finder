@@ -509,10 +509,66 @@ const LifeEventSection = ({ data, handleData, ui }) => {
                      * @return {boolean} returns true or false
                      */
 
+                    const checkDateDependency = value => {
+                      const dateObj = { month: 0, day: 0, year: 0 }
+                      const dateValues = value?.value
+
+                      if (dateValues === undefined) {
+                        return true
+                      }
+
+                      const dateKeys = Object.keys(dateObj)
+                      const valuesKeys = Object.keys(dateValues)
+
+                      // check to ensure all keys and values for date obj are present
+                      if (dateKeys.length !== valuesKeys.length) {
+                        return true
+                      } else {
+                        for (const key of dateKeys) {
+                          const value = dateValues[key]
+
+                          if (value === undefined || value < 0) {
+                            return true
+                          }
+
+                          if (
+                            dateValues.year !== undefined &&
+                            dateValues.year.length < 4
+                          ) {
+                            return true
+                          }
+                        }
+
+                        return !apiCalls.UTILS.DateEligibility({
+                          selectedValue: selectedParentValue.value,
+                          conditional:
+                            item.fieldset.inputs[0].inputCriteria
+                              .childDependencyOption,
+                        })
+                      }
+                    }
+
+                    const checkFieldDependencies = value => {
+                      return (
+                        value?.value !==
+                        item.fieldset.inputs[0].inputCriteria
+                          .childDependencyOption
+                      )
+                    }
+
                     const hidden =
-                      selectedParentValue?.value !==
-                      item.fieldset.inputs[0].inputCriteria
-                        .childDependencyOption
+                      item.fieldset.inputs[0].inputCriteria.type === 'Date'
+                        ? checkDateDependency(selectedParentValue)
+                        : checkFieldDependencies(selectedParentValue)
+                    // const hidden = checkDateDependency(selectedParentValue)
+                    // const hidden = checkFieldDependencies(selectedParentValue)
+
+                    // const hidden =
+                    //   selectedParentValue?.value !==
+                    //   item.fieldset.inputs[0].inputCriteria
+                    //     .childDependencyOption
+
+                    // console.log('hidden', hidden)
 
                     return hidden
                   }

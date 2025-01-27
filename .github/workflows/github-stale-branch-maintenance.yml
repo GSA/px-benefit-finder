@@ -71,14 +71,45 @@ jobs:
 
       - name: Create PR for Stale Branches
         env:
-          branches: ${{ steps.stale-branches.outputs.branches}}
-          GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
-          Tech_Lead: "${{ vars.TECH_LEAD }}"
+          branches: ${{ steps.stale-branches.outputs.branches }}
+          GITHUB_TOKEN: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          Tech_Lead: ${{ vars.TECH_LEAD }}
         run: |
           branches=( ${branches} )
           for branch in "${branches[@]}"; do
             git fetch --all
             git checkout ${branch}
             git branch --show-current
-            gh pr create --base "main" --head ${branch} --title  "[Stale Branch] - Please review this stale branch: ${branch}" --assignee ${{ env.Tech_Lead }} --reviewer ${{ env.Tech_Lead }} --body "Hi @${{ env.Tech_Lead }} This PR is ready for your review! This branch has been stale. Thank you! IF the branch is still needed, 1). Update branch and 2.) Close PR. Otherwise, IF the branch is not needed delete branch."
+
+          # Check if a PR with [Stale Branch] in the title already exists for this branch
+          existing_pr=$(gh pr list --state open --base main --head ${branch} --json title,url --jq '.[] | select(.title | contains("[Stale Branch]")) | .url')
+
+          if [[ -n "$existing_pr" ]]; then
+            echo "A stale branch pull request for '${branch}' already exists: $existing_pr"
+            continue
+          fi
+
+          # Create the PR if no [Stale Branch] PR exists
+          gh pr create --base "main" --head ${branch} \
+            --title  "[Stale Branch] - Please review this stale branch: ${branch}" \
+            --assignee ${{ env.Tech_Lead }} --reviewer ${{ env.Tech_Lead }} \
+            --body "Hi @${{ env.Tech_Lead }}, this PR is ready for your review! This branch has been stale. Thank you! 
+                    IF the branch is still needed:
+                    1) Update branch 
+                    2) Close PR. 
+                    Otherwise, IF the branch is not needed delete branch."
           done
+
+      # - name: Create PR for Stale Branches
+      #   env:
+      #     branches: ${{ steps.stale-branches.outputs.branches}}
+      #     GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+      #     Tech_Lead: "${{ vars.TECH_LEAD }}"
+      #   run: |
+      #     branches=( ${branches} )
+      #     for branch in "${branches[@]}"; do
+      #       git fetch --all
+      #       git checkout ${branch}
+      #       git branch --show-current
+      #       gh pr create --base "main" --head ${branch} --title  "[Stale Branch] - Please review this stale branch: ${branch}" --assignee ${{ env.Tech_Lead }} --reviewer ${{ env.Tech_Lead }} --body "Hi @${{ env.Tech_Lead }} This PR is ready for your review! This branch has been stale. Thank you! IF the branch is still needed, 1). Update branch and 2.) Close PR. Otherwise, IF the branch is not needed delete branch."
+      #     done

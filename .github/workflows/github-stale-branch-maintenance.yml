@@ -2,58 +2,83 @@ name: Stale Branches
 
 on:
   workflow_dispatch:
-# Runs on Mondays at 4 am
+  # Runs on Mondays at 4 am
   schedule:
-    - cron: '0 4 * * 1'
-    
+    - cron: "0 4 * * 1"
+
 permissions:
   issues: write
   contents: write
-
 
 jobs:
   stale-branch-cleanup:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: stale-branches
-      id: stale-branches
-      shell: bash
-      run: |
-        STALE_THRESHOLD_DAYS=90
-        # Make a list of all branches       
-        git fetch --all --prune 
-        output=($(git branch -r |  grep -v "main\|release" | xargs echo -n ))
+      - name: stale-branches
+        id: stale-branches
+        shell: bash
+        run: |
+          STALE_THRESHOLD_DAYS=90
+          # Fetch all branches and prune deleted ones
+          git fetch --all --prune
+          # Filter out symbolic references like "HEAD -> main"
+          output=($(git branch -r | grep -v "main\|release\|HEAD ->" | xargs echo -n))
 
-        branches=""
-        for branch in "${output[@]}"; do 
-          echo "checking branch: ${branch}"
-          now=$(date +'%s')
-          commit_time=$(git log -1 --date=raw ${branch} | grep ^Date | awk '{print $2}')
-          commit_days=$(( (${now} - ${commit_time}) / 86400 ))
-          echo "Branch: $branch, Age: $commit_days days"
+          branches=""
+          for branch in "${output[@]}"; do 
+            echo "checking branch: ${branch}"
+            now=$(date +'%s')
+            commit_time=$(git log -1 --date=raw ${branch} | grep ^Date | awk '{print $2}')
+            commit_days=$(( (${now} - ${commit_time}) / 86400 ))
+            echo "Branch: $branch, Age: $commit_days days"
 
           # Check if the branch is stale
           if [[ ${commit_days} -gt ${STALE_THRESHOLD_DAYS} ]]; then
               branch_name=$(echo $branch | sed 's/origin\///g')
               branches="${branches} ${branch_name}"
           fi
-        done
-        echo "branches=$(echo ${branches} | xargs )">>$GITHUB_OUTPUT
+          done
+          echo "branches=$(echo ${branches} | xargs )">>$GITHUB_OUTPUT
 
-    - name: Create PR for Stale Branches
-      env:
-        branches: ${{ steps.stale-branches.outputs.branches}}
-        GITHUB_TOKEN: '${{ secrets.ADD_TO_PROJECT_PAT }}'
-        Tech_Lead: '${{ vars.TECH_LEAD }}'
-      run: |
-        branches=( ${branches} )
-        for branch in "${branches[@]}"; do
-          git fetch --all
-          git checkout ${branch}
-          git branch --show-current
-          gh pr create --base "main" --head ${branch} --title  "[Stale Branch] - Please review this stale branch: ${branch}" --assignee ${{ env.Tech_Lead }} --reviewer ${{ env.Tech_Lead }} --body "Hi @${{ env.Tech_Lead }} This PR is ready for your review! This branch has been stale. Thank you! IF the branch is still needed, 1). Update branch and 2.) Close PR. Otherwise, IF the branch is not needed delete branch."
-        done
+      # - name: stale-branches
+      #   id: stale-branches
+      #   shell: bash
+      #   run: |
+      #     STALE_THRESHOLD_DAYS=90
+      #     # Make a list of all branches
+      #     git fetch --all --prune
+      #     output=($(git branch -r |  grep -v "main\|release" | xargs echo -n ))
+      #
+      #     branches=""
+      #     for branch in "${output[@]}"; do
+      #       echo "checking branch: ${branch}"
+      #       now=$(date +'%s')
+      #       commit_time=$(git log -1 --date=raw ${branch} | grep ^Date | awk '{print $2}')
+      #       commit_days=$(( (${now} - ${commit_time}) / 86400 ))
+      #       echo "Branch: $branch, Age: $commit_days days"
+      #
+      #       # Check if the branch is stale
+      #       if [[ ${commit_days} -gt ${STALE_THRESHOLD_DAYS} ]]; then
+      #           branch_name=$(echo $branch | sed 's/origin\///g')
+      #           branches="${branches} ${branch_name}"
+      #       fi
+      #     done
+      #     echo "branches=$(echo ${branches} | xargs )">>$GITHUB_OUTPUT
+
+      - name: Create PR for Stale Branches
+        env:
+          branches: ${{ steps.stale-branches.outputs.branches}}
+          GITHUB_TOKEN: "${{ secrets.ADD_TO_PROJECT_PAT }}"
+          Tech_Lead: "${{ vars.TECH_LEAD }}"
+        run: |
+          branches=( ${branches} )
+          for branch in "${branches[@]}"; do
+            git fetch --all
+            git checkout ${branch}
+            git branch --show-current
+            gh pr create --base "main" --head ${branch} --title  "[Stale Branch] - Please review this stale branch: ${branch}" --assignee ${{ env.Tech_Lead }} --reviewer ${{ env.Tech_Lead }} --body "Hi @${{ env.Tech_Lead }} This PR is ready for your review! This branch has been stale. Thank you! IF the branch is still needed, 1). Update branch and 2.) Close PR. Otherwise, IF the branch is not needed delete branch."
+          done

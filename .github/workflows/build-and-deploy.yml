@@ -54,11 +54,11 @@ jobs:
         run: |
           COMPOSER_DIR=$(composer -n config --global home)
           $COMPOSER_DIR/vendor/bin/phpcs  --standard=./usagov-2021/.phpcs.xml.dist -v --warning-severity=0 ./usagov_benefit_finder # | tee /tmp/results/php-cs.log
-  # backup-database-dev:
-  #   needs: php-lint
-  #   uses: ./.github/workflows/database-backup-dev.yml
-  #   if: github.ref == 'refs/heads/dev'
-  #   secrets: inherit
+  backup-database-dev:
+    needs: php-lint
+    uses: ./.github/workflows/database-backup-dev.yml
+    if: github.ref == 'refs/heads/dev'
+    secrets: inherit
   backup-database-main:
     needs: php-lint
     uses: ./.github/workflows/database-backup-main.yml

@@ -65,8 +65,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     secrets: inherit
   component-library:
-    # needs: [backup-database-dev, backup-database-main]
-    needs: [backup-database-main]
+    needs: [backup-database-dev, backup-database-main]
+    # needs: [backup-database-main]
     if: always() && contains(needs.*.result, 'success') && !contains(needs.*.result, 'failure')
     name: Build and deploy component library
     runs-on: ubuntu-latest
@@ -112,8 +112,8 @@ jobs:
           echo "${{ secrets.STORYBOOK_USERNAME }}:${{ secrets.STORYBOOK_PASSWORD }}" > Staticfile.auth
           cf push benefit-finder-storybook-${BRANCH}
   build-and-deploy:
-    # needs: [backup-database-dev, backup-database-main]
-    needs: [backup-database-main]
+    needs: [backup-database-dev, backup-database-main]
+    # needs: [backup-database-main]
     if: always() && contains(needs.*.result, 'success') && !contains(needs.*.result, 'failure')
     name: Build and deploy
     runs-on: ubuntu-latest

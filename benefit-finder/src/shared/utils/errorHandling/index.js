@@ -7,13 +7,9 @@
 export const getRequiredFieldsets = (document, setHandler) => {
   setTimeout(() => {
     const collectedNodeList = document.querySelectorAll('fieldset')
-    console.log(collectedNodeList)
-
     const requiredNodeList = Array.from(collectedNodeList).filter(
       node => node.attributes.required && node.hidden === false
     )
-
-    console.log(requiredNodeList)
     setHandler(Array.from(requiredNodeList))
   }, 0)
 }

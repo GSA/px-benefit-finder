@@ -11,6 +11,8 @@ h2.bf-usa-alert__heading {
 
 .bf-usa-alert {
   padding: rem(25px) 0;
+  background-color: color.$alert-background;
+  border-left-color: color.$alert-red;
 
   p {
     padding-left: rem(16px);

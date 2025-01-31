@@ -8,7 +8,7 @@ const a11yTitles = (location, locale) => {
   const title = pathValue.replace('-', ' ')
 
   // create language specific titles
-  const enTitle = `Entering Benefit Finder: ${title.toLowerCase()} | USAGov`
+  const enTitle = `Benefit Finder: ${title.toLowerCase()} | USAGov`
   const esTitle = `Buscador de beneficios: ${title.toLowerCase()} | USAGov`
   const defaultTitle = `${title} | USAGov`
 

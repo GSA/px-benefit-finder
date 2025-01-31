@@ -36,8 +36,8 @@ const maritalStatus =
     .fieldsets[2].fieldset.inputs[0].inputCriteria.values[1].value
 
 describe(`Validate code passes axe scanning`, () => {
-  const runA11y = async () => {
-    await cy.checkA11y(
+  const runA11y = () => {
+    cy.checkA11y(
       null,
       {
         retries: 3,

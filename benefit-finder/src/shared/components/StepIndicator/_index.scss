@@ -18,11 +18,11 @@
 
 .bf-usa-step-indicator__segment--complete {
   .bf-usa-step-indicator__segment-label {
-    color: color.$officer-navy;
+    color: color.$dark-blue;
   }
 
   &::after {
-    background-color: color.$officer-navy;
+    background-color: color.$dark-blue;
   }
 }
 

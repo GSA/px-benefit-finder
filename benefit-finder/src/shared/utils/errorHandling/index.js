@@ -5,11 +5,13 @@
  * @function
  */
 export const getRequiredFieldsets = (document, setHandler) => {
-  const collectedNodeList = document.querySelectorAll('fieldset')
-  const requiredNodeList = Array.from(collectedNodeList).filter(
-    node => node.attributes.required
-  )
-  setHandler(Array.from(requiredNodeList))
+  setTimeout(() => {
+    const collectedNodeList = document.querySelectorAll('fieldset')
+    const requiredNodeList = Array.from(collectedNodeList).filter(
+      node => node.attributes.required && node.hidden === false
+    )
+    setHandler(Array.from(requiredNodeList))
+  }, 0)
 }
 
 /**

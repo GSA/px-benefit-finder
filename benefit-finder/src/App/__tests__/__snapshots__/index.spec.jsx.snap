@@ -12,9 +12,15 @@ exports[`loads intro 1`] = `
     <div
       class="benefit-finder"
       data-testid="app"
-      data-version="0.9.0.beta.1"
+      data-version="0.10.0.beta.1"
       id="death"
     >
+      <div
+        aria-live="assertive"
+        class="usa-sr-only"
+        id="a11y-titles"
+        tabindex="-1"
+      />
       <div
         class="bf-intro"
       >

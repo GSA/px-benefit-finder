@@ -7,7 +7,7 @@ import dataLayerUtils from './dataLayerUtils'
 import dateInputValidation from './dateInputValidation'
 import handleSurvey from './handleSurvey'
 import parseDate from './parseDate'
-import politeTitles from './politeTitles'
+import a11yTitles from './a11yTitles'
 import scrollLock from './scrollLock'
 import windowSize from './windowSize'
 
@@ -21,7 +21,7 @@ export {
   dateInputValidation,
   handleSurvey,
   parseDate,
-  politeTitles,
+  a11yTitles,
   scrollLock,
   windowSize,
 }

@@ -2,7 +2,7 @@ import { useEffect, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router'
 import PropTypes from 'prop-types'
 import { RouteContext } from '@/App'
-import { parseDate, dataLayerUtils, handleSurvey, politeTitles } from '@utils'
+import { parseDate, dataLayerUtils, handleSurvey, a11yTitles } from '@utils'
 import { useResetElement, useScrollToAnchor } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import { Heading, Button } from '@components'
@@ -108,6 +108,7 @@ const VerifySelectionsView = ({ ui, data }) => {
   useEffect(() => {
     !location.hash && resetElement.current?.focus()
     !location.hash && window.scrollTo(0, 0)
+    a11yTitles(location.pathname, locale)
   }, [location])
 
   // handle dataLayer
@@ -119,7 +120,7 @@ const VerifySelectionsView = ({ ui, data }) => {
         viewTitle: verifySelectionsView?.heading,
       },
     })
-    politeTitles(location.pathname, locale)
+    a11yTitles(location.pathname, locale)
   }, [])
 
   useEffect(() => {

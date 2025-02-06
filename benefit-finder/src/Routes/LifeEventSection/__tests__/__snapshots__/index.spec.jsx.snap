@@ -306,6 +306,74 @@ exports[`LifeEventSection > renders a match to the previous snapshot 1`] = `
           class="bf-fieldset-wrapper"
         >
           <fieldset
+            aria-hidden="true"
+            class="bf-usa-fieldset usa-fieldset required-field  display-none"
+            data-errormessage="Fill out the nested_child_criteria_test field"
+            data-testid="fieldset"
+            hidden=""
+            id="nested_child_criteria_test"
+            required=""
+          >
+            <legend
+              class="bf-legend usa-legend"
+            >
+              nested_child_criteria_test
+              <span
+                class="bf-usa-hint usa-hint usa-hint--required bf-usa-hint--required bf-required required"
+                title="required"
+              >
+                (required)
+              </span>
+            </legend>
+            <div>
+              <label
+                class="bf-usa-label usa-label"
+                for="nested_child_criteria_test_0"
+              >
+                Select an option
+              </label>
+              <select
+                aria-errormessage="error-description-nested_child_criteria_test_0"
+                aria-invalid="false"
+                class="bf-usa-select usa-select "
+                data-errormessage="Fill out the nested_child_criteria_test field"
+                data-testid="nested_child_criteria_test_0"
+                id="nested_child_criteria_test_0"
+                name="nested_child_criteria_test_0"
+              >
+                <option
+                  value=""
+                >
+                  -Select-
+                </option>
+                <option
+                  value="Married"
+                >
+                  Married
+                </option>
+                <option
+                  value="Unmarried"
+                >
+                  Unmarried
+                </option>
+                <option
+                  value="Widowed"
+                >
+                  Widowed
+                </option>
+                <option
+                  value="Divorced"
+                >
+                  Divorced
+                </option>
+              </select>
+            </div>
+          </fieldset>
+        </div>
+        <div
+          class="bf-fieldset-wrapper"
+        >
+          <fieldset
             class="bf-usa-fieldset usa-fieldset required-field  "
             data-errormessage="Test override error label"
             data-testid="fieldset"

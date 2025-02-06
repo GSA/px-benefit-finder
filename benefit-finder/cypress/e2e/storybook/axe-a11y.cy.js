@@ -61,6 +61,7 @@ describe(`Validate code passes axe scanning`, () => {
   // go to first step
   it('Has no detectable a11y violations on step 1', () => {
     cy.clickButton(EN_LOCALE_DATA.intro.button)
+    cy.wait(2500) // eslint-disable-line cypress/no-unnecessary-waiting
     runA11y()
   })
 

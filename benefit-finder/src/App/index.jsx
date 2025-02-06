@@ -114,6 +114,12 @@ function App({ testAppContent, testQuery }) {
             data-testid="app"
             data-version={version}
           >
+            <div
+              id="a11y-titles"
+              aria-live="assertive"
+              className="usa-sr-only"
+              tabIndex="-1"
+            ></div>
             <BrowserRouter basename={`/${ROUTES.basePath}`}>
               <Routes>
                 <Route

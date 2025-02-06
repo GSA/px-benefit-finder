@@ -149,18 +149,18 @@ Cypress.Commands.add(
     optionalDeceasedFields = {},
     additionalDeceasedFields = {},
   }) => {
-    cy.navigateToAboutTheDeceasedPage({
+    // Reuse navigateToModal
+    cy.navigateToModal({
       dateOfBirth,
       relationship,
       maritalStatus,
-      optionalFields: optionalApplicantFields,
-    })
-    cy.fillDetailsAboutTheDeceased({
+      optionalApplicantFields,
       dateOfDeath,
-      optionalFields: optionalDeceasedFields,
-      additionalFields: additionalDeceasedFields,
+      optionalDeceasedFields,
+      additionalDeceasedFields,
     })
-    cy.clickButton(nextButtonGroup) // Open modal
+
+    // Click the "Get Your Results" button to navigate to the results page
     cy.clickButton(getYourResultsButton)
   }
 )

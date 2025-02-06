@@ -2,8 +2,8 @@ import { useEffect, useContext } from 'react'
 import { useNavigate, useLocation } from 'react-router'
 import PropTypes from 'prop-types'
 import { RouteContext } from '@/App'
-import { parseDate, dataLayerUtils, handleSurvey } from '@utils'
-import { useResetElement } from '@hooks'
+import { parseDate, dataLayerUtils, handleSurvey, a11yTitles } from '@utils'
+import { useResetElement, useScrollToAnchor } from '@hooks'
 import * as apiCalls from '@api/apiCalls'
 import { Heading, Button } from '@components'
 
@@ -19,7 +19,7 @@ import './_index.scss'
 const VerifySelectionsView = ({ ui, data }) => {
   const { verifySelectionsView, buttonGroup } = ui
   const { verifySelections } = dataLayerUtils.dataLayerStructure
-  const local = apiCalls.GET.Language()
+  const locale = apiCalls.GET.Language()
   const dateFormatOptions = {
     year: 'numeric',
     month: 'long',
@@ -29,6 +29,7 @@ const VerifySelectionsView = ({ ui, data }) => {
   const location = useLocation()
   const ROUTES = useContext(RouteContext)
   const resetElement = useResetElement()
+  useScrollToAnchor(location)
 
   /**
    * a functional component that renders markup when no value has been given
@@ -63,7 +64,7 @@ const VerifySelectionsView = ({ ui, data }) => {
         <div className="bf-verify-criteria-legend">{legend}</div>
         {typeof selected?.value === 'object'
           ? `${parseDate(selected.value).toLocaleDateString(
-              local,
+              locale,
               dateFormatOptions
             )}`
           : selected?.value}
@@ -105,8 +106,9 @@ const VerifySelectionsView = ({ ui, data }) => {
   }
 
   useEffect(() => {
-    resetElement.current?.focus()
-    window.scrollTo(0, 0)
+    !location.hash && resetElement.current?.focus()
+    !location.hash && window.scrollTo(0, 0)
+    a11yTitles(location.pathname, locale)
   }, [location])
 
   // handle dataLayer
@@ -118,6 +120,7 @@ const VerifySelectionsView = ({ ui, data }) => {
         viewTitle: verifySelectionsView?.heading,
       },
     })
+    a11yTitles(location.pathname, locale)
   }, [])
 
   useEffect(() => {
@@ -126,7 +129,10 @@ const VerifySelectionsView = ({ ui, data }) => {
   }, [])
 
   return (
-    <div className="bf-verify-selections-view">
+    <div
+      className="bf-verify-selections-view"
+      data-testid="bf-verify-selections-view"
+    >
       <div className="bf-grid-container grid-container">
         <Heading className="bf-section-heading" headingLevel={1}>
           {verifySelectionsView?.heading}

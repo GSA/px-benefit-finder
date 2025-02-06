@@ -13,9 +13,9 @@ on:
         required: true
       DATABASE_BACKUP_BASTION_NAME:
         required: true
-  schedule:
-    - cron: "0 1 * * *"
-
+  # schedule:
+  #   - cron: "0 1 * * *"
+  #
 jobs:
   backup-database:
     runs-on: ubuntu-latest
@@ -91,4 +91,3 @@ jobs:
         run: |
           echo "BRANCH=main" >> $GITHUB_ENV
           cf stop "${PROJECT}-${DATABASE_BACKUP_BASTION_NAME}-${BRANCH}" >/dev/null 2>&1
-

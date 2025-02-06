@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-function ScrollToAnchor({ location, offset }) {
+function useScrollToAnchor({ location, offset }) {
   const lastHash = useRef('')
 
   // listen to location change using useEffect with location as dependency
@@ -24,4 +24,4 @@ function ScrollToAnchor({ location, offset }) {
   return null
 }
 
-export default ScrollToAnchor
+export default useScrollToAnchor

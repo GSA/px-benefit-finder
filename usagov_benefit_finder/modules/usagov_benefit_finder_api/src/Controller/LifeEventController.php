@@ -385,6 +385,7 @@ class LifeEventController extends ControllerBase {
       "legend" => $criteria->get('field_b_legend')->value ?? "",
       "required" => $criteria->get('field_b_required')->value ? TRUE : FALSE,
       "hint" => $criteria->get('field_b_hint')->value ?? "",
+      "errorMessage" => $criteria->get('field_b_error_message')->value ?? "",
     ];
 
     // Build inputCriteria.

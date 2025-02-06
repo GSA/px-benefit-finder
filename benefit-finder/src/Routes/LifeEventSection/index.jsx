@@ -55,7 +55,6 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   const locale = apiCalls.GET.Language()
 
   let location = useLocation() // ignore prefer-const
-
   useScrollToAnchor(location)
 
   /**

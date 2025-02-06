@@ -45,8 +45,8 @@ const content = `{
                         "type": "Date",
                         "name": "applicant_date_of_birth",
                         "label": "Date of birth",
-                        "hasChild": false,
-                        "childDependencyOption": "",
+                        "hasChild": true,
+                        "childDependencyOption": ">=18years",
                         "values": [
                           {
                             "default": "",
@@ -56,7 +56,51 @@ const content = `{
                       }
                     }
                   ],
-                  "children": []
+                                    "children": [
+                    {
+                      "fieldsets": [
+                        {
+                          "fieldset": {
+                            "criteriaKey": "nested_child_criteria_test",
+                            "legend": "nested_child_criteria_test",
+                            "required": true,
+                            "hint": "",
+                            "inputs": [
+                              {
+                                "inputCriteria": {
+                                  "id": "nested_child_criteria_test",
+                                  "type": "Select",
+                                  "name": "nested_child_criteria_test",
+                                  "label": "nested_child_criteria_test status_2",
+                                  "hasChild": false,
+                                  "childDependencyOption": "",
+                                  "values": [
+                                    {
+                                      "option": "Married",
+                                      "value": "Married"
+                                    },
+                                    {
+                                      "option": "Unmarried",
+                                      "value": "Unmarried"
+                                    },
+                                    {
+                                      "option": "Widowed",
+                                      "value": "Widowed"
+                                    },
+                                    {
+                                      "option": "Divorced",
+                                      "value": "Divorced"
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            "children": []
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 }
               },
               {

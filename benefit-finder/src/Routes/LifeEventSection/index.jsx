@@ -183,8 +183,10 @@ const LifeEventSection = ({ data, handleData, ui }) => {
    * @return {null} only executes inherited functions
    */
   const handleBackUpdate = updateIndex => {
+    // allow uses to navigate back, even if there are errors
     formStep === 0 ? navigate(`/${ROUTES.indexPath}`) : navigate(updateIndex)
     resetElement.current.focus()
+    setHasError([])
   }
 
   /**
@@ -201,6 +203,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
       setCurrentData,
       event.target.value
     )
+    errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
     hasError.length > 0 &&
       errorHandling.handleCheckForRequiredValues(requiredFieldsets, setHasError)
     setHasData(apiCalls.GET.SelectedValueAll(data).length > 0)
@@ -215,6 +218,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
   const handleDateChanged = (event, criteriaKey) => {
     // if event target is empty check if all values in date are empty
     window.history.replaceState({}, '', window.location.pathname)
+    errorHandling.getRequiredFieldsets(document, setRequiredFieldsets)
 
     async function validUpdate() {
       if (dateInputValidation(event) === true) {
@@ -269,6 +273,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
     a11yTitles(location.pathname, locale)
     !location.hash && resetElement.current?.focus()
     !location.hash && window.scrollTo(0, 0)
+    setHasError([]) // reset error state
   }, [location])
 
   useEffect(() => {
@@ -560,15 +565,6 @@ const LifeEventSection = ({ data, handleData, ui }) => {
                       item.fieldset.inputs[0].inputCriteria.type === 'Date'
                         ? checkDateDependency(selectedParentValue)
                         : checkFieldDependencies(selectedParentValue)
-                    // const hidden = checkDateDependency(selectedParentValue)
-                    // const hidden = checkFieldDependencies(selectedParentValue)
-
-                    // const hidden =
-                    //   selectedParentValue?.value !==
-                    //   item.fieldset.inputs[0].inputCriteria
-                    //     .childDependencyOption
-
-                    // console.log('hidden', hidden)
 
                     return hidden
                   }

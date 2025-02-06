@@ -272,7 +272,7 @@ const LifeEventSection = ({ data, handleData, ui }) => {
     a11yTitles(location.pathname, locale)
     !location.hash && resetElement.current?.focus()
     !location.hash && window.scrollTo(0, 0)
-    setHasError([]) // reset error state
+    !location.hash && setHasError([]) // reset error state
   }, [location])
 
   useEffect(() => {

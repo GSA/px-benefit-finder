@@ -113,9 +113,12 @@ export function validateEventInDataLayer(expectedEvent, validationDescription) {
     )
 
     const normalizedEvent = { ...matchingEvents[matchingEvents.length - 1] }
-    removeID(normalizedEvent)
+    const normalizedExpected = { ...expectedEvent }
 
-    expect(normalizedEvent).to.deep.equal(expectedEvent)
+    removeID(normalizedEvent)
+    removeID(normalizedExpected)
+
+    expect(normalizedEvent).to.deep.equal(normalizedExpected)
   })
 }
 

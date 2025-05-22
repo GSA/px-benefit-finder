@@ -647,10 +647,18 @@ describe('Calls to Google Analytics Object', function () {
     })
 
     cy.clickButton('Review your selections').then(() => {
-      utils.validateEventInDataLayer(
-        dataLayerValueVerifySelections,
-        'Verify Selections'
-      )
+      cy.wait(500)
+      cy.window().should(win => {
+        const event = win.dataLayer?.find(
+          e => e.event === 'bf_page_change' &&
+               e.bfData?.pageView === 'bf-verify-selections'
+        )
+
+        const cleaned = { ...event }
+        removeID(cleaned)
+
+        expect(cleaned).to.deep.equal(dataLayerValueVerifySelections)
+      })
     })
 
     // Validate zero results view (eligible benefits)
@@ -702,10 +710,18 @@ describe('Calls to Google Analytics Object', function () {
     })
 
     cy.clickButton('Review your selections').then(() => {
-      utils.validateEventInDataLayer(
-        dataLayerValueVerifySelections,
-        'Verify Selections'
-      )
+      cy.wait(500)
+      cy.window().should(win => {
+        const event = win.dataLayer?.find(
+          e => e.event === 'bf_page_change' &&
+               e.bfData?.pageView === 'bf-verify-selections'
+        )
+
+        const cleaned = { ...event }
+        removeID(cleaned)
+
+        expect(cleaned).to.deep.equal(dataLayerValueVerifySelections)
+      })
     })
 
     // Validate zero results view (eligible benefits)
@@ -752,13 +768,19 @@ describe('Calls to Google Analytics Object', function () {
           )
 
           // Clean the data layer by removing unique IDs or any other unnecessary properties
-          const cleanedDataLayer = filteredDataLayer.map(event => {
-            removeID(event) // Assuming `removeID` is defined to clean unique IDs
-            return event
+          const cleanedExpected = dataLayerValues.map(event => {
+            const copy = { ...event }
+            removeID(copy)
+            return copy
           })
 
-          // Assert that the cleaned data layer matches the expected data
-          expect(cleanedDataLayer).to.deep.equal(dataLayerValues)
+          const cleanedActual = filteredDataLayer.map(event => {
+            const copy = { ...event }
+            removeID(copy)
+            return copy
+          })
+
+          expect(cleanedActual).to.deep.equal(cleanedExpected)
         })
       })
   })

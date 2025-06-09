@@ -47,7 +47,7 @@ applications/caddy-proxy/Caddyfile
 applications/caddy-proxy/*.acl
 
 ## WAF application
-# applications/nginx-waf/modules/*
+applications/nginx-waf/modules/*
 applications/nginx-waf/nginx/snippets/*.conf
 !applications/nginx-waf/nginx/snippets/owasp*.conf
 !applications/nginx-waf/packages/*

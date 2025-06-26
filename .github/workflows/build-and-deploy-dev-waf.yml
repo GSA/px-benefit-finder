@@ -68,7 +68,8 @@ jobs:
         env:
           TF_BASTION: "${{ secrets.TF_BASTION }}"
         run: |
-          cf start "${TF_BASTION}"
+          stdout=$(cf start "${TF_BASTION}")
+          echo ${stdout}
           ./scripts/pipeline/cloud-gov-wait-for-app-start.sh "${TF_BASTION}"
       - name: Cloud.gov bastion git checkout
         env:

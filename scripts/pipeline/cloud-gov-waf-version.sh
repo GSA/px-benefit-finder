@@ -7,9 +7,13 @@ function version {
 if [ "$(whoami)" != "root" ] ; then
   sudo wget -q --show-progress https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip
   sudo unzip pup_v0.4.0_linux_amd64.zip -d /usr/local/bin
+  chmod +x /usr/local/bin/pup
+  /usr/local/bin/pup --version
 else
   wget -q --show-progress https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip
   unzip pup_v0.4.0_linux_amd64.zip -d /usr/local/bin
+  chmod +x /usr/local/bin/pup
+  /usr/local/bin/pup --version
 fi
 
 declare CURRENT_BP_VERSION

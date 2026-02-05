@@ -1,3 +1,7 @@
+# Inactive
+
+**NOTICE: this repository has been decommissioned. The tool is now part of the [usagov-2021 repo](https://github.com/usagov/usagov-2021).**
+
 # Benefit Finder v2
 
 [Jump to Getting Started](#getting-started)
